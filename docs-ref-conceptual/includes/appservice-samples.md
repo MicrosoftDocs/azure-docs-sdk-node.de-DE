@@ -1,0 +1,4 @@
+- [Mobile App Service-Apps: Abgeschlossener Schnellstart für Node.js-Back-End](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
+- [Verwalten von Azure-Websites mit Node.js](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
+- [MEAN.js-Beispiel für Azure App Service](https://azure.microsoft.com/resources/samples/meanjs/)
+- [FoodTrucks – Node-API-App für Azure App Service](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)
