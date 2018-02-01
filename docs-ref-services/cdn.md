@@ -1,21 +1,20 @@
 ---
 title: "Azure CDN-Module für Node.js"
 description: "Referenz zu anderen Azure CDN-Modulen für Node.js"
-keywords: Azure,SDK,API,CDN, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: CDN
-ms.openlocfilehash: ae44606510037fa3ba3d5b95196a40f8eeef3afe
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 05e77072f551d425ba3ca5225111d0470d14fe68
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-cdn-modules-for-nodejs"></a>Azure CDN-Module für Node.js
 
@@ -53,4 +52,4 @@ msRestAzure.interactiveLogin().then(credentials => {
 
 ## <a name="samples"></a>Beispiele
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.

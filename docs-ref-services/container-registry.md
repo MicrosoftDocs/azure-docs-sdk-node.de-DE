@@ -1,25 +1,22 @@
 ---
 title: "Azure Container Registry-Module für Node.js"
 description: "Referenz zu Azure Container Registry-Modulen für Node.js"
-keywords: Azure,SDK,API,Container Registry, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: 6ded68c19971a8fe580f440862d0fe05a1def6a2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: dda0e9bbfaa8a3e060f3b8f820d5bab315662629
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>Azure Container Registry-Module für Node.js
-
-## <a name="overview"></a>Übersicht
 
 Azure Container Registry ist ein verwalteter Dienst vom Typ „Docker-Registrierung“, der auf Version 2.0 der Open Source-Docker-Registrierung basiert. Erstellen und verwalten Sie Azure-Containerregistrierungen, um Ihre privaten Docker-Containerimages zu speichern und zu verwalten. Verwenden Sie Containerregistrierungen in Azure mit Ihren vorhandenen Containerentwicklungs- und Bereitstellungspipelines, und nutzen Sie das umfangreiche Wissen der Docker-Community.
 
@@ -60,4 +57,4 @@ msRestAzure
 
 ## <a name="samples"></a>Beispiele
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.

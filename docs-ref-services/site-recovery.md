@@ -1,25 +1,22 @@
 ---
 title: "Azure Site Recovery-Module für Node.js"
 description: "Referenz zu Azure Site Recovery-Modulen für Node.js"
-keywords: Azure,SDK,API,Site Recovery, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
-ms.openlocfilehash: 3537503118a6fbe181c8cc4b26da545a4bdbd764
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a1f3e1c18be68dd7e68f38e353e0c2ba224fbaa1
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a>Azure Site Recovery-Module für Node.js
-
-## <a name="overview"></a>Übersicht
 
 Site Recovery ermöglicht die Automatisierung der Replikation von virtuellen Azure-Computern zwischen Regionen, von lokalen virtuellen Computern und physischen Servern in Azure und von lokalen Computern in einem sekundären Datencenter.
 
@@ -61,4 +58,4 @@ msRestAzure
 
 ## <a name="samples"></a>Beispiele
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.

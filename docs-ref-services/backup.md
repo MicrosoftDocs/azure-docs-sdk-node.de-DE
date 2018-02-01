@@ -1,21 +1,20 @@
 ---
 title: "Azure Backup-Module für Node.js"
 description: "Referenz zu Azure Backup-Modulen für Node.js"
-keywords: Azure,SDK,API,Backup, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
-ms.openlocfilehash: 3ff9bff16a520bca461198531fd4c02139d2b293
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 83ccd48d6f66c49ed6be837384a39cb32919b83c
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>Azure Backup-Module für Node.js
 
@@ -60,4 +59,4 @@ msRestAzure
 
 ## <a name="samples"></a>Beispiele
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.

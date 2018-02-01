@@ -1,27 +1,24 @@
 ---
 title: "Azure Redis Cache-Module für Node.js"
 description: "Referenz für Azure Redis Cache-Module für Node.js"
-keywords: Azure, SDK, API, Redis Cache, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Redis Cache
-ms.openlocfilehash: 8a10e522e39461697b740750b63fc82a6cc320ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5d3a410fefcf6840181701763346fbfe08fe023b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a>Azure Redis Cache-Module für Node.js
 
-## <a name="overview"></a>Übersicht
-
-Azure Redis Cache basiert auf dem beliebten Open Source-Redis-Projekt. Sie erhalten Zugriff auf eine sichere, dedizierte Redis Cache-Instanz, die von Microsoft verwaltet wird und auf die aus Ihren Azure-Apps zugegriffen werden kann.
+Azure Redis Cache basiert auf dem beliebten Open Source-Redis-Projekt. Sie erhalten Zugriff auf eine sichere, dedizierte Redis-Instanz, die von Microsoft verwaltet wird und auf die aus Ihren Azure-Apps zugegriffen werden kann.
 
 Redis ist ein erweiterter Schlüsselwertspeicher, bei dem Schlüssel Datenstrukturen wie Zeichenfolgen, Hashes, Listen, Sätze und sortierte Sätze enthalten können. Redis unterstützt einen Satz automatischer Vorgänge für diese Datentypen.
 

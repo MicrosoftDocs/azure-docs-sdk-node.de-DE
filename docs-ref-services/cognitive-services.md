@@ -1,25 +1,22 @@
 ---
 title: "Azure Cognitive Services-Module für Node.js"
 description: "Referenz zu Azure Cognitive Services-Modulen für Node.js"
-keywords: Azure, SDK, API, Cognitive Services, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fba98930fccaf4fa40dd1d0224031276f5fb7f84
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: df6ea913ca69341fbbb730b75f547ce9c10bd45f
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-cognitive-services-modules-for-nodejs"></a>Azure Cognitive Services-Module für Node.js
-
-## <a name="overview"></a>Übersicht
 
 Bei Azure Cognitive Services handelt es sich um eine Reihe von APIs, SDKs und Diensten für Entwickler, mit denen diese ihre Anwendungen intelligenter, ansprechender und besser ermittelbar machen können. Mit Microsoft Cognitive Services wird das wachsende Portfolio der Machine Learning-APIs von Microsoft erweitert, und Entwickler können ihren Anwendungen leicht intelligente Features hinzufügen, z.B. Emotions- und Videoerkennung, Gesichtserkennung, Spracherkennung, maschinelles Sehen sowie Sprachverständnis. Unsere Vision besteht darin, persönlichere Computing-Umgebungen zu schaffen und mit Systemen, die immer besser sehen, hören, sprechen und verstehen und sogar Schlüsse ziehen können, für bessere Produktivität zu sorgen.
 

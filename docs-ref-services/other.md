@@ -1,25 +1,22 @@
 ---
 title: "Andere Azure-Module für Node.js"
 description: "Referenz zu anderen Azure-Modulen für Node.js"
-keywords: Azure,SDK,API,andere, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Other
-ms.openlocfilehash: deab8c06c7dbd88fee62de2366b7e6d85324f8cf
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 29a89faa57d295a3e157732efd612008b604fcdc
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-other-modules-for-nodejs"></a>Andere Azure-Module für Node.js
-
-## <a name="overview"></a>Übersicht
 
 Dieses Modul vereint alle einzelnen Azure-Node.js-Module an einem zentralen Ort.
 
@@ -27,7 +24,7 @@ Dieses Modul vereint alle einzelnen Azure-Node.js-Module an einem zentralen Ort.
 
 Installieren der Azure-Module für Node.js mithilfe von npm
 
-### <a name="client"></a>Client-
+### <a name="client"></a>Client
 
 ```bash
 npm install azure
@@ -37,4 +34,4 @@ npm install azure
 
 ##<a name="samples"></a>Beispiele
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.

@@ -1,21 +1,20 @@
 ---
 title: "Azure-Autorisierungsmodule für Node.js"
 description: "Referenz zu Azure-Autorisierungsmodulen für Node.js"
-keywords: Azure,SDK,API,Autorisierung, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Authorization
-ms.openlocfilehash: de843bf1afed77afdb9bde035962a1c151d9c1bb
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 6fbaaeba28cac81d360e93c5066791adfa51bcd5
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-authorization-modules-for-nodejs"></a>Azure-Autorisierungsmodule für Node.js
 
@@ -56,4 +55,4 @@ msRestAzure.interactiveLogin().then(credentials => {
 
 ## <a name="samples"></a>Beispiele
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
