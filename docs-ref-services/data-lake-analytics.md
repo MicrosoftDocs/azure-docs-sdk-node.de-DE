@@ -1,40 +1,38 @@
 ---
 title: "Azure Data Lake Analytics-Module für Node.js"
 description: "Referenz zu Azure Data Lake Analytics-Modulen für Node.js"
-keywords: Azure,SDK,API,Data Lake Analytics, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Analytics
-ms.openlocfilehash: 46f414ac6909de5bd956666baf51be1ca9d25ac7
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 28dae604ae9977eb33470757e207ac12a592c676
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-data-lake-analytics-modules-for-nodejs"></a><span data-ttu-id="7165c-104">Azure Data Lake Analytics-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="7165c-104">Azure Data Lake Analytics modules for Node.js</span></span>
+# <a name="azure-data-lake-analytics-modules-for-nodejs"></a><span data-ttu-id="7abb8-103">Azure Data Lake Analytics-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="7abb8-103">Azure Data Lake Analytics modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="7165c-105">Übersicht</span><span class="sxs-lookup"><span data-stu-id="7165c-105">Overview</span></span>
-<span data-ttu-id="7165c-106">Azure Data Lake Analytics ist ein bedarfsgesteuerter Dienst für Analyseaufträge zum Vereinfachen von Big Data-Analysen.</span><span class="sxs-lookup"><span data-stu-id="7165c-106">Azure Data Lake Analytics is an on-demand analytics job service to simplify big data analytics.</span></span> <span data-ttu-id="7165c-107">Sie können sich auf das Schreiben, Ausführen und Verwalten von Aufträgen konzentrieren und müssen sich nicht mit dem Betrieb der verteilten Infrastruktur auseinandersetzen.</span><span class="sxs-lookup"><span data-stu-id="7165c-107">You can focus on writing, running, and managing jobs rather than on operating distributed infrastructure.</span></span> <span data-ttu-id="7165c-108">Anstatt sich der Bereitstellung, Konfiguration und Optimierung von Hardware zu widmen, schreiben Sie Abfragen, mit denen Sie Ihre Daten transformieren und nützliche Einblicke erhalten.</span><span class="sxs-lookup"><span data-stu-id="7165c-108">Instead of deploying, configuring, and tuning hardware, you write queries to transform your data and extract valuable insights.</span></span> <span data-ttu-id="7165c-109">Der Analysedienst ist in der Lage, umgehend Aufträge jeglicher Größenordnung zu verarbeiten. Wählen Sie dazu die jeweils erforderliche Ressourcenkapazität aus.</span><span class="sxs-lookup"><span data-stu-id="7165c-109">The analytics service can handle jobs of any scale instantly by setting the dial for how much power you need.</span></span> <span data-ttu-id="7165c-110">Da Sie nur für die Leistung bezahlen, die während der Ausführung Ihres Auftrags tatsächlich in Anspruch genommen wurde, ist dies eine überaus kosteneffektive Lösung.</span><span class="sxs-lookup"><span data-stu-id="7165c-110">You only pay for your job when it is running, making it cost-effective.</span></span> <span data-ttu-id="7165c-111">Durch die Unterstützung von Azure Active Directory kann Data Lake zur Verwaltung von Zugriffsberechtigungen und Rollen in Ihr lokales Identitätssystem integriert werden.</span><span class="sxs-lookup"><span data-stu-id="7165c-111">The analytics service supports Azure Active Directory letting you manage access and roles, integrated with your on-premises identity system.</span></span> <span data-ttu-id="7165c-112">Darüber hinaus umfasst dieser Dienst U-SQL, eine Sprache, bei der die Vorteile von SQL mit den Ausdrücken von Benutzercode kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="7165c-112">It also includes U-SQL, a language that unifies the benefits of SQL with the expressive power of user code.</span></span> <span data-ttu-id="7165c-113">Die skalierbare verteilte Laufzeit von U-SQL ermöglicht eine effiziente Analyse der Daten im Speicher sowie in SQL Server-Instanzen in Azure, Azure SQL-Datenbank und Azure SQL Data Warehouse.</span><span class="sxs-lookup"><span data-stu-id="7165c-113">U-SQL’s scalable distributed runtime enables you to efficiently analyze data in the store and across SQL Servers in Azure, Azure SQL Database, and Azure SQL Data Warehouse.</span></span>
+<span data-ttu-id="7abb8-104">Azure Data Lake Analytics ist ein bedarfsgesteuerter Dienst für Analyseaufträge zum Vereinfachen von Big Data-Analysen.</span><span class="sxs-lookup"><span data-stu-id="7abb8-104">Azure Data Lake Analytics is an on-demand analytics job service to simplify big data analytics.</span></span> <span data-ttu-id="7abb8-105">Sie können sich auf das Schreiben, Ausführen und Verwalten von Aufträgen konzentrieren und müssen sich nicht mit dem Betrieb der verteilten Infrastruktur auseinandersetzen.</span><span class="sxs-lookup"><span data-stu-id="7abb8-105">You can focus on writing, running, and managing jobs rather than on operating distributed infrastructure.</span></span> <span data-ttu-id="7abb8-106">Anstatt sich der Bereitstellung, Konfiguration und Optimierung von Hardware zu widmen, schreiben Sie Abfragen, mit denen Sie Ihre Daten transformieren und nützliche Einblicke erhalten.</span><span class="sxs-lookup"><span data-stu-id="7abb8-106">Instead of deploying, configuring, and tuning hardware, you write queries to transform your data and extract valuable insights.</span></span> <span data-ttu-id="7abb8-107">Der Analysedienst ist in der Lage, umgehend Aufträge jeglicher Größenordnung zu verarbeiten. Wählen Sie dazu die jeweils erforderliche Ressourcenkapazität aus.</span><span class="sxs-lookup"><span data-stu-id="7abb8-107">The analytics service can handle jobs of any scale instantly by setting the dial for how much power you need.</span></span> <span data-ttu-id="7abb8-108">Da Sie nur für die Leistung bezahlen, die während der Ausführung Ihres Auftrags tatsächlich in Anspruch genommen wurde, ist dies eine überaus kosteneffektive Lösung.</span><span class="sxs-lookup"><span data-stu-id="7abb8-108">You only pay for your job when it is running, making it cost-effective.</span></span> <span data-ttu-id="7abb8-109">Durch die Unterstützung von Azure Active Directory kann Data Lake zur Verwaltung von Zugriffsberechtigungen und Rollen in Ihr lokales Identitätssystem integriert werden.</span><span class="sxs-lookup"><span data-stu-id="7abb8-109">The analytics service supports Azure Active Directory letting you manage access and roles, integrated with your on-premises identity system.</span></span> <span data-ttu-id="7abb8-110">Darüber hinaus umfasst dieser Dienst U-SQL, eine Sprache, bei der die Vorteile von SQL mit den Ausdrücken von Benutzercode kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="7abb8-110">It also includes U-SQL, a language that unifies the benefits of SQL with the expressive power of user code.</span></span> <span data-ttu-id="7abb8-111">Die skalierbare verteilte Laufzeit von U-SQL ermöglicht eine effiziente Analyse der Daten im Speicher sowie in SQL Server-Instanzen in Azure, Azure SQL-Datenbank und Azure SQL Data Warehouse.</span><span class="sxs-lookup"><span data-stu-id="7abb8-111">U-SQL’s scalable distributed runtime enables you to efficiently analyze data in the store and across SQL Servers in Azure, Azure SQL Database, and Azure SQL Data Warehouse.</span></span>
 
-### <a name="management-package"></a><span data-ttu-id="7165c-114">Verwaltungspaket</span><span class="sxs-lookup"><span data-stu-id="7165c-114">Management package</span></span>
+### <a name="management-package"></a><span data-ttu-id="7abb8-112">Verwaltungspaket</span><span class="sxs-lookup"><span data-stu-id="7abb8-112">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="7165c-115">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="7165c-115">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="7abb8-113">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="7abb8-113">Install the npm module</span></span>
 
-<span data-ttu-id="7165c-116">Installieren der Azure Data Lake Analytics-Module für Node.js mithilfe von npm</span><span class="sxs-lookup"><span data-stu-id="7165c-116">Use npm to install the Azure Data Lake Analytics modules for Node.js</span></span>
+<span data-ttu-id="7abb8-114">Installieren der Azure Data Lake Analytics-Module für Node.js mithilfe von npm</span><span class="sxs-lookup"><span data-stu-id="7abb8-114">Use npm to install the Azure Data Lake Analytics modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-datalake-analytics
 ```
 
-### <a name="example"></a><span data-ttu-id="7165c-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7165c-117">Example</span></span>
+### <a name="example"></a><span data-ttu-id="7abb8-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7abb8-115">Example</span></span>
 
-<span data-ttu-id="7165c-118">Mit diesem Beispiel werden alle Analytics-Konten für ein bestimmtes Abonnement aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="7165c-118">This example lists all of the analytics accounts for a given subscription.</span></span>
+<span data-ttu-id="7abb8-116">Mit diesem Beispiel werden alle Analytics-Konten für ein bestimmtes Abonnement aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="7abb8-116">This example lists all of the analytics accounts for a given subscription.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -53,6 +51,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="7165c-119">Beispiele</span><span class="sxs-lookup"><span data-stu-id="7165c-119">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="7abb8-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="7abb8-117">Samples</span></span>
 
-<span data-ttu-id="7165c-120">Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="7165c-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="7abb8-118">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="7abb8-118">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
