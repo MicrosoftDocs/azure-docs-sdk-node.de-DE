@@ -1,20 +1,20 @@
 ---
-title: "Tutorials für die Verwendung von Azure Messaging und des IoT (Internet of Things, Internet der Dinge) mit Node.js"
+title: Tutorials zu Azure Messaging und IoT (Internet of Things, Internet der Dinge) mit Node.js
 description: "Tutorials für die Verwendung von Azure Messaging und des IoT (Internet of Things, Internet der Dinge) mit Node.js"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: c16ae2fef8d33eedacd68c625992c28f4ab05e40
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 765b25e93b8af17bfcefcb77bd85ac8e35619cd1
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="tutorials-for-using-azure-messaging-and-internet-of-things-iot-with-nodejs"></a>Tutorials für die Verwendung von Azure Messaging und des IoT (Internet of Things, Internet der Dinge) mit Node.js
+# <a name="azure-messaging-and-internet-of-things-iot-with-nodejs-tutorials"></a>Tutorials zu Azure Messaging und IoT (Internet of Things, Internet der Dinge) mit Node.js
 
 Die folgende Tabelle enthält Links zu ausführlichen Tutorials für die Verwendung von Azure Messaging und des IoT (Internet of Things, Internet der Dinge) mit Node.js.
 
@@ -24,4 +24,4 @@ Beispielquellcode finden Sie in der vollständigen Liste der [Azure-Node.js-Beis
 |---|---|
 | **Service Bus** ||
 | [Verwenden von Service Bus-Warteschlangen](http://docs.microsoft.com/azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/node/toc.json&bc=/azure/node/toc.json) | Hier wird beschrieben, wie Sie Warteschlangen erstellen, Nachrichten senden und empfangen und Warteschlangen löschen. |
-| [Verwenden von Service Bus-Themen und -Abonnements](http://docs.microsoft.com/azure/service-bus-messaging/service-bus-nodejs-how-to-use-topics-subscriptions?toc=/azure/node/toc.json&bc=/azure/node/toc.json) | Hier wird beschrieben, wie Sie Service Bus-Themen und -Abonnements über Node.js-Anwendungen verwenden. |
+| [Verwenden von Service Bus-Themen und -Abonnements](http://docs.microsoft.com/azure/service-bus-messaging/service-bus-nodejs-how-to-use-topics-subscriptions?toc=/azure/node/toc.json&bc=/azure/node/toc.json) | Hier wird beschreiben, wie Sie Service Bus-Themen und -Abonnements über Node.js-Anwendungen verwenden. |

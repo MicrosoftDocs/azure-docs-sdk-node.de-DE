@@ -1,22 +1,22 @@
 ---
-title: "Beispielcode für die Verwendung von Azure-Speicher mit Node.js"
-description: Beispielcode, der die Verwendung von Azure-Speicher mit Node.js veranschaulicht.
-author: tomarcher
-manager: douge
+title: "Codebeispiele für Azure Storage mit Node.js"
+description: Mit diesem Beispielcode wird die Verwendung von Azure Storage mit Node.js veranschaulicht.
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: b8bb35016f229b12326ad0667ebdbba63614cb4e
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 70a30d92dba7c18b7f85127ba7359d94711b570a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-storage-with-nodejs"></a>Beispielcode für die Verwendung von Azure-Speicher mit Node.js
+# <a name="azure-storage-with-nodejs-code-samples"></a>Codebeispiele für Azure Storage mit Node.js
 
-Der folgende Beispielcode veranschaulicht die Verwendung von Azure-Speicher mit Node.js.
+Mit dem folgenden Beispielcode wird die Verwendung von Azure Storage mit Node.js veranschaulicht.
 
 Wenn Sie Code für andere Aufgaben benötigen, können Sie die vollständige Liste mit den [Azure-Node.js-Beispielen](https://azure.microsoft.com/resources/samples/?term=nodejs) durchsuchen.
 
@@ -26,7 +26,7 @@ Wenn Sie Code für andere Aufgaben benötigen, können Sie die vollständige Lis
 | **Blobs** ||
 | [Erste Schritte mit dem Azure Blob-Dienst in Node.js](https://github.com/Azure-Samples/storage-blob-node-getting-started) | Es wird gezeigt, wie Sie den Blob Storage-Dienst verwenden. |
 | **Dateien** ||
-| [Getting Started with Azure File Service in Node.js](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/) (Erste Schritte mit dem Azure File-Dienst in Node.js) | Es wird gezeigt, wie Sie den File Storage-Dienst verwenden. |
+| [Erste Schritte mit dem Azure-Dateidienst in Node.js](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/) | Es wird gezeigt, wie Sie den File Storage-Dienst verwenden. |
 | **Warteschlangen** ||
 | [Getting Started with Azure Queue Service in Node.js](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/) (Erste Schritte mit dem Azure-Warteschlangendienst in Node.js) | Es wird gezeigt, wie Sie häufig anfallende Aufgaben mit dem Azure-Warteschlangendienst durchführen. |
 | **Tabellen** ||

@@ -1,24 +1,24 @@
 ---
-title: "Beispielcode für das Hinzufügen von Azure Compute-Funktionen mit Node.js"
+title: "Azure Compute-Codebeispiele für Node.js"
 description: "Beispielcode, der das Hinzufügen von Azure Compute-Funktionen mit Node.js veranschaulicht"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 454c32463422eaaf06d83590f3aba149942773db
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 5ad0935349583a2db1d844bd5a1e0e58e3b3e039
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-adding-azure-compute-functionality-with-nodejs"></a>Beispielcode für das Hinzufügen von Azure Compute-Funktionen mit Node.js
+# <a name="azure-compute-with-nodejs-code-samples"></a>Codebeispiele für Azure Compute mit Node.js
 
 Der folgende Beispielcode veranschaulicht das Hinzufügen von Azure Compute-Funktionen mit Node.js.
 
-Wenn Sie Code für andere Aufgaben benötigen, können Sie die vollständige Liste der [Azure-Node.js-Beispiele](https://azure.microsoft.com/resources/samples/?term=nodejs) durchsuchen.
+Wenn Sie Code für andere Aufgaben benötigen, können Sie die vollständige Liste mit den [Azure-Node.js-Beispielen](https://azure.microsoft.com/resources/samples/?term=nodejs) durchsuchen.
 
 | | |
 |---|---|

@@ -1,20 +1,19 @@
 ---
 title: "Erste Schritte mit den Azure-Modulen für Node.js"
-description: "Machen Sie sich mit der grundlegenden Verwendung der Azure-Module für Node.js mit Ihrem eigenen Azure-Abonnement vertraut."
-keywords: Azure, Node, SDK, API, erste Schritte, Node.js
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Erste Schritte mit der Authentifizierung und Ressourcenverwaltung mit Azure-Modulen für Node.js"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Erste Schritte mit den Azure-Modulen für Node.js
 
@@ -260,11 +259,11 @@ az group delete --name myResourceGroup
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sehen Sie sich weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
+Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
 
-## <a name="reference"></a>Referenz 
+## <a name="reference"></a>Verweis 
 
-Für alle Pakete steht eine [Referenz](/nodejs/api/overview/azure/?view=azure-node-2.0.0) zur Verfügung.
+Für alle Pakete steht eine [Referenz](/javascript/api/overview/azure/) zur Verfügung.
 
 ## <a name="get-help-and-give-feedback"></a>Hilfe und Feedback
 
