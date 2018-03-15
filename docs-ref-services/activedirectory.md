@@ -10,31 +10,34 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: 59ef5321db6e5e7f3ad0e3b63aaa6a107207d3c2
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c91b8396dbfeb766887b650541044f7ce2e7bde6
+ms.sourcegitcommit: 79213a25192d8913bf8ec16c19fbec6a8eb691f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="5e6ea-103">Azure Active Directory-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="5e6ea-103">Azure Active Directory modules for Node.js</span></span>
+# <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="c6cc6-103">Azure Active Directory-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="c6cc6-103">Azure Active Directory modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="5e6ea-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="5e6ea-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c6cc6-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="c6cc6-104">Overview</span></span>
 
-<span data-ttu-id="5e6ea-105">Mit der [Azure Active Directory Authentication Library (ADAL) für Node.js](https://www.npmjs.com/package/adal-node) können sich Node.js-Anwendungen bei AAD authentifizieren, um auf durch AAD geschützte Webressourcen zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="5e6ea-105">The [Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) enables Node.js applications to authenticate to AAD in order to access AAD protected web resources.</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="c6cc6-105">Es wird dringend empfohlen, dass Sie [Microsoft Graph](https://graph.microsoft.io/) anstelle der Azure AD Graph-API für den Zugriff auf Azure Active Directory-Ressourcen verwenden.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-105">We strongly recommend that you use [Microsoft Graph](https://graph.microsoft.io/) instead of Azure AD Graph API to access Azure Active Directory resources.</span></span> <span data-ttu-id="c6cc6-106">Unsere Entwicklungstätigkeiten konzentrieren sich nun auf Microsoft Graph, während für die Azure AD Graph-API keine weiteren Verbesserungen geplant sind.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-106">Our development efforts are now concentrated on Microsoft Graph and no further enhancements are planned for Azure AD Graph API.</span></span> <span data-ttu-id="c6cc6-107">Die Szenarien, für die die Azure AD Graph-API möglicherweise weiterhin geeignet ist, ist nur sehr begrenzt. Weitere Informationen dazu finden Sie im Blogbeitrag [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) (Microsoft Graph oder Azure AD Graph) im Office Dev Center.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-107">There are a very limited number of scenarios for which Azure AD Graph API might still be appropriate; for more information, see the [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) blog post in the Office Dev Center.</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="5e6ea-106">Clientpaket</span><span class="sxs-lookup"><span data-stu-id="5e6ea-106">Client package</span></span>
+<span data-ttu-id="c6cc6-108">Mit der [Azure Active Directory Authentication Library (ADAL) für Node.js](https://www.npmjs.com/package/adal-node) können sich Node.js-Anwendungen bei AAD authentifizieren, um auf durch AAD geschützte Webressourcen zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-108">The [Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) enables Node.js applications to authenticate to AAD in order to access AAD protected web resources.</span></span>
 
-### <a name="install-the-npm-modules"></a><span data-ttu-id="5e6ea-107">Installieren der npm-Module</span><span class="sxs-lookup"><span data-stu-id="5e6ea-107">Install the npm modules</span></span>
+## <a name="client-package"></a><span data-ttu-id="c6cc6-109">Clientpaket</span><span class="sxs-lookup"><span data-stu-id="c6cc6-109">Client package</span></span>
 
-<span data-ttu-id="5e6ea-108">Verwenden Sie npm, um die Client- oder Verwaltungsmodule von Azure Storage zu installieren.</span><span class="sxs-lookup"><span data-stu-id="5e6ea-108">Use npm to install the Azure storage client or management modules.</span></span>
+### <a name="install-the-npm-modules"></a><span data-ttu-id="c6cc6-110">Installieren der npm-Module</span><span class="sxs-lookup"><span data-stu-id="c6cc6-110">Install the npm modules</span></span>
+
+<span data-ttu-id="c6cc6-111">Verwenden Sie npm, um die Client- oder Verwaltungsmodule von Azure Storage zu installieren.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-111">Use npm to install the Azure storage client or management modules.</span></span>
 
 ```bash
 npm install adal-node
 ```   
 
-### <a name="example"></a><span data-ttu-id="5e6ea-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5e6ea-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="c6cc6-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c6cc6-112">Example</span></span>
 
-<span data-ttu-id="5e6ea-110">Das folgende Beispiel aus dem [Beispiel mit Clientanmeldeinformationen](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) veranschaulicht die Server-zu-Server-Authentifizierung über Clientanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="5e6ea-110">This example from the [client credentials sample](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustrates server-to-server authentication via client credentials.</span></span>
+<span data-ttu-id="c6cc6-113">Das folgende Beispiel aus dem [Beispiel mit Clientanmeldeinformationen](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) veranschaulicht die Server-zu-Server-Authentifizierung über Clientanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-113">This example from the [client credentials sample](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustrates server-to-server authentication via client credentials.</span></span>
 
 ```javascript
 const adal = require('adal-node').AuthenticationContext;
@@ -62,8 +65,8 @@ context.acquireTokenWithClientCredentials(
 );
 ```
 
-## <a name="samples"></a><span data-ttu-id="5e6ea-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="5e6ea-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c6cc6-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="c6cc6-114">Samples</span></span>
 
 [!INCLUDE [node-activedirectory-samples](../docs-ref-conceptual/includes/activedirectory-samples.md)]
 
-<span data-ttu-id="5e6ea-112">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="5e6ea-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="c6cc6-115">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="c6cc6-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
