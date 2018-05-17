@@ -1,4 +1,4 @@
-- [Mobile App Service-Apps: Abgeschlossener Schnellstart für Node.js-Back-End](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
-- [Verwalten von Azure-Websites mit Node.js](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
-- [MEAN.js-Beispiel für Azure App Service](https://azure.microsoft.com/resources/samples/meanjs/)
-- [FoodTrucks – Node-API-App für Azure App Service](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)
+- [<span data-ttu-id="00a1d-101">Mobile App Service-Apps: Abgeschlossener Schnellstart für Node.js-Back-End</span><span class="sxs-lookup"><span data-stu-id="00a1d-101">App Service Mobile completed quickstart for Node.js backend</span></span>](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
+- [<span data-ttu-id="00a1d-102">Verwalten von Azure-Websites mit Node.js</span><span class="sxs-lookup"><span data-stu-id="00a1d-102">Manage Azure websites with Node.js</span></span>](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
+- [<span data-ttu-id="00a1d-103">MEAN.js-Beispiel für Azure App Service</span><span class="sxs-lookup"><span data-stu-id="00a1d-103">MEAN.js sample for Azure App Service</span></span>](https://azure.microsoft.com/resources/samples/meanjs/)
+- [<span data-ttu-id="00a1d-104">FoodTrucks – Node-API-App für Azure App Service</span><span class="sxs-lookup"><span data-stu-id="00a1d-104">FoodTrucks - Node API App for Azure App Service</span></span>](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)

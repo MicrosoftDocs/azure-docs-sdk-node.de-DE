@@ -1,4 +1,4 @@
 | | |
 |---|---|
-| **Verwaltung virtueller Computer** ||
-| [Beispiel für die Verwaltung virtueller Azure-Computer mit Node.js](https://github.com/Azure-Samples/compute-node-manage-vm) | Hier wird veranschaulicht, wie Sie virtuelle Computer erstellen, auflisten, neu starten und löschen. |
+| <span data-ttu-id="66ce0-101">**Verwaltung virtueller Computer**</span><span class="sxs-lookup"><span data-stu-id="66ce0-101">**Virtual machine management**</span></span> ||
+| [<span data-ttu-id="66ce0-102">Beispiel für die Verwaltung virtueller Azure-Computer mit Node.js</span><span class="sxs-lookup"><span data-stu-id="66ce0-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/compute-node-manage-vm) | <span data-ttu-id="66ce0-103">Hier wird veranschaulicht, wie Sie virtuelle Computer erstellen, auflisten, neu starten und löschen.</span><span class="sxs-lookup"><span data-stu-id="66ce0-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |
