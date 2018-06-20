@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220632"
 ---
 # <a name="azure-web-and-mobile-apps-with-nodejs-code-samples"></a><span data-ttu-id="9ca94-103">Codebeispiele für Azure-Web-Apps und mobile Azure-Apps mit Node.js</span><span class="sxs-lookup"><span data-stu-id="9ca94-103">Azure web and mobile apps with Node.js code samples</span></span>
 

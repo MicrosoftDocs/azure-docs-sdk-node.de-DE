@@ -1,6 +1,6 @@
 ---
 title: Node.js-Entwicklung mit Visual Studio Code und Azure
-description: "Enthält ein umfassendes End-to-End-Tutorial zur Vorgehensweise beim Erstellen, Durchführen der Vorbereitung für Docker und Bereitstellen einer Node.js-App in Azure."
+description: Enthält ein umfassendes End-to-End-Tutorial zur Vorgehensweise beim Erstellen, Durchführen der Vorbereitung für Docker und Bereitstellen einer Node.js-App in Azure.
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908140"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a><span data-ttu-id="25181-103">Node.js-Entwicklung mit Visual Studio Code und Azure</span><span class="sxs-lookup"><span data-stu-id="25181-103">Node.js development with Visual Studio Code and Azure</span></span>
 

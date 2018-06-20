@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264643"
 ---
 # <a name="azure-backup-modules-for-nodejs"></a><span data-ttu-id="8f4b7-103">Azure Backup-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="8f4b7-103">Azure Backup Modules for Node.js</span></span>
 

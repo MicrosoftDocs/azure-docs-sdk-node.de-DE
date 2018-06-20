@@ -1,6 +1,6 @@
 ---
-title: "Azure Storage-Module für Node.js"
-description: "Referenz zu Azure Storage-Modulen für Node.js"
+title: Azure Storage-Module für Node.js
+description: Referenz zu Azure Storage-Modulen für Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116896"
 ---
 # <a name="azure-storage-modules-for-nodejs"></a><span data-ttu-id="55c1f-103">Azure Storage-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="55c1f-103">Azure Storage modules for Node.js</span></span>
 

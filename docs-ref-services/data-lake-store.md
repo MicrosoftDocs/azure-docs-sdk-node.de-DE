@@ -1,6 +1,6 @@
 ---
-title: "Azure Data Lake Store-Module für Node.js"
-description: "Referenz zu Azure Data Lake Store-Modulen für Node.js"
+title: Azure Data Lake Store-Module für Node.js
+description: Referenz zu Azure Data Lake Store-Modulen für Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28117125"
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a><span data-ttu-id="0b6f2-103">Azure Data Lake Store-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="0b6f2-103">Azure Data Lake Store modules for Node.js</span></span>
 

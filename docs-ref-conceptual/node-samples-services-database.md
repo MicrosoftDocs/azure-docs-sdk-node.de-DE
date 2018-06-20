@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220702"
 ---
 # <a name="azure-databases-with-nodejs-code-samples"></a><span data-ttu-id="5500c-103">Codebeispiele für Azure-Datenbanken mit Node.js</span><span class="sxs-lookup"><span data-stu-id="5500c-103">Azure databases with Node.js code samples</span></span>
 

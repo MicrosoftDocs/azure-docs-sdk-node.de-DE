@@ -1,6 +1,6 @@
 ---
-title: "Azure-Abrechnungscodebeispiele für Node.js"
-description: "Beispielcode, der das Hinzufügen von Azure-Abrechnungsfunktionen mit Node.js veranschaulicht"
+title: Azure-Abrechnungscodebeispiele für Node.js
+description: Beispielcode, der das Hinzufügen von Azure-Abrechnungsfunktionen mit Node.js veranschaulicht
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781776"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a><span data-ttu-id="70a1b-103">Codebeispiele für Azure-Abrechnung mit Node.js</span><span class="sxs-lookup"><span data-stu-id="70a1b-103">Azure Billing with Node.js code samples</span></span>
 

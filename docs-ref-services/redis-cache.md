@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265061"
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a><span data-ttu-id="a76cf-103">Azure Redis Cache-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="a76cf-103">Azure Redis Cache modules for Node.js</span></span>
 

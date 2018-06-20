@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220522"
 ---
 # <a name="azure-security-and-identity-with-nodejs-code-samples"></a><span data-ttu-id="c32b3-103">Codebeispiele für Azure-Sicherheit und -Identität mit Node.js</span><span class="sxs-lookup"><span data-stu-id="c32b3-103">Azure security and identity with Node.js code samples</span></span>
 
