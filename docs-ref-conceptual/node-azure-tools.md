@@ -15,6 +15,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220732"
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>Azure-Tools für Node.js-Entwickler
 Die folgenden Tools werden für die Entwicklung mit Azure in Node.js empfohlen:
