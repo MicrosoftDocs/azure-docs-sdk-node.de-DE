@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259969"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188996"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Azure Cognitive Services-Module: JavaScript
 
@@ -29,7 +29,7 @@ Gibt Informationen zu visuellen Inhalten in einem Bild zurück:
 - Wenden Sie Einstellungen für nicht jugendfreie oder anzügliche Inhalte an, um eine automatische Einschränkung dieser Inhalte zu ermöglichen.
 - Bestimmen Sie Bildtypen und Farbschemas in Bildern.
 
-Testen Sie [maschinelles Sehen](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) kostenlos in Ihrem Browser.
+Testen Sie [maschinelles Sehen](https://azure.microsoft.com/services/cognitive-services/computer-vision/) kostenlos in Ihrem Browser.
 
 Rufen Sie das JavaScript-Modul mit [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) ab:
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 Nutzen Sie die Erkennung, Analyse, Organisation und Markierung von Gesichtern auf Fotos. 
 
-Testen Sie die [Gesichtserkennungs-API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) in Ihrem Browser.
+Testen Sie die [Gesichtserkennungs-API](https://azure.microsoft.com/services/cognitive-services/face/) in Ihrem Browser.
 
 Rufen Sie das JavaScript-Modul mit [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) ab:
 
@@ -71,7 +71,7 @@ npm install azure-cognitiveservices-face
 
 Rufen Sie durch die Bing-Websuche-API indizierte Webdokumente ab, und grenzen Sie die Ergebnisse anhand des Ergebnistyps, der Aktualität und anderer Faktoren ein. 
 
-Testen Sie die [Websuche-API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) in Ihrem Browser.
+Testen Sie die [Websuche-API](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/) in Ihrem Browser.
 
 Rufen Sie das JavaScript-Modul mit [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) ab:
 
@@ -85,7 +85,7 @@ npm install azure-cognitiveservices-websearch
 
 Suchen Sie nach Bildern, und erhalten Sie Ergebnisse mit Miniaturansichten, vollständigen URLs von Bildern, Bildmetadaten und vielem mehr.
 
-Testen Sie die [Bildersuche-API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) in Ihrem Browser.
+Testen Sie die [Bildersuche-API](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/) in Ihrem Browser.
 
 Rufen Sie das JavaScript-Modul mit [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) ab:
 
@@ -162,7 +162,7 @@ Die Textanalyse-API ist ein cloudbasierter Dienst für die Verarbeitung natürli
 - Schlüsselwortextraktion
 - Spracherkennung
 
-Testen Sie die [Textanalyse-API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) in Ihrem Browser.
+Testen Sie die [Textanalyse-API](https://azure.microsoft.com/services/cognitive-services/text-analytics/) in Ihrem Browser.
 
 Rufen Sie das JavaScript-Modul mit [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) ab:
 
@@ -177,7 +177,7 @@ npm install azure-cognitiveservices-textanalytics
 
 Überprüfen Sie mit der Bing-Rechtschreibprüfungs-API Grammatik und Rechtschreibung im Kontext.
 
-Testen Sie die [Rechtschreibprüfungs-API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) in Ihrem Browser.
+Testen Sie die [Rechtschreibprüfungs-API](https://azure.microsoft.com/services/cognitive-services/spell-check/) in Ihrem Browser.
 
 Rufen Sie das JavaScript-Modul mit [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) ab:
 
