@@ -1,0 +1,366 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 903c391913659600a4f98ef1b3541f52745d7dfe
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40062714"
+items:
+- uid: azure-event-processor-host.EventProcessorHost
+  name: EventProcessorHost
+  fullName: EventProcessorHost
+  children:
+  - azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  - azure-event-processor-host.EventProcessorHost.closed
+  - azure-event-processor-host.EventProcessorHost.consumerGroup
+  - azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  - azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  - azure-event-processor-host.EventProcessorHost.createHostName
+  - azure-event-processor-host.EventProcessorHost.error
+  - azure-event-processor-host.EventProcessorHost.constructor
+  - azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  - azure-event-processor-host.EventProcessorHost.getPartitionIds
+  - azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  - azure-event-processor-host.EventProcessorHost.hostName
+  - azure-event-processor-host.EventProcessorHost.message
+  - azure-event-processor-host.EventProcessorHost.opened
+  - azure-event-processor-host.EventProcessorHost.start
+  - azure-event-processor-host.EventProcessorHost.stop
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="6b172-101">Beschreibt, der Ereignisprozessorhost zum Verarbeiten von Ereignissen aus einem "eventhub".</span><span class="sxs-lookup"><span data-stu-id="6b172-101">Describes the Event Processor Host to process events from an EventHub.</span></span>
+  extends:
+    name: EventEmitter
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  name: autoCheckpoint
+  fullName: autoCheckpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'autoCheckpoint: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.closed
+  name: closed
+  fullName: closed
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="6b172-102">Geschlossen: Ausgelöst, wenn eine Partition verliert seine Lease und zum Beenden des Empfangs hat oder wenn der Host heruntergefahren wird.</span><span class="sxs-lookup"><span data-stu-id="6b172-102">Closed: Triggered whenever a partition loses its lease and has to stop receiving, or when the host is shut down.</span></span> <span data-ttu-id="6b172-103">Die PartitionContext und der schließenden Grund wird in den Ereignislistener übergeben.</span><span class="sxs-lookup"><span data-stu-id="6b172-103">The PartitionContext and the closing reason is passed to the event listener.</span></span>'
+  syntax:
+    content: 'static closed: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.consumerGroup
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6b172-104">Stellt der Consumer-Group-Name für den ereignisprozessorhost bereit.</span><span class="sxs-lookup"><span data-stu-id="6b172-104">Provides the consumer group name for the Event processor host.</span></span>
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  name: createFromAadTokenCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-105">Erstellt einen neuen Host zum Verarbeiten von Ereignissen von einem Event Hub.</span><span class="sxs-lookup"><span data-stu-id="6b172-105">Creates a new host to process events from an Event Hub.</span></span>
+  syntax:
+    content: 'static function createFromAadTokenCredentials(hostName: string, storageConnectionString: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="6b172-106">Der Name des Prozessor-Hosts.</span><span class="sxs-lookup"><span data-stu-id="6b172-106">Name of the processor host.</span></span> <span data-ttu-id="6b172-107">MUSS EINDEUTIG SEIN.</span><span class="sxs-lookup"><span data-stu-id="6b172-107">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="6b172-108">Empfohlen Sie z. B. eine Guid oder ein Präfix mit einer Guid, zur Sicherstellung der Eindeutigkeit wird dringend.</span><span class="sxs-lookup"><span data-stu-id="6b172-108">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="6b172-109">Sie können `EventProcessorHost.createHostName("your-prefix")`; Standardwert: `js-host-${uuid()}`.</span><span class="sxs-lookup"><span data-stu-id="6b172-109">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="6b172-110">Verbindungszeichenfolge für Azure Storage-Konto für die Leases und Prüfpunkte verwendet.</span><span class="sxs-lookup"><span data-stu-id="6b172-110">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="6b172-111">Beispiel-DefaultEndpointsProtocol = Https; AccountName = < Kontoname >; AccountKey = < speicherkontoschlüssel >; EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="6b172-111">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: namespace
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="6b172-112">Vollständig qualifizierten Domänennamen für Event Hubs.</span><span class="sxs-lookup"><span data-stu-id="6b172-112">Fully qualified domain name for Event Hubs.</span></span>
+
+        <span data-ttu-id="6b172-113">Beispiel: "{your-Sb-Namespace}. #42;.servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="6b172-113">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
+    - id: eventHubPath
+      type:
+      - string
+      description: <span data-ttu-id="6b172-114">Der Name der den Event Hub.</span><span class="sxs-lookup"><span data-stu-id="6b172-114">The name of the EventHub.</span></span>
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: '<span data-ttu-id="6b172-115">Die AAD-Token-Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="6b172-115">The AAD Token credentials.</span></span> <span data-ttu-id="6b172-116">Es kann einen der folgenden sein: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="6b172-116">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  name: createFromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-117">Erstellt einen neuen Host zum Verarbeiten von Ereignissen von einem Event Hub.</span><span class="sxs-lookup"><span data-stu-id="6b172-117">Creates a new host to process events from an Event Hub.</span></span>
+  syntax:
+    content: 'static function createFromConnectionString(hostName: string, storageConnectionString: string, eventHubConnectionString: string, options?: ConnectionStringBasedOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="6b172-118">Der Name des Prozessor-Hosts.</span><span class="sxs-lookup"><span data-stu-id="6b172-118">Name of the processor host.</span></span> <span data-ttu-id="6b172-119">MUSS EINDEUTIG SEIN.</span><span class="sxs-lookup"><span data-stu-id="6b172-119">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="6b172-120">Empfohlen Sie z. B. eine Guid oder ein Präfix mit einer Guid, zur Sicherstellung der Eindeutigkeit wird dringend.</span><span class="sxs-lookup"><span data-stu-id="6b172-120">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="6b172-121">Sie können `EventProcessorHost.createHostName("your-prefix")`; Standardwert: `js-host-${uuid()}`.</span><span class="sxs-lookup"><span data-stu-id="6b172-121">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="6b172-122">Verbindungszeichenfolge für Azure Storage-Konto für die Leases und Prüfpunkte verwendet.</span><span class="sxs-lookup"><span data-stu-id="6b172-122">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="6b172-123">Beispiel-DefaultEndpointsProtocol = Https; AccountName = < Kontoname >; AccountKey = < speicherkontoschlüssel >; EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="6b172-123">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: eventHubConnectionString
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="6b172-124">Die Verbindungszeichenfolge für den Event Hub zum Empfangen von.</span><span class="sxs-lookup"><span data-stu-id="6b172-124">Connection string for the Event Hub to receive from.</span></span>
+
+        <span data-ttu-id="6b172-125">Beispiel: "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-Name; SharedAccessKey Meine-SA-Key = "</span><span class="sxs-lookup"><span data-stu-id="6b172-125">Example: 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: options
+      type:
+      - azure-event-processor-host.ConnectionStringBasedOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createHostName
+  name: createHostName
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-126">Hilfsmethode zum Generieren von eindeutigen Hostnamen.</span><span class="sxs-lookup"><span data-stu-id="6b172-126">Convenience method for generating unique host name.</span></span>
+  syntax:
+    content: 'static function createHostName(prefix?: string)'
+    parameters:
+    - id: prefix
+      type:
+      - string
+      description: ''
+      optional: true
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="6b172-127">Fehler: Wird ausgelöst, wenn auf einem bestimmten Empfänger ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="6b172-127">Error: Triggered when an error occurs on a given receiver.</span></span> <span data-ttu-id="6b172-128">Die EventHubsError oder ein generischer Fehlerobjekt wird den Ereignislistener übergeben.</span><span class="sxs-lookup"><span data-stu-id="6b172-128">The EventHubsError or a generic Error object is passed the event listener.</span></span>'
+  syntax:
+    content: 'static error: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.constructor
+  name: EventProcessorHost
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-129">Erstellt einen neuen Host zum Verarbeiten von Ereignissen von einem Event Hub.</span><span class="sxs-lookup"><span data-stu-id="6b172-129">Creates a new host to process events from an Event Hub.</span></span>
+  syntax:
+    content: 'new EventProcessorHost(hostName: string, storageConnectionString: string, eventHubClient: EventHubClient, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="6b172-130">Der Name des Prozessor-Hosts.</span><span class="sxs-lookup"><span data-stu-id="6b172-130">Name of the processor host.</span></span> <span data-ttu-id="6b172-131">MUSS EINDEUTIG SEIN.</span><span class="sxs-lookup"><span data-stu-id="6b172-131">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="6b172-132">Empfohlen Sie z. B. eine Guid oder ein Präfix mit einer Guid, zur Sicherstellung der Eindeutigkeit wird dringend.</span><span class="sxs-lookup"><span data-stu-id="6b172-132">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="6b172-133">Sie können `EventProcessorHost.createHostName("your-prefix")`; Standardwert: `js-host-${uuid()}`.</span><span class="sxs-lookup"><span data-stu-id="6b172-133">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="6b172-134">Verbindungszeichenfolge für Azure Storage-Konto für die Leases und Prüfpunkte verwendet.</span><span class="sxs-lookup"><span data-stu-id="6b172-134">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="6b172-135">Beispiel-DefaultEndpointsProtocol = Https; AccountName = < Kontoname >; AccountKey = < speicherkontoschlüssel >; EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="6b172-135">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: eventHubClient
+      type:
+      - EventHubClient
+      description: <span data-ttu-id="6b172-136">Die EventHub-client</span><span class="sxs-lookup"><span data-stu-id="6b172-136">The EventHub client</span></span>
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  name: getHubRuntimeInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-137">Enthält die Common Language Runtime-Informationen "eventhub".</span><span class="sxs-lookup"><span data-stu-id="6b172-137">Provides the eventhub runtime information.</span></span>
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<EventHubRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionIds
+  name: getPartitionIds
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-138">Stellt ein Array von PartitionIds bereit.</span><span class="sxs-lookup"><span data-stu-id="6b172-138">Provides an array of partitionIds.</span></span>
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  name: getPartitionInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-139">Enthält Informationen über die angegebene Partition.</span><span class="sxs-lookup"><span data-stu-id="6b172-139">Provides information about the specified partition.</span></span>
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: >
+        <span data-ttu-id="6b172-140">Partitions-ID für die Partition Informationen erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="6b172-140">Partition ID for which partition information is required.</span></span>
+    return:
+      type:
+      - Promise<EventHubPartitionRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.hostName
+  name: hostName
+  fullName: hostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6b172-141">Stellt den Hostnamen für den ereignisprozessorhost bereit.</span><span class="sxs-lookup"><span data-stu-id="6b172-141">Provides the host name for the Event processor host.</span></span>
+  syntax:
+    content: 'hostName: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.message
+  name: message
+  fullName: message
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="6b172-142">Meldung: Wird ausgelöst, wenn eine Nachricht für eine bestimmte Partition eingeht.</span><span class="sxs-lookup"><span data-stu-id="6b172-142">Message: Triggered whenever a message comes in on a given partition.</span></span> <span data-ttu-id="6b172-143">Die PartitionContext und Ereignisdaten wird an den Ereignislistener übergeben.</span><span class="sxs-lookup"><span data-stu-id="6b172-143">The PartitionContext and EventData is passed to the event listener.</span></span>'
+  syntax:
+    content: 'static message: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.opened
+  name: opened
+  fullName: opened
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="6b172-144">Geöffnet: Ausgelöst, wenn eine Partition seine Lease abgerufen.</span><span class="sxs-lookup"><span data-stu-id="6b172-144">Opened: Triggered whenever a partition obtains its lease.</span></span> <span data-ttu-id="6b172-145">Die PartitionContext wird an den Ereignis-Listener übergeben.</span><span class="sxs-lookup"><span data-stu-id="6b172-145">The PartitionContext is passed to the event listener.</span></span>'
+  syntax:
+    content: 'static opened: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.start
+  name: start
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-146">Startet der ereignisprozessorhost, Abrufen der Liste der Partitionen (optional) filtern und -Leases auf (gefilterten) abrufen möchten.</span><span class="sxs-lookup"><span data-stu-id="6b172-146">Starts the event processor host, fetching the list of partitions, (optionally) filtering them, and attempting to grab leases on the (filtered) set.</span></span> <span data-ttu-id="6b172-147">Für jede erfolgreiche Leasedauer wird rufen die Details aus dem Blob und starten Sie einen Empfänger, an dem Punkt, wo er zuvor unterbrochen.</span><span class="sxs-lookup"><span data-stu-id="6b172-147">For each successful lease, will get the details from the blob and start a receiver at the point where it left off previously.</span></span>
+  syntax:
+    content: 'function start(options?: StartEPHOptions)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-processor-host.StartEPHOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.stop
+  name: stop
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6b172-148">Beendet die EventProcessorHost Nachrichten verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="6b172-148">Stops the EventProcessorHost from processing messages.</span></span>
+  syntax:
+    content: function stop()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.EventProcessorOptions
+  spec.typeScript:
+  - name: EventProcessorOptions
+    fullName: EventProcessorOptions
+    uid: azure-event-processor-host.EventProcessorOptions
+- uid: azure-event-processor-host.StartEPHOptions
+  spec.typeScript:
+  - name: StartEPHOptions
+    fullName: StartEPHOptions
+    uid: azure-event-processor-host.StartEPHOptions
+- uid: azure-event-processor-host.EventProcessorHost
+  spec.typeScript:
+  - name: EventProcessorHost
+    fullName: EventProcessorHost
+    uid: azure-event-processor-host.EventProcessorHost
+- uid: azure-event-processor-host.ConnectionStringBasedOptions
+  spec.typeScript:
+  - name: ConnectionStringBasedOptions
+    fullName: ConnectionStringBasedOptions
+    uid: azure-event-processor-host.ConnectionStringBasedOptions

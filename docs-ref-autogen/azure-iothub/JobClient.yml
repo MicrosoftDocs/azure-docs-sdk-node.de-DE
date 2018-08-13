@@ -1,0 +1,275 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cb17321fac415a5f2a5a07d198cddac0ebcfde8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061532"
+items:
+- uid: azure-iothub.JobClient
+  name: JobClient
+  fullName: JobClient
+  children:
+  - azure-iothub.JobClient.cancelJob
+  - azure-iothub.JobClient.createQuery
+  - azure-iothub.JobClient.fromConnectionString
+  - azure-iothub.JobClient.fromSharedAccessSignature
+  - azure-iothub.JobClient.getJob
+  - azure-iothub.JobClient.JobCallback
+  - azure-iothub.JobClient.scheduleDeviceMethod
+  - azure-iothub.JobClient.scheduleTwinUpdate
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="ead09-101">Stellt Methoden zum Erstellen, aktualisieren, überwachen und Abbrechen von lang andauernden Aufträge in einer IoT Hub-Instanz sowie vorhandene Aufträge Abfragen.</span><span class="sxs-lookup"><span data-stu-id="ead09-101">Provides methods to create, update, monitor and cancel long-running jobs on an IoT Hub instance, as well as query existing jobs.</span></span>
+
+    <span data-ttu-id="ead09-102">Die Aufträge-API in Azure IoT Hub können Aufrufe der direkten Methode und zwillingsaktualisierungen auf mehreren Geräten planen.</span><span class="sxs-lookup"><span data-stu-id="ead09-102">The Jobs API in Azure IoT Hub allows to schedule direct method calls and twin updates on multiple devices.</span></span>
+
+    <span data-ttu-id="ead09-103">SDK-Benutzer erstellen sollen <xref:azure-iothub.JobClient> -Instanzen mithilfe der Factorymethoden <xref:azure-iothub.JobClient.fromConnectionString> und <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span><span class="sxs-lookup"><span data-stu-id="ead09-103">SDK users are expected to create <xref:azure-iothub.JobClient> instances using the factory methods <xref:azure-iothub.JobClient.fromConnectionString> and <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob
+  name: cancelJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-104">Bricht einen vorhandenen Auftrag ab.</span><span class="sxs-lookup"><span data-stu-id="ead09-104">Cancels an existing job.</span></span>
+  syntax:
+    content: 'function cancelJob(jobId: string | number, done: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="ead09-105">Der Bezeichner eines vorhandenen Auftrags.</span><span class="sxs-lookup"><span data-stu-id="ead09-105">The identifier of an existing job.</span></span>
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        <span data-ttu-id="ead09-106">Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="ead09-106">The function to call when the operation is complete.</span></span> <span data-ttu-id="ead09-107">`done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), ein Job-Objekt und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.</span><span class="sxs-lookup"><span data-stu-id="ead09-107">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.createQuery
+  name: createQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-108">Erstellt eine Abfrage, die verwendet werden kann, um vorhandenen Auftrags basierend auf Typ und Status zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="ead09-108">Creates a query that can be used to return pages of existing job based on type and status.</span></span>
+  syntax:
+    content: 'function createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
+    parameters:
+    - id: jobType
+      type:
+      - azure-iothub.JobType
+      description: <span data-ttu-id="ead09-109">Der Typ, der zum Filtern von Ergebnissen verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-109">The type that should be used to filter results.</span></span>
+      optional: true
+    - id: jobStatus
+      type:
+      - azure-iothub.JobStatus
+      description: <span data-ttu-id="ead09-110">Der Status, der zum Filtern von Ergebnissen verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-110">The status that should be used to filter results.</span></span>
+      optional: true
+    - id: pageSize
+      type:
+      - number
+      description: >
+        <span data-ttu-id="ead09-111">Die Anzahl der Elemente, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-111">The number of elements to return per page.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iothub.Query
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-112">Erstellt ein JobClient-Objekt, aus der angegebenen Verbindungszeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="ead09-112">Constructs a JobClient object from the given connection string.</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connectionString: string)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ead09-113">Eine Verbindungszeichenfolge, die die entsprechende kapselt (Lesen und/oder Schreiben) Berechtigungen für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="ead09-113">A connection string which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-114">Erstellt ein JobClient-Objekt, aus der angegebenen SAS-Signatur.</span><span class="sxs-lookup"><span data-stu-id="ead09-114">Constructs a JobClient object from the given shared access signature.</span></span>
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ead09-115">Eine SAS, die die entsprechende kapselt (Lesen und/oder Schreiben) Berechtigungen für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="ead09-115">A shared access signature which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob
+  name: getJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-116">Fordert Informationen zu einem vorhandenen Auftrag.</span><span class="sxs-lookup"><span data-stu-id="ead09-116">Requests information about an existing job.</span></span>
+  syntax:
+    content: 'function getJob(jobId: string | number, done: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="ead09-117">Der Bezeichner eines vorhandenen Auftrags.</span><span class="sxs-lookup"><span data-stu-id="ead09-117">The identifier of an existing job.</span></span>
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        <span data-ttu-id="ead09-118">Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="ead09-118">The function to call when the operation is complete.</span></span> <span data-ttu-id="ead09-119">`done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), ein Job-Objekt und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.</span><span class="sxs-lookup"><span data-stu-id="ead09-119">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.JobCallback
+  name: JobCallback
+  fullName: JobCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod
+  name: scheduleDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-120">Plant einen Auftrag, der eine gerätemethode für eine Gruppe von Geräten ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ead09-120">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="ead09-121">Der eindeutige Bezeichner, der für diesen Auftrag verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-121">The unique identifier that should be used for this job.</span></span>
+    - id: queryCondition
+      type:
+      - string
+      description: <span data-ttu-id="ead09-122">Eine SQL-Abfrage WHERE-Klausel verwendet, um die Liste der Geräte berechnen, auf denen dieser Auftrag ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-122">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: >-
+        <span data-ttu-id="ead09-123">Ein Objekt, das die Methode beschreibt und über die folgenden Eigenschaften verfügen:-Methodenname der Name der Methode, die aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-123">An object describing the method and shall have the following properties: - methodName          The name of the method that shall be invoked.</span></span>
+
+        <span data-ttu-id="ead09-124">-Nutzlast [optional] die Nutzlast für den Methodenaufruf verwendet.</span><span class="sxs-lookup"><span data-stu-id="ead09-124">- payload             [optional] The payload to use for the method call.</span></span>
+
+        <span data-ttu-id="ead09-125">-ResponseTimeoutInSeconds [optional] die Anzahl der Sekunden, die IoT Hub-Instanz, bis das Gerät warten muss</span><span class="sxs-lookup"><span data-stu-id="ead09-125">- responseTimeoutInSeconds [optional] The number of seconds IoT Hub shall wait for the device</span></span>
+    - id: jobStartTime
+      type:
+      - Date | azure-iothub.JobClient.JobCallback
+      description: <span data-ttu-id="ead09-126">Uhrzeit, an dem der Auftrag gestartet werden soll</span><span class="sxs-lookup"><span data-stu-id="ead09-126">Time time at which the job should start</span></span>
+      optional: true
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number | azure-iothub.JobClient.JobCallback
+      description: <span data-ttu-id="ead09-127">Die maximale Zeit zugewiesenen für diesen Auftrag in Sekunden ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ead09-127">The maximum time alloted for this job to run in seconds.</span></span>
+      optional: true
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        <span data-ttu-id="ead09-128">Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="ead09-128">The function to call when the operation is complete.</span></span> <span data-ttu-id="ead09-129">`done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), ein Job-Objekt und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.</span><span class="sxs-lookup"><span data-stu-id="ead09-129">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate
+  name: scheduleTwinUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ead09-130">Planen eines Auftrags, das einen Satz von zwillingen durch die als Parameter bereitgestellten Patches aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-130">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="ead09-131">Der eindeutige Bezeichner, der für diesen Auftrag verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-131">The unique identifier that should be used for this job.</span></span>
+    - id: queryCondition
+      type:
+      - string
+      description: <span data-ttu-id="ead09-132">Eine SQL-Abfrage WHERE-Klausel verwendet, um die Liste der Geräte berechnen, auf denen dieser Auftrag ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-132">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+    - id: patch
+      type:
+      - any
+      description: <span data-ttu-id="ead09-133">Der gerätezwilling-Patch, der auf gerätezwillinge angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ead09-133">The twin patch that should be applied to the twins.</span></span>
+    - id: jobStartTime
+      type:
+      - Date | azure-iothub.JobClient.JobCallback
+      description: <span data-ttu-id="ead09-134">Uhrzeit, an dem der Auftrag gestartet werden soll</span><span class="sxs-lookup"><span data-stu-id="ead09-134">Time time at which the job should start</span></span>
+      optional: true
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number | azure-iothub.JobClient.JobCallback
+      description: <span data-ttu-id="ead09-135">Die maximale Zeit zugewiesenen für diesen Auftrag in Sekunden ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ead09-135">The maximum time alloted for this job to run in seconds.</span></span>
+      optional: true
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        <span data-ttu-id="ead09-136">Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="ead09-136">The function to call when the operation is complete.</span></span> <span data-ttu-id="ead09-137">`done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), ein Job-Objekt und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.</span><span class="sxs-lookup"><span data-stu-id="ead09-137">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+      optional: true
+  package: azure-iothub
+references:
+- uid: azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: azure-iothub.JobType
+  spec.typeScript:
+  - name: JobType
+    fullName: JobType
+    uid: azure-iothub.JobType
+- uid: azure-iothub.JobStatus
+  spec.typeScript:
+  - name: JobStatus
+    fullName: JobStatus
+    uid: azure-iothub.JobStatus
+- uid: azure-iothub.Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iothub.Query
+- uid: azure-iothub.DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: Date | azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: 'Date | '
+    fullName: 'Date | '
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: number | azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: 'number | '
+    fullName: 'number | '
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: azure-iothub.JobClient
+  spec.typeScript:
+  - name: JobClient
+    fullName: JobClient
+    uid: azure-iothub.JobClient
