@@ -1,0 +1,190 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3433701b84a6eeb4afb19279ae12ec0bdc29c3da
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055786"
+items:
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations
+  summary: >-
+    <span data-ttu-id="3866e-101">Vorgänge zum Verwalten von affinitätsgruppen im Abonnement.</span><span class="sxs-lookup"><span data-stu-id="3866e-101">Operations for managing affinity groups in your subscription.</span></span>  <span data-ttu-id="3866e-102">(finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/ee460798.aspx Informationen) __Hinweis__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [ManagementClient] {@link ManagementClient ~ ManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="3866e-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460798.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ManagementClient] {@link ManagementClient~ManagementClient}.</span></span>
+
+    <span data-ttu-id="3866e-103">Finden Sie unter [AffinityGroups] {@link ManagementClient ~ ManagementClient #affinityGroups}.</span><span class="sxs-lookup"><span data-stu-id="3866e-103">See [affinityGroups] {@link ManagementClient~ManagementClient#affinityGroups}.</span></span>
+
+    <span data-ttu-id="3866e-104">Initialisiert eine neue Instanz der Klasse AffinityGroupOperations an.</span><span class="sxs-lookup"><span data-stu-id="3866e-104">Initializes a new instance of the AffinityGroupOperations class.</span></span>
+  fullName: azure-asm-mgmt.AffinityGroupOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  langs:
+  - js
+- id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations(client)
+  fullName: azure-asm-mgmt.AffinityGroupOperations.AffinityGroupOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: <span data-ttu-id="3866e-105">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="3866e-105">Reference to the service client.</span></span>
+    content: new AffinityGroupOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="3866e-106">Die Affinitätsgruppe erstellen-Vorgang wird eine neue Affinitätsgruppe für das angegebene Abonnement erstellt.</span><span class="sxs-lookup"><span data-stu-id="3866e-106">The Create Affinity Group operation creates a new affinity group for the specified subscription.</span></span>  <span data-ttu-id="3866e-107">(finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/gg715317.aspx Informationen)</span><span class="sxs-lookup"><span data-stu-id="3866e-107">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg715317.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupCreateParameters
+      description: <span data-ttu-id="3866e-108">Parameter für die Affinitätsgruppe erstellen zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="3866e-108">Parameters supplied to the Create Affinity Group operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="3866e-109">Ein Name für die Affinitätsgruppe, die für das Abonnement eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="3866e-109">A name for the affinity group that is unique to the subscription.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="3866e-110">Ein Base-64-codierten Name für die Affinitätsgruppe.</span><span class="sxs-lookup"><span data-stu-id="3866e-110">A base-64-encoded name for the affinity group.</span></span> <span data-ttu-id="3866e-111">Der Name kann bis zu 100 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="3866e-111">The name can be up to 100 characters in length.</span></span> <span data-ttu-id="3866e-112">Der Wert entspricht standardmäßig dem Namen der Affinitätsgruppe an, wenn er nicht angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="3866e-112">Its value defaults to the Name of the affinity group if not provided.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="3866e-113">Eine Beschreibung für die Affinitätsgruppe.</span><span class="sxs-lookup"><span data-stu-id="3866e-113">A description for the affinity group.</span></span> <span data-ttu-id="3866e-114">Die Beschreibung kann bis zu 1024 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="3866e-114">The description can be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="3866e-115">Der Rechenzentrums-Speicherort, in dem die Affinitätsgruppe erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="3866e-115">The data center location where the affinity group will be created.</span></span> <span data-ttu-id="3866e-116">Zum Auflisten der verfügbaren Standorte finden Sie unter den List Locations-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="3866e-116">To list available locations, see the List Locations operation.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="3866e-117">Der Antwortstream.</span><span class="sxs-lookup"><span data-stu-id="3866e-117">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: deleteMethod(affinityGroupName, callback)
+  summary: <span data-ttu-id="3866e-118">Die Affinity-Group Delete-Vorgang löscht eine Affinitätsgruppe im angegebenen Abonnement.</span><span class="sxs-lookup"><span data-stu-id="3866e-118">The Delete Affinity Group operation deletes an affinity group in the specified subscription.</span></span>  <span data-ttu-id="3866e-119">(finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/gg715314.aspx Informationen)</span><span class="sxs-lookup"><span data-stu-id="3866e-119">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg715314.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.deleteMethod(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: <span data-ttu-id="3866e-120">Der Name der Affinitätsgruppe an.</span><span class="sxs-lookup"><span data-stu-id="3866e-120">The name of the affinity group.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="3866e-121">Der Antwortstream.</span><span class="sxs-lookup"><span data-stu-id="3866e-121">The response stream.</span></span>
+    content: function deleteMethod(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: get(affinityGroupName, callback)
+  summary: <span data-ttu-id="3866e-122">Der Abrufen von Affinitätsgruppen-Eigenschaften-Vorgang gibt die Systemeigenschaften, die der angegebenen Affinitätsgruppe zugeordnet zurück.</span><span class="sxs-lookup"><span data-stu-id="3866e-122">The Get Affinity Group Properties operation returns the system properties associated with the specified affinity group.</span></span>  <span data-ttu-id="3866e-123">(finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/ee460789.aspx Informationen)</span><span class="sxs-lookup"><span data-stu-id="3866e-123">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460789.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.get(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: <span data-ttu-id="3866e-124">Der Name der gewünschten Affinitätsgruppe, wie durch das Name-Element, das Auflisten von Affinitätsgruppen-Vorgangs zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="3866e-124">The name of the desired affinity group as returned by the name element of the List Affinity Groups operation.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="3866e-125">Der Antwortstream.</span><span class="sxs-lookup"><span data-stu-id="3866e-125">The response stream.</span></span>
+    content: function get(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: list(callback)
+  summary: <span data-ttu-id="3866e-126">Der Auflisten von Affinitätsgruppen-Vorgang Listet die affinitätsgruppen auf dem angegebenen Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="3866e-126">The List Affinity Groups operation lists the affinity groups associated with the specified subscription.</span></span>  <span data-ttu-id="3866e-127">(finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/ee460797.aspx Informationen)</span><span class="sxs-lookup"><span data-stu-id="3866e-127">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460797.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="3866e-128">Der Antwortstream.</span><span class="sxs-lookup"><span data-stu-id="3866e-128">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: update(affinityGroupName, parameters, callback)
+  summary: <span data-ttu-id="3866e-129">Die Affinitätsgruppe für die Update-Vorgang aktualisiert die Bezeichnung und/oder Beschreibung für eine Affinitätsgruppe für das angegebene Abonnement.</span><span class="sxs-lookup"><span data-stu-id="3866e-129">The Update Affinity Group operation updates the label and/or the description for an affinity group for the specified subscription.</span></span>  <span data-ttu-id="3866e-130">(finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/gg715316.aspx Informationen)</span><span class="sxs-lookup"><span data-stu-id="3866e-130">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg715316.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.update(affinityGroupName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: <span data-ttu-id="3866e-131">Der Name der Affinitätsgruppe an.</span><span class="sxs-lookup"><span data-stu-id="3866e-131">The name of the affinity group.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupUpdateParameters
+      description: <span data-ttu-id="3866e-132">Parameter für die Affinitätsgruppe Update zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="3866e-132">Parameters supplied to the Update Affinity Group operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="3866e-133">Ein Name für die angegebene Affinität als Base-64-codierte Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="3866e-133">A name for the affinity specified as a base-64-encoded string.</span></span> <span data-ttu-id="3866e-134">Die Bezeichnung kann bis zu 100 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="3866e-134">The label can be up to 100 characters in length.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="3866e-135">Eine Beschreibung für die Affinitätsgruppe.</span><span class="sxs-lookup"><span data-stu-id="3866e-135">A description for the affinity group.</span></span> <span data-ttu-id="3866e-136">Die Beschreibung kann bis zu 1024 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="3866e-136">The description can be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="3866e-137">Der Antwortstream.</span><span class="sxs-lookup"><span data-stu-id="3866e-137">The response stream.</span></span>
+    content: function update(affinityGroupName, parameters, callback)
+  langs:
+  - js

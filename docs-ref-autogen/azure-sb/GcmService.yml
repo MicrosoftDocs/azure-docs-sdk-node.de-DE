@@ -1,0 +1,306 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3a8aa2f3f435a38d76db7053741deb0926a78c3f
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056311"
+items:
+- uid: azure-sb.GcmService
+  id: azure-sb.GcmService
+  name: GcmService
+  summary: <span data-ttu-id="422d3-101">Die GcmService-Klasse wird verwendet, um das Senden von Benachrichtigungen verwenden [Google Cloud Messaging](http://developer.android.com/google/gcm/index.html).</span><span class="sxs-lookup"><span data-stu-id="422d3-101">The GcmService class is used to send notifications using [Google Cloud Messaging](http://developer.android.com/google/gcm/index.html).</span></span>
+  fullName: azure-sb.GcmService
+  type: Class
+  children:
+  - azure-sb.GcmService.#ctor
+  - azure-sb.GcmService#send
+  - azure-sb.GcmService#createNativeRegistration
+  - azure-sb.GcmService#createOrUpdateNativeRegistration
+  - azure-sb.GcmService#createTemplateRegistration
+  - azure-sb.GcmService#createOrUpdateTemplateRegistration
+  - azure-sb.GcmService#updateTemplateRegistration
+  - azure-sb.GcmService#listRegistrationsByGcmRegistrationId
+  langs:
+  - js
+- id: azure-sb.GcmService.#ctor
+  uid: azure-sb.GcmService.#ctor
+  parent: azure-sb.GcmService
+  name: GcmService(notificationHubService)
+  fullName: azure-sb.GcmService.GcmService(notificationHubService)
+  summary: >-
+    <span data-ttu-id="422d3-102">Erstellt ein neues GcmService-Objekt.</span><span class="sxs-lookup"><span data-stu-id="422d3-102">Creates a new GcmService object.</span></span>
+
+
+
+    <span data-ttu-id="422d3-103">__Beachten Sie__: eine Instanz dieses Objekts wird automatisch erstellt, wenn eine <xref:azure-sb.NotificationHubService> Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="422d3-103">__Note__: An instance of this object is created automatically when a <xref:azure-sb.NotificationHubService> object is created.</span></span> <span data-ttu-id="422d3-104">Siehe <xref:azure-sb.NotificationHubService%23gcm>.</span><span class="sxs-lookup"><span data-stu-id="422d3-104">See <xref:azure-sb.NotificationHubService%23gcm>.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: <span data-ttu-id="422d3-105">Der Notification Hub-Dienst.</span><span class="sxs-lookup"><span data-stu-id="422d3-105">The notification hub service.</span></span>
+    content: new GcmService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.GcmService#send
+  id: azure-sb.GcmService#send
+  parent: azure-sb.GcmService
+  name: send(tags, payload, callback)
+  summary: <span data-ttu-id="422d3-106">Sendet eine GCM-Benachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="422d3-106">Sends a GCM notification.</span></span>
+  fullName: azure-sb.GcmService.send(tags, payload, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="422d3-107">Ein einzelnes Tag oder tagausdruck.</span><span class="sxs-lookup"><span data-stu-id="422d3-107">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="422d3-108">JSON- oder zeichenfolgennutzlast der Nachricht</span><span class="sxs-lookup"><span data-stu-id="422d3-108">The message's JSON or string payload.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-109">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-109">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, callback)
+  langs:
+  - js
+- uid: azure-sb.GcmService#createNativeRegistration
+  id: azure-sb.GcmService#createNativeRegistration
+  parent: azure-sb.GcmService
+  name: createNativeRegistration(gcmRegistrationId, tags, options, callback)
+  summary: <span data-ttu-id="422d3-110">Erstellt eine systemeigene Registrierung an.</span><span class="sxs-lookup"><span data-stu-id="422d3-110">Creates a native registration.</span></span>
+  fullName: azure-sb.GcmService.createNativeRegistration(gcmRegistrationId, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: gcmRegistrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-111">Der Bezeichner des Gcm-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-111">The gcm registration identifier.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="422d3-112">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="422d3-112">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="422d3-113">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="422d3-113">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-114">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-114">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(gcmRegistrationId, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.GcmService#createOrUpdateNativeRegistration
+  id: azure-sb.GcmService#createOrUpdateNativeRegistration
+  parent: azure-sb.GcmService
+  name: createOrUpdateNativeRegistration(registrationId, gcmRegistrationId, tags, options, callback)
+  summary: <span data-ttu-id="422d3-115">Erstellt oder aktualisiert eine systemeigene-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-115">Creates or updates a native registration.</span></span>
+  fullName: azure-sb.GcmService.createOrUpdateNativeRegistration(registrationId, gcmRegistrationId, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-116">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="422d3-116">The registration identifier.</span></span>
+    - id: gcmRegistrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-117">Der Bezeichner des Gcm-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-117">The gcm registration identifier.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="422d3-118">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="422d3-118">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="422d3-119">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="422d3-119">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-120">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-120">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, gcmRegistrationId, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.GcmService#createTemplateRegistration
+  id: azure-sb.GcmService#createTemplateRegistration
+  parent: azure-sb.GcmService
+  name: createTemplateRegistration(gcmRegistrationId, tags, template, options, callback)
+  summary: <span data-ttu-id="422d3-121">Erstellt eine vorlagenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-121">Creates a template registration.</span></span>
+  fullName: azure-sb.GcmService.createTemplateRegistration(gcmRegistrationId, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: gcmRegistrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-122">Der Bezeichner des Gcm-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-122">The gcm registration identifier.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="422d3-123">Die Tags.</span><span class="sxs-lookup"><span data-stu-id="422d3-123">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="422d3-124">JSON- oder zeichenfolgennutzlast der Nachricht</span><span class="sxs-lookup"><span data-stu-id="422d3-124">The message's JSON or string payload.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="422d3-125">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="422d3-125">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-126">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-126">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTemplateRegistration(gcmRegistrationId, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.GcmService#createOrUpdateTemplateRegistration
+  id: azure-sb.GcmService#createOrUpdateTemplateRegistration
+  parent: azure-sb.GcmService
+  name: createOrUpdateTemplateRegistration(registrationId, gcmRegistrationId, tags, template, options, callback)
+  summary: <span data-ttu-id="422d3-127">Erstellt oder aktualisiert eine vorlagenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-127">Creates or updates a template registration.</span></span>
+  fullName: azure-sb.GcmService.createOrUpdateTemplateRegistration(registrationId, gcmRegistrationId, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-128">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="422d3-128">The registration identifier.</span></span>
+    - id: gcmRegistrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-129">Der Bezeichner des Gcm-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-129">The gcm registration identifier.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="422d3-130">Die Tags.</span><span class="sxs-lookup"><span data-stu-id="422d3-130">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="422d3-131">JSON- oder zeichenfolgennutzlast der Nachricht</span><span class="sxs-lookup"><span data-stu-id="422d3-131">The message's JSON or string payload.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="422d3-132">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="422d3-132">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-133">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-133">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateTemplateRegistration(registrationId, gcmRegistrationId, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.GcmService#updateTemplateRegistration
+  id: azure-sb.GcmService#updateTemplateRegistration
+  parent: azure-sb.GcmService
+  name: updateTemplateRegistration(registrationId, gcmRegistrationId, template, options, callback)
+  summary: <span data-ttu-id="422d3-134">Aktualisiert eine vorlagenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-134">Updates a template registration.</span></span>
+  fullName: azure-sb.GcmService.updateTemplateRegistration(registrationId, gcmRegistrationId, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-135">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="422d3-135">The registration identifier.</span></span>
+    - id: gcmRegistrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-136">Der Bezeichner des Gcm-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-136">The gcm registration identifier.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="422d3-137">JSON- oder zeichenfolgennutzlast der Nachricht</span><span class="sxs-lookup"><span data-stu-id="422d3-137">The message's JSON or string payload.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="422d3-138">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="422d3-138">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-139">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-139">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTemplateRegistration(registrationId, gcmRegistrationId, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.GcmService#listRegistrationsByGcmRegistrationId
+  id: azure-sb.GcmService#listRegistrationsByGcmRegistrationId
+  parent: azure-sb.GcmService
+  name: listRegistrationsByGcmRegistrationId(gcmRegistrationId, options, callback)
+  summary: <span data-ttu-id="422d3-140">Ruft eine Registrierung anhand des gerätetokens ab.</span><span class="sxs-lookup"><span data-stu-id="422d3-140">Retrieves a registration by device token.</span></span>
+  fullName: azure-sb.GcmService.listRegistrationsByGcmRegistrationId(gcmRegistrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: gcmRegistrationId
+      type:
+      - string
+      description: <span data-ttu-id="422d3-141">Der Bezeichner des Gcm-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="422d3-141">The gcm registration identifier.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="422d3-142">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="422d3-142">The request options or callback function.</span></span> <span data-ttu-id="422d3-143">Weitere Eigenschaften werden als Header übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="422d3-143">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="422d3-144">Gibt die maximale Anzahl von Registrierungen fest, der im Rückruf abgerufen.</span><span class="sxs-lookup"><span data-stu-id="422d3-144">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="422d3-145">Gibt die Anzahl von Registrierungen, die im Aufruf übersprungen.</span><span class="sxs-lookup"><span data-stu-id="422d3-145">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="422d3-146">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="422d3-146">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByGcmRegistrationId(gcmRegistrationId, options, callback)
+  langs:
+  - js

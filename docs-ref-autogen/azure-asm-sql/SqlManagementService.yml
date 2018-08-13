@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 77aef5d0743a622fd3d80f0c573f3b211f9e89f8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056107"
+items:
+- uid: azure-asm-sql.SqlManagementService
+  id: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+  summary: <span data-ttu-id="41c13-101">Das Objekt SqlManagementService können Sie Verwaltungsvorgänge für Microsoft Azure SQL-Datenbankservern durchführen.</span><span class="sxs-lookup"><span data-stu-id="41c13-101">The SqlManagementService object allows you to perform managment operations on Microsoft Azure SQL Database Servers.</span></span>
+  fullName: azure-asm-sql.SqlManagementService
+  type: Class
+  children:
+  - azure-asm-sql.SqlManagementService.#ctor
+  - azure-asm-sql.SqlManagementService#listServers
+  - azure-asm-sql.SqlManagementService#deleteServer
+  - azure-asm-sql.SqlManagementService#createServer
+  - azure-asm-sql.SqlManagementService#listServerFirewallRules
+  - azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createServerFirewallRule
+  - azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createDatabase
+  langs:
+  - js
+- id: azure-asm-sql.SqlManagementService.#ctor
+  uid: azure-asm-sql.SqlManagementService.#ctor
+  parent: azure-asm-sql.SqlManagementService
+  name: SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-sql.SqlManagementService.SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: <span data-ttu-id="41c13-102">Erstellt ein neues SqlManagementService-Objekt</span><span class="sxs-lookup"><span data-stu-id="41c13-102">Creates a new SqlManagementService object</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="41c13-103">Abonnement-ID für das Konto oder die Verbindungszeichenfolge-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="41c13-103">Configuration, subscription ID for the account or the connection string</span></span>
+    - id: authentication
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="41c13-104">Das Authentifizierungsobjekt für den Client.</span><span class="sxs-lookup"><span data-stu-id="41c13-104">The authentication object for the client.</span></span>
+
+        <span data-ttu-id="41c13-105">Sie müssen entweder Keyfile/Certfile oder Keyvalue/Certvalue verwenden, um ein Verwaltungszertifikat zur Authentifizierung von dienstanforderungen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="41c13-105">You must use either keyfile/certfile or keyvalue/certvalue to provide a management certificate to authenticate service requests.</span></span>
+    - id: authentication.keyfile
+      type:
+      - string
+      description: <span data-ttu-id="41c13-106">Der Pfad zu einer Datei, die die PEM-Datei enthält codierte Schlüssel</span><span class="sxs-lookup"><span data-stu-id="41c13-106">The path to a file that contains the PEM encoded key</span></span>
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: <span data-ttu-id="41c13-107">Der Pfad zu einer Datei, die die PEM-Datei enthält codierte Zertifikat</span><span class="sxs-lookup"><span data-stu-id="41c13-107">The path to a file that contains the PEM encoded certificate</span></span>
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: <span data-ttu-id="41c13-108">Eine Zeichenfolge, die enthält den PEM-codierten Schlüssel</span><span class="sxs-lookup"><span data-stu-id="41c13-108">A string that contains the PEM encoded key</span></span>
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: <span data-ttu-id="41c13-109">Eine Zeichenfolge, die enthält den PEM-codierte Zertifikat</span><span class="sxs-lookup"><span data-stu-id="41c13-109">A string that contains the PEM encoded certificate</span></span>
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: <span data-ttu-id="41c13-110">Die Hostoptionen, um Standardwerte zu überschreiben.</span><span class="sxs-lookup"><span data-stu-id="41c13-110">The host options to override defaults.</span></span>
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: <span data-ttu-id="41c13-111">Der Management-Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="41c13-111">The management endpoint.</span></span>
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: <span data-ttu-id="41c13-112">Die API-Version verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="41c13-112">The API vesion to be used.</span></span>
+      optional: true
+    content: new SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServers
+  id: azure-asm-sql.SqlManagementService#listServers
+  parent: azure-asm-sql.SqlManagementService
+  name: listServers(callback)
+  summary: <span data-ttu-id="41c13-113">Listet die verfügbaren SQL-Datenbank-Server an.</span><span class="sxs-lookup"><span data-stu-id="41c13-113">Lists the available SQL Database servers.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.listServers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="41c13-114">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `results` enthält die Liste der verfügbaren SQL-Datenbank-Server-Informationen.</span><span class="sxs-lookup"><span data-stu-id="41c13-114">`error` will contain information if an error occurs; otherwise `results` will contain the list of available SQL Database servers information.</span></span>
+                                                               <span data-ttu-id="41c13-115">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="41c13-115">`response` will contain information related to this operation.</span></span>
+    content: function listServers(callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServer
+  id: azure-asm-sql.SqlManagementService#deleteServer
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServer(name, callback)
+  summary: <span data-ttu-id="41c13-116">Löscht einen SQL-Datenbank-Server.</span><span class="sxs-lookup"><span data-stu-id="41c13-116">Deletes a SQL Database server.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.deleteServer(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="41c13-117">Der SQL Server-Name.</span><span class="sxs-lookup"><span data-stu-id="41c13-117">The SQL Server name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="41c13-118">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="41c13-118">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function deleteServer(name, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServer
+  id: azure-asm-sql.SqlManagementService#createServer
+  parent: azure-asm-sql.SqlManagementService
+  name: createServer(administratorLogin, administratorLoginPassword, location, callback)
+  summary: <span data-ttu-id="41c13-119">Erstellt einen SQL-Datenbankserver.</span><span class="sxs-lookup"><span data-stu-id="41c13-119">Creates a SQL Database server.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.createServer(administratorLogin, administratorLoginPassword, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: administratorLogin
+      type:
+      - string
+      description: <span data-ttu-id="41c13-120">Die administratoranmeldung.</span><span class="sxs-lookup"><span data-stu-id="41c13-120">The administrator's login.</span></span>
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: <span data-ttu-id="41c13-121">Das Kennwort des Administrators.</span><span class="sxs-lookup"><span data-stu-id="41c13-121">The administrator's password.</span></span>
+    - id: location
+      type:
+      - string
+      description: <span data-ttu-id="41c13-122">Der Speicherort des Servers.</span><span class="sxs-lookup"><span data-stu-id="41c13-122">The server's location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="41c13-123">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `server` enthält den neuen Serverinformationen.</span><span class="sxs-lookup"><span data-stu-id="41c13-123">`error` will contain information if an error occurs; otherwise `server` will contain the new server information.</span></span>
+                                                                   <span data-ttu-id="41c13-124">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="41c13-124">`response` will contain information related to this operation.</span></span>
+    content: function createServer(administratorLogin, administratorLoginPassword, location, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  id: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  parent: azure-asm-sql.SqlManagementService
+  name: listServerFirewallRules(serverName, callback)
+  summary: <span data-ttu-id="41c13-125">Listet die Firewallregeln für SQL-Datenbank-Server.</span><span class="sxs-lookup"><span data-stu-id="41c13-125">Lists SQL Database server firewall rules.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.listServerFirewallRules(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-126">Name des Servers.</span><span class="sxs-lookup"><span data-stu-id="41c13-126">The server name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="41c13-127">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `results` wird die Firewall-Regeln enthalten.</span><span class="sxs-lookup"><span data-stu-id="41c13-127">`error` will contain information if an error occurs; otherwise `results` will contain the firewall rules.</span></span>
+                                                                  <span data-ttu-id="41c13-128">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="41c13-128">`response` will contain information related to this operation.</span></span>
+    content: function listServerFirewallRules(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServerFirewallRule(serverName, ruleName, callback)
+  summary: <span data-ttu-id="41c13-129">Löscht eine Firewallregel für SQL-Datenbank-Server an.</span><span class="sxs-lookup"><span data-stu-id="41c13-129">Deletes a SQL Database server firewall rule.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.deleteServerFirewallRule(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-130">Name des Servers.</span><span class="sxs-lookup"><span data-stu-id="41c13-130">The server name.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-131">Der Regelname.</span><span class="sxs-lookup"><span data-stu-id="41c13-131">The rule name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="41c13-132">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="41c13-132">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function deleteServerFirewallRule(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: <span data-ttu-id="41c13-133">Erstellt eine Firewallregel für SQL-Datenbank-Server an.</span><span class="sxs-lookup"><span data-stu-id="41c13-133">Creates a SQL Database server firewall rule.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-134">Name des Servers.</span><span class="sxs-lookup"><span data-stu-id="41c13-134">The server name.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-135">Der Regelname.</span><span class="sxs-lookup"><span data-stu-id="41c13-135">The rule name.</span></span>
+    - id: startIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41c13-136">Die IP-Startadresse für die Regel.</span><span class="sxs-lookup"><span data-stu-id="41c13-136">The starting IP address for the rule.</span></span>
+    - id: endIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41c13-137">Die IP-Endadresse für die Regel.</span><span class="sxs-lookup"><span data-stu-id="41c13-137">The ending IP address for the rule.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="41c13-138">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `rule` enthält die neue Regelinformationen.</span><span class="sxs-lookup"><span data-stu-id="41c13-138">`error` will contain information if an error occurs; otherwise `rule` will contain the new rule information.</span></span>
+                                                               <span data-ttu-id="41c13-139">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="41c13-139">`response` will contain information related to this operation.</span></span>
+    content: function createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: <span data-ttu-id="41c13-140">Aktualisiert eine Firewallregel für SQL-Datenbank-Server an.</span><span class="sxs-lookup"><span data-stu-id="41c13-140">Updates a SQL Database server firewall rule.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-141">Name des Servers.</span><span class="sxs-lookup"><span data-stu-id="41c13-141">The server name.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-142">Der Regelname.</span><span class="sxs-lookup"><span data-stu-id="41c13-142">The rule name.</span></span>
+    - id: startIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41c13-143">Die IP-Startadresse für die Regel.</span><span class="sxs-lookup"><span data-stu-id="41c13-143">The starting IP address for the rule.</span></span>
+    - id: endIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41c13-144">Die IP-Endadresse für die Regel.</span><span class="sxs-lookup"><span data-stu-id="41c13-144">The ending IP address for the rule.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="41c13-145">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `rule` enthält die aktualisierte Regelinformationen.</span><span class="sxs-lookup"><span data-stu-id="41c13-145">`error` will contain information if an error occurs; otherwise `rule` will contain the updated rule information.</span></span>
+                                                               <span data-ttu-id="41c13-146">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="41c13-146">`response` will contain information related to this operation.</span></span>
+    content: function updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createDatabase
+  id: azure-asm-sql.SqlManagementService#createDatabase
+  parent: azure-asm-sql.SqlManagementService
+  name: createDatabase(serverName, databaseName, options, callback)
+  summary: <span data-ttu-id="41c13-147">Erstellen einer neuen Datenbank an.</span><span class="sxs-lookup"><span data-stu-id="41c13-147">Create a new database.</span></span>
+  fullName: azure-asm-sql.SqlManagementService.createDatabase(serverName, databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-148">Den Namen des Servers</span><span class="sxs-lookup"><span data-stu-id="41c13-148">The server name</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="41c13-149">Name der zu erstellenden Datenbank</span><span class="sxs-lookup"><span data-stu-id="41c13-149">Name of database to create</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="41c13-150">Optionen für die Erstellung.</span><span class="sxs-lookup"><span data-stu-id="41c13-150">Creation options.</span></span>
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: <span data-ttu-id="41c13-151">'Web' oder 'Business'.</span><span class="sxs-lookup"><span data-stu-id="41c13-151">'Web' or 'Business'.</span></span>
+      optional: true
+    - id: options.maxsize
+      type:
+      - number
+      description: <span data-ttu-id="41c13-152">Maximale Datenbankgröße in GB, Standardwert ist 1 für das Web, 10 für Unternehmen, nur bestimmte Werte gültig sind.</span><span class="sxs-lookup"><span data-stu-id="41c13-152">Max DB size in GB, defaults to 1 for web, 10 for business, only certain values are valid</span></span>
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: <span data-ttu-id="41c13-153">SQL-Sortierungsname</span><span class="sxs-lookup"><span data-stu-id="41c13-153">sql collation name</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="41c13-154">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `createResult` enthält die neue Datenbankinformationen.</span><span class="sxs-lookup"><span data-stu-id="41c13-154">`error` will contain information if an error occurs; otherwise `createResult` will contain the new database information.</span></span>
+                                                                                       <span data-ttu-id="41c13-155">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="41c13-155">`response` will contain information related to this operation.</span></span>
+    content: function createDatabase(serverName, databaseName, options, callback)
+  langs:
+  - js

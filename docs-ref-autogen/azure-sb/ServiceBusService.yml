@@ -1,0 +1,1384 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 710b634fa6d51baa927cf736564cb3b38a6c36d9
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056305"
+items:
+- uid: azure-sb.ServiceBusService
+  id: azure-sb.ServiceBusService
+  name: ServiceBusService
+  summary: >-
+    <span data-ttu-id="7ea9a-101">Die ServiceBusServices können Sie mit Microsoft Azure Service Bus arbeiten.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-101">The ServiceBusServices allows you to work with Microsoft Azure Service Bus.</span></span>
+
+    <span data-ttu-id="7ea9a-102">Service Bus bietet sowohl Warteschlangen zum Senden und Empfangen von Nachrichten sowie Pushbenachrichtigungen für mobile Geräte.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-102">Service Bus provides both queues for sending and receiving messages, as well as push notifications for mobile devices.</span></span>
+
+
+    <span data-ttu-id="7ea9a-103">Service Bus-Warteschlangen bieten beide Standardnachricht Queue-Funktionen als auch Veröffentlichen/Abonnieren-Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-103">Service Bus queues provide both standard message queue functionality as well as publish/subscribe functioanlity.</span></span>
+
+    <span data-ttu-id="7ea9a-104">Weitere Informationen zu Service Bus-Warteschlangen sowie task einer gezielte Informationen bei der Verwendung von Node.js-Anwendungen, finden Sie unter [wie Service Bus-Warteschlangen verwenden](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-queues/) und [wie, verwendet Service Bus-Themen/-Abonnements](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-topics/).</span><span class="sxs-lookup"><span data-stu-id="7ea9a-104">For more information on Service Bus queues, as well as task focused information on using them from Node.js applications, see [How to Use Service Bus Queues](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-queues/) and [How to Use Service Bus Topics/Subscriptions](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-topics/).</span></span>
+
+
+    <span data-ttu-id="7ea9a-105">Service Bus bietet Pushbenachrichtigungen über Notification Hub.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-105">Service Bus provides push notifications through the Notification Hub.</span></span>
+
+    <span data-ttu-id="7ea9a-106">Während der ServiceBusService zum Verwalten von Notification Hubs verwendet werden kann, müssen Sie verwenden die <xref:azure-sb.NotificationHubService> zum Senden von Nachrichten an mobile Geräte.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-106">While the ServiceBusService can be used to manage Notification Hubs, you must use the <xref:azure-sb.NotificationHubService> to send messages to mobile devices.</span></span>
+  fullName: azure-sb.ServiceBusService
+  type: Class
+  children:
+  - azure-sb.ServiceBusService.#ctor
+  - azure-sb.ServiceBusService#receiveQueueMessage
+  - azure-sb.ServiceBusService#receiveSubscriptionMessage
+  - azure-sb.ServiceBusService#deleteMessage
+  - azure-sb.ServiceBusService#unlockMessage
+  - azure-sb.ServiceBusService#renewLockForMessage
+  - azure-sb.ServiceBusService#sendQueueMessage
+  - azure-sb.ServiceBusService#sendTopicMessage
+  - azure-sb.ServiceBusService#createQueue
+  - azure-sb.ServiceBusService#createQueueIfNotExists
+  - azure-sb.ServiceBusService#deleteQueue
+  - azure-sb.ServiceBusService#getQueue
+  - azure-sb.ServiceBusService#listQueues
+  - azure-sb.ServiceBusService#createTopic
+  - azure-sb.ServiceBusService#createTopicIfNotExists
+  - azure-sb.ServiceBusService#deleteTopic
+  - azure-sb.ServiceBusService#getTopic
+  - azure-sb.ServiceBusService#listTopics
+  - azure-sb.ServiceBusService#createSubscription
+  - azure-sb.ServiceBusService#deleteSubscription
+  - azure-sb.ServiceBusService#getSubscription
+  - azure-sb.ServiceBusService#listSubscriptions
+  - azure-sb.ServiceBusService#createRule
+  - azure-sb.ServiceBusService#deleteRule
+  - azure-sb.ServiceBusService#getRule
+  - azure-sb.ServiceBusService#listRules
+  - azure-sb.ServiceBusService#createNotificationHub
+  - azure-sb.ServiceBusService#getNotificationHub
+  - azure-sb.ServiceBusService#listNotificationHubs
+  - azure-sb.ServiceBusService#deleteNotificationHub
+  langs:
+  - js
+- id: azure-sb.ServiceBusService.#ctor
+  uid: azure-sb.ServiceBusService.#ctor
+  parent: azure-sb.ServiceBusService
+  name: ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  fullName: azure-sb.ServiceBusService.ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  summary: >-
+    <span data-ttu-id="7ea9a-107">Erstellt ein neues ServiceBusService-Objekt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-107">Creates a new ServiceBusService object.</span></span>
+
+
+    <span data-ttu-id="7ea9a-108">Das Azure-Modul liest die Umgebungsvariablen AZURE_SERVICEBUS_NAMESPACE und AZURE_SERVICEBUS_ACCESS_KEY Informationen, die Verbindung mit Ihrem Microsoft Azure Service Bus erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-108">The azure module will read the environment variables AZURE_SERVICEBUS_NAMESPACE and AZURE_SERVICEBUS_ACCESS_KEY for information required to connect to your Microsoft Azure Service Bus.</span></span>
+
+    <span data-ttu-id="7ea9a-109">Wenn diese Umgebungsvariablen nicht festgelegt werden, müssen Sie die Kontoinformationen angeben, beim Erstellen eines ServiceBusService-Objekts.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-109">If these environment variables are not set, you must specify the account information when creating a ServiceBusService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrNamespaceOrConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-110">Service Bus-Namespace oder die Verbindungszeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-110">The service bus namespace or the connection string.</span></span>
+      optional: true
+    - id: accessKey
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-111">Das Kennwort.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-111">The password.</span></span> <span data-ttu-id="7ea9a-112">Nur erforderlich, wenn keine Verbindungszeichenfolge übergeben.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-112">Only necessary if no connection string passed.</span></span>
+      optional: true
+    - id: issuer
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-113">Der Aussteller.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-113">The issuer.</span></span>
+      optional: true
+    - id: acsNamespace
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-114">Der acs-Namespace.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-114">The acs namespace.</span></span> <span data-ttu-id="7ea9a-115">Normalerweise identisch mit den Sb-Namespace mit "-Sb" Suffix.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-115">Usually the same as the sb namespace with "-sb" suffix.</span></span>
+      optional: true
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-116">Die Adresse des Hosts.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-116">The host address.</span></span>
+      optional: true
+    - id: authenticationProvider
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-117">Der Authentifizierungsanbieter.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-117">The authentication provider.</span></span>
+      optional: true
+    content: new ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveQueueMessage
+  id: azure-sb.ServiceBusService#receiveQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveQueueMessage(queuePath, options, callback)
+  summary: <span data-ttu-id="7ea9a-118">Empfängt eine warteschlangennachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-118">Receives a queue message.</span></span>
+  fullName: azure-sb.ServiceBusService.receiveQueueMessage(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-119">Ein String-Objekt, das den Namen der Warteschlange darstellt, der die Nachricht gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-119">A string object that represents the name of the queue to which the message will be sent.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-120">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-120">The request options.</span></span>
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-121">Boolescher Wert, der angibt, wenn die Nachricht eingesehen oder empfangen werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-121">Boolean value indicating if the message should be peeked or received.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-122">Das Timeoutintervall in Sekunden, für die Anforderung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-122">The timeout interval, in seconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-123">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `receivequeuemessageresult` enthält Informationen zu den Message-Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-123">`error` will contain information if an error occurs; otherwise `receivequeuemessageresult` will contain the message result information.</span></span>
+                                                                                        <span data-ttu-id="7ea9a-124">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-124">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveQueueMessage(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  id: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  summary: <span data-ttu-id="7ea9a-125">Empfängt eine Abonnementnachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-125">Receives a subscription message.</span></span>
+  fullName: azure-sb.ServiceBusService.receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-126">Ein Zeichenfolgenobjekt, das den Namen des Themas zum Empfangen von darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-126">A string object that represents the name of the topic to receive.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-127">Ein Zeichenfolgenobjekt mit dem Namen des Abonnements aus der Nachricht wird empfangen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-127">A string object that represents the name of the subscription from the message will be received.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-128">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-128">The request options.</span></span>
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-129">Boolescher Wert, der angibt, wenn die Nachricht eingesehen oder empfangen werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-129">Boolean value indicating if the message should be peeked or received.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-130">Das Timeoutintervall in Sekunden, für die Anforderung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-130">The timeout interval, in seconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-131">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `receivetopicmessageresult` enthält Informationen zu den Message-Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-131">`error` will contain information if an error occurs; otherwise `receivetopicmessageresult` will contain the message result information.</span></span>
+                                                                                        <span data-ttu-id="7ea9a-132">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-132">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteMessage
+  id: azure-sb.ServiceBusService#deleteMessage
+  parent: azure-sb.ServiceBusService
+  name: deleteMessage(message, callback)
+  summary: <span data-ttu-id="7ea9a-133">Löscht eine Nachricht an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-133">Deletes a message.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="7ea9a-134">Das Message-Objekt oder eine Zeichenfolge mit dem Speicherort der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-134">The message object or a string with the message location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-135">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-135">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#unlockMessage
+  id: azure-sb.ServiceBusService#unlockMessage
+  parent: azure-sb.ServiceBusService
+  name: unlockMessage(message, callback)
+  summary: <span data-ttu-id="7ea9a-136">Entsperrt eine Nachricht an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-136">Unlocks a message.</span></span>
+  fullName: azure-sb.ServiceBusService.unlockMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="7ea9a-137">Das Message-Objekt oder eine Zeichenfolge mit dem Speicherort der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-137">The message object or a string with the message location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-138">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-138">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function unlockMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#renewLockForMessage
+  id: azure-sb.ServiceBusService#renewLockForMessage
+  parent: azure-sb.ServiceBusService
+  name: renewLockForMessage(message, callback)
+  summary: <span data-ttu-id="7ea9a-139">Renew-Lock für Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-139">Renew-lock for message.</span></span>
+  fullName: azure-sb.ServiceBusService.renewLockForMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="7ea9a-140">Das Message-Objekt oder eine Zeichenfolge mit dem Speicherort der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-140">The message object or a string with the message location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-141">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-141">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function renewLockForMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendQueueMessage
+  id: azure-sb.ServiceBusService#sendQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: sendQueueMessage(queuePath, message, callback)
+  summary: <span data-ttu-id="7ea9a-142">Sendet eine warteschlangennachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-142">Sends a queue message.</span></span>
+  fullName: azure-sb.ServiceBusService.sendQueueMessage(queuePath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-143">Ein String-Objekt, das den Namen der Warteschlange darstellt, der die Nachricht gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-143">A string object that represents the name of the queue to which the message will be sent.</span></span>
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="7ea9a-144">Ein Message-Objekt, das die zu sendende Nachricht darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-144">A message object that represents the message to send.</span></span>
+    - id: message.body
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-145">Der Meldungstext.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-145">The message's text.</span></span>
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-146">Benutzerdefinierte Eigenschaften der Meldung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-146">The message's custom properties.</span></span>
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-147">Korrelations-ID der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-147">The message's correlation identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-148">Die Sitzungs-ID.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-148">The session identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-149">Die ID der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-149">The message's identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-150">Bezeichnung für ' mit der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-150">The message's lable.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-151">Die Nachricht in der Antwort an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-151">The message's reply to.</span></span>
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-152">Die Gültigkeitsdauer der Nachricht-Zeit.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-152">The message's time to live.</span></span>
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-153">Der Nachricht auf.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-153">The message's to.</span></span>
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-154">Die Nachricht in die Warteschlange einzureihen geplante Uhrzeit in UTC.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-154">The message's scheduled enqueue time in UTC.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-155">Die Nachrichteneigenschaft-Antwort an Sitzungs-ID.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-155">The message's reply to session identifier.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-156">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-156">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendQueueMessage(queuePath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendTopicMessage
+  id: azure-sb.ServiceBusService#sendTopicMessage
+  parent: azure-sb.ServiceBusService
+  name: sendTopicMessage(topicPath, message, callback)
+  summary: <span data-ttu-id="7ea9a-157">Sendet eine Nachricht Thema.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-157">Sends a topic message.</span></span>
+  fullName: azure-sb.ServiceBusService.sendTopicMessage(topicPath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-158">Ein String-Objekt, das den Namen des Themas darstellt, der die Nachricht gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-158">A string object that represents the name of the topic to which the message will be sent.</span></span>
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="7ea9a-159">Ein Message-Objekt, das die zu sendende Nachricht darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-159">A message object that represents the message to send.</span></span>
+    - id: message.body
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-160">Der Meldungstext.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-160">The message's text.</span></span>
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-161">Benutzerdefinierte Eigenschaften der Meldung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-161">The message's custom properties.</span></span>
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-162">Korrelations-ID der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-162">The message's correlation identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-163">Die Sitzungs-ID.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-163">The session identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-164">Die ID der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-164">The message's identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-165">Bezeichnung für ' mit der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-165">The message's lable.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-166">Die Nachricht in der Antwort an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-166">The message's reply to.</span></span>
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-167">Die Gültigkeitsdauer der Nachricht-Zeit.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-167">The message's time to live.</span></span>
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-168">Der Nachricht auf.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-168">The message's to.</span></span>
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-169">Die Nachricht in die Warteschlange einzureihen geplante Uhrzeit in UTC.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-169">The message's scheduled enqueue time in UTC.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-170">Die Nachrichteneigenschaft-Antwort an Sitzungs-ID.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-170">The message's reply to session identifier.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-171">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `receivetopicmessageresult` enthält Informationen zu den Message-Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-171">`error` will contain information if an error occurs; otherwise `receivetopicmessageresult` will contain the message result information.</span></span>
+                                                                                          <span data-ttu-id="7ea9a-172">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-172">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTopicMessage(topicPath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueue
+  id: azure-sb.ServiceBusService#createQueue
+  parent: azure-sb.ServiceBusService
+  name: createQueue(queuePath, options, callback)
+  summary: <span data-ttu-id="7ea9a-173">Erstellt eine Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-173">Creates a queue.</span></span>
+  fullName: azure-sb.ServiceBusService.createQueue(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-174">Ein String-Objekt, das den Namen des zu erstellenden Warteschlange darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-174">A string object that represents the name of the queue to create.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-175">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-175">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-176">Gibt die maximale Warteschlangengröße in Megabyte an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-176">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="7ea9a-177">Jeder Versuch zum Einreihen einer Nachricht, die bewirkt die Warteschlangen diesen Wert überschreitet, schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-177">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-178">Je nachdem, ob verarbeiten unzustellbarer Nachrichten aktiviert ist wird eine Nachricht automatisch in der DeadLetterQueue verschoben oder gelöscht, wenn sie für mehr als die angegebene Zeit in der Warteschlange gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-178">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="7ea9a-179">Dieser Wert wird von einer Gültigkeitsdauer (TTL), die für die Nachricht angegeben werden, wenn der Nachrichten-TTL kleiner als der in der Warteschlange festgelegte TTL wird überschrieben.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-179">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="7ea9a-180">Dieser Wert ist unveränderlich, nachdem die Warteschlange erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-180">This value is immutable after the Queue has been created.</span></span>
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-181">Bestimmt die Zeitdauer in Sekunden, die in denen eine Nachricht gesperrt werden soll, für die Verarbeitung durch einen Empfänger an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-181">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span> <span data-ttu-id="7ea9a-182">Nach Ablauf dieses Zeitraums ist die Nachricht nicht gesperrt ist und für die Nutzung durch den nächsten Empfänger an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-182">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="7ea9a-183">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-183">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-184">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-184">Settable only at queue creation time.</span></span> <span data-ttu-id="7ea9a-185">Wenn auf True festgelegt, die Warteschlange für Sitzungen aktivierte werden, und nur SessionReceiver wird unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-185">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="7ea9a-186">Für Sitzungen aktivierte Warteschlangen werden durch REST nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-186">Session-aware queues are not supported through REST.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-187">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-187">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-188">Dieses Feld steuert, wie eine Nachricht von Service Bus behandelt werden, deren Gültigkeitsdauer abgelaufen ist.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-188">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id="7ea9a-189">Wenn es aktiviert ist, und eine Nachricht abläuft, verschiebt Service Bus die Nachricht aus der Warteschlange in der Warteschlange für unzustellbare Nachrichten untergeordnete Warteschlange an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-189">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue’s dead-letter sub-queue.</span></span> <span data-ttu-id="7ea9a-190">Wenn deaktiviert, wird die Nachricht endgültig aus der Warteschlange gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-190">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id="7ea9a-191">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-191">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-192">Gibt die Zeit während der Service Bus Nachrichtenduplikate erkennt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-192">Specifies the time span during which the Service Bus detects message duplication.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-193">Gibt an, ob die Warteschlange partitioniert werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-193">Specifies whether the queue should be partitioned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-194">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `createqueueresult` enthält die neue Warteschlangeninformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-194">`error` will contain information if an error occurs; otherwise `createqueueresult` will contain the new queue information.</span></span>
+                                                                                          <span data-ttu-id="7ea9a-195">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-195">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueue(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueueIfNotExists
+  id: azure-sb.ServiceBusService#createQueueIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createQueueIfNotExists(queuePath, options, callback)
+  summary: <span data-ttu-id="7ea9a-196">Erstellt eine Warteschlange, sofern nicht bereits vorhanden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-196">Creates a queue if it doesn't already exists.</span></span>
+  fullName: azure-sb.ServiceBusService.createQueueIfNotExists(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-197">Ein Zeichenfolgenobjekt mit dem Namen der Warteschlange zu löschen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-197">A string object that represents the name of the queue to delete.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-198">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-198">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-199">Gibt die maximale Warteschlangengröße in Megabyte an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-199">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="7ea9a-200">Jeder Versuch zum Einreihen einer Nachricht, die bewirkt die Warteschlangen diesen Wert überschreitet, schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-200">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-201">Je nachdem, ob verarbeiten unzustellbarer Nachrichten aktiviert ist wird eine Nachricht automatisch in der DeadLetterQueue verschoben oder gelöscht, wenn sie für mehr als die angegebene Zeit in der Warteschlange gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-201">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="7ea9a-202">Dieser Wert wird von einer Gültigkeitsdauer (TTL), die für die Nachricht angegeben werden, wenn der Nachrichten-TTL kleiner als der in der Warteschlange festgelegte TTL wird überschrieben.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-202">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="7ea9a-203">Dieser Wert ist unveränderlich, nachdem die Warteschlange erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-203">This value is immutable after the Queue has been created.</span></span>
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-204">Bestimmt die Zeitdauer in Sekunden, die in denen eine Nachricht gesperrt werden soll, für die Verarbeitung durch einen Empfänger an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-204">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span> <span data-ttu-id="7ea9a-205">Nach Ablauf dieses Zeitraums ist die Nachricht nicht gesperrt ist und für die Nutzung durch den nächsten Empfänger an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-205">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="7ea9a-206">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-206">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-207">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-207">Settable only at queue creation time.</span></span> <span data-ttu-id="7ea9a-208">Wenn auf True festgelegt, die Warteschlange für Sitzungen aktivierte werden, und nur SessionReceiver wird unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-208">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="7ea9a-209">Für Sitzungen aktivierte Warteschlangen werden durch REST nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-209">Session-aware queues are not supported through REST.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-210">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-210">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-211">Dieses Feld steuert, wie eine Nachricht von Service Bus behandelt werden, deren Gültigkeitsdauer abgelaufen ist.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-211">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id="7ea9a-212">Wenn es aktiviert ist, und eine Nachricht abläuft, verschiebt Service Bus die Nachricht aus der Warteschlange in der Warteschlange für unzustellbare Nachrichten untergeordnete Warteschlange an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-212">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue’s dead-letter sub-queue.</span></span> <span data-ttu-id="7ea9a-213">Wenn deaktiviert, wird die Nachricht endgültig aus der Warteschlange gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-213">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id="7ea9a-214">Kann festgelegt werden nur zum Erstellungszeitpunkt der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-214">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-215">Gibt die Zeit während der Service Bus Nachrichtenduplikate erkennt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-215">Specifies the time span during which the Service Bus detects message duplication.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-216">Gibt an, ob die Warteschlange partitioniert werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-216">Specifies whether the queue should be partitioned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-217">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `queueCreated` enthält die neue Warteschlangeninformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-217">`error` will contain information if an error occurs; otherwise `queueCreated` will contain the new queue information.</span></span>
+                                                                                          <span data-ttu-id="7ea9a-218">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-218">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueueIfNotExists(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteQueue
+  id: azure-sb.ServiceBusService#deleteQueue
+  parent: azure-sb.ServiceBusService
+  name: deleteQueue(queuePath, callback)
+  summary: <span data-ttu-id="7ea9a-219">Löscht eine Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-219">Deletes a queue.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-220">Ein Zeichenfolgenobjekt mit dem Namen der Warteschlange zu löschen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-220">A string object that represents the name of the queue to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-221">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-221">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getQueue
+  id: azure-sb.ServiceBusService#getQueue
+  parent: azure-sb.ServiceBusService
+  name: getQueue(queuePath, callback)
+  summary: <span data-ttu-id="7ea9a-222">Ruft eine Warteschlange ab.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-222">Retrieves a queue.</span></span>
+  fullName: azure-sb.ServiceBusService.getQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-223">Ein Zeichenfolgenobjekt mit dem Namen der Warteschlange abgerufen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-223">A string object that represents the name of the queue to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-224">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `queueresult` enthält die Warteschlangeninformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-224">`error` will contain information if an error occurs; otherwise `queueresult` will contain the queue information.</span></span>
+                                                                                          <span data-ttu-id="7ea9a-225">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-225">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listQueues
+  id: azure-sb.ServiceBusService#listQueues
+  parent: azure-sb.ServiceBusService
+  name: listQueues(options, callback)
+  summary: <span data-ttu-id="7ea9a-226">Gibt eine Liste von Warteschlangen zurück.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-226">Returns a list of queues.</span></span>
+  fullName: azure-sb.ServiceBusService.listQueues(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-227">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-227">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-228">Die Top-Klausel für das Auflisten von Warteschlangen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-228">The top clause for listing queues.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-229">Der Skip-Klausel für das Auflisten von Warteschlangen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-229">The skip clause for listing queues.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-230">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `listqueueresult` enthält die Liste der Warteschlangen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-230">`error` will contain information if an error occurs; otherwise `listqueueresult` will contain the list of queues.</span></span>
+                                                                              <span data-ttu-id="7ea9a-231">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-231">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listQueues(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopic
+  id: azure-sb.ServiceBusService#createTopic
+  parent: azure-sb.ServiceBusService
+  name: createTopic(topic, options, callback)
+  summary: <span data-ttu-id="7ea9a-232">Erstellt ein Thema.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-232">Creates a topic.</span></span>
+  fullName: azure-sb.ServiceBusService.createTopic(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: <span data-ttu-id="7ea9a-233">Ein Topic-Objekt, der zu erstellenden Themas darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-233">A Topic object that represents the topic to create.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-234">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-234">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-235">Gibt die maximale themagröße in MB an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-235">Specifies the maximum topic size in megabytes.</span></span> <span data-ttu-id="7ea9a-236">Jeder Versuch zum Einreihen einer Nachricht, die bewirkt das Thema diesen Wert überschreitet, schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-236">Any attempt to enqueue a message that will cause the topic to exceed this value will fail.</span></span> <span data-ttu-id="7ea9a-237">Alle Nachrichten, die in das Thema oder in einer von der Anzahl der Abonnements für diesen Wert berücksichtigt gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-237">All messages that are stored in the topic or any of its subscriptions count towards this value.</span></span> <span data-ttu-id="7ea9a-238">Mehrere Kopien einer Nachricht, die als einzelne Nachrichten in der Anzahl von ein oder mehrere Abonnements befinden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-238">Multiple copies of a message that reside in one or multiple subscriptions count as a single messages.</span></span> <span data-ttu-id="7ea9a-239">Wenn die Nachricht m einmal im Abonnement s1 und zwei Mal in Abonnement s2 vorhanden ist, wird z. B. m als einzelne Nachricht gezählt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-239">For example, if message m exists once in subscription s1 and twice in subscription s2, m is counted as a single message.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-240">Bestimmt, wie lange eine Nachricht in den zugehörigen Abonnements befinden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-240">Determines how long a message lives in the associated subscriptions.</span></span> <span data-ttu-id="7ea9a-241">Abonnements erben die Gültigkeitsdauer (TTL) aus dem Thema, es sei denn, sie explizit mit einer kürzeren Gültigkeitsdauer erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-241">Subscriptions inherit the TTL from the topic unless they are created explicitly with a smaller TTL.</span></span> <span data-ttu-id="7ea9a-242">Basierend auf, ob unzustellbare Nachrichten aktiviert ist, eine Nachricht, deren Gültigkeitsdauer abgelaufen ist, wird entweder in die zugehörige DeadLetterQueue des Abonnements verschoben oder endgültig gelöscht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-242">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription’s associated DeadLtterQueue or will be permanently deleted.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-243">Wenn aktiviert, erkennt das Thema Nachrichtenduplikate innerhalb der Zeitspanne, die durch die "duplicatedetectionhistorytimewindow"-Eigenschaft angegeben.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-243">If enabled, the topic will detect duplicate messages within the time span specified by the DuplicateDetectionHistoryTimeWindow property.</span></span> <span data-ttu-id="7ea9a-244">Kann festgelegt werden nur zum Erstellungszeitpunkt des Themas.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-244">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-245">Gibt die Zeit während der Service Bus Nachrichtenduplikate erkennt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-245">Specifies the time span during which the Service Bus will detect message duplication.</span></span>
+      optional: true
+    - id: options.EnableBatchedOperations
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-246">Gibt an, wenn der Batch-Vorgänge zugelassen werden soll.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-246">Specifies if batched operations should be allowed.</span></span>
+      optional: true
+    - id: options.SizeInBytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-247">Gibt die Größe des Themas in Bytes an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-247">Specifies the topic size in bytes.</span></span>
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-248">Gibt an, ob das Thema die Nachrichtenreihenfolge unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-248">Specifies whether the topic supports message ordering.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-249">Gibt an, ob das Thema partitioniert werden soll</span><span class="sxs-lookup"><span data-stu-id="7ea9a-249">Specifies whether the topic should be partitioned</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-250">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `createtopicresult` enthält die Informationen des neuen Thema.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-250">`error` will contain information if an error occurs; otherwise `createtopicresult` will contain the new topic information.</span></span>
+                                                                                                <span data-ttu-id="7ea9a-251">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-251">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopic(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopicIfNotExists
+  id: azure-sb.ServiceBusService#createTopicIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createTopicIfNotExists(topic, options, callback)
+  summary: <span data-ttu-id="7ea9a-252">Erstellt ein Thema aus, wenn er nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-252">Creates a topic if it doesn't exists.</span></span>
+  fullName: azure-sb.ServiceBusService.createTopicIfNotExists(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: <span data-ttu-id="7ea9a-253">Ein Topic-Objekt, der zu erstellenden Themas darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-253">A Topic object that represents the topic to create.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-254">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-254">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-255">Gibt die maximale themagröße in MB an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-255">Specifies the maximum topic size in megabytes.</span></span> <span data-ttu-id="7ea9a-256">Jeder Versuch zum Einreihen einer Nachricht, die bewirkt das Thema diesen Wert überschreitet, schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-256">Any attempt to enqueue a message that will cause the topic to exceed this value will fail.</span></span> <span data-ttu-id="7ea9a-257">Alle Nachrichten, die in das Thema oder in einer von der Anzahl der Abonnements für diesen Wert berücksichtigt gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-257">All messages that are stored in the topic or any of its subscriptions count towards this value.</span></span> <span data-ttu-id="7ea9a-258">Mehrere Kopien einer Nachricht, die als einzelne Nachrichten in der Anzahl von ein oder mehrere Abonnements befinden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-258">Multiple copies of a message that reside in one or multiple subscriptions count as a single messages.</span></span> <span data-ttu-id="7ea9a-259">Wenn die Nachricht m einmal im Abonnement s1 und zwei Mal in Abonnement s2 vorhanden ist, wird z. B. m als einzelne Nachricht gezählt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-259">For example, if message m exists once in subscription s1 and twice in subscription s2, m is counted as a single message.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-260">Bestimmt, wie lange eine Nachricht in den zugehörigen Abonnements befinden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-260">Determines how long a message lives in the associated subscriptions.</span></span> <span data-ttu-id="7ea9a-261">Abonnements erben die Gültigkeitsdauer (TTL) aus dem Thema, es sei denn, sie explizit mit einer kürzeren Gültigkeitsdauer erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-261">Subscriptions inherit the TTL from the topic unless they are created explicitly with a smaller TTL.</span></span> <span data-ttu-id="7ea9a-262">Basierend auf, ob unzustellbare Nachrichten aktiviert ist, eine Nachricht, deren Gültigkeitsdauer abgelaufen ist, wird entweder in die zugehörige DeadLetterQueue des Abonnements verschoben oder endgültig gelöscht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-262">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription’s associated DeadLtterQueue or will be permanently deleted.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-263">Wenn aktiviert, erkennt das Thema Nachrichtenduplikate innerhalb der Zeitspanne, die durch die "duplicatedetectionhistorytimewindow"-Eigenschaft angegeben.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-263">If enabled, the topic will detect duplicate messages within the time span specified by the DuplicateDetectionHistoryTimeWindow property.</span></span> <span data-ttu-id="7ea9a-264">Kann festgelegt werden nur zum Erstellungszeitpunkt des Themas.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-264">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-265">Gibt die Zeit während der Service Bus Nachrichtenduplikate erkennt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-265">Specifies the time span during which the Service Bus will detect message duplication.</span></span>
+      optional: true
+    - id: options.MaxSubscriptionsPerTopic
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-266">Gibt die maximale Anzahl von Abonnements, die mit dem Thema zugeordnet werden können.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-266">Specifies the maximum number of subscriptions that can be associated with the topic.</span></span>
+      optional: true
+    - id: options.MaxSqlFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-267">Gibt die maximale Anzahl von SQL-Filter-Ausdrücke (in gesamt), die dem Thema zugeordneten Abonnements hinzugefügt werden können.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-267">Specifies the maximum number of SQL filter expressions (in total) that can be added to the subscriptions associated with the topic.</span></span>
+      optional: true
+    - id: options.MaxCorrelationFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-268">Gibt die maximale Anzahl von Korrelation Filterausdrücke (in gesamt), die dem Thema zugeordneten Abonnements hinzugefügt werden können.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-268">Specifies the maximum number of correlation filter expressions (in total) that can be added to the subscriptions associated with the topic.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-269">Kann festgelegt werden nur zum Erstellungszeitpunkt des Themas.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-269">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-270">Kann festgelegt werden nur zum Erstellungszeitpunkt des Themas.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-270">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-271">Gibt an, ob das Thema die Nachrichtenreihenfolge unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-271">Specifies whether the topic supports message ordering.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-272">Gibt an, ob das Thema partitioniert werden soll</span><span class="sxs-lookup"><span data-stu-id="7ea9a-272">Specifies whether the topic should be partitioned</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-273">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `topicCreated` enthält die Informationen des neuen Thema.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-273">`error` will contain information if an error occurs; otherwise `topicCreated` will contain the new topic information.</span></span>
+                                                                                                <span data-ttu-id="7ea9a-274">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-274">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopicIfNotExists(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteTopic
+  id: azure-sb.ServiceBusService#deleteTopic
+  parent: azure-sb.ServiceBusService
+  name: deleteTopic(topicPath, callback)
+  summary: <span data-ttu-id="7ea9a-275">Löscht ein Thema.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-275">Deletes a topic.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-276">Ein <code>String</code> -Objekt, das den Namen der Warteschlange löschen darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-276">A <code>String</code> object that represents the name of the queue to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-277">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-277">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getTopic
+  id: azure-sb.ServiceBusService#getTopic
+  parent: azure-sb.ServiceBusService
+  name: getTopic(topicPath, callback)
+  summary: <span data-ttu-id="7ea9a-278">Ruft ein Thema ab.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-278">Retrieves a topic.</span></span>
+  fullName: azure-sb.ServiceBusService.getTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-279">Ein <code>String</code> -Objekt, das den Namen des Themas abrufen darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-279">A <code>String</code> object that represents the name of the topic to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-280">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `gettopicresult` enthält die Informationen des Themas.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-280">`error` will contain information if an error occurs; otherwise `gettopicresult` will contain the topic information.</span></span>
+                                                                         <span data-ttu-id="7ea9a-281">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-281">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listTopics
+  id: azure-sb.ServiceBusService#listTopics
+  parent: azure-sb.ServiceBusService
+  name: listTopics(options, callback)
+  summary: <span data-ttu-id="7ea9a-282">Gibt eine Liste der Themen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-282">Returns a list of topics.</span></span>
+  fullName: azure-sb.ServiceBusService.listTopics(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-283">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-283">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-284">Die Anzahl der Themen, die abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-284">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-285">Die Anzahl der Themen, um zu überspringen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-285">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-286">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `listtopicsresult` enthält die Liste der Themen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-286">`error` will contain information if an error occurs; otherwise `listtopicsresult` will contain the list of topics.</span></span>
+                                                                              <span data-ttu-id="7ea9a-287">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-287">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listTopics(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createSubscription
+  id: azure-sb.ServiceBusService#createSubscription
+  parent: azure-sb.ServiceBusService
+  name: createSubscription(topicPath, subscriptionPath, options, callback)
+  summary: <span data-ttu-id="7ea9a-288">Erstellt ein Abonnement.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-288">Creates a subscription.</span></span>
+  fullName: azure-sb.ServiceBusService.createSubscription(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-289">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-289">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-290">Ein String-Objekt, das den Namen des Abonnements darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-290">A string object that represents the name of the subscription.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-291">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-291">The request options.</span></span>
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-292">Die sperrenstandarddauer wird auf Abonnements angewendet, die keine Sperrendauer definieren.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-292">The default lock duration is applied to subscriptions that do not define a lock duration.</span></span> <span data-ttu-id="7ea9a-293">Kann festgelegt werden nur zum Erstellungszeitpunkt des Abonnements.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-293">Settable only at subscription creation time.</span></span>
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-294">Kann festgelegt werden nur zum Erstellungszeitpunkt des Abonnements.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-294">Settable only at subscription creation time.</span></span> <span data-ttu-id="7ea9a-295">Wenn festgelegt ist auf "true", das Abonnement wird für Sitzungen aktivierte und nur SessionReceiver unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-295">If set to true, the subscription will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="7ea9a-296">Für Sitzungen aktivierte Abonnements werden nicht unterstützt, über REST.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-296">Session-aware subscription are not supported through REST.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="7ea9a-297">Bestimmt, wie lange eine Nachricht im Abonnement aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-297">Determines how long a message lives in the subscription.</span></span> <span data-ttu-id="7ea9a-298">Basierend auf, ob unzustellbare Nachrichten aktiviert ist, werden eine Nachricht, deren Gültigkeitsdauer abgelaufen ist, in die zugehörige DeadLetterQueue des Abonnements verschoben oder endgültig gelöscht.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-298">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription’s associated DeadLtterQueue or permanently deleted.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-299">Dieses Feld steuert, wie eine Nachricht von Service Bus behandelt werden, deren Gültigkeitsdauer abgelaufen ist.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-299">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id="7ea9a-300">Wenn es aktiviert ist, und eine Nachricht abläuft, verschiebt Service Bus die Nachricht aus der Warteschlange in die Warteschlange des Abonnements für unzustellbare Nachrichten untergeordnete an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-300">If it is enabled and a message expires, the Service Bus moves the message from the queue into the subscription’s dead-letter sub-queue.</span></span> <span data-ttu-id="7ea9a-301">Wenn deaktiviert, wird die Nachricht endgültig aus der Hauptwarteschlange des Abonnements gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-301">If disabled, message will be permanently deleted from the subscription’s main queue.</span></span> <span data-ttu-id="7ea9a-302">Kann festgelegt werden nur zum Erstellungszeitpunkt des Abonnements.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-302">Settable only at subscription creation time.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="7ea9a-303">Bestimmt, wie Service Bus für eine Nachricht verarbeitet, die bewirkt, eine Ausnahme während der filterauswertung eines Abonnements dass.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-303">Determines how the Service Bus handles a message that causes an exception during a subscription’s filter evaluation.</span></span> <span data-ttu-id="7ea9a-304">Wenn der Wert festgelegt ist, auf "true", die Meldung, die die Ausnahme verursacht hat wird in die Warteschlange des Abonnements für unzustellbare Nachrichten verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-304">If the value is set to true, the message that caused the exception will be moved to the subscription’s dead-letter queue.</span></span> <span data-ttu-id="7ea9a-305">Andernfalls werden sie verworfen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-305">Otherwise, it will be discarded.</span></span> <span data-ttu-id="7ea9a-306">Dieser Parameter ist standardmäßig festgelegt auf "true", sodass der Benutzer eine Möglichkeit, die Ursache der Ausnahme zu untersuchen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-306">By default this parameter is set to true, allowing the user a chance to investigate the cause of the exception.</span></span> <span data-ttu-id="7ea9a-307">Er kann von einer falsch formatierten Nachricht oder einige falschen Annahmen im Filter bezüglich der Form der Nachricht auftreten.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-307">It can occur from a malformed message or some incorrect assumptions being made in the filter about the form of the message.</span></span> <span data-ttu-id="7ea9a-308">Kann festgelegt werden nur zum Erstellungszeitpunkt des Themas.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-308">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-309">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `createsubscriptionresult` enthält die neuen Abonnementinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-309">`error` will contain information if an error occurs; otherwise `createsubscriptionresult` will contain the new subscription information.</span></span>
+                                                                                          <span data-ttu-id="7ea9a-310">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-310">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createSubscription(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteSubscription
+  id: azure-sb.ServiceBusService#deleteSubscription
+  parent: azure-sb.ServiceBusService
+  name: deleteSubscription(topicPath, subscriptionPath, callback)
+  summary: <span data-ttu-id="7ea9a-311">Löscht ein Abonnement.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-311">Deletes a subscription.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-312">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-312">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-313">Ein String-Objekt, das den Namen der das zu löschende Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-313">A string object that represents the name of the subscription to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-314">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-314">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getSubscription
+  id: azure-sb.ServiceBusService#getSubscription
+  parent: azure-sb.ServiceBusService
+  name: getSubscription(topicPath, subscriptionPath, callback)
+  summary: <span data-ttu-id="7ea9a-315">Ruft ein Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-315">Retrieves a subscription.</span></span>
+  fullName: azure-sb.ServiceBusService.getSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-316">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-316">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-317">Ein String-Objekt, das den Namen des abzurufenden Abonnements darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-317">A string object that represents the name of the subscription to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-318">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `getsubscriptionresult` enthält die Abonnementinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-318">`error` will contain information if an error occurs; otherwise `getsubscriptionresult` will contain the subscription information.</span></span>
+                                                                                        <span data-ttu-id="7ea9a-319">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-319">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listSubscriptions
+  id: azure-sb.ServiceBusService#listSubscriptions
+  parent: azure-sb.ServiceBusService
+  name: listSubscriptions(topicPath, options, callback)
+  summary: <span data-ttu-id="7ea9a-320">Eine Liste der Abonnements zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-320">Returns a list of subscriptions.</span></span>
+  fullName: azure-sb.ServiceBusService.listSubscriptions(topicPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-321">Ein Zeichenfolgenobjekt mit dem Namen des Themas für die Abonnements abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-321">A string object that represents the name of the topic for the subscriptions to retrieve.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-322">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-322">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-323">Die Anzahl der Themen, die abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-323">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-324">Die Anzahl der Themen, um zu überspringen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-324">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-325">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `listsubscriptionresult` enthält die Liste der Abonnements.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-325">`error` will contain information if an error occurs; otherwise `listsubscriptionresult` will contain the list of subscriptions.</span></span>
+                                                                              <span data-ttu-id="7ea9a-326">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-326">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listSubscriptions(topicPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createRule
+  id: azure-sb.ServiceBusService#createRule
+  parent: azure-sb.ServiceBusService
+  name: createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  summary: <span data-ttu-id="7ea9a-327">Erstellt eine Regel.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-327">Creates a rule.</span></span>
+  fullName: azure-sb.ServiceBusService.createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-328">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-328">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-329">Ein Zeichenfolgenobjekt mit dem Namen des Abonnements für die die Regel erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-329">A string object that represents the name of the subscription for which the rule will be created.</span></span>
+    - id: rulePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-330">Ein Zeichenfolgenobjekt mit dem Namen der Regel, die erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-330">A string object that represents the name of the rule to be created.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-331">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-331">The request options.</span></span>
+      optional: true
+    - id: options.trueFilter
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-332">Definiert den Ausdruck, den die Regel ausgewertet wird als echten Filter an.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-332">Defines the expression that the rule evaluates as a true filter.</span></span>
+      optional: true
+    - id: options.falseFilter
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-333">Definiert den Ausdruck, den die Regel ausgewertet wird als ein Filter auf "false".</span><span class="sxs-lookup"><span data-stu-id="7ea9a-333">Defines the expression that the rule evaluates as a false filter.</span></span>
+      optional: true
+    - id: options.sqlExpressionFilter
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-334">Definiert den Ausdruck, den die Regel ausgewertet wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-334">Defines the expression that the rule evaluates.</span></span> <span data-ttu-id="7ea9a-335">Die Zeichenfolge des Ausdrucks wird als eine SQL92-Ausdruck interpretiert, die "true" oder "false" ergeben muss.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-335">The expression string is interpreted as a SQL92 expression which must evaluate to True or False.</span></span> <span data-ttu-id="7ea9a-336">Es kann nur eine zwischen eine Korrelation und einen Sql-Ausdruck definiert werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-336">Only one between a correlation and a sql expression can be defined.</span></span>
+      optional: true
+    - id: options.correlationIdFilter
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-337">Definiert den Ausdruck, den die Regel ausgewertet wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-337">Defines the expression that the rule evaluates.</span></span> <span data-ttu-id="7ea9a-338">Nur die Nachrichten, deren CorrelationId übereinstimmen, die "CorrelationId" festgelegt, die im Filterausdruck, sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-338">Only the messages whose CorrelationId match the CorrelationId set in the filter expression are allowed.</span></span> <span data-ttu-id="7ea9a-339">Es kann nur eine zwischen eine Korrelation und einen Sql-Ausdruck definiert werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-339">Only one between a correlation and a sql expression can be defined.</span></span>
+      optional: true
+    - id: options.sqlRuleAction
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-340">Definiert den Ausdruck, den die Regel ausgewertet wird.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-340">Defines the expression that the rule evaluates.</span></span> <span data-ttu-id="7ea9a-341">Wenn die Regel vom Typ SQL ist, wird die Ausdruckszeichenfolge als SQL92-Ausdruck interpretiert, die "true" oder "false" ergeben muss.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-341">If the rule is of type SQL, the expression string is interpreted as a SQL92 expression which must evaluate to True or False.</span></span> <span data-ttu-id="7ea9a-342">Wenn die Regel vom Typ CorrelationFilterExpression dann nur die Nachrichten, deren CorrelationId übereinstimmen, die "CorrelationId" festgelegt, die im Filterausdruck, zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-342">If the rule is of type CorrelationFilterExpression then only the messages whose CorrelationId match the CorrelationId set in the filter expression are allowed.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-343">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `createruleresults` enthält die neue Regelinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-343">`error` will contain information if an error occurs; otherwise `createruleresults` will contain the new rule information.</span></span>
+                                                                                    <span data-ttu-id="7ea9a-344">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-344">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteRule
+  id: azure-sb.ServiceBusService#deleteRule
+  parent: azure-sb.ServiceBusService
+  name: deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: <span data-ttu-id="7ea9a-345">Löscht eine Regel.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-345">Deletes a rule.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-346">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-346">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-347">Ein Zeichenfolgenobjekt mit dem Namen des Abonnements für die die Regel gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-347">A string object that represents the name of the subscription for which the rule will be deleted.</span></span>
+    - id: rulePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-348">Ein Zeichenfolgenobjekt mit dem Namen der Regel zu löschen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-348">A string object that represents the name of the rule to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-349">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-349">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getRule
+  id: azure-sb.ServiceBusService#getRule
+  parent: azure-sb.ServiceBusService
+  name: getRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: <span data-ttu-id="7ea9a-350">Ruft eine Regel ab.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-350">Retrieves a rule.</span></span>
+  fullName: azure-sb.ServiceBusService.getRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-351">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-351">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-352">Ein Zeichenfolgenobjekt mit dem Namen des Abonnements für die die Regel abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-352">A string object that represents the name of the subscription for which the rule will be retrieved.</span></span>
+    - id: rulePath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-353">Ein Zeichenfolgenobjekt mit dem Namen der Regel, die abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-353">A string object that represents the name of the rule to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-354">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `getruleresult` enthält die Informationen für die Regel.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-354">`error` will contain information if an error occurs; otherwise `getruleresult` will contain the rule information.</span></span>
+                                                                                        <span data-ttu-id="7ea9a-355">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-355">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listRules
+  id: azure-sb.ServiceBusService#listRules
+  parent: azure-sb.ServiceBusService
+  name: listRules(topicPath, subscriptionPath, options, callback)
+  summary: <span data-ttu-id="7ea9a-356">Gibt eine Liste mit Regeln zurück.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-356">Returns a list of rules.</span></span>
+  fullName: azure-sb.ServiceBusService.listRules(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-357">Ein String-Objekt, das den Namen des Themas für das Abonnement darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-357">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-358">Ein String-Objekt, das den Namen des Abonnements darstellt, dessen Regeln abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-358">A string object that represents the name of the subscription whose rules are being retrieved.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-359">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-359">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-360">Die Anzahl der Themen, die abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-360">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-361">Die Anzahl der Themen, um zu überspringen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-361">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-362">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `listrulesresult` enthält die Liste der Regeln.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-362">`error` will contain information if an error occurs; otherwise `listrulesresult` will contain the list of rules.</span></span>
+                                                                              <span data-ttu-id="7ea9a-363">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-363">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRules(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createNotificationHub
+  id: azure-sb.ServiceBusService#createNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: createNotificationHub(hubPath, options, callback)
+  summary: <span data-ttu-id="7ea9a-364">Erstellt eine Notification Hub-Instanz.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-364">Creates a notification hub.</span></span>
+  fullName: azure-sb.ServiceBusService.createNotificationHub(hubPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-365">Ein String-Objekt, das den Namen des Notification Hub darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-365">A string object that represents the name of the notification hub.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-366">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-366">The request options or callback function.</span></span>
+      optional: true
+    - id: options.wns
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-367">Ein Objekt mit den Schlüssel-Wert-Paaren für die WNS-Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-367">An object with the key value pairs for the WNS credentials.</span></span>
+      optional: true
+    - id: options.apns
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-368">Ein Objekt mit dem Schlüssel-Wert-Paaren für die APNS-Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-368">An object with the key value pairs for the APNS credentials.</span></span>
+      optional: true
+    - id: options.gcm
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-369">Ein Objekt mit den Schlüssel-Wert-Paaren für die GCM-Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-369">An object with the key value pairs for the GCM credentials.</span></span>
+      optional: true
+    - id: options.mpns
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-370">Ein Objekt mit dem Schlüssel-Wert-Paaren für die MPNS-Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-370">An object with the key value pairs for the MPNS credentials.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-371">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `result` enthält den neuen Notification Hub-Informationen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-371">`error` will contain information if an error occurs; otherwise `result` will contain the new notification hub information.</span></span>
+                                                              <span data-ttu-id="7ea9a-372">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-372">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNotificationHub(hubPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getNotificationHub
+  id: azure-sb.ServiceBusService#getNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: getNotificationHub(hubPath, callback)
+  summary: <span data-ttu-id="7ea9a-373">Ruft einen benachrichtigungs-Hub ab.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-373">Gets a notification hub.</span></span>
+  fullName: azure-sb.ServiceBusService.getNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-374">Ein String-Objekt, das den Namen des Notification Hub darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-374">A string object that represents the name of the notification hub.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-375">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `result` die Notification Hub-Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-375">`error` will contain information if an error occurs; otherwise `result` will contain the notification hub information.</span></span>
+                                                                                    <span data-ttu-id="7ea9a-376">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-376">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getNotificationHub(hubPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listNotificationHubs
+  id: azure-sb.ServiceBusService#listNotificationHubs
+  parent: azure-sb.ServiceBusService
+  name: listNotificationHubs(options, callback)
+  summary: <span data-ttu-id="7ea9a-377">Gibt eine Liste von Notification Hubs.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-377">Returns a list of notification hubs.</span></span>
+  fullName: azure-sb.ServiceBusService.listNotificationHubs(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7ea9a-378">Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-378">The request options or callback function.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-379">Die Anzahl der Themen, die abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-379">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="7ea9a-380">Die Anzahl der Themen, um zu überspringen.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-380">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7ea9a-381">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `result` enthält die Liste von Notification Hubs.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-381">`error` will contain information if an error occurs; otherwise `result` will contain the list of notification hubs.</span></span>
+                                                              <span data-ttu-id="7ea9a-382">`response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-382">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listNotificationHubs(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteNotificationHub
+  id: azure-sb.ServiceBusService#deleteNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: deleteNotificationHub(hubPath, callback)
+  summary: <span data-ttu-id="7ea9a-383">Löscht einen Notification Hub.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-383">Deletes a notification hub.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: <span data-ttu-id="7ea9a-384">Ein String-Objekt, das den Namen des Notification Hub darstellt.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-384">A string object that represents the name of the notification hub.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7ea9a-385">`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="7ea9a-385">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteNotificationHub(hubPath, callback)
+  langs:
+  - js

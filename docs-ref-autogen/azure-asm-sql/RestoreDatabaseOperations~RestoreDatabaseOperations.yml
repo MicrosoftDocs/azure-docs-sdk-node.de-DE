@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b4a3fb9b551ea7ff8291a7c44c6d4958b18851cc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056047"
+items:
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations
+  summary: >-
+    <span data-ttu-id="49865-101">Enthält den Vorgang, um die Anforderungen zur datenbankwiederherstellung für Azure SQL-Datenbanken zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="49865-101">Contains the operation to create restore requests for Azure SQL Databases.</span></span>
+
+    <span data-ttu-id="49865-102">__Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="49865-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="49865-103">Finden Sie unter [RestoreDatabaseOperations] {@link SqlManagementClient ~ SqlManagementClient #restoreDatabaseOperations}.</span><span class="sxs-lookup"><span data-stu-id="49865-103">See [restoreDatabaseOperations] {@link SqlManagementClient~SqlManagementClient#restoreDatabaseOperations}.</span></span>
+
+    <span data-ttu-id="49865-104">Initialisiert eine neue Instanz der Klasse RestoreDatabaseOperations an.</span><span class="sxs-lookup"><span data-stu-id="49865-104">Initializes a new instance of the RestoreDatabaseOperations class.</span></span>
+  fullName: azure-asm-sql.RestoreDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  parent: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations(client)
+  fullName: azure-asm-sql.RestoreDatabaseOperations.RestoreDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="49865-105">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="49865-105">Reference to the service client.</span></span>
+    content: new RestoreDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  parent: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: <span data-ttu-id="49865-106">Gibt eine wiederherstellungsanforderung für eine Azure SQL-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="49865-106">Issues a restore request for an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: <span data-ttu-id="49865-107">Der Name der Azure SQL-Datenbankserver, in denen der Quelldatenbank ist, oder war, gehostet.</span><span class="sxs-lookup"><span data-stu-id="49865-107">The name of the Azure SQL Database Server where the source database is, or was, hosted.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.RestoreDatabaseOperationCreateParameters
+      description: <span data-ttu-id="49865-108">Zusätzliche Parameter für das Erstellen der Wiederherstellungsvorgang für Datenbank-Anforderung.</span><span class="sxs-lookup"><span data-stu-id="49865-108">Additional parameters for the Create Restore Database Operation request.</span></span>
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: <span data-ttu-id="49865-109">Übernimmt oder bestimmt den Namen der Quelle der Azure SQL-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="49865-109">Gets or sets the name of the source Azure SQL Database.</span></span>
+    - id: parameters.sourceDatabaseDeletionDate
+      type:
+      - date
+      description: <span data-ttu-id="49865-110">Übernimmt oder bestimmt das Löschdatum der Quelle der Azure SQL-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="49865-110">Gets or sets the deletion date of the source Azure SQL Database.</span></span>
+      optional: true
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: <span data-ttu-id="49865-111">Übernimmt oder bestimmt den Namen des Ziels Azure SQL-Datenbankserver.</span><span class="sxs-lookup"><span data-stu-id="49865-111">Gets or sets the name of the target Azure SQL Database Server.</span></span>
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: <span data-ttu-id="49865-112">Übernimmt oder bestimmt den Namen des Ziels Azure SQL-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="49865-112">Gets or sets the name of the target Azure SQL Database.</span></span>
+    - id: parameters.pointInTime
+      type:
+      - date
+      description: <span data-ttu-id="49865-113">Übernimmt oder bestimmt den Zeitpunkt im wiederherstellen.</span><span class="sxs-lookup"><span data-stu-id="49865-113">Gets or sets the point in time to restore to.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="49865-114">Der Antwortstream.</span><span class="sxs-lookup"><span data-stu-id="49865-114">The response stream.</span></span>
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

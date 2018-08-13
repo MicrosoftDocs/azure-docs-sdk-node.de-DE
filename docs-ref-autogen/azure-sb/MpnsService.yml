@@ -1,0 +1,989 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2edf9f5bc2da7407d7a8e5e49124d9284317f648
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056299"
+items:
+- uid: azure-sb.MpnsService
+  id: azure-sb.MpnsService
+  name: MpnsService
+  summary: <span data-ttu-id="35e4f-101">Die MpnsService-Klasse wird verwendet, um das Senden von Benachrichtigungen verwenden die [Microsoft Push Notification Service](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402558).</span><span class="sxs-lookup"><span data-stu-id="35e4f-101">The MpnsService class is used to send notifications using the [Microsoft Push Notification Service](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402558).</span></span>
+  fullName: azure-sb.MpnsService
+  type: Class
+  children:
+  - azure-sb.MpnsService.#ctor
+  - azure-sb.MpnsService#createNativeRegistration
+  - azure-sb.MpnsService#createOrUpdateNativeRegistration
+  - azure-sb.MpnsService#createFlipTileRegistration
+  - azure-sb.MpnsService#createTileRegistration
+  - azure-sb.MpnsService#createToastRegistration
+  - azure-sb.MpnsService#createRawTemplateRegistration
+  - azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.MpnsService#updateFlipTileRegistration
+  - azure-sb.MpnsService#updateTileRegistration
+  - azure-sb.MpnsService#updatesToastRegistration
+  - azure-sb.MpnsService#updatesRawTemplateRegistration
+  - azure-sb.MpnsService#listRegistrationsByChannel
+  - azure-sb.MpnsService#sendFlipTile
+  - azure-sb.MpnsService#sendTile
+  - azure-sb.MpnsService#sendToast
+  - azure-sb.MpnsService#send
+  langs:
+  - js
+- id: azure-sb.MpnsService.#ctor
+  uid: azure-sb.MpnsService.#ctor
+  parent: azure-sb.MpnsService
+  name: MpnsService(notificationHubService)
+  fullName: azure-sb.MpnsService.MpnsService(notificationHubService)
+  summary: >-
+    <span data-ttu-id="35e4f-102">Erstellt ein neues MpnsService-Objekt.</span><span class="sxs-lookup"><span data-stu-id="35e4f-102">Creates a new MpnsService object.</span></span>
+
+
+    <span data-ttu-id="35e4f-103">__Beachten Sie__: eine Instanz dieses Objekts wird automatisch erstellt, wenn eine <xref:azure-sb.NotificationHubService> Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-103">__Note__: An instance of this object is created automatically when a <xref:azure-sb.NotificationHubService> object is created.</span></span> <span data-ttu-id="35e4f-104">Siehe <xref:azure-sb.NotificationHubService%23gcm>.</span><span class="sxs-lookup"><span data-stu-id="35e4f-104">See <xref:azure-sb.NotificationHubService%23gcm>.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: <span data-ttu-id="35e4f-105">Der Notification Hub-Dienst.</span><span class="sxs-lookup"><span data-stu-id="35e4f-105">The notification hub service.</span></span>
+    content: new MpnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createNativeRegistration
+  id: azure-sb.MpnsService#createNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createNativeRegistration(channel, tags, options, callback)
+  summary: <span data-ttu-id="35e4f-106">Erstellt eine systemeigene MPNS-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-106">Creates a native MPNS registration.</span></span>
+  fullName: azure-sb.MpnsService.createNativeRegistration(channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-107">Der Device-Kanal-Uri.</span><span class="sxs-lookup"><span data-stu-id="35e4f-107">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-108">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-108">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-109">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-109">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-110">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-110">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  id: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  summary: <span data-ttu-id="35e4f-111">Erstellt oder aktualisiert eine systemeigene MPNS-Registrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-111">Creates or updates a native MPNS registration.</span></span>
+  fullName: azure-sb.MpnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-112">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="35e4f-112">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-113">Der Device-Kanal-Uri.</span><span class="sxs-lookup"><span data-stu-id="35e4f-113">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-114">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-114">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-115">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-115">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-116">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-116">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createFlipTileRegistration
+  id: azure-sb.MpnsService#createFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: createFlipTileRegistration(channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-117">Erstellt eine Registrierung mit einer Vorlage FlipTile (nur Windows Phone-Version 7.8 oder höher).</span><span class="sxs-lookup"><span data-stu-id="35e4f-117">Creates a registration with a FlipTile template (Only Windows Phone version 7.8 or later).</span></span> <span data-ttu-id="35e4f-118">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-118">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.</span></span>
+  fullName: azure-sb.MpnsService.createFlipTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-119">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-119">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-120">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-120">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-121">Die Registrierungsvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-121">The registration template.</span></span>
+    - id: template.backgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-122">Der URI des Hintergrundbilds für die Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-122">The URI of the background image for the tile.</span></span>
+    - id: template.count
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-123">Die Anzahl, die auf der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-123">The number that appears on the tile.</span></span>
+    - id: template.title
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-124">Der Titeltext der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-124">The title text of the tile.</span></span>
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-125">Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-125">The URI of the image that is shown on the backside of the tile.</span></span>
+    - id: template.backTitle
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-126">Titel für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-126">Title for the backside side of the tile.</span></span>
+    - id: template.backContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-127">Text für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-127">Text for the backside of the tile.</span></span>
+    - id: template.id
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-128">Die ID einer verwandten, sekundären Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-128">ID of a related, secondary tile.</span></span>
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-129">Der URI für das Hintergrundbild für die Kachel aus, wenn sie auf die kleine Größe reduziert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-129">The URI for the background image for the tile when it is reduced to its small size.</span></span>
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-130">Der URI für das Hintergrundbild für die Kachel aus, wenn er auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-130">The URI for the background image for the tile when it is expanded to its wide size.</span></span>
+    - id: template.wideBackContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-131">Der Inhalt für die Rückseite, wenn die Kachel auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-131">Content for the back tile when the tile is expanded to its wide size.</span></span>
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-132">Der URI für das Bild soll, der auf der Rückseite der Kachel angezeigt werden soll, wenn die Kachel auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-132">The URI for the image to be on the backside of the tile when the tile is expanded to its wide size.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-133">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-133">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-134">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-134">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-135">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-135">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createFlipTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createTileRegistration
+  id: azure-sb.MpnsService#createTileRegistration
+  parent: azure-sb.MpnsService
+  name: createTileRegistration(channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-136">Erstellt eine Registrierung mit einer kachelvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-136">Creates a registration with a Tile template.</span></span> <span data-ttu-id="35e4f-137">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-137">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span></span>
+  fullName: azure-sb.MpnsService.createTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-138">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-138">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-139">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-139">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-140">Die Registrierungsvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-140">The registration template.</span></span>
+    - id: template.backgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-141">Der URI des Hintergrundbilds für die Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-141">The URI of the background image for the tile.</span></span>
+    - id: template.count
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-142">Die Anzahl, die auf der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-142">The number that appears on the tile.</span></span>
+    - id: template.title
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-143">Der Titeltext der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-143">The title text of the tile.</span></span>
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-144">Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-144">The URI of the image that is shown on the backside of the tile.</span></span>
+    - id: template.backTitle
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-145">Titel für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-145">Title for the backside side of the tile.</span></span>
+    - id: template.backContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-146">Text für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-146">Text for the backside of the tile.</span></span>
+    - id: template.id
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-147">Die ID einer verwandten, sekundären Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-147">ID of a related, secondary tile.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-148">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-148">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-149">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-149">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-150">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-150">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createToastRegistration
+  id: azure-sb.MpnsService#createToastRegistration
+  parent: azure-sb.MpnsService
+  name: createToastRegistration(channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-151">Erstellt eine Registrierung mit einer popupvorlage Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-151">Creates a registration with a Toast template For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span></span>
+  fullName: azure-sb.MpnsService.createToastRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-152">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-152">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-153">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-153">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-154">Die Registrierungsvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-154">The registration template.</span></span>
+    - id: template.text1
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-155">Text1</span><span class="sxs-lookup"><span data-stu-id="35e4f-155">Text1</span></span>
+    - id: template.text2
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-156">"Text2"</span><span class="sxs-lookup"><span data-stu-id="35e4f-156">Text2</span></span>
+    - id: template.param
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-157">(optional) (Nur für Windows Phone-Version 7.5 oder höher)</span><span class="sxs-lookup"><span data-stu-id="35e4f-157">(optional) (Only for Windows Phone version 7.5 or later)</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-158">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-158">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-159">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-159">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-160">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-160">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToastRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createRawTemplateRegistration
+  id: azure-sb.MpnsService#createRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createRawTemplateRegistration(channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-161">Erstellt eine rohvorlagenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-161">Creates a raw template registration.</span></span>
+  fullName: azure-sb.MpnsService.createRawTemplateRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-162">Der Device-Kanal-Uri.</span><span class="sxs-lookup"><span data-stu-id="35e4f-162">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-163">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-163">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - json
+      description: <span data-ttu-id="35e4f-164">Die Vorlage für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-164">The template for the registration.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-165">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-165">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-166">Die einzuschließenden Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-166">The mpns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-167">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-167">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-168">Erstellt eine rohvorlagenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-168">Creates a raw template registration.</span></span>
+  fullName: azure-sb.MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-169">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="35e4f-169">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-170">Der Device-Kanal-Uri.</span><span class="sxs-lookup"><span data-stu-id="35e4f-170">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-171">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-171">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - json
+      description: <span data-ttu-id="35e4f-172">Die Vorlage für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-172">The template for the registration.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-173">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-173">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-174">Die einzuschließenden Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-174">The mpns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-175">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-175">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateFlipTileRegistration
+  id: azure-sb.MpnsService#updateFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-176">Aktualisiert eine Registrierung mit einer Vorlage FlipTile (nur Windows Phone-Version 7.8 oder höher).</span><span class="sxs-lookup"><span data-stu-id="35e4f-176">Updates a registration with a FlipTile template (Only Windows Phone version 7.8 or later).</span></span> <span data-ttu-id="35e4f-177">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-177">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.</span></span>
+  fullName: azure-sb.MpnsService.updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-178">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="35e4f-178">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-179">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-179">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-180">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-180">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-181">Die Registrierungsvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-181">The registration template.</span></span>
+    - id: template.backgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-182">Der URI des Hintergrundbilds für die Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-182">The URI of the background image for the tile.</span></span>
+    - id: template.count
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-183">Die Anzahl, die auf der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-183">The number that appears on the tile.</span></span>
+    - id: template.title
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-184">Der Titeltext der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-184">The title text of the tile.</span></span>
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-185">Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-185">The URI of the image that is shown on the backside of the tile.</span></span>
+    - id: template.backTitle
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-186">Titel für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-186">Title for the backside side of the tile.</span></span>
+    - id: template.backContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-187">Text für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-187">Text for the backside of the tile.</span></span>
+    - id: template.id
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-188">Die ID einer verwandten, sekundären Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-188">ID of a related, secondary tile.</span></span>
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-189">Der URI für das Hintergrundbild für die Kachel aus, wenn sie auf die kleine Größe reduziert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-189">The URI for the background image for the tile when it is reduced to its small size.</span></span>
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-190">Der URI für das Hintergrundbild für die Kachel aus, wenn er auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-190">The URI for the background image for the tile when it is expanded to its wide size.</span></span>
+    - id: template.wideBackContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-191">Der Inhalt für die Rückseite, wenn die Kachel auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-191">Content for the back tile when the tile is expanded to its wide size.</span></span>
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-192">Der URI für das Bild soll, der auf der Rückseite der Kachel angezeigt werden soll, wenn die Kachel auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-192">The URI for the image to be on the backside of the tile when the tile is expanded to its wide size.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-193">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-193">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-194">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-194">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-195">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-195">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateTileRegistration
+  id: azure-sb.MpnsService#updateTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-196">Aktualisiert eine Registrierung mit einer kachelvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-196">Updates a registration with a Tile template.</span></span> <span data-ttu-id="35e4f-197">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-197">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span></span>
+  fullName: azure-sb.MpnsService.updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-198">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="35e4f-198">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-199">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-199">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-200">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-200">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-201">Die Registrierungsvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-201">The registration template.</span></span>
+    - id: template.backgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-202">Der URI des Hintergrundbilds für die Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-202">The URI of the background image for the tile.</span></span>
+    - id: template.count
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-203">Die Anzahl, die auf der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-203">The number that appears on the tile.</span></span>
+    - id: template.title
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-204">Der Titeltext der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-204">The title text of the tile.</span></span>
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-205">Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-205">The URI of the image that is shown on the backside of the tile.</span></span>
+    - id: template.backTitle
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-206">Titel für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-206">Title for the backside side of the tile.</span></span>
+    - id: template.backContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-207">Text für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-207">Text for the backside of the tile.</span></span>
+    - id: template.id
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-208">Die ID einer verwandten, sekundären Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-208">ID of a related, secondary tile.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-209">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-209">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-210">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-210">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-211">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-211">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesToastRegistration
+  id: azure-sb.MpnsService#updatesToastRegistration
+  parent: azure-sb.MpnsService
+  name: updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-212">Aktualisiert eine Registrierung mit einer popupvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-212">Updates a registration with a Toast template.</span></span> <span data-ttu-id="35e4f-213">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-213">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span></span>
+  fullName: azure-sb.MpnsService.updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-214">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="35e4f-214">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-215">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-215">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-216">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-216">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-217">Die Registrierungsvorlage.</span><span class="sxs-lookup"><span data-stu-id="35e4f-217">The registration template.</span></span>
+    - id: template.text1
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-218">Text1</span><span class="sxs-lookup"><span data-stu-id="35e4f-218">Text1</span></span>
+    - id: template.text2
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-219">"Text2"</span><span class="sxs-lookup"><span data-stu-id="35e4f-219">Text2</span></span>
+    - id: template.param
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-220">(optional) (Nur für Windows Phone-Version 7.5 oder höher)</span><span class="sxs-lookup"><span data-stu-id="35e4f-220">(optional) (Only for Windows Phone version 7.5 or later)</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-221">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-221">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-222">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-222">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-223">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-223">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesRawTemplateRegistration
+  id: azure-sb.MpnsService#updatesRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="35e4f-224">Aktualisiert eine rohvorlagenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-224">Updates a raw template registration.</span></span>
+  fullName: azure-sb.MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-225">Der registrierungsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="35e4f-225">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-226">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-226">The ChannelUri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="35e4f-227">Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).</span><span class="sxs-lookup"><span data-stu-id="35e4f-227">The tags (comma-separated list, no spaces).</span></span>
+    - id: template
+      type:
+      - json
+      description: <span data-ttu-id="35e4f-228">Die Vorlage für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-228">The template for the registration.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-229">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-229">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-230">Die einzuschließenden Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-230">The mpns headers to include.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-231">Das Etag eingeschlossen werden soll.</span><span class="sxs-lookup"><span data-stu-id="35e4f-231">The etag to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-232">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-232">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#listRegistrationsByChannel
+  id: azure-sb.MpnsService#listRegistrationsByChannel
+  parent: azure-sb.MpnsService
+  name: listRegistrationsByChannel(channel, options, callback)
+  summary: <span data-ttu-id="35e4f-233">Ruft eine Registrierung durch den Kanal ab.</span><span class="sxs-lookup"><span data-stu-id="35e4f-233">Retrieves a registration by channel.</span></span>
+  fullName: azure-sb.MpnsService.listRegistrationsByChannel(channel, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-234">Die "channeluri".</span><span class="sxs-lookup"><span data-stu-id="35e4f-234">The ChannelUri.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-235">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-235">The request options.</span></span> <span data-ttu-id="35e4f-236">Weitere Eigenschaften werden als Header übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="35e4f-236">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-237">Gibt die maximale Anzahl von Registrierungen fest, der im Rückruf abgerufen.</span><span class="sxs-lookup"><span data-stu-id="35e4f-237">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-238">Gibt die Anzahl von Registrierungen, die im Aufruf übersprungen.</span><span class="sxs-lookup"><span data-stu-id="35e4f-238">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-239">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-239">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendFlipTile
+  id: azure-sb.MpnsService#sendFlipTile
+  parent: azure-sb.MpnsService
+  name: sendFlipTile(tags, payload, options, callback)
+  summary: <span data-ttu-id="35e4f-240">Sendet eine Benachrichtigung FlipTile (nur Windows Phone-Version 7.8 oder höher).</span><span class="sxs-lookup"><span data-stu-id="35e4f-240">Sends a FlipTile notification (Only Windows Phone version 7.8 or later).</span></span> <span data-ttu-id="35e4f-241">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-241">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.</span></span>
+  fullName: azure-sb.MpnsService.sendFlipTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-242">Ein einzelnes Tag oder tagausdruck.</span><span class="sxs-lookup"><span data-stu-id="35e4f-242">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-243">Nutzlast der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="35e4f-243">The message's payload.</span></span>
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-244">Der URI des Hintergrundbilds für die Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-244">The URI of the background image for the tile.</span></span>
+    - id: payload.count
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-245">Die Anzahl, die auf der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-245">The number that appears on the tile.</span></span>
+    - id: payload.title
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-246">Der Titeltext der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-246">The title text of the tile.</span></span>
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-247">Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-247">The URI of the image that is shown on the backside of the tile.</span></span>
+    - id: payload.backTitle
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-248">Titel für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-248">Title for the backside side of the tile.</span></span>
+    - id: payload.backContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-249">Text für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-249">Text for the backside of the tile.</span></span>
+    - id: payload.id
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-250">Die ID einer verwandten, sekundären Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-250">ID of a related, secondary tile.</span></span>
+    - id: payload.smallBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-251">Der URI für das Hintergrundbild für die Kachel aus, wenn sie auf die kleine Größe reduziert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-251">The URI for the background image for the tile when it is reduced to its small size.</span></span>
+    - id: payload.wideBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-252">Der URI für das Hintergrundbild für die Kachel aus, wenn er auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-252">The URI for the background image for the tile when it is expanded to its wide size.</span></span>
+    - id: payload.wideBackContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-253">Der Inhalt für die Rückseite, wenn die Kachel auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-253">Content for the back tile when the tile is expanded to its wide size.</span></span>
+    - id: payload.wideBackBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-254">Der URI für das Bild soll, der auf der Rückseite der Kachel angezeigt werden soll, wenn die Kachel auf die Breite Größe erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-254">The URI for the image to be on the backside of the tile when the tile is expanded to its wide size.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-255">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-255">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-256">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-256">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-257">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-257">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendFlipTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendTile
+  id: azure-sb.MpnsService#sendTile
+  parent: azure-sb.MpnsService
+  name: sendTile(tags, payload, options, callback)
+  summary: <span data-ttu-id="35e4f-258">Sendet eine kachelbenachrichtigung an.</span><span class="sxs-lookup"><span data-stu-id="35e4f-258">Sends a Tile notification.</span></span> <span data-ttu-id="35e4f-259">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-259">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span></span>
+  fullName: azure-sb.MpnsService.sendTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-260">Ein einzelnes Tag oder tagausdruck.</span><span class="sxs-lookup"><span data-stu-id="35e4f-260">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-261">Nutzlast der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="35e4f-261">The message's payload.</span></span>
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-262">Der URI des Hintergrundbilds für die Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-262">The URI of the background image for the tile.</span></span>
+    - id: payload.count
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-263">die Anzahl, die auf der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-263">the number that appears on the tile.</span></span>
+    - id: payload.title
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-264">der Titeltext der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-264">the title text of the tile.</span></span>
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-265">Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="35e4f-265">The URI of the image that is shown on the backside of the tile.</span></span>
+    - id: payload.backTitle
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-266">Titel für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-266">Title for the backside side of the tile.</span></span>
+    - id: payload.backContent
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-267">Text für die Rückseite der Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-267">Text for the backside of the tile.</span></span>
+    - id: payload.id
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-268">Die ID einer verwandten, sekundären Kachel.</span><span class="sxs-lookup"><span data-stu-id="35e4f-268">ID of a related, secondary tile.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-269">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-269">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-270">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-270">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-271">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-271">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendToast
+  id: azure-sb.MpnsService#sendToast
+  parent: azure-sb.MpnsService
+  name: sendToast(tags, payload, options, callback)
+  summary: <span data-ttu-id="35e4f-272">Sendet eine Popupbenachrichtigung an.</span><span class="sxs-lookup"><span data-stu-id="35e4f-272">Sends a Toast notification.</span></span> <span data-ttu-id="35e4f-273">Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span><span class="sxs-lookup"><span data-stu-id="35e4f-273">For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.</span></span>
+  fullName: azure-sb.MpnsService.sendToast(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-274">Ein einzelnes Tag oder tagausdruck.</span><span class="sxs-lookup"><span data-stu-id="35e4f-274">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-275">Nutzlast der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="35e4f-275">The message's payload.</span></span>
+    - id: payload.text1
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-276">Text1</span><span class="sxs-lookup"><span data-stu-id="35e4f-276">Text1</span></span>
+    - id: payload.text2
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-277">"Text2"</span><span class="sxs-lookup"><span data-stu-id="35e4f-277">Text2</span></span>
+    - id: payload.param
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-278">(optional) (Nur für Windows Phone-Version 7.5 oder höher)</span><span class="sxs-lookup"><span data-stu-id="35e4f-278">(optional) (Only for Windows Phone version 7.5 or later)</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-279">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-279">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-280">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-280">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-281">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-281">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#send
+  id: azure-sb.MpnsService#send
+  parent: azure-sb.MpnsService
+  name: send(tags, payload, targetName, notificationClass, options, callback)
+  summary: <span data-ttu-id="35e4f-282">Sendet eine benutzerdefinierte MPNS-Benachrichtigung an.</span><span class="sxs-lookup"><span data-stu-id="35e4f-282">Sends a custom MPNS notification.</span></span> <span data-ttu-id="35e4f-283">Verwenden Sie diese Methode, wenn Sie vollständige Kontrolle über die Nutzlast haben möchten.</span><span class="sxs-lookup"><span data-stu-id="35e4f-283">Use this method if you want to have full control on the payload.</span></span>
+  fullName: azure-sb.MpnsService.send(tags, payload, targetName, notificationClass, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-284">Ein einzelnes Tag oder tagausdruck.</span><span class="sxs-lookup"><span data-stu-id="35e4f-284">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-285">XML-Nutzlast der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="35e4f-285">The message's XML payload.</span></span>
+    - id: targetName
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-286">Der Zielname.</span><span class="sxs-lookup"><span data-stu-id="35e4f-286">The target name.</span></span>
+    - id: notificationClass
+      type:
+      - string
+      description: <span data-ttu-id="35e4f-287">Die Benachrichtigungsklasse.</span><span class="sxs-lookup"><span data-stu-id="35e4f-287">The notification class.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-288">Die Optionen für die Anforderung.</span><span class="sxs-lookup"><span data-stu-id="35e4f-288">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="35e4f-289">Die Mpns-Header.</span><span class="sxs-lookup"><span data-stu-id="35e4f-289">The mpns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="35e4f-290">Die Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="35e4f-290">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, targetName, notificationClass, options, callback)
+  langs:
+  - js
