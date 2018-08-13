@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1c6f6ffcfe66af1de73e92a91def6cd7bc7bcaa1
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40059786"
+items:
+- uid: azure-iot-common.SharedAccessSignature
+  name: SharedAccessSignature
+  fullName: SharedAccessSignature
+  children:
+  - azure-iot-common.SharedAccessSignature.create
+  - azure-iot-common.SharedAccessSignature.extend
+  - azure-iot-common.SharedAccessSignature.parse
+  - azure-iot-common.SharedAccessSignature.toString
+  langs:
+  - typeScript
+  type: class
+  summary: SAS-Token zur Authentifizierung der Verbindung, bei der Verwendung symmetrischer Schlüssel verwendet werden (im Gegensatz zu X509 Zertifikate) zum Sichern der Verbindung mit dem Azure IoT Hub.
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Instanziieren Sie ein SharedAccessSignature-Token mit den angegebenen Parametern.
+  syntax:
+    content: 'static function create(resourceUri: string, keyName: string, key: string, expiry: number | string)'
+    parameters:
+    - id: resourceUri
+      type:
+      - string
+      description: der Ressourcen-URI in das Token codiert werden soll.
+    - id: keyName
+      type:
+      - string
+      description: Ein Bezeichner, der dem Schlüssel zugeordnet wird.
+    - id: key
+      type:
+      - string
+      description: ein base64-codierte Schlüssel-Wert.
+    - id: expiry
+      type:
+      - number | string
+      description: >
+        ein ganzzahliger-Wert, der die Anzahl der Sekunden seit Beginn der Epoche 00:00:00 UTC am 1. Januar 1970.
+    return:
+      type:
+      - azure-iot-common.SharedAccessSignature
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.extend
+  name: extend
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erweitern Sie die Sas, und geben Sie die entsprechende Zeichenfolgendarstellung zurück.
+  syntax:
+    content: 'function extend(expiry: number)'
+    parameters:
+    - id: expiry
+      type:
+      - number
+      description: >
+        ein ganzzahliger-Wert, der die Anzahl der Sekunden seit Beginn der Epoche 00:00:00 UTC am 1. Januar 1970.
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.parse
+  name: parse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Instanziieren Sie ein Token SharedAccessSignature aus einer Zeichenfolge.
+  syntax:
+    content: 'static function parse(source: string, requiredFields?: string[])'
+    parameters:
+    - id: source
+      type:
+      - string
+      description: die Zeichenfolge analysiert, um das Token SharedAccessSignature zu erstellen.
+    - id: requiredFields
+      type:
+      - string[]
+      description: >
+        ein Array von Feldern, die wir erwarten, dass in der Quellzeichenfolge zu finden.
+      optional: true
+    return:
+      type:
+      - azure-iot-common.SharedAccessSignature
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.toString
+  name: toString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Formatiert eine SharedAccessSignatureObject in eine ordnungsgemäß formatierte Zeichenfolge an.
+  syntax:
+    content: function toString()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.SharedAccessSignature
+  spec.typeScript:
+  - name: SharedAccessSignature
+    fullName: SharedAccessSignature
+    uid: azure-iot-common.SharedAccessSignature

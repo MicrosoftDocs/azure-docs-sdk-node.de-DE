@@ -1,0 +1,136 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 32c61f1d1e0be7f27878b5ad6d4a04b662dc92f9
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40059823"
+items:
+- uid: azure-iot-common.ExponentialBackOffWithJitter
+  name: ExponentialBackOffWithJitter
+  fullName: ExponentialBackOffWithJitter
+  children:
+  - azure-iot-common.ExponentialBackOffWithJitter.constructor
+  - azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
+  - azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
+  - azure-iot-common.ExponentialBackOffWithJitter.normalParameters
+  - azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
+  - azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    Implementiert einen exponentiellen Backoff mit Jitter wiederholungsstrategie.
+
+    Die Funktion, die das nächste Verarbeitungsintervall zu berechnen, wird der folgende (X ist die Wiederholung Xth): F(x) = min (Cmin + (2^(x-1)-1) * Rand (C * (1 – Jd) C*(1-Ju)), Cmax)
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.constructor
+  name: ExponentialBackOffWithJitter
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Initialisiert eine neue Instanz der dem <xref:azure-iot-common.ExponentialBackOffWithJitter> Klasse.
+  syntax:
+    content: 'new ExponentialBackOffWithJitter(immediateFirstRetry?: boolean, errorFilter?: ErrorFilter)'
+    parameters:
+    - id: immediateFirstRetry
+      type:
+      - boolean
+      description: >
+        boolescher Wert, der angibt, ob der erste Wiederholungsversuch sofort (Standard) werden oder das erste Intervall (c++-Wert) warten soll.
+      optional: true
+    - id: errorFilter
+      type:
+      - ErrorFilter
+      description: ''
+      optional: true
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
+  name: immediateFirstRetry
+  fullName: immediateFirstRetry
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Boolescher Wert, der angibt, ob der erste Wiederholungsversuch sofort nutzbar sein sollen (wenn auf True festgelegt ist) oder nach der Verzögerung normalParameters.c (wenn auf "false" festgelegt).
+  syntax:
+    content: 'immediateFirstRetry: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
+  name: nextRetryTimeout
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Berechnet das Intervall, wiederholen Sie dann auf jeder neuen vorläufige Wiederholung zu warten.
+  syntax:
+    content: 'function nextRetryTimeout(retryCount: number, isThrottled: boolean)'
+    parameters:
+    - id: retryCount
+      type:
+      - number
+      description: Aktuelle "Wiederholen" mit Vorbehalt.
+    - id: isThrottled
+      type:
+      - boolean
+      description: Boolescher Wert, der angibt, ob der Azure IoT-Hub Vorgänge eingeschränkt wird.
+    return:
+      type:
+      - number
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
+  name: normalParameters
+  fullName: normalParameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wiederholen Sie die Parameter, mit denen die Verzögerung zwischen den einzelnen Wiederholungsversuchen im normalen Situationen zu berechnen (d. h. nicht eingeschränkt).
+  syntax:
+    content: 'normalParameters: ExponentialBackoffWithJitterParameters'
+    return:
+      type:
+      - azure-iot-common.ExponentialBackoffWithJitterParameters
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
+  name: shouldRetry
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Basierend auf den Fehler, die als Argument übergeben, das bestimmt, ob ein Fehler vorübergehend ist, und wenn der Vorgang sollte oder nicht wiederholt werden.
+  syntax:
+    content: 'function shouldRetry(error: Error)'
+    parameters:
+    - id: error
+      type:
+      - Error
+      description: Der Fehler durch den Vorgang.
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+  name: throttledParameters
+  fullName: throttledParameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wiederholen Sie den Parameter verwendet, um die Verzögerung zwischen den einzelnen Wiederholungsversuchen in eingeschränkter Situationen zu berechnen.
+  syntax:
+    content: 'throttledParameters: ExponentialBackoffWithJitterParameters'
+    return:
+      type:
+      - azure-iot-common.ExponentialBackoffWithJitterParameters
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.ExponentialBackoffWithJitterParameters
+  spec.typeScript:
+  - name: ExponentialBackoffWithJitterParameters
+    fullName: ExponentialBackoffWithJitterParameters
+    uid: azure-iot-common.ExponentialBackoffWithJitterParameters

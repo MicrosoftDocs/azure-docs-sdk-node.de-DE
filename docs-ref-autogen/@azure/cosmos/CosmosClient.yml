@@ -1,0 +1,175 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c42f476b7b2548bfccf1b3212b5a267458f632a2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061196"
+items:
+- uid: '@azure/cosmos.CosmosClient'
+  name: CosmosClient
+  fullName: CosmosClient
+  children:
+  - '@azure/cosmos.CosmosClient.constructor'
+  - '@azure/cosmos.CosmosClient.database'
+  - '@azure/cosmos.CosmosClient.databases'
+  - '@azure/cosmos.CosmosClient.getDatabaseAccount'
+  - '@azure/cosmos.CosmosClient.offer'
+  - '@azure/cosmos.CosmosClient.offers'
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    Bietet eine clientseitige logische Darstellung des Azure Cosmos DB-Datenbankkontos.
+
+    Dieser Client wird verwendet, zum Konfigurieren und Ausführen von Anforderungen in der Azure Cosmos DB-Datenbankdienst.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.constructor'
+  name: CosmosClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Erstellt ein neues <xref:CosmosClient> Objekt. Finden Sie unter <xref:CosmosClientOptions> für Weitere Informationen zu Optionen, die Ihnen verwenden können.
+  syntax:
+    content: 'new CosmosClient(options: CosmosClientOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.CosmosClientOptions'
+      description: >
+        der Optionen Objektdepot – erfordern mindestens Endpunkt und -Authentifizierung konfiguriert werden
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.database'
+  name: database
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Zum Lesen, aktualisieren oder Löschen einer vorhandenen Datenbank nach Id oder den Zugriff auf mit dieser Datenbank gehörenden Container aus.
+
+    Dies macht sich nicht auf ein Netzwerk aufrufen. Verwendung `.read` beim Abrufen von Informationen über die Datenbank nach dem Abrufen der <xref:Database> Objekt.
+  syntax:
+    content: 'function database(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: Die Id der Datenbank.
+    return:
+      type:
+      - '@azure/cosmos.Database'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.databases'
+  name: databases
+  fullName: databases
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Zum Erstellen neuer Datenbanken oder alle Datenbanken Abfragen oder Lesen verwendet.
+
+    Verwendung `.database(id)` zum Lesen, ersetzen oder löschen Sie eine bestimmte vorhandene Datenbank nach Id.
+  syntax:
+    content: 'databases: Databases'
+    return:
+      type:
+      - '@azure/cosmos.Databases'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.getDatabaseAccount'
+  name: getDatabaseAccount
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Abrufen von Informationen über die aktuelle <xref:DatabaseAccount> (einschließlich welche Regionen werden unterstützt, usw.).
+  syntax:
+    content: function getDatabaseAccount()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.CosmosResponse<@azure/cosmos.DatabaseAccount, @azure/cosmos.CosmosClient>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.offer'
+  name: offer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Für das Lesen oder Aktualisieren eines vorhandenen Angebots nach Id verwendet.
+  syntax:
+    content: 'function offer(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        Die Id des Angebots.
+    return:
+      type:
+      - '@azure/cosmos.Offer'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.offers'
+  name: offers
+  fullName: offers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Wird für Abfragen, und Lesen alle Angebote verwendet.
+
+    Verwendung `.offer(id)` zu lesen, oder Ersetzen von vorhandenen angeboten.
+  syntax:
+    content: 'offers: Offers'
+    return:
+      type:
+      - '@azure/cosmos.Offers'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.CosmosClientOptions'
+  spec.typeScript:
+  - name: CosmosClientOptions
+    fullName: CosmosClientOptions
+    uid: '@azure/cosmos.CosmosClientOptions'
+- uid: '@azure/cosmos.Databases'
+  spec.typeScript:
+  - name: Databases
+    fullName: Databases
+    uid: '@azure/cosmos.Databases'
+- uid: '@azure/cosmos.Offers'
+  spec.typeScript:
+  - name: Offers
+    fullName: Offers
+    uid: '@azure/cosmos.Offers'
+- uid: '@azure/cosmos.Database'
+  spec.typeScript:
+  - name: Database
+    fullName: Database
+    uid: '@azure/cosmos.Database'
+- uid: Promise<@azure/cosmos.CosmosResponse<@azure/cosmos.DatabaseAccount, @azure/cosmos.CosmosClient>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CosmosResponse
+    fullName: CosmosResponse
+    uid: '@azure/cosmos.CosmosResponse'
+  - name: <
+    fullName: <
+  - name: DatabaseAccount
+    fullName: DatabaseAccount
+    uid: '@azure/cosmos.DatabaseAccount'
+  - name: ', '
+    fullName: ', '
+  - name: CosmosClient
+    fullName: CosmosClient
+    uid: '@azure/cosmos.CosmosClient'
+  - name: '>>'
+    fullName: '>>'
+- uid: '@azure/cosmos.Offer'
+  spec.typeScript:
+  - name: Offer
+    fullName: Offer
+    uid: '@azure/cosmos.Offer'

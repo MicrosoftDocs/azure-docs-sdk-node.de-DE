@@ -1,0 +1,945 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c702e67d64be4873078bac93c0c0de9d4873f99f
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061391"
+items:
+- uid: azure-iothub.Registry
+  name: Registry
+  fullName: Registry
+  children:
+  - azure-iothub.Registry.addConfiguration
+  - azure-iothub.Registry.addDevices
+  - azure-iothub.Registry.addModule
+  - azure-iothub.Registry.applyConfigurationContentOnDevice
+  - azure-iothub.Registry.BulkDeviceIdentityCallback
+  - azure-iothub.Registry.BulkRegistryOperationType
+  - azure-iothub.Registry.cancelJob
+  - azure-iothub.Registry.create
+  - azure-iothub.Registry.createQuery
+  - azure-iothub.Registry.delete
+  - azure-iothub.Registry.DeviceCallback
+  - azure-iothub.Registry.exportDevicesToBlob
+  - azure-iothub.Registry.fromConnectionString
+  - azure-iothub.Registry.fromSharedAccessSignature
+  - azure-iothub.Registry.get
+  - azure-iothub.Registry.getConfiguration
+  - azure-iothub.Registry.getConfigurations
+  - azure-iothub.Registry.getJob
+  - azure-iothub.Registry.getModule
+  - azure-iothub.Registry.getModulesOnDevice
+  - azure-iothub.Registry.getModuleTwin
+  - azure-iothub.Registry.getRegistryStatistics
+  - azure-iothub.Registry.getTwin
+  - azure-iothub.Registry.importDevicesFromBlob
+  - azure-iothub.Registry.JobCallback
+  - azure-iothub.Registry.JobStatus
+  - azure-iothub.Registry.list
+  - azure-iothub.Registry.listJobs
+  - azure-iothub.Registry.removeConfiguration
+  - azure-iothub.Registry.removeDevices
+  - azure-iothub.Registry.removeModule
+  - azure-iothub.Registry.removeModule_1
+  - azure-iothub.Registry.ResponseCallback
+  - azure-iothub.Registry.update
+  - azure-iothub.Registry.updateConfiguration
+  - azure-iothub.Registry.updateConfiguration_1
+  - azure-iothub.Registry.updateDevices
+  - azure-iothub.Registry.updateModule
+  - azure-iothub.Registry.updateModule_1
+  - azure-iothub.Registry.updateModuleTwin
+  - azure-iothub.Registry.updateTwin
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Die Registry-Klasse bietet Zugriff auf den IoT Hub Device-Identity-Dienst.
+
+    Benutzer von SDK sollten diese Klasse instanziieren, mit einer der Factorymethoden: [FromConnectionString](xref:azure-iothub.Registry.fromConnectionString) oder [FromSharedAccessSignature](xref:azure-iothub.Registry.fromSharedAccessSignature).
+
+    Das für Vorgänge in der geräteidentitätsregistrierung verwendete Protokoll ist HTTPS.
+  package: azure-iothub
+- uid: azure-iothub.Registry.addConfiguration
+  name: addConfiguration
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Hinzufügen einer Konfiguration mit einem iothub.
+  syntax:
+    content: 'function addConfiguration(configuration: Configuration, done: Registry.ResponseCallback)'
+    parameters:
+    - id: configuration
+      type:
+      - azure-iothub.Configuration
+      description: 'Ein Objekt vom Typ-Modul: Azure-Iothub. Konfiguration der Hub hinzufügen'
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.addDevices
+  name: addDevices
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Fügt ein Array von Geräten.
+  syntax:
+    content: 'function addDevices(devices: DeviceDescription[], done: Registry.BulkDeviceIdentityCallback)'
+    parameters:
+    - id: devices
+      type:
+      - azure-iothub.Registry.DeviceDescription[]
+      description: Ein Array von Objekten, die einschließen muss eine `deviceId` Eigenschaft, deren Wert ein gültiger Gerätebezeichner.
+    - id: done
+      type:
+      - azure-iothub.Registry.BulkDeviceIdentityCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), eine BulkRegistryOperationResult und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.addModule
+  name: addModule
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Fügen Sie das angegebene Modul an der Registrierung hinzu.
+  syntax:
+    content: 'function addModule(module: Module, done: Registry.ResponseCallback)'
+    parameters:
+    - id: module
+      type:
+      - azure-iothub.Module
+      description: Modulobjekt, das der Registrierung hinzugefügt.
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.applyConfigurationContentOnDevice
+  name: applyConfigurationContentOnDevice
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Übernehmen Sie die angegebene Konfiguration für ein Gerät in einem IoT Hub
+  syntax:
+    content: 'function applyConfigurationContentOnDevice(deviceId: string, content: ConfigurationContent, done: Registry.ResponseCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ID des Geräts zum Anwenden der Konfiguration auf
+    - id: content
+      type:
+      - azure-iothub.ConfigurationContent
+      description: Die Konfiguration anwenden
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.BulkDeviceIdentityCallback
+  name: BulkDeviceIdentityCallback
+  fullName: BulkDeviceIdentityCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.Registry.BulkRegistryOperationType
+  name: BulkRegistryOperationType
+  fullName: BulkRegistryOperationType
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n\"BulkRegistryOperationType\" ist ein Typalias. Es verweist auf \"erstellen\", \"Aktualisieren\", \"UpdateIfMatchETag\", \"Delete\" und \"DeleteIfMatchETag\"."
+  package: azure-iothub
+- uid: azure-iothub.Registry.cancelJob
+  name: cancelJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Abbrechen eines Bulk Import/Export-Auftrags an.
+  syntax:
+    content: 'function cancelJob(jobId: string, done: Registry.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Der Bezeichner des Auftrags für die der Benutzer möchte, um Statusinformationen zu erhalten.
+    - id: done
+      type:
+      - azure-iothub.Registry.JobCallback
+      description: >
+        Die Funktion, die mit zwei Argumenten aufgerufen: ein Fehlerobjekt, wenn ein Fehler aufgetreten ist, (andernfalls Null) und den Status des Auftrags, deren Bezeichner als Argument übergeben wurde (abgebrochen).
+  package: azure-iothub
+- uid: azure-iothub.Registry.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erstellt eine neue geräteidentität von iothub.
+  syntax:
+    content: 'function create(deviceInfo: DeviceDescription, done: Registry.DeviceCallback)'
+    parameters:
+    - id: deviceInfo
+      type:
+      - azure-iothub.Registry.DeviceDescription
+      description: Das Objekt muss enthalten eine `deviceId` Eigenschaft mit einem gültigen Gerätebezeichner.
+    - id: done
+      type:
+      - azure-iothub.Registry.DeviceCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), eine [Gerät](xref:azure-iothub.Device) Objekt, das der erstellten geräteidentität darstellt, und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.createQuery
+  name: createQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erstellt eine Abfrage, die für die IoT Hub-Instanz finden Sie Informationen zu Geräten oder Aufträge ausgeführt werden kann.
+  syntax:
+    content: 'function createQuery(sqlQuery: string, pageSize?: number)'
+    parameters:
+    - id: sqlQuery
+      type:
+      - string
+      description: Die Abfrage, die als eine SQL-Zeichenfolge geschrieben wird.
+    - id: pageSize
+      type:
+      - number
+      description: >
+        Die gewünschte Anzahl der Ergebnisse pro Seite (optional. Standardwert: 1000, Max.: 10000).
+      optional: true
+    return:
+      type:
+      - azure-iothub.Query
+  package: azure-iothub
+- uid: azure-iothub.Registry.delete
+  name: delete
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Entfernt eine vorhandene geräteidentität von iothub.
+  syntax:
+    content: 'function delete(deviceId: string, done: Registry.ResponseCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Der Bezeichner einer vorhandenen Geräte-Identität.
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), immer Null Argument (für Konsistenz mit anderen Methoden) und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.DeviceCallback
+  name: DeviceCallback
+  fullName: DeviceCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.Registry.exportDevicesToBlob
+  name: exportDevicesToBlob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Exportieren von Geräten in ein Blob in einem Massenvorgang-Auftrag.
+  syntax:
+    content: 'function exportDevicesToBlob(outputBlobContainerUri: string, excludeKeys: boolean, done: Registry.JobCallback)'
+    parameters:
+    - id: outputBlobContainerUri
+      type:
+      - string
+      description: Der URI für einen Container, in dem ein Blob mit den Protokollen der Exportvorgang erstellt wird.
+    - id: excludeKeys
+      type:
+      - boolean
+      description: Boolescher Wert, der angibt, ob Sicherheitsschlüssel aus den exportierten Daten ausgeschlossen werden sollen.
+    - id: done
+      type:
+      - azure-iothub.Registry.JobCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Auftrag, mit zwei Argumenten erstellt wurde: Objekt ein Fehler, wenn ein Fehler aufgetreten ist, (andernfalls Null) und der Status des Auftrags, der verwendet werden kann, den Status der Geräte zu exportieren.
+  package: azure-iothub
+- uid: azure-iothub.Registry.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erstellt ein Registrierungsobjekt aus der angegebenen Verbindungszeichenfolge.
+  syntax:
+    content: 'static function fromConnectionString(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: Eine Verbindungszeichenfolge, die die entsprechende kapselt (Lesen und/oder Schreiben) Berechtigungen für die Registrierung.
+    return:
+      type:
+      - azure-iothub.Registry
+  package: azure-iothub
+- uid: azure-iothub.Registry.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erstellt ein Registrierungsobjekt aus der angegebenen SAS-Signatur.
+  syntax:
+    content: 'static function fromSharedAccessSignature(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: Eine SAS, die die entsprechende kapselt (Lesen und/oder Schreiben) Berechtigungen für die Registrierung.
+    return:
+      type:
+      - azure-iothub.Registry
+  package: azure-iothub
+- uid: azure-iothub.Registry.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Fordert Informationen über eine vorhandene geräteidentität von iothub.
+  syntax:
+    content: 'function get(deviceId: string, done: Registry.DeviceCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Der Bezeichner einer vorhandenen Geräte-Identität.
+    - id: done
+      type:
+      - azure-iothub.Registry.DeviceCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), eine [Gerät](xref:azure-iothub.Device) Objekt, das der erstellten geräteidentität darstellt, und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getConfiguration
+  name: getConfiguration
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erhalten Sie eine einzelne Konfiguration von einem IoT Hub
+  syntax:
+    content: 'function getConfiguration(configurationId: string, done: (err: Error, configuration?: Configuration, response?: any) => void)'
+    parameters:
+    - id: configurationId
+      type:
+      - string
+      description: Die ID der Konfiguration mit abrufen
+    - id: done
+      type:
+      - '(err: Error, configuration?: Configuration, response?: any) => void'
+      description: >
+        Der Rückruf, entweder ein Fehlerobjekt oder ein Modul: Azure aufgerufen wird-Iothub. Configuration-Objekt mit den Konfigurationsdetails.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getConfigurations
+  name: getConfigurations
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Rufen Sie alle Konfigurationen auf einem IoT Hub
+  syntax:
+    content: 'function getConfigurations(done: (err: Error, configurations?: Configuration[], response?: any) => void)'
+    parameters:
+    - id: done
+      type:
+      - '(err: Error, configurations?: Configuration[], response?: any) => void'
+      description: >
+        Der Rückruf, entweder ein Fehlerobjekt oder ein Array von Modul: Azure aufgerufen wird-Iothub. Konfigurationsobjekte für alle Konfigurationen.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getJob
+  name: getJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Rufen Sie den Status eines Bulk Import/Export-Auftrags.
+  syntax:
+    content: 'function getJob(jobId: string, done: Registry.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Der Bezeichner des Auftrags für die der Benutzer möchte, um Statusinformationen zu erhalten.
+    - id: done
+      type:
+      - azure-iothub.Registry.JobCallback
+      description: >
+        Die Funktion, die mit zwei Argumenten aufgerufen: ein Fehlerobjekt, wenn ein Fehler aufgetreten ist, (andernfalls Null) und den Status des Auftrags, deren Bezeichner als Argument übergeben wurde.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getModule
+  name: getModule
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Abrufen eines einzelnen Moduls von einem Gerät in einem IoT Hub
+  syntax:
+    content: 'function getModule(deviceId: string, moduleId: string, done: (err: Error, module?: Module, response?: any) => void)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Geräte-ID, die Besitzer des Moduls.
+    - id: moduleId
+      type:
+      - string
+      description: Modul-ID abrufen
+    - id: done
+      type:
+      - '(err: Error, module?: Module, response?: any) => void'
+      description: >
+        Der Rückruf, entweder ein Fehlerobjekt oder das Modul: Azure aufgerufen wird-Iothub. Module-Objekt, für das angeforderte Modul
+  package: azure-iothub
+- uid: azure-iothub.Registry.getModulesOnDevice
+  name: getModulesOnDevice
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Rufen Sie eine Liste aller Module auf einem IoT Hub-Gerät
+  syntax:
+    content: 'function getModulesOnDevice(deviceId: string, done: (err: Error, modules?: Module[], response?: any) => void)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ID des Geräts, die es-Modulen für optimal nutzen
+    - id: done
+      type:
+      - '(err: Error, modules?: Module[], response?: any) => void'
+      description: >
+        Der Rückruf, entweder ein Fehlerobjekt oder ein Array von Modul: Azure aufgerufen wird-Iothub. Module-Objekte für alle Module.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getModuleTwin
+  name: getModuleTwin
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ruft den Modulzwilling oder das Modul mit der angegebenen Modul-ID ab.
+  syntax:
+    content: 'function getModuleTwin(deviceId: string, moduleId: string, done: (err: Error, twin?: Twin, response?: any) => void)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Der Gerätebezeichner.
+    - id: moduleId
+      type:
+      - string
+      description: Der Modulbezeichner.
+    - id: done
+      type:
+      - '(err: Error, twin?: Twin, response?: any) => void'
+      description: Der Rückruf, der mit einem Fehlerobjekt oder die Modul-Twin-Instanz aufgerufen wird.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getRegistryStatistics
+  name: getRegistryStatistics
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ruft Statistiken zu den Geräten in der geräteidentitätsregistrierung ab.
+  syntax:
+    content: 'function getRegistryStatistics(done: Callback<RegistryStatistics>)'
+    parameters:
+    - id: done
+      type:
+      - Callback<azure-iothub.Registry.RegistryStatistics>
+      description: >
+        Der Rückruf, der entweder ein Fehlerobjekt oder die Registrierung Gerätestatistiken aufgerufen wird.
+  package: azure-iothub
+- uid: azure-iothub.Registry.getTwin
+  name: getTwin
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ruft die vom Gerätezwilling des Geräts mit dem angegebenen Gerätebezeichner ab.
+  syntax:
+    content: 'function getTwin(deviceId: string, done: Registry.ResponseCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Der Gerätebezeichner.
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Der Rückruf, der aufgerufen wird, mit der Geräte-Twin-Instanz oder ein Fehlerobjekt.
+  package: azure-iothub
+- uid: azure-iothub.Registry.importDevicesFromBlob
+  name: importDevicesFromBlob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Importiert Geräte aus einem Blob in Bulk-Auftrag an.
+  syntax:
+    content: 'function importDevicesFromBlob(inputBlobContainerUri: string, outputBlobContainerUri: string, done: Registry.JobCallback)'
+    parameters:
+    - id: inputBlobContainerUri
+      type:
+      - string
+      description: Der URI in einen Container mit einem Blob mit dem Namen "devices.txt" mit einer Liste von Geräten zu importieren.
+    - id: outputBlobContainerUri
+      type:
+      - string
+      description: Der URI für einen Container, in dem ein Blob mit den Protokollen der des Importvorgangs erstellt wird.
+    - id: done
+      type:
+      - azure-iothub.Registry.JobCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Auftrag, mit zwei Argumenten erstellt wurde: Objekt ein Fehler, wenn ein Fehler aufgetreten ist, (andernfalls Null) und der Status des Auftrags, der verwendet werden kann, den Status der Geräte zu importieren.
+  package: azure-iothub
+- uid: azure-iothub.Registry.JobCallback
+  name: JobCallback
+  fullName: JobCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.Registry.JobStatus
+  name: JobStatus
+  fullName: JobStatus
+  children: []
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-iothub
+- uid: azure-iothub.Registry.list
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Fordert Informationen über die ersten 1000 geräteidentitäten auf einem iothub.
+  syntax:
+    content: 'function list(done: Callback<Device[]>)'
+    parameters:
+    - id: done
+      type:
+      - Callback<azure-iothub.Device[]>
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), ein Array von [Gerät](xref:azure-iothub.Device) Objekte, die die Identitäten der aufgelisteten Geräte darstellen, und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.listJobs
+  name: listJobs
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Listen Sie die letzten Aufträge für den Import/Export (einschließlich des aktiven, sofern vorhanden).
+  syntax:
+    content: 'function listJobs(done: Callback<any>)'
+    parameters:
+    - id: done
+      type:
+      - Callback<any>
+      description: >
+        Die Funktion, die mit zwei Argumenten aufgerufen: ein Fehlerobjekt, wenn ein Fehler aufgetreten ist, (andernfalls Null) und die Liste der Aufträge der letzten als Argument.
+  package: azure-iothub
+- uid: azure-iothub.Registry.removeConfiguration
+  name: removeConfiguration
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Entfernen Sie eine Konfiguration mit der angegebenen ID aus einem IoT Hub
+  syntax:
+    content: 'function removeConfiguration(configurationId: string, done: Registry.ResponseCallback)'
+    parameters:
+    - id: configurationId
+      type:
+      - string
+      description: ID der Konfiguration entfernen
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.removeDevices
+  name: removeDevices
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ein Array von Geräten wird aktualisiert.
+  syntax:
+    content: 'function removeDevices(devices: DeviceDescription[], forceRemove: boolean, done: Registry.BulkDeviceIdentityCallback)'
+    parameters:
+    - id: devices
+      type:
+      - azure-iothub.Registry.DeviceDescription[]
+      description: Ein Array von Objekten, die einschließen muss eine `deviceId` Eigenschaft, deren Wert ein gültiger Gerätebezeichner.
+    - id: forceRemove
+      type:
+      - boolean
+      description: Wenn `forceRemove` ist "true", und klicken Sie dann das Gerät unabhängig von der ein Etag entfernt wird.  Andernfalls muss die Etags übereinstimmen.
+    - id: done
+      type:
+      - azure-iothub.Registry.BulkDeviceIdentityCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), eine BulkRegistryOperationResult und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.removeModule
+  name: removeModule
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Entfernen Sie das angegebene Modul aus der Registrierung
+  syntax:
+    content: 'function removeModule(module: Module, done: Registry.ResponseCallback)'
+    parameters:
+    - id: module
+      type:
+      - azure-iothub.Module
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.removeModule_1
+  name: removeModule
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Entfernen Sie das angegebene Modul aus der Registrierung
+  syntax:
+    content: 'function removeModule(deviceId: string, moduleId: string, done: Registry.ResponseCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: moduleId
+      type:
+      - string
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Registry.ResponseCallback
+  name: ResponseCallback
+  fullName: ResponseCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.Registry.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisiert eine vorhandene geräteidentität von iothub mit der angegebenen Geräteinformationen an.
+  syntax:
+    content: 'function update(deviceInfo: DeviceDescription, done: Registry.DeviceCallback)'
+    parameters:
+    - id: deviceInfo
+      type:
+      - azure-iothub.Registry.DeviceDescription
+      description: Ein Objekt, das einschließen muss eine `deviceId` Eigenschaft, deren Wert ein gültiger Gerätebezeichner.
+    - id: done
+      type:
+      - azure-iothub.Registry.DeviceCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), eine [Gerät](xref:azure-iothub.Device) Objekt, das die aktualisierten Geräteseite-Identität darstellt, und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateConfiguration
+  name: updateConfiguration
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisieren Sie eine Konfiguration in einem iothub
+  syntax:
+    content: 'function updateConfiguration(configuration: Configuration, done: Registry.ResponseCallback)'
+    parameters:
+    - id: configuration
+      type:
+      - azure-iothub.Configuration
+      description: 'Ein Objekt vom Typ-Modul: Azure-Iothub. Konfiguration der Hub hinzufügen'
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateConfiguration_1
+  name: updateConfiguration
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisieren Sie eine Konfiguration in einem iothub
+  syntax:
+    content: 'function updateConfiguration(configuration: Configuration, forceUpdate: boolean, done: Registry.ResponseCallback)'
+    parameters:
+    - id: configuration
+      type:
+      - azure-iothub.Configuration
+      description: ''
+    - id: forceUpdate
+      type:
+      - boolean
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateDevices
+  name: updateDevices
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ein Array von Geräten wird aktualisiert.
+  syntax:
+    content: 'function updateDevices(devices: DeviceDescription[], forceUpdate: boolean, done?: Registry.BulkDeviceIdentityCallback)'
+    parameters:
+    - id: devices
+      type:
+      - azure-iothub.Registry.DeviceDescription[]
+      description: Ein Array von Objekten, die einschließen muss eine `deviceId` Eigenschaft, deren Wert ein gültiger Gerätebezeichner.
+    - id: forceUpdate
+      type:
+      - boolean
+      description: Wenn `forceUpdate` ist "true", und klicken Sie dann das Gerät unabhängig von der ein Etag aktualisiert wird.  Andernfalls muss die Etags übereinstimmen.
+    - id: done
+      type:
+      - azure-iothub.Registry.BulkDeviceIdentityCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), eine BulkRegistryOperationResult und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateModule
+  name: updateModule
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisieren Sie das angegebene Modul-Objekt in der Registrierung
+  syntax:
+    content: 'function updateModule(module: Module, done: Registry.ResponseCallback)'
+    parameters:
+    - id: module
+      type:
+      - azure-iothub.Module
+      description: Zu aktualisierende Modulobjekt.
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Die Funktion, die aufgerufen werden, wenn der Vorgang abgeschlossen ist. `done` wird mit drei Argumenten aufgerufen werden: ein Fehlerobjekt (kann null sein), die den Text der Antwort und ein transportspezifische Response-Objekt, das für die Protokollierung oder das Debuggen hilfreich.
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateModule_1
+  name: updateModule
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisieren Sie das angegebene Modul-Objekt in der Registrierung
+  syntax:
+    content: 'function updateModule(module: Module, forceUpdate: boolean, done: Registry.ResponseCallback)'
+    parameters:
+    - id: module
+      type:
+      - azure-iothub.Module
+      description: ''
+    - id: forceUpdate
+      type:
+      - boolean
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateModuleTwin
+  name: updateModuleTwin
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisiert den Zwilling der ein bestimmtes Modul mit dem angegebenen Patch an.
+  syntax:
+    content: 'function updateModuleTwin(deviceId: string, moduleId: string, patch: any, etag: string, done: Registry.ResponseCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Der Gerätebezeichner.
+    - id: moduleId
+      type:
+      - string
+      description: Die Modul-ID
+    - id: patch
+      type:
+      - any
+      description: Die gewünschten Eigenschaften und Tags aus, um den modulzwilling mit patch.
+    - id: etag
+      type:
+      - string
+      description: Das aktuelle Etag für diesen modulzwilling oder ' *', ein Update zu erzwingen, auch wenn Sie der modulzwilling aktualisiert wurde, nachdem das Etag abgerufen wurde.
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: Der Rückruf, der mit einem Fehlerobjekt oder die Modul-Twin-Instanz aufgerufen wird.
+  package: azure-iothub
+- uid: azure-iothub.Registry.updateTwin
+  name: updateTwin
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Aktualisiert den Gerätezwilling, der einem bestimmten Gerät mit dem angegebenen Patch an.
+  syntax:
+    content: 'function updateTwin(deviceId: string, patch: any, etag: string, done: Registry.ResponseCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: Der Gerätebezeichner.
+    - id: patch
+      type:
+      - any
+      description: Die gewünschten Eigenschaften und Tags aus, um den gerätezwilling zu patchen.
+    - id: etag
+      type:
+      - string
+      description: Das aktuelle Etag für diese gerätezwilling oder ' *', ein Update zu erzwingen, auch wenn die vom gerätezwilling aktualisiert wurde, nachdem das Etag abgerufen wurde.
+    - id: done
+      type:
+      - azure-iothub.Registry.ResponseCallback
+      description: >
+        Der Rückruf, der aufgerufen wird, mit der Geräte-Twin-Instanz oder ein Fehlerobjekt.
+  package: azure-iothub
+references:
+- uid: azure-iothub.Registry.DeviceRegistryOperationError[]
+  spec.typeScript:
+  - name: DeviceRegistryOperationError
+    fullName: DeviceRegistryOperationError
+    uid: azure-iothub.Registry.DeviceRegistryOperationError
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-iothub.Device.Capabilities
+  spec.typeScript:
+  - name: Capabilities
+    fullName: Capabilities
+    uid: azure-iothub.Device.Capabilities
+- uid: azure-iothub.Configuration
+  spec.typeScript:
+  - name: Configuration
+    fullName: Configuration
+    uid: azure-iothub.Configuration
+- uid: azure-iothub.Registry.ResponseCallback
+  spec.typeScript:
+  - name: ResponseCallback
+    fullName: ResponseCallback
+    uid: azure-iothub.Registry.ResponseCallback
+- uid: azure-iothub.Registry.DeviceDescription[]
+  spec.typeScript:
+  - name: DeviceDescription
+    fullName: DeviceDescription
+    uid: azure-iothub.Registry.DeviceDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-iothub.Registry.BulkDeviceIdentityCallback
+  spec.typeScript:
+  - name: BulkDeviceIdentityCallback
+    fullName: BulkDeviceIdentityCallback
+    uid: azure-iothub.Registry.BulkDeviceIdentityCallback
+- uid: azure-iothub.Module
+  spec.typeScript:
+  - name: Module
+    fullName: Module
+    uid: azure-iothub.Module
+- uid: azure-iothub.ConfigurationContent
+  spec.typeScript:
+  - name: ConfigurationContent
+    fullName: ConfigurationContent
+    uid: azure-iothub.ConfigurationContent
+- uid: azure-iothub.Registry.JobCallback
+  spec.typeScript:
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.Registry.JobCallback
+- uid: azure-iothub.Registry.DeviceDescription
+  spec.typeScript:
+  - name: DeviceDescription
+    fullName: DeviceDescription
+    uid: azure-iothub.Registry.DeviceDescription
+- uid: azure-iothub.Registry.DeviceCallback
+  spec.typeScript:
+  - name: DeviceCallback
+    fullName: DeviceCallback
+    uid: azure-iothub.Registry.DeviceCallback
+- uid: azure-iothub.Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iothub.Query
+- uid: Callback<azure-iothub.Registry.RegistryStatistics>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: RegistryStatistics
+    fullName: RegistryStatistics
+    uid: azure-iothub.Registry.RegistryStatistics
+  - name: '>'
+    fullName: '>'
+- uid: Callback<azure-iothub.Device[]>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: Device
+    fullName: Device
+    uid: azure-iothub.Device
+  - name: '[]>'
+    fullName: '[]>'
+- uid: azure-iothub.Registry
+  spec.typeScript:
+  - name: Registry
+    fullName: Registry
+    uid: azure-iothub.Registry

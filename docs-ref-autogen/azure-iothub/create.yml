@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b153f4bffb05f3df1f8560dcf62917df2f9fec9d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061385"
+items:
+- uid: azure-iothub.create
+  name: create
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Erstellt ein SAS-Token zur Authentifizierung einer Verbindungs mit einem Azure IoT Hub.
+  syntax:
+    content: 'function create(host: string, policy: string, key: string, expiry: string | number)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Hostname des Azure IoT Hub.
+    - id: policy
+      type:
+      - string
+      description: Name der Richtlinie für die Verbindung mit dem Azure IoT Hub verwenden (in der Regel `ServiceConnect`, `iothubowner` usw. Finden Sie unter [steuern den Zugriff auf Ihren Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security).
+    - id: key
+      type:
+      - string
+      description: Zu verwendende symmetrische Schlüssel zum Erstellen von shared Access Signaturtoken.
+    - id: expiry
+      type:
+      - string | number
+      description: >
+        Die Ablaufzeit für das Token, das erstellt werden.
+    return:
+      type:
+      - SharedAccessSignature
+  package: azure-iothub

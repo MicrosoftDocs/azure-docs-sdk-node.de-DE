@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a458cc994c70995846e724553a4db172a9f3458a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40059955"
+items:
+- uid: azure-iot-device.Twin
+  name: Twin
+  fullName: Twin
+  children:
+  - azure-iot-device.Twin.desiredPath
+  - azure-iot-device.Twin.desiredPropertiesUpdatesEnabled
+  - azure-iot-device.Twin.errorEvent
+  - azure-iot-device.Twin.get
+  - azure-iot-device.Twin.properties
+  langs:
+  - typeScript
+  type: class
+  summary: >+
+    Ein Gerätezwilling ist Dokument zur Beschreibung der Status eines Geräts, das durch einen Azure IoT Hub gespeichert und ist verfügbar, auch wenn das Gerät offline ist.
+
+    Es wird auf ca. 3 Abschnitten erstellt:
+      - Tags: Schlüssel/Wert-Paare, die Zugriff nur über die Dienstseite
+      - Gewünschte Eigenschaften: aktualisiert die von einem Dienst und vom Gerät empfangen wurden
+      - Gemeldete Eigenschaften: aktualisiert die vom Gerät und vom Dienst empfangen werden.
+    Beachten Sie, dass obwohl es eine Möglichkeit ist, gewünschte und gemeldete Eigenschaften nicht übereinstimmen und die Logik für diese beiden Auflistungen, synchronisieren Sie bei Bedarf für den Benutzer von SDK bleibt.
+
+
+    Weitere Informationen finden Sie unter [Grundlegendes zu Gerätezwillingen](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins).
+
+     @fires Twin#Properties.Desired[.Path]
+
+  extends:
+    name: EventEmitter
+  package: azure-iot-device
+- uid: azure-iot-device.Twin.desiredPath
+  name: desiredPath
+  fullName: desiredPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'static desiredPath: string'
+    return:
+      type:
+      - string
+  package: azure-iot-device
+- uid: azure-iot-device.Twin.desiredPropertiesUpdatesEnabled
+  name: desiredPropertiesUpdatesEnabled
+  fullName: desiredPropertiesUpdatesEnabled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'desiredPropertiesUpdatesEnabled: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-device
+- uid: azure-iot-device.Twin.errorEvent
+  name: errorEvent
+  fullName: errorEvent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'static errorEvent: string'
+    return:
+      type:
+      - string
+  package: azure-iot-device
+- uid: azure-iot-device.Twin.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ruft die gesamte gerätezwilling aus dem Dienst ab.
+  syntax:
+    content: 'function get(callback: (err: Error, twin?: Twin) => void)'
+    parameters:
+    - id: callback
+      type:
+      - '(err: Error, twin?: Twin) => void'
+      description: >
+        eine Funktion, die mit den zwilling oder ein Fehler wieder aufgerufen werden muss, wenn der Transport, zum Abrufen des Zwillings auszulösen fehlschlägt.
+  package: azure-iot-device
+- uid: azure-iot-device.Twin.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die gewünschten und gemeldeten Eigenschaften Wörterbücher (bzw. im `properties.desired` und `properties.reported`).
+  syntax:
+    content: 'properties: TwinProperties'
+    return:
+      type:
+      - azure-iot-device.TwinProperties
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.TwinProperties
+  spec.typeScript:
+  - name: TwinProperties
+    fullName: TwinProperties
+    uid: azure-iot-device.TwinProperties

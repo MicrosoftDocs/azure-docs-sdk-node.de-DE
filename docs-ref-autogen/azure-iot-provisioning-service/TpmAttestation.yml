@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0a5bc610a2934b397637cbefb775b255740fbddd
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40062276"
+items:
+- uid: azure-iot-provisioning-service.TpmAttestation
+  name: TpmAttestation
+  fullName: TpmAttestation
+  children:
+  - azure-iot-provisioning-service.TpmAttestation.endorsementKey
+  - azure-iot-provisioning-service.TpmAttestation.storageRootKey
+  langs:
+  - typeScript
+  type: interface
+  summary: Der Nachweis über das TPM.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.TpmAttestation.endorsementKey
+  name: endorsementKey
+  fullName: endorsementKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Der Endorsement Key ist ein Verschlüsselungsschlüssel, der dauerhaft im Hardware Security Trusted Platform Module (TPM): zum Zeitpunkt der Herstellung in der Regel eingebettet ist. Diese privaten Teil des Endorsement Key wird niemals außerhalb des TPM freigegeben. Der öffentliche Teil des Endorsement Key kann zur Erkennung eines Original-TPM.
+
+    Der Endorsement Key ist ein base64-codierte Wert.
+  syntax:
+    content: 'endorsementKey: string'
+    return:
+      type:
+      - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.TpmAttestation.storageRootKey
+  name: storageRootKey
+  fullName: storageRootKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Der Speicherstammschlüssel wird in das Trusted Platform Module (TPM)-Sicherheitshardware eingebettet.
+
+    Es wird verwendet, die von Anwendungen erstellte TPM-Schlüsseln zu schützen, sodass diese Schlüssel nicht ohne das TPM verwendet werden können.
+
+    Im Gegensatz zu den Endorsement Key (die in der Regel erstellt wird, wenn das TPM stammt), der Speicherstammschlüssel wird erstellt, wenn Sie den Besitz des TPM übernehmen. Dies bedeutet, dass wenn Sie das TPM löschen und ein neuer Benutzer den Besitz übernimmt, ein neuer Speicherstammschlüssel erstellt wird.
+
+    Diese Eigenschaft ist nicht in der Regel von den Dienstclient manipuliert.
+
+
+    Die StorageRootKey ist base64-codierter Wert.
+  syntax:
+    content: 'storageRootKey: string'
+    return:
+      type:
+      - string
+  package: azure-iot-provisioning-service
