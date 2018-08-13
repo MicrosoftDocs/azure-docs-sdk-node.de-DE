@@ -1,0 +1,883 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 32725d5985e3a3ec60aa1cba0111ae4487e3e8c2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40059434"
+items:
+- uid: azure-arm-apimanagement.ApiOperationPolicy
+  name: ApiOperationPolicy
+  fullName: ApiOperationPolicy
+  children:
+  - azure-arm-apimanagement.ApiOperationPolicy.createOrUpdate
+  - azure-arm-apimanagement.ApiOperationPolicy.createOrUpdate_2
+  - azure-arm-apimanagement.ApiOperationPolicy.createOrUpdate_1
+  - azure-arm-apimanagement.ApiOperationPolicy.createOrUpdateWithHttpOperationResponse
+  - azure-arm-apimanagement.ApiOperationPolicy.deleteMethod
+  - azure-arm-apimanagement.ApiOperationPolicy.deleteMethod_1
+  - azure-arm-apimanagement.ApiOperationPolicy.deleteMethod_2
+  - azure-arm-apimanagement.ApiOperationPolicy.deleteMethodWithHttpOperationResponse
+  - azure-arm-apimanagement.ApiOperationPolicy.get
+  - azure-arm-apimanagement.ApiOperationPolicy.get_1
+  - azure-arm-apimanagement.ApiOperationPolicy.get_2
+  - azure-arm-apimanagement.ApiOperationPolicy.getEntityTag
+  - azure-arm-apimanagement.ApiOperationPolicy.getEntityTag_1
+  - azure-arm-apimanagement.ApiOperationPolicy.getEntityTag_2
+  - azure-arm-apimanagement.ApiOperationPolicy.getEntityTagWithHttpOperationResponse
+  - azure-arm-apimanagement.ApiOperationPolicy.getWithHttpOperationResponse
+  - azure-arm-apimanagement.ApiOperationPolicy.listByOperation
+  - azure-arm-apimanagement.ApiOperationPolicy.listByOperation_1
+  - azure-arm-apimanagement.ApiOperationPolicy.listByOperation_2
+  - azure-arm-apimanagement.ApiOperationPolicy.listByOperationWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.createOrUpdate
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-101">Erstellt oder aktualisiert die Konfiguration von Gruppenrichtlinien für die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-101">Creates or updates policy configuration for the API Operation level.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: PolicyContract, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-102">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-102">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-103">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-103">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-104">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-104">API revision identifier.</span></span> <span data-ttu-id="caf54-105">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-105">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-106">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-106">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-107">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-107">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-108">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-108">Must be unique in the current API Management service instance.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.PolicyContract
+      description: >
+        <span data-ttu-id="caf54-109">Der Inhalt der Richtlinie anwenden.</span><span class="sxs-lookup"><span data-stu-id="caf54-109">The policy contents to apply.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.createOrUpdate_2
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-110">Erstellt oder aktualisiert die Konfiguration von Gruppenrichtlinien für die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-110">Creates or updates policy configuration for the API Operation level.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: PolicyContract, options: function, callback: ServiceCallback<PolicyContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.PolicyContract
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.PolicyContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.createOrUpdate_1
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-111">Erstellt oder aktualisiert die Konfiguration von Gruppenrichtlinien für die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-111">Creates or updates policy configuration for the API Operation level.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: PolicyContract, callback: ServiceCallback<PolicyContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.PolicyContract
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.PolicyContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-112">Erstellt oder aktualisiert die Konfiguration von Gruppenrichtlinien für die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-112">Creates or updates policy configuration for the API Operation level.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: PolicyContract, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-113">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-113">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-114">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-114">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-115">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-115">API revision identifier.</span></span> <span data-ttu-id="caf54-116">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-116">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-117">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-117">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-118">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-118">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-119">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-119">Must be unique in the current API Management service instance.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.PolicyContract
+      description: >
+        <span data-ttu-id="caf54-120">Der Inhalt der Richtlinie anwenden.</span><span class="sxs-lookup"><span data-stu-id="caf54-120">The policy contents to apply.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.PolicyContract>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-121">Löscht die Richtlinienkonfiguration an den API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-121">Deletes the policy configuration at the Api Operation.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-122">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-122">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-123">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-123">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-124">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-124">API revision identifier.</span></span> <span data-ttu-id="caf54-125">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-125">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-126">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-126">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-127">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-127">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-128">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-128">Must be unique in the current API Management service instance.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-129">ETag der Entität.</span><span class="sxs-lookup"><span data-stu-id="caf54-129">ETag of the Entity.</span></span> <span data-ttu-id="caf54-130">Etags sollte den aktuelle Entitätszustand aus der headerantwort der GET-Anforderung oder sollte \* für unbedingtes Update.</span><span class="sxs-lookup"><span data-stu-id="caf54-130">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-131">Löscht die Richtlinienkonfiguration an den API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-131">Deletes the policy configuration at the Api Operation.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-132">Löscht die Richtlinienkonfiguration an den API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-132">Deletes the policy configuration at the Api Operation.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-133">Löscht die Richtlinienkonfiguration an den API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-133">Deletes the policy configuration at the Api Operation.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-134">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-134">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-135">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-135">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-136">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-136">API revision identifier.</span></span> <span data-ttu-id="caf54-137">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-137">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-138">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-138">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-139">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-139">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-140">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-140">Must be unique in the current API Management service instance.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-141">ETag der Entität.</span><span class="sxs-lookup"><span data-stu-id="caf54-141">ETag of the Entity.</span></span> <span data-ttu-id="caf54-142">Etags sollte den aktuelle Entitätszustand aus der headerantwort der GET-Anforderung oder sollte \* für unbedingtes Update.</span><span class="sxs-lookup"><span data-stu-id="caf54-142">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-143">Erhalten Sie die Konfiguration der Ebene des API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-143">Get the policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-144">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-144">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-145">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-145">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-146">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-146">API revision identifier.</span></span> <span data-ttu-id="caf54-147">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-147">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-148">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-148">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-149">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-149">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-150">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-150">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-151">Erhalten Sie die Konfiguration der Ebene des API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-151">Get the policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, callback: ServiceCallback<PolicyContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.PolicyContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-152">Erhalten Sie die Konfiguration der Ebene des API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-152">Get the policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options: function, callback: ServiceCallback<PolicyContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.PolicyContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.getEntityTag
+  name: getEntityTag
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-153">Ruft die entitätszustandsversion (Etag) der durch seinen Bezeichner angegebenen API-vorgangsrichtlinie ab.</span><span class="sxs-lookup"><span data-stu-id="caf54-153">Gets the entity state (Etag) version of the API operation policy specified by its identifier.</span></span>
+  syntax:
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-154">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-154">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-155">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-155">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-156">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-156">API revision identifier.</span></span> <span data-ttu-id="caf54-157">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-157">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-158">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-158">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-159">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-159">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-160">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-160">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.getEntityTag_1
+  name: getEntityTag
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-161">Ruft die entitätszustandsversion (Etag) der durch seinen Bezeichner angegebenen API-vorgangsrichtlinie ab.</span><span class="sxs-lookup"><span data-stu-id="caf54-161">Gets the entity state (Etag) version of the API operation policy specified by its identifier.</span></span>
+  syntax:
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.getEntityTag_2
+  name: getEntityTag
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-162">Ruft die entitätszustandsversion (Etag) der durch seinen Bezeichner angegebenen API-vorgangsrichtlinie ab.</span><span class="sxs-lookup"><span data-stu-id="caf54-162">Gets the entity state (Etag) version of the API operation policy specified by its identifier.</span></span>
+  syntax:
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.getEntityTagWithHttpOperationResponse
+  name: getEntityTagWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-163">Ruft die entitätszustandsversion (Etag) der durch seinen Bezeichner angegebenen API-vorgangsrichtlinie ab.</span><span class="sxs-lookup"><span data-stu-id="caf54-163">Gets the entity state (Etag) version of the API operation policy specified by its identifier.</span></span>
+  syntax:
+    content: 'function getEntityTagWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-164">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-164">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-165">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-165">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-166">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-166">API revision identifier.</span></span> <span data-ttu-id="caf54-167">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-167">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-168">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-168">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-169">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-169">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-170">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-170">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-171">Erhalten Sie die Konfiguration der Ebene des API-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="caf54-171">Get the policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-172">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-172">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-173">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-173">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-174">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-174">API revision identifier.</span></span> <span data-ttu-id="caf54-175">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-175">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-176">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-176">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-177">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-177">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-178">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-178">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.PolicyContract>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.listByOperation
+  name: listByOperation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-179">Rufen Sie die Liste der Richtlinienkonfiguration, auf die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-179">Get the list of policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function listByOperation(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-180">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-180">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-181">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-181">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-182">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-182">API revision identifier.</span></span> <span data-ttu-id="caf54-183">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-183">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-184">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-184">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-185">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-185">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-186">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-186">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.listByOperation_1
+  name: listByOperation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-187">Rufen Sie die Liste der Richtlinienkonfiguration, auf die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-187">Get the list of policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function listByOperation(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, callback: ServiceCallback<PolicyCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.PolicyCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.listByOperation_2
+  name: listByOperation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-188">Rufen Sie die Liste der Richtlinienkonfiguration, auf die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-188">Get the list of policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function listByOperation(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options: function, callback: ServiceCallback<PolicyCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: apiId
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.PolicyCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.PolicyCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiOperationPolicy.listByOperationWithHttpOperationResponse
+  name: listByOperationWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="caf54-189">Rufen Sie die Liste der Richtlinienkonfiguration, auf die API-Vorgangsebene.</span><span class="sxs-lookup"><span data-stu-id="caf54-189">Get the list of policy configuration at the API Operation level.</span></span>
+  syntax:
+    content: 'function listByOperationWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-190">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="caf54-190">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-191">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="caf54-191">The name of the API Management service.</span></span>
+    - id: apiId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-192">API-revisionsbezeichner.</span><span class="sxs-lookup"><span data-stu-id="caf54-192">API revision identifier.</span></span> <span data-ttu-id="caf54-193">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-193">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="caf54-194">Keine aktuellen Revision zu hat; rev = n als ein Suffix, wobei n die Revisionsnummer ist.</span><span class="sxs-lookup"><span data-stu-id="caf54-194">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="caf54-195">Vorgangs-ID innerhalb einer API.</span><span class="sxs-lookup"><span data-stu-id="caf54-195">Operation identifier within an API.</span></span> <span data-ttu-id="caf54-196">Muss in der aktuellen Instanz des API Management-Diensts eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="caf54-196">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.PolicyCollection>>
+  package: azure-arm-apimanagement
+references:
+- uid: azure-arm-apimanagement.PolicyContract
+  spec.typeScript:
+  - name: PolicyContract
+    fullName: PolicyContract
+    uid: azure-arm-apimanagement.PolicyContract
+- uid: Promise<azure-arm-apimanagement.PolicyContract>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PolicyContract
+    fullName: PolicyContract
+    uid: azure-arm-apimanagement.PolicyContract
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.PolicyContract>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PolicyContract
+    fullName: PolicyContract
+    uid: azure-arm-apimanagement.PolicyContract
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.PolicyContract>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PolicyContract
+    fullName: PolicyContract
+    uid: azure-arm-apimanagement.PolicyContract
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-apimanagement.PolicyCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PolicyCollection
+    fullName: PolicyCollection
+    uid: azure-arm-apimanagement.PolicyCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.PolicyCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PolicyCollection
+    fullName: PolicyCollection
+    uid: azure-arm-apimanagement.PolicyCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.PolicyCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PolicyCollection
+    fullName: PolicyCollection
+    uid: azure-arm-apimanagement.PolicyCollection
+  - name: '>>'
+    fullName: '>>'
