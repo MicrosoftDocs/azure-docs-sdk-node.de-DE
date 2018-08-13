@@ -1,0 +1,812 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6fa2e2901b7265c9426541584abde0d99339d194
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40057151"
+items:
+- uid: azure-scheduler.JobOperations~JobOperations
+  id: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [SchedulerClient] <xref:azure-scheduler.SchedulerClient~SchedulerClient>.
+
+    Finden Sie unter [Aufträge] <xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>.
+
+    Initialisiert eine neue Instanz der Klasse JobOperations an.
+  fullName: azure-scheduler.JobOperations
+  type: Class
+  children:
+  - azure-scheduler.JobOperations~JobOperations.#ctor
+  - azure-scheduler.JobOperations~JobOperations#create
+  - azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  - azure-scheduler.JobOperations~JobOperations#deleteMethod
+  - azure-scheduler.JobOperations~JobOperations#get
+  - azure-scheduler.JobOperations~JobOperations#getHistory
+  - azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  - azure-scheduler.JobOperations~JobOperations#list
+  - azure-scheduler.JobOperations~JobOperations#listWithFilter
+  - azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  - azure-scheduler.JobOperations~JobOperations#updateState
+  langs:
+  - js
+- id: azure-scheduler.JobOperations~JobOperations.#ctor
+  uid: azure-scheduler.JobOperations~JobOperations.#ctor
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-scheduler.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerClient
+      description: Verweis auf den Dienstclient.
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#create
+  id: azure-scheduler.JobOperations~JobOperations#create
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: create(parameters, callback)
+  summary: Erstellt einen neuen Auftrag, und ermöglicht dem Dienst um eine Auftrags-Id zu generieren. Verwenden Sie "createorupdate", wenn eine Benutzer ausgewählte Auftrags-Id erforderlich ist.
+  fullName: azure-scheduler.JobOperations~JobOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateParameters
+      description: Parameter, der die Auftragsdefinition für einen Auftrag erstellen-Vorgang angibt.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Die Startzeit für den Auftrag.  Als ISO-8601 definiert.
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: Die Aktion, die für den Auftrag aufgerufen.
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Typ der Aktion. Http, Https und StorageQueue möglich.
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: Wiederholen Sie die Richtlinie für die Auftrag-Aktion.
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: Der Typ der Wiederholung der Wiederholungsrichtlinie auf. Entweder 'fixed' oder 'none' kann sein.
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: Das Intervall zwischen Wiederholungsversuchen.
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: Anzahl von Wiederholungen, die eine Wiederholung versucht werden soll.
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: Fehleraktion für den Auftrag.
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Typ der Aktion. Http, Https und StorageQueue möglich.
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Anforderung für eine HTTP- oder Https-Aktionstyp.
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Uri des Endpunkts zum Aufrufen.
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Http-Methode z. B. GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: Übernimmt oder bestimmt die Name-Wert-Paare von Header mit der http/Https-Aktion angeben.
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Anforderungstext.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Übernimmt oder bestimmt die Anforderungsauthentifizierung.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Gibt den Authentifizierungstyp
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Geben Sie die Warteschlange und Inhalte für eine Warteschlangen-Nachricht-Aktion.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: Der Name des Speicherkontos, das für die Warteschlange.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: Der Name der Warteschlange zu senden.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: SAS-Schlüssel für das Speicherkonto zum Senden der Nachricht an die Warteschlange.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: Der Inhalt der Nachricht an die Warteschlange zu senden.
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Anforderung für eine HTTP- oder Https-Aktionstyp.
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Uri des Endpunkts zum Aufrufen.
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Http-Methode z. B. GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: Übernimmt oder bestimmt die Name-Wert-Paare von Header mit der http/Https-Aktion angeben.
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Anforderungstext.
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Übernimmt oder bestimmt die Anforderungsauthentifizierung.
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Gibt den Authentifizierungstyp
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Geben Sie die Warteschlange und Inhalte für eine Warteschlangen-Nachricht-Aktion.
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: Der Name des Speicherkontos, das für die Warteschlange.
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: Der Name der Warteschlange zu senden.
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: SAS-Schlüssel für das Speicherkonto zum Senden der Nachricht an die Warteschlange.
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: Der Inhalt der Nachricht an die Warteschlange zu senden.
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: Der Wiederholungszeitplan für den Auftrag.
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: Die Häufigkeit der Wiederholung.
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: Intervall für die Wiederholung mit der angegebenen Häufigkeit.
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: Die Anzahl der vorkommen, die ausgeführt wird. Optional. Standardmäßig wird unendlich wiederholt.
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: Zeit im ISO-8601-Format, die nach dem keine weiteren Vorkommen ausgeführt werden.
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: Der Wiederholungszeitplan für den Auftrag.
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: Minuten der Stunde, denen auf der Auftrag ausgeführt werden soll.
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: Stunden des Tages, der auf der Auftrag ausgeführt werden soll.
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: Tage der Woche, die auf der Auftrag ausgeführt werden soll.
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: Monate, denen in der Auftrag ausgeführt werden soll.  Muss zwischen 1 und 12 liegen.
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: Tage des Monats, die auf der Auftrag ausgeführt werden soll.  Muss zwischen 1 und 31 liegen.
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: Vorkommen von Tagen in einem Monat.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  id: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: createOrUpdate(jobId, parameters, callback)
+  summary: Erstellt einen neuen Auftrag mit einer vom Benutzer bereitgestellte Auftrags-Id oder aktualisiert einen vorhandenen Auftrag, und Ersetzen Sie dabei ihre Definition mit dem angegeben.
+  fullName: azure-scheduler.JobOperations~JobOperations.createOrUpdate(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Die ID des Auftrags, der zum Erstellen oder aktualisieren.
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateOrUpdateParameters
+      description: Die Parameter die Auftragsdefinition für einen Vorgang CreateOrUpdate Job angeben.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Die Startzeit für den Auftrag. Als ISO-8601 definiert.
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: Die Aktion, die für den Auftrag aufgerufen.
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Typ der Aktion. Http, Https und StorageQueue möglich.
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: Wiederholen Sie die Richtlinie für die Auftrag-Aktion.
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: Der Typ der Wiederholung der Wiederholungsrichtlinie auf. Entweder 'fixed' oder 'none' kann sein.
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: Das Intervall zwischen Wiederholungsversuchen.
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: Anzahl von Wiederholungen, die eine Wiederholung versucht werden soll.
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: Fehleraktion für den Auftrag.
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Typ der Aktion. Http, Https und StorageQueue möglich.
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Anforderung für eine HTTP- oder Https-Aktionstyp.
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Uri des Endpunkts zum Aufrufen.
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Http-Methode z. B. GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: Übernimmt oder bestimmt die Name-Wert-Paare von Header mit der http/Https-Aktion angeben.
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Anforderungstext.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Übernimmt oder bestimmt die Anforderungsauthentifizierung.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Gibt den Authentifizierungstyp
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Geben Sie die Warteschlange und Inhalte für eine Warteschlangen-Nachricht-Aktion.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: Der Name des Speicherkontos, das für die Warteschlange.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: Der Name der Warteschlange zu senden.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: SAS-Schlüssel für das Speicherkonto zum Senden der Nachricht an die Warteschlange.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: Der Inhalt der Nachricht an die Warteschlange zu senden.
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Anforderung für eine HTTP- oder Https-Aktionstyp.
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Uri des Endpunkts zum Aufrufen.
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: Übernimmt oder bestimmt die Http-Methode z. B. GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: Übernimmt oder bestimmt die Name-Wert-Paare von Header mit der http/Https-Aktion angeben.
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Anforderungstext.
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Übernimmt oder bestimmt die Anforderungsauthentifizierung.
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Gibt den Authentifizierungstyp
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Geben Sie die Warteschlange und Inhalte für eine Warteschlangen-Nachricht-Aktion.
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: Der Name des Speicherkontos, das für die Warteschlange.
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: Der Name der Warteschlange zu senden.
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: SAS-Schlüssel für das Speicherkonto zum Senden der Nachricht an die Warteschlange.
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: Der Inhalt der Nachricht an die Warteschlange zu senden.
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: Der Wiederholungszeitplan für den Auftrag.
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: Die Häufigkeit der Wiederholung.
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: Intervall für die Wiederholung mit der angegebenen Häufigkeit.
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: Die Anzahl der vorkommen, die ausgeführt wird. Optional. Standardmäßig wird unendlich wiederholt.
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: Zeit im ISO-8601-Format, die nach dem keine weiteren Vorkommen ausgeführt werden.
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: Der Wiederholungszeitplan für den Auftrag.
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: Minuten der Stunde, denen auf der Auftrag ausgeführt werden soll.
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: Stunden des Tages, der auf der Auftrag ausgeführt werden soll.
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: Tage der Woche, die auf der Auftrag ausgeführt werden soll.
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: Monate, denen in der Auftrag ausgeführt werden soll.  Muss zwischen 1 und 12 liegen.
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: Tage des Monats, die auf der Auftrag ausgeführt werden soll.  Muss zwischen 1 und 31 liegen.
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: Vorkommen von Tagen in einem Monat.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function createOrUpdate(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  id: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: deleteMethod(jobId, callback)
+  summary: Löscht einen Auftrag.
+  fullName: azure-scheduler.JobOperations~JobOperations.deleteMethod(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Die ID des Auftrags, zu löschen.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function deleteMethod(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#get
+  id: azure-scheduler.JobOperations~JobOperations#get
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: get(jobId, callback)
+  summary: Die Definition und den Status eines Auftrags zu erhalten.
+  fullName: azure-scheduler.JobOperations~JobOperations.get(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Die ID des Auftrags, zu erhalten.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function get(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistory
+  id: azure-scheduler.JobOperations~JobOperations#getHistory
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistory(jobId, parameters, callback)
+  summary: Erhalten Sie den Ausführungsverlauf eines Auftrags.
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistory(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Die ID des Auftrags, um den Verlauf zu erhalten.
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryParameters
+      description: Parameter für das Abrufen des Auftragsverlaufs zur Verfügung gestellt.
+    - id: parameters.skip
+      type:
+      - number
+      description: Geben Sie den Index (0-basiert) der Verlaufsliste ab dem Einträge anfordern.
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Geben Sie die Anzahl von Verlaufseinträgen anfordern, in dem der Bereich [1.. 100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function getHistory(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistoryWithFilter(jobId, parameters, callback)
+  summary: Erhalten Sie den Ausführungsverlauf eines Auftrags mit einem Filter für den Status des Auftrags.
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Die ID des Auftrags, um den Verlauf zu erhalten.
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryWithFilterParameters
+      description: Parameter für die erste Verlauf mit Auftragsfilter zur Verfügung gestellt.
+    - id: parameters.status
+      type:
+      - azure-scheduler.JobHistoryStatus
+      description: Filtern Sie den Auftragsverlauf, damit diese nur return Auftrag Ausführungsversuche durchgeführt, die mit einem bestimmten Status, "abgeschlossen" oder "failed".
+    - id: parameters.skip
+      type:
+      - number
+      description: Geben Sie den Index (0-basiert) der Verlaufsliste ab dem Einträge anfordern.
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Geben Sie die Anzahl von Verlaufseinträgen anfordern, in dem der Bereich [1.. 100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function getHistoryWithFilter(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#list
+  id: azure-scheduler.JobOperations~JobOperations#list
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: list(parameters, callback)
+  summary: Rufen Sie die Liste aller Aufträge in einer auftragssammlung ein.
+  fullName: azure-scheduler.JobOperations~JobOperations.list(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListParameters
+      description: Parameter für das Auflisten von Aufträgen zur Verfügung gestellt.
+    - id: parameters.skip
+      type:
+      - number
+      description: Geben Sie den Index (0-basiert), der der Auftragsliste, um zu beginnen, Einträge anfordern.
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Geben Sie die Anzahl der Aufträge, um anzufordern, in dem Bereich [1.. 100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function list(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: listWithFilter(parameters, callback)
+  summary: Die Liste der Aufträge einer auftragsauflistung, die übereinstimmenden Filter für den Status des Auftrags zu erhalten.
+  fullName: azure-scheduler.JobOperations~JobOperations.listWithFilter(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListWithFilterParameters
+      description: Für das Auflisten von Aufträgen mit Filtervorgang bereitgestellten Parameter.
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: Filtern Sie den Auftragsverlauf, damit diese nur return Auftrag Ausführungsversuche durchgeführt, die mit einem bestimmten Zustand aktiviert, deaktiviert, fehlerhaft oder abgeschlossen.
+    - id: parameters.skip
+      type:
+      - number
+      description: Geben Sie den Index (0-basiert), der der Auftragsliste, um zu beginnen, Einträge anfordern.
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Geben Sie die Anzahl der Aufträge, um anzufordern, in dem Bereich [1.. 100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function listWithFilter(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  id: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateJobCollectionState(parameters, callback)
+  summary: Aktualisieren Sie den Status aller Aufträge in einem auftragssammlungen.
+  fullName: azure-scheduler.JobOperations~JobOperations.updateJobCollectionState(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCollectionJobsUpdateStateParameters
+      description: Parameter für die Updates-Auftragsstatus zur Verfügung gestellt.
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: 'Neuer Status zu aktualisieren: "enabled" oder "disabled".'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function updateJobCollectionState(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateState
+  id: azure-scheduler.JobOperations~JobOperations#updateState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateState(jobId, parameters, callback)
+  summary: Aktualisieren Sie den Status eines Auftrags.
+  fullName: azure-scheduler.JobOperations~JobOperations.updateState(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Die ID des Auftrags, zu aktualisieren.
+    - id: parameters
+      type:
+      - azure-scheduler.JobUpdateStateParameters
+      description: Parameter für die Updates-Auftragsstatus zur Verfügung gestellt.
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: 'Neuer Status zu aktualisieren: "enabled" oder "disabled".'
+    - id: parameters.updateStateReason
+      type:
+      - string
+      description: Eine Beschreibung der Umstände, die dieses Update der Auftrags-Status zugeordnet werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Der Antwortstream.
+    content: function updateState(jobId, parameters, callback)
+  langs:
+  - js
