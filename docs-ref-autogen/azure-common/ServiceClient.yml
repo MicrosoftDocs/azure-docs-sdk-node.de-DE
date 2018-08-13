@@ -1,0 +1,271 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e06222d0ec191b66b287ffe6fe9148fbe92ec6f7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056269"
+items:
+- uid: azure-common.ServiceClient
+  id: azure-common.ServiceClient
+  name: ServiceClient
+  summary: Erstellt ein neues ServiceClient-Objekt.
+  fullName: azure-common.ServiceClient
+  type: Class
+  children:
+  - azure-common.ServiceClient.#ctor
+  - azure-common.ServiceClient#setHost
+  - azure-common.ServiceClient#performChunkedRequest
+  - azure-common.ServiceClient#performRequest
+  - azure-common.ServiceClient#performRequestOutputStream
+  - azure-common.ServiceClient#performRequestInputStream
+  - azure-common.ServiceClient#withFilter
+  - azure-common.ServiceClient#parseMetadataHeaders
+  - azure-common.ServiceClient.isEmulated
+  langs:
+  - js
+- id: azure-common.ServiceClient.#ctor
+  uid: azure-common.ServiceClient.#ctor
+  parent: azure-common.ServiceClient
+  name: ServiceClient(host, authenticationProvider)
+  fullName: azure-common.ServiceClient.ServiceClient(host, authenticationProvider)
+  summary: Erstellt ein neues ServiceClient-Objekt.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Der Host für den Dienst.
+    - id: authenticationProvider
+      type:
+      - object
+      description: Das Authentifizierungsobjekt für die Anbieter (z. B. Sharedkey / Sharedkeytable / Sharedaccesssignature).
+    content: new ServiceClient(host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#setHost
+  id: azure-common.ServiceClient#setHost
+  parent: azure-common.ServiceClient
+  name: setHost(host)
+  summary: Legt einen Host für den Dienst fest.
+  fullName: azure-common.ServiceClient.setHost(host)
+  type: Function
+  syntax:
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Der Host für den Dienst.
+    content: function setHost(host)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performChunkedRequest
+  id: azure-common.ServiceClient#performChunkedRequest
+  parent: azure-common.ServiceClient
+  name: performChunkedRequest(webResource, outputData, options, callback)
+  summary: Führt eine REST-Dienst-Anforderung über HTTP ein Eingabedatenstroms erwartet.
+  fullName: azure-common.ServiceClient.performChunkedRequest(webResource, outputData, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: Der Webresource für den die Anforderung auszuführen.
+    - id: outputData
+      type:
+      - string
+      description: Die ausgehenden Daten als unformatierte Zeichenfolge.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: Das Timeoutintervall in Millisekunden, für die Anforderung verwendet werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Antwort der segmentierten Callback-Funktion.
+    content: function performChunkedRequest(webResource, outputData, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequest
+  id: azure-common.ServiceClient#performRequest
+  parent: azure-common.ServiceClient
+  name: performRequest(webResource, outputData, options, callback)
+  summary: Führt eine REST-Dienst-Anforderung über HTTP ein Eingabedatenstroms erwartet.
+  fullName: azure-common.ServiceClient.performRequest(webResource, outputData, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: Der Webresource für den die Anforderung auszuführen.
+    - id: outputData
+      type:
+      - string
+      description: Die ausgehenden Daten als unformatierte Zeichenfolge.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: Das Timeoutintervall in Millisekunden, für die Anforderung verwendet werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Antwort-Rückruffunktion.
+    content: function performRequest(webResource, outputData, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequestOutputStream
+  id: azure-common.ServiceClient#performRequestOutputStream
+  parent: azure-common.ServiceClient
+  name: performRequestOutputStream(webResource, outputStream, options, callback)
+  summary: Führt eine REST-Dienst-Anforderung über HTTP ein Eingabedatenstroms erwartet.
+  fullName: azure-common.ServiceClient.performRequestOutputStream(webResource, outputStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: Der Webresource für den die Anforderung auszuführen.
+    - id: outputStream
+      type:
+      - azure-common.Stream
+      description: Die ausgehenden Daten als Stream.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: Das Timeoutintervall in Millisekunden, für die Anforderung verwendet werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Antwort-Rückruffunktion.
+    content: function performRequestOutputStream(webResource, outputStream, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequestInputStream
+  id: azure-common.ServiceClient#performRequestInputStream
+  parent: azure-common.ServiceClient
+  name: performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  summary: Führt eine REST-Dienst-Anforderung über HTTP ein Eingabedatenstroms erwartet.
+  fullName: azure-common.ServiceClient.performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: Der Webresource für den die Anforderung auszuführen.
+    - id: outputData
+      type:
+      - string
+      description: Die ausgehenden Daten als unformatierte Zeichenfolge.
+    - id: inputStream
+      type:
+      - azure-common.Stream
+      description: Der eingehenden Antwortdaten als Stream.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: Das Timeoutintervall in Millisekunden, für die Anforderung verwendet werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Antwort-Rückruffunktion.
+    content: function performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#withFilter
+  id: azure-common.ServiceClient#withFilter
+  parent: azure-common.ServiceClient
+  name: withFilter(filter)
+  summary: >-
+    Ordnen Sie diesem ServiceClient mit einen Filtervorgang startet. Filtervorgänge können Protokollierung, automatische Wiederholung usw. umfassen. Filtervorgänge sind Objekte, die eine Methode mit der Signatur implementieren:
+
+        "function handle (requestOptions, next)".
+
+    Nachdem die vorverarbeitung der Anforderungsoptionen abgeschlossen, die Methode muss zum Aufrufen von "Weiter", hierbei eine Rückruffunktion mit der folgenden Signatur übergeben: Signatur:
+
+        "function (returnObject, finalCallback, next)"
+
+    Nachdem das returnObject-Objekt (die Antwort auf die an den Server gesendete Anforderung) verarbeitet wurde, muss in dieser Rückruffunktion entweder "next" aufgerufen werden, wenn die Tabelle vorhanden ist, um weitere Filter zu verarbeiten, oder andernfalls einfach "finallCallback" aufrufen, um den Dienstaufruf zu beenden.
+  fullName: azure-common.ServiceClient.withFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - Object
+      description: Das neue Filterobjekt.
+    return:
+      type:
+      - azure-common.ServiceClient
+      description: Ein neuer Dienstclient mit dem angewendeten Filter.
+    content: function withFilter(filter)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#parseMetadataHeaders
+  id: azure-common.ServiceClient#parseMetadataHeaders
+  parent: azure-common.ServiceClient
+  name: parseMetadataHeaders(headers)
+  summary: Ruft die Metadatenheader aus der Antwortheader ab.
+  fullName: azure-common.ServiceClient.parseMetadataHeaders(headers)
+  type: Function
+  syntax:
+    parameters:
+    - id: headers
+      type:
+      - object
+      description: Die Metadatenheader.
+    return:
+      type:
+      - object
+      description: Ein Objekt mit den metadatenheadern (ohne das Präfix "x - ms-").
+    content: function parseMetadataHeaders(headers)
+  langs:
+  - js
+- uid: azure-common.ServiceClient.isEmulated
+  id: azure-common.ServiceClient.isEmulated
+  parent: azure-common.ServiceClient
+  name: isEmulated()
+  summary: Ruft ab, die der Wert der Umgebungsvariablen für die emuliert wird.
+  fullName: azure-common.ServiceClient.isEmulated()
+  type: Function
+  syntax:
+    return:
+      type:
+      - azure-common.bool
+      description: True, wenn der Dienstclient auf eine emulierte Umgebung ausgeführt wird. "false" andernfalls.
+    content: function isEmulated()
+  langs:
+  - js
+references:
+- uid: azure-common.WebResource
+  name: WebResource
+  fullName: azure-common.WebResource
+  isExternal: false

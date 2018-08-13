@@ -1,0 +1,820 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 58107b458c3ade33556cab3851a672621000f8a8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056308"
+items:
+- uid: azure-sb.WnsService
+  id: azure-sb.WnsService
+  name: WnsService
+  summary: Erstellt ein neues WnsService-Objekt.
+  fullName: azure-sb.WnsService
+  type: Class
+  children:
+  - azure-sb.WnsService.#ctor
+  - azure-sb.WnsService#sendBadge
+  - azure-sb.WnsService#sendTile*
+  - azure-sb.WnsService#sendToast*
+  - azure-sb.WnsService#sendRaw
+  - azure-sb.WnsService#send
+  - azure-sb.WnsService#createNativeRegistration
+  - azure-sb.WnsService#createOrUpdateNativeRegistration
+  - azure-sb.WnsService#createTile*Registration
+  - azure-sb.WnsService#createToast*Registration
+  - azure-sb.WnsService#createRawTemplateRegistration
+  - azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.WnsService#updateTile*Registration
+  - azure-sb.WnsService#updateToast*Registration
+  - azure-sb.WnsService#updatesRawTemplateRegistration
+  - azure-sb.WnsService#listRegistrationsByChannel
+  langs:
+  - js
+- id: azure-sb.WnsService.#ctor
+  uid: azure-sb.WnsService.#ctor
+  parent: azure-sb.WnsService
+  name: WnsService(notificationHubService)
+  fullName: azure-sb.WnsService.WnsService(notificationHubService)
+  summary: Erstellt ein neues WnsService-Objekt.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: Der Notification Hub-Dienst.
+    content: new WnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendBadge
+  id: azure-sb.WnsService#sendBadge
+  parent: azure-sb.WnsService
+  name: sendBadge(tags, value, optionsOrCallback, callback)
+  summary: Sendet eine Wns/Badge-WNS-Benachrichtigung.
+  fullName: azure-sb.WnsService.sendBadge(tags, value, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: Durch Trennzeichen getrennte Liste oder Array von tagbezeichnern.
+    - id: value
+      type:
+      - object
+      - string
+      description: >-
+        Ein numerischer Wert oder ein String-Wert, der ein vordefiniertes Signalsymbol angibt. Dieser Wert kann in numerischer Form unterstützt eine beliebige gültige ganze Zahl annehmen. Der Wert 0 löscht das Badge, Werte von 1 bis 99 werden wie angegeben angezeigt und alle Werte größer als 99 zeigt als 99 + angezeigt.
+
+        Finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/br212849.aspx Weitere Details.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendBadge(tags, value, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendTile*
+  id: azure-sb.WnsService#sendTile*
+  parent: azure-sb.WnsService
+  name: sendTile*(tags, payload, options, callback)
+  summary: Sendet eine kachelbenachrichtigung an. Es gibt eine Methode für jede kachelvorlage im finden Sie unter http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (z. B. sendTileSquarePeekImageAndText01).
+  fullName: azure-sb.WnsService.sendTile*(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Ein einzelnes Tag oder tagausdruck.
+    - id: payload
+      type:
+      - object
+      description: Nutzlast der Nachricht. Es können mehrere nutzlastparameter übergeben werden.
+    - id: payload.text{1..n}
+      type:
+      - string
+      description: Der Wert des Textelements mit der angegebenen Id (z. B. "text1"). Die Anzahl der Eigenschaften, die Text * hängt vom kacheltyp ab.
+    - id: payload.image{1..n}src
+      type:
+      - string
+      description: Der Wert des Src-Attributs des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: payload.image{1..n}alt
+      type:
+      - string
+      description: Der Wert der Alt-Attribut des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: payload.lang
+      type:
+      - string
+      description: Der Wert der Sprache des Bindungselements.
+    - id: payload.type
+      type:
+      - string
+      description: In der allgemeinen sich-Methode verwendet.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile*(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendToast*
+  id: azure-sb.WnsService#sendToast*
+  parent: azure-sb.WnsService
+  name: sendToast*(tags, payload, options, callback)
+  summary: Sendet eine Popupbenachrichtigung an. Es gibt eine Methode für jede kachelvorlage im finden Sie unter http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (z. B. sendToastText01).
+  fullName: azure-sb.WnsService.sendToast*(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Ein einzelnes Tag oder tagausdruck.
+    - id: payload
+      type:
+      - object
+      description: Nutzlast der Nachricht.
+    - id: payload.text{1..n}
+      type:
+      - string
+      description: Der Wert des Textelements mit der angegebenen Id (z. B. "text1"). Die Anzahl der Eigenschaften, die Text * hängt vom kacheltyp ab.
+    - id: payload.image{1..n}src
+      type:
+      - string
+      description: Der Wert des Src-Attributs des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: payload.image{1..n}alt
+      type:
+      - string
+      description: Der Wert der Alt-Attribut des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: payload.lang
+      type:
+      - string
+      description: Der Wert der Sprache des Bindungselements.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast*(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendRaw
+  id: azure-sb.WnsService#sendRaw
+  parent: azure-sb.WnsService
+  name: sendRaw(tags, payload, optionsOrCallback, callback)
+  summary: Sendet eine Wns/raw-Benachrichtigung an.
+  fullName: azure-sb.WnsService.sendRaw(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: Durch Trennzeichen getrennte Liste oder Array von tagbezeichnern.
+    - id: payload
+      type:
+      - object
+      - string
+      description: Die raw-Nutzlast.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendRaw(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#send
+  id: azure-sb.WnsService#send
+  parent: azure-sb.WnsService
+  name: send(tags, payload, type, optionsOrCallback, callback)
+  summary: Sendet eine benutzerdefinierte WNS-Benachrichtigung an. Verwenden Sie diese Methode, wenn Sie vollständige Kontrolle über die Nutzlast haben möchten.
+  fullName: azure-sb.WnsService.send(tags, payload, type, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: Durch Trennzeichen getrennte Liste oder Array von tagbezeichnern.
+    - id: payload
+      type:
+      - string
+      description: XML-Nutzlast der Nachricht.
+    - id: type
+      type:
+      - string
+      description: 'Der Nachrichtentyp. X-WNS-Type-Header entspricht (Optionen sind: Wns/raw, Wns/Kachel und Wns/Toast).'
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, type, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createNativeRegistration
+  id: azure-sb.WnsService#createNativeRegistration
+  parent: azure-sb.WnsService
+  name: createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  summary: Erstellt eine systemeigene WNS-Registrierung.
+  fullName: azure-sb.WnsService.createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createOrUpdateNativeRegistration
+  id: azure-sb.WnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.WnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  summary: Erstellt oder aktualisiert eine systemeigene WNS-Registrierung.
+  fullName: azure-sb.WnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createTile*Registration
+  id: azure-sb.WnsService#createTile*Registration
+  parent: azure-sb.WnsService
+  name: createTile*Registration(channel, tags, template, options, callback)
+  summary: Erstellt eine neue Registrierung mit einer kachelvorlage. Es gibt eine Methode für jede kachelvorlage im finden Sie unter http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (z. B. createTileSquarePeekImageAndText01Registration).
+  fullName: azure-sb.WnsService.createTile*Registration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - object
+      description: Die Textvorlage der Registrierung.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Der Wert des Textelements mit der angegebenen Id (z. B. "text1"). Die Anzahl der Eigenschaften, die Text * hängt vom kacheltyp ab.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Der Wert des Src-Attributs des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Der Wert der Alt-Attribut des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.lang
+      type:
+      - string
+      description: Der Wert der Sprache des Bindungselements.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTile*Registration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createToast*Registration
+  id: azure-sb.WnsService#createToast*Registration
+  parent: azure-sb.WnsService
+  name: createToast*Registration(channel, tags, template, options, callback)
+  summary: Erstellt eine neue Registrierung mit einer popupvorlage. Es gibt eine Methode für jede kachelvorlage im finden Sie unter http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (z. B. createToastText01Registration).
+  fullName: azure-sb.WnsService.createToast*Registration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - object
+      description: Die Textvorlage der Registrierung.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Der Wert des Textelements mit der angegebenen Id (z. B. "text1"). Die Anzahl der Eigenschaften, die Text * hängt vom kacheltyp ab.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Der Wert des Src-Attributs des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Der Wert der Alt-Attribut des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.lang
+      type:
+      - string
+      description: Der Wert der Sprache des Bindungselements.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToast*Registration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createRawTemplateRegistration
+  id: azure-sb.WnsService#createRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  summary: 'Erstellt eine benutzerdefinierte vorlagenregistrierung. Verwenden Sie diese Methode, die volle Kontrolle über das Vorlagenformat. Denken Sie daran, dass Sie die X-WNS-Type-Header angegeben werden müssen (mögliche Werte: Wns/Toast, Wns/Kachel, Wns/Badge, Wns/raw).'
+  fullName: azure-sb.WnsService.createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - string
+      description: Die Vorlage für die Registrierung.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: Die zu verwendenden Pns-Anmeldeinformationen.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Die einzuschließenden Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  summary: 'Erstellt eine benutzerdefinierte vorlagenregistrierung. Verwenden Sie diese Methode, die volle Kontrolle über das Vorlagenformat. Denken Sie daran, dass Sie die X-WNS-Type-Header angegeben werden müssen (mögliche Werte: Wns/Toast, Wns/Kachel, Wns/Badge, Wns/raw).'
+  fullName: azure-sb.WnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - string
+      description: Die Vorlage für die Registrierung.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: Die zu verwendenden Pns-Anmeldeinformationen.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Die einzuschließenden Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updateTile*Registration
+  id: azure-sb.WnsService#updateTile*Registration
+  parent: azure-sb.WnsService
+  name: updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  summary: Aktualisiert eine neue Registrierung mit einer kachelvorlage. Es gibt eine Methode für jede kachelvorlage im finden Sie unter http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (z. B. createTileSquarePeekImageAndText01Registration).
+  fullName: azure-sb.WnsService.updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - object
+      description: Die Textvorlage der Registrierung.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Der Wert des Textelements mit der angegebenen Id (z. B. "text1"). Die Anzahl der Eigenschaften, die Text * hängt vom kacheltyp ab.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Der Wert des Src-Attributs des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Der Wert der Alt-Attribut des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.lang
+      type:
+      - string
+      description: Der Wert der Sprache des Bindungselements.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updateToast*Registration
+  id: azure-sb.WnsService#updateToast*Registration
+  parent: azure-sb.WnsService
+  name: updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  summary: Aktualisiert eine neue Registrierung mit einer popupvorlage. Es gibt eine Methode für jede kachelvorlage im finden Sie unter http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (z. B. updateToastText01Registration).
+  fullName: azure-sb.WnsService.updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - object
+      description: Die Textvorlage der Registrierung.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Der Wert des Textelements mit der angegebenen Id (z. B. "text1"). Die Anzahl der Eigenschaften, die Text * hängt vom kacheltyp ab.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Der Wert des Src-Attributs des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Der Wert der Alt-Attribut des Bildelements mit der angegebenen Id (z. B. image1). Die Anzahl der Eigenschaften Image * hängt vom kacheltyp ab.
+    - id: template.lang
+      type:
+      - string
+      description: Der Wert der Sprache des Bindungselements.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Wns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updatesRawTemplateRegistration
+  id: azure-sb.WnsService#updatesRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  summary: Aktualisiert eine rohvorlagenregistrierung.
+  fullName: azure-sb.WnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags.
+    - id: template
+      type:
+      - string
+      description: Die Vorlage für die Registrierung.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion.
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: Die zu verwendenden Pns-Anmeldeinformationen.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Die einzuschließenden Wns-Header.
+      optional: true
+    - id: optionsOrCallback.etag
+      type:
+      - object
+      - function
+      description: Das Etag eingeschlossen werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#listRegistrationsByChannel
+  id: azure-sb.WnsService#listRegistrationsByChannel
+  parent: azure-sb.WnsService
+  name: listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  summary: Ruft eine Registrierung durch den Kanal ab.
+  fullName: azure-sb.WnsService.listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: Die Anforderung Anforderungsoptionen oder Rückruffunktion die Funktion. Weitere Eigenschaften werden als Header übergeben werden.
+      optional: true
+    - id: optionsOrCallback.top
+      type:
+      - object
+      - function
+      description: Gibt die maximale Anzahl von Registrierungen fest, der im Rückruf abgerufen.
+      optional: true
+    - id: optionsOrCallback.skip
+      type:
+      - object
+      - function
+      description: Gibt die Anzahl von Registrierungen, die im Aufruf übersprungen.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  langs:
+  - js

@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e2c2a2dff10d9f4982076baa53a89601bba97741
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056053"
+items:
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations
+  id: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations
+  summary: >-
+    Die Azure SQL-Datenbankverwaltungs-API umfasst Vorgänge zum Abrufen von Kontingenten für Azure SQL-Datenbankserver. Insbesondere erhalten unter Verwendung der APIs ein bestimmtes Kontingent oder die Liste alle Kontingente für den Azure SQL-Datenbank-Server Sie.
+
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Finden Sie unter [Kontingente] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23quotas>.
+
+    Initialisiert eine neue Instanz der Klasse QuotaOperations an.
+  fullName: azure-asm-sql.QuotaOperations
+  type: Class
+  children:
+  - azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  - azure-asm-sql.QuotaOperations~QuotaOperations#get
+  - azure-asm-sql.QuotaOperations~QuotaOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  uid: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations(client)
+  fullName: azure-asm-sql.QuotaOperations.QuotaOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Verweis auf den Dienstclient.
+    content: new QuotaOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: get(serverName, quotaName, callback)
+  summary: Ruft das angegebene Kontingent vom Server ab.
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.get(serverName, quotaName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankserver von dem das Kontingent abgerufen.
+    - id: quotaName
+      type:
+      - string
+      description: Der Name des abzurufenden Kontingents.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function get(serverName, quotaName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: list(serverName, callback)
+  summary: Gibt eine Liste der Kontingente auf dem Server zurück.
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankserver von dem die Kontingente abgerufen.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function list(serverName, callback)
+  langs:
+  - js

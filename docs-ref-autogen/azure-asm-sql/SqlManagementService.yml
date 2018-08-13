@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 77aef5d0743a622fd3d80f0c573f3b211f9e89f8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056107"
+items:
+- uid: azure-asm-sql.SqlManagementService
+  id: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+  summary: Das Objekt SqlManagementService können Sie Verwaltungsvorgänge für Microsoft Azure SQL-Datenbankservern durchführen.
+  fullName: azure-asm-sql.SqlManagementService
+  type: Class
+  children:
+  - azure-asm-sql.SqlManagementService.#ctor
+  - azure-asm-sql.SqlManagementService#listServers
+  - azure-asm-sql.SqlManagementService#deleteServer
+  - azure-asm-sql.SqlManagementService#createServer
+  - azure-asm-sql.SqlManagementService#listServerFirewallRules
+  - azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createServerFirewallRule
+  - azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createDatabase
+  langs:
+  - js
+- id: azure-asm-sql.SqlManagementService.#ctor
+  uid: azure-asm-sql.SqlManagementService.#ctor
+  parent: azure-asm-sql.SqlManagementService
+  name: SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-sql.SqlManagementService.SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: Erstellt ein neues SqlManagementService-Objekt
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: Abonnement-ID für das Konto oder die Verbindungszeichenfolge-Konfiguration
+    - id: authentication
+      type:
+      - object
+      description: >-
+        Das Authentifizierungsobjekt für den Client.
+
+        Sie müssen entweder Keyfile/Certfile oder Keyvalue/Certvalue verwenden, um ein Verwaltungszertifikat zur Authentifizierung von dienstanforderungen bereitzustellen.
+    - id: authentication.keyfile
+      type:
+      - string
+      description: Der Pfad zu einer Datei, die die PEM-Datei enthält codierte Schlüssel
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: Der Pfad zu einer Datei, die die PEM-Datei enthält codierte Zertifikat
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: Eine Zeichenfolge, die enthält den PEM-codierten Schlüssel
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: Eine Zeichenfolge, die enthält den PEM-codierte Zertifikat
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: Die Hostoptionen, um Standardwerte zu überschreiben.
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: Der Management-Endpunkt.
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: Die API-Version verwendet werden.
+      optional: true
+    content: new SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServers
+  id: azure-asm-sql.SqlManagementService#listServers
+  parent: azure-asm-sql.SqlManagementService
+  name: listServers(callback)
+  summary: Listet die verfügbaren SQL-Datenbank-Server an.
+  fullName: azure-asm-sql.SqlManagementService.listServers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `results` enthält die Liste der verfügbaren SQL-Datenbank-Server-Informationen.
+                                                               `response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.
+    content: function listServers(callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServer
+  id: azure-asm-sql.SqlManagementService#deleteServer
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServer(name, callback)
+  summary: Löscht einen SQL-Datenbank-Server.
+  fullName: azure-asm-sql.SqlManagementService.deleteServer(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Der SQL Server-Name.
+    - id: callback
+      type:
+      - function
+      description: '`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.'
+    content: function deleteServer(name, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServer
+  id: azure-asm-sql.SqlManagementService#createServer
+  parent: azure-asm-sql.SqlManagementService
+  name: createServer(administratorLogin, administratorLoginPassword, location, callback)
+  summary: Erstellt einen SQL-Datenbankserver.
+  fullName: azure-asm-sql.SqlManagementService.createServer(administratorLogin, administratorLoginPassword, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: administratorLogin
+      type:
+      - string
+      description: Die administratoranmeldung.
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: Das Kennwort des Administrators.
+    - id: location
+      type:
+      - string
+      description: Der Speicherort des Servers.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `server` enthält den neuen Serverinformationen.
+                                                                   `response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.
+    content: function createServer(administratorLogin, administratorLoginPassword, location, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  id: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  parent: azure-asm-sql.SqlManagementService
+  name: listServerFirewallRules(serverName, callback)
+  summary: Listet die Firewallregeln für SQL-Datenbank-Server.
+  fullName: azure-asm-sql.SqlManagementService.listServerFirewallRules(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Name des Servers.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `results` wird die Firewall-Regeln enthalten.
+                                                                  `response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.
+    content: function listServerFirewallRules(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServerFirewallRule(serverName, ruleName, callback)
+  summary: Löscht eine Firewallregel für SQL-Datenbank-Server an.
+  fullName: azure-asm-sql.SqlManagementService.deleteServerFirewallRule(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Name des Servers.
+    - id: ruleName
+      type:
+      - string
+      description: Der Regelname.
+    - id: callback
+      type:
+      - function
+      description: '`error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `response` Informationen im Zusammenhang mit diesem Vorgang enthält.'
+    content: function deleteServerFirewallRule(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: Erstellt eine Firewallregel für SQL-Datenbank-Server an.
+  fullName: azure-asm-sql.SqlManagementService.createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Name des Servers.
+    - id: ruleName
+      type:
+      - string
+      description: Der Regelname.
+    - id: startIPAddress
+      type:
+      - string
+      description: Die IP-Startadresse für die Regel.
+    - id: endIPAddress
+      type:
+      - string
+      description: Die IP-Endadresse für die Regel.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `rule` enthält die neue Regelinformationen.
+                                                               `response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.
+    content: function createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: Aktualisiert eine Firewallregel für SQL-Datenbank-Server an.
+  fullName: azure-asm-sql.SqlManagementService.updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Name des Servers.
+    - id: ruleName
+      type:
+      - string
+      description: Der Regelname.
+    - id: startIPAddress
+      type:
+      - string
+      description: Die IP-Startadresse für die Regel.
+    - id: endIPAddress
+      type:
+      - string
+      description: Die IP-Endadresse für die Regel.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `rule` enthält die aktualisierte Regelinformationen.
+                                                               `response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.
+    content: function updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createDatabase
+  id: azure-asm-sql.SqlManagementService#createDatabase
+  parent: azure-asm-sql.SqlManagementService
+  name: createDatabase(serverName, databaseName, options, callback)
+  summary: Erstellen einer neuen Datenbank an.
+  fullName: azure-asm-sql.SqlManagementService.createDatabase(serverName, databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Den Namen des Servers
+    - id: databaseName
+      type:
+      - string
+      description: Name der zu erstellenden Datenbank
+    - id: options
+      type:
+      - object
+      description: Optionen für die Erstellung.
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: "'Web' oder 'Business'."
+      optional: true
+    - id: options.maxsize
+      type:
+      - number
+      description: Maximale Datenbankgröße in GB, Standardwert ist 1 für das Web, 10 für Unternehmen, nur bestimmte Werte gültig sind.
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: SQL-Sortierungsname
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` enthält Informationen, wenn ein Fehler auftritt; andernfalls `createResult` enthält die neue Datenbankinformationen.
+                                                                                       `response` enthält Informationen, die im Zusammenhang mit diesem Vorgang.
+    content: function createDatabase(serverName, databaseName, options, callback)
+  langs:
+  - js

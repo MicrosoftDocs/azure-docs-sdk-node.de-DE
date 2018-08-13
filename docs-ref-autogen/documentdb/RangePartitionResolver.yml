@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 82ac43fa4a47c8e1ec095e02ad0b2e021d2f53e4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056611"
+items:
+- uid: documentdb.RangePartitionResolver
+  id: documentdb.RangePartitionResolver
+  name: RangePartitionResolver
+  summary: RangePartitionResolver wird die Partitionierung mit einer partitionszuordnung von Wertebereichen auf einen Link für die Sammlung im Azure Cosmos DB-Datenbankdienst implementiert.
+  fullName: documentdb.RangePartitionResolver
+  type: Class
+  children:
+  - documentdb.RangePartitionResolver.#ctor
+  - documentdb.RangePartitionResolver#getPartitionKey
+  - documentdb.RangePartitionResolver#resolveForCreate
+  - documentdb.RangePartitionResolver#resolveForRead
+  langs:
+  - js
+- id: documentdb.RangePartitionResolver.#ctor
+  uid: documentdb.RangePartitionResolver.#ctor
+  parent: documentdb.RangePartitionResolver
+  name: RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  fullName: documentdb.RangePartitionResolver.RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  summary: RangePartitionResolver wird die Partitionierung mit einer partitionszuordnung von Wertebereichen auf einen Link für die Sammlung im Azure Cosmos DB-Datenbankdienst implementiert.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: partitionKeyExtractor
+      type:
+      - string
+      - function
+      description: >-
+        Wenn PartitionKeyExtractor eine Zeichenfolge ist, sollten sie den Namen der Eigenschaft in das Dokument zum Ausführen der Hashvorgang für sein.
+
+        Wenn PartitionKeyExtractor eine Funktion ist, sollte es eine Funktion zum Extrahieren des partitionsschlüssels von einem Objekt sein.
+    - id: partitionKeyMap
+      type:
+      - Array
+      description: Die Zuordnung aus Bereich Auflistung-Link, der für die Partitionierung von Anforderungen verwendet wird.
+    - id: compareFunction
+      type:
+      - function
+      description: Optionale Funktion, die zwei Argumente akzeptiert x- und y und gibt einen negativen Wert, wenn x < y, NULL, wenn X = y oder ein positiver Wert, wenn x > y.
+    content: new RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#getPartitionKey
+  id: documentdb.RangePartitionResolver#getPartitionKey
+  parent: documentdb.RangePartitionResolver
+  name: getPartitionKey(document)
+  summary: Extrahiert den Partitionsschlüssel aus dem angegebenen Dokument mithilfe der partitionKeyExtractor
+  fullName: documentdb.RangePartitionResolver.getPartitionKey(document)
+  type: Function
+  syntax:
+    parameters:
+    - id: document
+      type:
+      - object
+      description: Das Dokument, aus dem den Partitionsschlüssel extrahiert werden soll.
+    return:
+      description: ''
+    content: function getPartitionKey(document)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#resolveForCreate
+  id: documentdb.RangePartitionResolver#resolveForCreate
+  parent: documentdb.RangePartitionResolver
+  name: resolveForCreate(partitionKey)
+  summary: Erhalten eine Partition Key, gibt den korrekten Link für das Erstellen eines Dokuments mithilfe der partitionszuordnung Bereich.
+  fullName: documentdb.RangePartitionResolver.resolveForCreate(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: Der Partitionsschlüssel verwendet werden, um zu bestimmen, die Zielsammlung für erstellen
+    return:
+      type:
+      - string
+      description: '- Der Link der Ziel-Auflistung, der zum Erstellen von Dokumenten verwendet werden.'
+    content: function resolveForCreate(partitionKey)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#resolveForRead
+  id: documentdb.RangePartitionResolver#resolveForRead
+  parent: documentdb.RangePartitionResolver
+  name: resolveForRead(partitionKey)
+  summary: Erhalten eine Partition Key, gibt eine Liste der Sammlung von Links zum Lesen aus der Verwendung der partitionszuordnung Bereich.
+  fullName: documentdb.RangePartitionResolver.resolveForRead(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: Der Partitionsschlüssel verwendet, um die Zielsammlung für die Abfrage zu ermitteln.
+    return:
+      type:
+      - documentdb.Array.<string>
+      description: '- Die Liste der zielverknüpfungen-Auflistung.'
+    content: function resolveForRead(partitionKey)
+  langs:
+  - js

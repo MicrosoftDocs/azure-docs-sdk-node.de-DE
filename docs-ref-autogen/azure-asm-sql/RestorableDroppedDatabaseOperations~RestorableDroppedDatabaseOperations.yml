@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f044a8fceb9eb0b4fe787a3ec2365a806d0d7e81
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056038"
+items:
+- uid: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  id: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  name: RestorableDroppedDatabaseOperations
+  summary: >-
+    Enthält Operationen für die erste gelöschte Azure SQL-Datenbanken, die wiederhergestellt werden können.
+
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Finden Sie unter [RestorableDroppedDatabases] {@link SqlManagementClient ~ SqlManagementClient #restorableDroppedDatabases}.
+
+    Initialisiert eine neue Instanz der Klasse RestorableDroppedDatabaseOperations an.
+  fullName: azure-asm-sql.RestorableDroppedDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations.#ctor
+  - azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations#get
+  - azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations.#ctor
+  uid: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations.#ctor
+  parent: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  name: RestorableDroppedDatabaseOperations(client)
+  fullName: azure-asm-sql.RestorableDroppedDatabaseOperations.RestorableDroppedDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Verweis auf den Dienstclient.
+    content: new RestorableDroppedDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations#get
+  id: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations#get
+  parent: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  name: get(serverName, entityId, callback)
+  summary: Gibt Informationen zu einer gelöschten Azure SQL-Datenbank, die wiederhergestellt werden können.
+  fullName: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations.get(serverName, entityId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankserver auf dem die Datenbank gehostet wurde.
+    - id: entityId
+      type:
+      - string
+      description: Die Entitäts-ID, der die wiederherstellbaren gelöscht, Azure SQL-Datenbank abgerufen werden sollen.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function get(serverName, entityId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations#list
+  id: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations#list
+  parent: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  name: list(serverName, callback)
+  summary: Gibt eine Auflistung von Datenbanken, die wurde gelöscht, aber immer noch von einem bestimmten Server wiederhergestellt werden kann.
+  fullName: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankservers Abfragen gelöscht, Datenbanken, die immer noch wiederhergestellt werden können.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function list(serverName, callback)
+  langs:
+  - js

@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22970fa66e05e7a1cf9212b905a6b01f85e9f393
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056044"
+items:
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations
+  summary: >-
+    Enthält den Vorgang zum Erstellen von wiederherstellungsanforderungen für Azure SQL-Datenbanken.
+
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Finden Sie unter [RecoverDatabaseOperations] {@link SqlManagementClient ~ SqlManagementClient #recoverDatabaseOperations}.
+
+    Initialisiert eine neue Instanz der Klasse RecoverDatabaseOperations an.
+  fullName: azure-asm-sql.RecoverDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverDatabaseOperations.RecoverDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Verweis auf den Dienstclient.
+    content: new RecoverDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: Hiermit wird eine Anfrage für die Wiederherstellung für eine Azure SQL-Datenbank.
+  fullName: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankserver auf dem die Datenbank gehostet wurde.
+    - id: parameters
+      type:
+      - azure-asm-sql.RecoverDatabaseOperationCreateParameters
+      description: Zusätzliche Parameter für die Anforderung wiederherstellen Datenbankvorgang zu erstellen.
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Namen der Quelle der Azure SQL-Datenbank.
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Namen des Ziels Azure SQL-Datenbankserver.
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Namen des Ziels Azure SQL-Datenbank.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf1c325c64e97b2d6f8ada4ccdc0c04854f9504a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056074"
+items:
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations
+  summary: >-
+    Stellt REST-Vorgänge zum Arbeiten mit Cloud-Dienste aus dem Windows Azure-Store-Dienst bereit.
+
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [StoreManagementClient] {@link StoreManagementClient ~ StoreManagementClient}.
+
+    Finden Sie unter [CloudServices] {@link StoreManagementClient ~ StoreManagementClient #cloudServices}.
+
+    Initialisiert eine neue Instanz der Klasse CloudServiceOperations an.
+  fullName: azure-asm-store.CloudServiceOperations
+  type: Class
+  children:
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations.#ctor
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations#beginCreating
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations#create
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations#list
+  langs:
+  - js
+- id: azure-asm-store.CloudServiceOperations~CloudServiceOperations.#ctor
+  uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations.#ctor
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations(client)
+  fullName: azure-asm-store.CloudServiceOperations.CloudServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStoreManagementClient
+      description: Verweis auf den Dienstclient.
+    content: new CloudServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations#beginCreating
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations#beginCreating
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: beginCreating(parameters, callback)
+  summary: Die Cloud-Dienst erstellen-Vorgang erstellt einen Windows Azure-Cloud-Dienst in Windows Azure-Abonnement.
+  fullName: azure-asm-store.CloudServiceOperations~CloudServiceOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-store.CloudServiceCreateParameters
+      description: Der Parameter verwendet, um anzugeben, wie funktioniert die Prozedur erstellen.
+    - id: parameters.name
+      type:
+      - string
+      description: Der Name des Cloud-Diensts erstellt werden.
+    - id: parameters.label
+      type:
+      - string
+      description: Die Bezeichnung des Cloud-Diensts erstellt werden.
+    - id: parameters.description
+      type:
+      - string
+      description: Die Beschreibung für den Cloud-Dienst erstellt werden.
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: Die geografische Region, in den Cloud-Dienst zu erstellen.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations#create
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations#create
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: create(parameters, callback)
+  summary: Die Cloud-Dienst erstellen-Vorgang erstellt einen Windows Azure-Cloud-Dienst in Windows Azure-Abonnement.
+  fullName: azure-asm-store.CloudServiceOperations~CloudServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-store.CloudServiceCreateParameters
+      description: Der Parameter verwendet, um anzugeben, wie funktioniert die Prozedur erstellen.
+    - id: parameters.name
+      type:
+      - string
+      description: Der Name des Cloud-Diensts erstellt werden.
+    - id: parameters.label
+      type:
+      - string
+      description: Die Bezeichnung des Cloud-Diensts erstellt werden.
+    - id: parameters.description
+      type:
+      - string
+      description: Die Beschreibung für den Cloud-Dienst erstellt werden.
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: Die geografische Region, in den Cloud-Dienst zu erstellen.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations#list
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations#list
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: list(callback)
+  summary: Der Cloud-Dienste auflisten Vorgang listet Windows Azure-Store-Einträge, die für ein Abonnement bereitgestellt werden.
+  fullName: azure-asm-store.CloudServiceOperations~CloudServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function list(callback)
+  langs:
+  - js

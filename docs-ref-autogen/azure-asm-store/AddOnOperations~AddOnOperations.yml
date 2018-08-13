@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4aa36e85e5813f72e46523bfff4befffc8ec2bc6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056098"
+items:
+- uid: azure-asm-store.AddOnOperations~AddOnOperations
+  id: azure-asm-store.AddOnOperations~AddOnOperations
+  name: AddOnOperations
+  summary: >-
+    Stellt REST-Vorgänge für die Verwendung von Store-add-ins aus dem Windows Azure-Store-Dienst bereit.
+
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [StoreManagementClient] {@link StoreManagementClient ~ StoreManagementClient}.
+
+    Finden Sie unter [Add-Ons] <xref:azure-asm-store.StoreManagementClient~StoreManagementClient%23addOns>.
+
+    Initialisiert eine neue Instanz der Klasse AddOnOperations an.
+  fullName: azure-asm-store.AddOnOperations
+  type: Class
+  children:
+  - azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  - azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  - azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  - azure-asm-store.AddOnOperations~AddOnOperations#create
+  - azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  - azure-asm-store.AddOnOperations~AddOnOperations#update
+  langs:
+  - js
+- id: azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  uid: azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: AddOnOperations(client)
+  fullName: azure-asm-store.AddOnOperations.AddOnOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStoreManagementClient
+      description: Verweis auf den Dienstclient.
+    content: new AddOnOperations(client)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  id: azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: Der Store-Element erstellen-Vorgang erstellt die Windows Azure-Store-Einträge in einem Windows Azure-Abonnement.
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Der Name des Cloud-Diensts, der dieses Speicherelement zugewiesen wird.
+    - id: resourceName
+      type:
+      - string
+      description: Der Name dieser Ressource.
+    - id: addOnName
+      type:
+      - string
+      description: Das Add-on Name.
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnCreateParameters
+      description: Der Parameter verwendet, um anzugeben, wie funktioniert die Prozedur erstellen.
+    - id: parameters.type
+      type:
+      - string
+      description: Der Typ des Speicherelement erstellt werden.
+    - id: parameters.plan
+      type:
+      - string
+      description: Den ausgewählten Plan für diesen Speicher-Add-On.
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: Der promotionscode für diesen Speicher-Add-On.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  id: azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  summary: Der Store-Eintrag löschen Vorgang löscht Windows Azure-Store-Einträge, die für ein Abonnement erneut bereitgestellt.
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Der Name des Cloud-Diensts, der dieses Speicherelement zugewiesen wird.
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: Der Namespace, in dem dieses Speicherelement befindet.
+    - id: resourceProviderType
+      type:
+      - string
+      description: Der Typ des zu löschenden Speicher-Elements.
+    - id: resourceProviderName
+      type:
+      - string
+      description: Der Name der dieser Ressourcenanbieter.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#create
+  id: azure-asm-store.AddOnOperations~AddOnOperations#create
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: Der Store-Element erstellen-Vorgang erstellt die Windows Azure-Store-Einträge in einem Windows Azure-Abonnement.
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Der Name des Cloud-Diensts, der dieses Speicherelement zugewiesen wird.
+    - id: resourceName
+      type:
+      - string
+      description: Der Name dieser Ressource.
+    - id: addOnName
+      type:
+      - string
+      description: Das Add-on Name.
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnCreateParameters
+      description: Der Parameter verwendet, um anzugeben, wie funktioniert die Prozedur erstellen.
+    - id: parameters.type
+      type:
+      - string
+      description: Der Typ des Speicherelement erstellt werden.
+    - id: parameters.plan
+      type:
+      - string
+      description: Den ausgewählten Plan für diesen Speicher-Add-On.
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: Der promotionscode für diesen Speicher-Add-On.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  id: azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  summary: Der Vorgang zum Store-Eintrag löschen löscht Windows Azure-Storeentries, die für ein Abonnement bereitgestellt werden.
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Der Name des Cloud-Diensts, der dieses Speicherelement zugewiesen wird.
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: Der Namespace, in dem dieses Speicherelement befindet.
+    - id: resourceProviderType
+      type:
+      - string
+      description: Der Typ des zu löschenden Speicher-Elements.
+    - id: resourceProviderName
+      type:
+      - string
+      description: Der Name der dieser Ressourcenanbieter.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#update
+  id: azure-asm-store.AddOnOperations~AddOnOperations#update
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: Der Store-Elementupdate Vorgang erstellt Windows Azure-Store-Einträge in einem Windows Azure-Abonnement.
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Der Name des Cloud-Diensts, der dieses Speicherelement zugewiesen wird.
+    - id: resourceName
+      type:
+      - string
+      description: Der Name dieser Ressource.
+    - id: addOnName
+      type:
+      - string
+      description: Der Add-On-Name.
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnUpdateParameters
+      description: Der Parameter verwendet, um anzugeben, wie funktioniert die Prozedur erstellen.
+    - id: parameters.type
+      type:
+      - string
+      description: Der Typ des Speicherelement erstellt werden.
+    - id: parameters.plan
+      type:
+      - string
+      description: Den ausgewählten Plan für diesen Speicher-Add-On.
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: Der promotionscode für diesen Speicher-Add-On.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: Der Antwortstream.
+    content: function update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js

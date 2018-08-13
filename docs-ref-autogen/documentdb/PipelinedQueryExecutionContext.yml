@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8caf02800c3a451e62ccd5bda0087a4579f9d078
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056509"
+items:
+- uid: documentdb.PipelinedQueryExecutionContext
+  id: documentdb.PipelinedQueryExecutionContext
+  name: PipelinedQueryExecutionContext
+  summary: Stellt die PipelinedQueryExecutionContext bereit. Es Piplelines oben "und" Orderby Ausführungskontext bei Bedarf
+  fullName: documentdb.PipelinedQueryExecutionContext
+  type: Class
+  children:
+  - documentdb.PipelinedQueryExecutionContext.#ctor
+  langs:
+  - js
+- id: documentdb.PipelinedQueryExecutionContext.#ctor
+  uid: documentdb.PipelinedQueryExecutionContext.#ctor
+  parent: documentdb.PipelinedQueryExecutionContext
+  name: PipelinedQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  fullName: documentdb.PipelinedQueryExecutionContext.PipelinedQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  summary: Stellt die PipelinedQueryExecutionContext bereit. Es Piplelines oben "und" Orderby Ausführungskontext bei Bedarf
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - object
+      description: Das Documentclient-Objekt.
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: Eine SQL-Abfrage.
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: Stellt die feed-Optionen dar.
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: Eine Funktion, jede Seite der Daten abzurufen. Ein Array von Funktionen kann verwendet werden, um mehr als einer Partition abzufragen.
+    - id: resourceLink
+      type:
+      - string
+      description: CollectionLink für die parallele abfrageausführung.
+      optional: true
+    content: new PipelinedQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  langs:
+  - js

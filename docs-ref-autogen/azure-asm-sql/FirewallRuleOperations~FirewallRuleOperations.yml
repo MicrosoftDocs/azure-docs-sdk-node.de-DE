@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5c821692ec408af0a872de276d63a516edf2f3ac
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056092"
+items:
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations
+  summary: >-
+    Die Azure SQL-Datenbankverwaltungs-API umfasst Vorgänge zum Verwalten von Firewallregeln auf Serverebene für Azure SQL-Datenbankservern. Sie können nicht mithilfe der Azure SQL-Datenbankverwaltungs-API die Firewallregeln auf Datenbankebene verwalten; Sie können nur durch Ausführen von Transact-SQL-Anweisungen für die Masterdatenbank oder einzelne Benutzerdatenbanken verwaltet werden.
+
+    __Beachten Sie__: eine Instanz dieser Klasse wird automatisch erstellt, für eine Instanz von der [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Finden Sie unter [FirewallRules] {@link SqlManagementClient ~ SqlManagementClient #firewallRules}.
+
+    Initialisiert eine neue Instanz der Klasse FirewallRuleOperations an.
+  fullName: azure-asm-sql.FirewallRuleOperations
+  type: Class
+  children:
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations(client)
+  fullName: azure-asm-sql.FirewallRuleOperations.FirewallRuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Verweis auf den Dienstclient.
+    content: new FirewallRuleOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: create(serverName, parameters, callback)
+  summary: Fügt eine neue Firewallregel für die auf Serverebene für Azure SQL-Datenbankserver hinzu.
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankserver, der diese Regel angewendet werden soll.
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleCreateParameters
+      description: Die Parameter für den Create Firewall Rule-Vorgang.
+    - id: parameters.name
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Namen der neuen Firewallregel.
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: Übernimmt oder bestimmt den Anfang IP-Adresse für die neue Firewall-Regel.
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: Übernimmt oder bestimmt die IP-Endadresse für die neue Firewall-Regel.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: deleteMethod(serverName, ruleName, callback)
+  summary: Löscht eine Firewallregel auf Serverebene aus Azure SQL-Datenbankserver.
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.deleteMethod(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankservers her, die die Firewall-Regel, die aus ihr entfernt hat.
+    - id: ruleName
+      type:
+      - string
+      description: Der Name der die Firewall-Regel zu löschen.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function deleteMethod(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: get(serverName, ruleName, callback)
+  summary: Die Firewallregel zurückgegeben für Azure SQL-Datenbankserver mit einem übereinstimmenden Namen.
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.get(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Abfrage der Azure SQL-Datenbankserver für die Firewallregel befinden.
+    - id: ruleName
+      type:
+      - string
+      description: Der Name der Regel, die abgerufen werden.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function get(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: list(serverName, callback)
+  summary: Gibt eine Liste von Firewallregeln auf Serverebene für Azure SQL-Datenbankserver zurück.
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankserver von dem die Firewall-Regeln aufgeführt.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: update(serverName, ruleName, parameters, callback)
+  summary: Aktualisiert eine vorhandene Firewallregel für die auf Serverebene für Azure SQL-Datenbankserver.
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.update(serverName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Der Name der Azure SQL-Datenbankservers her, die die Firewall-Regel aktualisiert werden.
+    - id: ruleName
+      type:
+      - string
+      description: Der Name der Firewallregel aktualisiert werden.
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleUpdateParameters
+      description: Die Parameter für den Vorgang für die Firewallregel aktualisieren.
+    - id: parameters.name
+      type:
+      - string
+      description: Übernimmt oder bestimmt den neuen Namen der Firewallregel.
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: Übernimmt oder bestimmt die neue Anfang IP-Adresse für die Firewall-Regel.
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: Übernimmt oder bestimmt die neue IP-Endadresse für diese Firewall-Regel.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Der Antwortstream.
+    content: function update(serverName, ruleName, parameters, callback)
+  langs:
+  - js

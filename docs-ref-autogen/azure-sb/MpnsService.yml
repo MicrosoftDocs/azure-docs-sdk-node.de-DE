@@ -1,0 +1,989 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2edf9f5bc2da7407d7a8e5e49124d9284317f648
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056299"
+items:
+- uid: azure-sb.MpnsService
+  id: azure-sb.MpnsService
+  name: MpnsService
+  summary: Die MpnsService-Klasse wird verwendet, um das Senden von Benachrichtigungen verwenden die [Microsoft Push Notification Service](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402558).
+  fullName: azure-sb.MpnsService
+  type: Class
+  children:
+  - azure-sb.MpnsService.#ctor
+  - azure-sb.MpnsService#createNativeRegistration
+  - azure-sb.MpnsService#createOrUpdateNativeRegistration
+  - azure-sb.MpnsService#createFlipTileRegistration
+  - azure-sb.MpnsService#createTileRegistration
+  - azure-sb.MpnsService#createToastRegistration
+  - azure-sb.MpnsService#createRawTemplateRegistration
+  - azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.MpnsService#updateFlipTileRegistration
+  - azure-sb.MpnsService#updateTileRegistration
+  - azure-sb.MpnsService#updatesToastRegistration
+  - azure-sb.MpnsService#updatesRawTemplateRegistration
+  - azure-sb.MpnsService#listRegistrationsByChannel
+  - azure-sb.MpnsService#sendFlipTile
+  - azure-sb.MpnsService#sendTile
+  - azure-sb.MpnsService#sendToast
+  - azure-sb.MpnsService#send
+  langs:
+  - js
+- id: azure-sb.MpnsService.#ctor
+  uid: azure-sb.MpnsService.#ctor
+  parent: azure-sb.MpnsService
+  name: MpnsService(notificationHubService)
+  fullName: azure-sb.MpnsService.MpnsService(notificationHubService)
+  summary: >-
+    Erstellt ein neues MpnsService-Objekt.
+
+
+    __Beachten Sie__: eine Instanz dieses Objekts wird automatisch erstellt, wenn eine <xref:azure-sb.NotificationHubService> Objekt erstellt wird. Siehe <xref:azure-sb.NotificationHubService%23gcm>.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: Der Notification Hub-Dienst.
+    content: new MpnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createNativeRegistration
+  id: azure-sb.MpnsService#createNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createNativeRegistration(channel, tags, options, callback)
+  summary: Erstellt eine systemeigene MPNS-Registrierung.
+  fullName: azure-sb.MpnsService.createNativeRegistration(channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  id: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  summary: Erstellt oder aktualisiert eine systemeigene MPNS-Registrierung.
+  fullName: azure-sb.MpnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createFlipTileRegistration
+  id: azure-sb.MpnsService#createFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: createFlipTileRegistration(channel, tags, template, options, callback)
+  summary: Erstellt eine Registrierung mit einer Vorlage FlipTile (nur Windows Phone-Version 7.8 oder höher). Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.createFlipTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - object
+      description: Die Registrierungsvorlage.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: Der URI des Hintergrundbilds für die Kachel.
+    - id: template.count
+      type:
+      - string
+      description: Die Anzahl, die auf der Kachel angezeigt wird.
+    - id: template.title
+      type:
+      - string
+      description: Der Titeltext der Kachel.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.
+    - id: template.backTitle
+      type:
+      - string
+      description: Titel für die Rückseite der Kachel.
+    - id: template.backContent
+      type:
+      - string
+      description: Text für die Rückseite der Kachel.
+    - id: template.id
+      type:
+      - string
+      description: Die ID einer verwandten, sekundären Kachel.
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: Der URI für das Hintergrundbild für die Kachel aus, wenn sie auf die kleine Größe reduziert wird.
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: Der URI für das Hintergrundbild für die Kachel aus, wenn er auf die Breite Größe erweitert wird.
+    - id: template.wideBackContent
+      type:
+      - string
+      description: Der Inhalt für die Rückseite, wenn die Kachel auf die Breite Größe erweitert wird.
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: Der URI für das Bild soll, der auf der Rückseite der Kachel angezeigt werden soll, wenn die Kachel auf die Breite Größe erweitert wird.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createFlipTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createTileRegistration
+  id: azure-sb.MpnsService#createTileRegistration
+  parent: azure-sb.MpnsService
+  name: createTileRegistration(channel, tags, template, options, callback)
+  summary: Erstellt eine Registrierung mit einer kachelvorlage. Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.createTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - object
+      description: Die Registrierungsvorlage.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: Der URI des Hintergrundbilds für die Kachel.
+    - id: template.count
+      type:
+      - string
+      description: Die Anzahl, die auf der Kachel angezeigt wird.
+    - id: template.title
+      type:
+      - string
+      description: Der Titeltext der Kachel.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.
+    - id: template.backTitle
+      type:
+      - string
+      description: Titel für die Rückseite der Kachel.
+    - id: template.backContent
+      type:
+      - string
+      description: Text für die Rückseite der Kachel.
+    - id: template.id
+      type:
+      - string
+      description: Die ID einer verwandten, sekundären Kachel.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createToastRegistration
+  id: azure-sb.MpnsService#createToastRegistration
+  parent: azure-sb.MpnsService
+  name: createToastRegistration(channel, tags, template, options, callback)
+  summary: Erstellt eine Registrierung mit einer popupvorlage Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.createToastRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - object
+      description: Die Registrierungsvorlage.
+    - id: template.text1
+      type:
+      - string
+      description: Text1
+    - id: template.text2
+      type:
+      - string
+      description: "\"Text2\""
+    - id: template.param
+      type:
+      - string
+      description: (optional) (Nur für Windows Phone-Version 7.5 oder höher)
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToastRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createRawTemplateRegistration
+  id: azure-sb.MpnsService#createRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createRawTemplateRegistration(channel, tags, template, options, callback)
+  summary: Erstellt eine rohvorlagenregistrierung.
+  fullName: azure-sb.MpnsService.createRawTemplateRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - json
+      description: Die Vorlage für die Registrierung.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die einzuschließenden Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Erstellt eine rohvorlagenregistrierung.
+  fullName: azure-sb.MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Der Device-Kanal-Uri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - json
+      description: Die Vorlage für die Registrierung.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die einzuschließenden Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateFlipTileRegistration
+  id: azure-sb.MpnsService#updateFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Aktualisiert eine Registrierung mit einer Vorlage FlipTile (nur Windows Phone-Version 7.8 oder höher). Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - object
+      description: Die Registrierungsvorlage.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: Der URI des Hintergrundbilds für die Kachel.
+    - id: template.count
+      type:
+      - string
+      description: Die Anzahl, die auf der Kachel angezeigt wird.
+    - id: template.title
+      type:
+      - string
+      description: Der Titeltext der Kachel.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.
+    - id: template.backTitle
+      type:
+      - string
+      description: Titel für die Rückseite der Kachel.
+    - id: template.backContent
+      type:
+      - string
+      description: Text für die Rückseite der Kachel.
+    - id: template.id
+      type:
+      - string
+      description: Die ID einer verwandten, sekundären Kachel.
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: Der URI für das Hintergrundbild für die Kachel aus, wenn sie auf die kleine Größe reduziert wird.
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: Der URI für das Hintergrundbild für die Kachel aus, wenn er auf die Breite Größe erweitert wird.
+    - id: template.wideBackContent
+      type:
+      - string
+      description: Der Inhalt für die Rückseite, wenn die Kachel auf die Breite Größe erweitert wird.
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: Der URI für das Bild soll, der auf der Rückseite der Kachel angezeigt werden soll, wenn die Kachel auf die Breite Größe erweitert wird.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateTileRegistration
+  id: azure-sb.MpnsService#updateTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Aktualisiert eine Registrierung mit einer kachelvorlage. Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - object
+      description: Die Registrierungsvorlage.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: Der URI des Hintergrundbilds für die Kachel.
+    - id: template.count
+      type:
+      - string
+      description: Die Anzahl, die auf der Kachel angezeigt wird.
+    - id: template.title
+      type:
+      - string
+      description: Der Titeltext der Kachel.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.
+    - id: template.backTitle
+      type:
+      - string
+      description: Titel für die Rückseite der Kachel.
+    - id: template.backContent
+      type:
+      - string
+      description: Text für die Rückseite der Kachel.
+    - id: template.id
+      type:
+      - string
+      description: Die ID einer verwandten, sekundären Kachel.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesToastRegistration
+  id: azure-sb.MpnsService#updatesToastRegistration
+  parent: azure-sb.MpnsService
+  name: updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Aktualisiert eine Registrierung mit einer popupvorlage. Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - object
+      description: Die Registrierungsvorlage.
+    - id: template.text1
+      type:
+      - string
+      description: Text1
+    - id: template.text2
+      type:
+      - string
+      description: "\"Text2\""
+    - id: template.param
+      type:
+      - string
+      description: (optional) (Nur für Windows Phone-Version 7.5 oder höher)
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesRawTemplateRegistration
+  id: azure-sb.MpnsService#updatesRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Aktualisiert eine rohvorlagenregistrierung.
+  fullName: azure-sb.MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Der registrierungsbezeichner.
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: tags
+      type:
+      - string
+      - array
+      description: Die Tags (durch Trennzeichen getrennte Liste, ohne Leerzeichen).
+    - id: template
+      type:
+      - json
+      description: Die Vorlage für die Registrierung.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die einzuschließenden Mpns-Header.
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: Das Etag eingeschlossen werden soll.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#listRegistrationsByChannel
+  id: azure-sb.MpnsService#listRegistrationsByChannel
+  parent: azure-sb.MpnsService
+  name: listRegistrationsByChannel(channel, options, callback)
+  summary: Ruft eine Registrierung durch den Kanal ab.
+  fullName: azure-sb.MpnsService.listRegistrationsByChannel(channel, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Die "channeluri".
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung. Weitere Eigenschaften werden als Header übergeben werden.
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: Gibt die maximale Anzahl von Registrierungen fest, der im Rückruf abgerufen.
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: Gibt die Anzahl von Registrierungen, die im Aufruf übersprungen.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendFlipTile
+  id: azure-sb.MpnsService#sendFlipTile
+  parent: azure-sb.MpnsService
+  name: sendFlipTile(tags, payload, options, callback)
+  summary: Sendet eine Benachrichtigung FlipTile (nur Windows Phone-Version 7.8 oder höher). Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.sendFlipTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Ein einzelnes Tag oder tagausdruck.
+    - id: payload
+      type:
+      - object
+      description: Nutzlast der Nachricht.
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: Der URI des Hintergrundbilds für die Kachel.
+    - id: payload.count
+      type:
+      - string
+      description: Die Anzahl, die auf der Kachel angezeigt wird.
+    - id: payload.title
+      type:
+      - string
+      description: Der Titeltext der Kachel.
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.
+    - id: payload.backTitle
+      type:
+      - string
+      description: Titel für die Rückseite der Kachel.
+    - id: payload.backContent
+      type:
+      - string
+      description: Text für die Rückseite der Kachel.
+    - id: payload.id
+      type:
+      - string
+      description: Die ID einer verwandten, sekundären Kachel.
+    - id: payload.smallBackgroundImage
+      type:
+      - string
+      description: Der URI für das Hintergrundbild für die Kachel aus, wenn sie auf die kleine Größe reduziert wird.
+    - id: payload.wideBackgroundImage
+      type:
+      - string
+      description: Der URI für das Hintergrundbild für die Kachel aus, wenn er auf die Breite Größe erweitert wird.
+    - id: payload.wideBackContent
+      type:
+      - string
+      description: Der Inhalt für die Rückseite, wenn die Kachel auf die Breite Größe erweitert wird.
+    - id: payload.wideBackBackgroundImage
+      type:
+      - string
+      description: Der URI für das Bild soll, der auf der Rückseite der Kachel angezeigt werden soll, wenn die Kachel auf die Breite Größe erweitert wird.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendFlipTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendTile
+  id: azure-sb.MpnsService#sendTile
+  parent: azure-sb.MpnsService
+  name: sendTile(tags, payload, options, callback)
+  summary: Sendet eine kachelbenachrichtigung an. Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.sendTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Ein einzelnes Tag oder tagausdruck.
+    - id: payload
+      type:
+      - object
+      description: Nutzlast der Nachricht.
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: Der URI des Hintergrundbilds für die Kachel.
+    - id: payload.count
+      type:
+      - string
+      description: die Anzahl, die auf der Kachel angezeigt wird.
+    - id: payload.title
+      type:
+      - string
+      description: der Titeltext der Kachel.
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: Der URI des Bilds, das auf der Rückseite der Kachel angezeigt wird.
+    - id: payload.backTitle
+      type:
+      - string
+      description: Titel für die Rückseite der Kachel.
+    - id: payload.backContent
+      type:
+      - string
+      description: Text für die Rückseite der Kachel.
+    - id: payload.id
+      type:
+      - string
+      description: Die ID einer verwandten, sekundären Kachel.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendToast
+  id: azure-sb.MpnsService#sendToast
+  parent: azure-sb.MpnsService
+  name: sendToast(tags, payload, options, callback)
+  summary: Sendet eine Popupbenachrichtigung an. Weitere Informationen finden Sie unter http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.sendToast(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Ein einzelnes Tag oder tagausdruck.
+    - id: payload
+      type:
+      - object
+      description: Nutzlast der Nachricht.
+    - id: payload.text1
+      type:
+      - string
+      description: Text1
+    - id: payload.text2
+      type:
+      - string
+      description: "\"Text2\""
+    - id: payload.param
+      type:
+      - string
+      description: (optional) (Nur für Windows Phone-Version 7.5 oder höher)
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#send
+  id: azure-sb.MpnsService#send
+  parent: azure-sb.MpnsService
+  name: send(tags, payload, targetName, notificationClass, options, callback)
+  summary: Sendet eine benutzerdefinierte MPNS-Benachrichtigung an. Verwenden Sie diese Methode, wenn Sie vollständige Kontrolle über die Nutzlast haben möchten.
+  fullName: azure-sb.MpnsService.send(tags, payload, targetName, notificationClass, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Ein einzelnes Tag oder tagausdruck.
+    - id: payload
+      type:
+      - string
+      description: XML-Nutzlast der Nachricht.
+    - id: targetName
+      type:
+      - string
+      description: Der Zielname.
+    - id: notificationClass
+      type:
+      - string
+      description: Die Benachrichtigungsklasse.
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Die Mpns-Header.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Die Rückruffunktion.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, targetName, notificationClass, options, callback)
+  langs:
+  - js
