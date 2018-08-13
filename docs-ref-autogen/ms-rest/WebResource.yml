@@ -1,0 +1,178 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4cde1b335a77464fabbc18e725bb879fd916b927
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40057142"
+items:
+- uid: ms-rest.WebResource
+  id: ms-rest.WebResource
+  name: WebResource
+  summary: >-
+    Erstellt ein neues WebResource-Objekt.
+
+
+    Diese Klasse stellt eine Abstraktion über einen REST-Aufruf durch werden Library / Unabhängigkeit von der Implementierung und umschließen die erforderlichen Eigenschaften eine Anforderung zu initiieren.
+  fullName: ms-rest.WebResource
+  type: Class
+  children:
+  - ms-rest.WebResource.#ctor
+  - ms-rest.WebResource#pipeInput
+  - ms-rest.WebResource#validateRequestProperties
+  - ms-rest.WebResource#prepare
+  langs:
+  - js
+- id: ms-rest.WebResource.#ctor
+  uid: ms-rest.WebResource.#ctor
+  parent: ms-rest.WebResource
+  name: WebResource()
+  fullName: ms-rest.WebResource.WebResource()
+  summary: ''
+  type: Constructor
+  syntax:
+    content: new WebResource()
+  langs:
+  - js
+- uid: ms-rest.WebResource#pipeInput
+  id: ms-rest.WebResource#pipeInput
+  parent: ms-rest.WebResource
+  name: pipeInput(inputStream, outputStream)
+  summary: Binden Sie den angegebenen Eingabedatenstrom in einen Ausgabestream Ziel aus ein, wenn die WebResource-Methode einen Anforderungstext benötigt und Text nicht bereits festgelegt ist.
+  fullName: ms-rest.WebResource.pipeInput(inputStream, outputStream)
+  type: Function
+  syntax:
+    parameters:
+    - id: inputStream
+      type:
+      - ms-rest.Stream
+      description: der Stream, in die Pipe vom
+    - id: outputStream
+      type:
+      - ms-rest.Stream
+      description: der Stream, in die Pipe zu
+    return:
+      description: destStream
+    content: function pipeInput(inputStream, outputStream)
+  langs:
+  - js
+- uid: ms-rest.WebResource#validateRequestProperties
+  id: ms-rest.WebResource#validateRequestProperties
+  parent: ms-rest.WebResource
+  name: validateRequestProperties()
+  summary: Überprüft, ob die erforderlichen Eigenschaften wie z. B. Url-Methode, Header ["Content-Type"], Header ['accept-Language"] definiert werden. Es wird ein Fehler ausgelöst, wenn eine der oben genannten Eigenschaften nicht definiert sind.
+  fullName: ms-rest.WebResource.validateRequestProperties()
+  type: Function
+  syntax:
+    content: function validateRequestProperties()
+  langs:
+  - js
+- uid: ms-rest.WebResource#prepare
+  id: ms-rest.WebResource#prepare
+  parent: ms-rest.WebResource
+  name: prepare(options)
+  summary: Die Anfrage vorbereitet.
+  fullName: ms-rest.WebResource.prepare(options)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: Die Optionen für die Anforderung, die bereitgestellt werden sollen, um eine Anforderung erfolgreich senden
+    - id: options.method
+      type:
+      - string
+      description: Der HTTP-Anforderungsmethode. Gültige Werte sind "GET", "PUT", "HEAD", "DELETE", "Optionen", "POST", "PATCH".
+    - id: options.url
+      type:
+      - string
+      description: Die Anforderung Url. Es kann oder möglicherweise keine Abfrageparameter darin. Geben Sie "Url", oder geben Sie "PathTemplate" in der Options-Objekt. Beide Optionen schließen sich gegenseitig aus.
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "Ein Wörterbuch von Abfrageparametern, die Url angefügt werden soll, in dem die \"Schlüssel\" die \"Query-Parameter-Name\" und den \"Value\" ist, ist den \"Query-Parameter-Value\". Der \"Query-Parameter-Value\" kann vom Typ \"String\" oder des Typs 'Object' sein. Wenn Sie Url-Codierung überspringen möchten, sollte das Format 'Object' verwendet werden. Bei der Verwendung der Objektformat vorhanden sind, müssen das Objekt eine Eigenschaft namens Wert, der den \"Query-Parameter-Value\" enthält.\nBeispiel: \n   - Abfrage--Parameterwert im Format 'Object': {\"Query-Parameter-Name\": {Wert: \"Query-Parameter-Value\" SkipUrlEncoding: \"true\"}}\n   - Abfrage-Parameter-Wert in 'String'-Format: {\"Query-Parameter-Name\": 'Query-Parameter-Value'}.\nHinweis: \"Wenn options.url verfügt bereits über einige Abfrageparameter, der im options.queryParameters angegebene Wert wird an die Url angefügt werden."
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        Die pfadvorlage der Anforderung Url. Geben Sie "Url", oder geben Sie "PathTemplate" in der Options-Objekt. Beide Optionen schließen sich gegenseitig aus.
+
+        Beispiel: "/ subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}"
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: 'Die Basis-Url der Anforderung. Standardwert: "https://management.azure.com". Dies gilt nur für options.pathTemplate. Wenn Sie eine options.url bereitstellen wird davon ausgegangen, dass Sie die vollständige Url angeben.'
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "Ein Wörterbuch der Path-Parameter, die durch die tatsächlichen Werte in der PathTemplate ersetzt werden müssen.\nDer Schlüssel ist hier der \"Path-Parameter-Name\", und der Wert ist, den \"Path-Parameter-Value\". Der \"Path-Parameter-Value\" kann vom Typ \"String\" oder des Typs 'Object' sein.\nWenn Sie Url-Codierung überspringen möchten, sollte das Format 'Object' verwendet werden. Bei der Verwendung der Objektformat vorhanden sind, müssen das Objekt eine Eigenschaft namens Wert, der den \"Path-Parameter-Value\" enthält.\nBeispiel: \n   - Path-Parameter-Wert in 'Object' Format: {\"Path-Parameter-Name\": {Wert: \"Path-Parameter-Value\" SkipUrlEncoding: true}}\n   - Pfad-Parameter-Wert in 'String'-Format: {'Path-Parameter-Name': 'Path-Parameter-Value'}."
+      optional: true
+    - id: options.formData
+      type:
+      - object
+      description: >-
+        Ein Wörterbuch von Schlüssel-Wert-Paaren für die FormData-Objekt.
+
+        Wenn erwartete "Content-Type' festgelegt werden soll ' Application/X-www-form-urlencoded' ist festgelegt klicken Sie dann Sie es im options.headers Objekt andere, das der Header"Content-Type"auf"Multipart/Form-Data"festgelegt wird.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        Ein Wörterbuch der Anforderungsheader, die auf die Anforderung angewendet werden müssen.
+
+        Der Schlüssel ist hier "-Header-Name", und der Wert ist "-Header-Value". Der Headerwert muss vom Typzeichenfolge sein.
+         - ContentType muss mit dem Schlüsselnamen als "Content-Type" angegeben werden. DEFAULT-Wert ' Application/Json; Charset = Utf-8 ".
+         - "Transfer-Encoding" nastaven NA hodnotu "aufgeteilte" in der Standardeinstellung ist "options.bodyIsStream" festgelegt "true" fest.
+         - "Content-Type" ist auf "Application/Octet-Stream" standardmäßig eingestellt, wenn 'options.bodyIsStream' festgelegt ist auf "true".
+         - "accept-Language" in der Standardeinstellung wird auf "En-US" festgelegt.
+         - "X-ms-Client-Request-Id" in der Standardeinstellung wird auf eine neue Guid festgelegt. Um eine Guid für die Anforderung nicht zu generieren, legen Sie options.disableClientRequestId auf "true"
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: Bei Festlegung auf "true", weist den Client an eine neue Guid() "X-ms-Client-Request-Id"-Header nicht festgelegt.
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: Anforderungstext Sie können einen beliebigen Typ aufweisen. Diese Methode wird JSON.stringify() Hauptteil der Anforderung.
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: Enthält Informationen zum Serialisieren der Hauptteil der Anforderung.
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: Enthält Informationen zum Text der Antwort zu deserialisieren.
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: 'Gibt an, ob diese Methode JSON.stringify() Anforderungstext sollte. Standardwert: false.'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: Gibt an, ob der Anforderungstext einen Datenstrom (nützlich für Szenarien für Datei hochladen) ist.
+      optional: true
+    return:
+      type:
+      - object
+      description: WebResource gibt zurück, das vorbereitete WebResource (HTTP-Anforderung)-Objekt, das an der Pipeline übergeben werden muss.
+    content: function prepare(options)
+  langs:
+  - js
