@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f6278ec3e2f1f1451d80e1327f91eed10a0fc78d
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 16e5c8d5e48a413877be9cffa7bf2a859943cbd2
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40059538"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41697409"
 items:
 - uid: azure-arm-storage.BlobContainers
   name: BlobContainers
@@ -71,7 +71,7 @@ items:
   - typeScript
   summary: Löscht rechtliche enthalten Tags. Deaktivieren das gleiche oder eine nicht existierende Tag führt einen idempotenten Vorgang. ClearLegalHold löscht nur den angegebenen Tags in der Anforderung.
   syntax:
-    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -97,7 +97,7 @@ items:
         Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -146,7 +146,7 @@ items:
   - typeScript
   summary: Löscht rechtliche enthalten Tags. Deaktivieren das gleiche oder eine nicht existierende Tag führt einen idempotenten Vorgang. ClearLegalHold löscht nur den angegebenen Tags in der Anforderung.
   syntax:
-    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -166,7 +166,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -184,7 +184,7 @@ items:
   - typeScript
   summary: Löscht rechtliche enthalten Tags. Deaktivieren das gleiche oder eine nicht existierende Tag führt einen idempotenten Vorgang. ClearLegalHold löscht nur den angegebenen Tags in der Anforderung.
   syntax:
-    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -210,7 +210,7 @@ items:
         Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -225,7 +225,7 @@ items:
   - typeScript
   summary: Erstellt einen neuen Container unter dem angegebenen Konto an, wie durch den Anforderungstext beschrieben. Die containerressource enthält Metadaten und Eigenschaften für den betreffenden Container. Es enthält eine Liste der vom Container enthaltenen Blobs keine.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -246,7 +246,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -261,7 +261,7 @@ items:
   - typeScript
   summary: Erstellt einen neuen Container unter dem angegebenen Konto an, wie durch den Anforderungstext beschrieben. Die containerressource enthält Metadaten und Eigenschaften für den betreffenden Container. Es enthält eine Liste der vom Container enthaltenen Blobs keine.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -277,7 +277,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -325,7 +325,7 @@ items:
   - typeScript
   summary: Erstellt oder aktualisiert eine nicht gesperrte unveränderlichkeitsrichtlinie. ETag im If-Match wird berücksichtigt, wenn angegeben, aber nicht für diesen Vorgang erforderlich.
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -351,7 +351,7 @@ items:
         Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -400,7 +400,7 @@ items:
   - typeScript
   summary: Erstellt oder aktualisiert eine nicht gesperrte unveränderlichkeitsrichtlinie. ETag im If-Match wird berücksichtigt, wenn angegeben, aber nicht für diesen Vorgang erforderlich.
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -420,7 +420,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -438,7 +438,7 @@ items:
   - typeScript
   summary: Erstellt oder aktualisiert eine nicht gesperrte unveränderlichkeitsrichtlinie. ETag im If-Match wird berücksichtigt, wenn angegeben, aber nicht für diesen Vorgang erforderlich.
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -464,7 +464,7 @@ items:
         Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -479,7 +479,7 @@ items:
   - typeScript
   summary: Erstellt einen neuen Container unter dem angegebenen Konto an, wie durch den Anforderungstext beschrieben. Die containerressource enthält Metadaten und Eigenschaften für den betreffenden Container. Es enthält eine Liste der vom Container enthaltenen Blobs keine.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -500,7 +500,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -549,7 +549,7 @@ items:
   - typeScript
   summary: Bricht eine nicht gesperrte unveränderlichkeitsrichtlinie ab. Die Reaktion des Delete hat ImmutabilityPeriodSinceCreationInDays auf 0 festgelegt. ETag im If-Match ist für diesen Vorgang erforderlich. Löschen eine gesperrte unveränderlichkeitsrichtlinie ist nicht zulässig, nur so ist zum Löschen des Containers nach dem Löschen aller Blobs im Container.
   syntax:
-    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -575,7 +575,7 @@ items:
         Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -590,7 +590,7 @@ items:
   - typeScript
   summary: Bricht eine nicht gesperrte unveränderlichkeitsrichtlinie ab. Die Reaktion des Delete hat ImmutabilityPeriodSinceCreationInDays auf 0 festgelegt. ETag im If-Match ist für diesen Vorgang erforderlich. Löschen eine gesperrte unveränderlichkeitsrichtlinie ist nicht zulässig, nur so ist zum Löschen des Containers nach dem Löschen aller Blobs im Container.
   syntax:
-    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -610,7 +610,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -628,7 +628,7 @@ items:
   - typeScript
   summary: Bricht eine nicht gesperrte unveränderlichkeitsrichtlinie ab. Die Reaktion des Delete hat ImmutabilityPeriodSinceCreationInDays auf 0 festgelegt. ETag im If-Match ist für diesen Vorgang erforderlich. Löschen eine gesperrte unveränderlichkeitsrichtlinie ist nicht zulässig, nur so ist zum Löschen des Containers nach dem Löschen aller Blobs im Container.
   syntax:
-    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -654,7 +654,7 @@ items:
         Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -669,7 +669,7 @@ items:
   - typeScript
   summary: Löscht den angegebenen Container ein Konto.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -690,7 +690,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -735,7 +735,7 @@ items:
   - typeScript
   summary: Löscht den angegebenen Container ein Konto.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -751,7 +751,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -769,7 +769,7 @@ items:
   - typeScript
   summary: Löscht den angegebenen Container ein Konto.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -790,7 +790,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -805,7 +805,7 @@ items:
   - typeScript
   summary: Erweitert die ImmutabilityPeriodSinceCreationInDays von einer gesperrten ImmutabilityPolicy an. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig, wird diese Aktion werden. ETag im If-Match ist für diesen Vorgang erforderlich.
   syntax:
-    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -836,7 +836,7 @@ items:
         Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -889,7 +889,7 @@ items:
   - typeScript
   summary: Erweitert die ImmutabilityPeriodSinceCreationInDays von einer gesperrten ImmutabilityPolicy an. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig, wird diese Aktion werden. ETag im If-Match ist für diesen Vorgang erforderlich.
   syntax:
-    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -913,7 +913,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -931,7 +931,7 @@ items:
   - typeScript
   summary: Erweitert die ImmutabilityPeriodSinceCreationInDays von einer gesperrten ImmutabilityPolicy an. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig, wird diese Aktion werden. ETag im If-Match ist für diesen Vorgang erforderlich.
   syntax:
-    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -962,7 +962,7 @@ items:
         Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -977,7 +977,7 @@ items:
   - typeScript
   summary: Ruft die Eigenschaften von einem angegebenen Container ab.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -998,7 +998,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1043,7 +1043,7 @@ items:
   - typeScript
   summary: Ruft die Eigenschaften von einem angegebenen Container ab.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1059,7 +1059,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1077,7 +1077,7 @@ items:
   - typeScript
   summary: Ruft die vorhandenen unveränderlichkeitsrichtlinie zusammen mit dem entsprechenden ETag-Antwortheader und den Text ab.
   syntax:
-    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1098,7 +1098,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1113,7 +1113,7 @@ items:
   - typeScript
   summary: Ruft die vorhandenen unveränderlichkeitsrichtlinie zusammen mit dem entsprechenden ETag-Antwortheader und den Text ab.
   syntax:
-    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1129,7 +1129,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1177,7 +1177,7 @@ items:
   - typeScript
   summary: Ruft die vorhandenen unveränderlichkeitsrichtlinie zusammen mit dem entsprechenden ETag-Antwortheader und den Text ab.
   syntax:
-    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1198,7 +1198,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1213,7 +1213,7 @@ items:
   - typeScript
   summary: Ruft die Eigenschaften von einem angegebenen Container ab.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1234,7 +1234,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1249,7 +1249,7 @@ items:
   - typeScript
   summary: Listet alle Container, und ein Präfix wie die Datenebene wird nicht unterstützt. Richtlinien für Softwareeinschränkung gibt auch noch heute keine Fortsetzungstoken zurück.
   syntax:
-    content: 'function list(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function list(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1263,7 +1263,7 @@ items:
         Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1304,7 +1304,7 @@ items:
   - typeScript
   summary: Listet alle Container, und ein Präfix wie die Datenebene wird nicht unterstützt. Richtlinien für Softwareeinschränkung gibt auch noch heute keine Fortsetzungstoken zurück.
   syntax:
-    content: 'function list(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<ListContainerItems>)'
+    content: 'function list(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<ListContainerItems>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1316,7 +1316,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1334,7 +1334,7 @@ items:
   - typeScript
   summary: Listet alle Container, und ein Präfix wie die Datenebene wird nicht unterstützt. Richtlinien für Softwareeinschränkung gibt auch noch heute keine Fortsetzungstoken zurück.
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1348,7 +1348,7 @@ items:
         Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1363,7 +1363,7 @@ items:
   - typeScript
   summary: Legt die immutabilitypolicy für zu gesperrten Zustand befindet. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig ist ExtendImmutabilityPolicy Aktion. ETag im If-Match ist für diesen Vorgang erforderlich.
   syntax:
-    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1389,7 +1389,7 @@ items:
         Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1438,7 +1438,7 @@ items:
   - typeScript
   summary: Legt die immutabilitypolicy für zu gesperrten Zustand befindet. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig ist ExtendImmutabilityPolicy Aktion. ETag im If-Match ist für diesen Vorgang erforderlich.
   syntax:
-    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1458,7 +1458,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1476,7 +1476,7 @@ items:
   - typeScript
   summary: Legt die immutabilitypolicy für zu gesperrten Zustand befindet. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig ist ExtendImmutabilityPolicy Aktion. ETag im If-Match ist für diesen Vorgang erforderlich.
   syntax:
-    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1502,7 +1502,7 @@ items:
         Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1517,7 +1517,7 @@ items:
   - typeScript
   summary: Zulässige Mengen enthalten Tags. Die gleichen tagergebnisse festlegen in einen idempotenten Vorgang. SetLegalHold folgt eine Muster anfügen "und" out nicht klar die vorhandenen Tags, die nicht in der Anforderung angegeben werden.
   syntax:
-    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1543,7 +1543,7 @@ items:
         Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1592,7 +1592,7 @@ items:
   - typeScript
   summary: Zulässige Mengen enthalten Tags. Die gleichen tagergebnisse festlegen in einen idempotenten Vorgang. SetLegalHold folgt eine Muster anfügen "und" out nicht klar die vorhandenen Tags, die nicht in der Anforderung angegeben werden.
   syntax:
-    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1612,7 +1612,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1630,7 +1630,7 @@ items:
   - typeScript
   summary: Zulässige Mengen enthalten Tags. Die gleichen tagergebnisse festlegen in einen idempotenten Vorgang. SetLegalHold folgt eine Muster anfügen "und" out nicht klar die vorhandenen Tags, die nicht in der Anforderung angegeben werden.
   syntax:
-    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1656,7 +1656,7 @@ items:
         Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1671,7 +1671,7 @@ items:
   - typeScript
   summary: Aktualisiert die Containereigenschaften im Anforderungstext angegeben. Eigenschaften, die nicht in der Anforderung erwähnt werden nicht geändert werden. Update schlägt fehl, wenn der angegebene Container nicht bereits vorhanden ist.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1692,7 +1692,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1737,7 +1737,7 @@ items:
   - typeScript
   summary: Aktualisiert die Containereigenschaften im Anforderungstext angegeben. Eigenschaften, die nicht in der Anforderung erwähnt werden nicht geändert werden. Update schlägt fehl, wenn der angegebene Container nicht bereits vorhanden ist.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1753,7 +1753,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1771,7 +1771,7 @@ items:
   - typeScript
   summary: Aktualisiert die Containereigenschaften im Anforderungstext angegeben. Eigenschaften, die nicht in der Anforderung erwähnt werden nicht geändert werden. Update schlägt fehl, wenn der angegebene Container nicht bereits vorhanden ist.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1792,7 +1792,7 @@ items:
         Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
