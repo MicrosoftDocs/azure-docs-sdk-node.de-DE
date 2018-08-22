@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 2bb39336cac3fe404366a95799522d14d6109f14
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 901fc90c47fe16e90f69b8410cc09468c127efb4
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40059775"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690289"
 items:
 - uid: azure-event-hubs.EventPosition
   name: EventPosition
@@ -40,7 +40,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{String} [CustomFilter] Der benutzerdefinierte Filterausdruck, der auf dem Empfänger festgelegt werden muss.'
   optional: true
   syntax:
     content: 'customFilter?: string'
@@ -69,7 +69,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{Datum | Anzahl} [EnqueuedTime] Die in die Warteschlange eingereihte Zeit des Ereignisses an der Position. Es kann nicht definiert sein, wenn die Position nur eine Sequenznummer oder einen Offset erstellt wird.'
   optional: true
   syntax:
     content: 'enqueuedTime?: Date | number'
@@ -89,7 +89,7 @@ items:
     parameters:
     - id: options
       type:
-      - azure-event-hubs.EventPositionOptions
+      - EventPositionOptions
       description: ''
       optional: true
   package: azure-event-hubs
@@ -211,7 +211,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{booleschen} IsInclusive gibt an, ob das aktuelle Ereignis am angegebenen Offset enthalten oder nicht ist. Sie ist nur anwendbar, wenn Offset festgelegt ist. Standardwert: false.'
   syntax:
     content: 'isInclusive: boolean'
     return:
@@ -225,7 +225,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{String} [Offset] Der Offset des Ereignisses an der Position. Es kann nicht definiert sein, wenn die Position nur eine Sequenznummer oder einer Uhrzeit in die Warteschlange eingereihte erstellt wird.'
   optional: true
   syntax:
     content: 'offset?: string'
@@ -240,7 +240,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{Number} [SequenceNumber] Die Sequenznummer des Ereignisses an der Position. Es kann nicht definiert sein, wenn die Position nur eine Zeit in die Warteschlange eingereiht oder einen Offset erstellt wird.'
   optional: true
   syntax:
     content: 'sequenceNumber?: number'
@@ -282,11 +282,6 @@ items:
       - azure-event-hubs.EventPosition
   package: azure-event-hubs
 references:
-- uid: azure-event-hubs.EventPositionOptions
-  spec.typeScript:
-  - name: EventPositionOptions
-    fullName: EventPositionOptions
-    uid: azure-event-hubs.EventPositionOptions
 - uid: azure-event-hubs.EventPosition
   spec.typeScript:
   - name: EventPosition
