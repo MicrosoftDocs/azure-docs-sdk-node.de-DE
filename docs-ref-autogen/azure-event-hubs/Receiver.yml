@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8aa4f878b3405000ff9a61b9fa360d4e9ec7cc65
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: b4a794104faf4acb54bb726d72e04a4c578215ec
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40061619"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41682778"
 items:
 - uid: azure-event-hubs.Receiver
   name: Receiver
@@ -16,7 +16,11 @@ items:
   - azure-event-hubs.Receiver.connection
   - azure-event-hubs.Receiver.drain
   - azure-event-hubs.Receiver.error
+  - azure-event-hubs.Receiver.isClosed
+  - azure-event-hubs.Receiver.isItselfClosed
   - azure-event-hubs.Receiver.isOpen
+  - azure-event-hubs.Receiver.isSessionClosed
+  - azure-event-hubs.Receiver.isSessionItselfClosed
   - azure-event-hubs.Receiver.name
   - azure-event-hubs.Receiver.properties
   - azure-event-hubs.Receiver.constructor
@@ -120,15 +124,83 @@ items:
       type:
       - AmqpError | Error | undefined
   package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isClosed
+  name: isClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Bestimmt, ob sowohl lokale als auch remote-Endpunkt für die Verknüpfung oder deren zugrunde liegende Sitzung oder des zugrunde liegenden Verbindung geschlossen werden.
+
+    In der "Receiver_close" "Session_close"-Ereignishandler, wenn diese Methode zurückgibt `false` Dies bedeutet, dass das lokale Ende noch geöffnet ist. Es kann hilfreich sein, zu bestimmen, ob der Schließvorgang lokal unter solchen Umständen initiiert wurde.
+  syntax:
+    content: function isClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isItselfClosed
+  name: isItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Bestimmt, ob sowohl lokale als auch remote-Endpunkt für die nur die Verknüpfung selbst werden geschlossen.
+
+    Im Ereignishandler "Receiver_close", wenn diese Methode zurückgibt `false` Dies bedeutet, dass das lokale Ende noch geöffnet ist. Es kann hilfreich sein, zu bestimmen, ob der Schließvorgang lokal unter solchen Umständen initiiert wurde.
+  syntax:
+    content: function isItselfClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
 - uid: azure-event-hubs.Receiver.isOpen
   name: isOpen
   children: []
   type: method
   langs:
   - typeScript
-  summary: Bestimmt, ob es sich bei der senderlink geöffnet ist.
+  summary: Bestimmt, ob es sich bei der empfängerlink geöffnet ist.
   syntax:
     content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isSessionClosed
+  name: isSessionClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Bestimmt, ob sowohl lokale als auch remote-Endpunkt für die Sitzung oder die zugrunde liegende Verbindung geschlossen werden.
+
+    Im Ereignishandler "Session_close", wenn diese Methode zurückgibt `false` Dies bedeutet, dass das lokale Ende noch geöffnet ist. Es kann hilfreich sein, zu bestimmen, ob der Schließvorgang lokal unter solchen Umständen initiiert wurde.
+  syntax:
+    content: function isSessionClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isSessionItselfClosed
+  name: isSessionItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Bestimmt, ob sowohl lokale als auch der Endpunkt für die Sitzung selbst werden geschlossen.
+
+    Im Ereignishandler "Session_close", wenn diese Methode zurückgibt `false` Dies bedeutet, dass das lokale Ende noch geöffnet ist. Es kann hilfreich sein, zu bestimmen, ob der Schließvorgang lokal unter solchen Umständen initiiert wurde.
+  syntax:
+    content: function isSessionItselfClosed()
     parameters: []
     return:
       type:
@@ -245,7 +317,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: ''
+  summary: Entfernt den Empfänger und die Sitzung aus der internen Zuordnung zugrunde liegt.
   syntax:
     content: function remove()
     parameters: []
