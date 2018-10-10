@@ -1,21 +1,20 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 3d6625cbda0ec2f44347fb1b08073404b4dda7ca
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 0339f131ecdfa5e21aeebca9ee94a1085829a83c
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "41547533"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48551868"
 documentType: LandingData
-title: Azure für Node.js-Entwickler
+title: Azure für JavaScript-Entwickler
 metadata:
-  document_id: d849f3b1-92db-460b-93c2-f1b8d0567b49
-  title: Azure für Node.js-Entwickler – Tutorials, API-Referenz
-  description: Steigen Sie mithilfe der unten aufgeführten Ressourcen in die Entwicklung von Apps mit Azure ein. Sie enthalten hervorragende Schnellstarts, Tutorials und Tools für Node.js-Entwickler.
+  title: 'Azure für Node.js-Entwickler: Tutorials, Tools und SDK-Referenz'
+  description: Steigen Sie mithilfe von Tutorials, Modulen und Tools für Node.js-Entwickler in die Entwicklung von Apps mit Azure ein.
   keywords: Azure, Node.js, SDK, API, npm
-  author: tomarcher
-  ms.author: tarcher
+  author: rloutlaw
+  ms.author: routlaw
   manager: douge
-  ms.date: 07/14/2017
+  ms.date: 07/11/2018
   ms.topic: landing-page
   ms.prod: azure
   featureFlags:
@@ -24,104 +23,268 @@ metadata:
   ms.devlang: nodejs
   ms.service: multiple
 sections:
-- items:
-  - type: markdown
-    text: >
-      Steigen Sie mithilfe der unten aufgeführten Ressourcen in die Entwicklung von Apps mit Azure ein. Sie enthalten hervorragende Schnellstarts, Tutorials und Tools für Node.js-Entwickler.
-- items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 2
-    items:
-    - href: https://docs.microsoft.com/azure/app-service/containers/quickstart-nodejs
-      html: <p>Bereitstellen Ihrer ersten Node.js-App in Azure</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: Erste Schritte
-    - href: https://azure.microsoft.com/resources/samples/?platform=nodejs
-      html: <p>Azure-Codebeispiele mit Node.js</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: Codebeispiele
-    - href: https://docs.microsoft.com/javascript/azure/node-azure-tools
-      html: <p>Entwicklertools</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_download-install.svg
-      title: Tools
-    - href: https://docs.microsoft.com/javascript/api?view=azure-node-latest
-      html: <p>npm-Pakete für Azure-Dienste</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-      title: API-Referenz
-- title: Fünfminütige Schnellstarts
+- title: Schneller Einstieg
   items:
-  - type: paragraph
-    text: Erfahren Sie, wie Sie Node.js-Apps mit Azure-Diensten erstellen.
+  - type: paragragh
+    html: <p>Sehen Sie selbst, wie einfach die ersten Schritte mit Node.js in Azure sind.
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: https://code.visualstudio.com/docs/nodejs/nodejs-deployment?utm_source=msdocs&utm_medium=node_hub
-      title: Bereitstellen einer App mit Visual Studio Code
+    - href: https://aka.ms/try-azure-node
+      html: <p>Bereitstellen Ihrer ersten App in einer kostenlosen Sandboxumgebung</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+      title: Kostenlos einsteigen
+- title: Hosten von Anwendungen
+  items:
+  - type: paragragh
+    html: <p>Erstellen, Bereitstellen und Skalieren Ihrer Node.js-Anwendungen in Azure
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://code.visualstudio.com/tutorials/static-website/getting-started
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_React.svg
+      title: Statische Website
+      html: <p>Hosten Ihrer React-, Angular- und Vue-Apps mit Azure Storage</p>
+    - href: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
+      html: <p>Bereitstellen von Express-Apps mit App Service</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
-    - href: http://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function
-      title: Erstellen einer serverlosen Node.js-Funktion
+      title: Gesamter Stapel
+    - href: https://code.visualstudio.com/tutorials/docker-extension/getting-started
+      html: <p>Erstellen und Bereitstellen von Docker-Containern und Microservices in Azure</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ContainerInstances.svg
+      title: Container-Apps
+    - href: https://code.visualstudio.com/tutorials/functions-extension/getting-started
+      html: <p>Serverlos mit Azure Functions</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/azurefunctions.svg
-    - href: https://docs.microsoft.com/azure/cosmos-db/create-mongodb-nodejs
-      title: Erstellen einer MEAN-App mit Cosmos DB
-      image:
-        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
-    - href: https://docs.microsoft.com/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=/vsts/deploy-azure/toc.json&bc=/vsts/deploy-azure/breadcrumb/toc.json
-      title: Azure DevOps mit Node.js
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
-    - href: https://docs.microsoft.com/azure/container-service/kubernetes/container-service-kubernetes-walkthrough
-      title: Durchführen der Bereitstellung für Linux und Kubernetes
-      image:
-        src: media/k8s_logo.svg
-- title: Community
+      title: Serverlose Apps und APIs
+- title: Speichern von Daten
   items:
+  - type: paragragh
+    html: <p>Verwalten von Daten in Dateien oder Datenbanken</p>
   - type: list
     style: cards
     className: cardsM
-    columns: 2
+    columns: 3
     items:
-    - href: https://www.youtube.com/watch?v=9t2GWFegnkQ&list=PLlrxD0HtieHgugDxYBujMFnvSveH4fgWN
-      html: <p>Ein Video zu JavaScript, Node.js und dem Web</p>
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/Storage.svg
+      title: File Storage
+      html: <p>Sicheres Speichern von Dateien im Cloudspeicher</p>
+      href: https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-nodejs
+    - href: https://docs.microsoft.com/azure/cosmos-db/create-mongodb-nodejs
+      title: MongoDB
+      html: <p>Verwenden von MongoDB und CosmosDB in Ihren Node-Apps</p>
       image:
-        src: media/5-things-logo.svg
-      title: 5 Things
-- title: Kostenloses Node.js- und Azure-Videotraining bei Pluralsight
+        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/RedisCache.svg
+      title: Redis Cache
+      html: <p>Lesen und Schreiben von Daten in einen Redis-In-Memory-Datenspeicher</p>
+      href: https://docs.microsoft.com/azure/redis-cache/cache-nodejs-get-started
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/PostgreSQL.svg
+      title: PostgreSQL
+      html: <p>Erstellen und Verwalten einer Postgres-Clouddatenbank</p>
+      href: https://docs.microsoft.com/azure/postgresql/connect-nodejs
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/MySQL.SVG
+      title: MySQL
+      html: <p>Erstellen und Verwalten einer MySQL-Clouddatenbank</p>
+      href: https://docs.microsoft.com/azure/mysql/connect-nodejs
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/SQLDatabase.svg
+      title: Azure SQL-Datenbank
+      html: <p>Erstellen und Verwalten einer SQL-Clouddatenbank</p>
+      href: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs
+- title: Authentifizierung und Sicherheit
+  items:
+  - type: paragragh
+    html: <p>Schützen von Apps und Ressourcen sowie von Cloudgeheimnissen und -schlüsseln</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-webapi-nodejs
+      html: <p>Authentifizieren von Benutzern mit Passport-Strategien</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg
+      title: Active Directory
+    - href: https://docs.microsoft.com/en-us/azure/key-vault/quick-create-cli
+      html: <p>Sicheres Speichern von API-Schlüsseln und -Geheimnissen in Ihren Apps</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/KeyVault.svg
+      title: Key Vault
+    - href: https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-node
+      html: <p>Hinzufügen der Anmeldung bei Facebook, Twitter oder GitHub zu Ihrer Web-App mithilfe von Passport und Azure AD</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg
+      title: Active Directory B2C
+- title: Überwachung und Protokollierung
+  items:
+  - type: paragragh
+    html: <p>Überwachen der Ressourcenintegrität und Erkennen von Problemen in Ihren Apps</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/application-insights/app-insights-nodejs-quick-start
+      html: <p>Überwachen von Anforderungen und Identifizieren von Fehlern in Ihrer Anwendung</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ApplicationInsights.svg
+      title: Application Insights
+    - href: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal
+      html: <p>Überprüfen von Metriken und Festlegen von Warnungen für Azure-Ressourcen</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_event_grid.svg
+      title: Event Grid
+    - href: https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-collect-linux-computer
+      html: <p>Überprüfen von Daten zu Ihrer Umgebung an einem zentralen Ort</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/operationsmanagementsuite.svg
+      title: Log Analytics
+    - href: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/
+      html: <p>Abrufen ausführlicher Leistungs- und Nutzungsdaten</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/AzureMonitoring.svg
+      title: Azure Monitor
+- title: Debuggen und Diagnose
+  items:
+  - type: paragragh
+    html: <p>Suchen und Beheben von Produktionsfehlern mit erstklassigen Tools</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach
+      html: <p>Hinzufügen von Protokollanweisungen zu Produktions-Apps ohne erneute Bereitstellung</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_tools.svg
+      title: Protokollpunkte
+    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_remote-debugging
+      html: <p>Anfügen eines Debuggers an Ihre Test- oder Produktionsinstanzen</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_debug.svg
+      title: Remotedebuggen
+    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+      html: <p>Handbuch für die Ermittlung allgemeiner Node.js-Fehler</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_investigate.svg
+      title: Behandeln von App-Fehlern
+    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+      html: <p>Automatisches Anfügen des Debuggers an ausgeführte Node-Prozesse</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+      title: Debuggen in VS Code
+- title: Nachrichten
+  items:
+  - type: paragragh
+    html: <p>Verwalten und Verbinden von Geräten und Apps</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>Vermeiden von Abrufen mit der HTTP-basierten Ereignisübermittlung</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_event_grid.svg
+      title: Event Grid
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>Äußerst zuverlässiges Messaging zwischen Diensten</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/IOT_edge_50.svg
+      title: Service Bus
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>Einfaches, skalierbares Message Queuing</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
+      title: Queue Storage
+- title: IoT
+  items:
+  - type: paragragh
+    html: <p>Verwalten und Verbinden von Geräten und Apps</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>Verwalten von Tausenden von Geräten mit IoT Hub</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/IOT_edge_50.svg
+      title: Verbinden und Verwalten von IoT-Geräten
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>Verwenden von Event Hub zum Sammeln von Milliarden von Datenpunkten</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/EventHubs.svg
+      title: Big Data-Streaming
+- title: DevOps
+  items:
+  - type: paragragh
+    html: <p>Erstellen, Testen und Verwalten Ihrer App-Releases</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
+      html: <p>Hinzufügen von Jenkins, CircleCI oder Travis zum Verwalten von Builds</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_scrum.svg
+      title: Continuous Integration
+    - href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
+      html: <p>Erstellen und Bereitstellen von Node-Apps aus Ihren VSTS-Teams</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
+      title: VSTS
+- title: Azure SDK für Node.js
   items:
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: https://www.pluralsight.com/courses/developing-nodejs-microsoft-azure-getting-started?twoid=d6abac77-7dcc-4d33-9e03-f85e78989f02
+    - href: https://docs.microsoft.com/en-us/javascript/azure/node-sdk-azure-get-started
+      html: <p>Einrichten einer lokalen Entwicklungsumgebung und Testen des Node SDK</p>
       image:
-        src: https://docs.microsoft.com/media/logos/logo_pluralsight.svg
-      title: 'Erste Schritte: Node.js in Azure'
-- title: Beispiele
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: Erste Schritte mit dem SDK
+    - href: https://code.visualstudio.com/docs/azure/extensions
+      html: <p>Vollständige Referenzdokumente für das Azure SDK</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+      title: Verweis
+    - href: https://azure.microsoft.com/en-us/resources/samples/?sort=0&platform=nodejs
+      html: <p>GitHub-Beispielrepositorys für das Azure SDK</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+      title: SDK-Beispiele
+- title: Tools und Erweiterungen
   items:
   - type: list
-    style: unordered
+    style: cards
+    className: cardsM
+    columns: 3
     items:
-    - html: <a href="https://azure.microsoft.com/resources/samples/meanjs/">Developing a MEAN app using Azure Cosmos DB</a> (Entwickeln einer MEAN-App mit Azure Cosmos DB)
-    - html: <a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/">Developing a Node.js app with Gremlin Graph data using Azure Cosmos DB</a> (Entwickeln einer Node.js-App mit Gremlin-Graphdaten per Azure Cosmos DB)
-    - html: <a href="https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/">Getting started with Azure Blob Service in a Node.js app</a> (Erste Schritte mit dem Azure Blob-Dienst in einer Node.js-App)
-    - html: <a href="https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/">Integrating Azure AD into a Node.js app</a> (Integrieren von Azure AD in eine Node.js-App)
-    - html: <a href="https://azure.microsoft.com/resources/samples/key-vault-node-getting-started">Getting started with Key Vault using Azure</a> (Erste Schritte mit Key Vault in Azure)
-- title: Schritt-für-Schritt-Tutorials
-  items:
-  - type: paragraph
-    text: Es wird beschrieben, wie Sie Azure-Dienste und -Tools in Ihren Node.js-Apps verwenden.
-  - type: list
-    style: unordered
-    items:
-    - html: <a href="https://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app">Erstellen einer Node.js- und MongoDB-Web-App in Azure</a>
-    - html: <a href="https://docs.microsoft.com/azure/app-service-api/app-service-api-nodejs-api-app">Erstellen einer Node.js-RESTful-API und Bereitstellen für eine API-App in Azure</a>
+    - href: https://code.visualstudio.com/docs/azure/extensions
+      html: <p>Direkte Verwendung von Azure in Visual Studio Code über Erweiterungen</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+      title: Visual Studio Code
+    - href: https://docs.microsoft.com/cli/azure
+      html: <p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">Verwalten von Azure-Ressourcen über die Befehlszeile</a></p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_dev-7.svg
+      title: Azure CLI 2.0
