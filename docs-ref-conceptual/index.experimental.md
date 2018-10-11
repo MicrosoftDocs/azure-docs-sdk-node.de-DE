@@ -5,11 +5,11 @@ title: Node.js Dev Center | Microsoft-Dokumentation
 description: Hier erfahren Sie, wie Sie Node.js-Anwendungen in der Cloud mit Azure entwickeln und bereitstellen.
 ms.topic: hub-page
 ms.openlocfilehash: e2959c6ec20f07bc672cae05aebd7be039ca641e
-ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48488543"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "48981774"
 ---
 <div id="main" class="v2">
     <div class="container">
