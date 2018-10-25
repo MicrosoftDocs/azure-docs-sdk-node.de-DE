@@ -10,31 +10,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
-ms.openlocfilehash: 7dfa6d8fa633863fe834ce73462584e79c312c5d
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7e39084c65a40e47ed61cc01daf994aff447690e
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259889"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49677895"
 ---
-# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="5c96d-103">Azure Machine Learning-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="5c96d-103">Azure Machine Learning modules for Node.js</span></span>
+# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="13436-103">Azure Machine Learning-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="13436-103">Azure Machine Learning modules for Node.js</span></span>
 
-<span data-ttu-id="5c96d-104">Machine Learning ist ein Data Science-Verfahren, bei dem Computer aus vorhandenen Daten lernen können, um zukünftiges Verhalten, Ergebnisse und Trends vorherzusagen.</span><span class="sxs-lookup"><span data-stu-id="5c96d-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="5c96d-105">Dank solcher Vorhersagen oder Prognosen aus maschinellen Lernprozessen können Apps und Geräte "intelligenter" werden.</span><span class="sxs-lookup"><span data-stu-id="5c96d-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="5c96d-106">Wenn Sie online einkaufen, trägt maschinelles Lernen dazu bei, dass Ihnen anhand der gekauften Produkte weitere Produkte empfohlen werden, die Ihnen gefallen könnten.</span><span class="sxs-lookup"><span data-stu-id="5c96d-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="5c96d-107">Wenn Ihre Kreditkarte verwendet wird, vergleichen Machine Learning-Prozesse die Transaktion mit einer Transaktionsdatenbank und helfen bei der Betrugserkennung.</span><span class="sxs-lookup"><span data-stu-id="5c96d-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="5c96d-108">Wenn ein automatischer Staubsauger ein Zimmer saugt, wird anhand von Machine Learning-Prozessen entschieden, ob die Arbeit erledigt ist.</span><span class="sxs-lookup"><span data-stu-id="5c96d-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
+<span data-ttu-id="13436-104">Machine Learning ist ein Data Science-Verfahren, bei dem Computer aus vorhandenen Daten lernen können, um zukünftiges Verhalten, Ergebnisse und Trends vorherzusagen.</span><span class="sxs-lookup"><span data-stu-id="13436-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="13436-105">Dank solcher Vorhersagen oder Prognosen aus maschinellen Lernprozessen können Apps und Geräte "intelligenter" werden.</span><span class="sxs-lookup"><span data-stu-id="13436-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="13436-106">Wenn Sie online einkaufen, trägt maschinelles Lernen dazu bei, dass Ihnen anhand der gekauften Produkte weitere Produkte empfohlen werden, die Ihnen gefallen könnten.</span><span class="sxs-lookup"><span data-stu-id="13436-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="13436-107">Wenn Ihre Kreditkarte verwendet wird, vergleichen Machine Learning-Prozesse die Transaktion mit einer Transaktionsdatenbank und helfen bei der Betrugserkennung.</span><span class="sxs-lookup"><span data-stu-id="13436-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="13436-108">Wenn ein automatischer Staubsauger ein Zimmer saugt, wird anhand von Machine Learning-Prozessen entschieden, ob die Arbeit erledigt ist.</span><span class="sxs-lookup"><span data-stu-id="13436-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="5c96d-109">Verwaltungspaket</span><span class="sxs-lookup"><span data-stu-id="5c96d-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="13436-109">Verwaltungspaket</span><span class="sxs-lookup"><span data-stu-id="13436-109">Management Package</span></span>
 
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="5c96d-110">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="5c96d-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="13436-110">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="13436-110">Install the npm module</span></span>
 
-<span data-ttu-id="5c96d-111">Installieren des npm-Moduls für Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="5c96d-111">Install the Azure Machine Learning npm module</span></span>
+<span data-ttu-id="13436-111">Installieren des npm-Moduls für Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="13436-111">Install the Azure Machine Learning npm module</span></span>
 
 ```bash
 npm install azure-arm-machinelearning
 ```
 
-### <a name="example"></a><span data-ttu-id="5c96d-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5c96d-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="13436-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="13436-112">Example</span></span>
 
-<span data-ttu-id="5c96d-113">Mit diesem Beispiel werden alle Machine Learning-Vorhaben aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="5c96d-113">This example lists all machine learning committment plans.</span></span>
+<span data-ttu-id="13436-113">Mit diesem Beispiel werden alle Machine Learning-Vorhaben aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="13436-113">This example lists all machine learning committment plans.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -57,6 +57,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="5c96d-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="5c96d-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="13436-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="13436-114">Samples</span></span>
 
-<span data-ttu-id="5c96d-115">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="5c96d-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="13436-115">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="13436-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
