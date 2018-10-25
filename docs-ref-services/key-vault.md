@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
-ms.openlocfilehash: 72bf4bc5443618f5f1bb9b4d1bb4d905669ff8c8
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 36bc5e97a5eea6e821f66bff9b3e8f610baa2dd0
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34266597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49804420"
 ---
 # <a name="azure-key-vault-modules-for-nodejs"></a>Azure Key Vault-Module für Node.js
 
@@ -79,7 +79,7 @@ msRestAzure
 ## <a name="samples"></a>Beispiele
 
 - [Erste Schritte mit Key Vault in Node.js](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
-- [Verwalten von Azure-Ressourcen und -Ressourcengruppen mit Node.js](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
+- [Manage Azure resources and resource groups with Node.js (Verwalten von Azure-Ressourcen und -Ressourcengruppen mit Node.js)](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
 - [Integrieren von Azure AD in eine NodeJS-Webanwendung](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) 
 
 Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.

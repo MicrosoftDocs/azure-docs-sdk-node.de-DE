@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
-ms.openlocfilehash: bd9577bf758552227a98a81b756a81ce05239be2
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: e712bf500bef94327f49a05e4ae31e5d3eb0400d
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260423"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49674265"
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>Azure-Serververwaltungsmodule für Node.js
 
@@ -34,8 +34,8 @@ Installieren der Azure-Serververwaltungsmodule für Node.js mithilfe von npm
 npm install azure-arm-servermanagement
 ```
 
-##<a name="example"></a>Beispiel
+## <a name="example"></a>Beispiel
 
-##<a name="samples"></a>Beispiele
+## <a name="samples"></a>Beispiele
 
 Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.
