@@ -1,6 +1,6 @@
 ---
-title: Azure-Module für Node.js
-description: Übersicht über die Azure-Verwaltungs- und -Dienstmodule für Node.js
+title: Azure-Module für JavaScript
+description: Übersicht über die Azure-Verwaltungsmodule und -Dienstmodule für JavaScript
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49672995"
 ---
-# <a name="azure-modules-for-nodejs"></a>Azure-Module für Node.js
+# <a name="azure-modules-for-javascript"></a>Azure-Module für JavaScript
 
-Verwalten Sie Azure-Ressourcen, und stellen Sie für Ihre Node.js-Anwendungen Verbindungen mit Diensten her, indem Sie die Azure-Module für Node.js verwenden. Der Code ist in Form von [npm-Modulen](node-sdk-azure-install.md) für die Verwendung in Ihren Projekten verfügbar. 
+Mit den Azure-Modulen für JavaScript können Sie Azure-Ressourcen verwalten und über Ihre JavaScript-Anwendungen Verbindungen mit Diensten herstellen. Der Code ist in Form von [npm-Modulen](node-sdk-azure-install.md) für die Verwendung in Ihren Projekten verfügbar. 
 
 ## <a name="manage-azure-resources"></a>Verwalten von Azure-Ressourcen
 
@@ -85,7 +85,7 @@ Die [Installationsanleitung](node-sdk-azure-install.md) enthält eine vollständ
 
 ## <a name="connect-to-azure-services"></a>Herstellen einer Verbindung mit Azure-Diensten
 
-Zusätzlich zur Verwendung der Azure-Module zum Erstellen und Verwalten von Ressourcen in Azure können Sie auch Pakete einsetzen, um Azure-Clouddienste in Ihren Apps zu verbinden und zu nutzen. Beispielsweise können Sie eine tabellarische SQL-Datenbank aktualisieren oder Dateien in Azure Storage hochladen. Wählen Sie das Paket, das Sie für einen bestimmten Dienst benötigen, aus der [vollständigen Liste](node-sdk-azure-install.md) aus. Im [Entwicklercenter für Node.js](https://azure.microsoft.com/develop/nodejs/) finden Sie Tutorials und Beispielcode zur Verwendung der Module in Ihren Apps.
+Zusätzlich zur Verwendung der Azure-Module zum Erstellen und Verwalten von Ressourcen in Azure können Sie auch Pakete einsetzen, um Azure-Clouddienste in Ihren Apps zu verbinden und zu nutzen. Beispielsweise können Sie eine tabellarische SQL-Datenbank aktualisieren oder Dateien in Azure Storage hochladen. Wählen Sie das Paket, das Sie für einen bestimmten Dienst benötigen, aus der [vollständigen Liste](node-sdk-azure-install.md) aus. Im [Entwicklercenter für JavaScript](https://azure.microsoft.com/develop/nodejs/) finden Sie Tutorials und Beispielcode zur Verwendung der Module in Ihren Apps.
 
 So drucken Sie beispielsweise die Inhalte der einzelnen Blobs in einem Azure-Speichercontainer aus:
 
