@@ -12,36 +12,36 @@ ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
 ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51134233"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51487905"
 ---
-# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="b660e-103">Cognitive Services Speech SDK für JavaScript</span><span class="sxs-lookup"><span data-stu-id="b660e-103">Cognitive Services Speech SDK for JavaScript</span></span>
+# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="de3c5-103">Cognitive Services Speech SDK für JavaScript</span><span class="sxs-lookup"><span data-stu-id="de3c5-103">Cognitive Services Speech SDK for JavaScript</span></span>
 
-## <a name="overview"></a><span data-ttu-id="b660e-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="b660e-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="de3c5-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="de3c5-104">Overview</span></span>
 
-<span data-ttu-id="b660e-105">Um die Entwicklung sprachaktivierter Anwendungen zu vereinfachen, stellt Microsoft das Speech SDK für den [Speech-Dienst](https://aka.ms/csspeech) bereit.</span><span class="sxs-lookup"><span data-stu-id="b660e-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
-<span data-ttu-id="b660e-106">Das Speech SDK bietet konsistente native Spracherkennungs- und Sprachübersetzungs-APIs.</span><span class="sxs-lookup"><span data-stu-id="b660e-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
+<span data-ttu-id="de3c5-105">Um die Entwicklung sprachaktivierter Anwendungen zu vereinfachen, stellt Microsoft das Speech SDK für den [Speech-Dienst](https://aka.ms/csspeech) bereit.</span><span class="sxs-lookup"><span data-stu-id="de3c5-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
+<span data-ttu-id="de3c5-106">Das Speech SDK bietet konsistente native Spracherkennungs- und Sprachübersetzungs-APIs.</span><span class="sxs-lookup"><span data-stu-id="de3c5-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b660e-107">Das Cognitive Services Speech SDK ist derzeit nur für Browser verfügbar.</span><span class="sxs-lookup"><span data-stu-id="b660e-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
-> <span data-ttu-id="b660e-108">Ein NPM-Paket folgt in Kürze.</span><span class="sxs-lookup"><span data-stu-id="b660e-108">An NPM package will follow soon.</span></span>
+> <span data-ttu-id="de3c5-107">Das Cognitive Services Speech SDK ist derzeit nur für Browser verfügbar.</span><span class="sxs-lookup"><span data-stu-id="de3c5-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
+> <span data-ttu-id="de3c5-108">Ein NPM-Paket folgt in Kürze.</span><span class="sxs-lookup"><span data-stu-id="de3c5-108">An NPM package will follow soon.</span></span>
 
-### <a name="install-the-speech-sdk"></a><span data-ttu-id="b660e-109">Installieren des Speech SDK</span><span class="sxs-lookup"><span data-stu-id="b660e-109">Install the Speech SDK</span></span>
+### <a name="install-the-speech-sdk"></a><span data-ttu-id="de3c5-109">Installieren des Speech SDK</span><span class="sxs-lookup"><span data-stu-id="de3c5-109">Install the Speech SDK</span></span>
 
-<span data-ttu-id="b660e-110">Laden Sie das Speech SDK als [ZIP-Paket](https://aka.ms/csspeech/jsbrowserpackage) herunter, und entpacken Sie es.</span><span class="sxs-lookup"><span data-stu-id="b660e-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
-<span data-ttu-id="b660e-111">Daraufhin sollte eine Reihe von Dateien, einschließlich einer Datei mit dem Namen `microsoft.cognitiveservices.speech.sdk.bundle.js`, entpackt werden.</span><span class="sxs-lookup"><span data-stu-id="b660e-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
-<span data-ttu-id="b660e-112">Laden Sie diese Datei als Skriptressource in Ihre Webseite, um das Speech SDK zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="b660e-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
+<span data-ttu-id="de3c5-110">Laden Sie das Speech SDK als [ZIP-Paket](https://aka.ms/csspeech/jsbrowserpackage) herunter, und entpacken Sie es.</span><span class="sxs-lookup"><span data-stu-id="de3c5-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
+<span data-ttu-id="de3c5-111">Daraufhin sollte eine Reihe von Dateien, einschließlich einer Datei mit dem Namen `microsoft.cognitiveservices.speech.sdk.bundle.js`, entpackt werden.</span><span class="sxs-lookup"><span data-stu-id="de3c5-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
+<span data-ttu-id="de3c5-112">Laden Sie diese Datei als Skriptressource in Ihre Webseite, um das Speech SDK zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="de3c5-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
 
 ```html
 <script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
 ```
 
-### <a name="example"></a><span data-ttu-id="b660e-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b660e-113">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="de3c5-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="de3c5-113">Example</span></span> 
 
-<span data-ttu-id="b660e-114">Die folgenden Codeausschnitte veranschaulichen, wie die einfache Spracherkennung in Ihrem Browser funktioniert:</span><span class="sxs-lookup"><span data-stu-id="b660e-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
+<span data-ttu-id="de3c5-114">Die folgenden Codeausschnitte veranschaulichen, wie die einfache Spracherkennung in Ihrem Browser funktioniert:</span><span class="sxs-lookup"><span data-stu-id="de3c5-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
 
 ```javascript 
 var SpeechSDK = window.SpeechSDK;
@@ -62,8 +62,8 @@ recognizer.recognizeOnceAsync(
 );
 ``` 
 
-<span data-ttu-id="b660e-115">Sehen Sie sich unsere [ausführlichen Schnellstartanleitungen](/azure/cognitive-services/speech-service/quickstart-js-browser) an.</span><span class="sxs-lookup"><span data-stu-id="b660e-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
+<span data-ttu-id="de3c5-115">Sehen Sie sich unsere [ausführlichen Schnellstartanleitungen](/azure/cognitive-services/speech-service/quickstart-js-browser) an.</span><span class="sxs-lookup"><span data-stu-id="de3c5-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
 
-## <a name="samples"></a><span data-ttu-id="b660e-116">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b660e-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="de3c5-116">Beispiele</span><span class="sxs-lookup"><span data-stu-id="de3c5-116">Samples</span></span>
 
-<span data-ttu-id="b660e-117">Sehen Sie sich im [Speech SDK-Beispielrepository](https://aka.ms/csspeech/samples) weitere Beispiele an.</span><span class="sxs-lookup"><span data-stu-id="b660e-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
+<span data-ttu-id="de3c5-117">Sehen Sie sich im [Speech SDK-Beispielrepository](https://aka.ms/csspeech/samples) weitere Beispiele an.</span><span class="sxs-lookup"><span data-stu-id="de3c5-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>

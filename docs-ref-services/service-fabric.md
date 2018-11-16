@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Fabric
 ms.openlocfilehash: 3fd2f73bc6fddf01548bbb92cce540775d4c7c76
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51083519"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51438404"
 ---
-# <a name="azure-service-fabric-modules-for-nodejs"></a><span data-ttu-id="7d33f-103">Azure Service Fabric-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="7d33f-103">Azure Service Fabric modules for Node.js</span></span>
+# <a name="azure-service-fabric-modules-for-nodejs"></a><span data-ttu-id="16b55-103">Azure Service Fabric-Module für Node.js</span><span class="sxs-lookup"><span data-stu-id="16b55-103">Azure Service Fabric modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="7d33f-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="7d33f-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="16b55-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="16b55-104">Overview</span></span>
 
-<span data-ttu-id="7d33f-105">Azure Service Fabric ist eine Plattform für verteilte Systeme, die das Packen, Bereitstellen und Verwalten skalierbarer und zuverlässiger Microservices und Container vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="7d33f-105">Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.</span></span>
+<span data-ttu-id="16b55-105">Azure Service Fabric ist eine Plattform für verteilte Systeme, die das Packen, Bereitstellen und Verwalten skalierbarer und zuverlässiger Microservices und Container vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="16b55-105">Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.</span></span>
 
-<span data-ttu-id="7d33f-106">Weitere Informationen zu [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)</span><span class="sxs-lookup"><span data-stu-id="7d33f-106">Learn more about [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).</span></span>
+<span data-ttu-id="16b55-106">Weitere Informationen zu [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)</span><span class="sxs-lookup"><span data-stu-id="16b55-106">Learn more about [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="7d33f-107">Verwaltungspaket</span><span class="sxs-lookup"><span data-stu-id="7d33f-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="16b55-107">Verwaltungspaket</span><span class="sxs-lookup"><span data-stu-id="16b55-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="7d33f-108">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="7d33f-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="16b55-108">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="16b55-108">Install the npm module</span></span>
 
-<span data-ttu-id="7d33f-109">Installieren des npm-Moduls für Azure Service Fabric</span><span class="sxs-lookup"><span data-stu-id="7d33f-109">Install the Azure Service Fabric npm module</span></span>
+<span data-ttu-id="16b55-109">Installieren des npm-Moduls für Azure Service Fabric</span><span class="sxs-lookup"><span data-stu-id="16b55-109">Install the Azure Service Fabric npm module</span></span>
 
 ```bash
 npm install azure-arm-servicefabric
 ```
 
-### <a name="example"></a><span data-ttu-id="7d33f-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7d33f-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="16b55-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="16b55-110">Example</span></span>
 
-<span data-ttu-id="7d33f-111">In diesem Beispiel wird gezeigt, wie Sie die Cluster für ein Azure-Abonnement auflisten können:</span><span class="sxs-lookup"><span data-stu-id="7d33f-111">This example shows how you can list the clusters for an Azure subscription.</span></span>
+<span data-ttu-id="16b55-111">In diesem Beispiel wird gezeigt, wie Sie die Cluster für ein Azure-Abonnement auflisten können:</span><span class="sxs-lookup"><span data-stu-id="16b55-111">This example shows how you can list the clusters for an Azure subscription.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -60,6 +60,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="7d33f-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="7d33f-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="16b55-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="16b55-112">Samples</span></span>
 
-<span data-ttu-id="7d33f-113">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="7d33f-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="16b55-113">Sehen Sie sich den weiteren [Node.js-Beispielcode](https://azure.microsoft.com/resources/samples/?platform=nodejs) an, den Sie in Ihren Apps verwenden können.</span><span class="sxs-lookup"><span data-stu-id="16b55-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
