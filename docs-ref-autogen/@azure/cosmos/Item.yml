@@ -1,0 +1,290 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22c72faefd43f0429a42377817a2b14111e1a1f3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52054065"
+items:
+- uid: '@azure/cosmos.Item'
+  name: Item
+  fullName: Item
+  children:
+  - '@azure/cosmos.Item.container'
+  - '@azure/cosmos.Item.delete'
+  - '@azure/cosmos.Item.delete_1'
+  - '@azure/cosmos.Item.id'
+  - '@azure/cosmos.Item.primaryKey'
+  - '@azure/cosmos.Item.read'
+  - '@azure/cosmos.Item.read_1'
+  - '@azure/cosmos.Item.replace'
+  - '@azure/cosmos.Item.replace_1'
+  - '@azure/cosmos.Item.url'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="c3f33-101">Zum Ausführen von Vorgängen für ein bestimmtes Element verwendet.</span><span class="sxs-lookup"><span data-stu-id="c3f33-101">Used to perform operations on a specific item.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.container'
+  name: container
+  fullName: container
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'container: Container'
+    return:
+      type:
+      - '@azure/cosmos.Container'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.delete'
+  name: delete(RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c3f33-102">Löschen Sie das Element an.</span><span class="sxs-lookup"><span data-stu-id="c3f33-102">Delete the item.</span></span>
+  syntax:
+    content: 'function delete(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c3f33-103">Zusätzliche Optionen für die Anforderung, z. B. den Partitionsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="c3f33-103">Additional options for the request, such as the partition key.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.delete_1'
+  name: delete(RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c3f33-104">Löschen Sie das Element an.</span><span class="sxs-lookup"><span data-stu-id="c3f33-104">Delete the item.</span></span>
+
+    <span data-ttu-id="c3f33-105">Alle bereitgestellten Typ T, nicht notwendigerweise vom SDK erzwungen wird.</span><span class="sxs-lookup"><span data-stu-id="c3f33-105">Any provided type, T, is not necessarily enforced by the SDK.</span></span>
+
+    <span data-ttu-id="c3f33-106">Erhalten Sie möglicherweise mehr oder weniger Eigenschaften, und es liegt an die Logik, um es zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="c3f33-106">You may get more or less properties and it's up to your logic to enforce it.</span></span>
+  syntax:
+    content: 'function delete<T>(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c3f33-107">Zusätzliche Optionen für die Anforderung, z. B. den Partitionsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="c3f33-107">Additional options for the request, such as the partition key.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.id'
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.primaryKey'
+  name: primaryKey
+  fullName: primaryKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'primaryKey: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.read'
+  name: read(RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c3f33-108">Lesen Sie das Element der Definition.</span><span class="sxs-lookup"><span data-stu-id="c3f33-108">Read the item's definition.</span></span>
+
+    <span data-ttu-id="c3f33-109">Es gibt keine Set-Schema für JSON-Elemente.</span><span class="sxs-lookup"><span data-stu-id="c3f33-109">There is no set schema for JSON items.</span></span> <span data-ttu-id="c3f33-110">Sie können eine beliebige Anzahl von benutzerdefinierten Eigenschaften enthalten.</span><span class="sxs-lookup"><span data-stu-id="c3f33-110">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function read(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c3f33-111">Zusätzliche Optionen für die Anforderung, z. B. den Partitionsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="c3f33-111">Additional options for the request, such as the partition key.</span></span>
+
+        <span data-ttu-id="c3f33-112">Beachten Sie, wenn Sie auf das Objekt einen Partitionsschlüssel angeben, wird den Primärschlüssel auf überschrieben `this.primaryKey`.</span><span class="sxs-lookup"><span data-stu-id="c3f33-112">Note, if you provide a partition key on the options object, it will override the primary key on `this.primaryKey`.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.read_1'
+  name: read(RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c3f33-113">Lesen Sie das Element der Definition.</span><span class="sxs-lookup"><span data-stu-id="c3f33-113">Read the item's definition.</span></span>
+
+    <span data-ttu-id="c3f33-114">Alle bereitgestellten Typ T, nicht notwendigerweise vom SDK erzwungen wird.</span><span class="sxs-lookup"><span data-stu-id="c3f33-114">Any provided type, T, is not necessarily enforced by the SDK.</span></span>
+
+    <span data-ttu-id="c3f33-115">Erhalten Sie möglicherweise mehr oder weniger Eigenschaften, und es liegt an die Logik, um es zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="c3f33-115">You may get more or less properties and it's up to your logic to enforce it.</span></span>
+
+    <span data-ttu-id="c3f33-116">Wenn Sie der Typ T eine Klasse ist, wird nicht übergeben `typeof` vergleichen, da es keine Übereinstimmung Prototyp hat.</span><span class="sxs-lookup"><span data-stu-id="c3f33-116">If the type, T, is a class, it won't pass `typeof` comparisons, because it won't have a match prototype.</span></span>
+
+    <span data-ttu-id="c3f33-117">Es wird empfohlen, nur Schnittstellen verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="c3f33-117">It's recommended to only use interfaces.</span></span>
+
+
+    <span data-ttu-id="c3f33-118">Es gibt keine Set-Schema für JSON-Elemente.</span><span class="sxs-lookup"><span data-stu-id="c3f33-118">There is no set schema for JSON items.</span></span> <span data-ttu-id="c3f33-119">Sie können eine beliebige Anzahl von benutzerdefinierten Eigenschaften enthalten.</span><span class="sxs-lookup"><span data-stu-id="c3f33-119">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function read<T>(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c3f33-120">Zusätzliche Optionen für die Anforderung, z. B. den Partitionsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="c3f33-120">Additional options for the request, such as the partition key.</span></span>
+
+        <span data-ttu-id="c3f33-121">Beachten Sie, wenn Sie auf das Objekt einen Partitionsschlüssel angeben, wird den Primärschlüssel auf überschrieben `this.primaryKey`.</span><span class="sxs-lookup"><span data-stu-id="c3f33-121">Note, if you provide a partition key on the options object, it will override the primary key on `this.primaryKey`.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.replace'
+  name: replace(ItemDefinition, RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c3f33-122">Ersetzen Sie das Element der Definition.</span><span class="sxs-lookup"><span data-stu-id="c3f33-122">Replace the item's definition.</span></span>
+
+    <span data-ttu-id="c3f33-123">Es gibt keine Set-Schema für JSON-Elemente.</span><span class="sxs-lookup"><span data-stu-id="c3f33-123">There is no set schema for JSON items.</span></span> <span data-ttu-id="c3f33-124">Sie können eine beliebige Anzahl von benutzerdefinierten Eigenschaften enthalten.</span><span class="sxs-lookup"><span data-stu-id="c3f33-124">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function replace(body: ItemDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.ItemDefinition'
+      description: <span data-ttu-id="c3f33-125">Die Definition zum Ersetzen des vorhandenen <xref:Item>Definition mit.</span><span class="sxs-lookup"><span data-stu-id="c3f33-125">The definition to replace the existing <xref:Item>'s defintion with.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c3f33-126">Zusätzliche Optionen für die Anforderung, z. B. den Partitionsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="c3f33-126">Additional options for the request, such as the partition key.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.replace_1'
+  name: replace(T, RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c3f33-127">Ersetzen Sie das Element der Definition.</span><span class="sxs-lookup"><span data-stu-id="c3f33-127">Replace the item's definition.</span></span>
+
+    <span data-ttu-id="c3f33-128">Alle bereitgestellten Typ T, nicht notwendigerweise vom SDK erzwungen wird.</span><span class="sxs-lookup"><span data-stu-id="c3f33-128">Any provided type, T, is not necessarily enforced by the SDK.</span></span>
+
+    <span data-ttu-id="c3f33-129">Erhalten Sie möglicherweise mehr oder weniger Eigenschaften, und es liegt an die Logik, um es zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="c3f33-129">You may get more or less properties and it's up to your logic to enforce it.</span></span>
+
+
+    <span data-ttu-id="c3f33-130">Es gibt keine Set-Schema für JSON-Elemente.</span><span class="sxs-lookup"><span data-stu-id="c3f33-130">There is no set schema for JSON items.</span></span> <span data-ttu-id="c3f33-131">Sie können eine beliebige Anzahl von benutzerdefinierten Eigenschaften enthalten.</span><span class="sxs-lookup"><span data-stu-id="c3f33-131">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function replace<T>(body: T, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - T
+      description: <span data-ttu-id="c3f33-132">Die Definition zum Ersetzen des vorhandenen <xref:Item>Definition mit.</span><span class="sxs-lookup"><span data-stu-id="c3f33-132">The definition to replace the existing <xref:Item>'s defintion with.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c3f33-133">Zusätzliche Optionen für die Anforderung, z. B. den Partitionsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="c3f33-133">Additional options for the request, such as the partition key.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Item.url'
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c3f33-134">Gibt eine Verweis-URL für die Ressource zurück.</span><span class="sxs-lookup"><span data-stu-id="c3f33-134">Returns a reference URL to the resource.</span></span> <span data-ttu-id="c3f33-135">Zum Verknüpfen von Berechtigungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="c3f33-135">Used for linking in Permissions.</span></span>
+  syntax:
+    content: 'url: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.Container'
+  name: Container
+  spec.typeScript:
+  - name: Container
+    fullName: Container
+    uid: '@azure/cosmos.Container'
+- uid: '@azure/cosmos.RequestOptions'
+  name: RequestOptions
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  name: ItemDefinition>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ItemResponse
+    fullName: ItemResponse
+    uid: '@azure/cosmos.ItemResponse'
+  - name: <
+    fullName: <
+  - name: ItemDefinition
+    fullName: ItemDefinition
+    uid: '@azure/cosmos.ItemDefinition'
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<@azure/cosmos.ItemResponse<T>>
+  name: ItemResponse<T>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ItemResponse
+    fullName: ItemResponse
+    uid: '@azure/cosmos.ItemResponse'
+  - name: <T>>
+    fullName: <T>>
+- uid: '@azure/cosmos.ItemDefinition'
+  name: ItemDefinition
+  spec.typeScript:
+  - name: ItemDefinition
+    fullName: ItemDefinition
+    uid: '@azure/cosmos.ItemDefinition'
