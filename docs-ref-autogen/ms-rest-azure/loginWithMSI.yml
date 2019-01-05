@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aefb4c20f71d148aac08516f52d42f1bb190bd82
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106615"
+items:
+- uid: ms-rest-azure.loginWithMSI
+  name: 'loginWithMSI((err: Error, credentials: MSIVmTokenCredentials) => void)'
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    Vor der Verwendung dieser Methode installieren Sie Azure-Befehlszeilenschnittstelle über https://github.com/Azure/azure-cli/releases.
+
+    Wenn Sie einen virtuellen Azure-Computer mit Azure Cli bereitgestellt werden, und MSI aktiviert hat, klicken Sie dann diese Methode können Sie zum Abrufen von Authentifizierungstoken auf dem virtuellen Computer.
+
+    Um einen neuen virtuellen Computer zu erstellen, Aktivieren von MSI, führen Sie diesen Befehl: az Vm zu erstellen – g < Resource_group_name > - n < VM-Name >--Assign-Identity--Image < Os_image_name > Hinweis: der obige Befehl aktiviert einen Dienstendpunkt mit auf dem Host, einen 50342 der Standardport
+
+
+    Führen Sie zum Aktivieren von MSI auf einem bereits bereitgestellten virtuellen Computer den folgenden Befehl: az Vm – Assign-Identity - g < Resource_group_name > -n < Vm_name >: Port < Custom_port_number >
+
+
+    Führen Sie Sie um weitere Informationen zu diesem Befehl: az Vm – Assign-Identity - h
+
+
+    Authentifizierung mit der Identity-Dienst auf virtuellen Azure-Computer ausgeführt wird.
+
+    Diese Methode sendet eine Anforderung an den Authentifizierungsdienst, der auf dem virtuellen Computer gehostet, und erhält ein Zugriffstoken zurück.
+  syntax:
+    content: 'function loginWithMSI(callback: (err: Error, credentials: MSIVmTokenCredentials) => void)'
+    parameters:
+    - id: callback
+      type:
+      - '(err: Error, credentials: MSIVmTokenCredentials) => void'
+      description: ''
+  package: ms-rest-azure

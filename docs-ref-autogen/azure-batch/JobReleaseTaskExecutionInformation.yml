@@ -1,0 +1,172 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cf9d4250258bc8d17f1129322e5dbda25163dfbc
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53683084"
+items:
+- uid: azure-batch.JobReleaseTaskExecutionInformation
+  name: JobReleaseTaskExecutionInformation
+  fullName: JobReleaseTaskExecutionInformation
+  children:
+  - azure-batch.JobReleaseTaskExecutionInformation.containerInfo
+  - azure-batch.JobReleaseTaskExecutionInformation.endTime
+  - azure-batch.JobReleaseTaskExecutionInformation.exitCode
+  - azure-batch.JobReleaseTaskExecutionInformation.failureInfo
+  - azure-batch.JobReleaseTaskExecutionInformation.result
+  - azure-batch.JobReleaseTaskExecutionInformation.startTime
+  - azure-batch.JobReleaseTaskExecutionInformation.state
+  - azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectory
+  - azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.containerInfo
+  name: containerInfo
+  fullName: containerInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn die Aufgabe in einem containerkontext ausgeführt wird.
+  optional: true
+  syntax:
+    content: 'containerInfo?: TaskContainerExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskContainerExecutionInformation
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn die Aufgabe im Zustand "abgeschlossen" ist.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.exitCode
+  name: exitCode
+  fullName: exitCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Dieser Parameter wird zurückgegeben, nur dann, wenn die Aufgabe den Zustand abgeschlossen ist. Der Exitcode für einen Prozess spiegelt wider, die spezifische Konvention, die vom Anwendungsentwickler für diesen Prozess implementiert wird. Wenn Sie den Exitcodewert, um Entscheidungen zu treffen, in Ihrem Code verwenden, achten Sie darauf, dass Sie wissen, dass die beenden-Code-Konvention, die von der der Anwendungsprozess verwendet. Beachten Sie, dass der Exitcode auch generiert werden kann, durch den Compute-Knoten ausgeführt wird, z. B. wenn ein Prozess abgebrochen wird.
+  optional: true
+  syntax:
+    content: 'exitCode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.failureInfo
+  name: failureInfo
+  fullName: failureInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, wenn die Aufgabe den Zustand abgeschlossen ist, und hat einen Fehler festgestellt.
+  optional: true
+  syntax:
+    content: 'failureInfo?: TaskFailureInformation'
+    return:
+      type:
+      - azure-batch.TaskFailureInformation
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.result
+  name: result
+  fullName: result
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Wenn der Wert "fehlgeschlagen", klicken Sie dann die Details des Fehlers in der Eigenschaft FailureInfo finden. Folgende Werte sind möglich: "Success", "Failure"'
+  optional: true
+  syntax:
+    content: 'result?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn der Task neu gestartet oder wiederholt wurde, ist dies der letzte Zeitpunkt, an dem die Ausführung des Tasks gestartet wurde.
+  syntax:
+    content: 'startTime: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Folgende Werte sind möglich: "wird ausgeführt", "abgeschlossen"'
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectory
+  name: taskRootDirectory
+  fullName: taskRootDirectory
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskRootDirectory?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl
+  name: taskRootDirectoryUrl
+  fullName: taskRootDirectoryUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskRootDirectoryUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerExecutionInformation
+  name: TaskContainerExecutionInformation
+  spec.typeScript:
+  - name: TaskContainerExecutionInformation
+    fullName: TaskContainerExecutionInformation
+    uid: azure-batch.TaskContainerExecutionInformation
+- uid: azure-batch.TaskFailureInformation
+  name: TaskFailureInformation
+  spec.typeScript:
+  - name: TaskFailureInformation
+    fullName: TaskFailureInformation
+    uid: azure-batch.TaskFailureInformation

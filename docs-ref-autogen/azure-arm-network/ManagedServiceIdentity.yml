@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 27aa7ac790ed163cb9af51ea0d9634b7c3d55c53
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53697792"
+items:
+- uid: azure-arm-network.ManagedServiceIdentity
+  name: ManagedServiceIdentity
+  fullName: ManagedServiceIdentity
+  children:
+  - azure-arm-network.ManagedServiceIdentity.principalId
+  - azure-arm-network.ManagedServiceIdentity.tenantId
+  - azure-arm-network.ManagedServiceIdentity.type
+  - azure-arm-network.ManagedServiceIdentity.userAssignedIdentities
+  langs:
+  - typeScript
+  type: interface
+  summary: Die Identität für die Ressource.
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.principalId
+  name: principalId
+  fullName: principalId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Prinzipal-Id der vom System zugewiesene Identität. Diese Eigenschaft wird nur für ein System zugewiesene Identität bereitgestellt werden.
+  optional: true
+  syntax:
+    content: 'principalId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.tenantId
+  name: tenantId
+  fullName: tenantId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Mandanten-Id der vom System zugewiesene Identität. Diese Eigenschaft wird nur für ein System zugewiesene Identität bereitgestellt werden.
+  optional: true
+  syntax:
+    content: 'tenantId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Der Typ der Identität, die für die Ressource verwendet werden soll. Der Typ \"SystemAssigned, UserAssigned\" enthält sowohl eine implizit erstellter Identität als auch einen Satz von Benutzer zugewiesene Identitäten durchführen. Der Typ 'None' werden alle Identitäten aus dem virtuellen Computer entfernt. Mögliche Werte sind: \"SystemAssigned\", \"UserAssigned\", \"SystemAssigned, UserAssigned\", \"None\""
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.userAssignedIdentities
+  name: userAssignedIdentities
+  fullName: userAssignedIdentities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Die Liste von Benutzeridentitäten Ressource zugeordnet werden soll. Identität Wörterbuch Schlüssel Verweise auf die werden ARM-Ressourcen-Ids in der Form: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName} \"."
+  optional: true
+  syntax:
+    content: 'userAssignedIdentities?: [key: string]: ManagedServiceIdentityUserAssignedIdentitiesValue'
+    return:
+      type:
+      - '[key: string]: azure-arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'
+  package: azure-arm-network
+references:
+- uid: '[key: string]: azure-arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'
+  name: ManagedServiceIdentityUserAssignedIdentitiesValue
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: ManagedServiceIdentityUserAssignedIdentitiesValue
+    fullName: ManagedServiceIdentityUserAssignedIdentitiesValue
+    uid: azure-arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue

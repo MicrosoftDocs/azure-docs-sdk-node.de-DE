@@ -1,0 +1,188 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3562d0ae5e734584e77d51e8c4b4fdf4d095345a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674324"
+items:
+- uid: azure-batch.TaskExecutionInformation
+  name: TaskExecutionInformation
+  fullName: TaskExecutionInformation
+  children:
+  - azure-batch.TaskExecutionInformation.containerInfo
+  - azure-batch.TaskExecutionInformation.endTime
+  - azure-batch.TaskExecutionInformation.exitCode
+  - azure-batch.TaskExecutionInformation.failureInfo
+  - azure-batch.TaskExecutionInformation.lastRequeueTime
+  - azure-batch.TaskExecutionInformation.lastRetryTime
+  - azure-batch.TaskExecutionInformation.requeueCount
+  - azure-batch.TaskExecutionInformation.result
+  - azure-batch.TaskExecutionInformation.retryCount
+  - azure-batch.TaskExecutionInformation.startTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.containerInfo
+  name: containerInfo
+  fullName: containerInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn die Aufgabe in einem containerkontext ausgeführt wird.
+  optional: true
+  syntax:
+    content: 'containerInfo?: TaskContainerExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskContainerExecutionInformation
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn die Aufgabe im Zustand "abgeschlossen" ist.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.exitCode
+  name: exitCode
+  fullName: exitCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn die Aufgabe den Zustand abgeschlossen ist. Der Exitcode für einen Prozess gibt im Allgemeinen die spezifische Konvention, die vom Anwendungsentwickler für diesen Prozess implementiert. Wenn Sie den Exitcodewert, um Entscheidungen zu treffen, in Ihrem Code verwenden, achten Sie darauf, dass Sie wissen, dass die beenden-Code-Konvention, die von der der Anwendungsprozess verwendet. Wenn der Batch-Dienst den Task (aufgrund von Zeitüberschreitung oder Beendigung der Benutzer über die API) beendet wird, möglicherweise jedoch einen vom Betriebssystem definierte Exitcode angezeigt.
+  optional: true
+  syntax:
+    content: 'exitCode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.failureInfo
+  name: failureInfo
+  fullName: failureInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, wenn die Aufgabe den Zustand abgeschlossen ist, und hat einen Fehler festgestellt.
+  optional: true
+  syntax:
+    content: 'failureInfo?: TaskFailureInformation'
+    return:
+      type:
+      - azure-batch.TaskFailureInformation
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.lastRequeueTime
+  name: lastRequeueTime
+  fullName: lastRequeueTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn "requeuecount" ungleich NULL ist.
+  optional: true
+  syntax:
+    content: 'lastRequeueTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.lastRetryTime
+  name: lastRetryTime
+  fullName: lastRetryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Dieses Element ist nur vorhanden, wenn der Vorgang wiederholt wurde (d. h. RetryCount ungleich NULL ist). Falls vorhanden, dies ist in der Regel identisch mit "StartTime", aber möglicherweise anders, wenn die Aufgabe Gründen als "Wiederholen" neu gestartet wurde, z. B. wenn die Compute-Knoten bei einem erneuten Versuch neu gestartet wurde, klicken Sie dann "StartTime" wird aktualisiert, aber die LastRetryTime ist nicht.
+  optional: true
+  syntax:
+    content: 'lastRetryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.requeueCount
+  name: requeueCount
+  fullName: requeueCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn die Benutzer entfernt Knoten eines Pools (durch Ändern der Größe von/Verkleinern des Pools) oder wenn der Auftrag deaktiviert wird, kann der Benutzer angeben, dass auf den Knoten ausgeführter tasks werden für die Ausführung abgewartet. Dieser Zähler überwacht, wie oft der Task aus diesen Gründen in die Warteschlange gestellt wurde.
+  syntax:
+    content: 'requeueCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.result
+  name: result
+  fullName: result
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Wenn der Wert "fehlgeschlagen", klicken Sie dann die Details des Fehlers in der Eigenschaft FailureInfo finden. Folgende Werte sind möglich: "Success", "Failure"'
+  optional: true
+  syntax:
+    content: 'result?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.retryCount
+  name: retryCount
+  fullName: retryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Anwendung Fehler auftreten (Exitcode ungleich null) wiederholt werden, Fehler (der Vorgang konnte nicht ausgeführt werden) vor der Verarbeitung und Fehlern beim Dateiupload werden nicht erneut versucht. Der batchdienst wiederholt die Aufgabe gilt ein Grenzwert angegeben, durch die Einschränkungen.
+  syntax:
+    content: 'retryCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "\"Ausgeführt\" entspricht den Ausführungsstatus, also wenn der Task Ressourcendateien oder Anwendungspakete, und klicken Sie dann die Startzeit gibt die Zeit, zu dem der Task begonnen hat, herunterladen oder Bereitstellen dieser, widerspiegelt. Wenn der Task neu gestartet oder wiederholt wurde, ist dies der letzte Zeitpunkt, an dem die Ausführung des Tasks gestartet wurde. Diese Eigenschaft ist nur für Aufgaben, die in der laufenden oder abgeschlossenen Zustand befinden."
+  optional: true
+  syntax:
+    content: 'startTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerExecutionInformation
+  name: TaskContainerExecutionInformation
+  spec.typeScript:
+  - name: TaskContainerExecutionInformation
+    fullName: TaskContainerExecutionInformation
+    uid: azure-batch.TaskContainerExecutionInformation
+- uid: azure-batch.TaskFailureInformation
+  name: TaskFailureInformation
+  spec.typeScript:
+  - name: TaskFailureInformation
+    fullName: TaskFailureInformation
+    uid: azure-batch.TaskFailureInformation

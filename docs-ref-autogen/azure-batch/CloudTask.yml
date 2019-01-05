@@ -1,0 +1,535 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7b15fc14fb3cf5a610ca8f083844c96503c8ec87
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665214"
+items:
+- uid: azure-batch.CloudTask
+  name: CloudTask
+  fullName: CloudTask
+  children:
+  - azure-batch.CloudTask.affinityInfo
+  - azure-batch.CloudTask.applicationPackageReferences
+  - azure-batch.CloudTask.authenticationTokenSettings
+  - azure-batch.CloudTask.commandLine
+  - azure-batch.CloudTask.constraints
+  - azure-batch.CloudTask.containerSettings
+  - azure-batch.CloudTask.creationTime
+  - azure-batch.CloudTask.dependsOn
+  - azure-batch.CloudTask.displayName
+  - azure-batch.CloudTask.environmentSettings
+  - azure-batch.CloudTask.eTag
+  - azure-batch.CloudTask.executionInfo
+  - azure-batch.CloudTask.exitConditions
+  - azure-batch.CloudTask.id
+  - azure-batch.CloudTask.lastModified
+  - azure-batch.CloudTask.multiInstanceSettings
+  - azure-batch.CloudTask.nodeInfo
+  - azure-batch.CloudTask.outputFiles
+  - azure-batch.CloudTask.previousState
+  - azure-batch.CloudTask.previousStateTransitionTime
+  - azure-batch.CloudTask.resourceFiles
+  - azure-batch.CloudTask.state
+  - azure-batch.CloudTask.stateTransitionTime
+  - azure-batch.CloudTask.stats
+  - azure-batch.CloudTask.url
+  - azure-batch.CloudTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Batch wiederholt Tasks aus, wenn ein Wiederherstellungsvorgang auf einem Computeknoten ausgelöst wird.
+
+    Beispiele für die Recovery-Vorgänge enthalten (aber Sie sind nicht darauf beschränkt) bei einem fehlerhaften Computeknoten neu gestartet wird oder Compute-Knoten aufgrund eines hostfehlers verschwunden. Wiederholungen aufgrund von Recovery-Vorgänge werden unabhängig von, und werden nicht anhand der "maxtaskretrycount" gezählt. Auch wenn der "maxtaskretrycount" auf 0 (null) eine interne Wiederholung aufgrund eines Wiederherstellungsvorgangs auftreten ist. Aus diesem Grund sollten alle Vorgänge Idempotent sein. Dies bedeutet, dass Aufgaben tolerieren kann unterbrochen und neu gestartet, ohne dass Beschädigung oder doppelter Daten. Die am besten für lang andauernde Aufgaben besteht darin, verwenden Sie eine Form von Prüfpunkten zu üben.
+  package: azure-batch
+- uid: azure-batch.CloudTask.affinityInfo
+  name: affinityInfo
+  fullName: affinityInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'affinityInfo?: AffinityInformation'
+    return:
+      type:
+      - azure-batch.AffinityInformation
+  package: azure-batch
+- uid: azure-batch.CloudTask.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Anwendungspakete werden heruntergeladen und auf einem freigegebenen Verzeichnis, nicht die Aufgabe, die Arbeitsverzeichnis bereitgestellt. Aus diesem Grund Wenn ein Referenziertes Paket bereits auf dem Computeknoten ist und auf dem neuesten Stand ist, wird dann sie nicht erneut heruntergeladen. Es wird die vorhandene Kopie auf dem Computeknoten verwendet. Wenn ein Paket auf die verwiesen wird, z. B. installiert werden kann, da das Paket gelöscht wurde oder da Fehler beim Herunterladen der Task fehlschlägt.
+  optional: true
+  syntax:
+    content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.authenticationTokenSettings
+  name: authenticationTokenSettings
+  fullName: authenticationTokenSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn diese Eigenschaft festgelegt ist, enthält der Batch-Dienst den Task mit dem ein Authentifizierungstoken, die verwendet werden kann, um Batch-Dienst-Vorgänge zu authentifizieren, ohne einen kontozugriffsschlüssel. Das Token wird über die Umgebungsvariable AZ_BATCH_AUTHENTICATION_TOKEN bereitgestellt. Die Vorgänge, die mit dem Token die Aufgabe ausführen kann, hängen von den Einstellungen ab. Ein Task kann z. B. Auftrags verfügen, um andere Aufgaben zum Auftrag hinzufügen oder Überprüfen Sie den Status des Auftrags oder andere Aufgaben unter dem Auftrag anfordern.
+  optional: true
+  syntax:
+    content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+    return:
+      type:
+      - azure-batch.AuthenticationTokenSettings
+  package: azure-batch
+- uid: azure-batch.CloudTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Für Tasks mit mehreren Instanzen wird die Befehlszeile als die primäre Aufgabe ausgeführt, nachdem der primärtask und alle Subtasks die Ausführung der Befehlszeile zur Koordination beendet haben. Die Befehlszeile wird nicht unter einer Shell ausgeführt, und daher nicht nutzen Shellfeatures wie die Erweiterung von Umgebungsvariablen. Wenn Sie solche Features nutzen möchten, Sie sollten die Shell Aufrufen in der Befehlszeile, z. B. mit "Cmd/c MyCommand" in Windows oder "/ Bin/sh - C MyCommand" unter Linux. Bezieht sich die Befehlszeile auf Dateipfade, sollten sie einen relativen Pfad (relativ zum Arbeitsverzeichnis Aufgabe), oder verwenden Sie die angegebene Batch-Umgebungsvariable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).
+  optional: true
+  syntax:
+    content: 'commandLine?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.CloudTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn der Pool, der diese Aufgabe ausgeführt wird ContainerConfiguration festgelegt hat, muss dies ebenfalls festgelegt werden. Wenn der Pool, der diese Aufgabe ausgeführt wird ContainerConfiguration festgelegt hat, muss dies nicht festgelegt werden. Wenn dies angegeben ist, werden alle Verzeichnisse rekursiv unter dem AZ_BATCH_NODE_ROOT_DIR (der Stamm der Azure Batch-Verzeichnisse auf dem Knoten) in den Container zugeordnet, werden alle Variablen in den Container zugeordnet und wird von der Befehlszeile des Tasks in den Container ausgeführt.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.CloudTask.creationTime
+  name: creationTime
+  fullName: creationTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'creationTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.dependsOn
+  name: dependsOn
+  fullName: dependsOn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Aufgabe wird nicht geplant werden, bis alle Aufgaben, von denen es abhängt, erfolgreich abgeschlossen wurden. Wenn diese Aufgaben fehlschlagen und deren Anzahl Wiederholungsversuche ausgeschöpft, wird dieser Task nie geplant werden.
+  optional: true
+  syntax:
+    content: 'dependsOn?: TaskDependencies'
+    return:
+      type:
+      - azure-batch.TaskDependencies
+  package: azure-batch
+- uid: azure-batch.CloudTask.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Anzeigename muss nicht eindeutig sein und kann bis zu einer maximalen Länge von 1024 beliebigen Unicode-Zeichen enthalten.
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.eTag
+  name: eTag
+  fullName: eTag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Dies ist eine nicht transparente Zeichenfolge. Sie können es verwenden, um festzustellen, ob die Aufgabe, die zwischen Anforderungen geändert wurde. Insbesondere können Sie sein übergeben das ETag beim Aktualisieren einer Aufgabe, um anzugeben, dass die Änderungen wirksam werden soll, nur dann, wenn keine andere Person die Aufgabe in der Zwischenzeit geändert hat.
+  optional: true
+  syntax:
+    content: 'eTag?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.executionInfo
+  name: executionInfo
+  fullName: executionInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'executionInfo?: TaskExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskExecutionInformation
+  package: azure-batch
+- uid: azure-batch.CloudTask.exitConditions
+  name: exitConditions
+  fullName: exitConditions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wie der Batch-Dienst reagieren soll, wenn die Aufgabe abgeschlossen ist.
+  optional: true
+  syntax:
+    content: 'exitConditions?: ExitConditions'
+    return:
+      type:
+      - azure-batch.ExitConditions
+  package: azure-batch
+- uid: azure-batch.CloudTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die ID kann eine beliebige Kombination von alphanumerischen Zeichen einschließlich Bindestriche und Unterstriche enthalten und darf nicht mehr als 64 Zeichen enthalten.
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.lastModified
+  name: lastModified
+  fullName: lastModified
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'lastModified?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.multiInstanceSettings
+  name: multiInstanceSettings
+  fullName: multiInstanceSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'multiInstanceSettings?: MultiInstanceSettings'
+    return:
+      type:
+      - azure-batch.MultiInstanceSettings
+  package: azure-batch
+- uid: azure-batch.CloudTask.nodeInfo
+  name: nodeInfo
+  fullName: nodeInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'nodeInfo?: ComputeNodeInformation'
+    return:
+      type:
+      - azure-batch.ComputeNodeInformation
+  package: azure-batch
+- uid: azure-batch.CloudTask.outputFiles
+  name: outputFiles
+  fullName: outputFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Für Tasks mit mehreren Instanzen werden die Dateien nur aus den Compute-Knoten hochgeladen werden auf denen die Aufgabe ausgeführt wird.
+  optional: true
+  syntax:
+    content: 'outputFiles?: OutputFile[]'
+    return:
+      type:
+      - azure-batch.OutputFile[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.previousState
+  name: previousState
+  fullName: previousState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Diese Eigenschaft ist nicht festgelegt werden, wenn die Aufgabe in seinen anfänglichen aktiven Status befindet. Folgende Werte sind möglich: "aktiv", "Vorbereiten", "wird ausgeführt", "abgeschlossen"'
+  optional: true
+  syntax:
+    content: 'previousState?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.previousStateTransitionTime
+  name: previousStateTransitionTime
+  fullName: previousStateTransitionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft ist nicht festgelegt werden, wenn die Aufgabe in seinen anfänglichen aktiven Status befindet.
+  optional: true
+  syntax:
+    content: 'previousStateTransitionTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Für Tasks mit mehreren Instanzen werden die Dateien nur auf den Computeknoten heruntergeladen werden auf denen die Aufgabe ausgeführt wird. Es ist eine maximale Größe für die Liste der Ressourcendateien.  Wenn die maximale Größe überschritten wird, die Anforderung schlägt fehl, und der Fehlercode der Antwort werden RequestEntityTooLarge. In diesem Fall muss die Auflistung der ResourceFiles Größe reduziert werden. Dies kann erreicht werden, mithilfe von ZIP-Dateien, Anwendungspakete oder Docker-Container.
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Folgende Werte sind möglich: "aktiv", "Vorbereiten", "wird ausgeführt", "abgeschlossen"'
+  optional: true
+  syntax:
+    content: 'state?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.stateTransitionTime
+  name: stateTransitionTime
+  fullName: stateTransitionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'stateTransitionTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.stats
+  name: stats
+  fullName: stats
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'stats?: TaskStatistics'
+    return:
+      type:
+      - azure-batch.TaskStatistics
+  package: azure-batch
+- uid: azure-batch.CloudTask.url
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'url?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn nicht angegeben, wird die Aufgabe als eine eindeutige Benutzer ohne Administratorrechte an die Aufgabe ausgeführt.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.AffinityInformation
+  name: AffinityInformation
+  spec.typeScript:
+  - name: AffinityInformation
+    fullName: AffinityInformation
+    uid: azure-batch.AffinityInformation
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.AuthenticationTokenSettings
+  name: AuthenticationTokenSettings
+  spec.typeScript:
+  - name: AuthenticationTokenSettings
+    fullName: AuthenticationTokenSettings
+    uid: azure-batch.AuthenticationTokenSettings
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.TaskDependencies
+  name: TaskDependencies
+  spec.typeScript:
+  - name: TaskDependencies
+    fullName: TaskDependencies
+    uid: azure-batch.TaskDependencies
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.TaskExecutionInformation
+  name: TaskExecutionInformation
+  spec.typeScript:
+  - name: TaskExecutionInformation
+    fullName: TaskExecutionInformation
+    uid: azure-batch.TaskExecutionInformation
+- uid: azure-batch.ExitConditions
+  name: ExitConditions
+  spec.typeScript:
+  - name: ExitConditions
+    fullName: ExitConditions
+    uid: azure-batch.ExitConditions
+- uid: azure-batch.MultiInstanceSettings
+  name: MultiInstanceSettings
+  spec.typeScript:
+  - name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    uid: azure-batch.MultiInstanceSettings
+- uid: azure-batch.ComputeNodeInformation
+  name: ComputeNodeInformation
+  spec.typeScript:
+  - name: ComputeNodeInformation
+    fullName: ComputeNodeInformation
+    uid: azure-batch.ComputeNodeInformation
+- uid: azure-batch.OutputFile[]
+  name: OutputFile[]
+  spec.typeScript:
+  - name: OutputFile
+    fullName: OutputFile
+    uid: azure-batch.OutputFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.TaskStatistics
+  name: TaskStatistics
+  spec.typeScript:
+  - name: TaskStatistics
+    fullName: TaskStatistics
+    uid: azure-batch.TaskStatistics
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity

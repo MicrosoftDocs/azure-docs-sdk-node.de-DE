@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b5e677e6562e3636f6003ba382cb8461c02a87c9
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678084"
+items:
+- uid: azure-servicefabric.ServiceTypeHealthPolicy
+  name: ServiceTypeHealthPolicy
+  fullName: ServiceTypeHealthPolicy
+  children:
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices
+  langs:
+  - typeScript
+  type: interface
+  summary: Stellt die Integritätsrichtlinie dar, die zum Bewerten der Integrität von Diensten eines Diensttyps verwendet wird.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService
+  name: maxPercentUnhealthyPartitionsPerService
+  fullName: maxPercentUnhealthyPartitionsPerService
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Die maximal zulässige Prozentsatz fehlerhafter Partitionen pro Dienst. Zulässige Werte sind Byte-Werte von 0 (null) und der Prozentsatz, die toleriert werden maximal darstellt 100 Prozent der Partitionen, die vor dem Dienst fehlerhaft sein können, wird als Fehler betrachtet.
+
+    Wenn der Prozentsatz eingehalten, aber mindestens eine fehlerhafte Partition vorhanden ist, wird die Integrität als Warnung ausgewertet.
+
+    Durch Dividieren der Anzahl der fehlerhaften Partitionen durch die Gesamtanzahl der Partitionen in der Dienst wird berechnet.
+
+    Rundet auf die Berechnung auf um einen Fehler auf einer kleinen Anzahl von Partitionen zu tolerieren. Der Standardprozentsatz ist null.
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyPartitionsPerService?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition
+  name: maxPercentUnhealthyReplicasPerPartition
+  fullName: maxPercentUnhealthyReplicasPerPartition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Die maximal zulässige Prozentsatz fehlerhafter Replikate pro Partition. Zulässige Werte sind Byte-Werte von 0 bis 100.
+
+    Der Prozentsatz entspricht den maximalen tolerierten Prozentsatz der Replikate, die fehlerhaft sein können, bevor die Partition als fehlerhaft behandelt wird.
+
+    Der Prozentsatz eingehalten, gibt es aber mindestens ein fehlerhaftes Replikat, wird die Integrität als Warnung ausgewertet.
+
+    Durch Dividieren der Anzahl von fehlerhaften Replikaten durch die Gesamtanzahl von Replikaten in der Partition wird berechnet.
+
+    Rundet auf die Berechnung um einen Fehler auf einer kleinen Anzahl der Replikate tolerieren. Der Standardprozentsatz ist null.
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyReplicasPerPartition?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices
+  name: maxPercentUnhealthyServices
+  fullName: maxPercentUnhealthyServices
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Die maximal zulässige Prozentsatz fehlerhafter Dienste. Zulässige Werte sind Byte-Werte von 0 bis 100.
+
+    Der Prozentsatz entspricht den maximalen tolerierten Prozentsatz von Diensten, die fehlerhaft sein können, bevor die Anwendung als fehlerhaft behandelt wird.
+
+    Wenn der Prozentsatz eingehalten, aber mindestens eine fehlerhafte Dienst vorhanden ist, wird die Integrität als Warnung ausgewertet.
+
+    Dies wird durch die Anzahl fehlerhafter Dienste, die bestimmten Diensttyps dividiert wird durch die Gesamtanzahl der Dienste des Typs bestimmte Dienste berechnet.
+
+    Rundet auf die Berechnung auf um einen Fehler auf einer kleinen Anzahl von Diensten zu tolerieren. Der Standardprozentsatz ist null.
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyServices?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric

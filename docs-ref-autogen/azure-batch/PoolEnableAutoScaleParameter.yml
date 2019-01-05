@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3c07fa36a39040e81fdbcb74f9323425654ec408
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53676284"
+items:
+- uid: azure-batch.PoolEnableAutoScaleParameter
+  name: PoolEnableAutoScaleParameter
+  fullName: PoolEnableAutoScaleParameter
+  children:
+  - azure-batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval
+  - azure-batch.PoolEnableAutoScaleParameter.autoScaleFormula
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval
+  name: autoScaleEvaluationInterval
+  fullName: autoScaleEvaluationInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Standardwert ist 15 Minuten. Die minimale und maximale Wert sind 5 Minuten und 168 Stunden. Wenn Sie einen Wert kleiner als 5 Minuten größer oder gleich 168 Stunden angeben, weist der Batch-Dienst die Anforderung mit einem Fehler der ungültigen Eigenschaft-Wert zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung). Wenn Sie ein neues Intervall angeben, werden der vorhandene auswertungszeitplan für automatische Skalierung wird beendet, und ein neuen Zeitplan für die automatische Skalierung wird gestartet, mit der Startzeit wird die Zeit, wenn diese Anforderung ausgestellt wurde.
+  optional: true
+  syntax:
+    content: 'autoScaleEvaluationInterval?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.PoolEnableAutoScaleParameter.autoScaleFormula
+  name: autoScaleFormula
+  fullName: autoScaleFormula
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die Formel wird auf Gültigkeit überprüft, bevor es an den Pool angewendet wird. Wenn die Formel nicht gültig ist, lehnt der Batch-Dienst die Anforderung mit detaillierten Fehlerinformationen ab.
+
+    Weitere Informationen zum Angeben dieser Formel finden Sie unter automatisch Skalieren von Computeknoten in einem Azure Batch-Pool (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).
+  optional: true
+  syntax:
+    content: 'autoScaleFormula?: string'
+    return:
+      type:
+      - string
+  package: azure-batch

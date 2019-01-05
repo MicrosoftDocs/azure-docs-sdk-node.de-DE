@@ -1,0 +1,77 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5064c7ba42cdf7e585c62232e01311cde594e7af
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53710405"
+items:
+- uid: azure-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  fullName: NetworkConfiguration
+  children:
+  - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+  - azure-batch.NetworkConfiguration.endpointConfiguration
+  - azure-batch.NetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: Die Netzwerkkonfiguration für einen Pool.
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+  name: dynamicVNetAssignmentScope
+  fullName: dynamicVNetAssignmentScope
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Folgende Werte sind möglich: "none", "Auftrag"'
+  optional: true
+  syntax:
+    content: 'dynamicVNetAssignmentScope?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.endpointConfiguration
+  name: endpointConfiguration
+  fullName: endpointConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Poolendpunktkonfiguration wird nur in Pools mit der VirtualMachineConfiguration-Eigenschaft unterstützt.
+  optional: true
+  syntax:
+    content: 'endpointConfiguration?: PoolEndpointConfiguration'
+    return:
+      type:
+      - azure-batch.PoolEndpointConfiguration
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Dies ist das Format: / Subscriptions / {Subscription} / ResourceGroups / {Gruppe} / Providers / {Provider} /virtualNetworks/ {Network} / Subnets / {Subnetz}.
+
+    Das virtuelle Netzwerk muss sich in derselben Region und demselben Abonnement wie der Azure Batch-Konto.
+
+    Das angegebene Subnetz müssen genügend freien IP-Adressen für die Anzahl der Knoten im Pool verfügt. Wenn das Subnetz nicht über genügend freie IP-Adressen verfügt, der Pool belegt teilweise Compute-Knoten und ein anpassungsfehler erfolgt. Für Pools mit der VirtualMachineConfiguration erstellt nur ARM virtuelle Netzwerke ("Microsoft.Network/virtualNetworks') unterstützt werden, aber für Pools mit CloudServiceConfiguration erstellt sowohl ARM als auch klassische virtuelle Netzwerke werden unterstützt. Weitere Informationen finden Sie unter: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.PoolEndpointConfiguration
+  name: PoolEndpointConfiguration
+  spec.typeScript:
+  - name: PoolEndpointConfiguration
+    fullName: PoolEndpointConfiguration
+    uid: azure-batch.PoolEndpointConfiguration
