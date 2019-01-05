@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 06b60b35e92b1bdb78fb167cb73a13f659ab965c
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658924"
+items:
+- uid: azure-batch.Schedule
+  name: Schedule
+  fullName: Schedule
+  children:
+  - azure-batch.Schedule.doNotRunAfter
+  - azure-batch.Schedule.doNotRunUntil
+  - azure-batch.Schedule.recurrenceInterval
+  - azure-batch.Schedule.startWindow
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunAfter
+  name: doNotRunAfter
+  fullName: doNotRunAfter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn Sie keine Uhrzeit für DoNotRunAfter angeben und Sie einen Zeitplan für wiederkehrende Aufträge erstellen, wird der Auftragszeitplan aktiv bleiben, bis Sie ihn explizit beenden.
+  optional: true
+  syntax:
+    content: 'doNotRunAfter?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunUntil
+  name: doNotRunUntil
+  fullName: doNotRunUntil
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn Sie keine DoNotRunUntil-Uhrzeit angeben, wird der Zeitplan Aufträge sofort zu erstellen.
+  optional: true
+  syntax:
+    content: 'doNotRunUntil?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.recurrenceInterval
+  name: recurrenceInterval
+  fullName: recurrenceInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Ein Auftragszeitplan zu jedem Zeitpunkt, höchstens einen aktiven Auftrag unter sich haben kann, wenn es Zeit wird, einen neuen Auftrag unter einem Auftragszeitplan erstellen, aber der vorherige Auftrag wird noch ausgeführt, wird der Batch-Dienst nicht den neuen Auftrag erstellen, bis der vorherige Auftrag abgeschlossen ist. Wenn der vorherige Auftrag nicht innerhalb des Zeitraums "startwindow" die neue RecurrenceInterval beendet wird, wird kein neuer Auftrag für dieses Intervall geplant werden. Für wiederkehrende Aufträge verwendet sollten Sie normalerweise eine JobManagerTask in die jobspecification wirken angeben. Wenn Sie nicht JobManagerTask verwenden, benötigen Sie einen externen Prozess überwachen, wenn Aufträge erstellt werden, Hinzufügen von Aufgaben für die Aufträge aus, und Beenden der Aufträge für die nächste Wiederholung bereit. Der Standardwert ist, dass der Zeitplan nicht wiederholt wird: ein Auftrag wird erstellt, in der "startwindow" nach der DoNotRunUntil-Uhrzeit und des Zeitplans abgeschlossen ist, sobald dieser Auftrag abgeschlossen ist. Der Mindestwert ist 1 Minute. Wenn Sie einen niedrigeren Wert angeben, weist der Batch-Dienst den Zeitplan mit einem Fehler zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).'
+  optional: true
+  syntax:
+    content: 'recurrenceInterval?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.Schedule.startWindow
+  name: startWindow
+  fullName: startWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn ein Auftrag nicht innerhalb des Intervalls für "startwindow" erstellt wird, geht die "Verkaufschance" verloren. bis die nächste Wiederholung des Zeitplans wird kein Auftrag erstellt. Wenn der Zeitplan wiederholt wird, und die "startwindow" länger als das Wiederholungsintervall ist, erfolgt dies äquivalent zu einer unendlichen "startwindow", da der Auftrag, der "" in einem RecurrenceInterval ist nicht in der nächsten Wiederholungsintervall übernommen wird. Die Standardeinstellung ist unendlich. Der Mindestwert ist 1 Minute. Wenn Sie einen niedrigeren Wert angeben, weist der Batch-Dienst den Zeitplan mit einem Fehler zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).
+  optional: true
+  syntax:
+    content: 'startWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
