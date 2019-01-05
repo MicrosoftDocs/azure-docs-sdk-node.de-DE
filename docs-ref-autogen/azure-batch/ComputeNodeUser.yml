@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fb638f8e02e009da37aa5db50b0993a75c5c36e2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677974"
+items:
+- uid: azure-batch.ComputeNodeUser
+  name: ComputeNodeUser
+  fullName: ComputeNodeUser
+  children:
+  - azure-batch.ComputeNodeUser.expiryTime
+  - azure-batch.ComputeNodeUser.isAdmin
+  - azure-batch.ComputeNodeUser.name
+  - azure-batch.ComputeNodeUser.password
+  - azure-batch.ComputeNodeUser.sshPublicKey
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.expiryTime
+  name: expiryTime
+  fullName: expiryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn nicht angegeben, ist die Standardeinstellung 1 Tag nach der aktuellen Uhrzeit. Für Linux-Computeknoten weist der ExpiryTime eine Genauigkeit bis zu einem Tag auf.
+  optional: true
+  syntax:
+    content: 'expiryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.isAdmin
+  name: isAdmin
+  fullName: isAdmin
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Standardwert ist „false“.
+  optional: true
+  syntax:
+    content: 'isAdmin?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.password
+  name: password
+  fullName: password
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Das Kennwort ist erforderlich für Windows-Knoten (die mit der "CloudServiceConfiguration" erstellt oder mit "VirtualMachineConfiguration" mit einem Windows-Image-Verweis erstellt). Für Linux-Computeknoten kann das Kennwort optional zusammen mit der SshPublicKey-Eigenschaft angegeben werden.
+  optional: true
+  syntax:
+    content: 'password?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.sshPublicKey
+  name: sshPublicKey
+  fullName: sshPublicKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der öffentliche Schlüssel muss kompatibel mit OpenSSH-Codierung und base-64 codiert werden soll. Diese Eigenschaft kann nur für Linux-Knoten angegeben werden. Wenn dies für einen Windows-Knoten angegeben wird, lehnt der Batch-Dienst die Anforderung; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).
+  optional: true
+  syntax:
+    content: 'sshPublicKey?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
