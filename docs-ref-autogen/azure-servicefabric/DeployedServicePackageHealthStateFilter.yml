@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62fd16ee404efba59799d1de2f35e41f30d61e8d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126438"
+items:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  name: DeployedServicePackageHealthStateFilter
+  fullName: DeployedServicePackageHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="4e214-101">Definiert die Kriterien zum bestimmen, ob ein bereitgestelltes Dienstpaket als ein untergeordnetes Element einer bereitgestellten Anwendung in den clusterintegritätsblock einbezogen werden soll.</span><span class="sxs-lookup"><span data-stu-id="4e214-101">Defines matching criteria to determine whether a deployed service package should be included as a child of a deployed application in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="4e214-102">Die bereitgestellten dienstpakete werden nur zurückgegeben, wenn die übergeordneten Entitäten einen Filter angegeben, in der Beschreibung der Cluster Health Block Abfrage übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="4e214-102">The deployed service packages are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="4e214-103">Die übergeordnete Anwendung bereitgestellt und die übergeordneten Anwendung muss in den clusterintegritätsblock enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="4e214-103">The parent deployed application and its parent application must be included in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="4e214-104">Ein Filter kann 0 (null) entsprechen, die eine oder mehrere bereitgestellte service-Paketen in Abhängigkeit vom zugehörigen Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="4e214-104">One filter can match zero, one or multiple deployed service packages, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="4e214-105">Der Filter für den Integritätsstatus der bereitgestellten dienstpakete.</span><span class="sxs-lookup"><span data-stu-id="4e214-105">The filter for the health state of the deployed service packages.</span></span> <span data-ttu-id="4e214-106">Sie können bereitgestellte Pakete auswählen, wenn sie die gewünschten Integritätsstatus übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="4e214-106">It allows selecting deployed service packages if they match the desired health states.</span></span>
+
+    <span data-ttu-id="4e214-107">Die möglichen Werte sind Integer-Wert, der eine der folgenden Integritätsstatus.</span><span class="sxs-lookup"><span data-stu-id="4e214-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="4e214-108">Es werden nur Dienstpakete bereitgestellt, die dem Filter entsprechen.</span><span class="sxs-lookup"><span data-stu-id="4e214-108">Only deployed service packages that match the filter are returned.</span></span> <span data-ttu-id="4e214-109">Alle bereitgestellten dienstpakete werden verwendet, um den übergeordneten bereitgestellten Anwendung, die aggregierten Integritätsstatus auszuwerten.</span><span class="sxs-lookup"><span data-stu-id="4e214-109">All deployed service packages are used to evaluate the parent deployed application aggregated health state.</span></span>
+
+    <span data-ttu-id="4e214-110">Wenn nicht angegeben, ist Standardwert None und, sofern die bereitgestellten Dienst-Paket-ID angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="4e214-110">If not specified, default value is None, unless the deployed service package ID is specified.</span></span>
+
+    <span data-ttu-id="4e214-111">Wenn der Filter hat den Standardwert, und bereitgestellte Dienst-Paket-ID angegeben ist, wird der übereinstimmenden bereitgestelltes Dienstpaket zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4e214-111">If the filter has default value and deployed service package ID is specified, the matching deployed service package is returned.</span></span>
+
+    <span data-ttu-id="4e214-112">Ein Statuswert ist eine kennzeichenbasierte Enumeration, sodass der Wert eine Kombination der Werte sein kann, die mit dem bitweisen ODER-Operator abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="4e214-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="4e214-113">Wenn der angegebene Wert 6 ist, entspricht es z. B. bereitgestellte dienstpakete für "healthstate"-Wert für OK (2) oder Warning (4).</span><span class="sxs-lookup"><span data-stu-id="4e214-113">For example, if the provided value is 6, it matches deployed service packages with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="4e214-114">Default: Standardwert.</span><span class="sxs-lookup"><span data-stu-id="4e214-114">Default - Default value.</span></span> <span data-ttu-id="4e214-115">Stimmt mit jedem Integritätsstatus (HealthState) überein.</span><span class="sxs-lookup"><span data-stu-id="4e214-115">Matches any HealthState.</span></span> <span data-ttu-id="4e214-116">Der Wert ist gleich null.</span><span class="sxs-lookup"><span data-stu-id="4e214-116">The value is zero.</span></span>
+
+    - <span data-ttu-id="4e214-117">None: Filter, der keinem Wert für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="4e214-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="4e214-118">Wird verwendet, um keine Ergebnisse für eine angegebene Statussammlung zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="4e214-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="4e214-119">Der Wert ist gleich „1“.</span><span class="sxs-lookup"><span data-stu-id="4e214-119">The value is 1.</span></span>
+
+    - <span data-ttu-id="4e214-120">OK: Filter, der mit Eingaben übereinstimmt, für "healthstate" Wert Ok.</span><span class="sxs-lookup"><span data-stu-id="4e214-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="4e214-121">Der Wert ist gleich „2“.</span><span class="sxs-lookup"><span data-stu-id="4e214-121">The value is 2.</span></span>
+
+    - <span data-ttu-id="4e214-122">Warning: Filter, der Warnung den Wert Eingaben mit für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="4e214-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="4e214-123">Der Wert ist gleich „4“.</span><span class="sxs-lookup"><span data-stu-id="4e214-123">The value is 4.</span></span>
+
+    - <span data-ttu-id="4e214-124">Fehler: Filter, der mit Eingaben eines Werts Fehler für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="4e214-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="4e214-125">Der Wert ist gleich „8“.</span><span class="sxs-lookup"><span data-stu-id="4e214-125">The value is 8.</span></span>
+
+    - <span data-ttu-id="4e214-126">All: Filter, Eingaben mit einem anderen Wert für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="4e214-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="4e214-127">Der Wert ist gleich „65535“.</span><span class="sxs-lookup"><span data-stu-id="4e214-127">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  name: serviceManifestNameFilter
+  fullName: serviceManifestNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="4e214-128">Der Name des dienstmanifests der bereitgestellten dienstpakete identifiziert, die dem Filter entspricht.</span><span class="sxs-lookup"><span data-stu-id="4e214-128">The name of the service manifest which identifies the deployed service packages that matches the filter.</span></span>
+
+    <span data-ttu-id="4e214-129">Wenn angegeben, wird der Filter nur für die angegebene bereitgestellten dienstpakete, ggf. angewendet.</span><span class="sxs-lookup"><span data-stu-id="4e214-129">If specified, the filter is applied only to the specified deployed service packages, if any.</span></span>
+
+    <span data-ttu-id="4e214-130">Wenn keine bereitgestellte dienstpakete mit angegebenen Manifestnamen vorhanden ist, wird nichts in den clusterintegritätsblock basierend auf diesen Filter zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4e214-130">If no deployed service packages with specified manifest name exist, nothing is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="4e214-131">Wenn alle bereitgestelltes Dienstpaket vorhanden ist, sind diese in den clusterintegritätsblock enthalten, wenn sie die anderen Filtereigenschaften berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="4e214-131">If any deployed service package exists, they are included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="4e214-132">Wenn nicht angegeben, werden alle bereitgestellten dienstpakete, die den übergeordneten Filter (sofern vorhanden) in Betracht gezogen und die andere Elemente in einem Filter, wie der Health-State-Filter abgeglichen werden.</span><span class="sxs-lookup"><span data-stu-id="4e214-132">If not specified, all deployed service packages that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceManifestNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  name: servicePackageActivationIdFilter
+  fullName: servicePackageActivationIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="4e214-133">Die ID der Aktivierung eines bereitgestellten Dienstpakets, die dem Filter entspricht.</span><span class="sxs-lookup"><span data-stu-id="4e214-133">The activation ID of a deployed service package that matches the filter.</span></span>
+
+    <span data-ttu-id="4e214-134">Wenn nicht angegeben, gilt der Filter, um alle bereitgestellten dienstpakete, die mit die anderen Parametern übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="4e214-134">If not specified, the filter applies to all deployed service packages that match the other parameters.</span></span>
+
+    <span data-ttu-id="4e214-135">Wenn angegeben, entspricht der Filter nur das bereitgestellte Dienstpaket mit der angegebenen ID.</span><span class="sxs-lookup"><span data-stu-id="4e214-135">If specified, the filter matches only the deployed service package with the specified activation ID.</span></span>
+  optional: true
+  syntax:
+    content: 'servicePackageActivationIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
