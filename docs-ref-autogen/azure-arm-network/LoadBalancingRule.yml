@@ -1,0 +1,254 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 937af6d054d269b3f8cfc13740dfa0bd3037eac5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53667504"
+items:
+- uid: azure-arm-network.LoadBalancingRule
+  name: LoadBalancingRule
+  fullName: LoadBalancingRule
+  children:
+  - azure-arm-network.LoadBalancingRule.backendAddressPool
+  - azure-arm-network.LoadBalancingRule.backendPort
+  - azure-arm-network.LoadBalancingRule.disableOutboundSnat
+  - azure-arm-network.LoadBalancingRule.enableFloatingIP
+  - azure-arm-network.LoadBalancingRule.enableTcpReset
+  - azure-arm-network.LoadBalancingRule.etag
+  - azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+  - azure-arm-network.LoadBalancingRule.frontendPort
+  - azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+  - azure-arm-network.LoadBalancingRule.loadDistribution
+  - azure-arm-network.LoadBalancingRule.name
+  - azure-arm-network.LoadBalancingRule.probe
+  - azure-arm-network.LoadBalancingRule.protocol
+  - azure-arm-network.LoadBalancingRule.provisioningState
+  langs:
+  - typeScript
+  type: interface
+  summary: Eine lastenausgleichsregel für einen Load Balancer.
+  extends:
+    name: azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.backendAddressPool
+  name: backendAddressPool
+  fullName: backendAddressPool
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ein Verweis auf einen Pool von DIPs. Eingehender Datenverkehr ist nach dem Zufallsprinzip in das Back-End-IP-Adressen für IP-Adressen ein Lastenausgleich.
+  optional: true
+  syntax:
+    content: 'backendAddressPool?: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.backendPort
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Der Port, der für interne Verbindungen am Endpunkt verwendet wird. Zulässige Werte liegen zwischen 0 und
+
+    65535. Beachten Sie, dass der Wert 0 "Port-Any" aktiviert
+  optional: true
+  syntax:
+    content: 'backendPort?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.disableOutboundSnat
+  name: disableOutboundSnat
+  fullName: disableOutboundSnat
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Konfiguriert die SNAT für die virtuellen Computer im Back-End-Pool verwendet die öffentliche IP-Adresse des Front-Ends der lastenausgleichsregel angegeben.
+  optional: true
+  syntax:
+    content: 'disableOutboundSnat?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.enableFloatingIP
+  name: enableFloatingIP
+  fullName: enableFloatingIP
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Konfiguriert ein VM Endpunkt für die floating-IP-Funktion erforderlich, um eine SQL-AlwaysOn-Verfügbarkeitsgruppe zu konfigurieren. Diese Einstellung ist erforderlich, wenn der SQL AlwaysOn-Verfügbarkeitsgruppen in SQLServer verwenden. Diese Einstellung kann nicht geändert werden, nachdem Sie den Endpunkt zu erstellen.
+  optional: true
+  syntax:
+    content: 'enableFloatingIP?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.enableTcpReset
+  name: enableTcpReset
+  fullName: enableTcpReset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Erhalten Sie bidirektionale TCP Reset auf TCP-Leerlauftimeouts für Flow oder unerwartete Verbindungen abgebrochen.
+
+    Dieses Element wird nur verwendet, wenn das Protokoll auf TCP festgelegt ist.
+  optional: true
+  syntax:
+    content: 'enableTcpReset?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Eine eindeutige schreibgeschützte Zeichenfolge, die sich ändern, wenn die Ressource aktualisiert wird.
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+  name: frontendIPConfiguration
+  fullName: frontendIPConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ein Verweis auf die Front-End-IP-Adressen.
+  optional: true
+  syntax:
+    content: 'frontendIPConfiguration?: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.frontendPort
+  name: frontendPort
+  fullName: frontendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Port für den externen Endpunkt. Die Portnummern für jede Regel müssen innerhalb des Lastenausgleichs eindeutig sein. Zulässige Werte liegen zwischen 0 und 65534 sein. Beachten Sie, dass der Wert 0 "Port-Any" aktiviert
+  syntax:
+    content: 'frontendPort: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+  name: idleTimeoutInMinutes
+  fullName: idleTimeoutInMinutes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Das Timeout für die TCP-Verbindung im Leerlauf. Der Wert kann zwischen 4 und 30 Minuten festgelegt werden. Der Standardwert ist 4 Minuten. Dieses Element wird nur verwendet, wenn das Protokoll auf TCP festgelegt ist.
+  optional: true
+  syntax:
+    content: 'idleTimeoutInMinutes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.loadDistribution
+  name: loadDistribution
+  fullName: loadDistribution
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Die Load-verteilungsrichtlinie für diese Regel. Mögliche Werte sind "Default", "SourceIP" und "sourceipprotocol" "". Mögliche Werte sind: "Default", "SourceIP", "" sourceipprotocol""'
+  optional: true
+  syntax:
+    content: 'loadDistribution?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Name der Ressource, die innerhalb einer Ressourcengruppe eindeutig ist. Dieser Name kann verwendet werden, auf die Ressource zuzugreifen.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.probe
+  name: probe
+  fullName: probe
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Verweis von der Load Balancer-Test, die von der lastenausgleichsregel verwendet wird.
+  optional: true
+  syntax:
+    content: 'probe?: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Mögliche Werte sind: "Udp", "Tcp", "All"'
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.provisioningState
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Ruft den Bereitstellungsstatus der die öffentliche IP-Ressource ab. Mögliche Werte: "Aktualisieren", "Löschen" und "Fehler".'
+  optional: true
+  syntax:
+    content: 'provisioningState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+references:
+- uid: azure-arm-network.SubResource
+  name: SubResource
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: azure-arm-network.SubResource

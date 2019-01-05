@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 029fc494f2cf062af43d57c41c2f225d2f2dfc8b
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53695061"
+items:
+- uid: azure-servicefabric.BasicRetentionPolicyDescription
+  name: BasicRetentionPolicyDescription
+  fullName: BasicRetentionPolicyDescription
+  children:
+  - azure-servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups
+  - azure-servicefabric.BasicRetentionPolicyDescription.retentionDuration
+  langs:
+  - typeScript
+  type: interface
+  summary: Beschreibt grundlegende Aufbewahrungsrichtlinie.
+  extends:
+    name: azure-servicefabric.RetentionPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups
+  name: minimumNumberOfBackups
+  fullName: minimumNumberOfBackups
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Es ist die minimale Anzahl von Sicherungen zu einem beliebigen Zeitpunkt Zeit beibehalten werden sollen. Wenn mit einer nicht-NULL-Wert angegeben, werden Sicherungen werden nicht gelöscht werden, auch wenn die Sicherungen nach der Dauer der datenaufbewahrung durchgeführt haben und Anzahl von Sicherungen, kleiner als oder gleich darauf haben.
+  optional: true
+  syntax:
+    content: 'minimumNumberOfBackups?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.BasicRetentionPolicyDescription.retentionDuration
+  name: retentionDuration
+  fullName: retentionDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Es ist die Mindestdauer für die eine Sicherung erstellt, bleibt in den Speicher gespeichert, und kann nach, die Zeit umfassen gelöscht. Es sollte im ISO8601-Format angegeben werden.
+  syntax:
+    content: 'retentionDuration: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RetentionPolicyDescription
+  name: RetentionPolicyDescription
+  spec.typeScript:
+  - name: RetentionPolicyDescription
+    fullName: RetentionPolicyDescription
+    uid: azure-servicefabric.RetentionPolicyDescription
