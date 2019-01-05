@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8435c9bebc9b84f0d14e73d931f963d3b159991e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52091787"
+items:
+- uid: azure-arm-cosmosdb.CollectionRegion
+  name: CollectionRegion
+  fullName: CollectionRegion
+  children:
+  - azure-arm-cosmosdb.CollectionRegion.listMetrics
+  - azure-arm-cosmosdb.CollectionRegion.listMetrics_2
+  - azure-arm-cosmosdb.CollectionRegion.listMetrics_1
+  - azure-arm-cosmosdb.CollectionRegion.listMetricsWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetrics
+  name: listMetrics(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c5d24-101">Ruft ab, die Metriken, die durch den angegebenen Filter für die angegebene Datenbankkonto, die Sammlung und die Region bestimmt.</span><span class="sxs-lookup"><span data-stu-id="c5d24-101">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-102">Name des Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c5d24-102">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-103">Kontoname für COSMOS DB-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="c5d24-103">Cosmos DB database account name.</span></span>
+    - id: region
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-104">COSMOS DB-Region, mit Leerzeichen zwischen Wörtern und jedes Wort groß geschrieben.</span><span class="sxs-lookup"><span data-stu-id="c5d24-104">Cosmos DB region, with spaces between words and each word capitalized.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-105">COSMOS DB-Datenbank entfernen.</span><span class="sxs-lookup"><span data-stu-id="c5d24-105">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-106">COSMOS DB-Sammlung löschen.</span><span class="sxs-lookup"><span data-stu-id="c5d24-106">Cosmos DB collection rid.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-107">Eine OData-Filterausdruck, der eine Teilmenge der zurückzugebenden Metriken beschreibt.</span><span class="sxs-lookup"><span data-stu-id="c5d24-107">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="c5d24-108">Die Parameter, die gefiltert werden können, sind name.value (Name der Metrik können einer oder mehrerer Namen haben), StartTime, EndTime und timegrain-Wert.</span><span class="sxs-lookup"><span data-stu-id="c5d24-108">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="c5d24-109">Die unterstützten Operator ist EQ.</span><span class="sxs-lookup"><span data-stu-id="c5d24-109">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetrics_2
+  name: listMetrics(string, string, string, string, string, string, Object, ServiceCallback<MetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c5d24-110">Ruft ab, die Metriken, die durch den angegebenen Filter für die angegebene Datenbankkonto, die Sammlung und die Region bestimmt.</span><span class="sxs-lookup"><span data-stu-id="c5d24-110">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: Object, callback: ServiceCallback<MetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: region
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetrics_1
+  name: listMetrics(string, string, string, string, string, string, ServiceCallback<MetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c5d24-111">Ruft ab, die Metriken, die durch den angegebenen Filter für die angegebene Datenbankkonto, die Sammlung und die Region bestimmt.</span><span class="sxs-lookup"><span data-stu-id="c5d24-111">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: region
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c5d24-112">Ruft ab, die Metriken, die durch den angegebenen Filter für die angegebene Datenbankkonto, die Sammlung und die Region bestimmt.</span><span class="sxs-lookup"><span data-stu-id="c5d24-112">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-113">Name des Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c5d24-113">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-114">Kontoname für COSMOS DB-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="c5d24-114">Cosmos DB database account name.</span></span>
+    - id: region
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-115">COSMOS DB-Region, mit Leerzeichen zwischen Wörtern und jedes Wort groß geschrieben.</span><span class="sxs-lookup"><span data-stu-id="c5d24-115">Cosmos DB region, with spaces between words and each word capitalized.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-116">COSMOS DB-Datenbank entfernen.</span><span class="sxs-lookup"><span data-stu-id="c5d24-116">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-117">COSMOS DB-Sammlung löschen.</span><span class="sxs-lookup"><span data-stu-id="c5d24-117">Cosmos DB collection rid.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c5d24-118">Eine OData-Filterausdruck, der eine Teilmenge der zurückzugebenden Metriken beschreibt.</span><span class="sxs-lookup"><span data-stu-id="c5d24-118">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="c5d24-119">Die Parameter, die gefiltert werden können, sind name.value (Name der Metrik können einer oder mehrerer Namen haben), StartTime, EndTime und timegrain-Wert.</span><span class="sxs-lookup"><span data-stu-id="c5d24-119">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="c5d24-120">Die unterstützten Operator ist EQ.</span><span class="sxs-lookup"><span data-stu-id="c5d24-120">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
+  package: azure-arm-cosmosdb
+references:
+- uid: Promise<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: MetricListResult
+    fullName: MetricListResult
+    uid: azure-arm-cosmosdb.MetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: MetricListResult
+    fullName: MetricListResult
+    uid: azure-arm-cosmosdb.MetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
+  name: MetricListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: MetricListResult
+    fullName: MetricListResult
+    uid: azure-arm-cosmosdb.MetricListResult
+  - name: '>>'
+    fullName: '>>'
