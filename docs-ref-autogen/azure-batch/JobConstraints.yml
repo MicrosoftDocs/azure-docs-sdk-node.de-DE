@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 87bc4cfb3b8e0175a58f47841351bf089100a9d2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674424"
+items:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  fullName: JobConstraints
+  children:
+  - azure-batch.JobConstraints.maxTaskRetryCount
+  - azure-batch.JobConstraints.maxWallClockTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobConstraints.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="23773-101">Beachten Sie, dass dieser Wert die Anzahl der Wiederholungen ausdrücklich steuert.</span><span class="sxs-lookup"><span data-stu-id="23773-101">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="23773-102">Der Batch-Dienst versucht jede Aufgabe einmal, und es kann bis zu diesem Grenzwert wiederholen.</span><span class="sxs-lookup"><span data-stu-id="23773-102">The Batch service will try each task once, and may then retry up to this limit.</span></span> <span data-ttu-id="23773-103">Wenn beispielsweise die maximale Anzahl von Wiederholungsversuchen 3 ist, versucht der Batch-Dienst einen Task bis zu viermal (ein erster Versuch und drei Wiederholungsversuche).</span><span class="sxs-lookup"><span data-stu-id="23773-103">For example, if the maximum retry count is 3, Batch tries a task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="23773-104">Wenn die maximale Anzahl von Wiederholungsversuchen 0 ist, wiederholt der Batch-Dienst Tasks nicht.</span><span class="sxs-lookup"><span data-stu-id="23773-104">If the maximum retry count is 0, the Batch service does not retry tasks.</span></span> <span data-ttu-id="23773-105">Wenn die maximale Anzahl von Wiederholungsversuchen -1 ist, wiederholt der Batch-Dienst Tasks unbegrenzt.</span><span class="sxs-lookup"><span data-stu-id="23773-105">If the maximum retry count is -1, the Batch service retries tasks without limit.</span></span> <span data-ttu-id="23773-106">Der Standardwert ist 0 (keine Wiederholungsversuche).</span><span class="sxs-lookup"><span data-stu-id="23773-106">The default value is 0 (no retries).</span></span>
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobConstraints.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="23773-107">Wenn der Auftrag nicht innerhalb des Zeitlimits abgeschlossen wird, beendet der Batch-Dienst sie und alle Aufgaben, die noch ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="23773-107">If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running.</span></span> <span data-ttu-id="23773-108">In diesem Fall wird der Grund für Beendigung MaxWallClockTimeExpiry sein.</span><span class="sxs-lookup"><span data-stu-id="23773-108">In this case, the termination reason will be MaxWallClockTimeExpiry.</span></span> <span data-ttu-id="23773-109">Wenn diese Eigenschaft nicht angegeben wird, ist es keine zeitliche Begrenzung für wie lange der Auftrag ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="23773-109">If this property is not specified, there is no time limit on how long the job may run.</span></span>
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch

@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c7d8a57082382397f3b7093d908112dea7ace2a9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52079825"
+items:
+- uid: azure-iot-common.RetryOperation
+  name: RetryOperation
+  fullName: RetryOperation
+  children:
+  - azure-iot-common.RetryOperation.retry
+  - azure-iot-common.RetryOperation.constructor
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="2c196-101">Implementiert die erforderliche Logik, um Vorgänge wie das Herstellen einer Verbindung, Empfangen von C2D-Nachrichten, zum Senden von Telemetriedaten, zwillingsaktualisierungen usw. zu wiederholen.</span><span class="sxs-lookup"><span data-stu-id="2c196-101">Implements the necessary logic to retry operations such as connecting, receiving C2D messages, sending telemetry, twin updates, etc.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.retry
+  name: 'retry((opCallback: (err?: Error, result?: any, response?: any) => void) => void, (err?: Error, result?: any, response?: any) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2c196-102">Führt einen Vorgang aus, und wiederholt, wenn ein Fehler auftritt, und die wiederholungsrichtlinie erlaubt.</span><span class="sxs-lookup"><span data-stu-id="2c196-102">Executes an operation and retries if it fails and the retry policy allows it.</span></span>
+  syntax:
+    content: 'function retry(operation: (opCallback: (err?: Error, result?: any, response?: any) => void) => void, finalCallback: (err?: Error, result?: any, response?: any) => void)'
+    parameters:
+    - id: operation
+      type:
+      - '(opCallback: (err?: Error, result?: any, response?: any) => void) => void'
+      description: <span data-ttu-id="2c196-103">Der Vorgang ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="2c196-103">The operation to execute.</span></span>
+    - id: finalCallback
+      type:
+      - '(err?: Error, result?: any, response?: any) => void'
+      description: >
+        <span data-ttu-id="2c196-104">Der Rückruf, der mit dem letzten Fehler oder das Ergebnis nach Wiederholungen bei Bedarf aufrufen.</span><span class="sxs-lookup"><span data-stu-id="2c196-104">The callback to call with the final error or result, after retries if necessary.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.constructor
+  name: RetryOperation(RetryPolicy, number)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2c196-105">Erstellt eine Instanz von <xref:azure-iot-common.RetryOperation.></span><span class="sxs-lookup"><span data-stu-id="2c196-105">Creates an instance of <xref:azure-iot-common.RetryOperation.></span></span>
+  syntax:
+    content: 'new RetryOperation(policy: RetryPolicy, maxTimeout: number)'
+    parameters:
+    - id: policy
+      type:
+      - azure-iot-common.RetryPolicy
+      description: <span data-ttu-id="2c196-106">Die wiederholungsrichtlinie für diesen Vorgang, der bestimmt, welcher Fehler "wiederholbar" ist oder nicht verwendet und wie schnell wiederholt werden soll.</span><span class="sxs-lookup"><span data-stu-id="2c196-106">The retry policy to be used for this operation, which determines what error is "retryable" or not and how fast to retry.</span></span>
+    - id: maxTimeout
+      type:
+      - number
+      description: >
+        <span data-ttu-id="2c196-107">Das maximale Zeitlimit für diesen Vorgang nach dem keine weiteren Wiederholungen ausgeführt werden wird.</span><span class="sxs-lookup"><span data-stu-id="2c196-107">The maximum timeout for this operation, after which no retry will be attempted.</span></span>
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.RetryPolicy
+  name: RetryPolicy
+  spec.typeScript:
+  - name: RetryPolicy
+    fullName: RetryPolicy
+    uid: azure-iot-common.RetryPolicy

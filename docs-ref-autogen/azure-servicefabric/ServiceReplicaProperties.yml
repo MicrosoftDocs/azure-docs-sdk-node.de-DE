@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 862d7c7a1a967ad5eff0a9668ea845ee846dc920
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53663680"
+items:
+- uid: azure-servicefabric.ServiceReplicaProperties
+  name: ServiceReplicaProperties
+  fullName: ServiceReplicaProperties
+  children:
+  - azure-servicefabric.ServiceReplicaProperties.codePackages
+  - azure-servicefabric.ServiceReplicaProperties.diagnostics
+  - azure-servicefabric.ServiceReplicaProperties.networkRefs
+  - azure-servicefabric.ServiceReplicaProperties.osType
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="34c4b-101">Beschreibt die Eigenschaften eines Dienst-Replikats.</span><span class="sxs-lookup"><span data-stu-id="34c4b-101">Describes the properties of a service replica.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.codePackages
+  name: codePackages
+  fullName: codePackages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="34c4b-102">Beschreibt die Codepakete, die den Dienst bildet.</span><span class="sxs-lookup"><span data-stu-id="34c4b-102">Describes the set of code packages that forms the service.</span></span> <span data-ttu-id="34c4b-103">Ein Codepaket beschreibt den Container und die Eigenschaften für die Ausführung an.</span><span class="sxs-lookup"><span data-stu-id="34c4b-103">A code package describes the container and the properties for running it.</span></span> <span data-ttu-id="34c4b-104">Alle Codepakete zusammen auf demselben Host gestartet werden, und teilen die gleichen Kontext (Netzwerk, Prozess usw.).</span><span class="sxs-lookup"><span data-stu-id="34c4b-104">All the code packages are started together on the same host and share the same context (network, process etc.).</span></span>
+  syntax:
+    content: 'codePackages: ContainerCodePackageProperties[]'
+    return:
+      type:
+      - azure-servicefabric.ContainerCodePackageProperties[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.diagnostics
+  name: diagnostics
+  fullName: diagnostics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="34c4b-105">Verweis auf die Senken im DiagnosticsDescription.</span><span class="sxs-lookup"><span data-stu-id="34c4b-105">Reference to sinks in DiagnosticsDescription.</span></span>
+  optional: true
+  syntax:
+    content: 'diagnostics?: DiagnosticsRef'
+    return:
+      type:
+      - azure-servicefabric.DiagnosticsRef
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.networkRefs
+  name: networkRefs
+  fullName: networkRefs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="34c4b-106">Die Namen der privaten Netzwerke, denen dieser Dienst Teil sein muss.</span><span class="sxs-lookup"><span data-stu-id="34c4b-106">The names of the private networks that this service needs to be part of.</span></span>
+  optional: true
+  syntax:
+    content: 'networkRefs?: NetworkRef[]'
+    return:
+      type:
+      - azure-servicefabric.NetworkRef[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.osType
+  name: osType
+  fullName: osType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"34c4b-107\">Das Betriebssystem, das durch den Code im Dienst erforderlich.</span><span class=\"sxs-lookup\"><span data-stu-id=\"34c4b-107\">The operation system required by the code in service.</span></span> <span data-ttu-id=\"34c4b-108\">Mögliche Werte sind: \"Linux\", \"Windows\"</span><span class=\"sxs-lookup\"><span data-stu-id=\"34c4b-108\">Possible values include: 'Linux', 'Windows'</span></span>"
+  syntax:
+    content: 'osType: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ContainerCodePackageProperties[]
+  name: ContainerCodePackageProperties[]
+  spec.typeScript:
+  - name: ContainerCodePackageProperties
+    fullName: ContainerCodePackageProperties
+    uid: azure-servicefabric.ContainerCodePackageProperties
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.DiagnosticsRef
+  name: DiagnosticsRef
+  spec.typeScript:
+  - name: DiagnosticsRef
+    fullName: DiagnosticsRef
+    uid: azure-servicefabric.DiagnosticsRef
+- uid: azure-servicefabric.NetworkRef[]
+  name: NetworkRef[]
+  spec.typeScript:
+  - name: NetworkRef
+    fullName: NetworkRef
+    uid: azure-servicefabric.NetworkRef
+  - name: '[]'
+    fullName: '[]'
