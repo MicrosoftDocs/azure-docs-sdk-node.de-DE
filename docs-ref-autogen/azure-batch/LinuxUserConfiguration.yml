@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c560df5ddc88945feac73c922c7e297a4e89ca44
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665904"
+items:
+- uid: azure-batch.LinuxUserConfiguration
+  name: LinuxUserConfiguration
+  fullName: LinuxUserConfiguration
+  children:
+  - azure-batch.LinuxUserConfiguration.gid
+  - azure-batch.LinuxUserConfiguration.sshPrivateKey
+  - azure-batch.LinuxUserConfiguration.uid
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.LinuxUserConfiguration.gid
+  name: gid
+  fullName: gid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Uid und Gid-Eigenschaft müssen zusammen oder überhaupt nicht angegeben werden. Wenn nicht angegeben ist die zugrunde liegende Betriebssystem wählt System die Gid.
+  optional: true
+  syntax:
+    content: 'gid?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.LinuxUserConfiguration.sshPrivateKey
+  name: sshPrivateKey
+  fullName: sshPrivateKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der private Schlüssel muss nicht kennwortgeschützt sein. Der private Schlüssel wird verwendet, für die automatische Konfiguration basierend der Authentifizierung der asymmetrischen Schlüssel für SSH zwischen Knoten in einem Linux-Pool, wenn der Pool EnableInterNodeCommunication-Eigenschaft true ist (es wird ignoriert, wenn EnableInterNodeCommunication auf "false" festgelegt ist). Hierzu werden das Schlüsselpaar in das Verzeichnis des Benutzers ".SSH" zu platzieren. Wenn nicht angegeben wird, kennwortlosen SSH ist nicht konfiguriert, zwischen Knoten (keine Änderung des SSH-Verzeichnis des Benutzers erfolgt).
+  optional: true
+  syntax:
+    content: 'sshPrivateKey?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.LinuxUserConfiguration.uid
+  name: uid
+  fullName: uid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Uid und Gid-Eigenschaft müssen zusammen oder überhaupt nicht angegeben werden. Wenn nicht angegeben ist die zugrunde liegende Betriebssystem wählt System die Uid.
+  optional: true
+  syntax:
+    content: 'uid?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
