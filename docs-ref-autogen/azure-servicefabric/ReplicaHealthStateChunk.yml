@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 19d201239ed8575c337fe1c42f90eed04965de0e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52152665"
+items:
+- uid: azure-servicefabric.ReplicaHealthStateChunk
+  name: ReplicaHealthStateChunk
+  fullName: ReplicaHealthStateChunk
+  children:
+  - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="efdd2-101">Stellt die integritätszustandsblock eines zustandsbehafteten dienstreplikats oder einer zustandslosen Dienstinstanz dar.</span><span class="sxs-lookup"><span data-stu-id="efdd2-101">Represents the health state chunk of a stateful service replica or a stateless service instance.</span></span>
+
+    <span data-ttu-id="efdd2-102">Der Replikat-Integritätsstatus enthält die Replikat-ID und der aggregierte Integritätszustand.</span><span class="sxs-lookup"><span data-stu-id="efdd2-102">The replica health state contains the replica ID and its aggregated health state.</span></span>
+  extends:
+    name: azure-servicefabric.EntityHealthStateChunk
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+  name: replicaOrInstanceId
+  fullName: replicaOrInstanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="efdd2-103">Die ID eines zustandsbehafteten dienstreplikats oder einer zustandslosen Dienstinstanz.</span><span class="sxs-lookup"><span data-stu-id="efdd2-103">Id of a stateful service replica or a stateless service instance.</span></span> <span data-ttu-id="efdd2-104">Diese ID wird in den Abfragen verwendet, die für zustandsbehaftete und zustandslose Dienste gelten.</span><span class="sxs-lookup"><span data-stu-id="efdd2-104">This ID is used in the queries that apply to both stateful and stateless services.</span></span> <span data-ttu-id="efdd2-105">Es wird von Service Fabric verwendet, um ein Replikat der Partition eines zustandsbehafteten Diensts oder einer Instanz einer zustandslosen Dienstpartition eindeutig zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="efdd2-105">It is used by Service Fabric to uniquely identify a replica of a partition of a stateful service or an instance of a stateless service partition.</span></span> <span data-ttu-id="efdd2-106">Es ist eindeutig innerhalb einer Partition und wird für die Lebensdauer des Replikats oder die Instanz nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="efdd2-106">It is unique within a partition and does not change for the lifetime of the replica or the instance.</span></span> <span data-ttu-id="efdd2-107">Wenn ein zustandsbehaftetes Replikat gelöscht ruft und ein anderes Replikat wird auf dem gleichen Knoten für diese Partition erstellt, wird es einen anderen Wert für die ID abrufen.</span><span class="sxs-lookup"><span data-stu-id="efdd2-107">If a stateful replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the ID.</span></span> <span data-ttu-id="efdd2-108">Wenn eine zustandslose Instanz auf demselben oder einem anderen Knoten das Failover erfolgt erhalten sie einen anderen Wert für die ID.</span><span class="sxs-lookup"><span data-stu-id="efdd2-108">If a stateless instance is failed over on the same or different node it will get a different value for the ID.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaOrInstanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.EntityHealthStateChunk
+  name: EntityHealthStateChunk
+  spec.typeScript:
+  - name: EntityHealthStateChunk
+    fullName: EntityHealthStateChunk
+    uid: azure-servicefabric.EntityHealthStateChunk

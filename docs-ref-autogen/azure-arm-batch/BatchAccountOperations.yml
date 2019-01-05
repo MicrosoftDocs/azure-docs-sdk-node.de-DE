@@ -1,0 +1,1636 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cc6aaf3fdd30c12feab04b656b4e7507cfaa3ef8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52120345"
+items:
+- uid: azure-arm-batch.BatchAccountOperations
+  name: BatchAccountOperations
+  fullName: BatchAccountOperations
+  children:
+  - azure-arm-batch.BatchAccountOperations.beginCreate
+  - azure-arm-batch.BatchAccountOperations.beginCreate_2
+  - azure-arm-batch.BatchAccountOperations.beginCreate_1
+  - azure-arm-batch.BatchAccountOperations.beginCreateWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.beginDeleteMethod
+  - azure-arm-batch.BatchAccountOperations.beginDeleteMethod_2
+  - azure-arm-batch.BatchAccountOperations.beginDeleteMethod_1
+  - azure-arm-batch.BatchAccountOperations.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.create
+  - azure-arm-batch.BatchAccountOperations.create_2
+  - azure-arm-batch.BatchAccountOperations.create_1
+  - azure-arm-batch.BatchAccountOperations.createWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.deleteMethod
+  - azure-arm-batch.BatchAccountOperations.deleteMethod_2
+  - azure-arm-batch.BatchAccountOperations.deleteMethod_1
+  - azure-arm-batch.BatchAccountOperations.deleteMethodWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.get
+  - azure-arm-batch.BatchAccountOperations.get_2
+  - azure-arm-batch.BatchAccountOperations.get_1
+  - azure-arm-batch.BatchAccountOperations.getKeys
+  - azure-arm-batch.BatchAccountOperations.getKeys_2
+  - azure-arm-batch.BatchAccountOperations.getKeys_1
+  - azure-arm-batch.BatchAccountOperations.getKeysWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.getWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.list
+  - azure-arm-batch.BatchAccountOperations.list_2
+  - azure-arm-batch.BatchAccountOperations.list_1
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroup
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroup_2
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroup_1
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroupNext
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroupNext_2
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroupNext_1
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroupNextWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.listNext
+  - azure-arm-batch.BatchAccountOperations.listNext_2
+  - azure-arm-batch.BatchAccountOperations.listNext_1
+  - azure-arm-batch.BatchAccountOperations.listNextWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.listWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.regenerateKey
+  - azure-arm-batch.BatchAccountOperations.regenerateKey_2
+  - azure-arm-batch.BatchAccountOperations.regenerateKey_1
+  - azure-arm-batch.BatchAccountOperations.regenerateKeyWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys
+  - azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2
+  - azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1
+  - azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeysWithHttpOperationResponse
+  - azure-arm-batch.BatchAccountOperations.update
+  - azure-arm-batch.BatchAccountOperations.update_2
+  - azure-arm-batch.BatchAccountOperations.update_1
+  - azure-arm-batch.BatchAccountOperations.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginCreate
+  name: beginCreate(string, string, BatchAccountCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-101">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-101">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-102">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-102">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-103">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-103">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-104">Ein Name für das Batch-Konto innerhalb der Region eindeutig sein muss.</span><span class="sxs-lookup"><span data-stu-id="ddabf-104">A name for the Batch account which must be unique within the region.</span></span> <span data-ttu-id="ddabf-105">Batch-Kontonamen müssen zwischen 3 und 24 Zeichen lang sein und müssen nur Ziffern und Kleinbuchstaben verwenden.</span><span class="sxs-lookup"><span data-stu-id="ddabf-105">Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters.</span></span> <span data-ttu-id="ddabf-106">Dieser Name wird als Teil der DNS-Name verwendet, die verwendet wird, auf den Batch-Dienst in der Region, in dem das Konto erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="ddabf-106">This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created.</span></span> <span data-ttu-id="ddabf-107">Beispiel: http://accountname.region.batch.azure.com/.</span><span class="sxs-lookup"><span data-stu-id="ddabf-107">For example: http://accountname.region.batch.azure.com/.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: >
+        <span data-ttu-id="ddabf-108">Zusätzliche Parameter für die kontoerstellung.</span><span class="sxs-lookup"><span data-stu-id="ddabf-108">Additional parameters for account creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginCreate_2
+  name: beginCreate(string, string, BatchAccountCreateParameters, Object, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-109">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-109">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-110">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-110">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options: Object, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginCreate_1
+  name: beginCreate(string, string, BatchAccountCreateParameters, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-111">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-111">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-112">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-112">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginCreateWithHttpOperationResponse
+  name: beginCreateWithHttpOperationResponse(string, string, BatchAccountCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-113">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-113">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-114">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-114">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-115">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-115">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-116">Ein Name für das Batch-Konto innerhalb der Region eindeutig sein muss.</span><span class="sxs-lookup"><span data-stu-id="ddabf-116">A name for the Batch account which must be unique within the region.</span></span> <span data-ttu-id="ddabf-117">Batch-Kontonamen müssen zwischen 3 und 24 Zeichen lang sein und müssen nur Ziffern und Kleinbuchstaben verwenden.</span><span class="sxs-lookup"><span data-stu-id="ddabf-117">Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters.</span></span> <span data-ttu-id="ddabf-118">Dieser Name wird als Teil der DNS-Name verwendet, die verwendet wird, auf den Batch-Dienst in der Region, in dem das Konto erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="ddabf-118">This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created.</span></span> <span data-ttu-id="ddabf-119">Beispiel: http://accountname.region.batch.azure.com/.</span><span class="sxs-lookup"><span data-stu-id="ddabf-119">For example: http://accountname.region.batch.azure.com/.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: >
+        <span data-ttu-id="ddabf-120">Zusätzliche Parameter für die kontoerstellung.</span><span class="sxs-lookup"><span data-stu-id="ddabf-120">Additional parameters for account creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccount>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginDeleteMethod
+  name: beginDeleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-121">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-121">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-122">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-122">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-123">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-123">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginDeleteMethod_2
+  name: beginDeleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-124">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-124">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginDeleteMethod_1
+  name: beginDeleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-125">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-125">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-126">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-126">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-127">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-127">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-128">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-128">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.create
+  name: create(string, string, BatchAccountCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-129">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-129">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-130">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-130">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-131">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-131">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-132">Ein Name für das Batch-Konto innerhalb der Region eindeutig sein muss.</span><span class="sxs-lookup"><span data-stu-id="ddabf-132">A name for the Batch account which must be unique within the region.</span></span> <span data-ttu-id="ddabf-133">Batch-Kontonamen müssen zwischen 3 und 24 Zeichen lang sein und müssen nur Ziffern und Kleinbuchstaben verwenden.</span><span class="sxs-lookup"><span data-stu-id="ddabf-133">Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters.</span></span> <span data-ttu-id="ddabf-134">Dieser Name wird als Teil der DNS-Name verwendet, die verwendet wird, auf den Batch-Dienst in der Region, in dem das Konto erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="ddabf-134">This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created.</span></span> <span data-ttu-id="ddabf-135">Beispiel: http://accountname.region.batch.azure.com/.</span><span class="sxs-lookup"><span data-stu-id="ddabf-135">For example: http://accountname.region.batch.azure.com/.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: >
+        <span data-ttu-id="ddabf-136">Zusätzliche Parameter für die kontoerstellung.</span><span class="sxs-lookup"><span data-stu-id="ddabf-136">Additional parameters for account creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.create_2
+  name: create(string, string, BatchAccountCreateParameters, Object, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-137">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-137">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-138">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-138">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options: Object, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.create_1
+  name: create(string, string, BatchAccountCreateParameters, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-139">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-139">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-140">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-140">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.createWithHttpOperationResponse
+  name: createWithHttpOperationResponse(string, string, BatchAccountCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-141">Erstellt ein neues Batch-Konto mit den angegebenen Parametern.</span><span class="sxs-lookup"><span data-stu-id="ddabf-141">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="ddabf-142">Vorhandene Konten können nicht mit dieser API aktualisiert werden, und es stattdessen mit der Update-Batch-Konto-API aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ddabf-142">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+  syntax:
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-143">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-143">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-144">Ein Name für das Batch-Konto innerhalb der Region eindeutig sein muss.</span><span class="sxs-lookup"><span data-stu-id="ddabf-144">A name for the Batch account which must be unique within the region.</span></span> <span data-ttu-id="ddabf-145">Batch-Kontonamen müssen zwischen 3 und 24 Zeichen lang sein und müssen nur Ziffern und Kleinbuchstaben verwenden.</span><span class="sxs-lookup"><span data-stu-id="ddabf-145">Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters.</span></span> <span data-ttu-id="ddabf-146">Dieser Name wird als Teil der DNS-Name verwendet, die verwendet wird, auf den Batch-Dienst in der Region, in dem das Konto erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="ddabf-146">This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created.</span></span> <span data-ttu-id="ddabf-147">Beispiel: http://accountname.region.batch.azure.com/.</span><span class="sxs-lookup"><span data-stu-id="ddabf-147">For example: http://accountname.region.batch.azure.com/.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountCreateParameters
+      description: >
+        <span data-ttu-id="ddabf-148">Zusätzliche Parameter für die kontoerstellung.</span><span class="sxs-lookup"><span data-stu-id="ddabf-148">Additional parameters for account creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccount>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.deleteMethod
+  name: deleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-149">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-149">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-150">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-150">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-151">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-151">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.deleteMethod_2
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-152">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-152">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-153">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-153">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-154">Löscht das angegebene Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="ddabf-154">Deletes the specified Batch account.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-155">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-155">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-156">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-156">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.get
+  name: get(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-157">Ruft Informationen zum angegebenen Batch-Konto ab.</span><span class="sxs-lookup"><span data-stu-id="ddabf-157">Gets information about the specified Batch account.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-158">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-158">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-159">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-159">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.get_2
+  name: get(string, string, Object, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-160">Ruft Informationen zum angegebenen Batch-Konto ab.</span><span class="sxs-lookup"><span data-stu-id="ddabf-160">Gets information about the specified Batch account.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.get_1
+  name: get(string, string, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-161">Ruft Informationen zum angegebenen Batch-Konto ab.</span><span class="sxs-lookup"><span data-stu-id="ddabf-161">Gets information about the specified Batch account.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.getKeys
+  name: getKeys(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getKeys(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-162">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-162">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-163">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-163">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountKeys>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.getKeys_2
+  name: getKeys(string, string, Object, ServiceCallback<BatchAccountKeys>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getKeys(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<BatchAccountKeys>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountKeys>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountKeys>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.getKeys_1
+  name: getKeys(string, string, ServiceCallback<BatchAccountKeys>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccountKeys>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountKeys>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountKeys>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.getKeysWithHttpOperationResponse
+  name: getKeysWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getKeysWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-164">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-164">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-165">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-165">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccountKeys>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-166">Ruft Informationen zum angegebenen Batch-Konto ab.</span><span class="sxs-lookup"><span data-stu-id="ddabf-166">Gets information about the specified Batch account.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-167">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-167">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-168">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-168">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccount>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.list
+  name: list(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-169">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-169">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function list(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.list_2
+  name: list(Object, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-170">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-170">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function list(options: Object, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.list_1
+  name: list(ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-171">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-171">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function list(callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroup
+  name: listByResourceGroup(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-172">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-172">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-173">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-173">The name of the resource group that contains the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroup_2
+  name: listByResourceGroup(string, Object, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-174">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-174">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroup_1
+  name: listByResourceGroup(string, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-175">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-175">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-176">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-176">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-177">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="ddabf-177">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroupNext_2
+  name: listByResourceGroupNext(string, Object, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-178">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-178">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroupNext_1
+  name: listByResourceGroupNext(string, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-179">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-179">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-180">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-180">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-181">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="ddabf-181">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccountListResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-182">Ruft Informationen über die Batch-Konten, die der angegebenen Ressourcengruppe zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-182">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-183">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-183">The name of the resource group that contains the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccountListResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-184">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-184">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-185">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="ddabf-185">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listNext_2
+  name: listNext(string, Object, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-186">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-186">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listNext_1
+  name: listNext(string, ServiceCallback<BatchAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-187">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-187">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountListResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-188">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-188">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-189">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="ddabf-189">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccountListResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-190">Ruft Informationen über die Batch-Konten, die dem Abonnement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ddabf-190">Gets information about the Batch accounts associated with the subscription.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccountListResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.regenerateKey
+  name: regenerateKey(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-191">Generiert den angegebenen kontoschlüssel für das Batch-Konto neu.</span><span class="sxs-lookup"><span data-stu-id="ddabf-191">Regenerates the specified account key for the Batch account.</span></span>
+  syntax:
+    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-192">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-192">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-193">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-193">The name of the Batch account.</span></span>
+    - id: keyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-194">Der Typ der kontoschlüssel neu generieren.</span><span class="sxs-lookup"><span data-stu-id="ddabf-194">The type of account key to regenerate.</span></span> <span data-ttu-id="ddabf-195">Mögliche Werte sind: "Primary", "Sekundär"</span><span class="sxs-lookup"><span data-stu-id="ddabf-195">Possible values include: 'Primary', 'Secondary'</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountKeys>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.regenerateKey_2
+  name: regenerateKey(string, string, string, Object, ServiceCallback<BatchAccountKeys>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-196">Generiert den angegebenen kontoschlüssel für das Batch-Konto neu.</span><span class="sxs-lookup"><span data-stu-id="ddabf-196">Regenerates the specified account key for the Batch account.</span></span>
+  syntax:
+    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: Object, callback: ServiceCallback<BatchAccountKeys>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: keyName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountKeys>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountKeys>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.regenerateKey_1
+  name: regenerateKey(string, string, string, ServiceCallback<BatchAccountKeys>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-197">Generiert den angegebenen kontoschlüssel für das Batch-Konto neu.</span><span class="sxs-lookup"><span data-stu-id="ddabf-197">Regenerates the specified account key for the Batch account.</span></span>
+  syntax:
+    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, callback: ServiceCallback<BatchAccountKeys>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: keyName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccountKeys>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccountKeys>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.regenerateKeyWithHttpOperationResponse
+  name: regenerateKeyWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-198">Generiert den angegebenen kontoschlüssel für das Batch-Konto neu.</span><span class="sxs-lookup"><span data-stu-id="ddabf-198">Regenerates the specified account key for the Batch account.</span></span>
+  syntax:
+    content: 'function regenerateKeyWithHttpOperationResponse(resourceGroupName: string, accountName: string, keyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-199">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-199">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-200">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-200">The name of the Batch account.</span></span>
+    - id: keyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-201">Der Typ der kontoschlüssel neu generieren.</span><span class="sxs-lookup"><span data-stu-id="ddabf-201">The type of account key to regenerate.</span></span> <span data-ttu-id="ddabf-202">Mögliche Werte sind: "Primary", "Sekundär"</span><span class="sxs-lookup"><span data-stu-id="ddabf-202">Possible values include: 'Primary', 'Secondary'</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccountKeys>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys
+  name: synchronizeAutoStorageKeys(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-203">Synchronisiert Zugriffsschlüssel für das automatische Speicherkonto, die für das angegebene Batch-Konto konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="ddabf-203">Synchronizes access keys for the auto-storage account configured for the specified Batch account.</span></span>
+  syntax:
+    content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-204">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-204">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-205">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-205">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2
+  name: synchronizeAutoStorageKeys(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-206">Synchronisiert Zugriffsschlüssel für das automatische Speicherkonto, die für das angegebene Batch-Konto konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="ddabf-206">Synchronizes access keys for the auto-storage account configured for the specified Batch account.</span></span>
+  syntax:
+    content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1
+  name: synchronizeAutoStorageKeys(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-207">Synchronisiert Zugriffsschlüssel für das automatische Speicherkonto, die für das angegebene Batch-Konto konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="ddabf-207">Synchronizes access keys for the auto-storage account configured for the specified Batch account.</span></span>
+  syntax:
+    content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.synchronizeAutoStorageKeysWithHttpOperationResponse
+  name: synchronizeAutoStorageKeysWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-208">Synchronisiert Zugriffsschlüssel für das automatische Speicherkonto, die für das angegebene Batch-Konto konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="ddabf-208">Synchronizes access keys for the auto-storage account configured for the specified Batch account.</span></span>
+  syntax:
+    content: 'function synchronizeAutoStorageKeysWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-209">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-209">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-210">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-210">The name of the Batch account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.update
+  name: update(string, string, BatchAccountUpdateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-211">Aktualisiert die Eigenschaften eines vorhandenen Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-211">Updates the properties of an existing Batch account.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-212">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-212">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-213">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-213">The name of the Batch account.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountUpdateParameters
+      description: >
+        <span data-ttu-id="ddabf-214">Zusätzliche Parameter für Konto aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="ddabf-214">Additional parameters for account update.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.update_2
+  name: update(string, string, BatchAccountUpdateParameters, Object, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-215">Aktualisiert die Eigenschaften eines vorhandenen Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-215">Updates the properties of an existing Batch account.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options: Object, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountUpdateParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.update_1
+  name: update(string, string, BatchAccountUpdateParameters, ServiceCallback<BatchAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-216">Aktualisiert die Eigenschaften eines vorhandenen Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-216">Updates the properties of an existing Batch account.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, callback: ServiceCallback<BatchAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountUpdateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchAccount>
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountOperations.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, BatchAccountUpdateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ddabf-217">Aktualisiert die Eigenschaften eines vorhandenen Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-217">Updates the properties of an existing Batch account.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-218">Der Name der Ressourcengruppe, die das Batch-Konto enthält.</span><span class="sxs-lookup"><span data-stu-id="ddabf-218">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="ddabf-219">Der Name des Batch-Kontos.</span><span class="sxs-lookup"><span data-stu-id="ddabf-219">The name of the Batch account.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batch.BatchAccountUpdateParameters
+      description: >
+        <span data-ttu-id="ddabf-220">Zusätzliche Parameter für Konto aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="ddabf-220">Additional parameters for account update.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.BatchAccount>>
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.BatchAccountCreateParameters
+  name: BatchAccountCreateParameters
+  spec.typeScript:
+  - name: BatchAccountCreateParameters
+    fullName: BatchAccountCreateParameters
+    uid: azure-arm-batch.BatchAccountCreateParameters
+- uid: Promise<azure-arm-batch.BatchAccount>
+  name: BatchAccount>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BatchAccount
+    fullName: BatchAccount
+    uid: azure-arm-batch.BatchAccount
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batch.BatchAccount>
+  name: BatchAccount>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: BatchAccount
+    fullName: BatchAccount
+    uid: azure-arm-batch.BatchAccount
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batch.BatchAccount>>
+  name: BatchAccount>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: BatchAccount
+    fullName: BatchAccount
+    uid: azure-arm-batch.BatchAccount
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batch.BatchAccountKeys>
+  name: BatchAccountKeys>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BatchAccountKeys
+    fullName: BatchAccountKeys
+    uid: azure-arm-batch.BatchAccountKeys
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batch.BatchAccountKeys>
+  name: BatchAccountKeys>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: BatchAccountKeys
+    fullName: BatchAccountKeys
+    uid: azure-arm-batch.BatchAccountKeys
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batch.BatchAccountKeys>>
+  name: BatchAccountKeys>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: BatchAccountKeys
+    fullName: BatchAccountKeys
+    uid: azure-arm-batch.BatchAccountKeys
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batch.BatchAccountListResult>
+  name: BatchAccountListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BatchAccountListResult
+    fullName: BatchAccountListResult
+    uid: azure-arm-batch.BatchAccountListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batch.BatchAccountListResult>
+  name: BatchAccountListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: BatchAccountListResult
+    fullName: BatchAccountListResult
+    uid: azure-arm-batch.BatchAccountListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batch.BatchAccountListResult>>
+  name: BatchAccountListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: BatchAccountListResult
+    fullName: BatchAccountListResult
+    uid: azure-arm-batch.BatchAccountListResult
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-batch.BatchAccountUpdateParameters
+  name: BatchAccountUpdateParameters
+  spec.typeScript:
+  - name: BatchAccountUpdateParameters
+    fullName: BatchAccountUpdateParameters
+    uid: azure-arm-batch.BatchAccountUpdateParameters
