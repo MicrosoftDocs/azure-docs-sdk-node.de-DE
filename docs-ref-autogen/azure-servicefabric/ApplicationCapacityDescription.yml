@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 170e0bf52f9fd6a1932224d4dbcbe8432a029b98
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52085775"
+items:
+- uid: azure-servicefabric.ApplicationCapacityDescription
+  name: ApplicationCapacityDescription
+  fullName: ApplicationCapacityDescription
+  children:
+  - azure-servicefabric.ApplicationCapacityDescription.applicationMetrics
+  - azure-servicefabric.ApplicationCapacityDescription.maximumNodes
+  - azure-servicefabric.ApplicationCapacityDescription.minimumNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Beschreibt die Kapazitätsinformationen für Dienste dieser Anwendung. Diese Beschreibung kann zum Beschreiben von Folgendes verwendet werden.
+
+    - Reservieren die Kapazität für die Dienste auf den Knoten
+
+    - Beschränken der Gesamtzahl der Knoten, die Dienste dieser Anwendung ausgeführt werden kann
+
+    - Beschränken die benutzerdefinierte kapazitätsmetriken, um den Gesamtverbrauch dieser Metrik durch die Dienste dieser Anwendung zu beschränken.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.applicationMetrics
+  name: applicationMetrics
+  fullName: applicationMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Liste der Beschreibung der Anwendung Kapazität Metrik.
+  optional: true
+  syntax:
+    content: 'applicationMetrics?: ApplicationMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.maximumNodes
+  name: maximumNodes
+  fullName: maximumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die maximale Anzahl von Knoten, für die Service Fabric Kapazität für diese Anwendung reserviert.
+
+    Hinweis: Dies bedeutet nicht, dass die Dienste dieser Anwendung auf allen dieser Knoten platziert werden. Wird standardmäßig der Wert dieser Eigenschaft ist 0 (null), und dies bedeutet, dass die Dienste auf einem Knoten platziert werden können.
+  optional: true
+  syntax:
+    content: 'maximumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.minimumNodes
+  name: minimumNodes
+  fullName: minimumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die minimale Anzahl von Knoten, für die Service Fabric Kapazität für diese Anwendung reserviert wird.
+
+    Hinweis: Dies bedeutet nicht, dass die Dienste dieser Anwendung auf allen dieser Knoten platziert werden. Wenn diese Eigenschaft auf NULL festgelegt ist, wird keine Kapazität reserviert. Der Wert dieser Eigenschaft darf nicht größer als der Wert der Eigenschaft MaximumNodes sein.
+  optional: true
+  syntax:
+    content: 'minimumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationMetricDescription[]
+  name: ApplicationMetricDescription[]
+  spec.typeScript:
+  - name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    uid: azure-servicefabric.ApplicationMetricDescription
+  - name: '[]'
+    fullName: '[]'

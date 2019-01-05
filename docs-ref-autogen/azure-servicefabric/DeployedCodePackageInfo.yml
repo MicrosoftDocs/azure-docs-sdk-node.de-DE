@@ -1,0 +1,187 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f3c90a5931db6e39fdba9fca01c556fe18b01a0a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063850"
+items:
+- uid: azure-servicefabric.DeployedCodePackageInfo
+  name: DeployedCodePackageInfo
+  fullName: DeployedCodePackageInfo
+  children:
+  - azure-servicefabric.DeployedCodePackageInfo.hostIsolationMode
+  - azure-servicefabric.DeployedCodePackageInfo.hostType
+  - azure-servicefabric.DeployedCodePackageInfo.mainEntryPoint
+  - azure-servicefabric.DeployedCodePackageInfo.name
+  - azure-servicefabric.DeployedCodePackageInfo.runFrequencyInterval
+  - azure-servicefabric.DeployedCodePackageInfo.serviceManifestName
+  - azure-servicefabric.DeployedCodePackageInfo.servicePackageActivationId
+  - azure-servicefabric.DeployedCodePackageInfo.setupEntryPoint
+  - azure-servicefabric.DeployedCodePackageInfo.status
+  - azure-servicefabric.DeployedCodePackageInfo.version
+  langs:
+  - typeScript
+  type: interface
+  summary: Informationen zum Codepaket auf einem Service Fabric-Knoten bereitgestellt.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.hostIsolationMode
+  name: hostIsolationMode
+  fullName: hostIsolationMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Gibt an, dass der Isolationsmodus des Haupteinstiegspunkt des ein Codepaket bei Hosttyp ContainerHost ist. Dies wird als Teil des Container-Host-Richtlinien im Anwendungsmanifest angegeben, beim Importieren des dienstmanifests. Mögliche Werte sind: 'None', 'Process' und \"Hyper-v\""
+  optional: true
+  syntax:
+    content: 'hostIsolationMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.hostType
+  name: hostType
+  fullName: hostType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Gibt den Typ des Hosts für den Haupteinstiegspunkt des ein Codepaket im Dienstmanifest angegeben. Mögliche Werte sind: \"Invalid\", 'ExeHost', \"ContainerHost\""
+  optional: true
+  syntax:
+    content: 'hostType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.mainEntryPoint
+  name: mainEntryPoint
+  fullName: mainEntryPoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Zeigen Sie Informationen zum Setup oder Einstiegspunkt in main eines Code-Pakets auf einem Service Fabric-Knoten bereitgestellt.
+  optional: true
+  syntax:
+    content: 'mainEntryPoint?: CodePackageEntryPoint'
+    return:
+      type:
+      - azure-servicefabric.CodePackageEntryPoint
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Name des Codepakets.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.runFrequencyInterval
+  name: runFrequencyInterval
+  fullName: runFrequencyInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Das Intervall, in welcher, das Code Paket ausgeführt wird. Dies wird für regelmäßige Codepaket verwendet.
+  optional: true
+  syntax:
+    content: 'runFrequencyInterval?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.serviceManifestName
+  name: serviceManifestName
+  fullName: serviceManifestName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Name des dienstmanifests, das dieses Codepaket angegeben.
+  optional: true
+  syntax:
+    content: 'serviceManifestName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.servicePackageActivationId
+  name: servicePackageActivationId
+  fullName: servicePackageActivationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die ActivationId eines bereitgestellten Dienstpakets. Wenn ServicePackageActivationMode, die zum Zeitpunkt der Erstellung des Diensts angegeben ist, "SharedProcess" (oder wenn sie nicht angegeben ist, in diesem Fall wird standardmäßig "SharedProcess"), klicken Sie dann ist der Wert des ServicePackageActivationId immer eine leere Zeichenfolge an.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.setupEntryPoint
+  name: setupEntryPoint
+  fullName: setupEntryPoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Zeigen Sie Informationen zum Setup oder Einstiegspunkt in main eines Code-Pakets auf einem Service Fabric-Knoten bereitgestellt.
+  optional: true
+  syntax:
+    content: 'setupEntryPoint?: CodePackageEntryPoint'
+    return:
+      type:
+      - azure-servicefabric.CodePackageEntryPoint
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Gibt den Status einer bereitgestellten Anwendung oder ein Dienstpaket in einem Service Fabric-Knoten an.
+
+    Mögliche Werte sind: "Invalid", "Herunterladen", "Aktivieren", "Aktiv", "Aktualisieren", "Deaktiviert"
+  optional: true
+  syntax:
+    content: 'status?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Version des das Codepaket im Dienstmanifest angegeben.
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.CodePackageEntryPoint
+  name: CodePackageEntryPoint
+  spec.typeScript:
+  - name: CodePackageEntryPoint
+    fullName: CodePackageEntryPoint
+    uid: azure-servicefabric.CodePackageEntryPoint
