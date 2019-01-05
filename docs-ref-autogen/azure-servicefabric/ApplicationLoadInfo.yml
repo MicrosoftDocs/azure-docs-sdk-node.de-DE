@@ -1,0 +1,124 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0f68a88d4b2da01025df7e9c9fee32179f5cf910
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52089235"
+items:
+- uid: azure-servicefabric.ApplicationLoadInfo
+  name: ApplicationLoadInfo
+  fullName: ApplicationLoadInfo
+  children:
+  - azure-servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation
+  - azure-servicefabric.ApplicationLoadInfo.id
+  - azure-servicefabric.ApplicationLoadInfo.maximumNodes
+  - azure-servicefabric.ApplicationLoadInfo.minimumNodes
+  - azure-servicefabric.ApplicationLoadInfo.nodeCount
+  langs:
+  - typeScript
+  type: interface
+  summary: Laden Sie die Informationen zu Service Fabric-Anwendung.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation
+  name: applicationLoadMetricInformation
+  fullName: applicationLoadMetricInformation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Liste der Beschreibung der Anwendung Kapazität Metrik.
+  optional: true
+  syntax:
+    content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die Identität (ID) der Anwendung. Dies ist eine codierte Darstellung der Namen der Anwendung.
+
+    Dies wird in der REST-APIs zur Ressource für die Anwendung zu identifizieren.
+
+    Ab Version 6.0, hierarchische Namen als Trennzeichen das "\~" Zeichen. Wenn der Anwendungsname ist z. B. "Fabric: / Myapp/app1", die Anwendungsidentität "Myapp\~app1" in 6.0 +- und "meineapp/app1", der in früheren Versionen.
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.maximumNodes
+  name: maximumNodes
+  fullName: maximumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die maximale Anzahl von Knoten, in denen diese Anwendung instanziiert werden kann.
+
+    Es ist die Anzahl der Knoten, die diese Anwendung umfassen darf.
+
+    Für Anwendungen, die keine Anwendungskapazität definiert wird dieser Wert 0 (null) sein.
+  optional: true
+  syntax:
+    content: 'maximumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.minimumNodes
+  name: minimumNodes
+  fullName: minimumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die minimale Anzahl von Knoten für diese Anwendung.
+
+    Es ist die Anzahl der Knoten, in dem Service Fabric reserviert Kapazität im Cluster die gleich ReservedLoad * MinimumNodes für diese Anwendungsinstanz.
+
+    Für Anwendungen, die keine Anwendungskapazität definiert wird dieser Wert 0 (null) sein.
+  optional: true
+  syntax:
+    content: 'minimumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.nodeCount
+  name: nodeCount
+  fullName: nodeCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die Anzahl der Knoten, auf denen diese Anwendung instanziiert wird.
+
+    Für Anwendungen, die keine Anwendungskapazität definiert wird dieser Wert 0 (null) sein.
+  optional: true
+  syntax:
+    content: 'nodeCount?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationMetricDescription[]
+  name: ApplicationMetricDescription[]
+  spec.typeScript:
+  - name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    uid: azure-servicefabric.ApplicationMetricDescription
+  - name: '[]'
+    fullName: '[]'

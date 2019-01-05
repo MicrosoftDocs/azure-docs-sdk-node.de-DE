@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7e95f0beae379495707dd37aaab38ce53161ecb5
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52150055"
+items:
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription
+  name: ComposeDeploymentUpgradeDescription
+  fullName: ComposeDeploymentUpgradeDescription
+  children:
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.deploymentName
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.forceRestart
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.registryCredential
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: Beschreibt die Parameter für ein Upgrade der Compose-Bereitstellung.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy
+  name: applicationHealthPolicy
+  fullName: applicationHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Definiert eine Integritätsrichtlinie, die zum Auswerten der Integritäts einer Anwendung oder eines seiner untergeordneten Entitäten verwendet.
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent
+  name: composeFileContent
+  fullName: composeFileContent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Inhalt der Compose-Datei, die beschreibt, die Bereitstellung zu erstellen.
+  syntax:
+    content: 'composeFileContent: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.deploymentName
+  name: deploymentName
+  fullName: deploymentName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Name der Bereitstellung
+  syntax:
+    content: 'deploymentName: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Bei "true", werden dann Prozesse erzwungen während des Upgrades neu gestartet selbst, wenn der Codeversion (Upgrade nur Änderungen Konfiguration oder Daten) nicht geändert wurde.
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy
+  name: monitoringPolicy
+  fullName: monitoringPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Beschreibt die Parameter für die Überwachung ein Upgrade im überwachten Modus.
+  optional: true
+  syntax:
+    content: 'monitoringPolicy?: MonitoringPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.MonitoringPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.registryCredential
+  name: registryCredential
+  fullName: registryCredential
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Anmeldeinformationen für die Verbindung zur containerregistrierung hergestellt.
+  optional: true
+  syntax:
+    content: 'registryCredential?: RegistryCredential'
+    return:
+      type:
+      - azure-servicefabric.RegistryCredential
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Der Modus, der zum Überwachen der Integrität während eines parallelen Upgrades verwendet wird. Die Werte sind Monitored, UnmonitoredAuto und UnmonitoredManual. Mögliche Werte sind: "Invalid", "UnmonitoredAuto", "UnmonitoredManual", "Überwacht"'
+  optional: true
+  syntax:
+    content: 'rollingUpgradeMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind
+  name: upgradeKind
+  fullName: upgradeKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Die Art des Upgrades aus den folgenden möglichen Werten. Mögliche Werte sind: "Invalid", "Rolling"'
+  syntax:
+    content: 'upgradeKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  name: upgradeReplicaSetCheckTimeoutInSeconds
+  fullName: upgradeReplicaSetCheckTimeoutInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die maximale Zeitspanne, während der die Verarbeitung einer Upgradedomäne blockiert und Verfügbarkeitsverlust verhindert wird, wenn es unerwartete Probleme gibt. Wenn dieses Timeout abläuft, wird die Verarbeitung der Upgradedomäne unabhängig von Verfügbarkeitsverlustproblemen fortgesetzt. Das Timeout wird beim Start jeder Upgradedomäne zurückgesetzt. Gültige Werte liegen zwischen 0 und 42.949.672.925 (einschließlich).
+
+    (32-Bit-Ganzzahl ohne Vorzeichen).
+  optional: true
+  syntax:
+    content: 'upgradeReplicaSetCheckTimeoutInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicy
+  name: ApplicationHealthPolicy
+  spec.typeScript:
+  - name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    uid: azure-servicefabric.ApplicationHealthPolicy
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  spec.typeScript:
+  - name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    uid: azure-servicefabric.MonitoringPolicyDescription
+- uid: azure-servicefabric.RegistryCredential
+  name: RegistryCredential
+  spec.typeScript:
+  - name: RegistryCredential
+    fullName: RegistryCredential
+    uid: azure-servicefabric.RegistryCredential

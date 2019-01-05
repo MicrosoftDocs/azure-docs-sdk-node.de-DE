@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b55c1abbd7c66ee7dfacaae97fe767a685f2678a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661414"
+items:
+- uid: azure-arm-mediaservices.JobOutput
+  name: JobOutput
+  fullName: JobOutput
+  children:
+  - azure-arm-mediaservices.JobOutput.error
+  - azure-arm-mediaservices.JobOutput.label
+  - azure-arm-mediaservices.JobOutput.odatatype
+  - azure-arm-mediaservices.JobOutput.progress
+  - azure-arm-mediaservices.JobOutput.state
+  langs:
+  - typeScript
+  type: interface
+  summary: Beschreibt alle Eigenschaften des eine "joboutput".
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Wenn die "joboutput" im Zustand "Fehler" ist, enthält es die Details des Fehlers.
+  optional: true
+  syntax:
+    content: 'error?: JobError'
+    return:
+      type:
+      - azure-arm-mediaservices.JobError
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.label
+  name: label
+  fullName: label
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Eine Bezeichnung, die um eine "joboutput" zugewiesen wird, um dabei zu helfen, eindeutig zu identifizieren. Dies ist nützlich, wenn Ihre Transformation mehr als eine TransformOutput, hat bei dem der Auftrag mehr als eine "joboutput" aufweist. In solchen Fällen beim Übermitteln des Auftrags, fügen Sie zwei oder mehr "joboutputs", in der gleichen Reihenfolge wie TransformOutputs in der Transformation hinzu. Anschließend können Sie beim Abrufen des Auftrags, entweder durch Ereignisse oder auf eine GET-Anforderung, die Bezeichnung verwenden, auf einfache Weise die "joboutput" identifizieren. Wenn eine Bezeichnung nicht angegeben wird, ein Standardwert von "{PresetName} _ {OutputIndex}" verwendet werden wird die vordefinierte Namen, den Namen der Voreinstellung in der entsprechenden TransformOutput und den Index für die Ausgabe ist den relativen Index dieses "joboutput" innerhalb des Auftrags. Beachten Sie, dass dieser Index den relativen Index des dem entsprechenden TransformOutput innerhalb der Transformation identisch ist.
+  optional: true
+  syntax:
+    content: 'label?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.odatatype
+  name: odatatype
+  fullName: odatatype
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Polymorphe Diskriminator
+  syntax:
+    content: 'odatatype: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.progress
+  name: progress
+  fullName: progress
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ist die "joboutput" in einem Verarbeitungszustand, enthält den Prozentsatz der Fertigstellung Auftrag. Der Wert ist eine Schätzung und sollen nicht verwendet werden, um vorherzusagen, Zeiten des Auftrags. Um festzustellen, ob die "joboutput" abgeschlossen ist, verwenden Sie die Status-Eigenschaft.
+  optional: true
+  syntax:
+    content: 'progress?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Beschreibt den Zustand der "joboutput". Mögliche Werte sind: "Abgebrochen", "Abbrechen", "Error", "Abgeschlossen", "Processing", "in der Warteschlange", "Geplant"'
+  optional: true
+  syntax:
+    content: 'state?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.JobError
+  name: JobError
+  spec.typeScript:
+  - name: JobError
+    fullName: JobError
+    uid: azure-arm-mediaservices.JobError

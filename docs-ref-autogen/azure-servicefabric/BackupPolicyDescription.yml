@@ -1,0 +1,134 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bdf8b9d6f20bb58738823313a5ead68b8aca7d61
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661454"
+items:
+- uid: azure-servicefabric.BackupPolicyDescription
+  name: BackupPolicyDescription
+  fullName: BackupPolicyDescription
+  children:
+  - azure-servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss
+  - azure-servicefabric.BackupPolicyDescription.maxIncrementalBackups
+  - azure-servicefabric.BackupPolicyDescription.name
+  - azure-servicefabric.BackupPolicyDescription.retentionPolicy
+  - azure-servicefabric.BackupPolicyDescription.schedule
+  - azure-servicefabric.BackupPolicyDescription.storage
+  langs:
+  - typeScript
+  type: interface
+  summary: Beschreibt eine Sicherungsrichtlinie für regelmäßige Sicherungen zu konfigurieren.
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss
+  name: autoRestoreOnDataLoss
+  fullName: autoRestoreOnDataLoss
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Gibt an, ob zum Auslösen der Wiederherstellung automatisch die neueste verfügbare Sicherung verwenden, für den Fall, dass die Partition einem Datenverlust kommt.
+  syntax:
+    content: 'autoRestoreOnDataLoss: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.maxIncrementalBackups
+  name: maxIncrementalBackups
+  fullName: maxIncrementalBackups
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Definiert die maximale Anzahl von inkrementellen Sicherungen, die zwischen zwei vollständige Sicherungen ausgeführt werden. Dies ist nur die obere Grenze. Eine vollständige Sicherung kann durchgeführt werden, bevor die angegebene Anzahl inkrementeller Sicherungen unter einer der folgenden Bedingungen abgeschlossen ist.
+
+    - Das Replikat wurde nie eine vollständige Sicherung durchgeführt werden, da es als primäre geworden ist,
+
+    - Einige der Protokolleinträge seit die letzte Sicherung abgeschnitten wurde, oder
+
+    - Das Replikat hat den Grenzwert „MaxAccumulatedBackupLogSizeInMB“ überschritten.
+  syntax:
+    content: 'maxIncrementalBackups: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der eindeutige Name der Sicherungsrichtlinie zu identifizieren.
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.retentionPolicy
+  name: retentionPolicy
+  fullName: retentionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Beschreibt die Richtlinie zur Beibehaltung von Sicherungen im Speicher.
+  optional: true
+  syntax:
+    content: 'retentionPolicy?: RetentionPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.RetentionPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.schedule
+  name: schedule
+  fullName: schedule
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Beschreibt die Parameter für Sicherungszeitplan.
+  syntax:
+    content: 'schedule: BackupScheduleDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupScheduleDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.storage
+  name: storage
+  fullName: storage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Beschreibt die Details des Sicherungsspeichers, wo Sie die regelmäßige Sicherungen zu speichern.
+  syntax:
+    content: 'storage: BackupStorageDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupStorageDescription
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RetentionPolicyDescription
+  name: RetentionPolicyDescription
+  spec.typeScript:
+  - name: RetentionPolicyDescription
+    fullName: RetentionPolicyDescription
+    uid: azure-servicefabric.RetentionPolicyDescription
+- uid: azure-servicefabric.BackupScheduleDescription
+  name: BackupScheduleDescription
+  spec.typeScript:
+  - name: BackupScheduleDescription
+    fullName: BackupScheduleDescription
+    uid: azure-servicefabric.BackupScheduleDescription
+- uid: azure-servicefabric.BackupStorageDescription
+  name: BackupStorageDescription
+  spec.typeScript:
+  - name: BackupStorageDescription
+    fullName: BackupStorageDescription
+    uid: azure-servicefabric.BackupStorageDescription

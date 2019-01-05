@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 400f7881d8e7e47311d33408d997eb4e6c09edc8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52089057"
+items:
+- uid: azure-servicefabric.ReplicatorQueueStatus
+  name: ReplicatorQueueStatus
+  fullName: ReplicatorQueueStatus
+  children:
+  - azure-servicefabric.ReplicatorQueueStatus.committedSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.completedSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.firstSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.lastSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.queueMemorySize
+  - azure-servicefabric.ReplicatorQueueStatus.queueUtilizationPercentage
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Bietet verschiedene Statistiken der Warteschlange, die in der Service Fabric-Replikator verwendet.
+
+    Enthält Informationen über die Service Fabric-Replikator wie die Auslastung der Replikation/kopieren-Warteschlange, den Zeitstempel der letzten Bestätigung empfangen usw. an. Abhängig von der Rolle des Replikators implizieren die Eigenschaften in einer solchen unterschiedliche Bedeutung.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.committedSequenceNumber
+  name: committedSequenceNumber
+  fullName: committedSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Auf einem primären Replikator ist dies semantisch der höchsten Sequenznummer des Vorgangs für die ein schreibquorum der sekundären Replikate eine Bestätigung gesendet haben.
+
+    Auf einem sekundären Replikator ist dies semantisch der höchsten Sequenznummer des Vorgangs in der richtigen Reihenfolge empfangen, die von der primären Datenbank.
+  optional: true
+  syntax:
+    content: 'committedSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.completedSequenceNumber
+  name: completedSequenceNumber
+  fullName: completedSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Auf einem primären Replikator ist dies semantisch der höchsten Sequenznummer des, die Vorgangs für alle sekundären Replikate auf eine Bestätigung gesendet haben.
+
+    Auf einem sekundären Replikator ist dies semantisch der höchsten Sequenznummer, die in den persistenten Zustand angewendet wurde.
+  optional: true
+  syntax:
+    content: 'completedSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.firstSequenceNumber
+  name: firstSequenceNumber
+  fullName: firstSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Auf einem primären Replikator ist dies semantisch die Sequenznummer des, die Vorgangs für alle sekundären Replikate auf eine Bestätigung gesendet haben.
+
+    Auf einem sekundären Replikator ist dies die kleinste Sequenznummer des Vorgangs, der in der Warteschlange vorhanden ist.
+  optional: true
+  syntax:
+    content: 'firstSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.lastSequenceNumber
+  name: lastSequenceNumber
+  fullName: lastSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Stellt die aktuelle Sequenznummer des Vorgangs, der in der Warteschlange verfügbar ist.
+  optional: true
+  syntax:
+    content: 'lastSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.queueMemorySize
+  name: queueMemorySize
+  fullName: queueMemorySize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Gibt den virtuellen Arbeitsspeicher verbraucht, die von der Warteschlange in Byte.
+  optional: true
+  syntax:
+    content: 'queueMemorySize?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.queueUtilizationPercentage
+  name: queueUtilizationPercentage
+  fullName: queueUtilizationPercentage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Stellt die Auslastung der Warteschlange dar. Der Wert 0 gibt an, dass die Warteschlange leer ist und ein Wert von 100 gibt an, dass die Warteschlange voll ist.
+  optional: true
+  syntax:
+    content: 'queueUtilizationPercentage?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric

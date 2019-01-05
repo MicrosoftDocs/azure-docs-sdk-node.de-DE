@@ -1,0 +1,211 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: dae8eea1772ed573bf51cdedcda0db4bad4d60bd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52156420"
+items:
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters
+  name: UpdateDataLakeStoreAccountParameters
+  fullName: UpdateDataLakeStoreAccountParameters
+  children:
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.defaultGroup
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.encryptionConfig
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.firewallAllowAzureIps
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.firewallRules
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.firewallState
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.newTier
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.tags
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.trustedIdProviders
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.trustedIdProviderState
+  - azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.virtualNetworkRules
+  langs:
+  - typeScript
+  type: interface
+  summary: Data Lake Store-Kontoinformationen zu aktualisieren.
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.defaultGroup
+  name: defaultGroup
+  fullName: defaultGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Standardgruppe des Besitzers für alle neuen Ordner und Dateien, die im Data Lake Store-Konto erstellt.
+  optional: true
+  syntax:
+    content: 'defaultGroup?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.encryptionConfig
+  name: encryptionConfig
+  fullName: encryptionConfig
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Verwendet für die Rotation von Key Vault-Schlüssel vom Benutzer verwaltet. Kann nur verwendet werden, um einen Benutzer verwaltete Schlüsseltresor Verschlüsselungsschlüssel zu drehen.
+  optional: true
+  syntax:
+    content: 'encryptionConfig?: UpdateEncryptionConfig'
+    return:
+      type:
+      - azure-arm-datalake-store.UpdateEncryptionConfig
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.firewallAllowAzureIps
+  name: firewallAllowAzureIps
+  fullName: firewallAllowAzureIps
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Der aktuelle Status der zulassen oder untersagen von IP-Adressen, die durch die Firewall in Azure stammen. Wenn die Firewall deaktiviert ist, ist dies nicht erzwungen. Mögliche Werte sind: 'Enabled', 'Deaktiviert'"
+  optional: true
+  syntax:
+    content: 'firewallAllowAzureIps?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.firewallRules
+  name: firewallRules
+  fullName: firewallRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Liste der Firewallregeln, die mit diesem Data Lake Store-Konto verknüpft.
+  optional: true
+  syntax:
+    content: 'firewallRules?: UpdateFirewallRuleWithAccountParameters[]'
+    return:
+      type:
+      - azure-arm-datalake-store.UpdateFirewallRuleWithAccountParameters[]
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.firewallState
+  name: firewallState
+  fullName: firewallState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Der aktuelle Status der IP-Adresse-Firewall für das Data Lake Store-Konto. Das Deaktivieren der Firewall nicht vorhandene Regeln entfernt, nur werden diese ignoriert, bis die Firewall wieder aktiviert wird. Mögliche Werte sind: 'Enabled', 'Deaktiviert'"
+  optional: true
+  syntax:
+    content: 'firewallState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.newTier
+  name: newTier
+  fullName: newTier
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Die Mindestabnahme für den nächsten Monat verwendet werden soll. Mögliche Werte sind: \"Verbrauch\", 'Commitment_1TB', \"Commitment_10TB\", \"Commitment_100TB\", \"Commitment_500TB\", \"Commitment_1PB\", \"Commitment_5PB\""
+  optional: true
+  syntax:
+    content: 'newTier?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ressourcentags
+  optional: true
+  syntax:
+    content: 'tags?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.trustedIdProviders
+  name: trustedIdProviders
+  fullName: trustedIdProviders
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Liste der vertrauenswürdigen Identitätsanbieter, die mit diesem Data Lake Store-Konto verknüpft.
+  optional: true
+  syntax:
+    content: 'trustedIdProviders?: UpdateTrustedIdProviderWithAccountParameters[]'
+    return:
+      type:
+      - azure-arm-datalake-store.UpdateTrustedIdProviderWithAccountParameters[]
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.trustedIdProviderState
+  name: trustedIdProviderState
+  fullName: trustedIdProviderState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Der aktuelle Status des Features vertrauenswürdige Identitätsanbieter-Anbieter für das Data Lake Store-Konto.
+
+    Deaktivieren vertrauenswürdige Identitätsanbieter Anbieterfunktionen entfernt nicht die Anbieter, nur werden diese ignoriert, bis dieses Feature erneut aktiviert wird. Mögliche Werte sind: 'Enabled', 'Deaktiviert'
+  optional: true
+  syntax:
+    content: 'trustedIdProviderState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-datalake-store
+- uid: azure-arm-datalake-store.UpdateDataLakeStoreAccountParameters.virtualNetworkRules
+  name: virtualNetworkRules
+  fullName: virtualNetworkRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Liste der Regeln für virtuelle Netzwerke mit diesem Data Lake Store-Konto verknüpft.
+  optional: true
+  syntax:
+    content: 'virtualNetworkRules?: UpdateVirtualNetworkRuleWithAccountParameters[]'
+    return:
+      type:
+      - azure-arm-datalake-store.UpdateVirtualNetworkRuleWithAccountParameters[]
+  package: azure-arm-datalake-store
+references:
+- uid: azure-arm-datalake-store.UpdateEncryptionConfig
+  name: UpdateEncryptionConfig
+  spec.typeScript:
+  - name: UpdateEncryptionConfig
+    fullName: UpdateEncryptionConfig
+    uid: azure-arm-datalake-store.UpdateEncryptionConfig
+- uid: azure-arm-datalake-store.UpdateFirewallRuleWithAccountParameters[]
+  name: UpdateFirewallRuleWithAccountParameters[]
+  spec.typeScript:
+  - name: UpdateFirewallRuleWithAccountParameters
+    fullName: UpdateFirewallRuleWithAccountParameters
+    uid: azure-arm-datalake-store.UpdateFirewallRuleWithAccountParameters
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-datalake-store.UpdateTrustedIdProviderWithAccountParameters[]
+  name: UpdateTrustedIdProviderWithAccountParameters[]
+  spec.typeScript:
+  - name: UpdateTrustedIdProviderWithAccountParameters
+    fullName: UpdateTrustedIdProviderWithAccountParameters
+    uid: azure-arm-datalake-store.UpdateTrustedIdProviderWithAccountParameters
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-datalake-store.UpdateVirtualNetworkRuleWithAccountParameters[]
+  name: UpdateVirtualNetworkRuleWithAccountParameters[]
+  spec.typeScript:
+  - name: UpdateVirtualNetworkRuleWithAccountParameters
+    fullName: UpdateVirtualNetworkRuleWithAccountParameters
+    uid: azure-arm-datalake-store.UpdateVirtualNetworkRuleWithAccountParameters
+  - name: '[]'
+    fullName: '[]'
