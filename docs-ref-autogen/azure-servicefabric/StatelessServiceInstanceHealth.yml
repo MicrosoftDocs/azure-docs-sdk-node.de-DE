@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7ee2030edfb8d3fd7e62c662828dd18a49186c00
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52072925"
+items:
+- uid: azure-servicefabric.StatelessServiceInstanceHealth
+  name: StatelessServiceInstanceHealth
+  fullName: StatelessServiceInstanceHealth
+  children:
+  - azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="9e36c-101">Stellt die Integrität der zustandslosen Dienstinstanz dar.</span><span class="sxs-lookup"><span data-stu-id="9e36c-101">Represents the health of the stateless service instance.</span></span>
+
+    <span data-ttu-id="9e36c-102">Enthält den Zustand der Instanz, die aggregierte Integrität, den Health-Ereignisse und die fehlerhaften auswertungen.</span><span class="sxs-lookup"><span data-stu-id="9e36c-102">Contains the instance aggregated health state, the health events and the unhealthy evaluations.</span></span>
+  extends:
+    name: azure-servicefabric.ReplicaHealth
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="9e36c-103">ID der Instanz eines zustandslosen Diensts.</span><span class="sxs-lookup"><span data-stu-id="9e36c-103">Id of a stateless service instance.</span></span> <span data-ttu-id="9e36c-104">Instanz-ID wird von Service Fabric verwendet, um eine Instanz einer Partition eines zustandslosen Diensts eindeutig zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="9e36c-104">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="9e36c-105">Es ist eindeutig innerhalb einer Partition und wird für die Lebensdauer der Instanz nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="9e36c-105">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="9e36c-106">Wenn die Instanz ein Failover auf demselben oder einem anderen Knoten ausgeführt hat, erhalten sie einen anderen Wert für die Instanz-ID.</span><span class="sxs-lookup"><span data-stu-id="9e36c-106">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaHealth
+  name: ReplicaHealth
+  spec.typeScript:
+  - name: ReplicaHealth
+    fullName: ReplicaHealth
+    uid: azure-servicefabric.ReplicaHealth
