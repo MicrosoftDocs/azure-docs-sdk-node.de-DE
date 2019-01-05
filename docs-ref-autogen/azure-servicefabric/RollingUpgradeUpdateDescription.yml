@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bd5b9eaacd3e0fe8d39d35790a637a735d1c1cef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52115885"
+items:
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription
+  name: RollingUpgradeUpdateDescription
+  fullName: RollingUpgradeUpdateDescription
+  children:
+  - azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  - azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  langs:
+  - typeScript
+  type: interface
+  summary: Beschreibt die Parameter für ein paralleles Upgrade von der Anwendung oder eines Clusters aktualisieren.
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  name: failureAction
+  fullName: failureAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die kompensierende Aktion ausführen, wenn ein überwachtes Upgrade Überwachung Verletzungen der Überwachungsrichtlinie oder Integritätsrichtlinie erkennt.
+
+    Ungültige gibt an, dass die Fehleraktion ungültig ist. Rollback gibt an, dass das Upgrade ein Rollback automatisch gestartet wird.
+
+    Manuelle gibt an, dass das Upgrade in den Upgrademodus UnmonitoredManual wechselt. Mögliche Werte sind: "Invalid", "Rollback", "Manual"
+  optional: true
+  syntax:
+    content: 'failureAction?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Bei "true", werden dann Prozesse erzwungen während des Upgrades neu gestartet selbst, wenn der Codeversion (Upgrade nur Änderungen Konfiguration oder Daten) nicht geändert wurde.
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  name: healthCheckRetryTimeoutInMilliseconds
+  fullName: healthCheckRetryTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Zeitspanne integritätsevaluierung wiederholen, wenn die Anwendung oder der Cluster fehlerhaft ist, bevor die Fehleraktion (FailureAction) ausgeführt wird. Wird zuerst als Zeichenfolge interpretiert, die für eine ISO 8601-Dauer steht. Wenn dies nicht erfolgreich ist, erfolgt die Interpretation als Zahl, die für die Gesamtzahl an Millisekunden steht.
+  optional: true
+  syntax:
+    content: 'healthCheckRetryTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  name: healthCheckStableDurationInMilliseconds
+  fullName: healthCheckStableDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Zeitspanne, während der die Anwendung oder der Cluster fehlerfrei bleiben muss, bevor das Upgrade mit der nächsten Upgradedomäne fortgesetzt wird. Wird zuerst als Zeichenfolge interpretiert, die für eine ISO 8601-Dauer steht. Wenn dies nicht erfolgreich ist, erfolgt die Interpretation als Zahl, die für die Gesamtzahl an Millisekunden steht.
+  optional: true
+  syntax:
+    content: 'healthCheckStableDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  name: healthCheckWaitDurationInMilliseconds
+  fullName: healthCheckWaitDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die Zeitspanne, während der nach dem Abschließen einer Upgradedomäne gewartet werden soll, bevor Integritätsrichtlinien angewendet werden.
+
+    Wird zuerst als Zeichenfolge interpretiert, die für eine ISO 8601-Dauer steht. Wenn dies nicht erfolgreich ist, erfolgt die Interpretation als Zahl, die für die Gesamtzahl an Millisekunden steht.
+  optional: true
+  syntax:
+    content: 'healthCheckWaitDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  name: replicaSetCheckTimeoutInMilliseconds
+  fullName: replicaSetCheckTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die maximale Zeitspanne, während der die Verarbeitung einer Upgradedomäne blockiert und Verfügbarkeitsverlust verhindert wird, wenn es unerwartete Probleme gibt. Wenn dieses Timeout abläuft, wird die Verarbeitung der Upgradedomäne unabhängig von Verfügbarkeitsverlustproblemen fortgesetzt. Das Timeout wird beim Start jeder Upgradedomäne zurückgesetzt. Gültige Werte liegen zwischen 0 und 42.949.672.925 (einschließlich).
+
+    (32-Bit-Ganzzahl ohne Vorzeichen).
+  optional: true
+  syntax:
+    content: 'replicaSetCheckTimeoutInMilliseconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Der Modus, der zum Überwachen der Integrität während eines parallelen Upgrades verwendet wird. Die Werte sind Monitored, UnmonitoredAuto und UnmonitoredManual. Mögliche Werte sind: "Invalid", "UnmonitoredAuto", "UnmonitoredManual", "Überwacht"'
+  syntax:
+    content: 'rollingUpgradeMode: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  name: upgradeDomainTimeoutInMilliseconds
+  fullName: upgradeDomainTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Zeitspanne, während der jede Upgradedomäne abgeschlossen werden muss, bevor die Fehleraktion (FailureAction) ausgeführt wird. Wird zuerst als Zeichenfolge interpretiert, die für eine ISO 8601-Dauer steht. Wenn dies nicht erfolgreich ist, erfolgt die Interpretation als Zahl, die für die Gesamtzahl an Millisekunden steht.
+  optional: true
+  syntax:
+    content: 'upgradeDomainTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  name: upgradeTimeoutInMilliseconds
+  fullName: upgradeTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Zeitspanne, während der das gesamte Upgrade abgeschlossen werden muss, bevor die Fehleraktion (FailureAction) ausgeführt wird. Wird zuerst als Zeichenfolge interpretiert, die für eine ISO 8601-Dauer steht. Wenn dies nicht erfolgreich ist, erfolgt die Interpretation als Zahl, die für die Gesamtzahl an Millisekunden steht.
+  optional: true
+  syntax:
+    content: 'upgradeTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

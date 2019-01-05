@@ -1,0 +1,226 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665194"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  fullName: SpeechConfig
+  children:
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+  langs:
+  - typeScript
+  type: class
+  summary: Konfiguration der Sprache.
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Legt fest, das Autorisierungstoken.
+
+    Wenn dies festgelegt ist, wird der Abonnementschlüssel ignoriert.
+
+    Der Benutzer muss sicherstellen, dass das bereitgestellte Autorisierungstoken gültig und nicht abgelaufen ist.
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Schließt die Konfiguration an.
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+  name: endpointId
+  fullName: endpointId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ruft die Endpunkt-ID eines benutzerdefinierte sprachübersetzungssysteme-Modells, das für die Spracherkennung verwendet wird.
+  syntax:
+    content: 'public endpointId: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+  name: fromAuthorizationToken(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Erstellt eine Instanz der Factory Sprache mit der angegebenen anfänglichen Autorisierungstoken und Region an.
+  syntax:
+    content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+    parameters:
+    - id: authorizationToken
+      type:
+      - string
+      description: Das erste Autorisierungstoken.
+    - id: region
+      type:
+      - string
+      description: Der Name der Region (finden Sie unter den <a href="https://aka.ms/csspeech/region">Region Seite</a>).
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+  name: fromEndpoint(URL, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Erstellt eine Instanz der Factory Sprache mit den angegebenen Endpunkt und Abonnementschlüssel.
+
+    Diese Methode ist nur für Benutzer vorgesehen, die eine nicht standardmäßige Dienstendpunkt oder Parameter zu verwenden.
+
+    die Spracheinstellung im Uri hat Vorrang vor, und die effektive Sprache ist "de-DE".
+  syntax:
+    content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+    parameters:
+    - id: endpoint
+      type:
+      - URL
+      description: Der Dienstendpunkt für die Verbindung.
+    - id: subscriptionKey
+      type:
+      - string
+      description: Der Abonnementschlüssel.
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+  name: fromSubscription(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Statische Instanz der SpeechConfig zurückgegebenes SubscriptionKey und Service-Region zu übergeben.
+  syntax:
+    content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+    parameters:
+    - id: subscriptionKey
+      type:
+      - string
+      description: Der Abonnementschlüssel.
+    - id: region
+      type:
+      - string
+      description: Der Name der Region (finden Sie unter den <a href="https://aka.ms/csspeech/region">Region Seite</a>).
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+  name: getProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Gibt den aktuellen Wert einer beliebigen Eigenschaft zurück.
+  syntax:
+    content: 'function getProperty(name: string, def?: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Der Name der Eigenschaft für die Abfrage.
+    - id: def
+      type:
+      - string
+      description: Der zurückzugebende Wert, für den Fall, dass die Eigenschaft nicht bekannt ist.
+      optional: true
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+  name: outputFormat
+  fullName: outputFormat
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ruft die Ausgabeformat an.
+  syntax:
+    content: 'public outputFormat: OutputFormat'
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.OutputFormat
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+  name: setProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Legt eine beliebige Eigenschaft fest.
+  syntax:
+    content: 'function setProperty(name: string, value: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Der Name der festzulegenden Eigenschaft.
+    - id: value
+      type:
+      - string
+      description: >
+        Der neue Wert der Eigenschaft.
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Legt fest, das die Eingabesprache.
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+  name: OutputFormat
+  spec.typeScript:
+  - name: OutputFormat
+    fullName: OutputFormat
+    uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  spec.typeScript:
+  - name: SpeechConfig
+    fullName: SpeechConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
