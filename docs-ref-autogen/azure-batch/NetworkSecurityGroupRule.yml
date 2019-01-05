@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 18de5e9dfe7c710d55408e003719f1b162ad7538
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660404"
+items:
+- uid: azure-batch.NetworkSecurityGroupRule
+  name: NetworkSecurityGroupRule
+  fullName: NetworkSecurityGroupRule
+  children:
+  - azure-batch.NetworkSecurityGroupRule.access
+  - azure-batch.NetworkSecurityGroupRule.priority
+  - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.NetworkSecurityGroupRule.access
+  name: access
+  fullName: access
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Folgende Werte sind möglich: "zulassen", "Ablehnen"'
+  syntax:
+    content: 'access: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.NetworkSecurityGroupRule.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Prioritäten in einem Pool müssen eindeutig sein und werden in der Reihenfolge ihrer Priorität ausgewertet.
+
+    Je niedriger die Nummer ist, desto höher ist die Priorität. Beispielsweise können Regeln mit den Ordnungszahlen von 150, 250 und 350 angegeben werden. Die Regel mit der die fortlaufende Nummer des 150 hat Vorrang vor der Regel mit einem Auftrag mit 250. Zulässige Prioritäten liegen auf 150 zu 3500. Wenn alle reservierten oder doppelte Werte, dass die Anforderung fehlschlägt, mit dem HTTP-Statuscode 400 bereitgestellt werden.
+  syntax:
+    content: 'priority: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  name: sourceAddressPrefix
+  fullName: sourceAddressPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Gültige Werte sind eine einzelne IP-Adresse (z.B. 10.10.10.10), IP-Subnetz (d. h. 192.168.1.0/24), Standard-Tag, oder * (für alle Adressen).  Wenn ein anderer dienen die Werte, dass die Anforderung mit HTTP-Statuscode 400 schlägt fehl.
+  syntax:
+    content: 'sourceAddressPrefix: string'
+    return:
+      type:
+      - string
+  package: azure-batch

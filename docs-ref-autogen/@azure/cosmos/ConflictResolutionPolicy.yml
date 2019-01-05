@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6be3af94898fd3f29c1904568c5e9f7d20c64073
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52054133"
+items:
+- uid: '@azure/cosmos.ConflictResolutionPolicy'
+  name: ConflictResolutionPolicy
+  fullName: ConflictResolutionPolicy
+  children:
+  - '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionPath'
+  - '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionProcedure'
+  - '@azure/cosmos.ConflictResolutionPolicy.mode'
+  langs:
+  - typeScript
+  type: interface
+  summary: Stellt die Konfiguration der Konflikt auflösen um anzugeben, wie zum Lösen von Konflikten für den Fall, dass Schreibvorgänge aus verschiedenen Regionen zu Konflikten für Dokumente in der Sammlung in Azure Cosmos DB-Diensts führen.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionPath'
+  name: conflictResolutionPath
+  fullName: conflictResolutionPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >+
+    Übernimmt oder bestimmt den Pfad der in der einzelnen Dokumente in Azure Cosmos DB-Diensts für die letzte Writer Wins-Auflösung des Konflikts zwischen vorhanden ist.
+
+    Dieser Pfad muss in jedem Dokument vorhanden sein und muss ein ganzzahliger Wert sein.
+
+    Bei einem Konflikt, der in einem Dokument ausgeführt wird wird das Dokument mit den höheren ganzzahligen Wert im angegebenen Pfad ausgewählt werden.
+
+    Wenn der Pfad nicht angegeben ist, wird standardmäßig der Timestamp-Pfad verwendet werden.
+
+    Dieser Wert sollte nur festgelegt werden, wenn <xref:ConflictResolutionMode.LastWriterWins>.
+
+
+    ```typescript
+
+    conflictResolutionPolicy.ConflictResolutionPath = "/name/first";
+
+    ```
+
+  optional: true
+  syntax:
+    content: 'conflictResolutionPath?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionProcedure'
+  name: conflictResolutionProcedure
+  fullName: conflictResolutionProcedure
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Übernimmt oder bestimmt die <xref:StoredProcedure> die für die Auflösung des Konflikts zwischen in Azure Cosmos DB-Diensts verwendet wird.
+
+    Diese gespeicherte Prozedur kann erstellt werden, nachdem die <xref:Container> wird erstellt und kann geändert werden, nach Bedarf.
+
+    1. Dieser Wert sollte nur festgelegt werden, wenn <xref:ConflictResolutionMode.Custom>.
+
+    2. Falls die gespeicherte Prozedur ein Fehler auftritt, oder löst eine Ausnahme aus, wird standardmäßig die Auflösung des Konflikts zwischen Konflikte in der verursacht einen Konflikt-feed zu registrieren.
+
+
+    ```typescript
+
+    conflictResolutionPolicy.ConflictResolutionProcedure = "resolveConflict"
+
+    ```
+  optional: true
+  syntax:
+    content: 'conflictResolutionProcedure?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.mode'
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Übernimmt oder bestimmt den <see cref="ConflictResolutionMode"/> in Azure Cosmos DB-Diensts. Standardmäßig ist dieser Wert <xref:ConflictResolutionMode.LastWriterWins>.
+  optional: true
+  syntax:
+    content: 'mode?: Object'
+    return:
+      type:
+      - Object
+  package: '@azure/cosmos'
