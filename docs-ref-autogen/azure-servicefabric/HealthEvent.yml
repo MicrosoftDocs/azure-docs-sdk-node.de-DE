@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c83147093121e6d6da6f78ed362246e879f6c40f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083915"
+items:
+- uid: azure-servicefabric.HealthEvent
+  name: HealthEvent
+  fullName: HealthEvent
+  children:
+  - azure-servicefabric.HealthEvent.isExpired
+  - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  - azure-servicefabric.HealthEvent.lastOkTransitionAt
+  - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  langs:
+  - typeScript
+  type: interface
+  summary: Stellt Integritätsinformationen für eine integritätsentität, z. B. Cluster, Anwendung oder Knoten gemeldet werden, mit zusätzlichen Metadaten, die vom Health Manager hinzugefügt.
+  extends:
+    name: azure-servicefabric.HealthInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.isExpired
+  name: isExpired
+  fullName: isExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Gibt true zurück, wenn das integritätsereignis abgelaufen ist, andernfalls "false".
+  optional: true
+  syntax:
+    content: 'isExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  name: lastErrorTransitionAt
+  fullName: lastErrorTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Wenn der aktuelle Integritätsstatus "Fehler" ist, gibt diese Eigenschaft die Zeit, an der im Integritätsbericht zunächst mit "Fehler" gemeldet wurde. Klicken Sie für die regelmäßige berichterstellung viele Berichte mit dem gleichen Status wurde möglicherweise jedoch generiert, nur das Datum und Uhrzeit, zu den ersten "Error" Integritätsbericht empfangen wurde, gibt diese Eigenschaft zurück.
+
+    Ist der aktuelle Integritätsstatus "Ok" oder "Warnung", gibt das Datum und Uhrzeit, zu dem der Integritätsstatus in "Error", letzter wurde vor dem Übergang in einen anderen Zustand.
+
+
+    Wenn der Integritätsstatus nicht "Error" war, wird der Wert NULL Datum / Uhrzeit sein.
+  optional: true
+  syntax:
+    content: 'lastErrorTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  name: lastModifiedUtcTimestamp
+  fullName: lastModifiedUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Das Datum und Uhrzeit der letzten der Integritätsbericht vom integritätsspeicher Änderung.
+  optional: true
+  syntax:
+    content: 'lastModifiedUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+  name: lastOkTransitionAt
+  fullName: lastOkTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Wenn der aktuelle Integritätsstatus "Ok" ist, gibt diese Eigenschaft die Zeit, an der im Integritätsbericht zunächst mit "Ok" gemeldet wurde.
+
+    Für die regelmäßige berichterstellung ggf. viele Berichte mit dem gleichen Status generiert wurden.
+
+    Diese Eigenschaft gibt das Datum und Uhrzeit, wann die erste Integritätsbericht "Ok" empfangen wurde.
+
+    Wenn der aktuellen Zustand "Error" oder "Warnung" ist, gibt Sie Datum und Uhrzeit, an dem der Integritätsstatus "OK", bevor der Übergang in einen anderen Zustand entsprechend seiner letzten, zurück.
+
+
+    Wenn der Integritätsstatus nicht "Ok" war, wird der Wert keine Datum / Uhrzeit sein.
+  optional: true
+  syntax:
+    content: 'lastOkTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  name: lastWarningTransitionAt
+  fullName: lastWarningTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Wenn der aktuelle Integritätsstatus "Warnung" ist, gibt diese Eigenschaft die Zeit, an der im Integritätsbericht zunächst mit "Warnung" gemeldet wurde. Viele Berichte mit dem gleichen Status wurde möglicherweise jedoch generiert, gibt diese Eigenschaft nur das Datum und Uhrzeit, zu den ersten "Warnung" Integritätsbericht empfangen wurde, für die regelmäßige berichterstellung.
+
+    Ist der aktuelle Integritätsstatus "Ok" oder "Error", gibt das Datum und Uhrzeit, an dem der Integritätsstatus "Warnung", bevor der Übergang in einen anderen Zustand entsprechend seiner letzten.
+
+
+    Wenn der Integritätszustand "nie"Warning"wurde", wird der Wert 0 (null) Datum / Uhrzeit sein.
+  optional: true
+  syntax:
+    content: 'lastWarningTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  name: sourceUtcTimestamp
+  fullName: sourceUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Das Datum und Uhrzeit, wann der Bericht zur Integrität von der Quelle gesendet wurde.
+  optional: true
+  syntax:
+    content: 'sourceUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  spec.typeScript:
+  - name: HealthInformation
+    fullName: HealthInformation
+    uid: azure-servicefabric.HealthInformation

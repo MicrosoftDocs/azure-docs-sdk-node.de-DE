@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62fd16ee404efba59799d1de2f35e41f30d61e8d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126438"
+items:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  name: DeployedServicePackageHealthStateFilter
+  fullName: DeployedServicePackageHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Definiert die Kriterien zum bestimmen, ob ein bereitgestelltes Dienstpaket als ein untergeordnetes Element einer bereitgestellten Anwendung in den clusterintegritätsblock einbezogen werden soll.
+
+    Die bereitgestellten dienstpakete werden nur zurückgegeben, wenn die übergeordneten Entitäten einen Filter angegeben, in der Beschreibung der Cluster Health Block Abfrage übereinstimmen. Die übergeordnete Anwendung bereitgestellt und die übergeordneten Anwendung muss in den clusterintegritätsblock enthalten sein.
+
+    Ein Filter kann 0 (null) entsprechen, die eine oder mehrere bereitgestellte service-Paketen in Abhängigkeit vom zugehörigen Eigenschaften.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Der Filter für den Integritätsstatus der bereitgestellten dienstpakete. Sie können bereitgestellte Pakete auswählen, wenn sie die gewünschten Integritätsstatus übereinstimmen.
+
+    Die möglichen Werte sind Integer-Wert, der eine der folgenden Integritätsstatus. Es werden nur Dienstpakete bereitgestellt, die dem Filter entsprechen. Alle bereitgestellten dienstpakete werden verwendet, um den übergeordneten bereitgestellten Anwendung, die aggregierten Integritätsstatus auszuwerten.
+
+    Wenn nicht angegeben, ist Standardwert None und, sofern die bereitgestellten Dienst-Paket-ID angegeben wird.
+
+    Wenn der Filter hat den Standardwert, und bereitgestellte Dienst-Paket-ID angegeben ist, wird der übereinstimmenden bereitgestelltes Dienstpaket zurückgegeben.
+
+    Ein Statuswert ist eine kennzeichenbasierte Enumeration, sodass der Wert eine Kombination der Werte sein kann, die mit dem bitweisen ODER-Operator abgerufen werden.
+
+    Wenn der angegebene Wert 6 ist, entspricht es z. B. bereitgestellte dienstpakete für "healthstate"-Wert für OK (2) oder Warning (4).
+
+    - Default: Standardwert. Stimmt mit jedem Integritätsstatus (HealthState) überein. Der Wert ist gleich null.
+
+    - None: Filter, der keinem Wert für "healthstate" übereinstimmt. Wird verwendet, um keine Ergebnisse für eine angegebene Statussammlung zurückzugeben. Der Wert ist gleich „1“.
+
+    - OK: Filter, der mit Eingaben übereinstimmt, für "healthstate" Wert Ok. Der Wert ist gleich „2“.
+
+    - Warning: Filter, der Warnung den Wert Eingaben mit für "healthstate" übereinstimmt. Der Wert ist gleich „4“.
+
+    - Fehler: Filter, der mit Eingaben eines Werts Fehler für "healthstate" übereinstimmt. Der Wert ist gleich „8“.
+
+    - All: Filter, Eingaben mit einem anderen Wert für "healthstate" übereinstimmt. Der Wert ist gleich „65535“.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  name: serviceManifestNameFilter
+  fullName: serviceManifestNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Der Name des dienstmanifests der bereitgestellten dienstpakete identifiziert, die dem Filter entspricht.
+
+    Wenn angegeben, wird der Filter nur für die angegebene bereitgestellten dienstpakete, ggf. angewendet.
+
+    Wenn keine bereitgestellte dienstpakete mit angegebenen Manifestnamen vorhanden ist, wird nichts in den clusterintegritätsblock basierend auf diesen Filter zurückgegeben.
+
+    Wenn alle bereitgestelltes Dienstpaket vorhanden ist, sind diese in den clusterintegritätsblock enthalten, wenn sie die anderen Filtereigenschaften berücksichtigt.
+
+    Wenn nicht angegeben, werden alle bereitgestellten dienstpakete, die den übergeordneten Filter (sofern vorhanden) in Betracht gezogen und die andere Elemente in einem Filter, wie der Health-State-Filter abgeglichen werden.
+  optional: true
+  syntax:
+    content: 'serviceManifestNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  name: servicePackageActivationIdFilter
+  fullName: servicePackageActivationIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die ID der Aktivierung eines bereitgestellten Dienstpakets, die dem Filter entspricht.
+
+    Wenn nicht angegeben, gilt der Filter, um alle bereitgestellten dienstpakete, die mit die anderen Parametern übereinstimmen.
+
+    Wenn angegeben, entspricht der Filter nur das bereitgestellte Dienstpaket mit der angegebenen ID.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
