@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fedc488f9fe69cda6ac1cbee7028faa2cad4cac6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52008134"
+items:
+- uid: azure-servicefabric.Epoch
+  name: Epoch
+  fullName: Epoch
+  children:
+  - azure-servicefabric.Epoch.configurationVersion
+  - azure-servicefabric.Epoch.dataLossVersion
+  langs:
+  - typeScript
+  type: interface
+  summary: Ein Epoche ist eine Konfiguration-Zahl für die Partition als Ganzes. Beim Festlegen der Konfigurations des Replikats Änderungen, z. B. wenn der primäre Replikat ändert, die Vorgänge, die aus dem neuen primären Replikat repliziert werden als sind eine neue Epoche, von denen die vom alten primären Replikat gesendet wurden.
+  package: azure-servicefabric
+- uid: azure-servicefabric.Epoch.configurationVersion
+  name: configurationVersion
+  fullName: configurationVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die aktuelle Konfiguration Anzahl dieser Epoche. Die Anzahl der Konfiguration ist ein steigender Wert, der aktualisiert wird, wenn die Konfiguration dieses Replikats Änderungen festgelegt.
+  optional: true
+  syntax:
+    content: 'configurationVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.Epoch.dataLossVersion
+  name: dataLossVersion
+  fullName: dataLossVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die aktuelle Anzahl von Datenverlust von dieser Epoche. Die Daten verloren gehen Number-Eigenschaft ist ein steigender Wert, der aktualisiert wird, wenn Daten verloren gehen als bei Ausfall eines Quorums von Replikaten im Replikat festgelegt werden, die das primäre Replikat enthält vermutet wird, an.
+  optional: true
+  syntax:
+    content: 'dataLossVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
