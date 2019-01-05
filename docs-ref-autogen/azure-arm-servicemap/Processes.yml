@@ -1,0 +1,954 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5a8d9628614595fd513d392d2c5a0afd54430d58
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52137495"
+items:
+- uid: azure-arm-servicemap.Processes
+  name: Processes
+  fullName: Processes
+  children:
+  - azure-arm-servicemap.Processes.get
+  - azure-arm-servicemap.Processes.get_2
+  - azure-arm-servicemap.Processes.get_1
+  - azure-arm-servicemap.Processes.getLiveness
+  - azure-arm-servicemap.Processes.getLiveness_2
+  - azure-arm-servicemap.Processes.getLiveness_1
+  - azure-arm-servicemap.Processes.getLivenessWithHttpOperationResponse
+  - azure-arm-servicemap.Processes.getWithHttpOperationResponse
+  - azure-arm-servicemap.Processes.listAcceptingPorts
+  - azure-arm-servicemap.Processes.listAcceptingPorts_2
+  - azure-arm-servicemap.Processes.listAcceptingPorts_1
+  - azure-arm-servicemap.Processes.listAcceptingPortsNext
+  - azure-arm-servicemap.Processes.listAcceptingPortsNext_2
+  - azure-arm-servicemap.Processes.listAcceptingPortsNext_1
+  - azure-arm-servicemap.Processes.listAcceptingPortsNextWithHttpOperationResponse
+  - azure-arm-servicemap.Processes.listAcceptingPortsWithHttpOperationResponse
+  - azure-arm-servicemap.Processes.listConnections
+  - azure-arm-servicemap.Processes.listConnections_2
+  - azure-arm-servicemap.Processes.listConnections_1
+  - azure-arm-servicemap.Processes.listConnectionsNext
+  - azure-arm-servicemap.Processes.listConnectionsNext_2
+  - azure-arm-servicemap.Processes.listConnectionsNext_1
+  - azure-arm-servicemap.Processes.listConnectionsNextWithHttpOperationResponse
+  - azure-arm-servicemap.Processes.listConnectionsWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.get
+  name: get(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-101">Gibt den angegebenen Prozess zurück.</span><span class="sxs-lookup"><span data-stu-id="b61e4-101">Returns the specified process.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-102">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-102">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-103">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-103">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-104">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-104">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-105">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-105">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Process>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.get_2
+  name: get(string, string, string, string, Object, ServiceCallback<Process>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-106">Gibt den angegebenen Prozess zurück.</span><span class="sxs-lookup"><span data-stu-id="b61e4-106">Returns the specified process.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options: Object, callback: ServiceCallback<Process>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Process>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Process>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.get_1
+  name: get(string, string, string, string, ServiceCallback<Process>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-107">Gibt den angegebenen Prozess zurück.</span><span class="sxs-lookup"><span data-stu-id="b61e4-107">Returns the specified process.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<Process>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Process>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Process>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getLiveness
+  name: getLiveness(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-108">Ruft den Status der Verfügbarkeitseigenschaften des Prozesses während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="b61e4-108">Obtains the liveness status of the process during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-109">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-109">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-110">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-110">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-111">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-111">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-112">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-112">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getLiveness_2
+  name: getLiveness(string, string, string, string, Object, ServiceCallback<Liveness>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-113">Ruft den Status der Verfügbarkeitseigenschaften des Prozesses während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="b61e4-113">Obtains the liveness status of the process during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options: Object, callback: ServiceCallback<Liveness>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Liveness>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getLiveness_1
+  name: getLiveness(string, string, string, string, ServiceCallback<Liveness>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-114">Ruft den Status der Verfügbarkeitseigenschaften des Prozesses während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="b61e4-114">Obtains the liveness status of the process during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<Liveness>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Liveness>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getLivenessWithHttpOperationResponse
+  name: getLivenessWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-115">Ruft den Status der Verfügbarkeitseigenschaften des Prozesses während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="b61e4-115">Obtains the liveness status of the process during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLivenessWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-116">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-116">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-117">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-117">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-118">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-118">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-119">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-119">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.Liveness>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-120">Gibt den angegebenen Prozess zurück.</span><span class="sxs-lookup"><span data-stu-id="b61e4-120">Returns the specified process.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-121">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-121">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-122">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-122">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-123">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-123">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-124">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-124">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.Process>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPorts
+  name: listAcceptingPorts(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-125">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-125">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPorts(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-126">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-126">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-127">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-127">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-128">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-128">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-129">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-129">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPorts_2
+  name: listAcceptingPorts(string, string, string, string, Object, ServiceCallback<PortCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-130">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-130">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPorts(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options: Object, callback: ServiceCallback<PortCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.PortCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPorts_1
+  name: listAcceptingPorts(string, string, string, string, ServiceCallback<PortCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-131">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-131">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPorts(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<PortCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.PortCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPortsNext
+  name: listAcceptingPortsNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-132">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-132">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPortsNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-133">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="b61e4-133">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPortsNext_2
+  name: listAcceptingPortsNext(string, Object, ServiceCallback<PortCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-134">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-134">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPortsNext(nextPageLink: string, options: Object, callback: ServiceCallback<PortCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.PortCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPortsNext_1
+  name: listAcceptingPortsNext(string, ServiceCallback<PortCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-135">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-135">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPortsNext(nextPageLink: string, callback: ServiceCallback<PortCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.PortCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPortsNextWithHttpOperationResponse
+  name: listAcceptingPortsNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-136">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-136">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPortsNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-137">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="b61e4-137">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.PortCollection>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPortsWithHttpOperationResponse
+  name: listAcceptingPortsWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-138">Gibt eine Auflistung von Ports, die auf denen dieser Vorgang akzeptiert wird</span><span class="sxs-lookup"><span data-stu-id="b61e4-138">Returns a collection of ports on which this process is accepting</span></span>
+  syntax:
+    content: 'function listAcceptingPortsWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-139">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-139">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-140">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-140">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-141">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-141">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-142">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-142">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.PortCollection>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnections
+  name: listConnections(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-143">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-143">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-144">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-144">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-145">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-145">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-146">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-146">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-147">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-147">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnections_2
+  name: listConnections(string, string, string, string, Object, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-148">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-148">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options: Object, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnections_1
+  name: listConnections(string, string, string, string, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-149">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-149">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnectionsNext
+  name: listConnectionsNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-150">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-150">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-151">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="b61e4-151">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnectionsNext_2
+  name: listConnectionsNext(string, Object, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-152">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-152">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, options: Object, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnectionsNext_1
+  name: listConnectionsNext(string, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-153">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-153">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnectionsNextWithHttpOperationResponse
+  name: listConnectionsNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-154">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-154">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnectionsNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-155">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="b61e4-155">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnectionsWithHttpOperationResponse
+  name: listConnectionsWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b61e4-156">Gibt eine Auflistung von Verbindungen beendet oder stammen, mit dem angegebenen Prozess</span><span class="sxs-lookup"><span data-stu-id="b61e4-156">Returns a collection of connections terminating or originating at the specified process</span></span>
+  syntax:
+    content: 'function listConnectionsWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-157">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="b61e4-157">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-158">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="b61e4-158">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-159">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="b61e4-159">Machine resource name.</span></span>
+    - id: processName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="b61e4-160">Resource-Name des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b61e4-160">Process resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  package: azure-arm-servicemap
+references:
+- uid: Promise<azure-arm-servicemap.Process>
+  name: Process>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Process
+    fullName: Process
+    uid: azure-arm-servicemap.Process
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.Process>
+  name: Process>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Process
+    fullName: Process
+    uid: azure-arm-servicemap.Process
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-arm-servicemap.Liveness>
+  name: Liveness>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Liveness
+    fullName: Liveness
+    uid: azure-arm-servicemap.Liveness
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.Liveness>
+  name: Liveness>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Liveness
+    fullName: Liveness
+    uid: azure-arm-servicemap.Liveness
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.Liveness>>
+  name: Liveness>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Liveness
+    fullName: Liveness
+    uid: azure-arm-servicemap.Liveness
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.Process>>
+  name: Process>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Process
+    fullName: Process
+    uid: azure-arm-servicemap.Process
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-servicemap.PortCollection>
+  name: PortCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PortCollection
+    fullName: PortCollection
+    uid: azure-arm-servicemap.PortCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.PortCollection>
+  name: PortCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PortCollection
+    fullName: PortCollection
+    uid: azure-arm-servicemap.PortCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.PortCollection>>
+  name: PortCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PortCollection
+    fullName: PortCollection
+    uid: azure-arm-servicemap.PortCollection
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-servicemap.ConnectionCollection>
+  name: ConnectionCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ConnectionCollection
+    fullName: ConnectionCollection
+    uid: azure-arm-servicemap.ConnectionCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+  name: ConnectionCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ConnectionCollection
+    fullName: ConnectionCollection
+    uid: azure-arm-servicemap.ConnectionCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  name: ConnectionCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ConnectionCollection
+    fullName: ConnectionCollection
+    uid: azure-arm-servicemap.ConnectionCollection
+  - name: '>>'
+    fullName: '>>'

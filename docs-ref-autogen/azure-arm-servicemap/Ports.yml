@@ -1,0 +1,954 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8f52acb386b8c7bf5fe5496691b25161fbba1622
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52168995"
+items:
+- uid: azure-arm-servicemap.Ports
+  name: Ports
+  fullName: Ports
+  children:
+  - azure-arm-servicemap.Ports.get
+  - azure-arm-servicemap.Ports.get_2
+  - azure-arm-servicemap.Ports.get_1
+  - azure-arm-servicemap.Ports.getLiveness
+  - azure-arm-servicemap.Ports.getLiveness_2
+  - azure-arm-servicemap.Ports.getLiveness_1
+  - azure-arm-servicemap.Ports.getLivenessWithHttpOperationResponse
+  - azure-arm-servicemap.Ports.getWithHttpOperationResponse
+  - azure-arm-servicemap.Ports.listAcceptingProcesses
+  - azure-arm-servicemap.Ports.listAcceptingProcesses_2
+  - azure-arm-servicemap.Ports.listAcceptingProcesses_1
+  - azure-arm-servicemap.Ports.listAcceptingProcessesNext
+  - azure-arm-servicemap.Ports.listAcceptingProcessesNext_2
+  - azure-arm-servicemap.Ports.listAcceptingProcessesNext_1
+  - azure-arm-servicemap.Ports.listAcceptingProcessesNextWithHttpOperationResponse
+  - azure-arm-servicemap.Ports.listAcceptingProcessesWithHttpOperationResponse
+  - azure-arm-servicemap.Ports.listConnections
+  - azure-arm-servicemap.Ports.listConnections_2
+  - azure-arm-servicemap.Ports.listConnections_1
+  - azure-arm-servicemap.Ports.listConnectionsNext
+  - azure-arm-servicemap.Ports.listConnectionsNext_2
+  - azure-arm-servicemap.Ports.listConnectionsNext_1
+  - azure-arm-servicemap.Ports.listConnectionsNextWithHttpOperationResponse
+  - azure-arm-servicemap.Ports.listConnectionsWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.get
+  name: get(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-101">Gibt den angegebenen Port zurück.</span><span class="sxs-lookup"><span data-stu-id="a8910-101">Returns the specified port.</span></span> <span data-ttu-id="a8910-102">Der Port muss während des angegebenen Zeitintervalls live sein.</span><span class="sxs-lookup"><span data-stu-id="a8910-102">The port must be live during the specified time interval.</span></span> <span data-ttu-id="a8910-103">Wenn der Port während des Intervalls nicht aktiv ist, wird der Status 404 (nicht gefunden) zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a8910-103">If the port is not live during the interval, status 404 (Not Found) is returned.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-104">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-104">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-105">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-105">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-106">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-106">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-107">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-107">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Port>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.get_2
+  name: get(string, string, string, string, Object, ServiceCallback<Port>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-108">Gibt den angegebenen Port zurück.</span><span class="sxs-lookup"><span data-stu-id="a8910-108">Returns the specified port.</span></span> <span data-ttu-id="a8910-109">Der Port muss während des angegebenen Zeitintervalls live sein.</span><span class="sxs-lookup"><span data-stu-id="a8910-109">The port must be live during the specified time interval.</span></span> <span data-ttu-id="a8910-110">Wenn der Port während des Intervalls nicht aktiv ist, wird der Status 404 (nicht gefunden) zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a8910-110">If the port is not live during the interval, status 404 (Not Found) is returned.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options: Object, callback: ServiceCallback<Port>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Port>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Port>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.get_1
+  name: get(string, string, string, string, ServiceCallback<Port>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-111">Gibt den angegebenen Port zurück.</span><span class="sxs-lookup"><span data-stu-id="a8910-111">Returns the specified port.</span></span> <span data-ttu-id="a8910-112">Der Port muss während des angegebenen Zeitintervalls live sein.</span><span class="sxs-lookup"><span data-stu-id="a8910-112">The port must be live during the specified time interval.</span></span> <span data-ttu-id="a8910-113">Wenn der Port während des Intervalls nicht aktiv ist, wird der Status 404 (nicht gefunden) zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a8910-113">If the port is not live during the interval, status 404 (Not Found) is returned.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, callback: ServiceCallback<Port>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Port>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Port>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.getLiveness
+  name: getLiveness(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-114">Ruft den Status der Verfügbarkeitseigenschaften des Ports während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="a8910-114">Obtains the liveness status of the port during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-115">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-115">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-116">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-116">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-117">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-117">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-118">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-118">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.getLiveness_2
+  name: getLiveness(string, string, string, string, Object, ServiceCallback<Liveness>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-119">Ruft den Status der Verfügbarkeitseigenschaften des Ports während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="a8910-119">Obtains the liveness status of the port during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options: Object, callback: ServiceCallback<Liveness>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Liveness>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.getLiveness_1
+  name: getLiveness(string, string, string, string, ServiceCallback<Liveness>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-120">Ruft den Status der Verfügbarkeitseigenschaften des Ports während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="a8910-120">Obtains the liveness status of the port during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, callback: ServiceCallback<Liveness>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Liveness>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.getLivenessWithHttpOperationResponse
+  name: getLivenessWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-121">Ruft den Status der Verfügbarkeitseigenschaften des Ports während des angegebenen Zeitraums ab.</span><span class="sxs-lookup"><span data-stu-id="a8910-121">Obtains the liveness status of the port during the specified time interval.</span></span>
+  syntax:
+    content: 'function getLivenessWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-122">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-122">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-123">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-123">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-124">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-124">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-125">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-125">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.Liveness>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-126">Gibt den angegebenen Port zurück.</span><span class="sxs-lookup"><span data-stu-id="a8910-126">Returns the specified port.</span></span> <span data-ttu-id="a8910-127">Der Port muss während des angegebenen Zeitintervalls live sein.</span><span class="sxs-lookup"><span data-stu-id="a8910-127">The port must be live during the specified time interval.</span></span> <span data-ttu-id="a8910-128">Wenn der Port während des Intervalls nicht aktiv ist, wird der Status 404 (nicht gefunden) zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a8910-128">If the port is not live during the interval, status 404 (Not Found) is returned.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-129">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-129">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-130">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-130">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-131">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-131">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-132">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-132">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.Port>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcesses
+  name: listAcceptingProcesses(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-133">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-133">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcesses(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-134">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-134">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-135">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-135">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-136">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-136">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-137">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-137">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ProcessCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcesses_2
+  name: listAcceptingProcesses(string, string, string, string, Object, ServiceCallback<ProcessCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-138">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-138">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcesses(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options: Object, callback: ServiceCallback<ProcessCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ProcessCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ProcessCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcesses_1
+  name: listAcceptingProcesses(string, string, string, string, ServiceCallback<ProcessCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-139">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-139">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcesses(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, callback: ServiceCallback<ProcessCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ProcessCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ProcessCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcessesNext
+  name: listAcceptingProcessesNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-140">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-140">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcessesNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-141">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a8910-141">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ProcessCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcessesNext_2
+  name: listAcceptingProcessesNext(string, Object, ServiceCallback<ProcessCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-142">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-142">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcessesNext(nextPageLink: string, options: Object, callback: ServiceCallback<ProcessCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ProcessCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ProcessCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcessesNext_1
+  name: listAcceptingProcessesNext(string, ServiceCallback<ProcessCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-143">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-143">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcessesNext(nextPageLink: string, callback: ServiceCallback<ProcessCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ProcessCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ProcessCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcessesNextWithHttpOperationResponse
+  name: listAcceptingProcessesNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-144">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-144">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcessesNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-145">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a8910-145">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.ProcessCollection>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listAcceptingProcessesWithHttpOperationResponse
+  name: listAcceptingProcessesWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-146">Gibt eine Auflistung der Prozesse, die auf dem angegebenen Port akzeptieren</span><span class="sxs-lookup"><span data-stu-id="a8910-146">Returns a collection of processes accepting on the specified port</span></span>
+  syntax:
+    content: 'function listAcceptingProcessesWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-147">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-147">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-148">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-148">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-149">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-149">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-150">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-150">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.ProcessCollection>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnections
+  name: listConnections(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-151">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-151">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-152">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-152">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-153">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-153">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-154">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-154">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-155">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-155">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnections_2
+  name: listConnections(string, string, string, string, Object, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-156">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-156">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options: Object, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnections_1
+  name: listConnections(string, string, string, string, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-157">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-157">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: portName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnectionsNext
+  name: listConnectionsNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-158">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-158">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-159">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a8910-159">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnectionsNext_2
+  name: listConnectionsNext(string, Object, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-160">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-160">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, options: Object, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnectionsNext_1
+  name: listConnectionsNext(string, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-161">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-161">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnectionsNextWithHttpOperationResponse
+  name: listConnectionsNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-162">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-162">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnectionsNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-163">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a8910-163">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Ports.listConnectionsWithHttpOperationResponse
+  name: listConnectionsWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8910-164">Gibt eine Auflistung von Verbindungen, die über den angegebenen Port hergestellt.</span><span class="sxs-lookup"><span data-stu-id="a8910-164">Returns a collection of connections established via the specified port.</span></span>
+  syntax:
+    content: 'function listConnectionsWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, machineName: string, portName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-165">Name der Ressourcengruppe in die angegebene Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="a8910-165">Resource group name within the specified subscriptionId.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-166">OMS-Arbeitsbereich mit den Ressourcen von Interesse sind.</span><span class="sxs-lookup"><span data-stu-id="a8910-166">OMS workspace containing the resources of interest.</span></span>
+    - id: machineName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-167">Resource-Name des Computers.</span><span class="sxs-lookup"><span data-stu-id="a8910-167">Machine resource name.</span></span>
+    - id: portName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8910-168">Der Name der Port-Ressource.</span><span class="sxs-lookup"><span data-stu-id="a8910-168">Port resource name.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  package: azure-arm-servicemap
+references:
+- uid: Promise<azure-arm-servicemap.Port>
+  name: Port>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Port
+    fullName: Port
+    uid: azure-arm-servicemap.Port
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.Port>
+  name: Port>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Port
+    fullName: Port
+    uid: azure-arm-servicemap.Port
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-arm-servicemap.Liveness>
+  name: Liveness>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Liveness
+    fullName: Liveness
+    uid: azure-arm-servicemap.Liveness
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.Liveness>
+  name: Liveness>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Liveness
+    fullName: Liveness
+    uid: azure-arm-servicemap.Liveness
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.Liveness>>
+  name: Liveness>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Liveness
+    fullName: Liveness
+    uid: azure-arm-servicemap.Liveness
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.Port>>
+  name: Port>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Port
+    fullName: Port
+    uid: azure-arm-servicemap.Port
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-servicemap.ProcessCollection>
+  name: ProcessCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ProcessCollection
+    fullName: ProcessCollection
+    uid: azure-arm-servicemap.ProcessCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.ProcessCollection>
+  name: ProcessCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ProcessCollection
+    fullName: ProcessCollection
+    uid: azure-arm-servicemap.ProcessCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.ProcessCollection>>
+  name: ProcessCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ProcessCollection
+    fullName: ProcessCollection
+    uid: azure-arm-servicemap.ProcessCollection
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-servicemap.ConnectionCollection>
+  name: ConnectionCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ConnectionCollection
+    fullName: ConnectionCollection
+    uid: azure-arm-servicemap.ConnectionCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+  name: ConnectionCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ConnectionCollection
+    fullName: ConnectionCollection
+    uid: azure-arm-servicemap.ConnectionCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  name: ConnectionCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ConnectionCollection
+    fullName: ConnectionCollection
+    uid: azure-arm-servicemap.ConnectionCollection
+  - name: '>>'
+    fullName: '>>'
