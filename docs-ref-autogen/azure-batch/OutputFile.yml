@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 86f498fc9ddfd6d24d259dc7d6e9baa40c5017b5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53667044"
+items:
+- uid: azure-batch.OutputFile
+  name: OutputFile
+  fullName: OutputFile
+  children:
+  - azure-batch.OutputFile.destination
+  - azure-batch.OutputFile.filePattern
+  - azure-batch.OutputFile.uploadOptions
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.OutputFile.destination
+  name: destination
+  fullName: destination
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'destination: OutputFileDestination'
+    return:
+      type:
+      - azure-batch.OutputFileDestination
+  package: azure-batch
+- uid: azure-batch.OutputFile.filePattern
+  name: filePattern
+  fullName: filePattern
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Relative und absolute Pfade werden unterstützt. Relative Pfade sind relativ zum Arbeitsverzeichnis Aufgabe. Die folgenden Platzhalter werden unterstützt: * entspricht 0 oder mehr Zeichen (Beispiel-Muster Abc * entsprechen Abc oder Abcdef), ** entspricht einem beliebigen Verzeichnis?
+
+    entspricht jedem beliebigen einzelnen Zeichen [Abc] entspricht einem Zeichen in den Klammern und [a-c] entspricht einem Zeichen im Bereich. Klammern können eine Negation, um alle nicht angegebenen Zeichen übereinstimmen (z. B. [! Abc] Übereinstimmungen eines beliebigen außer a, b Zeichens oder c). Wenn ein Dateiname beginnt "." wird ignoriert, standardmäßig aber kann abgeglichen werden, indem Sie sie explizit angeben (z. B. *GIF stimmen nicht überein. a.gif, aber.*. GIF wird). Ein einfaches Beispiel: **\*.txt entspricht jede Datei, die nicht, in gestartet wird '.' und in das Arbeitsverzeichnis für den Task oder einem Unterverzeichnis .txt endet. Wenn der Dateiname ein Platzhalterzeichen enthält. sie können mit Escapezeichen versehen werden mit eckigen Klammern (z. B. Abc [*] würde eine Datei namens Abc * übereinstimmen). Beachten Sie, dass beide \ und / fungieren als Verzeichnistrennzeichen in Windows, aber nur / ist unter Linux. Umgebungsvariablen (Var % für Windows) oder $var unter Linux werden erweitert, vor dem Muster angewendet wird.
+  syntax:
+    content: 'filePattern: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.OutputFile.uploadOptions
+  name: uploadOptions
+  fullName: uploadOptions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'uploadOptions: OutputFileUploadOptions'
+    return:
+      type:
+      - azure-batch.OutputFileUploadOptions
+  package: azure-batch
+references:
+- uid: azure-batch.OutputFileDestination
+  name: OutputFileDestination
+  spec.typeScript:
+  - name: OutputFileDestination
+    fullName: OutputFileDestination
+    uid: azure-batch.OutputFileDestination
+- uid: azure-batch.OutputFileUploadOptions
+  name: OutputFileUploadOptions
+  spec.typeScript:
+  - name: OutputFileUploadOptions
+    fullName: OutputFileUploadOptions
+    uid: azure-batch.OutputFileUploadOptions
