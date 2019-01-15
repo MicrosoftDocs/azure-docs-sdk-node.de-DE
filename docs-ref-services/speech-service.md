@@ -4,19 +4,19 @@ description: Referenz zum Cognitive Services Speech SDK für JavaScript
 author: mahilleb-msft
 ms.author: mahilleb
 manager: wolfma
-ms.date: 09/24/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
-ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 43a6921d4ec782287cc041ecaabab4567b0fe677
+ms.sourcegitcommit: 74417c10aee8987c3e0343728efac75823c902d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52015524"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185987"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>Cognitive Services Speech SDK für JavaScript
 
@@ -25,45 +25,73 @@ ms.locfileid: "52015524"
 Um die Entwicklung sprachaktivierter Anwendungen zu vereinfachen, stellt Microsoft das Speech SDK für den [Speech-Dienst](https://aka.ms/csspeech) bereit.
 Das Speech SDK bietet konsistente native Spracherkennungs- und Sprachübersetzungs-APIs.
 
-> [!NOTE]
-> Das Cognitive Services Speech SDK ist derzeit nur für Browser verfügbar.
-> Ein NPM-Paket folgt in Kürze.
+### <a name="install-the-npm-module"></a>Installieren des npm-Moduls
 
-### <a name="install-the-speech-sdk"></a>Installieren des Speech SDK
+Installieren des npm-Moduls des Cognitive Services Speech SDK
 
-Laden Sie das Speech SDK als [ZIP-Paket](https://aka.ms/csspeech/jsbrowserpackage) herunter, und entpacken Sie es.
-Daraufhin sollte eine Reihe von Dateien, einschließlich einer Datei mit dem Namen `microsoft.cognitiveservices.speech.sdk.bundle.js`, entpackt werden.
-Laden Sie diese Datei als Skriptressource in Ihre Webseite, um das Speech SDK zu verwenden:
-
-```html
-<script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+```bash
+npm install microsoft-cognitiveservices-speech-sdk
 ```
 
 ### <a name="example"></a>Beispiel 
 
-Die folgenden Codeausschnitte veranschaulichen, wie die einfache Spracherkennung in Ihrem Browser funktioniert:
+Die folgenden Codeausschnitte veranschaulichen, wie die einfache Spracherkennung in einer Datei funktioniert:
 
 ```javascript 
-var SpeechSDK = window.SpeechSDK;
-var speechConfig = SpeechSDK.SpeechConfig.fromSubscription("your-subscription-key", "your-service-region");
-speechConfig.language = "en-US";
-var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
-recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+// Pull in the required packages.
+var sdk = require("microsoft-cognitiveservices-speech-sdk");
+var fs = require("fs");
 
+// Replace with your own subscription key, service region (e.g., "westus"), and
+// the name of the file you want to run through the speech recognizer.
+var subscriptionKey = "YourSubscriptionKey";
+var serviceRegion = "YourServiceRegion"; // e.g., "westus"
+var filename = "YourAudioFile.wav"; // 16000 Hz, Mono
+
+// Create the push stream we need for the speech sdk.
+var pushStream = sdk.AudioInputStream.createPushStream();
+
+// Open the file and push it to the push stream.
+fs.createReadStream(filename).on('data', function(arrayBuffer) {
+  pushStream.write(arrayBuffer.buffer);
+}).on('end', function() {
+  pushStream.close();
+});
+
+// We are done with the setup
+console.log("Now recognizing from: " + filename);
+
+// Create the audio-config pointing to our stream and
+// the speech config specifying the language.
+var audioConfig = sdk.AudioConfig.fromStreamInput(pushStream);
+var speechConfig = sdk.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+
+// Setting the recognition language to English.
+speechConfig.speechRecognitionLanguage = "en-US";
+
+// Create the speech recognizer.
+var recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
+
+// Start the recognizer and wait for a result.
 recognizer.recognizeOnceAsync(
   function (result) {
-    alert("Recognition result:" + JSON.stringify(result));
+    console.log(result);
+
     recognizer.close();
+    recognizer = undefined;
   },
   function (err) {
-    alert("An error occurred:" + JSON.stringify(err));
+    console.trace("err - " + err);
+
     recognizer.close();
-  }
-);
+    recognizer = undefined;
+  });
 ``` 
 
-Sehen Sie sich unsere [ausführlichen Schnellstartanleitungen](/azure/cognitive-services/speech-service/quickstart-js-browser) an.
+Sehen Sie sich unsere [ausführlichen Schnellstartanleitungen](/azure/cognitive-services/speech-service/quickstart-js-node) an.
 
 ## <a name="samples"></a>Beispiele
 
-Sehen Sie sich im [Speech SDK-Beispielrepository](https://aka.ms/csspeech/samples) weitere Beispiele an.
+* [Schnellstart: Erkennen von Sprache in JavaScript in Node.js mit dem Speech Service SDK](/azure/cognitive-services/speech-service/quickstart-js-node)
+* [Schnellstart: Erkennen von Sprache in JavaScript in einem Browser mit dem Speech Service SDK](/azure/cognitive-services/speech-service/quickstart-js-browser)
+* Weitere Beispiele finden Sie im [Speech SDK-Beispielrepository](https://aka.ms/csspeech/samples).
