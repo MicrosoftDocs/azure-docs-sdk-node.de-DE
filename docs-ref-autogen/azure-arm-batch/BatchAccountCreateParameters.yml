@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a1263143f5e4b0b8decdbd89848d57cad4d710bd
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55053881"
+items:
+- uid: azure-arm-batch.BatchAccountCreateParameters
+  name: BatchAccountCreateParameters
+  fullName: BatchAccountCreateParameters
+  children:
+  - azure-arm-batch.BatchAccountCreateParameters.autoStorage
+  - azure-arm-batch.BatchAccountCreateParameters.keyVaultReference
+  - azure-arm-batch.BatchAccountCreateParameters.location
+  - azure-arm-batch.BatchAccountCreateParameters.poolAllocationMode
+  - azure-arm-batch.BatchAccountCreateParameters.tags
+  langs:
+  - typeScript
+  type: interface
+  summary: Für den Erstellungsvorgang bereitgestellten Parameter.
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountCreateParameters.autoStorage
+  name: autoStorage
+  fullName: autoStorage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Eigenschaften im Zusammenhang mit dem Auto-Storage-Konto.
+  optional: true
+  syntax:
+    content: 'autoStorage?: AutoStorageBaseProperties'
+    return:
+      type:
+      - azure-arm-batch.AutoStorageBaseProperties
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountCreateParameters.keyVaultReference
+  name: keyVaultReference
+  fullName: keyVaultReference
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ein Verweis auf das Azure-schlüsseltresor, der dem Batch-Konto zugeordnet.
+  optional: true
+  syntax:
+    content: 'keyVaultReference?: KeyVaultReference'
+    return:
+      type:
+      - azure-arm-batch.KeyVaultReference
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountCreateParameters.location
+  name: location
+  fullName: location
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die Region, in dem das Konto erstellt werden soll.
+  syntax:
+    content: 'location: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountCreateParameters.poolAllocationMode
+  name: poolAllocationMode
+  fullName: poolAllocationMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Der poolzuordnungsmodus wirkt sich auch wie Clients den Batch-Dienst-API authentifizieren können. Wenn der Modus BatchService ist, können Clients mithilfe von Zugriffsschlüsseln oder Azure Active Directory authentifizieren. Wenn der Modus UserSubscription ist, müssen Clients mit Azure Active Directory verwenden.
+
+    Der Standardwert ist BatchService. Mögliche Werte sind: 'BatchService', 'UserSubscription'
+  optional: true
+  syntax:
+    content: 'poolAllocationMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.BatchAccountCreateParameters.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die benutzerdefinierten Tags, der dem Konto zugeordnet.
+  optional: true
+  syntax:
+    content: 'tags?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.AutoStorageBaseProperties
+  name: AutoStorageBaseProperties
+  spec.typeScript:
+  - name: AutoStorageBaseProperties
+    fullName: AutoStorageBaseProperties
+    uid: azure-arm-batch.AutoStorageBaseProperties
+- uid: azure-arm-batch.KeyVaultReference
+  name: KeyVaultReference
+  spec.typeScript:
+  - name: KeyVaultReference
+    fullName: KeyVaultReference
+    uid: azure-arm-batch.KeyVaultReference

@@ -1,0 +1,204 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5920a3392ad6a32cba01fef7382d593a8ebe6a9b
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054627"
+items:
+- uid: azure-arm-storage.BlobContainer
+  name: BlobContainer
+  fullName: BlobContainer
+  children:
+  - azure-arm-storage.BlobContainer.hasImmutabilityPolicy
+  - azure-arm-storage.BlobContainer.hasLegalHold
+  - azure-arm-storage.BlobContainer.immutabilityPolicy
+  - azure-arm-storage.BlobContainer.lastModifiedTime
+  - azure-arm-storage.BlobContainer.leaseDuration
+  - azure-arm-storage.BlobContainer.leaseState
+  - azure-arm-storage.BlobContainer.leaseStatus
+  - azure-arm-storage.BlobContainer.legalHold
+  - azure-arm-storage.BlobContainer.metadata
+  - azure-arm-storage.BlobContainer.publicAccess
+  langs:
+  - typeScript
+  type: interface
+  summary: Eigenschaften des Blob-Containers, einschließlich Id, Ressourcennamen, Ressourcentyp, Etag.
+  extends:
+    name: azure-arm-storage.AzureEntityResource
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.hasImmutabilityPolicy
+  name: hasImmutabilityPolicy
+  fullName: hasImmutabilityPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die öffentliche HasImmutabilityPolicy-Eigenschaft ist auf "true" Wenn ImmutabilityPolicy für diesen Container erstellt wurde, indem Sie Richtlinien für Softwareeinschränkung festgelegt. Die öffentliche HasImmutabilityPolicy-Eigenschaft wird von SRP auf "false" festgelegt, wenn ImmutabilityPolicy nicht für diesen Container erstellt wurde.
+  optional: true
+  syntax:
+    content: 'hasImmutabilityPolicy?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.hasLegalHold
+  name: hasLegalHold
+  fullName: hasLegalHold
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Die öffentliche HasLegalHold-Eigenschaft wird festgelegt, auf "true" von SRP, wenn mindestens ein vorhandenes Tag vorhanden sind.
+
+    Die öffentliche HasLegalHold-Eigenschaft wird von SRP auf "false" festgelegt, wenn alle vorhandenen rechtliche enthalten, dass Tags gelöscht werden. Es darf maximal 1000-Blob-Container mit HasLegalHold = "true" für ein bestimmtes Konto.
+  optional: true
+  syntax:
+    content: 'hasLegalHold?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.immutabilityPolicy
+  name: immutabilityPolicy
+  fullName: immutabilityPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die ImmutabilityPolicy-Eigenschaft des Containers.
+  optional: true
+  syntax:
+    content: 'immutabilityPolicy?: ImmutabilityPolicyProperties'
+    return:
+      type:
+      - azure-arm-storage.ImmutabilityPolicyProperties
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.lastModifiedTime
+  name: lastModifiedTime
+  fullName: lastModifiedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Gibt zurück, das Datum und Uhrzeit der letzten des Containers Änderung.
+  optional: true
+  syntax:
+    content: 'lastModifiedTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.leaseDuration
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Gibt an, ob die Lease eines Containers von unbegrenzter oder fester Dauer, wird nur angezeigt, wenn der Container geleast ist. Mögliche Werte sind: 'Infinite', 'Fixed'"
+  optional: true
+  syntax:
+    content: 'leaseDuration?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.leaseState
+  name: leaseState
+  fullName: leaseState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Der Leasestatus des Containers. Mögliche Werte sind: 'Available', 'Leased', 'Expired', 'Breaking', 'Broken'"
+  optional: true
+  syntax:
+    content: 'leaseState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.leaseStatus
+  name: leaseStatus
+  fullName: leaseStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Der Leasestatus des Containers. Mögliche Werte sind: 'Locked', 'Unlocked'"
+  optional: true
+  syntax:
+    content: 'leaseStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.legalHold
+  name: legalHold
+  fullName: legalHold
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die LegalHold-Eigenschaft des Containers.
+  optional: true
+  syntax:
+    content: 'legalHold?: LegalHoldProperties'
+    return:
+      type:
+      - azure-arm-storage.LegalHoldProperties
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ein Name / Wert-Paar, dem Container als Metadaten zugeordnet werden soll.
+  optional: true
+  syntax:
+    content: 'metadata?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainer.publicAccess
+  name: publicAccess
+  fullName: publicAccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Gibt an, ob die Daten im Container öffentlich zugegriffen werden können und die Ebene des Zugriffs.
+
+    Mögliche Werte sind: 'Container', 'Blob', 'None'
+  optional: true
+  syntax:
+    content: 'publicAccess?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+references:
+- uid: azure-arm-storage.AzureEntityResource
+  name: AzureEntityResource
+  spec.typeScript:
+  - name: AzureEntityResource
+    fullName: AzureEntityResource
+    uid: azure-arm-storage.AzureEntityResource
+- uid: azure-arm-storage.ImmutabilityPolicyProperties
+  name: ImmutabilityPolicyProperties
+  spec.typeScript:
+  - name: ImmutabilityPolicyProperties
+    fullName: ImmutabilityPolicyProperties
+    uid: azure-arm-storage.ImmutabilityPolicyProperties
+- uid: azure-arm-storage.LegalHoldProperties
+  name: LegalHoldProperties
+  spec.typeScript:
+  - name: LegalHoldProperties
+    fullName: LegalHoldProperties
+    uid: azure-arm-storage.LegalHoldProperties
