@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: f1bb66712907cbb0937dcab25ded5ff3389122a7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53665194"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046614"
 items:
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
   name: SpeechConfig
@@ -33,9 +33,9 @@ items:
   - typeScript
   type: property
   summary: >-
-    Legt fest, das Autorisierungstoken.
+    Abrufen des autorisierungstokens ab oder legt sie fest.
 
-    Wenn dies festgelegt ist, wird der Abonnementschlüssel ignoriert.
+    Wenn das Token Autorizaton festgelegt ist, wird der Abonnementschlüssel ignoriert.
 
     Der Benutzer muss sicherstellen, dass das bereitgestellte Autorisierungstoken gültig und nicht abgelaufen ist.
   syntax:
@@ -62,7 +62,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Ruft die Endpunkt-ID eines benutzerdefinierte sprachübersetzungssysteme-Modells, das für die Spracherkennung verwendet wird.
+  summary: Ruft die Endpunkt-ID eines benutzerdefinierte sprachübersetzungssysteme-Modells, das für die Spracherkennung verwendet wird, oder legt sie fest.
   syntax:
     content: 'public endpointId: string'
     return:
@@ -75,7 +75,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: Erstellt eine Instanz der Factory Sprache mit der angegebenen anfänglichen Autorisierungstoken und Region an.
+  summary: >-
+    Erstellt eine Instanz der Factory Sprache mit der angegebenen anfänglichen Autorisierungstoken und Region an.
+
+    Hinweis: Verwenden Sie ein Token, die von Ihren Abonnementschlüssel LanguageUnderstanding abgeleitet werden, für den Fall, dass Sie die beabsichtigte Erkennung verwenden möchten.
   syntax:
     content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
     parameters:
@@ -103,6 +106,8 @@ items:
     Diese Methode ist nur für Benutzer vorgesehen, die eine nicht standardmäßige Dienstendpunkt oder Parameter zu verwenden.
 
     die Spracheinstellung im Uri hat Vorrang vor, und die effektive Sprache ist "de-DE".
+
+    Hinweis: Verwenden Sie Ihren Abonnementschlüssel LanguageUnderstanding für den Fall, dass Sie die beabsichtigte Erkennung verwenden möchten.
   syntax:
     content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
     parameters:
@@ -124,7 +129,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: Statische Instanz der SpeechConfig zurückgegebenes SubscriptionKey und Service-Region zu übergeben.
+  summary: >-
+    Statische Instanz der SpeechConfig zurückgegebenes SubscriptionKey und Service-Region zu übergeben.
+
+    Hinweis: Verwenden Sie Ihren Abonnementschlüssel LanguageUnderstanding für den Fall, dass Sie die beabsichtigte Erkennung verwenden möchten.
   syntax:
     content: 'static function fromSubscription(subscriptionKey: string, region: string)'
     parameters:
@@ -170,7 +178,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Ruft die Ausgabeformat an.
+  summary: Ruft das Ausgabeformat ab oder legt sie fest.
   syntax:
     content: 'public outputFormat: OutputFormat'
     return:
@@ -204,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Legt fest, das die Eingabesprache.
+  summary: Ruft die Eingabesprache ab oder legt sie fest.
   syntax:
     content: 'public speechRecognitionLanguage: string'
     return:

@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 99dd853e467a6146f849a3c920fa5146f33c952d
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058711"
+items:
+- uid: azure-arm-batch.ResizeOperationStatus
+  name: ResizeOperationStatus
+  fullName: ResizeOperationStatus
+  children:
+  - azure-arm-batch.ResizeOperationStatus.errors
+  - azure-arm-batch.ResizeOperationStatus.nodeDeallocationOption
+  - azure-arm-batch.ResizeOperationStatus.resizeTimeout
+  - azure-arm-batch.ResizeOperationStatus.startTime
+  - azure-arm-batch.ResizeOperationStatus.targetDedicatedNodes
+  - azure-arm-batch.ResizeOperationStatus.targetLowPriorityNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: Beschreibt entweder den aktuellen Vorgang (wenn der Pool AllocationState Größenänderung wird) oder den zuvor abgeschlossenen Vorgang (wenn der AllocationState stabilen ist).
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResizeOperationStatus.errors
+  name: errors
+  fullName: errors
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Diese Eigenschaft wird festgelegt, nur dann, wenn während der letzten Größenänderung des Pools ein Fehler aufgetreten, und nur, wenn der AllocationState des Pools stabilen ist.
+  optional: true
+  syntax:
+    content: 'errors?: ResizeError[]'
+    return:
+      type:
+      - azure-arm-batch.ResizeError[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResizeOperationStatus.nodeDeallocationOption
+  name: nodeDeallocationOption
+  fullName: nodeDeallocationOption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Der Standardwert ist „requeue“. Mögliche Werte sind: 'Requeue', 'Terminate', 'TaskCompletion', 'RetainedData'"
+  optional: true
+  syntax:
+    content: 'nodeDeallocationOption?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResizeOperationStatus.resizeTimeout
+  name: resizeTimeout
+  fullName: resizeTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Standardwert ist 15 Minuten. Der minimale Wert beträgt 5 Minuten. Wenn Sie einen Wert kleiner als 5 Minuten angeben, gibt der Batch-Dienst einen Fehler zurück. Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).
+  optional: true
+  syntax:
+    content: 'resizeTimeout?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResizeOperationStatus.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'startTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResizeOperationStatus.targetDedicatedNodes
+  name: targetDedicatedNodes
+  fullName: targetDedicatedNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'targetDedicatedNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResizeOperationStatus.targetLowPriorityNodes
+  name: targetLowPriorityNodes
+  fullName: targetLowPriorityNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'targetLowPriorityNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.ResizeError[]
+  name: ResizeError[]
+  spec.typeScript:
+  - name: ResizeError
+    fullName: ResizeError
+    uid: azure-arm-batch.ResizeError
+  - name: '[]'
+    fullName: '[]'

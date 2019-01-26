@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5aa33014edb63420f85edc96ebd43866313a3094
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054161"
+items:
+- uid: azure-arm-batch.CertificateReference
+  name: CertificateReference
+  fullName: CertificateReference
+  children:
+  - azure-arm-batch.CertificateReference.id
+  - azure-arm-batch.CertificateReference.storeLocation
+  - azure-arm-batch.CertificateReference.storeName
+  - azure-arm-batch.CertificateReference.visibility
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.storeLocation
+  name: storeLocation
+  fullName: storeLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Der Standardwert ist "CurrentUser". Diese Eigenschaft gilt nur für Pools, die mit Windows-Knoten (d. h. mit CloudServiceConfiguration erstellt oder mit der VirtualMachineConfiguration mit einem Windows image-Verweis) konfigurieren. Für Linux-Computeknoten werden die Zertifikate in einem Verzeichnis in das Arbeitsverzeichnis für den Task und einer Umgebung, die Variable AZ_BATCH_CERTIFICATES_DIR, um den Task zum Abfragen von diesem Speicherort angegeben wird gespeichert. Für Zertifikate mit Sichtbarkeit "RemoteUser" wird ein "Zertifikate"-Verzeichnis im Basisverzeichnis des Benutzers erstellt (z. B. /home/ {Benutzername} / Certs) und Zertifikate werden in diesem Verzeichnis platziert.
+
+    Mögliche Werte sind: 'CurrentUser', 'LocalMachine'
+  optional: true
+  syntax:
+    content: 'storeLocation?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.storeName
+  name: storeName
+  fullName: storeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Diese Eigenschaft gilt nur für Pools, die mit Windows-Knoten (d. h. mit CloudServiceConfiguration erstellt oder mit der VirtualMachineConfiguration mit einem Windows image-Verweis) konfigurieren. Allgemeine Namen von Läden enthalten: Mein, kann die Stammzertifizierungsstelle, Vertrauensstellung, nicht erlaubt, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, aber ein beliebiger benutzerdefinierter Speichername auch verwendet werden. Der Standardwert ist meine.'
+  optional: true
+  syntax:
+    content: 'storeName?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.visibility
+  name: visibility
+  fullName: visibility
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'visibility?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-batch

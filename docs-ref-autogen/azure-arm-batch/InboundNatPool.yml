@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bb31056a0319191bc30fc016ad82b977d64a23e
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046504"
+items:
+- uid: azure-arm-batch.InboundNatPool
+  name: InboundNatPool
+  fullName: InboundNatPool
+  children:
+  - azure-arm-batch.InboundNatPool.backendPort
+  - azure-arm-batch.InboundNatPool.frontendPortRangeEnd
+  - azure-arm-batch.InboundNatPool.frontendPortRangeStart
+  - azure-arm-batch.InboundNatPool.name
+  - azure-arm-batch.InboundNatPool.networkSecurityGroupRules
+  - azure-arm-batch.InboundNatPool.protocol
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.backendPort
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Dies muss innerhalb eines batchpools eindeutig sein. Zulässige Werte liegen zwischen 1 und 65535, außer für 22, 3389, 29876 und 29877 wie diese reserviert sind. Wenn eine reservierte werden die Werte bereitgestellt, dass die Anforderung mit HTTP-Statuscode 400 schlägt fehl.
+  syntax:
+    content: 'backendPort: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.frontendPortRangeEnd
+  name: frontendPortRangeEnd
+  fullName: frontendPortRangeEnd
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Zulässige Werte liegen zwischen 1 und 65534 sein, mit Ausnahme der Ports von 50000 55000, die vom Batch-Dienst reserviert sind. Alle Bereiche innerhalb eines Pools müssen eindeutig sein und darf sich nicht überlappen. Wenn alle reservierten oder überlappenden Werte, dass die Anforderung fehlschlägt, mit dem HTTP-Statuscode 400 bereitgestellt werden.
+  syntax:
+    content: 'frontendPortRangeEnd: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.frontendPortRangeStart
+  name: frontendPortRangeStart
+  fullName: frontendPortRangeStart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Zulässige Werte liegen zwischen 1 und 65534 sein, mit Ausnahme der Ports von 50000 55000 die reserviert sind. Alle Bereiche innerhalb eines Pools müssen eindeutig sein und darf sich nicht überlappen. Wenn alle reservierten oder überlappenden Werte, dass die Anforderung fehlschlägt, mit dem HTTP-Statuscode 400 bereitgestellt werden.
+  syntax:
+    content: 'frontendPortRangeStart: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Der Name muss innerhalb eines batchpools eindeutig sein, darf Buchstaben, Zahlen, Unterstriche, Punkte und Bindestriche enthalten. Namen müssen mit einem Buchstaben beginnen oder eine Zahl ist, muss mit einem Buchstaben, eine Zahl oder ein Unterstrich enden und dürfen höchstens 77 Zeichen umfassen.  Wenn Sie ungültige Werte bereitgestellt werden, dass die Anforderung mit HTTP-Statuscode 400 schlägt fehl.
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.networkSecurityGroupRules
+  name: networkSecurityGroupRules
+  fullName: networkSecurityGroupRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Die maximale Anzahl von Regeln, die auf alle Endpunkte in einem batchpool angegeben werden können, ist 25. Wenn keine netzwerksicherheitsgruppen-Regeln angegeben sind, wird eine Standardregel erstellt werden, um eingehenden Zugriff auf den angegebenen BackendPort zu ermöglichen. Wenn die maximale Anzahl von Netzwerksicherheits-Gruppenregeln überschritten, wird die Anforderung schlägt fehl mit HTTP-Statuscode 400.
+  optional: true
+  syntax:
+    content: 'networkSecurityGroupRules?: NetworkSecurityGroupRule[]'
+    return:
+      type:
+      - azure-arm-batch.NetworkSecurityGroupRule[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Mögliche Werte sind: 'TCP', 'UDP'"
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.NetworkSecurityGroupRule[]
+  name: NetworkSecurityGroupRule[]
+  spec.typeScript:
+  - name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    uid: azure-arm-batch.NetworkSecurityGroupRule
+  - name: '[]'
+    fullName: '[]'
