@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: e5b87b187860e4c6909a800c9d9d3c6264e861da
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 2adf0926203f00d13978e76c648697c524f0208c
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52145145"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059231"
 items:
 - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
   name: ProvisioningDeviceClient
@@ -14,50 +14,50 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="890f3-101">Clientobjekt, für die Kommunikation mit Azure IoT Hub Device Provisioning-Dienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="890f3-101">Client object used to communicate with the Azure IoT Hub Device Provisioning Service.</span></span>
+  summary: <span data-ttu-id="ce167-101">Clientobjekt, für die Kommunikation mit Azure IoT Hub Device Provisioning-Dienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="ce167-101">Client object used to communicate with the Azure IoT Hub Device Provisioning Service.</span></span>
   package: azure-iot-provisioning-device
 - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
-  name: create(string, string, X509ProvisioningTransport | TpmProvisioningTransport, X509SecurityClient | TpmSecurityClient)
+  name: create(string, string, X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport, X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="890f3-102">Erstellen Sie ein Clientobjekt, die für die Kommunikation mit Azure Device Provisioning-Dienst verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="890f3-102">Construct a client object which can be used to communicate with the Azure Device Provisioning Service.</span></span>
+  summary: <span data-ttu-id="ce167-102">Erstellen Sie ein Clientobjekt, die für die Kommunikation mit Azure Device Provisioning-Dienst verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="ce167-102">Construct a client object which can be used to communicate with the Azure Device Provisioning Service.</span></span>
   syntax:
-    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient)'
+    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)'
     parameters:
     - id: provisioningHost
       type:
       - string
-      description: <span data-ttu-id="890f3-103">Hosts, die Device Provisioning-Dienst ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="890f3-103">Host running the Device Provisioning Service.</span></span>  <span data-ttu-id="890f3-104">Kann als die Zeichenfolge "globaler geräteendpunkt" im Azure-Portal im Abschnitt "Essentials" der Registerkarte "Übersicht" gefunden werden</span><span class="sxs-lookup"><span data-stu-id="890f3-104">Can be found in the Azure portal in the 'Essentials' section of the 'Overview' tab as the string 'Global device endpoint'</span></span>
+      description: <span data-ttu-id="ce167-103">Hosts, die Device Provisioning-Dienst ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ce167-103">Host running the Device Provisioning Service.</span></span>  <span data-ttu-id="ce167-104">Kann als die Zeichenfolge "globaler geräteendpunkt" im Azure-Portal im Abschnitt "Essentials" der Registerkarte "Übersicht" gefunden werden</span><span class="sxs-lookup"><span data-stu-id="ce167-104">Can be found in the Azure portal in the 'Essentials' section of the 'Overview' tab as the string 'Global device endpoint'</span></span>
     - id: idScope
       type:
       - string
-      description: <span data-ttu-id="890f3-105">Bereich von IDs für den Device Provisioning-Dienst.</span><span class="sxs-lookup"><span data-stu-id="890f3-105">Scope of IDs for the Device Provisioning Service.</span></span>  <span data-ttu-id="890f3-106">Kann als die Zeichenfolge "ID-Bereich" im Azure-Portal im Abschnitt "Essentials" der Registerkarte "Übersicht" gefunden werden</span><span class="sxs-lookup"><span data-stu-id="890f3-106">Can be found in the Azure portal in the 'Essentials' section of the 'Overview' tab as the string 'ID Scope'</span></span>
+      description: <span data-ttu-id="ce167-105">Bereich von IDs für den Device Provisioning-Dienst.</span><span class="sxs-lookup"><span data-stu-id="ce167-105">Scope of IDs for the Device Provisioning Service.</span></span>  <span data-ttu-id="ce167-106">Kann als die Zeichenfolge "ID-Bereich" im Azure-Portal im Abschnitt "Essentials" der Registerkarte "Übersicht" gefunden werden</span><span class="sxs-lookup"><span data-stu-id="ce167-106">Can be found in the Azure portal in the 'Essentials' section of the 'Overview' tab as the string 'ID Scope'</span></span>
     - id: transport
       type:
-      - X509ProvisioningTransport | TpmProvisioningTransport
-      description: '<span data-ttu-id="890f3-107">Die Konstruktorfunktion für die Bereitstellung von Transport verwenden.</span><span class="sxs-lookup"><span data-stu-id="890f3-107">Constructor function for provisioning transport to use.</span></span>  <span data-ttu-id="890f3-108">Kann einen der folgenden sein: [Azure-Iot-Bereitstellung – Gerät-http. HTTP](xref:azure-iot-provisioning-device-http.Http) [Azure-Iot-Bereitstellung-Device-Amqp. Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [Azure-Iot-Bereitstellung-Device-Amqp. AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [Azure-Iot-Bereitstellung-Device-Mqtt. Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [Azure-Iot-Bereitstellung-Device-Mqtt. MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)</span><span class="sxs-lookup"><span data-stu-id="890f3-108">Can be one of the following: [azure-iot-provisioning-device-http.Http](xref:azure-iot-provisioning-device-http.Http) [azure-iot-provisioning-device-amqp.Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [azure-iot-provisioning-device-amqp.AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [azure-iot-provisioning-device-mqtt.Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [azure-iot-provisioning-device-mqtt.MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)</span></span>'
+      - X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport
+      description: '<span data-ttu-id="ce167-107">Die Konstruktorfunktion für die Bereitstellung von Transport verwenden.</span><span class="sxs-lookup"><span data-stu-id="ce167-107">Constructor function for provisioning transport to use.</span></span>  <span data-ttu-id="ce167-108">Kann einen der folgenden sein: [Azure-Iot-Bereitstellung – Gerät-http. HTTP](xref:azure-iot-provisioning-device-http.Http) [Azure-Iot-Bereitstellung-Device-Amqp. Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [Azure-Iot-Bereitstellung-Device-Amqp. AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [Azure-Iot-Bereitstellung-Device-Mqtt. Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [Azure-Iot-Bereitstellung-Device-Mqtt. MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)</span><span class="sxs-lookup"><span data-stu-id="ce167-108">Can be one of the following: [azure-iot-provisioning-device-http.Http](xref:azure-iot-provisioning-device-http.Http) [azure-iot-provisioning-device-amqp.Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [azure-iot-provisioning-device-amqp.AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [azure-iot-provisioning-device-mqtt.Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [azure-iot-provisioning-device-mqtt.MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)</span></span>'
     - id: securityClient
       type:
-      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
+      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
       description: >
-        <span data-ttu-id="890f3-109">Instanz des Scurity-Clientobjekts implementieren entweder die [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) oder [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="890f3-109">Instance of Scurity client object implementing either the [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) or the [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) interface.</span></span>
-
-        <span data-ttu-id="890f3-110">Vorgeschlagene Implementierungen dieser Schnittstellen umfassen [X509Security](xref:azure-iot-security-x509.X509Security) oder [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)</span><span class="sxs-lookup"><span data-stu-id="890f3-110">Suggested implementations of these interfaces include [X509Security](xref:azure-iot-security-x509.X509Security) or [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)</span></span>
+        <span data-ttu-id="ce167-109">Instanz der Security-Clientobjekt implementieren entweder die [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) oder [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="ce167-109">Instance of Security client object implementing either the [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) or the [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) interface.</span></span>
+                                 <span data-ttu-id="ce167-110">[SymmetricKeySecurityClient](xref:azure-iot-provisioning-device%3ASymmetricKeySecurityClient) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="ce167-110">[SymmetricKeySecurityClient](xref:azure-iot-provisioning-device%3ASymmetricKeySecurityClient) interface.</span></span>
+        <span data-ttu-id="ce167-111">Vorgeschlagene Implementierungen dieser Schnittstellen umfassen [X509Security](xref:azure-iot-security-x509.X509Security) oder [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient) [SymmetricKeySecurityClient](xref:azure-iot-security-symmetric-key.SymmetricKeySecurityClient)</span><span class="sxs-lookup"><span data-stu-id="ce167-111">Suggested implementations of these interfaces include [X509Security](xref:azure-iot-security-x509.X509Security) or [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient) [SymmetricKeySecurityClient](xref:azure-iot-security-symmetric-key.SymmetricKeySecurityClient)</span></span>
     return:
       type:
       - azure-iot-provisioning-device.RegistrationClient
   package: azure-iot-provisioning-device
 references:
-- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
-  name: X509SecurityClient | TpmSecurityClient
+- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
+  name: X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
   spec.typeScript:
   - name: X509SecurityClient
     fullName: X509SecurityClient
     uid: azure-iot-provisioning-device.X509SecurityClient
-  - name: " | TpmSecurityClient"
-    fullName: " | TpmSecurityClient"
+  - name: " | TpmSecurityClient | SymmetricKeySecurityClient"
+    fullName: " | TpmSecurityClient | SymmetricKeySecurityClient"
 - uid: azure-iot-provisioning-device.RegistrationClient
   name: RegistrationClient
   spec.typeScript:

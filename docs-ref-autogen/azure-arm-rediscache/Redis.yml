@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 21ebded70294e5aae8c0148a0bb5c56d5af79baf
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: a36b6a633b8c671867c0c8e9b0094483a63e5545
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52128725"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058401"
 items:
 - uid: azure-arm-rediscache.Redis
   name: Redis
@@ -26,6 +26,10 @@ items:
   - azure-arm-rediscache.Redis.beginImportData_2
   - azure-arm-rediscache.Redis.beginImportData_1
   - azure-arm-rediscache.Redis.beginImportDataWithHttpOperationResponse
+  - azure-arm-rediscache.Redis.checkNameAvailability
+  - azure-arm-rediscache.Redis.checkNameAvailability_2
+  - azure-arm-rediscache.Redis.checkNameAvailability_1
+  - azure-arm-rediscache.Redis.checkNameAvailabilityWithHttpOperationResponse
   - azure-arm-rediscache.Redis.create
   - azure-arm-rediscache.Redis.create_2
   - azure-arm-rediscache.Redis.create_1
@@ -69,6 +73,10 @@ items:
   - azure-arm-rediscache.Redis.listNext_2
   - azure-arm-rediscache.Redis.listNext_1
   - azure-arm-rediscache.Redis.listNextWithHttpOperationResponse
+  - azure-arm-rediscache.Redis.listUpgradeNotifications
+  - azure-arm-rediscache.Redis.listUpgradeNotifications_2
+  - azure-arm-rediscache.Redis.listUpgradeNotifications_1
+  - azure-arm-rediscache.Redis.listUpgradeNotificationsWithHttpOperationResponse
   - azure-arm-rediscache.Redis.listWithHttpOperationResponse
   - azure-arm-rediscache.Redis.regenerateKey
   - azure-arm-rediscache.Redis.regenerateKey_2
@@ -89,7 +97,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-101">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-101">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-101">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-101">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreate(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -97,17 +105,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-102">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-102">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-102">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-102">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-103">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-103">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-103">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-103">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="30329-104">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="30329-104">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="912b5-104">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-104">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -123,7 +131,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-105">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-105">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-105">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-105">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreate(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -157,7 +165,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-106">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-106">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-106">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-106">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreate(resourceGroupName: string, name: string, parameters: RedisCreateParameters, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -187,7 +195,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-107">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-107">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-107">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-107">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -195,17 +203,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-108">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-108">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-108">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-108">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-109">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-109">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-109">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-109">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="30329-110">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="30329-110">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="912b5-110">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-110">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -221,7 +229,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-111">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-111">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-111">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-111">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -229,12 +237,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-112">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-112">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-112">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-112">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-113">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-113">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-113">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-113">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -250,7 +258,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-114">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-114">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-114">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-114">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -280,7 +288,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-115">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-115">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-115">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-115">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, name: string, callback: ServiceCallback<void>)'
     parameters:
@@ -306,7 +314,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-116">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-116">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-116">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-116">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -314,12 +322,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-117">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-117">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-117">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-117">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-118">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-118">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-118">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-118">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -335,7 +343,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-119">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-119">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-119">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-119">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -343,17 +351,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-120">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-120">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-120">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-120">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-121">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-121">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-121">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-121">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="30329-122">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="30329-122">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="912b5-122">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="912b5-122">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -369,7 +377,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-123">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-123">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-123">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-123">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -403,7 +411,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-124">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-124">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-124">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-124">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -433,7 +441,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-125">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-125">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-125">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-125">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -441,17 +449,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-126">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-126">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-126">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-126">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-127">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-127">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-127">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-127">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="30329-128">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="30329-128">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="912b5-128">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="912b5-128">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -467,7 +475,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-129">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-129">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-129">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-129">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -475,17 +483,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-130">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-130">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-130">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-130">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-131">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-131">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-131">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-131">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="30329-132">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-132">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="912b5-132">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-132">Parameters for Redis import operation.</span></span>
     - id: options
       type:
       - Object
@@ -501,7 +509,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-133">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-133">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-133">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-133">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -535,7 +543,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-134">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-134">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-134">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-134">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -565,7 +573,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-135">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-135">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-135">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-135">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -573,17 +581,113 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-136">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-136">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-136">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-136">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-137">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-137">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-137">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-137">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="30329-138">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-138">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="912b5-138">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-138">Parameters for Redis import operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailability
+  name: checkNameAvailability(CheckNameAvailabilityParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-139">Überprüft, ob der Name der Redis-Cache ist gültig und wird nicht bereits verwendet.</span><span class="sxs-lookup"><span data-stu-id="912b5-139">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailability(parameters: CheckNameAvailabilityParameters, options?: Object)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: >
+        <span data-ttu-id="912b5-140">Parameter für die Redis-CheckNameAvailability zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-140">Parameters supplied to the CheckNameAvailability Redis operation.</span></span> <span data-ttu-id="912b5-141">Der einzige unterstützte Ressourcentyp ist ": Microsoft.Cache/redis"</span><span class="sxs-lookup"><span data-stu-id="912b5-141">The only supported resource type is 'Microsoft.Cache/redis'</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailability_2
+  name: checkNameAvailability(CheckNameAvailabilityParameters, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-142">Überprüft, ob der Name der Redis-Cache ist gültig und wird nicht bereits verwendet.</span><span class="sxs-lookup"><span data-stu-id="912b5-142">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailability(parameters: CheckNameAvailabilityParameters, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailability_1
+  name: checkNameAvailability(CheckNameAvailabilityParameters, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-143">Überprüft, ob der Name der Redis-Cache ist gültig und wird nicht bereits verwendet.</span><span class="sxs-lookup"><span data-stu-id="912b5-143">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailability(parameters: CheckNameAvailabilityParameters, callback: ServiceCallback<void>)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailabilityWithHttpOperationResponse
+  name: checkNameAvailabilityWithHttpOperationResponse(CheckNameAvailabilityParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-144">Überprüft, ob der Name der Redis-Cache ist gültig und wird nicht bereits verwendet.</span><span class="sxs-lookup"><span data-stu-id="912b5-144">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailabilityWithHttpOperationResponse(parameters: CheckNameAvailabilityParameters, options?: Object)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: >
+        <span data-ttu-id="912b5-145">Parameter für die Redis-CheckNameAvailability zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-145">Parameters supplied to the CheckNameAvailability Redis operation.</span></span> <span data-ttu-id="912b5-146">Der einzige unterstützte Ressourcentyp ist ": Microsoft.Cache/redis"</span><span class="sxs-lookup"><span data-stu-id="912b5-146">The only supported resource type is 'Microsoft.Cache/redis'</span></span>
     - id: options
       type:
       - Object
@@ -599,7 +703,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-139">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-139">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-147">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-147">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function create(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -607,17 +711,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-140">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-140">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-148">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-148">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-141">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-141">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-149">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-149">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="30329-142">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="30329-142">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="912b5-150">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-150">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -633,7 +737,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-143">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-143">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-151">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-151">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function create(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -667,7 +771,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-144">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-144">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-152">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-152">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function create(resourceGroupName: string, name: string, parameters: RedisCreateParameters, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -697,7 +801,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-145">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-145">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-153">Erstellen Sie, oder Ersetzen Sie (überschreiben/neu erstellen, mit potenziellen Ausfallzeiten) eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-153">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function createWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -705,17 +809,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-146">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-146">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-154">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-154">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-147">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-147">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-155">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-155">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="30329-148">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="30329-148">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="912b5-156">Parameter für das Erstellen von Redis zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-156">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -731,7 +835,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-149">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-149">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-157">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-157">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -739,12 +843,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-150">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-150">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-158">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-158">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-151">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-151">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-159">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-159">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -760,7 +864,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-152">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-152">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-160">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-160">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -790,7 +894,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-153">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-153">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-161">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-161">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, callback: ServiceCallback<void>)'
     parameters:
@@ -816,7 +920,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-154">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-154">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-162">Löscht einen Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-162">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -824,12 +928,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-155">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-155">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-163">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-163">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-156">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-156">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-164">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-164">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -845,7 +949,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-157">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-157">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-165">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-165">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -853,17 +957,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-158">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-158">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-166">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-166">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-159">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-159">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-167">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-167">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="30329-160">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="30329-160">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="912b5-168">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="912b5-168">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -879,7 +983,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-161">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-161">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-169">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-169">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -913,7 +1017,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-162">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-162">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-170">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-170">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -943,7 +1047,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-163">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="30329-163">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="912b5-171">Exportieren von Daten aus dem Redis-Cache auf Blobs in einem Container.</span><span class="sxs-lookup"><span data-stu-id="912b5-171">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -951,17 +1055,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-164">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-164">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-172">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-172">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-165">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-165">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-173">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-173">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="30329-166">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="30329-166">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="912b5-174">Parameter für Redis-Export-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="912b5-174">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -977,7 +1081,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-167">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="30329-167">Reboot specified Redis node(s).</span></span> <span data-ttu-id="30329-168">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-168">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="30329-169">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="30329-169">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="912b5-175">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="912b5-175">Reboot specified Redis node(s).</span></span> <span data-ttu-id="912b5-176">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-176">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="912b5-177">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="912b5-177">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceReboot(resourceGroupName: string, name: string, parameters: RedisRebootParameters, options?: Object)'
     parameters:
@@ -985,17 +1089,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-170">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-170">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-178">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-178">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-171">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-171">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-179">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-179">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisRebootParameters
       description: >
-        <span data-ttu-id="30329-172">Gibt an, die Redis-Knoten neu starten.</span><span class="sxs-lookup"><span data-stu-id="30329-172">Specifies which Redis node(s) to reboot.</span></span>
+        <span data-ttu-id="912b5-180">Gibt an, die Redis-Knoten neu starten.</span><span class="sxs-lookup"><span data-stu-id="912b5-180">Specifies which Redis node(s) to reboot.</span></span>
     - id: options
       type:
       - Object
@@ -1011,7 +1115,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-173">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="30329-173">Reboot specified Redis node(s).</span></span> <span data-ttu-id="30329-174">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-174">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="30329-175">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="30329-175">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="912b5-181">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="912b5-181">Reboot specified Redis node(s).</span></span> <span data-ttu-id="912b5-182">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-182">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="912b5-183">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="912b5-183">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceReboot(resourceGroupName: string, name: string, parameters: RedisRebootParameters, options: Object, callback: ServiceCallback<RedisForceRebootResponse>)'
     parameters:
@@ -1045,7 +1149,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-176">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="30329-176">Reboot specified Redis node(s).</span></span> <span data-ttu-id="30329-177">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-177">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="30329-178">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="30329-178">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="912b5-184">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="912b5-184">Reboot specified Redis node(s).</span></span> <span data-ttu-id="912b5-185">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-185">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="912b5-186">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="912b5-186">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceReboot(resourceGroupName: string, name: string, parameters: RedisRebootParameters, callback: ServiceCallback<RedisForceRebootResponse>)'
     parameters:
@@ -1075,7 +1179,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-179">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="30329-179">Reboot specified Redis node(s).</span></span> <span data-ttu-id="30329-180">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-180">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="30329-181">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="30329-181">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="912b5-187">Starten Sie neu angegebene Redis-Knoten.</span><span class="sxs-lookup"><span data-stu-id="912b5-187">Reboot specified Redis node(s).</span></span> <span data-ttu-id="912b5-188">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-188">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="912b5-189">Möglicherweise Daten verloren gehen können vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="912b5-189">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceRebootWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisRebootParameters, options?: Object)'
     parameters:
@@ -1083,17 +1187,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-182">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-182">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-190">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-190">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-183">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-183">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-191">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-191">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisRebootParameters
       description: >
-        <span data-ttu-id="30329-184">Gibt an, die Redis-Knoten neu starten.</span><span class="sxs-lookup"><span data-stu-id="30329-184">Specifies which Redis node(s) to reboot.</span></span>
+        <span data-ttu-id="912b5-192">Gibt an, die Redis-Knoten neu starten.</span><span class="sxs-lookup"><span data-stu-id="912b5-192">Specifies which Redis node(s) to reboot.</span></span>
     - id: options
       type:
       - Object
@@ -1109,7 +1213,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-185">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="30329-185">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="912b5-193">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="912b5-193">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1117,12 +1221,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-186">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-186">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-194">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-194">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-187">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-187">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-195">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-195">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1138,7 +1242,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-188">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="30329-188">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="912b5-196">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="912b5-196">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -1168,7 +1272,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-189">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="30329-189">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="912b5-197">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="912b5-197">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -1194,7 +1298,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-190">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="30329-190">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="912b5-198">Ruft ab einen Redis-Cache (Beschreibungen).</span><span class="sxs-lookup"><span data-stu-id="912b5-198">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function getWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1202,12 +1306,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-191">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-191">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-199">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-199">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-192">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-192">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-200">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-200">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1223,7 +1327,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-193">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-193">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-201">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-201">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -1231,17 +1335,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-194">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-194">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-202">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-202">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-195">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-195">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-203">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-203">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="30329-196">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-196">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="912b5-204">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-204">Parameters for Redis import operation.</span></span>
     - id: options
       type:
       - Object
@@ -1257,7 +1361,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-197">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-197">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-205">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-205">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -1291,7 +1395,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-198">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-198">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-206">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-206">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -1321,7 +1425,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-199">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-199">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-207">Importieren von Daten in Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-207">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -1329,17 +1433,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-200">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-200">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-208">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-208">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-201">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-201">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-209">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-209">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="30329-202">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-202">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="912b5-210">Parameter für Redis-Importvorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-210">Parameters for Redis import operation.</span></span>
     - id: options
       type:
       - Object
@@ -1355,7 +1459,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-203">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-203">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-211">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-211">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function list(options?: Object)'
     parameters:
@@ -1374,7 +1478,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-204">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-204">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-212">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-212">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function list(options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1396,7 +1500,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-205">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-205">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-213">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-213">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function list(callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1414,7 +1518,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-206">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-206">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-214">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-214">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
@@ -1422,7 +1526,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-207">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-207">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-215">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-215">The name of the resource group.</span></span>
     - id: options
       type:
       - Object
@@ -1438,7 +1542,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-208">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-208">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-216">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-216">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1464,7 +1568,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-209">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-209">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-217">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-217">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1486,7 +1590,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-210">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-210">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-218">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-218">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
@@ -1494,7 +1598,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-211">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-211">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="912b5-219">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-219">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1510,7 +1614,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-212">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-212">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-220">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-220">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1536,7 +1640,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-213">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-213">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-221">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-221">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1558,7 +1662,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-214">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-214">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-222">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-222">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
@@ -1566,7 +1670,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-215">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-215">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="912b5-223">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-223">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1582,7 +1686,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-216">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-216">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="912b5-224">Listet alle Redis-Caches in einer Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-224">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
@@ -1590,7 +1694,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-217">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-217">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-225">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-225">The name of the resource group.</span></span>
     - id: options
       type:
       - Object
@@ -1606,7 +1710,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-218">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="30329-218">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="30329-219">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-219">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-226">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="912b5-226">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="912b5-227">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-227">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeys(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1614,12 +1718,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-220">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-220">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-228">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-228">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-221">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-221">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-229">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-229">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1635,7 +1739,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-222">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="30329-222">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="30329-223">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-223">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-230">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="912b5-230">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="912b5-231">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-231">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeys(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1665,7 +1769,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-224">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="30329-224">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="30329-225">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-225">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-232">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="912b5-232">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="912b5-233">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-233">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeys(resourceGroupName: string, name: string, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1691,7 +1795,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-226">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="30329-226">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="30329-227">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-227">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-234">Rufen Sie einen Redis-Cache-Zugriffsschlüssel an.</span><span class="sxs-lookup"><span data-stu-id="912b5-234">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="912b5-235">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-235">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeysWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1699,12 +1803,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-228">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-228">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-236">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-236">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-229">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-229">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-237">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-237">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1720,7 +1824,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-230">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-230">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-238">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-238">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
@@ -1728,7 +1832,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-231">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-231">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="912b5-239">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-239">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1744,7 +1848,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-232">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-232">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-240">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-240">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1770,7 +1874,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-233">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-233">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-241">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-241">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1792,7 +1896,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-234">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-234">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-242">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-242">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
@@ -1800,7 +1904,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-235">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="30329-235">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="912b5-243">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="912b5-243">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1810,13 +1914,145 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-arm-rediscache.RedisListResult>>
   package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotifications
+  name: listUpgradeNotifications(string, string, number, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-244">Ruft alle Upgrade Benachrichtigungen für einen Redis Cache ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-244">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotifications(resourceGroupName: string, name: string, history: number, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="912b5-245">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-245">The name of the resource group.</span></span>
+    - id: name
+      type:
+      - string
+      description: >
+        <span data-ttu-id="912b5-246">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-246">The name of the Redis cache.</span></span>
+    - id: history
+      type:
+      - number
+      description: >
+        <span data-ttu-id="912b5-247">wie viele Minuten in der Vergangenheit nach Upgrade Benachrichtigungen gesucht werden soll</span><span class="sxs-lookup"><span data-stu-id="912b5-247">how many minutes in past to look for upgrade notifications</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-rediscache.NotificationListResponse>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotifications_2
+  name: listUpgradeNotifications(string, string, number, Object, ServiceCallback<NotificationListResponse>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-248">Ruft alle Upgrade Benachrichtigungen für einen Redis Cache ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-248">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotifications(resourceGroupName: string, name: string, history: number, options: Object, callback: ServiceCallback<NotificationListResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: history
+      type:
+      - number
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.NotificationListResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.NotificationListResponse>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotifications_1
+  name: listUpgradeNotifications(string, string, number, ServiceCallback<NotificationListResponse>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-249">Ruft alle Upgrade Benachrichtigungen für einen Redis Cache ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-249">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotifications(resourceGroupName: string, name: string, history: number, callback: ServiceCallback<NotificationListResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: history
+      type:
+      - number
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.NotificationListResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.NotificationListResponse>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotificationsWithHttpOperationResponse
+  name: listUpgradeNotificationsWithHttpOperationResponse(string, string, number, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="912b5-250">Ruft alle Upgrade Benachrichtigungen für einen Redis Cache ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-250">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotificationsWithHttpOperationResponse(resourceGroupName: string, name: string, history: number, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="912b5-251">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-251">The name of the resource group.</span></span>
+    - id: name
+      type:
+      - string
+      description: >
+        <span data-ttu-id="912b5-252">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-252">The name of the Redis cache.</span></span>
+    - id: history
+      type:
+      - number
+      description: >
+        <span data-ttu-id="912b5-253">wie viele Minuten in der Vergangenheit nach Upgrade Benachrichtigungen gesucht werden soll</span><span class="sxs-lookup"><span data-stu-id="912b5-253">how many minutes in past to look for upgrade notifications</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-rediscache.NotificationListResponse>>
+  package: azure-arm-rediscache
 - uid: azure-arm-rediscache.Redis.listWithHttpOperationResponse
   name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-236">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="30329-236">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="912b5-254">Ruft alle Redis-Caches in das angegebene Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="912b5-254">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
@@ -1835,7 +2071,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-237">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-237">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="30329-238">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-238">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-255">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-255">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="912b5-256">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-256">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKey(resourceGroupName: string, name: string, keyType: string, options?: Object)'
     parameters:
@@ -1843,17 +2079,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-239">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-239">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-257">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-257">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-240">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-240">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-258">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-258">The name of the Redis cache.</span></span>
     - id: keyType
       type:
       - string
       description: >
-        <span data-ttu-id="30329-241">Der Redis-Zugriffsschlüssel neu generieren.</span><span class="sxs-lookup"><span data-stu-id="30329-241">The Redis access key to regenerate.</span></span> <span data-ttu-id="30329-242">Mögliche Werte sind: "Primary", "Sekundär"</span><span class="sxs-lookup"><span data-stu-id="30329-242">Possible values include: 'Primary', 'Secondary'</span></span>
+        <span data-ttu-id="912b5-259">Der Redis-Zugriffsschlüssel neu generieren.</span><span class="sxs-lookup"><span data-stu-id="912b5-259">The Redis access key to regenerate.</span></span> <span data-ttu-id="912b5-260">Mögliche Werte sind: 'Primary', 'Secondary'</span><span class="sxs-lookup"><span data-stu-id="912b5-260">Possible values include: 'Primary', 'Secondary'</span></span>
     - id: options
       type:
       - Object
@@ -1869,7 +2105,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-243">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-243">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="30329-244">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-244">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-261">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-261">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="912b5-262">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-262">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKey(resourceGroupName: string, name: string, keyType: string, options: Object, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1903,7 +2139,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-245">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-245">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="30329-246">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-246">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-263">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-263">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="912b5-264">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-264">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKey(resourceGroupName: string, name: string, keyType: string, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1933,7 +2169,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-247">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-247">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="30329-248">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="30329-248">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="912b5-265">Zugriffsschlüssel für Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-265">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="912b5-266">Diesen Vorgang muss über die Schreibberechtigung für die Cache-Ressource.</span><span class="sxs-lookup"><span data-stu-id="912b5-266">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKeyWithHttpOperationResponse(resourceGroupName: string, name: string, keyType: string, options?: Object)'
     parameters:
@@ -1941,17 +2177,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-249">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-249">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-267">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-267">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-250">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-250">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-268">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-268">The name of the Redis cache.</span></span>
     - id: keyType
       type:
       - string
       description: >
-        <span data-ttu-id="30329-251">Der Redis-Zugriffsschlüssel neu generieren.</span><span class="sxs-lookup"><span data-stu-id="30329-251">The Redis access key to regenerate.</span></span> <span data-ttu-id="30329-252">Mögliche Werte sind: "Primary", "Sekundär"</span><span class="sxs-lookup"><span data-stu-id="30329-252">Possible values include: 'Primary', 'Secondary'</span></span>
+        <span data-ttu-id="912b5-269">Der Redis-Zugriffsschlüssel neu generieren.</span><span class="sxs-lookup"><span data-stu-id="912b5-269">The Redis access key to regenerate.</span></span> <span data-ttu-id="912b5-270">Mögliche Werte sind: 'Primary', 'Secondary'</span><span class="sxs-lookup"><span data-stu-id="912b5-270">Possible values include: 'Primary', 'Secondary'</span></span>
     - id: options
       type:
       - Object
@@ -1967,7 +2203,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-253">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-253">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-271">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-271">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, options?: Object)'
     parameters:
@@ -1975,17 +2211,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-254">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-254">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-272">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-272">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-255">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-255">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-273">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-273">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisUpdateParameters
       description: >
-        <span data-ttu-id="30329-256">Parameter für die Redis-Update zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="30329-256">Parameters supplied to the Update Redis operation.</span></span>
+        <span data-ttu-id="912b5-274">Parameter für die Redis-Update zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-274">Parameters supplied to the Update Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -2001,7 +2237,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-257">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-257">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-275">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-275">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -2035,7 +2271,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-258">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-258">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-276">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-276">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -2065,7 +2301,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="30329-259">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="30329-259">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="912b5-277">Aktualisieren eines vorhandenen Redis-Caches.</span><span class="sxs-lookup"><span data-stu-id="912b5-277">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function updateWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, options?: Object)'
     parameters:
@@ -2073,17 +2309,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="30329-260">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="30329-260">The name of the resource group.</span></span>
+        <span data-ttu-id="912b5-278">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="912b5-278">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="30329-261">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="30329-261">The name of the Redis cache.</span></span>
+        <span data-ttu-id="912b5-279">Der Name des Redis-Cache.</span><span class="sxs-lookup"><span data-stu-id="912b5-279">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisUpdateParameters
       description: >
-        <span data-ttu-id="30329-262">Parameter für die Redis-Update zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="30329-262">Parameters supplied to the Update Redis operation.</span></span>
+        <span data-ttu-id="912b5-280">Parameter für die Redis-Update zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="912b5-280">Parameters supplied to the Update Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -2142,6 +2378,12 @@ references:
   - name: ImportRDBParameters
     fullName: ImportRDBParameters
     uid: azure-arm-rediscache.ImportRDBParameters
+- uid: azure-arm-rediscache.CheckNameAvailabilityParameters
+  name: CheckNameAvailabilityParameters
+  spec.typeScript:
+  - name: CheckNameAvailabilityParameters
+    fullName: CheckNameAvailabilityParameters
+    uid: azure-arm-rediscache.CheckNameAvailabilityParameters
 - uid: azure-arm-rediscache.RedisRebootParameters
   name: RedisRebootParameters
   spec.typeScript:
@@ -2236,6 +2478,36 @@ references:
   - name: RedisAccessKeys
     fullName: RedisAccessKeys
     uid: azure-arm-rediscache.RedisAccessKeys
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-rediscache.NotificationListResponse>
+  name: NotificationListResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: NotificationListResponse
+    fullName: NotificationListResponse
+    uid: azure-arm-rediscache.NotificationListResponse
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-rediscache.NotificationListResponse>
+  name: NotificationListResponse>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: NotificationListResponse
+    fullName: NotificationListResponse
+    uid: azure-arm-rediscache.NotificationListResponse
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-rediscache.NotificationListResponse>>
+  name: NotificationListResponse>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: NotificationListResponse
+    fullName: NotificationListResponse
+    uid: azure-arm-rediscache.NotificationListResponse
   - name: '>>'
     fullName: '>>'
 - uid: azure-arm-rediscache.RedisUpdateParameters
