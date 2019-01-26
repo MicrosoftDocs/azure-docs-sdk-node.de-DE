@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fc1c43ecb10b456c40d7dc251e7aea361003efca
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: b226dae42166a1e4a9ec3596f1c1e3efe91ee725
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53683014"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051851"
 items:
 - uid: azure-iot-provisioning-service.ProvisioningServiceClient
   name: ProvisioningServiceClient
@@ -34,8 +34,12 @@ items:
   - azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
   - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup_1
   - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism_1
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism
   - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment_1
   - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism_1
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism
   - azure-iot-provisioning-service.ProvisioningServiceClient.constructor
   - azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation_1
   - azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
@@ -50,23 +54,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-101">Erstellt eine Abfrage, die zurückgegeben werden, für eine bestimmte EnrollmentGroup, Seiten mit den vorhandenen Status der geräteregistrierung verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-101">Creates a query that can be used to return, for a specific EnrollmentGroup, pages of existing device registration status.</span></span>
+  summary: <span data-ttu-id="64841-101">Erstellt eine Abfrage, die zurückgegeben werden, für eine bestimmte EnrollmentGroup, Seiten mit den vorhandenen Status der geräteregistrierung verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="64841-101">Creates a query that can be used to return, for a specific EnrollmentGroup, pages of existing device registration status.</span></span>
   syntax:
     content: 'function createEnrollmentGroupDeviceRegistrationStateQuery(querySpecification: QuerySpecification, enrollmentGroupId: string, pageSize?: number)'
     parameters:
     - id: querySpecification
       type:
       - azure-iot-provisioning-service.QuerySpecification
-      description: <span data-ttu-id="2d9ab-102">Die Angabe der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-102">The query specification.</span></span>
+      description: <span data-ttu-id="64841-102">Die Angabe der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="64841-102">The query specification.</span></span>
     - id: enrollmentGroupId
       type:
       - string
-      description: <span data-ttu-id="2d9ab-103">Die EnrollmentGroup-Id, die den Bereich für die Abfrage enthält.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-103">The EnrollmentGroup id that provides the scope for the query.</span></span>
+      description: <span data-ttu-id="64841-103">Die EnrollmentGroup-Id, die den Bereich für die Abfrage enthält.</span><span class="sxs-lookup"><span data-stu-id="64841-103">The EnrollmentGroup id that provides the scope for the query.</span></span>
     - id: pageSize
       type:
       - number
       description: >
-        <span data-ttu-id="2d9ab-104">Die maximale Anzahl von Elementen, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-104">The maximum number of elements to return per page.</span></span>
+        <span data-ttu-id="64841-104">Die maximale Anzahl von Elementen, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="64841-104">The maximum number of elements to return per page.</span></span>
       optional: true
     return:
       type:
@@ -78,19 +82,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-105">Erstellt eine Abfrage, die verwendet werden kann, um vorhandenen Registrierungsgruppen zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-105">Creates a query that can be used to return pages of existing enrollment groups.</span></span>
+  summary: <span data-ttu-id="64841-105">Erstellt eine Abfrage, die verwendet werden kann, um vorhandenen Registrierungsgruppen zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="64841-105">Creates a query that can be used to return pages of existing enrollment groups.</span></span>
   syntax:
     content: 'function createEnrollmentGroupQuery(querySpecification: QuerySpecification, pageSize?: number)'
     parameters:
     - id: querySpecification
       type:
       - azure-iot-provisioning-service.QuerySpecification
-      description: <span data-ttu-id="2d9ab-106">Die Angabe der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-106">The query specification.</span></span>
+      description: <span data-ttu-id="64841-106">Die Angabe der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="64841-106">The query specification.</span></span>
     - id: pageSize
       type:
       - number
       description: >
-        <span data-ttu-id="2d9ab-107">Die maximale Anzahl von Elementen, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-107">The maximum number of elements to return per page.</span></span>
+        <span data-ttu-id="64841-107">Die maximale Anzahl von Elementen, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="64841-107">The maximum number of elements to return per page.</span></span>
       optional: true
     return:
       type:
@@ -102,19 +106,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-108">Erstellt eine Abfrage, die verwendet werden kann, um vorhandene Registrierungen zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-108">Creates a query that can be used to return pages of existing enrollments.</span></span>
+  summary: <span data-ttu-id="64841-108">Erstellt eine Abfrage, die verwendet werden kann, um vorhandene Registrierungen zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="64841-108">Creates a query that can be used to return pages of existing enrollments.</span></span>
   syntax:
     content: 'function createIndividualEnrollmentQuery(querySpecification: QuerySpecification, pageSize?: number)'
     parameters:
     - id: querySpecification
       type:
       - azure-iot-provisioning-service.QuerySpecification
-      description: <span data-ttu-id="2d9ab-109">Die Angabe der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-109">The query specification.</span></span>
+      description: <span data-ttu-id="64841-109">Die Angabe der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="64841-109">The query specification.</span></span>
     - id: pageSize
       type:
       - number
       description: >
-        <span data-ttu-id="2d9ab-110">Die maximale Anzahl von Elementen, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-110">The maximum number of elements to return per page.</span></span>
+        <span data-ttu-id="64841-110">Die maximale Anzahl von Elementen, die pro Seite zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="64841-110">The maximum number of elements to return per page.</span></span>
       optional: true
     return:
       type:
@@ -126,7 +130,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-111">Erstellen oder Aktualisieren einer Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-111">Create or update a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-111">Erstellen oder Aktualisieren einer Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-111">Create or update a device enrollment group.</span></span>
   syntax:
     content: 'function createOrUpdateEnrollmentGroup(enrollmentGroup: EnrollmentGroup)'
     parameters:
@@ -144,14 +148,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-112">Erstellen oder Aktualisieren einer Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-112">Create or update a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-112">Erstellen oder Aktualisieren einer Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-112">Create or update a device enrollment group.</span></span>
   syntax:
     content: 'function createOrUpdateEnrollmentGroup(enrollmentGroup: EnrollmentGroup, callback: HttpResponseCallback<EnrollmentGroup>)'
     parameters:
     - id: enrollmentGroup
       type:
       - azure-iot-provisioning-service.EnrollmentGroup
-      description: <span data-ttu-id="2d9ab-113">Der Device-Enrollment-Gruppe.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-113">The device enrollment group.</span></span>
+      description: <span data-ttu-id="64841-113">Der Device-Enrollment-Gruppe.</span><span class="sxs-lookup"><span data-stu-id="64841-113">The device enrollment group.</span></span>
     - id: callback
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.EnrollmentGroup>
@@ -163,7 +167,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-114">Erstellt oder aktualisiert einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-114">Create or update a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-114">Erstellt oder aktualisiert einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="64841-114">Create or update a device enrollment record.</span></span>
   syntax:
     content: 'function createOrUpdateIndividualEnrollment(enrollment: IndividualEnrollment)'
     parameters:
@@ -181,14 +185,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-115">Erstellt oder aktualisiert einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-115">Create or update a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-115">Erstellt oder aktualisiert einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="64841-115">Create or update a device enrollment record.</span></span>
   syntax:
     content: 'function createOrUpdateIndividualEnrollment(enrollment: IndividualEnrollment, callback: HttpResponseCallback<IndividualEnrollment>)'
     parameters:
     - id: enrollment
       type:
       - azure-iot-provisioning-service.IndividualEnrollment
-      description: <span data-ttu-id="2d9ab-116">Der Registrierungsdatensatz Gerät.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-116">The device enrollment record.</span></span>
+      description: <span data-ttu-id="64841-116">Der Registrierungsdatensatz Gerät.</span><span class="sxs-lookup"><span data-stu-id="64841-116">The device enrollment record.</span></span>
     - id: callback
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.IndividualEnrollment>
@@ -200,7 +204,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-117">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-117">Delete a device registration status.</span></span>
+  summary: <span data-ttu-id="64841-117">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-117">Delete a device registration status.</span></span>
   syntax:
     content: 'function deleteDeviceRegistrationState(idOrRegistrationState: string | DeviceRegistrationState)'
     parameters:
@@ -218,7 +222,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-118">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-118">Delete a device registration status.</span></span>
+  summary: <span data-ttu-id="64841-118">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-118">Delete a device registration status.</span></span>
   syntax:
     content: 'function deleteDeviceRegistrationState(idOrRegistrationState: string | DeviceRegistrationState, deleteCallback: ErrorCallback)'
     parameters:
@@ -237,7 +241,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-119">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-119">Delete a device registration status.</span></span>
+  summary: <span data-ttu-id="64841-119">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-119">Delete a device registration status.</span></span>
   syntax:
     content: 'function deleteDeviceRegistrationState(idOrRegistrationState: string | DeviceRegistrationState, etag: string)'
     parameters:
@@ -259,14 +263,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-120">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-120">Delete a device registration status.</span></span>
+  summary: <span data-ttu-id="64841-120">Löschen Sie einen Status der geräteregistrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-120">Delete a device registration status.</span></span>
   syntax:
     content: 'function deleteDeviceRegistrationState(idOrRegistrationState: string | DeviceRegistrationState, etag: string, deleteCallback: ErrorCallback)'
     parameters:
     - id: idOrRegistrationState
       type:
       - string | azure-iot-provisioning-service.DeviceRegistrationState
-      description: <span data-ttu-id="2d9ab-121">Eine Zeichenfolge, die die Registrierungs-Id oder einen tatsächlichen DeviceRegistrationState enthält.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-121">A string containing the registration id OR an actual DeviceRegistrationState.</span></span>
+      description: <span data-ttu-id="64841-121">Eine Zeichenfolge, die die Registrierungs-Id oder einen tatsächlichen DeviceRegistrationState enthält.</span><span class="sxs-lookup"><span data-stu-id="64841-121">A string containing the registration id OR an actual DeviceRegistrationState.</span></span>
     - id: etag
       type:
       - string
@@ -282,7 +286,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-122">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-122">Delete a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-122">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-122">Delete a device enrollment group.</span></span>
   syntax:
     content: 'function deleteEnrollmentGroup(enrollmentGroupOrId: string | EnrollmentGroup)'
     parameters:
@@ -300,7 +304,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-123">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-123">Delete a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-123">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-123">Delete a device enrollment group.</span></span>
   syntax:
     content: 'function deleteEnrollmentGroup(enrollmentGroupOrId: string | EnrollmentGroup, deleteCallback: ErrorCallback)'
     parameters:
@@ -319,7 +323,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-124">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-124">Delete a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-124">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-124">Delete a device enrollment group.</span></span>
   syntax:
     content: 'function deleteEnrollmentGroup(enrollmentGroupOrId: string | EnrollmentGroup, etag: string)'
     parameters:
@@ -341,14 +345,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-125">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-125">Delete a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-125">Löschen Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-125">Delete a device enrollment group.</span></span>
   syntax:
     content: 'function deleteEnrollmentGroup(enrollmentGroupOrId: string | EnrollmentGroup, etag: string, deleteCallback: ErrorCallback)'
     parameters:
     - id: enrollmentGroupOrId
       type:
       - string | azure-iot-provisioning-service.EnrollmentGroup
-      description: <span data-ttu-id="2d9ab-126">EnrollmentGroup-Objekt oder eine Zeichenfolge, enthält die Registrierung Gruppen-Id.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-126">EnrollmentGroup object or a string containing the enrollment Group Id.</span></span>
+      description: <span data-ttu-id="64841-126">EnrollmentGroup-Objekt oder eine Zeichenfolge, enthält die Registrierung Gruppen-Id.</span><span class="sxs-lookup"><span data-stu-id="64841-126">EnrollmentGroup object or a string containing the enrollment Group Id.</span></span>
     - id: etag
       type:
       - string
@@ -364,7 +368,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-127">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-127">Delete a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-127">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="64841-127">Delete a device enrollment record.</span></span>
   syntax:
     content: 'function deleteIndividualEnrollment(enrollmentOrId: string | IndividualEnrollment)'
     parameters:
@@ -382,7 +386,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-128">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-128">Delete a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-128">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="64841-128">Delete a device enrollment record.</span></span>
   syntax:
     content: 'function deleteIndividualEnrollment(enrollmentOrId: string | IndividualEnrollment, deleteCallback: ErrorCallback)'
     parameters:
@@ -401,7 +405,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-129">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-129">Delete a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-129">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="64841-129">Delete a device enrollment record.</span></span>
   syntax:
     content: 'function deleteIndividualEnrollment(enrollmentOrId: string | IndividualEnrollment, etag: string)'
     parameters:
@@ -423,14 +427,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-130">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-130">Delete a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-130">Löschen Sie einen Datensatz für Registrierung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="64841-130">Delete a device enrollment record.</span></span>
   syntax:
     content: 'function deleteIndividualEnrollment(enrollmentOrId: string | IndividualEnrollment, etag: string, deleteCallback: ErrorCallback)'
     parameters:
     - id: enrollmentOrId
       type:
       - string | azure-iot-provisioning-service.IndividualEnrollment
-      description: <span data-ttu-id="2d9ab-131">Ein IndividualEnrollment-Objekt oder eine Zeichenfolge, die die Registrierungs-Id enthält.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-131">An IndividualEnrollment object or a string containing the registration id.</span></span>
+      description: <span data-ttu-id="64841-131">Ein IndividualEnrollment-Objekt oder eine Zeichenfolge, die die Registrierungs-Id enthält.</span><span class="sxs-lookup"><span data-stu-id="64841-131">An IndividualEnrollment object or a string containing the registration id.</span></span>
     - id: etag
       type:
       - string
@@ -446,14 +450,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-132">Erstellt ein ProvisioningServiceClient-Objekt, aus der angegebenen Verbindungszeichenfolge mit dem Standardtransport ([Http](xref:azure-iothub.Http)).</span><span class="sxs-lookup"><span data-stu-id="2d9ab-132">Constructs a ProvisioningServiceClient object from the given connection string using the default transport ([Http](xref:azure-iothub.Http)).</span></span>
+  summary: <span data-ttu-id="64841-132">Erstellt ein ProvisioningServiceClient-Objekt, aus der angegebenen Verbindungszeichenfolge mit dem Standardtransport ([Http](xref:azure-iothub.Http)).</span><span class="sxs-lookup"><span data-stu-id="64841-132">Constructs a ProvisioningServiceClient object from the given connection string using the default transport ([Http](xref:azure-iothub.Http)).</span></span>
   syntax:
     content: 'static function fromConnectionString(value: string)'
     parameters:
     - id: value
       type:
       - string
-      description: <span data-ttu-id="2d9ab-133">Eine Verbindungszeichenfolge, die die entsprechende kapselt (Lesen und/oder Schreiben) ProvisioningServiceClient Berechtigungen.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-133">A connection string which encapsulates the appropriate (read and/or write) ProvisioningServiceClient permissions.</span></span>
+      description: <span data-ttu-id="64841-133">Eine Verbindungszeichenfolge, die die entsprechende kapselt (Lesen und/oder Schreiben) ProvisioningServiceClient Berechtigungen.</span><span class="sxs-lookup"><span data-stu-id="64841-133">A connection string which encapsulates the appropriate (read and/or write) ProvisioningServiceClient permissions.</span></span>
     return:
       type:
       - azure-iot-provisioning-service.ProvisioningServiceClient
@@ -464,7 +468,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-134">Ruft den Status der geräteregistrierung an.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-134">Gets the device registration status.</span></span>
+  summary: <span data-ttu-id="64841-134">Ruft den Status der geräteregistrierung an.</span><span class="sxs-lookup"><span data-stu-id="64841-134">Gets the device registration status.</span></span>
   syntax:
     content: 'function getDeviceRegistrationState(id: string)'
     parameters:
@@ -482,14 +486,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-135">Ruft den Status der geräteregistrierung an.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-135">Gets the device registration status.</span></span>
+  summary: <span data-ttu-id="64841-135">Ruft den Status der geräteregistrierung an.</span><span class="sxs-lookup"><span data-stu-id="64841-135">Gets the device registration status.</span></span>
   syntax:
     content: 'function getDeviceRegistrationState(id: string, callback: HttpResponseCallback<DeviceRegistrationState>)'
     parameters:
     - id: id
       type:
       - string
-      description: <span data-ttu-id="2d9ab-136">Registrierungs-ID.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-136">Registration ID.</span></span>
+      description: <span data-ttu-id="64841-136">Registrierungs-ID.</span><span class="sxs-lookup"><span data-stu-id="64841-136">Registration ID.</span></span>
     - id: callback
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.DeviceRegistrationState>
@@ -501,7 +505,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-137">Erhalten Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-137">Get a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-137">Erhalten Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-137">Get a device enrollment group.</span></span>
   syntax:
     content: 'function getEnrollmentGroup(id: string)'
     parameters:
@@ -519,18 +523,55 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-138">Erhalten Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-138">Get a device enrollment group.</span></span>
+  summary: <span data-ttu-id="64841-138">Erhalten Sie eine Gerätegruppe für die Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-138">Get a device enrollment group.</span></span>
   syntax:
     content: 'function getEnrollmentGroup(id: string, getCallback: HttpResponseCallback<EnrollmentGroup>)'
     parameters:
     - id: id
       type:
       - string
-      description: <span data-ttu-id="2d9ab-139">IndividualEnrollment Gruppen-ID.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-139">IndividualEnrollment group ID.</span></span>
+      description: <span data-ttu-id="64841-139">IndividualEnrollment Gruppen-ID.</span><span class="sxs-lookup"><span data-stu-id="64841-139">IndividualEnrollment group ID.</span></span>
     - id: getCallback
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.EnrollmentGroup>
       description: ''
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism_1
+  name: getEnrollmentGroupAttestationMechanism(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="64841-140">Ruft den nachweismechanismus für einen Datensatz EnrollmentGroup ab.</span><span class="sxs-lookup"><span data-stu-id="64841-140">Gets the attestation mechanism for an EnrollmentGroup record.</span></span>
+  syntax:
+    content: 'function getEnrollmentGroupAttestationMechanism(enrollmentGroupId: string)'
+    parameters:
+    - id: enrollmentGroupId
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<ResultWithHttpResponse<azure-iot-provisioning-service.AttestationMechanism>>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism
+  name: getEnrollmentGroupAttestationMechanism(string, HttpResponseCallback<AttestationMechanism>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="64841-141">Ruft den nachweismechanismus für einen Datensatz EnrollmentGroup ab.</span><span class="sxs-lookup"><span data-stu-id="64841-141">Gets the attestation mechanism for an EnrollmentGroup record.</span></span>
+  syntax:
+    content: 'function getEnrollmentGroupAttestationMechanism(enrollmentGroupId: string, callback: HttpResponseCallback<AttestationMechanism>)'
+    parameters:
+    - id: enrollmentGroupId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - HttpResponseCallback<azure-iot-provisioning-service.AttestationMechanism>
+      description: <span data-ttu-id="64841-142">Die Funktion wird aufgerufen, wenn die Anforderung, entweder mit einem Fehler oder mit einem AttestationMechanism-Objekt abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="64841-142">Function called when the request is completed, either with an error or with an AttestationMechanism object.</span></span>
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment_1
   name: getIndividualEnrollment(string)
@@ -538,7 +579,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-140">Datensatz für die Registrierung von Geräten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-140">Get a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-143">Datensatz für die Registrierung von Geräten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="64841-143">Get a device enrollment record.</span></span>
   syntax:
     content: 'function getIndividualEnrollment(id: string)'
     parameters:
@@ -556,18 +597,55 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-141">Datensatz für die Registrierung von Geräten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-141">Get a device enrollment record.</span></span>
+  summary: <span data-ttu-id="64841-144">Datensatz für die Registrierung von Geräten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="64841-144">Get a device enrollment record.</span></span>
   syntax:
     content: 'function getIndividualEnrollment(id: string, getCallback: HttpResponseCallback<IndividualEnrollment>)'
     parameters:
     - id: id
       type:
       - string
-      description: <span data-ttu-id="2d9ab-142">Registrierungs-ID.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-142">Registration ID.</span></span>
+      description: <span data-ttu-id="64841-145">Registrierungs-ID.</span><span class="sxs-lookup"><span data-stu-id="64841-145">Registration ID.</span></span>
     - id: getCallback
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.IndividualEnrollment>
       description: ''
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism_1
+  name: getIndividualEnrollmentAttestationMechanism(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="64841-146">Ruft den nachweismechanismus für einen Datensatz IndividualEnrollment ab.</span><span class="sxs-lookup"><span data-stu-id="64841-146">Gets the attestation mechanism for an IndividualEnrollment record.</span></span>
+  syntax:
+    content: 'function getIndividualEnrollmentAttestationMechanism(enrollementId: string)'
+    parameters:
+    - id: enrollementId
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<ResultWithHttpResponse<azure-iot-provisioning-service.AttestationMechanism>>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism
+  name: getIndividualEnrollmentAttestationMechanism(string, HttpResponseCallback<AttestationMechanism>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="64841-147">Ruft den nachweismechanismus für einen Datensatz IndividualEnrollment ab.</span><span class="sxs-lookup"><span data-stu-id="64841-147">Gets the attestation mechanism for an IndividualEnrollment record.</span></span>
+  syntax:
+    content: 'function getIndividualEnrollmentAttestationMechanism(enrollementId: string, callback: HttpResponseCallback<AttestationMechanism>)'
+    parameters:
+    - id: enrollementId
+      type:
+      - string
+      description: <span data-ttu-id="64841-148">Eindeutiger Bezeichner der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-148">Unique identifier of the enrollment.</span></span>
+    - id: callback
+      type:
+      - HttpResponseCallback<azure-iot-provisioning-service.AttestationMechanism>
+      description: <span data-ttu-id="64841-149">Die Funktion wird aufgerufen, wenn die Anforderung, entweder mit einem Fehler oder mit einem AttestationMechanism-Objekt abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="64841-149">Function called when the request is completed, either with an error or with an AttestationMechanism object.</span></span>
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
   name: ProvisioningServiceClient(TransportConfig, RestApiClient)
@@ -595,7 +673,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-143">Führt eine Anzahl CRUD-Vorgänge für ein Array von Datensätzen der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-143">Runs a number CRUD operations on an array of enrollment records.</span></span>
+  summary: <span data-ttu-id="64841-150">Führt eine Anzahl CRUD-Vorgänge für ein Array von Datensätzen der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-150">Runs a number CRUD operations on an array of enrollment records.</span></span>
   syntax:
     content: 'function runBulkEnrollmentOperation(bulkEnrollmentOperation: BulkEnrollmentOperation)'
     parameters:
@@ -613,19 +691,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="2d9ab-144">Führt eine Anzahl CRUD-Vorgänge für ein Array von Datensätzen der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-144">Runs a number CRUD operations on an array of enrollment records.</span></span>
+  summary: <span data-ttu-id="64841-151">Führt eine Anzahl CRUD-Vorgänge für ein Array von Datensätzen der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="64841-151">Runs a number CRUD operations on an array of enrollment records.</span></span>
   syntax:
     content: 'function runBulkEnrollmentOperation(bulkEnrollmentOperation: BulkEnrollmentOperation, callback: HttpResponseCallback<BulkEnrollmentOperationResult>)'
     parameters:
     - id: bulkEnrollmentOperation
       type:
       - azure-iot-provisioning-service.BulkEnrollmentOperation
-      description: <span data-ttu-id="2d9ab-145">Ein Objekt, das die einzelnen Art von CRUD-Vorgänge für das Array von Objekten der IndividualEnrollment gibt an, die auch ein Teil des Objekts sind.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-145">An object that specifies the single kind of CRUD operations on the array of IndividualEnrollment objects that are also part of the object.</span></span>
+      description: <span data-ttu-id="64841-152">Ein Objekt, das die einzelnen Art von CRUD-Vorgänge für das Array von Objekten der IndividualEnrollment gibt an, die auch ein Teil des Objekts sind.</span><span class="sxs-lookup"><span data-stu-id="64841-152">An object that specifies the single kind of CRUD operations on the array of IndividualEnrollment objects that are also part of the object.</span></span>
     - id: callback
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.BulkEnrollmentOperationResult>
       description: >
-        <span data-ttu-id="2d9ab-146">Nach Abschluss des Vorgangs aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="2d9ab-146">Invoked upon completion of the operation.</span></span>
+        <span data-ttu-id="64841-153">Nach Abschluss des Vorgangs aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="64841-153">Invoked upon completion of the operation.</span></span>
   package: azure-iot-provisioning-service
 references:
 - uid: azure-iot-provisioning-service.QuerySpecification
@@ -734,6 +812,26 @@ references:
   - name: DeviceRegistrationState
     fullName: DeviceRegistrationState
     uid: azure-iot-provisioning-service.DeviceRegistrationState
+  - name: '>>'
+    fullName: '>>'
+- uid: HttpResponseCallback<azure-iot-provisioning-service.AttestationMechanism>
+  name: AttestationMechanism>
+  spec.typeScript:
+  - name: HttpResponseCallback<
+    fullName: HttpResponseCallback<
+  - name: AttestationMechanism
+    fullName: AttestationMechanism
+    uid: azure-iot-provisioning-service.AttestationMechanism
+  - name: '>'
+    fullName: '>'
+- uid: Promise<ResultWithHttpResponse<azure-iot-provisioning-service.AttestationMechanism>>
+  name: AttestationMechanism>>
+  spec.typeScript:
+  - name: Promise<ResultWithHttpResponse<
+    fullName: Promise<ResultWithHttpResponse<
+  - name: AttestationMechanism
+    fullName: AttestationMechanism
+    uid: azure-iot-provisioning-service.AttestationMechanism
   - name: '>>'
     fullName: '>>'
 - uid: azure-iot-provisioning-service.BulkEnrollmentOperation
