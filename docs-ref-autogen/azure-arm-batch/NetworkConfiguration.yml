@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9f71af819e984aff15e0a57f968ec78e2dc79d8
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054741"
+items:
+- uid: azure-arm-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  fullName: NetworkConfiguration
+  children:
+  - azure-arm-batch.NetworkConfiguration.endpointConfiguration
+  - azure-arm-batch.NetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="6fb1a-101">Die Netzwerkkonfiguration für einen Pool.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-101">The network configuration for a pool.</span></span>
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkConfiguration.endpointConfiguration
+  name: endpointConfiguration
+  fullName: endpointConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6fb1a-102">Poolendpunktkonfiguration wird nur in Pools mit der VirtualMachineConfiguration-Eigenschaft unterstützt.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-102">Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.</span></span>
+  optional: true
+  syntax:
+    content: 'endpointConfiguration?: PoolEndpointConfiguration'
+    return:
+      type:
+      - azure-arm-batch.PoolEndpointConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="6fb1a-103">Das virtuelle Netzwerk muss sich in derselben Region und demselben Abonnement wie der Azure Batch-Konto.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-103">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span> <span data-ttu-id="6fb1a-104">Das angegebene Subnetz müssen genügend freien IP-Adressen für die Anzahl der Knoten im Pool verfügt.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-104">The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool.</span></span> <span data-ttu-id="6fb1a-105">Wenn das Subnetz nicht über genügend freie IP-Adressen verfügt, der Pool belegt teilweise Compute-Knoten und ein anpassungsfehler erfolgt.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-105">If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur.</span></span> <span data-ttu-id="6fb1a-106">Der Dienstprinzipal "MicrosoftAzureBatch" müssen die "Mitwirkender" Role-Based Access Control (RBAC)-Rolle für das angegebene VNet.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-106">The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet.</span></span> <span data-ttu-id="6fb1a-107">Das angegebene Subnetz muss Kommunikation von Azure Batch-Dienst, um Tasks auf den Computeknoten planen zu können zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-107">The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes.</span></span>
+
+    <span data-ttu-id="6fb1a-108">Dies kann überprüft werden, durch die überprüft, ob das angegebene VNet zugeordneten Netzwerksicherheitsgruppen (NSG) hat.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-108">This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG).</span></span> <span data-ttu-id="6fb1a-109">Wenn die Kommunikation mit den Computeknoten im angegebenen Subnetz durch eine Netzwerksicherheitsgruppe verweigert wird, wird der Batch-Dienst den Zustand der Computeknoten auf unbrauchbar festgelegt.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-109">If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable.</span></span> <span data-ttu-id="6fb1a-110">Für Pools erstellt über VirtualMachineConfiguration-Batch muss Konto PoolAllocationMode UserSubscription verfügen, um ein VNet verwenden.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-110">For pools created via virtualMachineConfiguration the Batch account must have poolAllocationMode userSubscription in order to use a VNet.</span></span> <span data-ttu-id="6fb1a-111">Falls dem angegebenen VNET Netzwerksicherheitsgruppen (NSGs) zugeordnet sind, müssen einige reservierte Systemports für die eingehende Kommunikation aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-111">If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication.</span></span> <span data-ttu-id="6fb1a-112">Aktivieren Sie für Pools, die mit einer VM-Konfiguration erstellt wurden, die Ports 29876 und 29877 sowie den Port 22 für Linux und den Port 3389 für Windows.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-112">For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows.</span></span> <span data-ttu-id="6fb1a-113">Aktivieren Sie für Pools, die mit einer Clouddienstkonfiguration erstellt wurden, die Ports 10100, 20100 und 30100.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-113">For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100.</span></span> <span data-ttu-id="6fb1a-114">Aktivieren Sie außerdem ausgehende Verbindungen mit Azure Storage an Port 443.</span><span class="sxs-lookup"><span data-stu-id="6fb1a-114">Also enable outbound connections to Azure Storage on port 443.</span></span> <span data-ttu-id="6fb1a-115">Weitere Informationen finden Sie unter: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="6fb1a-115">For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.PoolEndpointConfiguration
+  name: PoolEndpointConfiguration
+  spec.typeScript:
+  - name: PoolEndpointConfiguration
+    fullName: PoolEndpointConfiguration
+    uid: azure-arm-batch.PoolEndpointConfiguration

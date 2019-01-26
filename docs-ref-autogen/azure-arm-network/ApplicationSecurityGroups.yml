@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fc893d55ab7ee561ca20a5259dae69a4a1d57a0a
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: c1545a8aa12ca1efa929c9717e5688ece3cc2dc3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52051555"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051466"
 items:
 - uid: azure-arm-network.ApplicationSecurityGroups
   name: ApplicationSecurityGroups
@@ -18,6 +18,10 @@ items:
   - azure-arm-network.ApplicationSecurityGroups.beginDeleteMethod_2
   - azure-arm-network.ApplicationSecurityGroups.beginDeleteMethod_1
   - azure-arm-network.ApplicationSecurityGroups.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTags
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_2
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_1
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTagsWithHttpOperationResponse
   - azure-arm-network.ApplicationSecurityGroups.createOrUpdate
   - azure-arm-network.ApplicationSecurityGroups.createOrUpdate_2
   - azure-arm-network.ApplicationSecurityGroups.createOrUpdate_1
@@ -46,6 +50,10 @@ items:
   - azure-arm-network.ApplicationSecurityGroups.listNext_1
   - azure-arm-network.ApplicationSecurityGroups.listNextWithHttpOperationResponse
   - azure-arm-network.ApplicationSecurityGroups.listWithHttpOperationResponse
+  - azure-arm-network.ApplicationSecurityGroups.updateTags
+  - azure-arm-network.ApplicationSecurityGroups.updateTags_2
+  - azure-arm-network.ApplicationSecurityGroups.updateTags_1
+  - azure-arm-network.ApplicationSecurityGroups.updateTagsWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
@@ -57,7 +65,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-101">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-101">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-101">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-101">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function beginCreateOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options?: Object)'
     parameters:
@@ -65,17 +73,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-102">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-102">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-102">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-102">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-103">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-103">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-103">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-103">The name of the application security group.</span></span>
     - id: parameters
       type:
       - azure-arm-network.ApplicationSecurityGroup
       description: >
-        <span data-ttu-id="89828-104">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="89828-104">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
+        <span data-ttu-id="c709e-104">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c709e-104">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
     - id: options
       type:
       - Object
@@ -91,7 +99,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-105">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-105">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-105">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-105">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function beginCreateOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
     parameters:
@@ -125,7 +133,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-106">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-106">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-106">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-106">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function beginCreateOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, callback: ServiceCallback<ApplicationSecurityGroup>)'
     parameters:
@@ -155,7 +163,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-107">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-107">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-107">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-107">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options?: Object)'
     parameters:
@@ -163,17 +171,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-108">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-108">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-108">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-108">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-109">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-109">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-109">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-109">The name of the application security group.</span></span>
     - id: parameters
       type:
       - azure-arm-network.ApplicationSecurityGroup
       description: >
-        <span data-ttu-id="89828-110">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="89828-110">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
+        <span data-ttu-id="c709e-110">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c709e-110">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
     - id: options
       type:
       - Object
@@ -189,7 +197,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-111">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-111">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-111">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-111">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, options?: Object)'
     parameters:
@@ -197,12 +205,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-112">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-112">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-112">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-112">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-113">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-113">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-113">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-113">The name of the application security group.</span></span>
     - id: options
       type:
       - Object
@@ -218,7 +226,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-114">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-114">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-114">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-114">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -248,7 +256,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-115">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-115">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-115">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-115">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -274,7 +282,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-116">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-116">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-116">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-116">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, options?: Object)'
     parameters:
@@ -282,12 +290,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-117">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-117">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-117">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-117">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-118">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-118">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-118">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-118">The name of the application security group.</span></span>
     - id: options
       type:
       - Object
@@ -297,13 +305,145 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTags
+  name: beginUpdateTags(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-119">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-119">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-120">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-120">The name of the resource group.</span></span>
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-121">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-121">The name of the application security group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        <span data-ttu-id="c709e-122">Parameter, die zum Aktualisieren von Application Security Group-Tags angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c709e-122">Parameters supplied to update application security group tags.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_2
+  name: beginUpdateTags(string, string, TagsObject, Object, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-123">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-123">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_1
+  name: beginUpdateTags(string, string, TagsObject, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-124">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-124">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTagsWithHttpOperationResponse
+  name: beginUpdateTagsWithHttpOperationResponse(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-125">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-125">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function beginUpdateTagsWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-126">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-126">The name of the resource group.</span></span>
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-127">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-127">The name of the application security group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        <span data-ttu-id="c709e-128">Parameter, die zum Aktualisieren von Application Security Group-Tags angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c709e-128">Parameters supplied to update application security group tags.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-network.ApplicationSecurityGroup>>
+  package: azure-arm-network
 - uid: azure-arm-network.ApplicationSecurityGroups.createOrUpdate
   name: createOrUpdate(string, string, ApplicationSecurityGroup, Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-119">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-119">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-129">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-129">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options?: Object)'
     parameters:
@@ -311,17 +451,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-120">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-120">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-130">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-130">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-121">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-121">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-131">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-131">The name of the application security group.</span></span>
     - id: parameters
       type:
       - azure-arm-network.ApplicationSecurityGroup
       description: >
-        <span data-ttu-id="89828-122">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="89828-122">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
+        <span data-ttu-id="c709e-132">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c709e-132">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
     - id: options
       type:
       - Object
@@ -337,7 +477,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-123">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-123">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-133">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-133">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
     parameters:
@@ -371,7 +511,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-124">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-124">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-134">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-134">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, callback: ServiceCallback<ApplicationSecurityGroup>)'
     parameters:
@@ -401,7 +541,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-125">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-125">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="c709e-135">Erstellt oder aktualisiert eine anwendungssicherheitsgruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-135">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options?: Object)'
     parameters:
@@ -409,17 +549,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-126">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-126">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-136">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-136">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-127">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-127">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-137">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-137">The name of the application security group.</span></span>
     - id: parameters
       type:
       - azure-arm-network.ApplicationSecurityGroup
       description: >
-        <span data-ttu-id="89828-128">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="89828-128">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
+        <span data-ttu-id="c709e-138">Parameter für das Erstellen oder aktualisieren "applicationsecuritygroup" zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c709e-138">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
     - id: options
       type:
       - Object
@@ -435,7 +575,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-129">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-129">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-139">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-139">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, options?: Object)'
     parameters:
@@ -443,12 +583,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-130">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-130">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-140">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-140">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-131">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-131">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-141">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-141">The name of the application security group.</span></span>
     - id: options
       type:
       - Object
@@ -464,7 +604,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-132">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-132">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-142">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-142">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -494,7 +634,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-133">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-133">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-143">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-143">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -520,7 +660,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-134">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="89828-134">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-144">Löscht die angegebene Anwendungsgruppe Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="c709e-144">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, options?: Object)'
     parameters:
@@ -528,12 +668,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-135">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-135">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-145">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-145">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-136">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-136">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-146">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-146">The name of the application security group.</span></span>
     - id: options
       type:
       - Object
@@ -549,7 +689,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-137">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="89828-137">Gets information about the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-147">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-147">Gets information about the specified application security group.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, applicationSecurityGroupName: string, options?: Object)'
     parameters:
@@ -557,12 +697,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-138">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-138">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-148">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-148">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-139">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-139">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-149">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-149">The name of the application security group.</span></span>
     - id: options
       type:
       - Object
@@ -578,7 +718,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-140">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="89828-140">Gets information about the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-150">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-150">Gets information about the specified application security group.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, applicationSecurityGroupName: string, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
     parameters:
@@ -608,7 +748,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-141">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="89828-141">Gets information about the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-151">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-151">Gets information about the specified application security group.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, applicationSecurityGroupName: string, callback: ServiceCallback<ApplicationSecurityGroup>)'
     parameters:
@@ -634,7 +774,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-142">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="89828-142">Gets information about the specified application security group.</span></span>
+  summary: <span data-ttu-id="c709e-152">Ruft Informationen über die Sicherheitsgruppe für die angegebene Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-152">Gets information about the specified application security group.</span></span>
   syntax:
     content: 'function getWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, options?: Object)'
     parameters:
@@ -642,12 +782,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-143">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-143">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-153">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-153">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="89828-144">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="89828-144">The name of the application security group.</span></span>
+        <span data-ttu-id="c709e-154">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-154">The name of the application security group.</span></span>
     - id: options
       type:
       - Object
@@ -663,7 +803,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-145">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-145">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-155">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-155">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function list(resourceGroupName: string, options?: Object)'
     parameters:
@@ -671,7 +811,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-146">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-146">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-156">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-156">The name of the resource group.</span></span>
     - id: options
       type:
       - Object
@@ -687,7 +827,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-147">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-147">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-157">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-157">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function list(resourceGroupName: string, options: Object, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -713,7 +853,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-148">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-148">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-158">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-158">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function list(resourceGroupName: string, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -735,7 +875,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-149">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-149">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-159">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-159">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAll(options?: Object)'
     parameters:
@@ -754,7 +894,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-150">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-150">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-160">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-160">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAll(options: Object, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -776,7 +916,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-151">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-151">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-161">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-161">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAll(callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -794,7 +934,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-152">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-152">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-162">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-162">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAllNext(nextPageLink: string, options?: Object)'
     parameters:
@@ -802,7 +942,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-153">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="89828-153">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="c709e-163">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="c709e-163">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -818,7 +958,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-154">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-154">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-164">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-164">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAllNext(nextPageLink: string, options: Object, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -844,7 +984,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-155">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-155">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-165">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-165">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAllNext(nextPageLink: string, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -866,7 +1006,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-156">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-156">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-166">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-166">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAllNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
@@ -874,7 +1014,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-157">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="89828-157">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="c709e-167">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="c709e-167">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -890,7 +1030,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-158">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="89828-158">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="c709e-168">Alle Sicherheitsgruppen für die Anwendung abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c709e-168">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAllWithHttpOperationResponse(options?: Object)'
     parameters:
@@ -909,7 +1049,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-159">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-159">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-169">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-169">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
@@ -917,7 +1057,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-160">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="89828-160">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="c709e-170">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="c709e-170">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -933,7 +1073,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-161">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-161">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-171">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-171">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -959,7 +1099,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-162">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-162">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-172">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-172">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ApplicationSecurityGroupListResult>)'
     parameters:
@@ -981,7 +1121,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-163">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-163">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-173">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-173">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
@@ -989,7 +1129,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-164">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="89828-164">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="c709e-174">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="c709e-174">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1005,7 +1145,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="89828-165">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="89828-165">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="c709e-175">Ruft alle anwendungssicherheitsgruppen in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c709e-175">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function listWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
@@ -1013,7 +1153,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="89828-166">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="89828-166">The name of the resource group.</span></span>
+        <span data-ttu-id="c709e-176">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-176">The name of the resource group.</span></span>
     - id: options
       type:
       - Object
@@ -1022,6 +1162,138 @@ items:
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-network.ApplicationSecurityGroupListResult>>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTags
+  name: updateTags(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-177">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-177">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-178">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-178">The name of the resource group.</span></span>
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-179">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-179">The name of the application security group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        <span data-ttu-id="c709e-180">Parameter, die zum Aktualisieren von Application Security Group-Tags angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c709e-180">Parameters supplied to update application security group tags.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTags_2
+  name: updateTags(string, string, TagsObject, Object, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-181">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-181">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTags_1
+  name: updateTags(string, string, TagsObject, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-182">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-182">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTagsWithHttpOperationResponse
+  name: updateTagsWithHttpOperationResponse(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c709e-183">Aktualisiert eine anwendungssicherheitsgruppe Tags an.</span><span class="sxs-lookup"><span data-stu-id="c709e-183">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function updateTagsWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-184">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c709e-184">The name of the resource group.</span></span>
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c709e-185">Der Name der Sicherheitsgruppe der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="c709e-185">The name of the application security group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        <span data-ttu-id="c709e-186">Parameter, die zum Aktualisieren von Application Security Group-Tags angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c709e-186">Parameters supplied to update application security group tags.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-network.ApplicationSecurityGroup>>
   package: azure-arm-network
 references:
 - uid: azure-arm-network.ApplicationSecurityGroup
@@ -1060,6 +1332,12 @@ references:
     uid: azure-arm-network.ApplicationSecurityGroup
   - name: '>>'
     fullName: '>>'
+- uid: azure-arm-network.TagsObject
+  name: TagsObject
+  spec.typeScript:
+  - name: TagsObject
+    fullName: TagsObject
+    uid: azure-arm-network.TagsObject
 - uid: Promise<azure-arm-network.ApplicationSecurityGroupListResult>
   name: ApplicationSecurityGroupListResult>
   spec.typeScript:
