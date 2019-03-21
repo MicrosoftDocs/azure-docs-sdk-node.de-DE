@@ -10,32 +10,32 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: cognitive-services
-ms.component: speech-service
-ms.openlocfilehash: 43a6921d4ec782287cc041ecaabab4567b0fe677
-ms.sourcegitcommit: 74417c10aee8987c3e0343728efac75823c902d9
+ms.subservice: speech-service
+ms.openlocfilehash: b1375b6beb478cab2475539c03b6bac9f0ea99e0
+ms.sourcegitcommit: 34172ad11850839ddd81d02841807e07f3761425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185987"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58052579"
 ---
-# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="4f91d-103">Cognitive Services Speech SDK für JavaScript</span><span class="sxs-lookup"><span data-stu-id="4f91d-103">Cognitive Services Speech SDK for JavaScript</span></span>
+# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="e4074-103">Cognitive Services Speech SDK für JavaScript</span><span class="sxs-lookup"><span data-stu-id="e4074-103">Cognitive Services Speech SDK for JavaScript</span></span>
 
-## <a name="overview"></a><span data-ttu-id="4f91d-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="4f91d-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="e4074-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="e4074-104">Overview</span></span>
 
-<span data-ttu-id="4f91d-105">Um die Entwicklung sprachaktivierter Anwendungen zu vereinfachen, stellt Microsoft das Speech SDK für den [Speech-Dienst](https://aka.ms/csspeech) bereit.</span><span class="sxs-lookup"><span data-stu-id="4f91d-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
-<span data-ttu-id="4f91d-106">Das Speech SDK bietet konsistente native Spracherkennungs- und Sprachübersetzungs-APIs.</span><span class="sxs-lookup"><span data-stu-id="4f91d-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
+<span data-ttu-id="e4074-105">Um die Entwicklung sprachaktivierter Anwendungen zu vereinfachen, stellt Microsoft das Speech SDK für den [Speech-Dienst](https://aka.ms/csspeech) bereit.</span><span class="sxs-lookup"><span data-stu-id="e4074-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
+<span data-ttu-id="e4074-106">Das Speech SDK bietet konsistente native Spracherkennungs- und Sprachübersetzungs-APIs.</span><span class="sxs-lookup"><span data-stu-id="e4074-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="4f91d-107">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="4f91d-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="e4074-107">Installieren des npm-Moduls</span><span class="sxs-lookup"><span data-stu-id="e4074-107">Install the npm module</span></span>
 
-<span data-ttu-id="4f91d-108">Installieren des npm-Moduls des Cognitive Services Speech SDK</span><span class="sxs-lookup"><span data-stu-id="4f91d-108">Install the Cognitive Services Speech SDK npm module</span></span>
+<span data-ttu-id="e4074-108">Installieren des npm-Moduls des Cognitive Services Speech SDK</span><span class="sxs-lookup"><span data-stu-id="e4074-108">Install the Cognitive Services Speech SDK npm module</span></span>
 
 ```bash
 npm install microsoft-cognitiveservices-speech-sdk
 ```
 
-### <a name="example"></a><span data-ttu-id="4f91d-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4f91d-109">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="e4074-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e4074-109">Example</span></span> 
 
-<span data-ttu-id="4f91d-110">Die folgenden Codeausschnitte veranschaulichen, wie die einfache Spracherkennung in einer Datei funktioniert:</span><span class="sxs-lookup"><span data-stu-id="4f91d-110">The following code snippets illustrates how to do simple speech recognition from a file:</span></span>
+<span data-ttu-id="e4074-110">Die folgenden Codeausschnitte veranschaulichen, wie die einfache Spracherkennung in einer Datei funktioniert:</span><span class="sxs-lookup"><span data-stu-id="e4074-110">The following code snippets illustrates how to do simple speech recognition from a file:</span></span>
 
 ```javascript 
 // Pull in the required packages.
@@ -88,10 +88,10 @@ recognizer.recognizeOnceAsync(
   });
 ``` 
 
-<span data-ttu-id="4f91d-111">Sehen Sie sich unsere [ausführlichen Schnellstartanleitungen](/azure/cognitive-services/speech-service/quickstart-js-node) an.</span><span class="sxs-lookup"><span data-stu-id="4f91d-111">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-node).</span></span>
+<span data-ttu-id="e4074-111">Sehen Sie sich unsere [ausführlichen Schnellstartanleitungen](/azure/cognitive-services/speech-service/quickstart-js-node) an.</span><span class="sxs-lookup"><span data-stu-id="e4074-111">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-node).</span></span>
 
-## <a name="samples"></a><span data-ttu-id="4f91d-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="4f91d-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="e4074-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="e4074-112">Samples</span></span>
 
-* <span data-ttu-id="4f91d-113">[Schnellstart: Erkennen von Sprache in JavaScript in Node.js mit dem Speech Service SDK](/azure/cognitive-services/speech-service/quickstart-js-node)</span><span class="sxs-lookup"><span data-stu-id="4f91d-113">[Step-by-step quickstart for Node.js](/azure/cognitive-services/speech-service/quickstart-js-node).</span></span>
-* <span data-ttu-id="4f91d-114">[Schnellstart: Erkennen von Sprache in JavaScript in einem Browser mit dem Speech Service SDK](/azure/cognitive-services/speech-service/quickstart-js-browser)</span><span class="sxs-lookup"><span data-stu-id="4f91d-114">[Step-by-step quickstart for the browser](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
-* <span data-ttu-id="4f91d-115">Weitere Beispiele finden Sie im [Speech SDK-Beispielrepository](https://aka.ms/csspeech/samples).</span><span class="sxs-lookup"><span data-stu-id="4f91d-115">More samples can be found in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
+* <span data-ttu-id="e4074-113">[Schnellstart: Erkennen von Sprache in JavaScript in Node.js mit dem Speech Service SDK](/azure/cognitive-services/speech-service/quickstart-js-node)</span><span class="sxs-lookup"><span data-stu-id="e4074-113">[Step-by-step quickstart for Node.js](/azure/cognitive-services/speech-service/quickstart-js-node).</span></span>
+* <span data-ttu-id="e4074-114">[Schnellstart: Erkennen von Sprache in JavaScript in einem Browser mit dem Speech Service SDK](/azure/cognitive-services/speech-service/quickstart-js-browser)</span><span class="sxs-lookup"><span data-stu-id="e4074-114">[Step-by-step quickstart for the browser](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
+* <span data-ttu-id="e4074-115">Weitere Beispiele finden Sie im [Speech SDK-Beispielrepository](https://aka.ms/csspeech/samples).</span><span class="sxs-lookup"><span data-stu-id="e4074-115">More samples can be found in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
