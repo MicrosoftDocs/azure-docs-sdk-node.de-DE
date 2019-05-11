@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse'
+    name: EntireDetectResponse
+    fullName: EntireDetectResponse
+    children:
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die EntireDetectResponse darstellt.'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+    name: expectedValues
+    fullName: expectedValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ExpectedValues enthalten Erwarteter Wert für jede Eingabe an. Der Index des Arrays ist konsistent mit der Eingabe-Reihe.
+    syntax:
+      content: 'expectedValues: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+    name: isAnomaly
+    fullName: isAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'IsAnomaly enthält zur anomalieerkennung von Eigenschaften für jede Eingabe an. "True" bedeutet, dass eine Anomalie entweder negativ oder positiv erkannt wurde. Der Index des Arrays ist konsistent mit der Eingabe-Reihe.'
+    syntax:
+      content: 'isAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+    name: isNegativeAnomaly
+    fullName: isNegativeAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'IsNegativeAnomaly enthält zur anomalieerkennung in negativen Richtung für jede Eingabe an. "True" bedeutet, dass eine negative Anomalie erkannt wurde. Eine negative Anomalie bedeutet, dass der Punkt wird als eine Anomalie erkannt und der echte Wert ist kleiner als erwartet ausfällt. Der Index des Arrays ist konsistent mit der Eingabe-Reihe.'
+    syntax:
+      content: 'isNegativeAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+    name: isPositiveAnomaly
+    fullName: isPositiveAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'IsPositiveAnomaly enthalten Anomalien Status in positiver Richtung für jede Eingabe an. "True" bedeutet, dass eine positive Anomalie erkannt wurde. Eine positive Anomalie bedeutet, dass der Punkt wird als eine Anomalie erkannt und der wahre Wert ist größer als erwartet ausfällt. Der Index des Arrays ist konsistent mit der Eingabe-Reihe.'
+    syntax:
+      content: 'isPositiveAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+    name: lowerMargins
+    fullName: lowerMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'LowerMargins enthalten unteren Rand jeder Eingabe Punkt. LowerMargin wird zum Berechnen der LowerBoundary, das ExpectedValue - (100 - MarginScale) entspricht * LowerMargin. Punkte zwischen der Grenze können wie normale, in die Clientseite markiert werden. Der Index des Arrays ist konsistent mit der Eingabe-Reihe.'
+    syntax:
+      content: 'lowerMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Häufigkeit, die aus der Reihe NULL bedeutet, die keine wiederkehrende Muster gefunden wurde, extrahiert werden.'
+    syntax:
+      content: 'period: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    name: upperMargins
+    fullName: upperMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'UpperMargins enthalten oberen Rand jedes Eingabepunkt. UpperMargin wird zum Berechnen der UpperBoundary, das ExpectedValue + (100 - MarginScale) gleich * UpperMargin. Abweichungen in der Antwort können nach UpperBoundary und LowerBoundary gefiltert werden. Durch Anpassen der MarginScale-Wert, können geringer Anomalien in clientseitigen gefiltert werden. Der Index des Arrays ist konsistent mit der Eingabe-Reihe.'
+    syntax:
+      content: 'upperMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'

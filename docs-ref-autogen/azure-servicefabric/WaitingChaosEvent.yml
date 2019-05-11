@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.WaitingChaosEvent
+    name: WaitingChaosEvent
+    fullName: WaitingChaosEvent
+    children:
+      - azure-servicefabric.WaitingChaosEvent.kind
+      - azure-servicefabric.WaitingChaosEvent.reason
+      - azure-servicefabric.WaitingChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt ein Chaos-Ereignis, das generiert wird, wenn Chaos darauf wartet, dass der Cluster auf die Bereitschaft für Fehler, z. B. Chaos wird für das laufende Upgrade abgeschlossen warten.'
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beschreibt, warum die WaitingChaosEvent generiert wurde, z. B. aufgrund eines clusterupgrades.'
+    optional: true
+    syntax:
+      content: 'reason?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der UTC-Zeitstempel, dieses Chaos-Ereignis generiert wurde.'
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent

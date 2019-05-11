@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+      - azure-servicefabric.ProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: Beschreibt den Vorgang zum Registrieren oder Bereitstellen eines Anwendungstyps mithilfe eines Anwendungspakets in den Service Fabric-imagespeicher hochgeladen.
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Art der Aktion, die ausgeführt werden, für das Bereinigen des Anwendungspakets nach dem erfolgreichen bereitstellen muss. Mögliche Werte sind: ''Invalid'', ''Default'', ''Automatic'', ''Manual'''
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der relative Pfad für das Anwendungspaket im Imagespeicher, der während des vorherigen Uploadvorgangs angegeben wurde.'
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob die Bereitstellung asynchron erfolgen soll. Bei Festlegung auf „true“ wird der Bereitstellungsvorgang beendet, wenn die Anforderung vom System akzeptiert wurde. Der Bereitstellungsvorgang wird dann ohne Zeitlimit fortgesetzt. Der Standardwert ist „false“. Bei großen Anwendungspaketen wird empfohlen, den Wert auf „true“ festzulegen.'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase

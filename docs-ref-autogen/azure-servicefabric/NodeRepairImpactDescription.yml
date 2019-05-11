@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.NodeRepairImpactDescription
+    name: NodeRepairImpactDescription
+    fullName: NodeRepairImpactDescription
+    children:
+      - azure-servicefabric.NodeRepairImpactDescription.kind
+      - azure-servicefabric.NodeRepairImpactDescription.nodeImpactList
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Beschreibt die erwartete Auswirkung einer Reparatur auf eine Gruppe von Knoten.
+      Dieser Typ unterstützt die Service Fabric-Plattform; Es ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden.
+    extends:
+      name: azure-servicefabric.RepairImpactDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeRepairImpactDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeRepairImpactDescription.nodeImpactList
+    name: nodeImpactList
+    fullName: nodeImpactList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste der Knoten, die von einer Reparaturaktion und ihre jeweiligen erwarteten Auswirkungen betroffen sind.'
+    optional: true
+    syntax:
+      content: 'nodeImpactList?: NodeImpact[]'
+      return:
+        type:
+          - 'azure-servicefabric.NodeImpact[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.RepairImpactDescriptionBase
+    name: RepairImpactDescriptionBase
+    spec.typeScript:
+      - name: RepairImpactDescriptionBase
+        fullName: RepairImpactDescriptionBase
+        uid: azure-servicefabric.RepairImpactDescriptionBase
+  - uid: 'azure-servicefabric.NodeImpact[]'
+    name: 'NodeImpact[]'
+    spec.typeScript:
+      - name: NodeImpact
+        fullName: NodeImpact
+        uid: azure-servicefabric.NodeImpact
+      - name: '[]'
+        fullName: '[]'

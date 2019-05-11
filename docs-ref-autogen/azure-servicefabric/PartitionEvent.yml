@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionEvent
+    name: PartitionEvent
+    fullName: PartitionEvent
+    children:
+      - azure-servicefabric.PartitionEvent.category
+      - azure-servicefabric.PartitionEvent.eventInstanceId
+      - azure-servicefabric.PartitionEvent.hasCorrelatedEvents
+      - azure-servicefabric.PartitionEvent.kind
+      - azure-servicefabric.PartitionEvent.partitionId
+      - azure-servicefabric.PartitionEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: Stellt die Basis für alle Ereignisse der Partition dar.
+    extends:
+      name: azure-servicefabric.FabricEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Kategorie des Ereignisses.
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Bezeichner für die FabricEvent-Instanz.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Zeigt, dass verwandte Ereignisse, die verfügbaren vorhanden ist.'
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionEvent.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine interne ID, die von Service Fabric zur eindeutigen Identifizierung eine Partition verwendet wird. Dies ist eine zufällig generierte GUID, wenn der Dienst erstellt wurde. Die Partitions-ID ist eindeutig und wird nicht für die Lebensdauer des Diensts geändert. Wenn der gleiche Dienst gelöscht wurde und neu die IDs der zugehörigen Partitionen erstellt würde unterschiedlich sein.'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Das Time-Ereignis protokolliert wurde.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.FabricEvent
+    name: FabricEvent
+    spec.typeScript:
+      - name: FabricEvent
+        fullName: FabricEvent
+        uid: azure-servicefabric.FabricEvent

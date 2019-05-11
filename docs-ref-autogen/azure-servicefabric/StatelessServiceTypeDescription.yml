@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceTypeDescription
+    name: StatelessServiceTypeDescription
+    fullName: StatelessServiceTypeDescription
+    children:
+      - azure-servicefabric.StatelessServiceTypeDescription.extensions
+      - azure-servicefabric.StatelessServiceTypeDescription.isStateful
+      - azure-servicefabric.StatelessServiceTypeDescription.kind
+      - azure-servicefabric.StatelessServiceTypeDescription.loadMetrics
+      - azure-servicefabric.StatelessServiceTypeDescription.placementConstraints
+      - azure-servicefabric.StatelessServiceTypeDescription.servicePlacementPolicies
+      - azure-servicefabric.StatelessServiceTypeDescription.serviceTypeName
+      - azure-servicefabric.StatelessServiceTypeDescription.useImplicitHost
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt den Typ eines zustandslosen Diensts definiert, die im Dienstmanifest eines Typs bereitgestellten Anwendung.'
+    extends:
+      name: azure-servicefabric.ServiceTypeDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.extensions
+    name: extensions
+    fullName: extensions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste der Erweiterungen des Service-Typs.
+    optional: true
+    syntax:
+      content: 'extensions?: ServiceTypeExtensionDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceTypeExtensionDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.isStateful
+    name: isStateful
+    fullName: isStateful
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt an, ob der Diensttyp einen zustandsbehafteten Diensttyp oder Typ eines zustandslosen Diensts ist.
+      Diese Eigenschaft ist true, wenn der Diensttyp den Typ eines zustandsbehafteten Diensts, "false" andernfalls ist.
+    optional: true
+    syntax:
+      content: 'isStateful?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.loadMetrics
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die dienstauslastungsmetriken als Array von Objekten des ServiceLoadMetricDescription erhält.
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.placementConstraints
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die platzierungseinschränkung verwendet werden, wenn dieser Dienst in einem Service Fabric-Cluster zu instanziieren.'
+    optional: true
+    syntax:
+      content: 'placementConstraints?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.servicePlacementPolicies
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste der Platzierung Richtlinie von dienstbeschreibungen.
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Diensttyps im Dienstmanifest angegeben.
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceTypeDescription.useImplicitHost
+    name: useImplicitHost
+    fullName: useImplicitHost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein Flag, das angibt, wenn dieser Typ ist nicht implementiert und von einem Benutzer-Service-Prozess gehostet ist jedoch implizit von einem System erstellt Prozess gehostet. Dieser Wert ist für Dienste, die die ausführbare gastdienste, andernfalls "false" mit "true".'
+    optional: true
+    syntax:
+      content: 'useImplicitHost?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceTypeDescription
+    name: ServiceTypeDescription
+    spec.typeScript:
+      - name: ServiceTypeDescription
+        fullName: ServiceTypeDescription
+        uid: azure-servicefabric.ServiceTypeDescription
+  - uid: 'azure-servicefabric.ServiceTypeExtensionDescription[]'
+    name: 'ServiceTypeExtensionDescription[]'
+    spec.typeScript:
+      - name: ServiceTypeExtensionDescription
+        fullName: ServiceTypeExtensionDescription
+        uid: azure-servicefabric.ServiceTypeExtensionDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: azure-servicefabric.ServiceLoadMetricDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    name: 'ServicePlacementPolicyDescription[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription
+      - name: '[]'
+        fullName: '[]'

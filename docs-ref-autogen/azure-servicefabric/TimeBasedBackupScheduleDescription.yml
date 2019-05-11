@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription
+    name: TimeBasedBackupScheduleDescription
+    fullName: TimeBasedBackupScheduleDescription
+    children:
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Beschreibt den Sicherungszeitplan basierend.
+    extends:
+      name: azure-servicefabric.BackupScheduleDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+    name: runDays
+    fullName: runDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Liste der Tage einer Woche, an denen die regelmäßige Sicherung ausgelöst werden soll. Dies gilt nur, wenn der Typ der Sicherungszeitplan Häufigkeit ist wöchentlich.'
+    optional: true
+    syntax:
+      content: 'runDays?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+    name: runTimes
+    fullName: runTimes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Stellt die Liste der genauen Zeit während des Tages im ISO8601-Format. Wie "19: 00:00" täglich "7 Uhr" darstellt. Datum, die zusammen mit der Zeit angegeben, wird ignoriert.'
+    syntax:
+      content: 'runTimes: Date[]'
+      return:
+        type:
+          - 'Date[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+    name: scheduleFrequencyType
+    fullName: scheduleFrequencyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beschreibt die Häufigkeit, mit der Ausführen der zeitbasierte Sicherungszeitplan. Mögliche Werte sind: ''Invalid'', ''Daily'', ''Weekly'''
+    syntax:
+      content: 'scheduleFrequencyType: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleKind
+    name: scheduleKind
+    fullName: scheduleKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'scheduleKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupScheduleDescription
+    name: BackupScheduleDescription
+    spec.typeScript:
+      - name: BackupScheduleDescription
+        fullName: BackupScheduleDescription
+        uid: azure-servicefabric.BackupScheduleDescription

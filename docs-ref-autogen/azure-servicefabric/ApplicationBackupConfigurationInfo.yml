@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo
+    name: ApplicationBackupConfigurationInfo
+    fullName: ApplicationBackupConfigurationInfo
+    children:
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.applicationName
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.kind
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.policyInheritedFrom
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.policyName
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.suspensionInfo
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Sicherungskonfiguration-Informationen für eine bestimmte Service Fabric-Anwendung, welche Richtlinie angeben angewendet wird und Beschreibung, anhalten, sofern vorhanden.'
+    extends:
+      name: azure-servicefabric.BackupConfigurationInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Name der Anwendung, einschließlich der "Fabric:" URI-Schema „fabric:“.'
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.policyInheritedFrom
+    name: policyInheritedFrom
+    fullName: policyInheritedFrom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt den Bereich, in dem die Richtlinie angewendet wird. Mögliche Werte sind: ''Invalid'', ''Partition'', ''Service'', ''Application'''
+    optional: true
+    syntax:
+      content: 'policyInheritedFrom?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.policyName
+    name: policyName
+    fullName: policyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name der Sicherungsrichtlinie für diesen Service Fabric-Anwendung oder einem Dienst oder einer Partition handelt.
+    optional: true
+    syntax:
+      content: 'policyName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.suspensionInfo
+    name: suspensionInfo
+    fullName: suspensionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Beschreibt die Details der Sicherung anhalten.
+    optional: true
+    syntax:
+      content: 'suspensionInfo?: BackupSuspensionInfo'
+      return:
+        type:
+          - azure-servicefabric.BackupSuspensionInfo
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupConfigurationInfo
+    name: BackupConfigurationInfo
+    spec.typeScript:
+      - name: BackupConfigurationInfo
+        fullName: BackupConfigurationInfo
+        uid: azure-servicefabric.BackupConfigurationInfo
+  - uid: azure-servicefabric.BackupSuspensionInfo
+    name: BackupSuspensionInfo
+    spec.typeScript:
+      - name: BackupSuspensionInfo
+        fullName: BackupSuspensionInfo
+        uid: azure-servicefabric.BackupSuspensionInfo

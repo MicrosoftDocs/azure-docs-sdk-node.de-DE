@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-websearch.Computation
+    name: Computation
+    fullName: Computation
+    children:
+      - azure-cognitiveservices-websearch.Computation.expression
+      - azure-cognitiveservices-websearch.Computation.followUpQueries
+      - azure-cognitiveservices-websearch.Computation.id
+      - azure-cognitiveservices-websearch.Computation.value
+      - azure-cognitiveservices-websearch.Computation.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: Definiert einen Ausdruck und die dazugehörige Antwort
+    extends:
+      name: azure-cognitiveservices-websearch.Answer
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.expression
+    name: expression
+    fullName: expression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Ausdruck Berechnungen oder Konvertierung. Wenn die Abfrage eine Anforderung zum Konvertieren von Maßeinheiten (z. B. Meter bis Fuß) enthält, wird dieses Feld enthält die von Einheiten und Wert enthält die Einheiten. Wenn die Abfrage einen mathematischen Ausdruck wie z. B. 2 + 2 enthält, wird dieses Feld enthält den Ausdruck und Wert enthält die Antwort. Beachten Sie, dass mathematische Ausdrücke normalisiert werden können. Wenn die Abfrage sqrt(4^2+8^2) war, kann der normalisierte Ausdruck z. B. sqrt((4^2)+(8^2)) sein. Wenn die Abfrage des Benutzers ist eine Frage, Mathematik und der TextDecorations-Abfrageparameter wird festgelegt auf "true", wird den Ausdruck kann Zeichenfolge formatieren Marker enthalten. Wenn die Abfrage des Benutzers log(2) ist, enthält der normalisierte Ausdruck beispielsweise die tiefstellungsmarkierungen. Weitere Informationen finden Sie in der Hervorhebung erreicht.'
+    syntax:
+      content: 'expression: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.followUpQueries
+    name: followUpQueries
+    fullName: followUpQueries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'followUpQueries?: Query[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-websearch.Query[]'
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ein Zeichenfolgenbezeichner.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Ausdruck in der Antwort.
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die URL zum Bing Suche Ergebnis für dieses Element.
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+references:
+  - uid: azure-cognitiveservices-websearch.Answer
+    name: Answer
+    spec.typeScript:
+      - name: Answer
+        fullName: Answer
+        uid: azure-cognitiveservices-websearch.Answer
+  - uid: 'azure-cognitiveservices-websearch.Query[]'
+    name: 'Query[]'
+    spec.typeScript:
+      - name: Query
+        fullName: Query
+        uid: azure-cognitiveservices-websearch.Query
+      - name: '[]'
+        fullName: '[]'

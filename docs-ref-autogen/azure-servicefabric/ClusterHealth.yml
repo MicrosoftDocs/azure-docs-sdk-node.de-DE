@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ClusterHealth
+    name: ClusterHealth
+    fullName: ClusterHealth
+    children:
+      - azure-servicefabric.ClusterHealth.aggregatedHealthState
+      - azure-servicefabric.ClusterHealth.applicationHealthStates
+      - azure-servicefabric.ClusterHealth.healthEvents
+      - azure-servicefabric.ClusterHealth.healthStatistics
+      - azure-servicefabric.ClusterHealth.nodeHealthStates
+      - azure-servicefabric.ClusterHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Stellt die Integrität des Clusters dar.
+      Enthält den Integritätsstatus des Clusters aggregiert, Anwendung und der Knoten die clusterintegrität-Mitgliedsstaaten sowie aus den Health-Ereignisse und die fehlerhaften auswertungen.
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die "healthstate" den aggregierten Integritätsstatus der Entität vom Integritätsdienst berechnet darstellt.
+      Die integritätsevaluierung der Entität gibt alle Ereignisse, die für die Entität und ihren untergeordneten Elementen (sofern vorhanden) gemeldet.
+      Die Aggregation erfolgt durch die gewünschte Richtlinie anwenden. Mögliche Werte sind: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.applicationHealthStates
+    name: applicationHealthStates
+    fullName: applicationHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cluster anwendungsintegritätszustände als gefunden im integritätsspeicher.
+    optional: true
+    syntax:
+      content: 'applicationHealthStates?: ApplicationHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.ApplicationHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Liste der für die Entität gemeldeten integritätsereignisse.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Zeigt die integritätsstatistiken gelten für alle untergeordneten Elemente Typen der abgefragten Entität.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.nodeHealthStates
+    name: nodeHealthStates
+    fullName: nodeHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cluster knotenintegritätszustände als gefunden im integritätsspeicher.
+    optional: true
+    syntax:
+      content: 'nodeHealthStates?: NodeHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.NodeHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die fehlerauswertungen, die zeigen, warum der aktuellen aggregierte Integritätszustand vom Integritätsdienst zurückgegeben wurde.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.ApplicationHealthState[]'
+    name: 'ApplicationHealthState[]'
+    spec.typeScript:
+      - name: ApplicationHealthState
+        fullName: ApplicationHealthState
+        uid: azure-servicefabric.ApplicationHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.NodeHealthState[]'
+    name: 'NodeHealthState[]'
+    spec.typeScript:
+      - name: NodeHealthState
+        fullName: NodeHealthState
+        uid: azure-servicefabric.NodeHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

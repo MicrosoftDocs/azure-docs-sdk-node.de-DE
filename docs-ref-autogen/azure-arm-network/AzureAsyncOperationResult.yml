@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.AzureAsyncOperationResult
+    name: AzureAsyncOperationResult
+    fullName: AzureAsyncOperationResult
+    children:
+      - azure-arm-network.AzureAsyncOperationResult.error
+      - azure-arm-network.AzureAsyncOperationResult.status
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Der Antworttext enthält den Status des angegebenen asynchronen Vorgangs, der angibt, ob es erfolgreich war, wird ausgeführt oder ein Fehler aufgetreten. Beachten Sie, dass dieser Status vom HTTP-Statuscode zurückgegeben, für den Get Operation Status Vorgang selbst getrennt ist. Wenn der asynchrone Vorgang erfolgreich war, enthält der Antworttext den HTTP-Statuscode für die erfolgreiche Anforderung.
+      Wenn der asynchrone Vorgang fehlgeschlagen ist, enthält der Antworttext den HTTP-Statuscode für die fehlerhafte Anforderungs- und Informationen zum Fehler.
+    package: azure-arm-network
+  - uid: azure-arm-network.AzureAsyncOperationResult.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Details zum Fehler ist aufgetreten, während des angegebenen asynchronen Vorgang ab.'
+    optional: true
+    syntax:
+      content: 'error?: ErrorModel'
+      return:
+        type:
+          - azure-arm-network.ErrorModel
+    package: azure-arm-network
+  - uid: azure-arm-network.AzureAsyncOperationResult.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Status der asynchronen Vorgang in Azure. Dabei sind folgende Werte möglich: "InProgress", "Erfolgreich" und "Failed". Mögliche Werte sind: ''InProgress'', ''Succeeded'', ''Failed'''
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.ErrorModel
+    name: ErrorModel
+    spec.typeScript:
+      - name: ErrorModel
+        fullName: ErrorModel
+        uid: azure-arm-network.ErrorModel

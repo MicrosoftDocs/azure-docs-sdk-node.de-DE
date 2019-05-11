@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StoppedChaosEvent
+    name: StoppedChaosEvent
+    fullName: StoppedChaosEvent
+    children:
+      - azure-servicefabric.StoppedChaosEvent.kind
+      - azure-servicefabric.StoppedChaosEvent.reason
+      - azure-servicefabric.StoppedChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt ein Chaos-Ereignis, das generiert wird, wenn Chaos wird beendet, da der Benutzer, beendet ausgestellt oder war die Zeit zum Ausführen.'
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StoppedChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StoppedChaosEvent.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beschreibt, warum Chaos beendet wurde. Chaos kann aufgrund der StopChaos-API-Aufruf beenden aus, oder der TimeToRun in ChaosParameters bereitgestellt ist.'
+    optional: true
+    syntax:
+      content: 'reason?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StoppedChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der UTC-Zeitstempel, dieses Chaos-Ereignis generiert wurde.'
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent

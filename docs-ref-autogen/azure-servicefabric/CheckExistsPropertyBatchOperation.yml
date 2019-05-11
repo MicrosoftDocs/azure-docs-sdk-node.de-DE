@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.CheckExistsPropertyBatchOperation
+    name: CheckExistsPropertyBatchOperation
+    fullName: CheckExistsPropertyBatchOperation
+    children:
+      - azure-servicefabric.CheckExistsPropertyBatchOperation.exists
+      - azure-servicefabric.CheckExistsPropertyBatchOperation.kind
+      - azure-servicefabric.CheckExistsPropertyBatchOperation.propertyName
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Stellt eine PropertyBatchOperation, in dem das boolesche Vorhandensein einer Eigenschaft mit dem Exists-Argument verglichen.
+      Der PropertyBatchOperation Vorgang schlägt fehl, wenn die Eigenschaft vorhanden ist nicht gleich dem Argument vorhanden ist.
+      Die CheckExistsPropertyBatchOperation wird in der Regel als eine Vorbedingung für die Write-Vorgänge im Batch verwendet.
+      Beachten Sie, dass eine PropertyBatchOperation in einem PropertyBatch schlägt fehl, der gesamte Batch schlägt fehl, und kann nicht transaktionale Weise übermittelt werden.
+    extends:
+      name: azure-servicefabric.PropertyBatchOperation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckExistsPropertyBatchOperation.exists
+    name: exists
+    fullName: exists
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Unabhängig davon, ob die Eigenschaft für den Vorgang übergeben vorhanden sein sollte.'
+    syntax:
+      content: 'exists: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckExistsPropertyBatchOperation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckExistsPropertyBatchOperation.propertyName
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name der Service Fabric-Eigenschaft.
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PropertyBatchOperation
+    name: PropertyBatchOperation
+    spec.typeScript:
+      - name: PropertyBatchOperation
+        fullName: PropertyBatchOperation
+        uid: azure-servicefabric.PropertyBatchOperation
