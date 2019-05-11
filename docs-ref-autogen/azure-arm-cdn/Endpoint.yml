@@ -1,0 +1,360 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-cdn.Endpoint
+    name: Endpoint
+    fullName: Endpoint
+    children:
+      - azure-arm-cdn.Endpoint.contentTypesToCompress
+      - azure-arm-cdn.Endpoint.deliveryPolicy
+      - azure-arm-cdn.Endpoint.geoFilters
+      - azure-arm-cdn.Endpoint.hostName
+      - azure-arm-cdn.Endpoint.id
+      - azure-arm-cdn.Endpoint.isCompressionEnabled
+      - azure-arm-cdn.Endpoint.isHttpAllowed
+      - azure-arm-cdn.Endpoint.isHttpsAllowed
+      - azure-arm-cdn.Endpoint.location
+      - azure-arm-cdn.Endpoint.name
+      - azure-arm-cdn.Endpoint.optimizationType
+      - azure-arm-cdn.Endpoint.originHostHeader
+      - azure-arm-cdn.Endpoint.originPath
+      - azure-arm-cdn.Endpoint.origins
+      - azure-arm-cdn.Endpoint.probePath
+      - azure-arm-cdn.Endpoint.provisioningState
+      - azure-arm-cdn.Endpoint.queryStringCachingBehavior
+      - azure-arm-cdn.Endpoint.resourceState
+      - azure-arm-cdn.Endpoint.tags
+      - azure-arm-cdn.Endpoint.type
+    langs:
+      - typeScript
+    type: interface
+    summary: 'CDN-Endpunkt ist die Entität innerhalb eines CDN-Profils mit Konfigurationsinformationen wie z. B. Ursprung, Protokoll, Zwischenspeicherung und Bereitstellung inhaltsverhalten. Der CDN-Endpunkt verwendet das URL-Format <endpointname>. azureedge.net.'
+    extends:
+      name: azure-arm-cdn.TrackedResource
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.contentTypesToCompress
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste der Inhaltstypen, die für die Komprimierung angewendet wird. Der Wert muss ein gültiger MIME-Typ sein.'
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.deliveryPolicy
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Richtlinie, die angibt, die bereitstellungsregeln für einen Endpunkt verwendet werden.'
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - azure-arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.geoFilters
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Liste der Regeln, die den Zugriff des Benutzers georeplikation in einem CDN-Endpunkt zu definieren. Jeder geofilter definiert eine Zugriffsregel zu einem angegebenen Pfad oder Inhalt, z. B. Block APAC für Pfad/Pictures /'
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - 'azure-arm-cdn.GeoFilter[]'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.hostName
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Hostname des Endpunkts als {EndpointName} strukturiert. {DNSZone}, z. B. contoso.azureedge.net'
+    optional: true
+    syntax:
+      content: 'hostName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ressourcen-ID
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.isCompressionEnabled
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob Komprimierung Inhalte im CDN aktiviert ist. Der Standardwert ist „false“. Wenn die Komprimierung aktiviert ist, wird Inhalt als bedient werden komprimiert, wenn der Benutzer für eine komprimierte Version anfordert. Inhalt wird nicht für CDN komprimiert werden, wenn der angeforderte Inhalt kleiner als 1 Byte oder größer als 1 MB ist.'
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.isHttpAllowed
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob HTTP-Datenverkehr für den Endpunkt zulässig ist. Der Standardwert lautet „true“. Es muss mindestens ein Protokoll (HTTP oder HTTPS) zulässig sein.'
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.isHttpsAllowed
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob für den Endpunkt HTTPS-Datenverkehr zulässig ist. Der Standardwert lautet „true“. Es muss mindestens ein Protokoll (HTTP oder HTTPS) zulässig sein.'
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ressourcenspeicherort
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name der Ressource.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.optimizationType
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, welches Szenario der Kunde will, dieses CDN-Endpunkt für optimieren, z. B. herunterladen, die Media-Dienste. Mit diesen Informationen kann CDN Szenario-gesteuerte Optimierung anwenden. Mögliche Werte sind: ''GeneralWebDelivery'', ''GeneralMediaStreaming'', ''VideoOnDemandMediaStreaming'', ''LargeFileDownload'', ''DynamicSiteAcceleration'''
+    optional: true
+    syntax:
+      content: 'optimizationType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.originHostHeader
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Hostheaderwert, der an den Ursprung mit jeder Anforderung gesendet wird. Wenn Sie dieses Feld leer lassen, bestimmt der Hostname in der Anforderung dieser Wert. Azure CDN-Ursprünge, z. B. Web-Apps, Blob Storage und Cloud-Dienste müssen dieser Hostheaderwert standardmäßig entsprechend der Hostname des Ursprungs.'
+    optional: true
+    syntax:
+      content: 'originHostHeader?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.originPath
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Einen Verzeichnispfad, der Ursprung, mit dem CDN Inhalte aus, z. B. contoso.cloudapp.net/originpath abgerufen werden soll.'
+    optional: true
+    syntax:
+      content: 'originPath?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.origins
+    name: origins
+    fullName: origins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Quelle des Inhalts über CDN übermittelt werden.
+    syntax:
+      content: 'origins: DeepCreatedOrigin[]'
+      return:
+        type:
+          - 'azure-arm-cdn.DeepCreatedOrigin[]'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.probePath
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Pfad zu einer Datei, die auf den Ursprung, was dabei hilft, beschleunigt die Lieferung von den dynamischen Inhalt, und berechnen die optimalen Routen für das CDN, gehostet. Dies ist relativ zum Ursprungspfad.'
+    optional: true
+    syntax:
+      content: 'probePath?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Bereitstellungsstatus des Endpunkts.
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.queryStringCachingBehavior
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Definiert, wie CDN Anforderungen zwischenspeichert, die die Abfragezeichenfolgen enthalten. Sie können Abfragezeichenfolgen ignorieren, beim Zwischenspeichern, umgehen, Zwischenspeicherung, um zu verhindern, dass Anforderungen, die die Abfragezeichenfolgen zwischengespeichert werden, enthalten oder jede Anforderung eine eindeutige URL Zwischenspeichern. Mögliche Werte sind: ''IgnoreQueryString'', ''BypassCaching'', ''UseQueryString'', ''NotSet'''
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.resourceState
+    name: resourceState
+    fullName: resourceState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Status der buildressource des Endpunkts. Mögliche Werte sind: ''Creating'', ''Deleting'', ''Running'', ''Starting'', ''Stopped'', ''Stopping'''
+    optional: true
+    syntax:
+      content: 'resourceState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ressourcentags.
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Ressourcentyp.
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+references:
+  - uid: azure-arm-cdn.TrackedResource
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: azure-arm-cdn.TrackedResource
+  - uid: azure-arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: azure-arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy
+  - uid: 'azure-arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: azure-arm-cdn.GeoFilter
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-cdn.DeepCreatedOrigin[]'
+    name: 'DeepCreatedOrigin[]'
+    spec.typeScript:
+      - name: DeepCreatedOrigin
+        fullName: DeepCreatedOrigin
+        uid: azure-arm-cdn.DeepCreatedOrigin
+      - name: '[]'
+        fullName: '[]'
