@@ -1,0 +1,184 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoOverlay
+    name: VideoOverlay
+    fullName: VideoOverlay
+    children:
+      - azure-arm-mediaservices.VideoOverlay.audioGainLevel
+      - azure-arm-mediaservices.VideoOverlay.cropRectangle
+      - azure-arm-mediaservices.VideoOverlay.end
+      - azure-arm-mediaservices.VideoOverlay.fadeInDuration
+      - azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+      - azure-arm-mediaservices.VideoOverlay.inputLabel
+      - azure-arm-mediaservices.VideoOverlay.odatatype
+      - azure-arm-mediaservices.VideoOverlay.opacity
+      - azure-arm-mediaservices.VideoOverlay.position
+      - azure-arm-mediaservices.VideoOverlay.start
+    langs:
+      - typeScript
+    type: interface
+    summary: Beschreibt die Eigenschaften einer videoüberlagerung.
+    extends:
+      name: azure-arm-mediaservices.Overlay
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.audioGainLevel
+    name: audioGainLevel
+    fullName: audioGainLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die verstärkungsstufe Audiolänge in das Overlay. Der Wert muss im Bereich [0, 1.0] sein. Der Standardwert ist 1,0.'
+    optional: true
+    syntax:
+      content: 'audioGainLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.cropRectangle
+    name: cropRectangle
+    fullName: cropRectangle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine optionale rechteckiges Standardfenster verwendet, um das Overlaybild oder Video zuschneiden.'
+    optional: true
+    syntax:
+      content: 'cropRectangle?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.end
+    name: end
+    fullName: end
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Position in das eingabevideo bei dem die Überlagerung endet. Der Wert sollte im Zeitformat ISO 8601 sein. Z. B. PT30S das Overlay auf 30 Sekunden, in das eingabevideo zu beenden. Wenn die Überlagerung wird bis zum Ende des eingabevideos angewendet werden, wenn InputLoop "true" ist nicht angegeben ist. Andere, wenn InputLoop Overlay gültig bleibt, solange die Dauer der Medien Overlay "false" ist.'
+    optional: true
+    syntax:
+      content: 'end?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeInDuration
+    name: fadeInDuration
+    fullName: fadeInDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Dauer, in der das Overlay auf das eingabevideo eingeblendet. Der Wert sollte im Zeitformat ISO 8601 sein. Wenn nicht angegeben, das Standardverhalten ist, um keine ausblenden in (identisch mit PT0S) zu erhalten.'
+    optional: true
+    syntax:
+      content: 'fadeInDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+    name: fadeOutDuration
+    fullName: fadeOutDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Dauer, in der das Overlay aus das eingabevideo ausgeblendet wird. Der Wert sollte im Zeitformat ISO 8601 sein. Wenn nicht angegeben werden, dass das Standardverhalten keine Verblassen (identisch mit PT0S) haben.'
+    optional: true
+    syntax:
+      content: 'fadeOutDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.inputLabel
+    name: inputLabel
+    fullName: inputLabel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Bezeichnung des der Auftragseingabe die als Overlay verwendet werden soll. Die Eingabe muss genau eine Datei angeben. Sie können eine Bilddatei im JPG- oder PNG-Format oder eine Audiodatei (z. B. eine WAV, MP3, WMA oder M4A-Datei) oder eine Videodatei angeben. Finden Sie unter https://aka.ms/mesformats für die vollständige Liste der unterstützten Audio und video-Dateiformate.'
+    syntax:
+      content: 'inputLabel: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Deckkraft der Überlagerung. Dies ist ein Wert im Bereich [0 - 1.0]. Standardmäßig ist dies bedeutet, dass das Overlay nicht transparent ist 1.0.'
+    optional: true
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Position in der Eingabe-video, in das Overlay angewendet wird.'
+    optional: true
+    syntax:
+      content: 'position?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Anfangsposition, mit Verweis auf die eingangsvideodaten an der die Überlagerung wird gestartet. Der Wert muss im ISO 8601-Format sein. Z. B. PT05S das Overlay bei unter 5 Sekunden lang auf das eingabevideo zu beginnen. Wenn nicht angegeben wird, startet die Überlagerung am Anfang der eingangsvideodaten.'
+    optional: true
+    syntax:
+      content: 'start?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Overlay
+    name: Overlay
+    spec.typeScript:
+      - name: Overlay
+        fullName: Overlay
+        uid: azure-arm-mediaservices.Overlay
+  - uid: azure-arm-mediaservices.Rectangle
+    name: Rectangle
+    spec.typeScript:
+      - name: Rectangle
+        fullName: Rectangle
+        uid: azure-arm-mediaservices.Rectangle
