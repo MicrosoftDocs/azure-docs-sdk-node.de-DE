@@ -1,0 +1,279 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    fullName: SpeechConfig
+    children:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8c4a8-101">Konfiguration der Sprache.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-101">Speech configuration.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+    name: authorizationToken
+    fullName: authorizationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8c4a8-102">Ruft das Autorisierungstoken, oder legt sie fest.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-102">Gets/Sets the authorization token.</span></span>
+      <span data-ttu-id="8c4a8-103">Hinweis: Der Aufrufer muss sicherstellen, dass das Autorisierungstoken ungültig ist.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-103">Note: The caller needs to ensure that the authorization token is valid.</span></span> <span data-ttu-id="8c4a8-104">Bevor Sie das Autorisierungstoken abgelaufen ist, muss der Aufrufer durch den Aufruf dieses Setters mit einem neuen, gültigen Token aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-104">Before the authorization token expires, the caller needs to refresh it by calling this setter with a new valid token.</span></span>
+    syntax:
+      content: 'public authorizationToken: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8c4a8-105">Schließt die Konfiguration an.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-105">Closes the configuration.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8c4a8-106">Ruft die Endpunkt-ID eines benutzerdefinierte sprachübersetzungssysteme-Modells, das für die Spracherkennung verwendet wird, oder legt sie fest.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-106">Gets/Sets the endpoint ID of a customized speech model that is used for speech recognition.</span></span>'
+    syntax:
+      content: 'public endpointId: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+    name: 'fromAuthorizationToken(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c4a8-107">Erstellt eine Instanz der Factory Sprache mit der angegebenen anfänglichen Autorisierungstoken und Region an.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-107">Creates an instance of the speech factory with specified initial authorization token and region.</span></span>
+      <span data-ttu-id="8c4a8-108">Hinweis: Der Aufrufer muss sicherstellen, dass das Autorisierungstoken ungültig ist.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-108">Note: The caller needs to ensure that the authorization token is valid.</span></span> <span data-ttu-id="8c4a8-109">Bevor Sie das Autorisierungstoken abgelaufen ist, muss der Aufrufer durch den Aufruf dieses Setters mit einem neuen, gültigen Token aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-109">Before the authorization token expires, the caller needs to refresh it by calling this setter with a new valid token.</span></span>
+      <span data-ttu-id="8c4a8-110">Hinweis: Verwenden Sie ein Token, die von Ihren Abonnementschlüssel LanguageUnderstanding abgeleitet werden, für den Fall, dass Sie die beabsichtigte Erkennung verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-110">Note: Please use a token derived from your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span> <span data-ttu-id="8c4a8-111">Während die Konfigurationswerte beim Erstellen einer neuen Erkennung kopiert werden, wird der neue Tokenwert gilt nicht für Erkennungen, die bereits erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-111">As configuration values are copied when creating a new recognizer, the new token value will not apply to recognizers that have already been created.</span></span> <span data-ttu-id="8c4a8-112">Für Erkennungen, die zuvor erstellt haben, müssen Sie Autorisierungstoken, das der entsprechenden Erkennung aktualisiert das Token festlegen.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-112">For recognizers that have been created before, you need to set authorization token of the corresponding recognizer to refresh the token.</span></span> <span data-ttu-id="8c4a8-113">Andernfalls treten die freihanderkennung Fehler bei der Erkennung.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-113">Otherwise, the recognizers will encounter errors during recognition.</span></span>
+    syntax:
+      content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+      parameters:
+        - id: authorizationToken
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-114">Das erste Autorisierungstoken.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-114">The initial authorization token.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="8c4a8-115">Der Name der Region (finden Sie unter den <a href="https://aka.ms/csspeech/region">Region Seite</a>).</span><span class="sxs-lookup"><span data-stu-id="8c4a8-115">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+    name: 'fromEndpoint(URL, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c4a8-116">Erstellt eine Instanz von der Spracherkennung-Konfiguration mit den angegebenen Endpunkt und Abonnementschlüssel.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-116">Creates an instance of the speech config with specified endpoint and subscription key.</span></span>
+      <span data-ttu-id="8c4a8-117">Diese Methode ist nur für Benutzer vorgesehen, die die Parameter oder einen nicht standardmäßigen Endpunkt verwenden.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-117">This method is intended only for users who use a non-standard service endpoint or parameters.</span></span>
+      <span data-ttu-id="8c4a8-118">Hinweis: Verwenden Sie Ihren Abonnementschlüssel LanguageUnderstanding für den Fall, dass Sie die beabsichtigte Erkennung verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-118">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
+      <span data-ttu-id="8c4a8-119">Hinweis: Die Abfrageparameter in die Endpunkt-URL angegeben werden nicht geändert, auch wenn sie eine beliebige andere APIs festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-119">Note: The query parameters specified in the endpoint URL are not changed, even if they are set by any other APIs.</span></span>
+      <span data-ttu-id="8c4a8-120">Angenommen, Sprache, die im Uri als Parameter Abfrage definiert wurde "Language = de-DE", und außerdem festlegen, indem SpeechConfig.speechRecognitionLanguage = "En-US", die Language-Einstellung im Uri hat Vorrang vor, und die effektive Sprache "de-DE".</span><span class="sxs-lookup"><span data-stu-id="8c4a8-120">For example, if language is defined in the uri as query parameter "language=de-DE", and also set by SpeechConfig.speechRecognitionLanguage = "en-US", the language setting in uri takes precedence, and the effective language is "de-DE".</span></span> <span data-ttu-id="8c4a8-121">Nur die Parameter, die nicht im Endpunkt angegeben werden kann andere APIs URL festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-121">Only the parameters that are not specified in the endpoint URL can be set by other APIs.</span></span>
+      <span data-ttu-id="8c4a8-122">Hinweis: Um das Autorisierungstoken, das mit FromEndpoint verwenden zu können, eine leere Zeichenfolge an die SubscriptionKey in der FromEndpoint-Methode übergeben, und legen Sie AuthorizationToken = "token", auf die erstellte SpeechConfig-Instanz an das Autorisierungstoken verwendet.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-122">Note: To use authorization token with fromEndpoint, pass an empty string to the subscriptionKey in the fromEndpoint method, and then set authorizationToken="token" on the created SpeechConfig instance to use the authorization token.</span></span>
+    syntax:
+      content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+      parameters:
+        - id: endpoint
+          type:
+            - URL
+          description: <span data-ttu-id="8c4a8-123">Der Dienstendpunkt für die Verbindung.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-123">The service endpoint to connect to.</span></span>
+        - id: subscriptionKey
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-124">Der Abonnementschlüssel.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-124">The subscription key.</span></span>
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+    name: 'fromSubscription(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c4a8-125">Statische Instanz der SpeechConfig zurückgegebenes SubscriptionKey und Service-Region zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-125">Static instance of SpeechConfig returned by passing subscriptionKey and service region.</span></span>
+      <span data-ttu-id="8c4a8-126">Hinweis: Verwenden Sie Ihren Abonnementschlüssel LanguageUnderstanding für den Fall, dass Sie die beabsichtigte Erkennung verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-126">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
+    syntax:
+      content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+      parameters:
+        - id: subscriptionKey
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-127">Der Abonnementschlüssel.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-127">The subscription key.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="8c4a8-128">Der Name der Region (finden Sie unter den <a href="https://aka.ms/csspeech/region">Region Seite</a>).</span><span class="sxs-lookup"><span data-stu-id="8c4a8-128">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+    name: 'getProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8c4a8-129">Gibt den aktuellen Wert einer beliebigen Eigenschaft zurück.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-129">Returns the current value of an arbitrary property.</span></span>
+    syntax:
+      content: 'function getProperty(name: string, def?: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-130">Der Name der Eigenschaft für die Abfrage.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-130">The name of the property to query.</span></span>
+        - id: def
+          type:
+            - string
+          description: '<span data-ttu-id="8c4a8-131">Der zurückzugebende Wert, für den Fall, dass die Eigenschaft nicht bekannt ist.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-131">The value to return in case the property is not known.</span></span>'
+          optional: true
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+    name: outputFormat
+    fullName: outputFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8c4a8-132">Ruft das Ausgabeformat ab oder legt sie fest.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-132">Gets/Sets the output format.</span></span>
+    syntax:
+      content: 'public outputFormat: OutputFormat'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.OutputFormat
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+    name: 'setProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8c4a8-133">Legt eine beliebige Eigenschaft fest.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-133">Sets an arbitrary property.</span></span>
+    syntax:
+      content: 'function setProperty(name: string, value: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-134">Der Name der festzulegenden Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-134">The name of the property to set.</span></span>
+        - id: value
+          type:
+            - string
+          description: |
+            <span data-ttu-id="8c4a8-135">Der neue Wert der Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-135">The new value of the property.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+    name: 'setProxy(string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c4a8-136">Legt fest, die Konfiguration des Proxys.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-136">Sets the proxy configuration.</span></span>
+      <span data-ttu-id="8c4a8-137">In Node.js-Umgebungen nur relevant.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-137">Only relevant in Node.js environments.</span></span>
+      <span data-ttu-id="8c4a8-138">Hinzugefügt in Version 1.4.0.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-138">Added in version 1.4.0.</span></span>
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-139">Der Hostname des Proxyservers.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-139">The host name of the proxy server.</span></span>
+        - id: proxyPort
+          type:
+            - number
+          description: |
+            <span data-ttu-id="8c4a8-140">Die Portnummer des Proxyservers.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-140">The port number of the proxy server.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+    name: 'setProxy(string, number, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c4a8-141">Legt fest, die Konfiguration des Proxys.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-141">Sets the proxy configuration.</span></span>
+      <span data-ttu-id="8c4a8-142">In Node.js-Umgebungen nur relevant.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-142">Only relevant in Node.js environments.</span></span>
+      <span data-ttu-id="8c4a8-143">Hinzugefügt in Version 1.4.0.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-143">Added in version 1.4.0.</span></span>
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number, proxyUserName: string, proxyPassword: string)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: '<span data-ttu-id="8c4a8-144">Der Hostname des Proxyservers, ohne das Protokollschema (http://)</span><span class="sxs-lookup"><span data-stu-id="8c4a8-144">The host name of the proxy server, without the protocol scheme (http://)</span></span>'
+        - id: proxyPort
+          type:
+            - number
+          description: ''
+        - id: proxyUserName
+          type:
+            - string
+          description: <span data-ttu-id="8c4a8-145">Der Benutzername des Proxyservers.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-145">The user name of the proxy server.</span></span>
+        - id: proxyPassword
+          type:
+            - string
+          description: |
+            <span data-ttu-id="8c4a8-146">Das Kennwort des Proxyservers.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-146">The password of the proxy server.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    name: speechRecognitionLanguage
+    fullName: speechRecognitionLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8c4a8-147">Ruft die Eingabesprache ab oder legt sie fest.</span><span class="sxs-lookup"><span data-stu-id="8c4a8-147">Gets/Sets the input language.</span></span>
+    syntax:
+      content: 'public speechRecognitionLanguage: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+    name: OutputFormat
+    spec.typeScript:
+      - name: OutputFormat
+        fullName: OutputFormat
+        uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    spec.typeScript:
+      - name: SpeechConfig
+        fullName: SpeechConfig
+        uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig

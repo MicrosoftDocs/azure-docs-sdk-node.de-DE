@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-websearch.Computation
+    name: Computation
+    fullName: Computation
+    children:
+      - azure-cognitiveservices-websearch.Computation.expression
+      - azure-cognitiveservices-websearch.Computation.followUpQueries
+      - azure-cognitiveservices-websearch.Computation.id
+      - azure-cognitiveservices-websearch.Computation.value
+      - azure-cognitiveservices-websearch.Computation.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="fc3c9-101">Definiert einen Ausdruck und die dazugehörige Antwort</span><span class="sxs-lookup"><span data-stu-id="fc3c9-101">Defines an expression and its answer</span></span>
+    extends:
+      name: azure-cognitiveservices-websearch.Answer
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.expression
+    name: expression
+    fullName: expression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fc3c9-102">Der Ausdruck Berechnungen oder Konvertierung.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-102">The math or conversion expression.</span></span> <span data-ttu-id="fc3c9-103">Wenn die Abfrage eine Anforderung zum Konvertieren von Maßeinheiten (z. B. Meter bis Fuß) enthält, wird dieses Feld enthält die von Einheiten und Wert enthält die Einheiten.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-103">If the query contains a request to convert units of measure (for example, meters to feet), this field contains the from units and value contains the to units.</span></span> <span data-ttu-id="fc3c9-104">Wenn die Abfrage einen mathematischen Ausdruck wie z. B. 2 + 2 enthält, wird dieses Feld enthält den Ausdruck und Wert enthält die Antwort.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-104">If the query contains a mathematical expression such as 2+2, this field contains the expression and value contains the answer.</span></span> <span data-ttu-id="fc3c9-105">Beachten Sie, dass mathematische Ausdrücke normalisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-105">Note that mathematical expressions may be normalized.</span></span> <span data-ttu-id="fc3c9-106">Wenn die Abfrage sqrt(4^2+8^2) war, kann der normalisierte Ausdruck z. B. sqrt((4^2)+(8^2)) sein.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-106">For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).</span></span> <span data-ttu-id="fc3c9-107">Wenn die Abfrage des Benutzers ist eine Frage, Mathematik und der TextDecorations-Abfrageparameter wird festgelegt auf "true", wird den Ausdruck kann Zeichenfolge formatieren Marker enthalten.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-107">If the user''s query is a math question and the textDecorations query parameter is set to true, the expression string may include formatting markers.</span></span> <span data-ttu-id="fc3c9-108">Wenn die Abfrage des Benutzers log(2) ist, enthält der normalisierte Ausdruck beispielsweise die tiefstellungsmarkierungen.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-108">For example, if the user''s query is log(2), the normalized expression includes the subscript markers.</span></span> <span data-ttu-id="fc3c9-109">Weitere Informationen finden Sie in der Hervorhebung erreicht.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-109">For more information, see Hit Highlighting.</span></span>'
+    syntax:
+      content: 'expression: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.followUpQueries
+    name: followUpQueries
+    fullName: followUpQueries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'followUpQueries?: Query[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-websearch.Query[]'
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fc3c9-110">Ein Zeichenfolgenbezeichner.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-110">A String identifier.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fc3c9-111">Der Ausdruck in der Antwort.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-111">The expression's answer.</span></span>
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fc3c9-112">Die URL zum Bing Suche Ergebnis für dieses Element.</span><span class="sxs-lookup"><span data-stu-id="fc3c9-112">The URL To Bing's search result for this item.</span></span>
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+references:
+  - uid: azure-cognitiveservices-websearch.Answer
+    name: Answer
+    spec.typeScript:
+      - name: Answer
+        fullName: Answer
+        uid: azure-cognitiveservices-websearch.Answer
+  - uid: 'azure-cognitiveservices-websearch.Query[]'
+    name: 'Query[]'
+    spec.typeScript:
+      - name: Query
+        fullName: Query
+        uid: azure-cognitiveservices-websearch.Query
+      - name: '[]'
+        fullName: '[]'

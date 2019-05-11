@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.Request'
+    name: Request
+    fullName: Request
+    children:
+      - '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+      - '@azure/cognitiveservices-anomalydetector.Request.granularity'
+      - '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+      - '@azure/cognitiveservices-anomalydetector.Request.period'
+      - '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+      - '@azure/cognitiveservices-anomalydetector.Request.series'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="9c583-101">Eine Schnittstelle, die Anforderung darstellt.</span><span class="sxs-lookup"><span data-stu-id="9c583-101">An interface representing Request.</span></span>'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+    name: customInterval
+    fullName: customInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c583-102">Benutzerdefiniertes Intervall wird verwendet, um nicht standardmäßige Zeitintervall festlegen, z. B. wenn der Serie 5 Minuten ist, Anforderung kann festgelegt werden als {"Granularität": "exakten", "CustomInterval": 5}.</span><span class="sxs-lookup"><span data-stu-id="9c583-102">Custom Interval is used to set non-standard time interval, for example, if the series is 5 minutes, request can be set as {"granularity":"minutely", "customInterval":5}.</span></span>'
+    optional: true
+    syntax:
+      content: 'customInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.granularity'
+    name: granularity
+    fullName: granularity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c583-103">Nur möglich jährlich, monatlich, wöchentlich, täglich, stündlich oder exakten.</span><span class="sxs-lookup"><span data-stu-id="9c583-103">Can only be one of yearly, monthly, weekly, daily, hourly or minutely.</span></span> <span data-ttu-id="9c583-104">Granularität dient zum Überprüfen, ob die Eingabereihe gültig ist.</span><span class="sxs-lookup"><span data-stu-id="9c583-104">Granularity is used for verify whether input series is valid.</span></span> <span data-ttu-id="9c583-105">Folgende Werte sind möglich: "jährlich", "Monatlich", "wöchentlich", "täglich", "stündlich", "exakten"</span><span class="sxs-lookup"><span data-stu-id="9c583-105">Possible values include: ''yearly'', ''monthly'', ''weekly'', ''daily'', ''hourly'', ''minutely''</span></span>'
+    syntax:
+      content: 'granularity: Granularity'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Granularity'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+    name: maxAnomalyRatio
+    fullName: maxAnomalyRatio
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c583-106">Optionales Argument, erweiterte Modellparameter, Max. Anomalien Verhältnis in einer Zeitreihe.</span><span class="sxs-lookup"><span data-stu-id="9c583-106">Optional argument, advanced model parameter, max anomaly ratio in a time series.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxAnomalyRatio?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c583-107">Optionales Argument, regelmäßige Wert einer Zeitreihe.</span><span class="sxs-lookup"><span data-stu-id="9c583-107">Optional argument, periodic value of a time series.</span></span> <span data-ttu-id="9c583-108">Wenn der Wert NULL oder nicht vorhanden sind, bestimmt die API den Zeitraum automatisch.</span><span class="sxs-lookup"><span data-stu-id="9c583-108">If the value is null or does not present, the API will determine the period automatically.</span></span>'
+    optional: true
+    syntax:
+      content: 'period?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+    name: sensitivity
+    fullName: sensitivity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c583-109">Optionales Argument, das erweiterte Modellparameter, zwischen 0 und 99, desto niedriger ist der Wert, desto größer werden der Wert des Rands also weniger Anomalien akzeptiert werden.</span><span class="sxs-lookup"><span data-stu-id="9c583-109">Optional argument, advanced model parameter, between 0-99, the lower the value is, the larger the margin value will be which means less anomalies will be accepted.</span></span>'
+    optional: true
+    syntax:
+      content: 'sensitivity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.series'
+    name: series
+    fullName: series
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c583-110">Zeitreihen-Datenpunkte.</span><span class="sxs-lookup"><span data-stu-id="9c583-110">Time series data points.</span></span> <span data-ttu-id="9c583-111">Punkte sollten nach dem Zeitstempel in aufsteigender Reihenfolge entsprechend das Ergebnis der Erkennung von Anomalien sortiert werden.</span><span class="sxs-lookup"><span data-stu-id="9c583-111">Points should be sorted by timestamp in ascending order to match the anomaly detection result.</span></span> <span data-ttu-id="9c583-112">Wenn die Daten nicht ordnungsgemäß sortiert werden oder duplizierte Zeitstempel vorhanden ist, funktioniert die API nicht.</span><span class="sxs-lookup"><span data-stu-id="9c583-112">If the data is not sorted correctly or there is duplicated timestamp, the API will not work.</span></span> <span data-ttu-id="9c583-113">In diesem Fall wird eine Fehlermeldung zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="9c583-113">In such case, an error message will be returned.</span></span>'
+    syntax:
+      content: 'series: Point[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Point[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+references:
+  - uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+    name: Granularity
+    spec.typeScript:
+      - name: Granularity
+        fullName: Granularity
+        uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+  - uid: '@azure/cognitiveservices-anomalydetector.Point[]'
+    name: 'Point[]'
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: '@azure/cognitiveservices-anomalydetector.Point'
+      - name: '[]'
+        fullName: '[]'
