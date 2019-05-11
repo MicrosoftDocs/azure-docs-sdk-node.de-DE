@@ -1,0 +1,218 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.InboundNatPool'
+    name: InboundNatPool
+    fullName: InboundNatPool
+    children:
+      - '@azure/arm-network.InboundNatPool.backendPort'
+      - '@azure/arm-network.InboundNatPool.enableFloatingIP'
+      - '@azure/arm-network.InboundNatPool.enableTcpReset'
+      - '@azure/arm-network.InboundNatPool.etag'
+      - '@azure/arm-network.InboundNatPool.frontendIPConfiguration'
+      - '@azure/arm-network.InboundNatPool.frontendPortRangeEnd'
+      - '@azure/arm-network.InboundNatPool.frontendPortRangeStart'
+      - '@azure/arm-network.InboundNatPool.id'
+      - '@azure/arm-network.InboundNatPool.idleTimeoutInMinutes'
+      - '@azure/arm-network.InboundNatPool.name'
+      - '@azure/arm-network.InboundNatPool.protocol'
+      - '@azure/arm-network.InboundNatPool.provisioningState'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="448e6-101">NAT-eingangspool des Load Balancers.</span><span class="sxs-lookup"><span data-stu-id="448e6-101">Inbound NAT pool of the load balancer.</span></span>
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.backendPort'
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="448e6-102">Der Port, der für interne Verbindungen am Endpunkt verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="448e6-102">The port used for internal connections on the endpoint.</span></span> <span data-ttu-id="448e6-103">Zulässige Werte liegen zwischen 1 und</span><span class="sxs-lookup"><span data-stu-id="448e6-103">Acceptable values are between 1 and</span></span>
+      65535.
+    syntax:
+      content: 'backendPort: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.enableFloatingIP'
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-104">Konfiguriert ein VM Endpunkt für die floating-IP-Funktion erforderlich, um eine SQL-AlwaysOn-Verfügbarkeitsgruppe zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="448e6-104">Configures a virtual machine''s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.</span></span> <span data-ttu-id="448e6-105">Diese Einstellung ist erforderlich, wenn der SQL AlwaysOn-Verfügbarkeitsgruppen in SQLServer verwenden.</span><span class="sxs-lookup"><span data-stu-id="448e6-105">This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.</span></span> <span data-ttu-id="448e6-106">Diese Einstellung kann nicht geändert werden, nachdem Sie den Endpunkt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="448e6-106">This setting can''t be changed after you create the endpoint.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.enableTcpReset'
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="448e6-107">Erhalten Sie bidirektionale TCP Reset auf TCP-Leerlauftimeouts für Flow oder unerwartete Verbindungen abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="448e6-107">Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.</span></span>
+      <span data-ttu-id="448e6-108">Dieses Element wird nur verwendet, wenn das Protokoll auf TCP festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="448e6-108">This element is only used when the protocol is set to TCP.</span></span>
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-109">Eine eindeutige schreibgeschützte Zeichenfolge, die sich ändern, wenn die Ressource aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="448e6-109">A unique read-only string that changes whenever the resource is updated.</span></span>'
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.frontendIPConfiguration'
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="448e6-110">Ein Verweis auf die Front-End-IP-Adressen.</span><span class="sxs-lookup"><span data-stu-id="448e6-110">A reference to frontend IP addresses.</span></span>
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.frontendPortRangeEnd'
+    name: frontendPortRangeEnd
+    fullName: frontendPortRangeEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-111">Die letzte Portnummer im Bereich externer Ports, die verwendet werden zu eingehenden NAT-Datenverkehr auf NICs, die einem Load Balancer zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="448e6-111">The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer.</span></span> <span data-ttu-id="448e6-112">Zulässige Werte liegen zwischen 1 und 65535.</span><span class="sxs-lookup"><span data-stu-id="448e6-112">Acceptable values range between 1 and 65535.</span></span>'
+    syntax:
+      content: 'frontendPortRangeEnd: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.frontendPortRangeStart'
+    name: frontendPortRangeStart
+    fullName: frontendPortRangeStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-113">Die erste Portnummer im Bereich externer Ports, die verwendet werden zu eingehenden NAT-Datenverkehr auf NICs, die einem Load Balancer zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="448e6-113">The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer.</span></span> <span data-ttu-id="448e6-114">Zulässige Werte liegen zwischen 1 und 65534 sein.</span><span class="sxs-lookup"><span data-stu-id="448e6-114">Acceptable values range between 1 and 65534.</span></span>'
+    syntax:
+      content: 'frontendPortRangeStart: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="448e6-115">Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="448e6-115">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.idleTimeoutInMinutes'
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-116">Das Timeout für die TCP-Verbindung im Leerlauf.</span><span class="sxs-lookup"><span data-stu-id="448e6-116">The timeout for the TCP idle connection.</span></span> <span data-ttu-id="448e6-117">Der Wert kann zwischen 4 und 30 Minuten festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="448e6-117">The value can be set between 4 and 30 minutes.</span></span> <span data-ttu-id="448e6-118">Der Standardwert ist 4 Minuten.</span><span class="sxs-lookup"><span data-stu-id="448e6-118">The default value is 4 minutes.</span></span> <span data-ttu-id="448e6-119">Dieses Element wird nur verwendet, wenn das Protokoll auf TCP festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="448e6-119">This element is only used when the protocol is set to TCP.</span></span>'
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-120">Der Name der Ressource, die innerhalb einer Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="448e6-120">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="448e6-121">Dieser Name kann verwendet werden, auf die Ressource zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="448e6-121">This name can be used to access the resource.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-122">Der Verweis auf das Transportprotokoll, die von der eingehenden NAT-Pool verwendet.</span><span class="sxs-lookup"><span data-stu-id="448e6-122">The reference to the transport protocol used by the inbound NAT pool.</span></span> <span data-ttu-id="448e6-123">Mögliche Werte sind: ''Udp'', ''Tcp'', ''All''</span><span class="sxs-lookup"><span data-stu-id="448e6-123">Possible values include: ''Udp'', ''Tcp'', ''All''</span></span>'
+    syntax:
+      content: 'protocol: TransportProtocol'
+      return:
+        type:
+          - '@azure/arm-network.TransportProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="448e6-124">Ruft den Bereitstellungsstatus der die öffentliche IP-Ressource ab.</span><span class="sxs-lookup"><span data-stu-id="448e6-124">Gets the provisioning state of the PublicIP resource.</span></span> <span data-ttu-id="448e6-125">Dabei sind folgende Werte möglich: "Aktualisieren", "Löschen" und "Fehler".</span><span class="sxs-lookup"><span data-stu-id="448e6-125">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.TransportProtocol'
+    name: TransportProtocol
+    spec.typeScript:
+      - name: TransportProtocol
+        fullName: TransportProtocol
+        uid: '@azure/arm-network.TransportProtocol'
