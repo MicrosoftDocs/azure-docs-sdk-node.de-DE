@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.ThresholdRuleCondition
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - azure-arm-monitor.ThresholdRuleCondition.dataSource
+      - azure-arm-monitor.ThresholdRuleCondition.odatatype
+      - azure-arm-monitor.ThresholdRuleCondition.operator
+      - azure-arm-monitor.ThresholdRuleCondition.threshold
+      - azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+      - azure-arm-monitor.ThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine regelbedingung, basierend auf einer Metrik einen Schwellenwert überschreiten.'
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'die Ressource, von der die Regel erfasst die Daten. Für diesen Typ wird immer die Datenquelle des Typs RuleMetricDataSource sein.'
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.operator
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'der Operator verwendet, um die Daten und der Schwellenwert verglichen werden soll. Mögliche Werte sind: ''GreaterThan'', ''GreaterThanOrEqual'', ''LessThan'', ''LessThanOrEqual'''
+    syntax:
+      content: 'operator: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.threshold
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'der Schwellenwert, der die Warnung aktiviert wird.'
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      der zeitaggregationsoperator. Wie die Daten, die gesammelt werden im Laufe der Zeit kombiniert werden sollen.
+      Der Standardwert ist die PrimaryAggregationType der Metrik an. Mögliche Werte sind: 'Average', 'Minimum', 'Maximum', 'Total', 'Last'
+    optional: true
+    syntax:
+      content: 'timeAggregation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'die Zeitspanne (in dem Zeitformat ISO 8601), mit dem Aktivität der Warnung basierend auf dem Schwellenwert überwacht wird. Wenn angegeben, es muss zwischen 5 Minuten und 1 Tag liegen.'
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

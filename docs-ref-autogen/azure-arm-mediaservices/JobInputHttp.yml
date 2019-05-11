@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JobInputHttp
+    name: JobInputHttp
+    fullName: JobInputHttp
+    children:
+      - azure-arm-mediaservices.JobInputHttp.baseUri
+      - azure-arm-mediaservices.JobInputHttp.files
+      - azure-arm-mediaservices.JobInputHttp.label
+      - azure-arm-mediaservices.JobInputHttp.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: Stellt die HTTPS-Auftragseingabe dar.
+    extends:
+      name: azure-arm-mediaservices.JobInputClip
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.baseUri
+    name: baseUri
+    fullName: baseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Basis-URI für die HTTPS-Auftragseingabe. Es wird mit dem angegebenen Dateinamen verkettet werden. Wenn kein Basis-Uri angegeben ist, wird die Liste der bereitgestellten Datei vollständig sein qualifizierter Uris ausgegangen. Maximale Länge von 4.000 Zeichen.'
+    optional: true
+    syntax:
+      content: 'baseUri?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste der Dateien. Für die JobInputHttp erforderlich. Maximal 4000 Zeichen.
+    optional: true
+    syntax:
+      content: 'files?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Bezeichnung, die eine JobInputClip, zugewiesen ist, die verwendet wird, um einen Verweis in der Transformation verwendete zu erfüllen. Beispielsweise kann eine Transformation erstellt werden, um eine Bilddatei mit der Bezeichnung ''Xyz'' und die Anwendung es als Overlay auf das eingabevideo vor ihrer Codierung ist. Wenn Sie einen Auftrag zu übermitteln, muss genau eines der "jobinputs" die Image-Datei sollte, und es die Bezeichnung ''Xyz''.'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.JobInputClip
+    name: JobInputClip
+    spec.typeScript:
+      - name: JobInputClip
+        fullName: JobInputClip
+        uid: azure-arm-mediaservices.JobInputClip
