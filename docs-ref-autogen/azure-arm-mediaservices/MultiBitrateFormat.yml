@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt die Eigenschaften für die Erzeugung einer Auflistung von GOP ausgerichtet Multi-Bitrate-Dateien. Das Standardverhalten ist, um eine Ausgabedatei an. für jede Ebene video zu erzeugen (gemischt) zusammen mit der alle Sounds handelt. Die genaue erzeugten Ausgabedateien können gesteuert werden, durch Angabe der OutputFiles-Auflistung.'
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Das Muster der Namen für die generierten Ausgabedateien. Die folgenden Makros im Dateinamen unterstützt werden: {Basename} - den Basisnamen der eingangsvideodaten {Extension}: der geeigneten Erweiterung für dieses Format. {Bezeichnung}: die Bezeichnung, die der Codec/Ebene zugewiesen.
+      {Index} – ein eindeutiger Index für Miniaturansichten. Gilt nur für Miniaturansichten. {Bitrate} – die Audio-/Video Bitrate. Gilt nicht für Miniaturansichten. {Codec} – der Typ des Audio/Video-Codecs. Alle es Makros werden reduziert, und entfernt aus dem Dateinamen.
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Liste der Ausgabedateien erzeugt.  Jeder Eintrag in der Liste ist eine Reihe von Audio- und Videodateien Ebene Bezeichnungen (gemischt) miteinander verknüpft werden.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'
