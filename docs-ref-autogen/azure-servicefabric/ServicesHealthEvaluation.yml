@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServicesHealthEvaluation
+    name: ServicesHealthEvaluation
+    fullName: ServicesHealthEvaluation
+    children:
+      - azure-servicefabric.ServicesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ServicesHealthEvaluation.description
+      - azure-servicefabric.ServicesHealthEvaluation.kind
+      - azure-servicefabric.ServicesHealthEvaluation.maxPercentUnhealthyServices
+      - azure-servicefabric.ServicesHealthEvaluation.serviceTypeName
+      - azure-servicefabric.ServicesHealthEvaluation.totalCount
+      - azure-servicefabric.ServicesHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Stellt die integritätsevaluierung für Dienste eines bestimmten Diensttyps gehört zu einer Anwendung mit auswertungen der Integrität für die einzelnen fehlerhafter Dienste, die aktuellen aggregierten Integritätsstatus betroffen. Kann zurückgegeben werden, wenn Evaluieren der Anwendungsintegrität und den aggregierten Integritätsstatus entweder Fehler oder eine Warnung ist.'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beschreibung der integritätsauswertung, die eine Zusammenfassung des Evaluierungsprozesses darstellt.'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.maxPercentUnhealthyServices
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Maximal zulässige Prozentsatz fehlerhafter Dienste, aus der ServiceTypeHealthPolicy.'
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Diensttyps der Dienste.
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Gesamtanzahl der Dienste von den aktuellen Diensttyp in der Anwendung aus dem integritätsspeicher.
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Liste der fehlerhaften auswertungen, die zu den aggregierten Integritätsstatus geführt. Enthält alle fehlerhaften ServiceHealthEvaluation, die die aggregierte Integrität beeinträchtigt.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

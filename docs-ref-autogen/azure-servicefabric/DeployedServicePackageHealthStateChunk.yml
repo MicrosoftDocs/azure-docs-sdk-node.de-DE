@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedServicePackageHealthStateChunk
+    name: DeployedServicePackageHealthStateChunk
+    fullName: DeployedServicePackageHealthStateChunk
+    children:
+      - azure-servicefabric.DeployedServicePackageHealthStateChunk.healthState
+      - azure-servicefabric.DeployedServicePackageHealthStateChunk.serviceManifestName
+      - azure-servicefabric.DeployedServicePackageHealthStateChunk.servicePackageActivationId
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Stellt die integritätszustandsblock des ein bereitgestelltes Dienstpaket, das der dienstmanifestname und der Dienst Paket aggregierte Integritätsstatus enthält.'
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthStateChunk.serviceManifestName
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Dienstmanifests.
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthStateChunk.servicePackageActivationId
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ActivationId eines bereitgestellten Dienstpakets. Wenn ServicePackageActivationMode, die zum Zeitpunkt der Erstellung des Diensts angegeben ist, "SharedProcess" (oder wenn sie nicht angegeben ist, in diesem Fall wird standardmäßig "SharedProcess"), klicken Sie dann ist der Wert des ServicePackageActivationId immer eine leere Zeichenfolge an.'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk

@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServicePartitionInfo
+    name: StatefulServicePartitionInfo
+    fullName: StatefulServicePartitionInfo
+    children:
+      - azure-servicefabric.StatefulServicePartitionInfo.healthState
+      - azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+      - azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+      - azure-servicefabric.StatefulServicePartitionInfo.partitionInformation
+      - azure-servicefabric.StatefulServicePartitionInfo.partitionStatus
+      - azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+      - azure-servicefabric.StatefulServicePartitionInfo.serviceKind
+      - azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+    langs:
+      - typeScript
+    type: interface
+    summary: Informationen über eine Partition eines zustandsbehafteten Service Fabric-Diensts...
+    extends:
+      name: azure-servicefabric.ServicePartitionInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+    name: lastQuorumLossDuration
+    fullName: lastQuorumLossDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Dauer, für die diese Partition quorumverlust festgestellt wurde. Wenn die Partition derzeit in quorumverlust ist, wird die Dauer seit es in diesem Zustand ist. Bei diesem Feld wird das ISO8601-Format zur Angabe der Dauer verwendet.'
+    optional: true
+    syntax:
+      content: 'lastQuorumLossDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Mindestgröße der Replikatgruppe als Zahl.
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.partitionInformation
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informationen zur Partition die Identität Partitionierungsschema und Schlüssel, die unterstützt werden.'
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformation'
+      return:
+        type:
+          - azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.partitionStatus
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Status der Service Fabric-Dienstpartition. Mögliche Werte sind: ''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting'''
+    optional: true
+    syntax:
+      content: 'partitionStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+    name: primaryEpoch
+    fullName: primaryEpoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein Epoche ist eine Konfiguration-Zahl für die Partition als Ganzes. Beim Festlegen der Konfigurations des Replikats Änderungen, z. B. wenn der primäre Replikat ändert, die Vorgänge, die aus dem neuen primären Replikat repliziert werden als sind eine neue Epoche, von denen die vom alten primären Replikat gesendet wurden.'
+    optional: true
+    syntax:
+      content: 'primaryEpoch?: Epoch'
+      return:
+        type:
+          - azure-servicefabric.Epoch
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Zielgröße der Replikatgruppe als Zahl.
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePartitionInfo
+    name: ServicePartitionInfo
+    spec.typeScript:
+      - name: ServicePartitionInfo
+        fullName: ServicePartitionInfo
+        uid: azure-servicefabric.ServicePartitionInfo
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation
+  - uid: azure-servicefabric.Epoch
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: azure-servicefabric.Epoch

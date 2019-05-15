@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthEvaluation
+    name: ReplicaHealthEvaluation
+    fullName: ReplicaHealthEvaluation
+    children:
+      - azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ReplicaHealthEvaluation.description
+      - azure-servicefabric.ReplicaHealthEvaluation.kind
+      - azure-servicefabric.ReplicaHealthEvaluation.partitionId
+      - azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+      - azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Stellt die integritätsauswertung für ein Replikat mit Informationen zu den Daten und der Algorithmus, die vom integritätsspeicher verwendet werden, um die Integrität bewertet. Nur, wenn der aggregierte Integritätszustand entweder Fehler oder eine Warnung ist, wird die Auswertung zurückgegeben.'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beschreibung der integritätsauswertung, die eine Zusammenfassung des Evaluierungsprozesses darstellt.'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID der Partition, zu der das Replikat gehört.'
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID eines zustandsbehafteten dienstreplikats oder einer zustandslosen Dienstinstanz. Diese ID wird in den Abfragen verwendet, die für zustandsbehaftete und zustandslose Dienste gelten. Es wird von Service Fabric verwendet, um ein Replikat der Partition eines zustandsbehafteten Diensts oder einer Instanz einer zustandslosen Dienstpartition eindeutig zu identifizieren. Es ist eindeutig innerhalb einer Partition und wird für die Lebensdauer des Replikats oder die Instanz nicht geändert. Wenn ein zustandsbehaftetes Replikat gelöscht ruft und ein anderes Replikat wird auf dem gleichen Knoten für diese Partition erstellt, wird es einen anderen Wert für die ID abrufen. Wenn eine zustandslose Instanz auf demselben oder einem anderen Knoten das Failover erfolgt erhalten sie einen anderen Wert für die ID.'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Liste der fehlerhaften auswertungen, die mit dem aktuellen Status der aggregierte Integritätszustand des Replikats geführt hat.
+      Die Typen die fehlerauswertungen können EventHealthEvaluation sein.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
