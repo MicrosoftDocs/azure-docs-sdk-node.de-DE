@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.HealthEvent
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - azure-servicefabric.HealthEvent.description
+      - azure-servicefabric.HealthEvent.healthState
+      - azure-servicefabric.HealthEvent.isExpired
+      - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+      - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+      - azure-servicefabric.HealthEvent.lastOkTransitionAt
+      - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+      - azure-servicefabric.HealthEvent.property
+      - azure-servicefabric.HealthEvent.removeWhenExpired
+      - azure-servicefabric.HealthEvent.sequenceNumber
+      - azure-servicefabric.HealthEvent.sourceId
+      - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+      - azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="3f9f1-101">Stellt Integritätsinformationen für eine integritätsentität, z. B. Cluster, Anwendung oder Knoten gemeldet werden, mit zusätzlichen Metadaten, die vom Health Manager hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-101">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3f9f1-102">Die Beschreibung der Integritätsinformationen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-102">The description of the health information.</span></span> <span data-ttu-id="3f9f1-103">Hierbei handelt es sich um Freitext, mit dem von Menschen lesbare Informationen über den Bericht hinzugefügt werden können.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-103">It represents free text used to add human readable information about the report.</span></span>
+      <span data-ttu-id="3f9f1-104">Die maximale Zeichenlänge für die Beschreibung beträgt 4096 Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-104">The maximum string length for the description is 4096 characters.</span></span>
+      <span data-ttu-id="3f9f1-105">Wenn die angegebene Zeichenfolge länger ist, wird sie automatisch abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-105">If the provided string is longer, it will be automatically truncated.</span></span>
+      <span data-ttu-id="3f9f1-106">Wird diese abgeschnitten, enthalten die letzten Zeichen der Beschreibung einen Marker „[abgeschnitten]“, und die gesamte Zeichenfolgenlänge beträgt 4096 Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-106">When truncated, the last characters of the description contain a marker "[Truncated]", and total string size is 4096 characters.</span></span>
+      <span data-ttu-id="3f9f1-107">Das Vorhandensein des Markers ist ein Hinweis für Benutzer, dass abgeschnittene Zeichenfolgen vorkommen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-107">The presence of the marker indicates to users that truncation occurred.</span></span>
+      <span data-ttu-id="3f9f1-108">Beachten Sie, dass die Beschreibung bei abgeschnittenen Zeichenfolgen weniger als 4096 Zeichen von der ursprünglichen Zeichenfolge enthält.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-108">Note that when truncated, the description has less than 4096 characters from the original string.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3f9f1-109">Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="3f9f1-109">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    syntax:
+      content: 'healthState: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.isExpired
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3f9f1-110">Gibt true zurück, wenn das integritätsereignis abgelaufen ist, andernfalls "false".</span><span class="sxs-lookup"><span data-stu-id="3f9f1-110">Returns true if the health event is expired, otherwise false.</span></span>'
+    optional: true
+    syntax:
+      content: 'isExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="3f9f1-111">Wenn der aktuelle Integritätsstatus "Fehler" ist, gibt diese Eigenschaft die Zeit, an der im Integritätsbericht zunächst mit "Fehler" gemeldet wurde.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-111">If the current health state is 'Error', this property returns the time at which the health report was first reported with 'Error'.</span></span> <span data-ttu-id="3f9f1-112">Klicken Sie für die regelmäßige berichterstellung viele Berichte mit dem gleichen Status wurde möglicherweise jedoch generiert, nur das Datum und Uhrzeit, zu den ersten "Error" Integritätsbericht empfangen wurde, gibt diese Eigenschaft zurück.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-112">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Error' health report was received.</span></span>
+      <span data-ttu-id="3f9f1-113">Ist der aktuelle Integritätsstatus "Ok" oder "Warnung", gibt das Datum und Uhrzeit, zu dem der Integritätsstatus in "Error", letzter wurde vor dem Übergang in einen anderen Zustand.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-113">If the current health state is 'Ok' or 'Warning', returns the date and time at which the health state was last in 'Error', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="3f9f1-114">Wenn der Integritätsstatus nicht "Error" war, wird der Wert NULL Datum / Uhrzeit sein.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-114">If the health state was never 'Error', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f9f1-115">Das Datum und Uhrzeit der letzten der Integritätsbericht vom integritätsspeicher Änderung.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-115">The date and time when the health report was last modified by the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="3f9f1-116">Wenn der aktuelle Integritätsstatus "Ok" ist, gibt diese Eigenschaft die Zeit, an der im Integritätsbericht zunächst mit "Ok" gemeldet wurde.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-116">If the current health state is 'Ok', this property returns the time at which the health report was first reported with 'Ok'.</span></span>
+      <span data-ttu-id="3f9f1-117">Für die regelmäßige berichterstellung ggf. viele Berichte mit dem gleichen Status generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-117">For periodic reporting, many reports with the same state may have been generated.</span></span>
+      <span data-ttu-id="3f9f1-118">Diese Eigenschaft gibt das Datum und Uhrzeit, wann die erste Integritätsbericht "Ok" empfangen wurde.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-118">This property returns the date and time when the first 'Ok' health report was received.</span></span>
+      <span data-ttu-id="3f9f1-119">Wenn der aktuellen Zustand "Error" oder "Warnung" ist, gibt Sie Datum und Uhrzeit, an dem der Integritätsstatus "OK", bevor der Übergang in einen anderen Zustand entsprechend seiner letzten, zurück.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-119">If the current health state is 'Error' or 'Warning', returns the date and time at which the health state was last in 'Ok', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="3f9f1-120">Wenn der Integritätsstatus nicht "Ok" war, wird der Wert keine Datum / Uhrzeit sein.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-120">If the health state was never 'Ok', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="3f9f1-121">Wenn der aktuelle Integritätsstatus "Warnung" ist, gibt diese Eigenschaft die Zeit, an der im Integritätsbericht zunächst mit "Warnung" gemeldet wurde.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-121">If the current health state is 'Warning', this property returns the time at which the health report was first reported with 'Warning'.</span></span> <span data-ttu-id="3f9f1-122">Viele Berichte mit dem gleichen Status wurde möglicherweise jedoch generiert, gibt diese Eigenschaft nur das Datum und Uhrzeit, zu den ersten "Warnung" Integritätsbericht empfangen wurde, für die regelmäßige berichterstellung.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-122">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Warning' health report was received.</span></span>
+      <span data-ttu-id="3f9f1-123">Ist der aktuelle Integritätsstatus "Ok" oder "Error", gibt das Datum und Uhrzeit, an dem der Integritätsstatus "Warnung", bevor der Übergang in einen anderen Zustand entsprechend seiner letzten.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-123">If the current health state is 'Ok' or 'Error', returns the date and time at which the health state was last in 'Warning', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="3f9f1-124">Wenn der Integritätszustand "nie"Warning"wurde", wird der Wert 0 (null) Datum / Uhrzeit sein.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-124">If the health state was never 'Warning', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.property
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="3f9f1-125">Die Eigenschaft der Integritätsinformationen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-125">The property of the health information.</span></span> <span data-ttu-id="3f9f1-126">Eine Entität kann Integritätsberichte für verschiedene Eigenschaften enthalten.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-126">An entity can have health reports for different properties.</span></span>
+      <span data-ttu-id="3f9f1-127">Die Eigenschaft ist eine Zeichenfolge und keine feste Enumeration, um dem Reporter Flexibilität zu ermöglichen und entsprechend die Zustandsbedingung zu kategorisieren, die den Bericht auslöst.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-127">The property is a string and not a fixed enumeration to allow the reporter flexibility to categorize the state condition that triggers the report.</span></span>
+      <span data-ttu-id="3f9f1-128">Beispielsweise kann ein Reporter mit der SourceId „LocalWatchdog“ den Zustand des verfügbaren Datenträgers auf einem Knoten überwachen und folglich die AvailableDisk-Eigenschaft auf diesem Knoten melden.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-128">For example, a reporter with SourceId "LocalWatchdog" can monitor the state of the available disk on a node, so it can report "AvailableDisk" property on that node.</span></span>
+      <span data-ttu-id="3f9f1-129">Der gleiche Reporter kann die Knotenkonnektivität überwachen und folglich eine Connectivity-Eigenschaft auf dem gleichen Knoten melden.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-129">The same reporter can monitor the node connectivity, so it can report a property "Connectivity" on the same node.</span></span>
+      <span data-ttu-id="3f9f1-130">Im Integritätsspeicher werden diese Berichte als separate Integritätsereignisse für den angegebenen Knoten behandelt.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-130">In the health store, these reports are treated as separate health events for the specified node.</span></span>
+      <span data-ttu-id="3f9f1-131">Zusammen mit der SourceId identifiziert die Eigenschaft eindeutig die Integritätsinformationen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-131">Together with the SourceId, the property uniquely identifies the health information.</span></span>
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.removeWhenExpired
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3f9f1-132">Ein Wert, der angibt, ob der Bericht aus dem Integritätsspeicher entfernt wird, wenn er abläuft.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-132">Value that indicates whether the report is removed from health store when it expires.</span></span>
+      <span data-ttu-id="3f9f1-133">Wenn dieser Wert auf „true“ festgelegt ist, wird der Bericht aus dem Integritätsspeicher entfernt, nachdem er abgelaufen ist.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-133">If set to true, the report is removed from the health store after it expires.</span></span>
+      <span data-ttu-id="3f9f1-134">Wenn dieser Wert auf „false“ festgelegt ist, wird der Bericht als Fehler behandelt, wenn er abgelaufen ist.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-134">If set to false, the report is treated as an error when expired.</span></span> <span data-ttu-id="3f9f1-135">Der Wert dieser Eigenschaft ist standardmäßig auf „false“ festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-135">The value of this property is false by default.</span></span>
+      <span data-ttu-id="3f9f1-136">Wenn Clients in regelmäßigen Abständen Berichte erstellen, sollte RemoveWhenExpired auf „false“ (Standardwert) festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-136">When clients report periodically, they should set RemoveWhenExpired false (default).</span></span>
+      <span data-ttu-id="3f9f1-137">Auf diese Weise ist der Reporter Probleme (z. B. Deadlocks) und kann nicht gemeldet werden, wird die Entität auf Fehler bei ausgewertet Integritätsbericht abläuft.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-137">This way, if the reporter has issues (e.g. deadlock) and can't report, the entity is evaluated at error when the health report expires.</span></span>
+      <span data-ttu-id="3f9f1-138">Hierdurch wird die Entität nicht als in einem fehlerhaften Integritätszustand befindlich gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-138">This flags the entity as being in Error health state.</span></span>
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3f9f1-139">Die Sequenznummer für diesen Integritätsbericht als numerische Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-139">The sequence number for this health report as a numeric string.</span></span>
+      <span data-ttu-id="3f9f1-140">Die Sequenznummer des Berichts wird vom Integritätsspeicher zur Erkennung veralteter Berichte verwendet.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-140">The report sequence number is used by the health store to detect stale reports.</span></span>
+      <span data-ttu-id="3f9f1-141">Wenn diese nicht angegeben ist, wird beim Hinzufügen eines Berichts automatisch eine Sequenznummer vom Integritätsclient generiert.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-141">If not specified, a sequence number is auto-generated by the health client when a report is added.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceId
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3f9f1-142">Der Quellenname, der die Client-, Watchdog- oder Systemkomponente identifiziert, die die Integritätsinformationen generiert hat.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-142">The source name that identifies the client/watchdog/system component that generated the health information.</span></span>'
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3f9f1-143">Das Datum und Uhrzeit, wann der Bericht zur Integrität von der Quelle gesendet wurde.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-143">The date and time when the health report was sent by the source.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="3f9f1-144">Die Dauer, für die dieser Integritätsbericht gültig ist.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-144">The duration for which this health report is valid.</span></span> <span data-ttu-id="3f9f1-145">Bei diesem Feld wird das ISO8601-Format zur Angabe der Dauer verwendet.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-145">This field uses ISO8601 format for specifying the duration.</span></span>
+      <span data-ttu-id="3f9f1-146">Wenn Clients in regelmäßigen Abständen Berichte erstellen, sollten sie Berichte in einem höherer Intervall als die Gültigkeitsdauer senden.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-146">When clients report periodically, they should send reports with higher frequency than time to live.</span></span>
+      <span data-ttu-id="3f9f1-147">Wenn Clients Berichte zur Übertragung erstellen, können sie die Gültigkeitsdauer auf einen unbegrenzten Wert festlegen.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-147">If clients report on transition, they can set the time to live to infinite.</span></span>
+      <span data-ttu-id="3f9f1-148">Wenn die Gültigkeitsdauer abläuft, wird das Integritätsereignis, das die Integritätsinformationen enthält, entweder aus dem Integritätsspeicher entfernt, sofern RemoveWhenExpired auf „true“ festgelegt ist, oder auf Fehler ausgewertet, sofern RemoveWhenExpired auf „false“ festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-148">When time to live expires, the health event that contains the health information is either removed from health store, if RemoveWhenExpired is true, or evaluated at error, if RemoveWhenExpired false.</span></span>
+      <span data-ttu-id="3f9f1-149">Wenn kein Wert angegeben ist, wird die Gültigkeitsdauer standardmäßig auf einen unbegrenzten Wert festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3f9f1-149">If not specified, time to live defaults to infinite value.</span></span>
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthInformation
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: azure-servicefabric.HealthInformation
