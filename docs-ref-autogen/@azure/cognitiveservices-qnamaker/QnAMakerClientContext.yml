@@ -45,23 +45,23 @@ items:
           - string
     package: '@azure/cognitiveservices-qnamaker'
   - uid: '@azure/cognitiveservices-qnamaker.QnAMakerClientContext.constructor'
-    name: 'QnAMakerClientContext(string, ServiceClientCredentials, msRest.ServiceClientOptions)'
+    name: 'QnAMakerClientContext(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: Initialisiert eine neue Instanz der Klasse QnAMakerClientContext an.
     syntax:
-      content: 'new QnAMakerClientContext(endpoint: string, credentials: ServiceClientCredentials, options?: msRest.ServiceClientOptions)'
+      content: 'new QnAMakerClientContext(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
       parameters:
-        - id: endpoint
-          type:
-            - string
-          description: 'Cognitive Services-Endpunkte unterstützt (Protokoll und den Hostnamen, z. B.: https://westus.api.cognitive.microsoft.com).'
         - id: credentials
           type:
             - ServiceClientCredentials
           description: 'Abonnementanmeldeinformationen, die clientabonnement eindeutig identifiziert.'
+        - id: endpoint
+          type:
+            - string
+          description: 'Cognitive Services-Endpunkte unterstützt (Protokoll und den Hostnamen, z. B.: https://westus.api.cognitive.microsoft.com).'
         - id: options
           type:
             - msRest.ServiceClientOptions

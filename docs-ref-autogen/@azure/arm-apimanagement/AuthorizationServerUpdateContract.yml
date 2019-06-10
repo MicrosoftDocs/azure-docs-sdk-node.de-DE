@@ -1,0 +1,372 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract'
+    name: AuthorizationServerUpdateContract
+    fullName: AuthorizationServerUpdateContract
+    children:
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.authorizationEndpoint'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.authorizationMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.bearerTokenSendingMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientAuthenticationMethod'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientId'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientRegistrationEndpoint'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientSecret'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.defaultScope'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.description'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.displayName'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.grantTypes'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.id'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.name'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.resourceOwnerPassword'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.resourceOwnerUsername'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.supportState'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.tokenBodyParameters'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.tokenEndpoint'
+      - '@azure/arm-apimanagement.AuthorizationServerUpdateContract.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Externe OAuth Authorization Server-Einstellungen.
+    extends:
+      name: '@azure/arm-apimanagement.Resource'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.authorizationEndpoint'
+    name: authorizationEndpoint
+    fullName: authorizationEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'OAuth-autorisierungsendpunkt. Siehe http://tools.ietf.org/html/rfc6749#section-3.2.'
+    optional: true
+    syntax:
+      content: 'authorizationEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.authorizationMethods'
+    name: authorizationMethods
+    fullName: authorizationMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'HTTP-Verben, die von den autorisierungsendpunkt unterstützt werden. GET muss immer angegeben werden. POST ist optional.'
+    optional: true
+    syntax:
+      content: 'authorizationMethods?: AuthorizationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.AuthorizationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.bearerTokenSendingMethods'
+    name: bearerTokenSendingMethods
+    fullName: bearerTokenSendingMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt den Mechanismus, mit dessen Hilfe das Token an der API übergeben wird.'
+    optional: true
+    syntax:
+      content: 'bearerTokenSendingMethods?: BearerTokenSendingMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientAuthenticationMethod'
+    name: clientAuthenticationMethod
+    fullName: clientAuthenticationMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Methode der Authentifizierung, die von den tokenendpunkt dieses autorisierungsservers unterstützt werden.
+      Mögliche Werte sind Basic und/oder der Text. Wenn Text angegeben wird, werden Clientanmeldeinformationen und weitere Parameter im Anforderungstext im Application/X-www-form-urlencoded-Format übergeben.
+    optional: true
+    syntax:
+      content: 'clientAuthenticationMethod?: ClientAuthenticationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientId'
+    name: clientId
+    fullName: clientId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Client- oder app-Id registriert sich bei diesem autorisierungsserver.
+    optional: true
+    syntax:
+      content: 'clientId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientRegistrationEndpoint'
+    name: clientRegistrationEndpoint
+    fullName: clientRegistrationEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Optionaler Verweis auf eine Seite, an die Client- oder app-Registrierung für diesen autorisierungsserver ausgeführt wird. Enthält die absolute URL zu der Entität, die auf die verwiesen wird.'
+    optional: true
+    syntax:
+      content: 'clientRegistrationEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.clientSecret'
+    name: clientSecret
+    fullName: clientSecret
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Client- oder app-Geheimnis registriert sich bei diesem autorisierungsserver.
+    optional: true
+    syntax:
+      content: 'clientSecret?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.defaultScope'
+    name: defaultScope
+    fullName: defaultScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Access token Bereich, der standardmäßig angefordert werden soll. Kann auf die API-Ebene überschrieben werden. Muss in Form einer Zeichenfolge mit Leerzeichen getrennten Werten bereitgestellt werden.'
+    optional: true
+    syntax:
+      content: 'defaultScope?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Beschreibung des autorisierungsservers. Kann HTML-Formatierungstags enthalten.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name der benutzerfreundlichen Autorisierung-Servers.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.grantTypes'
+    name: grantTypes
+    fullName: grantTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Form von einer autorisierungsgenehmigung, und der Client zum Anfordern des Zugriffstokens.'
+    optional: true
+    syntax:
+      content: 'grantTypes?: GrantType[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.GrantType[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ressourcen-ID
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Name der Ressource.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.resourceOwnerPassword'
+    name: resourceOwnerPassword
+    fullName: resourceOwnerPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Kann optional angegeben werden wenn Kennwort Grant ressourcenbesitzertyp von diesem autorisierungsserver unterstützt wird. Das Kennwort des standardressourcenbesitzers.
+    optional: true
+    syntax:
+      content: 'resourceOwnerPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.resourceOwnerUsername'
+    name: resourceOwnerUsername
+    fullName: resourceOwnerUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Kann optional angegeben werden wenn Kennwort Grant ressourcenbesitzertyp von diesem autorisierungsserver unterstützt wird. Vorteile des standardressourcenbesitzers.
+    optional: true
+    syntax:
+      content: 'resourceOwnerUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.supportState'
+    name: supportState
+    fullName: supportState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Bei "true", enthalten autorisierungsserver den Zustandsparameter aus der autorisierungsanforderung in seine Antwort. Client können Zustandsparameters die protokollsicherheit erhöhen.'
+    optional: true
+    syntax:
+      content: 'supportState?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.tokenBodyParameters'
+    name: tokenBodyParameters
+    fullName: tokenBodyParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Erforderlichen Zusatzparameter den tokenendpunkt dieses autorisierungsservers dargestellt, wie ein Array von JSON mit Name-Wert-Eigenschaften,, z. B. Objekte {"Name": "Namenswert", "value": "einen Wert"}.'
+    optional: true
+    syntax:
+      content: 'tokenBodyParameters?: TokenBodyParameterContract[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.tokenEndpoint'
+    name: tokenEndpoint
+    fullName: tokenEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: OAuth-token-Endpunkt. Enthält einen absoluten URI zur Entität auf die verwiesen wird.
+    optional: true
+    syntax:
+      content: 'tokenEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerUpdateContract.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Ressourcentyp für API Management-Ressource.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-apimanagement.Resource'
+  - uid: '@azure/arm-apimanagement.AuthorizationMethod[]'
+    name: 'AuthorizationMethod[]'
+    spec.typeScript:
+      - name: AuthorizationMethod
+        fullName: AuthorizationMethod
+        uid: '@azure/arm-apimanagement.AuthorizationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    name: 'BearerTokenSendingMethod[]'
+    spec.typeScript:
+      - name: BearerTokenSendingMethod
+        fullName: BearerTokenSendingMethod
+        uid: '@azure/arm-apimanagement.BearerTokenSendingMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    name: 'ClientAuthenticationMethod[]'
+    spec.typeScript:
+      - name: ClientAuthenticationMethod
+        fullName: ClientAuthenticationMethod
+        uid: '@azure/arm-apimanagement.ClientAuthenticationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.GrantType[]'
+    name: 'GrantType[]'
+    spec.typeScript:
+      - name: GrantType
+        fullName: GrantType
+        uid: '@azure/arm-apimanagement.GrantType'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    name: 'TokenBodyParameterContract[]'
+    spec.typeScript:
+      - name: TokenBodyParameterContract
+        fullName: TokenBodyParameterContract
+        uid: '@azure/arm-apimanagement.TokenBodyParameterContract'
+      - name: '[]'
+        fullName: '[]'
