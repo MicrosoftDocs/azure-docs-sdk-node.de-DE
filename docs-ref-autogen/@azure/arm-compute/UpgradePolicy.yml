@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.UpgradePolicy'
+    name: UpgradePolicy
+    fullName: UpgradePolicy
+    children:
+      - '@azure/arm-compute.UpgradePolicy.automaticOSUpgradePolicy'
+      - '@azure/arm-compute.UpgradePolicy.mode'
+      - '@azure/arm-compute.UpgradePolicy.rollingUpgradePolicy'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt eine Upgraderichtlinie – Automatisches, Manuelles oder parallele.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.UpgradePolicy.automaticOSUpgradePolicy'
+    name: automaticOSUpgradePolicy
+    fullName: automaticOSUpgradePolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Konfigurationsparameter, die zum Ausführen der automatischen Betriebssystemupgrades verwendet werden.'
+    optional: true
+    syntax:
+      content: 'automaticOSUpgradePolicy?: AutomaticOSUpgradePolicy'
+      return:
+        type:
+          - '@azure/arm-compute.AutomaticOSUpgradePolicy'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.UpgradePolicy.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt den Modus ein Upgrade auf virtuelle Computer in der Skalierungsgruppe an.<br /><br /> Dabei sind folgende Werte möglich:<br /><br /> **Manuelle** – Sie steuern, die Anwendung von Updates für virtuelle Computer in der Skalierungsgruppe. Dazu müssen Sie mithilfe der Aktion ManualUpgrade.<br /><br />
+      **Automatische** -alle virtuellen Computer in der Skalierungsgruppe werden zur gleichen Zeit automatisch aktualisiert. Mögliche Werte sind: 'Automatic', 'Manual', 'Rolling'
+    optional: true
+    syntax:
+      content: 'mode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/arm-compute.UpgradeMode'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.UpgradePolicy.rollingUpgradePolicy'
+    name: rollingUpgradePolicy
+    fullName: rollingUpgradePolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Konfigurationsparameter, die beim Ausführen eines parallelen Upgrades verwendet wird.'
+    optional: true
+    syntax:
+      content: 'rollingUpgradePolicy?: RollingUpgradePolicy'
+      return:
+        type:
+          - '@azure/arm-compute.RollingUpgradePolicy'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AutomaticOSUpgradePolicy'
+    name: AutomaticOSUpgradePolicy
+    spec.typeScript:
+      - name: AutomaticOSUpgradePolicy
+        fullName: AutomaticOSUpgradePolicy
+        uid: '@azure/arm-compute.AutomaticOSUpgradePolicy'
+  - uid: '@azure/arm-compute.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/arm-compute.UpgradeMode'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    spec.typeScript:
+      - name: RollingUpgradePolicy
+        fullName: RollingUpgradePolicy
+        uid: '@azure/arm-compute.RollingUpgradePolicy'
