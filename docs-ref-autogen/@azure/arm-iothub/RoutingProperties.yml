@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.RoutingProperties'
+    name: RoutingProperties
+    fullName: RoutingProperties
+    children:
+      - '@azure/arm-iothub.RoutingProperties.endpoints'
+      - '@azure/arm-iothub.RoutingProperties.enrichments'
+      - '@azure/arm-iothub.RoutingProperties.fallbackRoute'
+      - '@azure/arm-iothub.RoutingProperties.routes'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="5a977-101">Das routing speicherbezogenen Eigenschaften der iothub.</span><span class="sxs-lookup"><span data-stu-id="5a977-101">The routing related properties of the IoT hub.</span></span> <span data-ttu-id="5a977-102">Sieh: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging</span><span class="sxs-lookup"><span data-stu-id="5a977-102">See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging</span></span>'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.endpoints'
+    name: endpoints
+    fullName: endpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endpoints?: RoutingEndpoints'
+      return:
+        type:
+          - '@azure/arm-iothub.RoutingEndpoints'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.enrichments'
+    name: enrichments
+    fullName: enrichments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5a977-103">Die Liste der vom Benutzer bereitgestellte Enrichments, die iothub für Nachrichten, die auf integrierte und benutzerdefinierte Endpunkte übermittelt werden gilt.</span><span class="sxs-lookup"><span data-stu-id="5a977-103">The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints.</span></span> <span data-ttu-id="5a977-104">Sieh: https://aka.ms/iotmsgenrich</span><span class="sxs-lookup"><span data-stu-id="5a977-104">See: https://aka.ms/iotmsgenrich</span></span>'
+    optional: true
+    syntax:
+      content: 'enrichments?: EnrichmentProperties[]'
+      return:
+        type:
+          - '@azure/arm-iothub.EnrichmentProperties[]'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.fallbackRoute'
+    name: fallbackRoute
+    fullName: fallbackRoute
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5a977-105">Die Eigenschaften der Route, die verwendet wird, als eine Herbst-Back-Route, wenn keine der im Abschnitt "Routen" angegebenen Bedingungen erfüllt sind.</span><span class="sxs-lookup"><span data-stu-id="5a977-105">The properties of the route that is used as a fall-back route when none of the conditions specified in the ''routes'' section are met.</span></span> <span data-ttu-id="5a977-106">Dieser Parameter ist optional.</span><span class="sxs-lookup"><span data-stu-id="5a977-106">This is an optional parameter.</span></span> <span data-ttu-id="5a977-107">Wenn diese Eigenschaft nicht festgelegt ist, werden Nachrichten, die nicht im Abschnitt "Routen" angegebenen Bedingungen erfüllen, an den integrierten Event Hub-Endpunkt weitergeleitet.</span><span class="sxs-lookup"><span data-stu-id="5a977-107">When this property is not set, the messages which do not meet any of the conditions specified in the ''routes'' section get routed to the built-in eventhub endpoint.</span></span>'
+    optional: true
+    syntax:
+      content: 'fallbackRoute?: FallbackRouteProperties'
+      return:
+        type:
+          - '@azure/arm-iothub.FallbackRouteProperties'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.routes'
+    name: routes
+    fullName: routes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5a977-108">Die Liste der vom Benutzer bereitgestellte Routingregeln, die der IoT-Hub zum Weiterleiten von Nachrichten mit integrierten und benutzerdefinierten Endpunkten verwendet.</span><span class="sxs-lookup"><span data-stu-id="5a977-108">The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints.</span></span> <span data-ttu-id="5a977-109">Maximal 100 Weiterleitungsregeln für kostenpflichtige Hubs zulässig sind und maximal 5 Routingregeln werden kostenlos Hubs zulässig.</span><span class="sxs-lookup"><span data-stu-id="5a977-109">A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.</span></span>'
+    optional: true
+    syntax:
+      content: 'routes?: RouteProperties[]'
+      return:
+        type:
+          - '@azure/arm-iothub.RouteProperties[]'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.RoutingEndpoints'
+    name: RoutingEndpoints
+    spec.typeScript:
+      - name: RoutingEndpoints
+        fullName: RoutingEndpoints
+        uid: '@azure/arm-iothub.RoutingEndpoints'
+  - uid: '@azure/arm-iothub.EnrichmentProperties[]'
+    name: 'EnrichmentProperties[]'
+    spec.typeScript:
+      - name: EnrichmentProperties
+        fullName: EnrichmentProperties
+        uid: '@azure/arm-iothub.EnrichmentProperties'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-iothub.FallbackRouteProperties'
+    name: FallbackRouteProperties
+    spec.typeScript:
+      - name: FallbackRouteProperties
+        fullName: FallbackRouteProperties
+        uid: '@azure/arm-iothub.FallbackRouteProperties'
+  - uid: '@azure/arm-iothub.RouteProperties[]'
+    name: 'RouteProperties[]'
+    spec.typeScript:
+      - name: RouteProperties
+        fullName: RouteProperties
+        uid: '@azure/arm-iothub.RouteProperties'
+      - name: '[]'
+        fullName: '[]'
