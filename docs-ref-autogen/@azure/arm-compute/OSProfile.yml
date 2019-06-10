@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    fullName: OSProfile
+    children:
+      - '@azure/arm-compute.OSProfile.adminPassword'
+      - '@azure/arm-compute.OSProfile.adminUsername'
+      - '@azure/arm-compute.OSProfile.allowExtensionOperations'
+      - '@azure/arm-compute.OSProfile.computerName'
+      - '@azure/arm-compute.OSProfile.customData'
+      - '@azure/arm-compute.OSProfile.linuxConfiguration'
+      - '@azure/arm-compute.OSProfile.secrets'
+      - '@azure/arm-compute.OSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: Legt die Einstellungen des Betriebssystems für den virtuellen Computer fest.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt das Kennwort des Administratorkontos an. <br><br> **Mindestlänge (Windows):** 8 Zeichen <br><br> **Mindestlänge (Linux):** 6 Zeichen lang sein <br><br> **Maximale Länge (Windows):** 123 Zeichen <br><br> **Maximale Länge (Linux):** 72 Zeichen <br><br>
+      **Anforderungen an die Kennwortkomplexität:** folgenden 3 der 4-Bedingungen müssen erfüllt sein soll. <br> Kleinbuchstaben hat <br>Großbuchstaben hat <br> Hat eine Ziffer <br> Verfügt über ein Sonderzeichen (Übereinstimmung [\W_]) <br><br> **Nicht zulässige Werte:** "abc@123", "P@$$w0rd", "P@ssw0rd","P@ssword123", "Pa$ $Wort", "pass@word1", "Password!", "Password1", "Password22", "Iloveyou!" <br><br> Das Kennwort zurücksetzen, finden Sie unter [Gewusst wie: Zurücksetzen des Remotedesktopdiensts oder seines Anmeldekennworts in einer Windows-VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Das Root-Kennwort zurücksetzen, finden Sie unter [Verwalten von Benutzern, SSH und überprüfen oder Reparieren von Datenträgern auf Azure Linux-VMs, die mit der VMAccess-Erweiterung](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt den Namen des Administratorkontos an. <br><br> **Nur Windows-Einschränkung:** Darf nicht mit enden "." <br><br> **Nicht zulässige Werte:** "Administrator", "Admin", "User", "Benutzer1", "test", "Benutzer2", "test1", "user3", "admin1", "1", "123", "a", "Actuser", "Adm", "admin2", "Aspnet", "backup", "Console", "David", "Gast", "John", "Besitzer", "Root", "Server", " SQL","support","support_388945a0","Sys","test2",""Test3"","user4","user5". <br><br> **Mindestlänge (Linux):** 1 Zeichen <br><br> **Maximale Länge (Linux):** 64 Zeichen <br><br> **Maximale Länge (Windows):** 20 Zeichen  <br><br><li> Root-Zugriff auf die Linux-VM, finden Sie unter [Verwenden von Stammberechtigungen auf virtuellen Linux-Computern in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
+      Eine Liste der integrierter Systembenutzer für Linux, die in diesem Feld nicht verwendet werden sollte, finden Sie unter [auswählen von Benutzernamen für Linux in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
+    name: allowExtensionOperations
+    fullName: allowExtensionOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob die Erweiterung Vorgänge auf dem virtuellen Computer zugelassen werden soll. <br><br>Dies kann nur auf "false" festgelegt werden, wenn keine Erweiterungen auf dem virtuellen Computer vorhanden sind.'
+    optional: true
+    syntax:
+      content: 'allowExtensionOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.computerName'
+    name: computerName
+    fullName: computerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt den Namen des Host-Betriebssystem des virtuellen Computers. <br><br> Dieser Name kann nicht aktualisiert werden, nachdem der virtuelle Computer erstellt wurde. <br><br> **Maximale Länge (Windows):** 15 Zeichen <br><br> **Maximale Länge (Linux):** 64 Zeichen. <br><br> Für die Benennung von Konventionen und Einschränkungen finden Sie unter [Azure-Infrastrukturdienste Implementierungsrichtlinien](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).'
+    optional: true
+    syntax:
+      content: 'computerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt einen Base64-codierte Zeichenfolge benutzerdefinierter Daten an. Die Base64-codierte Zeichenfolge wird in ein binäres Array decodiert, die als Datei auf dem virtuellen Computer gespeichert ist. Die maximale Länge des binären Arrays beträgt 65535 Bytes. <br><br> Cloud-Init für Ihren virtuellen Computer verwenden, finden Sie unter [mit Cloud-Init zum Anpassen einer Linux-VM während der Erstellung](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt die Einstellungen des Linux-Betriebssystems auf dem virtuellen Computer an. <br><br>Eine Liste der unterstützten Linux-Distributionen, finden Sie unter [Linux auf Azure unterstützten Verteilungen](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> Für die Ausführung von nicht unterstützten Verteilungen, finden Sie unter [Informationen zu nicht unterstützten Verteilungen](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, der Zertifikate, die auf dem virtuellen Computer installiert werden sollen.'
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gibt die Einstellungen des Windows-Betriebssystems auf dem virtuellen Computer an.
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'
