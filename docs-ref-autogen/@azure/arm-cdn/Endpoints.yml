@@ -1,0 +1,1119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Endpoints'
+    name: Endpoints
+    fullName: Endpoints
+    children:
+      - '@azure/arm-cdn.Endpoints.beginCreate'
+      - '@azure/arm-cdn.Endpoints.beginDeleteMethod'
+      - '@azure/arm-cdn.Endpoints.beginLoadContent'
+      - '@azure/arm-cdn.Endpoints.beginPurgeContent'
+      - '@azure/arm-cdn.Endpoints.beginStart'
+      - '@azure/arm-cdn.Endpoints.beginStop'
+      - '@azure/arm-cdn.Endpoints.beginUpdate'
+      - '@azure/arm-cdn.Endpoints.create'
+      - '@azure/arm-cdn.Endpoints.deleteMethod'
+      - '@azure/arm-cdn.Endpoints.constructor'
+      - '@azure/arm-cdn.Endpoints.get'
+      - '@azure/arm-cdn.Endpoints.get_2'
+      - '@azure/arm-cdn.Endpoints.get_1'
+      - '@azure/arm-cdn.Endpoints.listByProfile'
+      - '@azure/arm-cdn.Endpoints.listByProfile_2'
+      - '@azure/arm-cdn.Endpoints.listByProfile_1'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext_2'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext_1'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage_2'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage_1'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext_2'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext_1'
+      - '@azure/arm-cdn.Endpoints.loadContent'
+      - '@azure/arm-cdn.Endpoints.purgeContent'
+      - '@azure/arm-cdn.Endpoints.start'
+      - '@azure/arm-cdn.Endpoints.stop'
+      - '@azure/arm-cdn.Endpoints.update'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain_2'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="44189-101">Klasse, die eine Endpunkte darstellt.</span><span class="sxs-lookup"><span data-stu-id="44189-101">Class representing a Endpoints.</span></span>'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginCreate'
+    name: 'beginCreate(string, string, string, Endpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-102">Erstellt einen neuen CDN-Endpunkt mit dem angegebenen Endpunktnamen in die angegebene Abonnement, Ressourcengruppe und das Profil an.</span><span class="sxs-lookup"><span data-stu-id="44189-102">Creates a new CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, profileName: string, endpointName: string, endpoint: Endpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-103">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-103">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-104">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-104">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-105">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-105">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: endpoint
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: <span data-ttu-id="44189-106">Eigenschaften des serverendpunkts</span><span class="sxs-lookup"><span data-stu-id="44189-106">Endpoint properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-107">Löscht einen vorhandenen CDN-Endpunkt mit dem angegebenen Endpunktnamen in die angegebene Abonnement, Ressourcengruppe und das Profil an.</span><span class="sxs-lookup"><span data-stu-id="44189-107">Deletes an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-108">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-108">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-109">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-109">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-110">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-110">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginLoadContent'
+    name: 'beginLoadContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-111">Vorab lädt eine an das CDN.</span><span class="sxs-lookup"><span data-stu-id="44189-111">Pre-loads a content to CDN.</span></span> <span data-ttu-id="44189-112">Für Verizon-Profile verfügbar.</span><span class="sxs-lookup"><span data-stu-id="44189-112">Available for Verizon Profiles.</span></span>
+    syntax:
+      content: 'function beginLoadContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-113">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-113">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-114">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-114">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-115">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-115">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="44189-116">Der Pfad auf den Inhalt geladen werden.</span><span class="sxs-lookup"><span data-stu-id="44189-116">The path to the content to be loaded.</span></span> <span data-ttu-id="44189-117">Pfad muss ein relativer URL des Ursprungs.</span><span class="sxs-lookup"><span data-stu-id="44189-117">Path should be a relative file URL of the origin.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginPurgeContent'
+    name: 'beginPurgeContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-118">Entfernt einen Inhalt vom CDN an.</span><span class="sxs-lookup"><span data-stu-id="44189-118">Removes a content from CDN.</span></span>
+    syntax:
+      content: 'function beginPurgeContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-119">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-119">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-120">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-120">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-121">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-121">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="44189-122">Der Pfad auf den Inhalt gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="44189-122">The path to the content to be purged.</span></span> <span data-ttu-id="44189-123">Hierbei kann es sich um einen Dateipfad oder ein Platzhalter-Verzeichnis beschreiben.</span><span class="sxs-lookup"><span data-stu-id="44189-123">Can describe a file path or a wild card directory.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginStart'
+    name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-124">Startet einen vorhandenen CDN-Endpunkt, der auf den Status "beendet" befindet.</span><span class="sxs-lookup"><span data-stu-id="44189-124">Starts an existing CDN endpoint that is on a stopped state.</span></span>'
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-125">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-125">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-126">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-126">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-127">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-127">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginStop'
+    name: 'beginStop(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-128">Beendet einen vorhandenen, ausgeführten CDN-Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="44189-128">Stops an existing running CDN endpoint.</span></span>'
+    syntax:
+      content: 'function beginStop(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-129">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-129">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-130">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-130">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-131">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-131">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginUpdate'
+    name: 'beginUpdate(string, string, string, EndpointUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-132">Aktualisiert einen vorhandenen CDN-Endpunkt mit dem angegebenen Endpunktnamen in die angegebene Abonnement, Ressourcengruppe und das Profil an.</span><span class="sxs-lookup"><span data-stu-id="44189-132">Updates an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span> <span data-ttu-id="44189-133">Nur Tags und HostHeader für Ursprung kann nach dem Erstellen eines Endpunkts aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="44189-133">Only tags and Origin HostHeader can be updated after creating an endpoint.</span></span> <span data-ttu-id="44189-134">Um Ursprünge zu aktualisieren, verwenden Sie den Vorgang Ursprung aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="44189-134">To update origins, use the Update Origin operation.</span></span> <span data-ttu-id="44189-135">Um benutzerdefinierte Domänen zu aktualisieren, verwenden Sie den Vorgang für die benutzerdefinierte Domäne zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="44189-135">To update custom domains, use the Update Custom Domain operation.</span></span>'
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, endpointName: string, endpointUpdateProperties: EndpointUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-136">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-136">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-137">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-137">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-138">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-138">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: endpointUpdateProperties
+          type:
+            - '@azure/arm-cdn.EndpointUpdateParameters'
+          description: <span data-ttu-id="44189-139">Update-Endpunkteigenschaften</span><span class="sxs-lookup"><span data-stu-id="44189-139">Endpoint update properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.create'
+    name: 'create(string, string, string, Endpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-140">Erstellt einen neuen CDN-Endpunkt mit dem angegebenen Endpunktnamen in die angegebene Abonnement, Ressourcengruppe und das Profil an.</span><span class="sxs-lookup"><span data-stu-id="44189-140">Creates a new CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, profileName: string, endpointName: string, endpoint: Endpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-141">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-141">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-142">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-142">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-143">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-143">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: endpoint
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: <span data-ttu-id="44189-144">Eigenschaften des serverendpunkts</span><span class="sxs-lookup"><span data-stu-id="44189-144">Endpoint properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsCreateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-145">Löscht einen vorhandenen CDN-Endpunkt mit dem angegebenen Endpunktnamen in die angegebene Abonnement, Ressourcengruppe und das Profil an.</span><span class="sxs-lookup"><span data-stu-id="44189-145">Deletes an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-146">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-146">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-147">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-147">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-148">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-148">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.constructor'
+    name: Endpoints(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-149">Erstellen Sie eine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="44189-149">Create a Endpoints.</span></span>
+    syntax:
+      content: 'new Endpoints(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            <span data-ttu-id="44189-150">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="44189-150">Reference to the service client.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-151">Ruft einen vorhandenen CDN-Endpunkt mit dem angegebenen Endpunktnamen unter dem angegebenen Abonnement, Ressourcengruppe und Profil ab.</span><span class="sxs-lookup"><span data-stu-id="44189-151">Gets an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-152">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-152">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-153">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-153">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-154">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-154">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Endpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<Endpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-155">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-155">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-156">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-156">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-157">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-157">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="44189-158">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="44189-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Endpoint>
+          description: |
+            <span data-ttu-id="44189-159">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get_1'
+    name: 'get(string, string, string, ServiceCallback<Endpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<Endpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-160">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-160">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-161">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-161">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-162">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-162">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Endpoint>
+          description: |
+            <span data-ttu-id="44189-163">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile'
+    name: 'listByProfile(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-164">Listet die vorhandenen CDN-Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="44189-164">Lists existing CDN endpoints.</span></span>
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-165">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-165">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-166">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-166">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile_2'
+    name: 'listByProfile(string, string, RequestOptionsBase, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-167">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-167">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-168">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-168">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="44189-169">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="44189-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="44189-170">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile_1'
+    name: 'listByProfile(string, string, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-171">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-171">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-172">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-172">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="44189-173">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext'
+    name: 'listByProfileNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-174">Listet die vorhandenen CDN-Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="44189-174">Lists existing CDN endpoints.</span></span>
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="44189-175">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="44189-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext_2'
+    name: 'listByProfileNext(string, RequestOptionsBase, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="44189-176">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="44189-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="44189-177">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="44189-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="44189-178">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext_1'
+    name: 'listByProfileNext(string, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="44189-179">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="44189-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="44189-180">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage'
+    name: 'listResourceUsage(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-181">Überprüft das Kontingent und die Verwendung von Geo-Filter und benutzerdefinierten Domänen unter den angegebenen Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="44189-181">Checks the quota and usage of geo filters and custom domains under the given endpoint.</span></span>
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-182">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-182">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-183">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-183">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-184">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-184">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage_2'
+    name: 'listResourceUsage(string, string, string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-185">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-185">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-186">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-186">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-187">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-187">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="44189-188">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="44189-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="44189-189">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage_1'
+    name: 'listResourceUsage(string, string, string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-190">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-190">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-191">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-191">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-192">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-192">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="44189-193">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext'
+    name: 'listResourceUsageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-194">Überprüft das Kontingent und die Verwendung von Geo-Filter und benutzerdefinierten Domänen unter den angegebenen Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="44189-194">Checks the quota and usage of geo filters and custom domains under the given endpoint.</span></span>
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="44189-195">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="44189-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext_2'
+    name: 'listResourceUsageNext(string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="44189-196">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="44189-196">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="44189-197">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="44189-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="44189-198">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext_1'
+    name: 'listResourceUsageNext(string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="44189-199">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="44189-199">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="44189-200">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-200">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.loadContent'
+    name: 'loadContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-201">Vorab lädt eine an das CDN.</span><span class="sxs-lookup"><span data-stu-id="44189-201">Pre-loads a content to CDN.</span></span> <span data-ttu-id="44189-202">Für Verizon-Profile verfügbar.</span><span class="sxs-lookup"><span data-stu-id="44189-202">Available for Verizon Profiles.</span></span>
+    syntax:
+      content: 'function loadContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-203">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-203">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-204">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-204">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-205">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-205">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="44189-206">Der Pfad auf den Inhalt geladen werden.</span><span class="sxs-lookup"><span data-stu-id="44189-206">The path to the content to be loaded.</span></span> <span data-ttu-id="44189-207">Pfad muss ein relativer URL des Ursprungs.</span><span class="sxs-lookup"><span data-stu-id="44189-207">Path should be a relative file URL of the origin.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.purgeContent'
+    name: 'purgeContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="44189-208">Entfernt einen Inhalt vom CDN an.</span><span class="sxs-lookup"><span data-stu-id="44189-208">Removes a content from CDN.</span></span>
+    syntax:
+      content: 'function purgeContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-209">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-209">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-210">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-210">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-211">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-211">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="44189-212">Der Pfad auf den Inhalt gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="44189-212">The path to the content to be purged.</span></span> <span data-ttu-id="44189-213">Hierbei kann es sich um einen Dateipfad oder ein Platzhalter-Verzeichnis beschreiben.</span><span class="sxs-lookup"><span data-stu-id="44189-213">Can describe a file path or a wild card directory.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.start'
+    name: 'start(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-214">Startet einen vorhandenen CDN-Endpunkt, der auf den Status "beendet" befindet.</span><span class="sxs-lookup"><span data-stu-id="44189-214">Starts an existing CDN endpoint that is on a stopped state.</span></span>'
+    syntax:
+      content: 'function start(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-215">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-215">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-216">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-216">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-217">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-217">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsStartResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.stop'
+    name: 'stop(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-218">Beendet einen vorhandenen, ausgeführten CDN-Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="44189-218">Stops an existing running CDN endpoint.</span></span>'
+    syntax:
+      content: 'function stop(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-219">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-219">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-220">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-220">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-221">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-221">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsStopResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.update'
+    name: 'update(string, string, string, EndpointUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-222">Aktualisiert einen vorhandenen CDN-Endpunkt mit dem angegebenen Endpunktnamen in die angegebene Abonnement, Ressourcengruppe und das Profil an.</span><span class="sxs-lookup"><span data-stu-id="44189-222">Updates an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span> <span data-ttu-id="44189-223">Nur Tags und HostHeader für Ursprung kann nach dem Erstellen eines Endpunkts aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="44189-223">Only tags and Origin HostHeader can be updated after creating an endpoint.</span></span> <span data-ttu-id="44189-224">Um Ursprünge zu aktualisieren, verwenden Sie den Vorgang Ursprung aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="44189-224">To update origins, use the Update Origin operation.</span></span> <span data-ttu-id="44189-225">Um benutzerdefinierte Domänen zu aktualisieren, verwenden Sie den Vorgang für die benutzerdefinierte Domäne zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="44189-225">To update custom domains, use the Update Custom Domain operation.</span></span>'
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, endpointUpdateProperties: EndpointUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-226">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-226">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-227">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-227">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-228">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-228">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: endpointUpdateProperties
+          type:
+            - '@azure/arm-cdn.EndpointUpdateParameters'
+          description: <span data-ttu-id="44189-229">Update-Endpunkteigenschaften</span><span class="sxs-lookup"><span data-stu-id="44189-229">Endpoint update properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsUpdateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain'
+    name: 'validateCustomDomain(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="44189-230">Überprüft die Zuordnung der benutzerdefinierten Domäne um sicherzustellen, dass es den richtigen CDN-Endpunkt im DNS zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="44189-230">Validates the custom domain mapping to ensure it maps to the correct CDN endpoint in DNS.</span></span>'
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-231">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-231">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-232">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-232">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-233">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-233">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: hostName
+          type:
+            - string
+          description: <span data-ttu-id="44189-234">Der Hostname der benutzerdefinierten Domäne.</span><span class="sxs-lookup"><span data-stu-id="44189-234">The host name of the custom domain.</span></span> <span data-ttu-id="44189-235">Dies muss ein Domänenname sein.</span><span class="sxs-lookup"><span data-stu-id="44189-235">Must be a domain name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain_2'
+    name: 'validateCustomDomain(string, string, string, string, RequestOptionsBase, ServiceCallback<ValidateCustomDomainOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, options: RequestOptionsBase, callback: ServiceCallback<ValidateCustomDomainOutput>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-236">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-236">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-237">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-237">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-238">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-238">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: hostName
+          type:
+            - string
+          description: <span data-ttu-id="44189-239">Der Hostname der benutzerdefinierten Domäne.</span><span class="sxs-lookup"><span data-stu-id="44189-239">The host name of the custom domain.</span></span> <span data-ttu-id="44189-240">Dies muss ein Domänenname sein.</span><span class="sxs-lookup"><span data-stu-id="44189-240">Must be a domain name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="44189-241">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="44189-241">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+          description: |
+            <span data-ttu-id="44189-242">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-242">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain_1'
+    name: 'validateCustomDomain(string, string, string, string, ServiceCallback<ValidateCustomDomainOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, callback: ServiceCallback<ValidateCustomDomainOutput>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="44189-243">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="44189-243">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-244">Der Name des CDN-Profils, der innerhalb der Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-244">Name of the CDN profile which is unique within the resource group.</span></span>'
+        - id: endpointName
+          type:
+            - string
+          description: '<span data-ttu-id="44189-245">Der Name des Endpunkts unter dem Profil, das global eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="44189-245">Name of the endpoint under the profile which is unique globally.</span></span>'
+        - id: hostName
+          type:
+            - string
+          description: <span data-ttu-id="44189-246">Der Hostname der benutzerdefinierten Domäne.</span><span class="sxs-lookup"><span data-stu-id="44189-246">The host name of the custom domain.</span></span> <span data-ttu-id="44189-247">Dies muss ein Domänenname sein.</span><span class="sxs-lookup"><span data-stu-id="44189-247">Must be a domain name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+          description: |
+            <span data-ttu-id="44189-248">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="44189-248">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.Endpoint'
+    name: Endpoint
+    spec.typeScript:
+      - name: Endpoint
+        fullName: Endpoint
+        uid: '@azure/arm-cdn.Endpoint'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters'
+    name: EndpointUpdateParameters
+    spec.typeScript:
+      - name: EndpointUpdateParameters
+        fullName: EndpointUpdateParameters
+        uid: '@azure/arm-cdn.EndpointUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-cdn.Endpoint>
+    name: Endpoint>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Endpoint
+        fullName: Endpoint
+        uid: '@azure/arm-cdn.Endpoint'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.EndpointListResult>
+    name: EndpointListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: EndpointListResult
+        fullName: EndpointListResult
+        uid: '@azure/arm-cdn.EndpointListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+    name: ResourceUsageListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceUsageListResult
+        fullName: ResourceUsageListResult
+        uid: '@azure/arm-cdn.ResourceUsageListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+    name: ValidateCustomDomainOutput>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ValidateCustomDomainOutput
+        fullName: ValidateCustomDomainOutput
+        uid: '@azure/arm-cdn.ValidateCustomDomainOutput'
+      - name: '>'
+        fullName: '>'

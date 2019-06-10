@@ -1,0 +1,819 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-automation.RunbookOperations'
+    name: RunbookOperations
+    fullName: RunbookOperations
+    children:
+      - '@azure/arm-automation.RunbookOperations.beginPublish'
+      - '@azure/arm-automation.RunbookOperations.createOrUpdate'
+      - '@azure/arm-automation.RunbookOperations.createOrUpdate_2'
+      - '@azure/arm-automation.RunbookOperations.createOrUpdate_1'
+      - '@azure/arm-automation.RunbookOperations.deleteMethod'
+      - '@azure/arm-automation.RunbookOperations.deleteMethod_2'
+      - '@azure/arm-automation.RunbookOperations.deleteMethod_1'
+      - '@azure/arm-automation.RunbookOperations.get'
+      - '@azure/arm-automation.RunbookOperations.get_2'
+      - '@azure/arm-automation.RunbookOperations.get_1'
+      - '@azure/arm-automation.RunbookOperations.getContent'
+      - '@azure/arm-automation.RunbookOperations.getContent_2'
+      - '@azure/arm-automation.RunbookOperations.getContent_1'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccount'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccount_2'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccount_1'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_2'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_1'
+      - '@azure/arm-automation.RunbookOperations.publish'
+      - '@azure/arm-automation.RunbookOperations.constructor'
+      - '@azure/arm-automation.RunbookOperations.update'
+      - '@azure/arm-automation.RunbookOperations.update_2'
+      - '@azure/arm-automation.RunbookOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="7f194-101">Klasse, die eine RunbookOperations darstellt.</span><span class="sxs-lookup"><span data-stu-id="7f194-101">Class representing a RunbookOperations.</span></span>'
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.beginPublish'
+    name: 'beginPublish(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-102">Runbook-Entwurf zu veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="7f194-102">Publish runbook draft.</span></span>
+    syntax:
+      content: 'function beginPublish(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-103">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-103">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-104">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-104">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-105">Die Parameter für das Runbook veröffentlichen zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="7f194-105">The parameters supplied to the publish runbook operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, RunbookCreateOrUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-106">Erstellen Sie das Runbook nach dem runbooknamen identifiziert.</span><span class="sxs-lookup"><span data-stu-id="7f194-106">Create the runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookCreateOrUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-107">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-107">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-108">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-108">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-109">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-109">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+          description: '<span data-ttu-id="7f194-110">Das Erstellen oder Aktualisieren der Parameter für Runbooks.</span><span class="sxs-lookup"><span data-stu-id="7f194-110">The create or update parameters for runbook.</span></span> <span data-ttu-id="7f194-111">Geben Sie entweder Inhaltslink für ein veröffentlichtes Runbook oder den Entwurf, nicht beides an.</span><span class="sxs-lookup"><span data-stu-id="7f194-111">Provide either content link for a published runbook or draft, not both.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookCreateOrUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, RunbookCreateOrUpdateParameters, RequestOptionsBase, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookCreateOrUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-112">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-112">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-113">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-113">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-114">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-114">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+          description: '<span data-ttu-id="7f194-115">Das Erstellen oder Aktualisieren der Parameter für Runbooks.</span><span class="sxs-lookup"><span data-stu-id="7f194-115">The create or update parameters for runbook.</span></span> <span data-ttu-id="7f194-116">Geben Sie entweder Inhaltslink für ein veröffentlichtes Runbook oder den Entwurf, nicht beides an.</span><span class="sxs-lookup"><span data-stu-id="7f194-116">Provide either content link for a published runbook or draft, not both.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-117">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-117">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="7f194-118">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookCreateOrUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, RunbookCreateOrUpdateParameters, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookCreateOrUpdateParameters, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-119">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-119">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-120">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-120">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-121">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-121">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+          description: '<span data-ttu-id="7f194-122">Das Erstellen oder Aktualisieren der Parameter für Runbooks.</span><span class="sxs-lookup"><span data-stu-id="7f194-122">The create or update parameters for runbook.</span></span> <span data-ttu-id="7f194-123">Geben Sie entweder Inhaltslink für ein veröffentlichtes Runbook oder den Entwurf, nicht beides an.</span><span class="sxs-lookup"><span data-stu-id="7f194-123">Provide either content link for a published runbook or draft, not both.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="7f194-124">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookCreateOrUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-125">Löschen Sie das Runbook nach dem Namen ein.</span><span class="sxs-lookup"><span data-stu-id="7f194-125">Delete the runbook by name.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-126">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-126">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-127">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-127">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-128">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-128">The runbook name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, automationAccountName: string, runbookName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-129">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-129">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-130">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-130">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-131">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-131">The runbook name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-132">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7f194-133">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-133">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, automationAccountName: string, runbookName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-134">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-134">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-135">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-135">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-136">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-136">The runbook name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7f194-137">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-137">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-138">Rufen Sie das Runbook nach dem runbooknamen identifiziert.</span><span class="sxs-lookup"><span data-stu-id="7f194-138">Retrieve the runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-139">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-139">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-140">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-140">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-141">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-141">The runbook name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, runbookName: string, options: RequestOptionsBase, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-142">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-142">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-143">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-143">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-144">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-144">The runbook name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-145">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="7f194-146">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, runbookName: string, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-147">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-147">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-148">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-148">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-149">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-149">The runbook name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="7f194-150">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-150">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.getContent'
+    name: 'getContent(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7f194-151">Rufen Sie den Inhalt des Runbooks, die von der Runbook-Name identifiziert.</span><span class="sxs-lookup"><span data-stu-id="7f194-151">Retrieve the content of runbook identified by runbook name.</span></span>'
+    syntax:
+      content: 'function getContent(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-152">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-152">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-153">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-153">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-154">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-154">The runbook name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookGetContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.getContent_2'
+    name: 'getContent(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getContent(resourceGroupName: string, automationAccountName: string, runbookName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-155">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-155">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-156">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-156">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-157">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-157">The runbook name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-158">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7f194-159">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.getContent_1'
+    name: 'getContent(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getContent(resourceGroupName: string, automationAccountName: string, runbookName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-160">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-160">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-161">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-161">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-162">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-162">The runbook name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7f194-163">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccount'
+    name: 'listByAutomationAccount(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-164">Eine Liste der Runbooks abrufen.</span><span class="sxs-lookup"><span data-stu-id="7f194-164">Retrieve a list of runbooks.</span></span>
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-165">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-165">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-166">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-166">The name of the automation account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccount_2'
+    name: 'listByAutomationAccount(string, string, RequestOptionsBase, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, options: RequestOptionsBase, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-167">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-167">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-168">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-168">The name of the automation account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-169">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="7f194-170">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccount_1'
+    name: 'listByAutomationAccount(string, string, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-171">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-171">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-172">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-172">The name of the automation account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="7f194-173">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext'
+    name: 'listByAutomationAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-174">Eine Liste der Runbooks abrufen.</span><span class="sxs-lookup"><span data-stu-id="7f194-174">Retrieve a list of runbooks.</span></span>
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7f194-175">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7f194-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_2'
+    name: 'listByAutomationAccountNext(string, RequestOptionsBase, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7f194-176">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7f194-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-177">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="7f194-178">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_1'
+    name: 'listByAutomationAccountNext(string, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7f194-179">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="7f194-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="7f194-180">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.publish'
+    name: 'publish(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-181">Runbook-Entwurf zu veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="7f194-181">Publish runbook draft.</span></span>
+    syntax:
+      content: 'function publish(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-182">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-182">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-183">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-183">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-184">Die Parameter für das Runbook veröffentlichen zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="7f194-184">The parameters supplied to the publish runbook operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookPublishResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.constructor'
+    name: RunbookOperations(AutomationClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-185">Erstellen Sie eine RunbookOperations.</span><span class="sxs-lookup"><span data-stu-id="7f194-185">Create a RunbookOperations.</span></span>
+    syntax:
+      content: 'new RunbookOperations(client: AutomationClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-automation.AutomationClientContext'
+          description: |
+            <span data-ttu-id="7f194-186">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="7f194-186">Reference to the service client.</span></span>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.update'
+    name: 'update(string, string, string, RunbookUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7f194-187">Aktualisieren Sie das Runbook nach dem runbooknamen identifiziert.</span><span class="sxs-lookup"><span data-stu-id="7f194-187">Update the runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-188">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-188">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-189">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-189">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-190">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-190">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookUpdateParameters'
+          description: <span data-ttu-id="7f194-191">Die Update-Parameter für Runbooks werden soll.</span><span class="sxs-lookup"><span data-stu-id="7f194-191">The update parameters for runbook.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.update_2'
+    name: 'update(string, string, string, RunbookUpdateParameters, RequestOptionsBase, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-192">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-192">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-193">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-193">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-194">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-194">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookUpdateParameters'
+          description: <span data-ttu-id="7f194-195">Die Update-Parameter für Runbooks werden soll.</span><span class="sxs-lookup"><span data-stu-id="7f194-195">The update parameters for runbook.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7f194-196">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="7f194-196">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="7f194-197">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-197">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.update_1'
+    name: 'update(string, string, string, RunbookUpdateParameters, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookUpdateParameters, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-198">Der Name einer Azure-Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7f194-198">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-199">Der Name des Automation-Kontos.</span><span class="sxs-lookup"><span data-stu-id="7f194-199">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="7f194-200">Der Runbook-Name.</span><span class="sxs-lookup"><span data-stu-id="7f194-200">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookUpdateParameters'
+          description: <span data-ttu-id="7f194-201">Die Update-Parameter für Runbooks werden soll.</span><span class="sxs-lookup"><span data-stu-id="7f194-201">The update parameters for runbook.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="7f194-202">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="7f194-202">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookUpdateResponse>
+    package: '@azure/arm-automation'
+references:
+  - uid: '@azure/arm-automation.AutomationClientContext'
+    name: AutomationClientContext
+    spec.typeScript:
+      - name: AutomationClientContext
+        fullName: AutomationClientContext
+        uid: '@azure/arm-automation.AutomationClientContext'
+  - uid: '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+    name: RunbookCreateOrUpdateParameters
+    spec.typeScript:
+      - name: RunbookCreateOrUpdateParameters
+        fullName: RunbookCreateOrUpdateParameters
+        uid: '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-automation.Runbook>
+    name: Runbook>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Runbook
+        fullName: Runbook
+        uid: '@azure/arm-automation.Runbook'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-automation.RunbookListResult>
+    name: RunbookListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RunbookListResult
+        fullName: RunbookListResult
+        uid: '@azure/arm-automation.RunbookListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-automation.RunbookUpdateParameters'
+    name: RunbookUpdateParameters
+    spec.typeScript:
+      - name: RunbookUpdateParameters
+        fullName: RunbookUpdateParameters
+        uid: '@azure/arm-automation.RunbookUpdateParameters'
