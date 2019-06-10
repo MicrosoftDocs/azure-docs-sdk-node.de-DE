@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: Die integritätsdaten für einen Endpunkt
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID des Endpunkts
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Integritätsstatus haben folgende Bedeutungen. Der Status "fehlerfreie" zeigt, dass der Endpunkt Nachrichten annimmt wie erwartet. Der Status "fehlerhafte" zeigt, dass der Endpunkt nimmt keine Nachrichten, wie erwartet und IoT Hub wiederholt wird, um Daten an diesen Endpunkt senden. Der Status eines fehlerhaften Endpunkts wird zu fehlerfrei aktualisiert, wenn IoT Hub einen möglicherweise konsistenten Integritätsstatus erreicht hat. Die "inaktiv" angezeigt wurde, dass der Endpunkt nach dem IoT Hub sendende von Nachrichten für den Zeitraum Retrial wiederholt keine Nachrichten akzeptiert. Finden Sie in IoT Hub-Metriken zum Ermitteln von Fehlern und Problemen mit der Endpunkte zu überwachen. Der Status "unknown" zeigt, dass eine Verbindung mit dem Endpunkt nicht in den IoT Hub hergestellt hat. Von diesem Endpunkt wurden keine Nachrichten übermittelt oder zurückgewiesen. Folgende Werte sind möglich: "unknown", "fehlerfrei", "fehlerhaft", "Warteschlange für unzustellbare Nachrichten"'
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'

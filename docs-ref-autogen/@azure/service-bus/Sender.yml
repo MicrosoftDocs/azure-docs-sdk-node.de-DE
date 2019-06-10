@@ -1,0 +1,189 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    fullName: Sender
+    children:
+      - '@azure/service-bus.Sender.cancelScheduledMessage'
+      - '@azure/service-bus.Sender.cancelScheduledMessages'
+      - '@azure/service-bus.Sender.close'
+      - '@azure/service-bus.Sender.isClosed'
+      - '@azure/service-bus.Sender.scheduleMessage'
+      - '@azure/service-bus.Sender.scheduleMessages'
+      - '@azure/service-bus.Sender.send'
+      - '@azure/service-bus.Sender.sendBatch'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Die Absender-Klasse kann verwendet werden, zum Senden von Nachrichten, planen die Nachrichten, die zu einem späteren Zeitpunkt gesendet werden, und solche geplanten Nachrichten abgebrochen werden kann.
+      Verwenden der `createSender` Funktion für die QueueClient oder TopicClient, um einen Sender zu instanziieren.
+      Die Absender-Klasse ist eine Abstraktion über die zugrunde liegenden AMQP-Sender-Verbindung.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessage'
+    name: cancelScheduledMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Bricht eine Nachricht, die geplant wurde, auf eine Service Bus-Warteschlange oder ein Abonnement angezeigt werden.'
+    syntax:
+      content: 'function cancelScheduledMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: 'Die Sequenznummer der Nachricht, die abgebrochen werden.'
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessages'
+    name: 'cancelScheduledMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Bricht die mehrere Nachrichten, die laut auf eine Service Bus-Warteschlange oder ein Abonnement angezeigt werden.'
+    syntax:
+      content: 'function cancelScheduledMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: 'Ein Array von Sequenznummern der Nachrichten, die abgebrochen werden.'
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Schließt den zugrunde liegenden AMQP-Sender-Link.
+      Sobald geschlossen, kann der Absender für weitere Vorgänge verwendet werden.
+      Verwenden der `createSender` Funktion für die QueueClient oder TopicClient, instanziieren Sie einen neuen Absender
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt `true` Wenn entweder der Absender oder der Client, der es erstellt geschlossen wurde'
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessage'
+    name: 'scheduleMessage(Date, SendableMessageInfo)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Zeitpläne, die angegebenen Meldung, die auf Service Bus-Warteschlange/Abonnement zu einem späteren Zeitpunkt angezeigt werden.'
+    syntax:
+      content: 'function scheduleMessage(scheduledEnqueueTimeUtc: Date, message: SendableMessageInfo)'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: 'Die UTC-Zeit, an der die Meldung in die Warteschlange eingereiht werden soll.'
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: 'Die Meldung, die geplant werden muss.'
+      return:
+        type:
+          - Promise<Long>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessages'
+    name: 'scheduleMessages(Date, SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Zeitpläne erhält Nachrichten für Service Bus-Warteschlange/Abonnement zu einem späteren Zeitpunkt angezeigt werden.
+    syntax:
+      content: 'function scheduleMessages(scheduledEnqueueTimeUtc: Date, messages: SendableMessageInfo[])'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: 'Die UTC-Zeit, an der die Nachrichten in die Warteschlange eingereiht werden sollen.'
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: 'Array von Meldungen, die durchgeführt werden müssen.'
+      return:
+        type:
+          - 'Promise<Long[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.send'
+    name: send(SendableMessageInfo)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Sendet die angegebene Meldung an, nach dem Erstellen einer AMQP-senderlink, sofern er noch nicht vorhanden ist.
+      Zum Senden einer Nachricht an eine `session` und/oder `partition` aktiviert "oder" Topic, Festlegen der `sessionId` und/oder `partitionKey` bzw. Eigenschaften der Nachricht.
+    syntax:
+      content: 'function send(message: SendableMessageInfo)'
+      parameters:
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: Zu sendende Nachricht.
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.sendBatch'
+    name: 'sendBatch(SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Die bestimmten Nachrichten in einem einzelnen Batch also in eine einzelne AMQP-Nachricht gesendet, nachdem eine AMQP-senderlink erstellen, sofern er noch nicht vorhanden ist.
+      - Zum Senden von Nachrichten an eine `session` und/oder `partition` aktiviert "oder" Topic, Festlegen der `sessionId` und/oder `partitionKey` Eigenschaften bzw. in den Nachrichten.
+      - Dabei sollten alle Nachrichten im Batch weist den gleichen `sessionId` (bei Verwendung von Sitzungen) und demselben `parititionKey` (bei Verwendung von Partitionen).
+    syntax:
+      content: 'function sendBatch(messages: SendableMessageInfo[])'
+      parameters:
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: 'Ein Array von SendableMessageInfo-Objekten, die in einer Meldung gesendet werden.'
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+  - uid: '@azure/service-bus.SendableMessageInfo[]'
+    name: 'SendableMessageInfo[]'
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+      - name: '[]'
+        fullName: '[]'
