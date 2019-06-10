@@ -1,0 +1,212 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.VaultProperties'
+    name: VaultProperties
+    fullName: VaultProperties
+    children:
+      - '@azure/arm-keyvault.VaultProperties.accessPolicies'
+      - '@azure/arm-keyvault.VaultProperties.createMode'
+      - '@azure/arm-keyvault.VaultProperties.enabledForDeployment'
+      - '@azure/arm-keyvault.VaultProperties.enabledForDiskEncryption'
+      - '@azure/arm-keyvault.VaultProperties.enabledForTemplateDeployment'
+      - '@azure/arm-keyvault.VaultProperties.enablePurgeProtection'
+      - '@azure/arm-keyvault.VaultProperties.enableSoftDelete'
+      - '@azure/arm-keyvault.VaultProperties.networkAcls'
+      - '@azure/arm-keyvault.VaultProperties.sku'
+      - '@azure/arm-keyvault.VaultProperties.tenantId'
+      - '@azure/arm-keyvault.VaultProperties.vaultUri'
+    langs:
+      - typeScript
+    type: interface
+    summary: Eigenschaften des Tresors
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.accessPolicies'
+    name: accessPolicies
+    fullName: accessPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein Array von 0 bis 16-Identitäten, die auf den schlüsseltresor zugreifen. Alle Identitäten im Array müssen die gleiche Mandanten-ID als Mandanten-ID für den schlüsseltresor verwenden. Wenn `createMode` nastaven NA hodnotu `recover`, Zugriffsrichtlinien sind nicht erforderlich. Andernfalls sind die Richtlinien für den Zugriff erforderlich.'
+    optional: true
+    syntax:
+      content: 'accessPolicies?: AccessPolicyEntry[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.AccessPolicyEntry[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Tresor erstellen Modus, um anzugeben, ob der Tresor oder nicht wiederhergestellt werden müssen. Folgende Werte sind möglich: ''Wiederherstellen'', ''Default'''
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-keyvault.CreateMode'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enabledForDeployment'
+    name: enabledForDeployment
+    fullName: enabledForDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eigenschaft, um anzugeben, ob es sich bei Azure Virtual Machines zulässig sind, um als Geheimnisse aus dem schlüsseltresor gespeicherten Zertifikate abzurufen.'
+    optional: true
+    syntax:
+      content: 'enabledForDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enabledForDiskEncryption'
+    name: enabledForDiskEncryption
+    fullName: enabledForDiskEncryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eigenschaft, um anzugeben, ob Azure Disk Encryption Geheimnisse aus dem Tresor abrufen und Schlüssel Entpacken darf.'
+    optional: true
+    syntax:
+      content: 'enabledForDiskEncryption?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enabledForTemplateDeployment'
+    name: enabledForTemplateDeployment
+    fullName: enabledForTemplateDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eigenschaft, um anzugeben, ob Azure Resource Manager Geheimnisse aus dem schlüsseltresor abrufen darf.'
+    optional: true
+    syntax:
+      content: 'enabledForTemplateDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enablePurgeProtection'
+    name: enablePurgeProtection
+    fullName: enablePurgeProtection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Für diesen Tresor ist die Eigenschaft, die angibt, ob der Schutz vor bereinigen aktiviert. Das Festlegen dieser Eigenschaft auf "true" wird gegen löschen für diesen Tresor und seinen Inhalt aktiviert: nur der Key Vault-Dienst kann eine Löschung schwer, nicht behebbare initiieren. Die Einstellung ist nur wirksam, wenn auch die vorläufiges Löschen aktiviert ist. Aktivieren diese Funktion ist nicht umkehrbar – d. h. die Eigenschaft nicht "false" als Wert akzeptiert.'
+    optional: true
+    syntax:
+      content: 'enablePurgeProtection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enableSoftDelete'
+    name: enableSoftDelete
+    fullName: enableSoftDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eigenschaft, um anzugeben, ob die Funktionen "vorläufiges löschen" für Key Vault-Instanz aktiviert ist. Wert "false" werden nicht angenommen.'
+    optional: true
+    syntax:
+      content: 'enableSoftDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.networkAcls'
+    name: networkAcls
+    fullName: networkAcls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Eine Auflistung von Regeln für den Zugriff auf den Tresor aus bestimmten Netzwerkadressen.
+    optional: true
+    syntax:
+      content: 'networkAcls?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleSet'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: SKU-Details
+    syntax:
+      content: 'sku: Sku'
+      return:
+        type:
+          - '@azure/arm-keyvault.Sku'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Azure Active Directory-Mandanten-ID, die zum Authentifizieren von Anforderungen in den schlüsseltresor verwendet werden soll.'
+    syntax:
+      content: 'tenantId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.vaultUri'
+    name: vaultUri
+    fullName: vaultUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der URI des Tresors, für das Ausführen von Vorgängen für Schlüssel und Geheimnisse.'
+    optional: true
+    syntax:
+      content: 'vaultUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry[]'
+    name: 'AccessPolicyEntry[]'
+    spec.typeScript:
+      - name: AccessPolicyEntry
+        fullName: AccessPolicyEntry
+        uid: '@azure/arm-keyvault.AccessPolicyEntry'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-keyvault.CreateMode'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-keyvault.NetworkRuleSet'
+  - uid: '@azure/arm-keyvault.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-keyvault.Sku'
