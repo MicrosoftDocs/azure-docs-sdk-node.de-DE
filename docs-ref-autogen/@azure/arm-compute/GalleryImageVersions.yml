@@ -1,0 +1,507 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.GalleryImageVersions'
+    name: GalleryImageVersions
+    fullName: GalleryImageVersions
+    children:
+      - '@azure/arm-compute.GalleryImageVersions.beginCreateOrUpdate'
+      - '@azure/arm-compute.GalleryImageVersions.beginDeleteMethod'
+      - '@azure/arm-compute.GalleryImageVersions.createOrUpdate'
+      - '@azure/arm-compute.GalleryImageVersions.deleteMethod'
+      - '@azure/arm-compute.GalleryImageVersions.constructor'
+      - '@azure/arm-compute.GalleryImageVersions.get_2'
+      - '@azure/arm-compute.GalleryImageVersions.get'
+      - '@azure/arm-compute.GalleryImageVersions.get_1'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImage'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_2'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_1'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_2'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="10cb0-101">Klasse, die eine GalleryImageVersions darstellt.</span><span class="sxs-lookup"><span data-stu-id="10cb0-101">Class representing a GalleryImageVersions.</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, string, GalleryImageVersion, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-102">Erstellen oder Aktualisieren eines Katalogs-Image-Version.</span><span class="sxs-lookup"><span data-stu-id="10cb0-102">Create or update a gallery Image Version.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, galleryImageVersion: GalleryImageVersion, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-103">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-103">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-104">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-104">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-105">Der Name der Definition des Katalog-Image in der die Version des Images ist, erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-105">The name of the gallery Image Definition in which the Image Version is to be created.</span></span>'
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-106">Der Name des Katalogs Imageversion erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-106">The name of the gallery Image Version to be created.</span></span> <span data-ttu-id="10cb0-107">Muss die semantische Version Namensmuster ausführen: Die zulässigen Zeichen sind Ziffern und Zeitraum.</span><span class="sxs-lookup"><span data-stu-id="10cb0-107">Needs to follow semantic version name pattern: The allowed characters are digit and period.</span></span> <span data-ttu-id="10cb0-108">Ziffern müssen innerhalb des Bereichs von 32-Bit-Ganzzahl sein.</span><span class="sxs-lookup"><span data-stu-id="10cb0-108">Digits must be within the range of a 32-bit integer.</span></span> <span data-ttu-id="10cb0-109">Format: <MajorVersion>.<MinorVersion>.<Patch></span><span class="sxs-lookup"><span data-stu-id="10cb0-109">Format: <MajorVersion>.<MinorVersion>.<Patch></span></span>'
+        - id: galleryImageVersion
+          type:
+            - '@azure/arm-compute.GalleryImageVersion'
+          description: '<span data-ttu-id="10cb0-110">Parameter, die im Katalog erstellen oder aktualisieren Imageversion Vorgang angegeben.</span><span class="sxs-lookup"><span data-stu-id="10cb0-110">Parameters supplied to the create or update gallery Image Version operation.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-111">Löschen Sie einen Katalog-Image-Version.</span><span class="sxs-lookup"><span data-stu-id="10cb0-111">Delete a gallery Image Version.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-112">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-112">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-113">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-113">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-114">Der Name der Definition des Katalog-Image in der sich die Imageversion befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-114">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-115">Der Name des Katalogs Imageversion gelöscht werden soll.</span><span class="sxs-lookup"><span data-stu-id="10cb0-115">The name of the gallery Image Version to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, GalleryImageVersion, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-116">Erstellen oder Aktualisieren eines Katalogs-Image-Version.</span><span class="sxs-lookup"><span data-stu-id="10cb0-116">Create or update a gallery Image Version.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, galleryImageVersion: GalleryImageVersion, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-117">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-117">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-118">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-118">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-119">Der Name der Definition des Katalog-Image in der die Version des Images ist, erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-119">The name of the gallery Image Definition in which the Image Version is to be created.</span></span>'
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-120">Der Name des Katalogs Imageversion erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-120">The name of the gallery Image Version to be created.</span></span> <span data-ttu-id="10cb0-121">Muss die semantische Version Namensmuster ausführen: Die zulässigen Zeichen sind Ziffern und Zeitraum.</span><span class="sxs-lookup"><span data-stu-id="10cb0-121">Needs to follow semantic version name pattern: The allowed characters are digit and period.</span></span> <span data-ttu-id="10cb0-122">Ziffern müssen innerhalb des Bereichs von 32-Bit-Ganzzahl sein.</span><span class="sxs-lookup"><span data-stu-id="10cb0-122">Digits must be within the range of a 32-bit integer.</span></span> <span data-ttu-id="10cb0-123">Format: <MajorVersion>.<MinorVersion>.<Patch></span><span class="sxs-lookup"><span data-stu-id="10cb0-123">Format: <MajorVersion>.<MinorVersion>.<Patch></span></span>'
+        - id: galleryImageVersion
+          type:
+            - '@azure/arm-compute.GalleryImageVersion'
+          description: '<span data-ttu-id="10cb0-124">Parameter, die im Katalog erstellen oder aktualisieren Imageversion Vorgang angegeben.</span><span class="sxs-lookup"><span data-stu-id="10cb0-124">Parameters supplied to the create or update gallery Image Version operation.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-125">Löschen Sie einen Katalog-Image-Version.</span><span class="sxs-lookup"><span data-stu-id="10cb0-125">Delete a gallery Image Version.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-126">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-126">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-127">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-127">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-128">Der Name der Definition des Katalog-Image in der sich die Imageversion befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-128">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-129">Der Name des Katalogs Imageversion gelöscht werden soll.</span><span class="sxs-lookup"><span data-stu-id="10cb0-129">The name of the gallery Image Version to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.constructor'
+    name: GalleryImageVersions(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-130">Erstellen Sie eine GalleryImageVersions.</span><span class="sxs-lookup"><span data-stu-id="10cb0-130">Create a GalleryImageVersions.</span></span>
+    syntax:
+      content: 'new GalleryImageVersions(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="10cb0-131">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="10cb0-131">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.get_2'
+    name: 'get(string, string, string, string, GalleryImageVersionsGetOptionalParams, ServiceCallback<GalleryImageVersion>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options: GalleryImageVersionsGetOptionalParams, callback: ServiceCallback<GalleryImageVersion>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-132">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-132">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-133">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-133">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-134">Der Name der Definition des Katalog-Image in der sich die Imageversion befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-134">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-135">Der Name des Katalogs Imageversion abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="10cb0-135">The name of the gallery Image Version to be retrieved.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
+          description: <span data-ttu-id="10cb0-136">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="10cb0-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersion>
+          description: |
+            <span data-ttu-id="10cb0-137">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="10cb0-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.get'
+    name: 'get(string, string, string, string, Models.GalleryImageVersionsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-138">Ruft Informationen zu einem Katalog-Image-Version ab.</span><span class="sxs-lookup"><span data-stu-id="10cb0-138">Retrieves information about a gallery Image Version.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options?: Models.GalleryImageVersionsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-139">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-139">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-140">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-140">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-141">Der Name der Definition des Katalog-Image in der sich die Imageversion befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-141">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-142">Der Name des Katalogs Imageversion abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="10cb0-142">The name of the gallery Image Version to be retrieved.</span></span>
+        - id: options
+          type:
+            - Models.GalleryImageVersionsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<GalleryImageVersion>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, callback: ServiceCallback<GalleryImageVersion>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-143">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-143">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-144">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-144">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-145">Der Name der Definition des Katalog-Image in der sich die Imageversion befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-145">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-146">Der Name des Katalogs Imageversion abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="10cb0-146">The name of the gallery Image Version to be retrieved.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersion>
+          description: |
+            <span data-ttu-id="10cb0-147">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="10cb0-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImage'
+    name: 'listByGalleryImage(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-148">Listet die Katalog-Image-Versionen in einem Katalog Imagedefinition.</span><span class="sxs-lookup"><span data-stu-id="10cb0-148">List gallery Image Versions in a gallery Image Definition.</span></span>
+    syntax:
+      content: 'function listByGalleryImage(resourceGroupName: string, galleryName: string, galleryImageName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-149">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-149">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-150">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-150">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-151">Der Name der freigegebenen Image Gallery Image Definition aus dem die Bild-Versionen sind, aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-151">The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_2'
+    name: 'listByGalleryImage(string, string, string, RequestOptionsBase, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImage(resourceGroupName: string, galleryName: string, galleryImageName: string, options: RequestOptionsBase, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-152">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-152">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-153">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-153">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-154">Der Name der freigegebenen Image Gallery Image Definition aus dem die Bild-Versionen sind, aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-154">The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="10cb0-155">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="10cb0-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="10cb0-156">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="10cb0-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_1'
+    name: 'listByGalleryImage(string, string, string, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImage(resourceGroupName: string, galleryName: string, galleryImageName: string, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-157">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="10cb0-157">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-158">Der Name des gemeinsamen Image-Katalogs in der die Imagedefinition befindet.</span><span class="sxs-lookup"><span data-stu-id="10cb0-158">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: '<span data-ttu-id="10cb0-159">Der Name der freigegebenen Image Gallery Image Definition aus dem die Bild-Versionen sind, aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="10cb0-159">The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="10cb0-160">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="10cb0-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext'
+    name: 'listByGalleryImageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="10cb0-161">Listet die Katalog-Image-Versionen in einem Katalog Imagedefinition.</span><span class="sxs-lookup"><span data-stu-id="10cb0-161">List gallery Image Versions in a gallery Image Definition.</span></span>
+    syntax:
+      content: 'function listByGalleryImageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-162">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="10cb0-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_2'
+    name: 'listByGalleryImageNext(string, RequestOptionsBase, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-163">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="10cb0-163">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="10cb0-164">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="10cb0-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="10cb0-165">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="10cb0-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_1'
+    name: 'listByGalleryImageNext(string, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImageNext(nextPageLink: string, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="10cb0-166">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="10cb0-166">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="10cb0-167">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="10cb0-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageNextResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.GalleryImageVersion'
+    name: GalleryImageVersion
+    spec.typeScript:
+      - name: GalleryImageVersion
+        fullName: GalleryImageVersion
+        uid: '@azure/arm-compute.GalleryImageVersion'
+  - uid: ServiceCallback<@azure/arm-compute.GalleryImageVersion>
+    name: GalleryImageVersion>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GalleryImageVersion
+        fullName: GalleryImageVersion
+        uid: '@azure/arm-compute.GalleryImageVersion'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
+    name: GalleryImageVersionsGetOptionalParams
+    spec.typeScript:
+      - name: GalleryImageVersionsGetOptionalParams
+        fullName: GalleryImageVersionsGetOptionalParams
+        uid: '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+    name: GalleryImageVersionList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GalleryImageVersionList
+        fullName: GalleryImageVersionList
+        uid: '@azure/arm-compute.GalleryImageVersionList'
+      - name: '>'
+        fullName: '>'
