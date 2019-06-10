@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerregistry.IdentityProperties'
+    name: IdentityProperties
+    fullName: IdentityProperties
+    children:
+      - '@azure/arm-containerregistry.IdentityProperties.principalId'
+      - '@azure/arm-containerregistry.IdentityProperties.tenantId'
+      - '@azure/arm-containerregistry.IdentityProperties.type'
+      - '@azure/arm-containerregistry.IdentityProperties.userAssignedIdentities'
+    langs:
+      - typeScript
+    type: interface
+    summary: Verwaltete Identität für die Ressource.
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.IdentityProperties.principalId'
+    name: principalId
+    fullName: principalId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Prinzipal-ID der ressourcenidentität.
+    optional: true
+    syntax:
+      content: 'principalId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.IdentityProperties.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Mandanten-ID der Ressource.
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.IdentityProperties.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Typ der Identität. Mögliche Werte sind: ''SystemAssigned'', ''UserAssigned'', ''SystemAssigned, UserAssigned'', ''None'''
+    optional: true
+    syntax:
+      content: 'type?: ResourceIdentityType'
+      return:
+        type:
+          - '@azure/arm-containerregistry.ResourceIdentityType'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.IdentityProperties.userAssignedIdentities'
+    name: userAssignedIdentities
+    fullName: userAssignedIdentities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste von Benutzeridentitäten, die der Ressource zugeordnet werden soll. Identität Wörterbuch Schlüssel Verweise auf die werden ARM-Ressourcen-Ids in der Form: '' / Subscriptions / {SubscriptionId} / ResourceGroups / {ResourceGroupName} / providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName} ".'
+    optional: true
+    syntax:
+      content: 'userAssignedIdentities?: undefined | [key: string]: UserIdentityProperties'
+      return:
+        type:
+          - 'undefined | [key: string]: @azure/arm-containerregistry.UserIdentityProperties'
+    package: '@azure/arm-containerregistry'
+references:
+  - uid: '@azure/arm-containerregistry.ResourceIdentityType'
+    name: ResourceIdentityType
+    spec.typeScript:
+      - name: ResourceIdentityType
+        fullName: ResourceIdentityType
+        uid: '@azure/arm-containerregistry.ResourceIdentityType'
+  - uid: 'undefined | [key: string]: @azure/arm-containerregistry.UserIdentityProperties'
+    name: UserIdentityProperties
+    spec.typeScript:
+      - name: 'undefined | [key: string]: '
+        fullName: 'undefined | [key: string]: '
+      - name: UserIdentityProperties
+        fullName: UserIdentityProperties
+        uid: '@azure/arm-containerregistry.UserIdentityProperties'
