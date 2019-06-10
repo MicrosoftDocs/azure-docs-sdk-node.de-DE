@@ -8,12 +8,11 @@ items:
       - typeScript
     type: type alias
     summary: |+
-      App-Framework spezifischen Umgebung Unterstützung IsAngular - Flag festgelegt, um festzustellen, ob es sich um Angular-Framework ist. Verwendet, um Token zu senden. TODO: detangle diese Abhängigkeit vom Kern.
-      UnprotectedResources - Array von URIS die ungeschützten Ressourcen sind. MSAL wird ein Token nicht an ausgehende Anforderungen angefügt, die diesen URI verfügen. Der Standardwert ist 'null'.
-      ProtectedResourceMap - zuordnen dieser Ressourcen, um Bereiche von MSAL für das automatische Anhängen Zugangstoken in Web-API-Aufrufe verwendet.
-      Ein einzelnes Zugriffstoken wird für die Ressource abgerufen. Damit einen bestimmte Ressourcenpfad wie folgt zugeordnet werden können: {"https://graph.microsoft.com/v1.0/me", ["user.read"]}, oder der Ressource, wie die app-URL: {"https://graph.microsoft.com/", ["user.read", "mail.send"]}.
-      Dies ist für CORS-Aufrufe erforderlich.
+      Unterstützung für App-Framework-spezifischen Umgebung
+      - IsAngular - Flag festlegen, um festzustellen, ob es sich um Angular-Framework ist. MSAL verwendet dieses Token zu senden. Hier erläutert: mit dieser Abhängigkeit vom Kern detangle.
+      - UnprotectedResources - Array von URIS die ungeschützten Ressourcen sind. MSAL hängt kein Token an ausgehende Anforderungen an, die diesen URI enthalten. Der Standardwert ist 'null'.
+      - ProtectedResourceMap - zuordnen dieser Ressourcen, um Bereiche von MSAL für das automatische Anhängen Zugangstoken in Web-API-Aufrufe verwendet. Ein einzelnes Zugriffstoken wird für die Ressource abgerufen. Sie können einen bestimmten Ressourcenpfad wie folgt zuordnen: {"https://graph.microsoft.com/v1.0/me", ["user.read"]}, oder die App-URL der Ressource als: {"https://graph.microsoft.com/", ["user.read", "mail.send"]}. Dies ist für CORS-Aufrufe erforderlich.
 
     syntax:
-      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+      content: 'type FrameworkOptions = { isAngular: boolean, protectedResourceMap: Map<string>, unprotectedResources: Array<string> }'
     package: msal
