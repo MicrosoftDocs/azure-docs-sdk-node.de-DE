@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile_1'
+    name: withAuthFile(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Vor der Verwendung dieser Methode installieren Sie Azure-Befehlszeilenschnittstelle über https://github.com/Azure/azure-cli/releases. Führen Sie dann `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.
+      Wenn Sie die sp für eine andere Cloud-Umgebung erstellen möchten dann führen Sie:
+      1. az cloud list
+      2. az cloud set –n <name of the environment>
+      3. az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**
+      3. AZ Ad sp create-for-Rbac - erstellen-Cert: Sdk-Auth > auth.json / / erstellen Sie sp mit Zertifikat, wenn der Dienstprinzipal bereits dann Anmeldung mit Informationen zum Dienstprinzipal erstellt wird:
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. Azure-Konto angezeigt – Sdk-Auth > auth.json authentifiziert, verwenden die dienstprinzipalinformationen in die Auth-Datei angegeben. Diese Methode wird die Abonnement-ID aus der Datei für die Authentifizierung für den Benutzer, die angegebene Umgebungsvariable in der Options-Parameter oder den Standardwert "AZURE_SUBSCRIPTION_ID" festgelegt werden.
+    syntax:
+      content: 'function withAuthFile(options: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'
