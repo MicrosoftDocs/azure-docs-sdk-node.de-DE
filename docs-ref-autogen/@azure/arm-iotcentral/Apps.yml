@@ -1,0 +1,799 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iotcentral.Apps'
+    name: Apps
+    fullName: Apps
+    children:
+      - '@azure/arm-iotcentral.Apps.constructor'
+      - '@azure/arm-iotcentral.Apps.beginCreateOrUpdate'
+      - '@azure/arm-iotcentral.Apps.beginDeleteMethod'
+      - '@azure/arm-iotcentral.Apps.beginUpdate'
+      - '@azure/arm-iotcentral.Apps.checkNameAvailability'
+      - '@azure/arm-iotcentral.Apps.checkNameAvailability_2'
+      - '@azure/arm-iotcentral.Apps.checkNameAvailability_1'
+      - '@azure/arm-iotcentral.Apps.checkSubdomainAvailability'
+      - '@azure/arm-iotcentral.Apps.checkSubdomainAvailability_2'
+      - '@azure/arm-iotcentral.Apps.checkSubdomainAvailability_1'
+      - '@azure/arm-iotcentral.Apps.createOrUpdate'
+      - '@azure/arm-iotcentral.Apps.deleteMethod'
+      - '@azure/arm-iotcentral.Apps.get'
+      - '@azure/arm-iotcentral.Apps.get_2'
+      - '@azure/arm-iotcentral.Apps.get_1'
+      - '@azure/arm-iotcentral.Apps.listByResourceGroup'
+      - '@azure/arm-iotcentral.Apps.listByResourceGroup_2'
+      - '@azure/arm-iotcentral.Apps.listByResourceGroup_1'
+      - '@azure/arm-iotcentral.Apps.listByResourceGroupNext'
+      - '@azure/arm-iotcentral.Apps.listByResourceGroupNext_2'
+      - '@azure/arm-iotcentral.Apps.listByResourceGroupNext_1'
+      - '@azure/arm-iotcentral.Apps.listBySubscription'
+      - '@azure/arm-iotcentral.Apps.listBySubscription_2'
+      - '@azure/arm-iotcentral.Apps.listBySubscription_1'
+      - '@azure/arm-iotcentral.Apps.listBySubscriptionNext'
+      - '@azure/arm-iotcentral.Apps.listBySubscriptionNext_2'
+      - '@azure/arm-iotcentral.Apps.listBySubscriptionNext_1'
+      - '@azure/arm-iotcentral.Apps.update'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine App darstellt.'
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.constructor'
+    name: Apps(IotCentralClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine App.
+    syntax:
+      content: 'new Apps(client: IotCentralClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-iotcentral.IotCentralClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, App, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt oder aktualisiert die Metadaten einer IoT Central-Anwendung. Zum Ändern einer Eigenschaft das übliche Muster ist die Metadaten für IoT Central-Anwendung und Security-Metadaten abzurufen, und kombinieren Sie diese dann mit den geänderten Werten in einen neuen Text ein, um die IoT Central-Anwendung zu aktualisieren.'
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, resourceName: string, app: App, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: app
+          type:
+            - '@azure/arm-iotcentral.App'
+          description: Die Metadaten für IoT Central-Anwendung und Security-Metadaten.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Eine IoT Central-Anwendung zu löschen.
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.beginUpdate'
+    name: 'beginUpdate(string, string, AppPatch, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Die Metadaten einer IoT Central-Anwendung aktualisiert.
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, resourceName: string, appPatch: AppPatch, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: appPatch
+          type:
+            - '@azure/arm-iotcentral.AppPatch'
+          description: Die Metadaten für IoT Central-Anwendung und Security-Metadaten.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.checkNameAvailability'
+    name: 'checkNameAvailability(OperationInputs, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Überprüfen Sie, ob der Name einer IoT Central-Anwendung verfügbar ist.'
+    syntax:
+      content: 'function checkNameAvailability(operationInputs: OperationInputs, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationInputs
+          type:
+            - '@azure/arm-iotcentral.OperationInputs'
+          description: 'Legen Sie den Namensparameter in der Struktur OperationInputs auf den Namen des IoT Central-Anwendung, um zu überprüfen.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsCheckNameAvailabilityResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.checkNameAvailability_2'
+    name: 'checkNameAvailability(OperationInputs, RequestOptionsBase, ServiceCallback<AppAvailabilityInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(operationInputs: OperationInputs, options: RequestOptionsBase, callback: ServiceCallback<AppAvailabilityInfo>)'
+      parameters:
+        - id: operationInputs
+          type:
+            - '@azure/arm-iotcentral.OperationInputs'
+          description: 'Legen Sie den Namensparameter in der Struktur OperationInputs auf den Namen des IoT Central-Anwendung, um zu überprüfen.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppAvailabilityInfo>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsCheckNameAvailabilityResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.checkNameAvailability_1'
+    name: 'checkNameAvailability(OperationInputs, ServiceCallback<AppAvailabilityInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(operationInputs: OperationInputs, callback: ServiceCallback<AppAvailabilityInfo>)'
+      parameters:
+        - id: operationInputs
+          type:
+            - '@azure/arm-iotcentral.OperationInputs'
+          description: 'Legen Sie den Namensparameter in der Struktur OperationInputs auf den Namen des IoT Central-Anwendung, um zu überprüfen.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppAvailabilityInfo>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsCheckNameAvailabilityResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.checkSubdomainAvailability'
+    name: 'checkSubdomainAvailability(OperationInputs, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Überprüfen Sie, ob die Unterdomäne ein IoT Central-Anwendung verfügbar ist.'
+    syntax:
+      content: 'function checkSubdomainAvailability(operationInputs: OperationInputs, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationInputs
+          type:
+            - '@azure/arm-iotcentral.OperationInputs'
+          description: 'Legen Sie den Namensparameter in der Struktur OperationInputs für die Unterdomäne der IoT Central-Anwendung, um zu überprüfen.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsCheckSubdomainAvailabilityResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.checkSubdomainAvailability_2'
+    name: 'checkSubdomainAvailability(OperationInputs, RequestOptionsBase, ServiceCallback<AppAvailabilityInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkSubdomainAvailability(operationInputs: OperationInputs, options: RequestOptionsBase, callback: ServiceCallback<AppAvailabilityInfo>)'
+      parameters:
+        - id: operationInputs
+          type:
+            - '@azure/arm-iotcentral.OperationInputs'
+          description: 'Legen Sie den Namensparameter in der Struktur OperationInputs für die Unterdomäne der IoT Central-Anwendung, um zu überprüfen.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppAvailabilityInfo>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsCheckSubdomainAvailabilityResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.checkSubdomainAvailability_1'
+    name: 'checkSubdomainAvailability(OperationInputs, ServiceCallback<AppAvailabilityInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkSubdomainAvailability(operationInputs: OperationInputs, callback: ServiceCallback<AppAvailabilityInfo>)'
+      parameters:
+        - id: operationInputs
+          type:
+            - '@azure/arm-iotcentral.OperationInputs'
+          description: 'Legen Sie den Namensparameter in der Struktur OperationInputs für die Unterdomäne der IoT Central-Anwendung, um zu überprüfen.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppAvailabilityInfo>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsCheckSubdomainAvailabilityResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.createOrUpdate'
+    name: 'createOrUpdate(string, string, App, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt oder aktualisiert die Metadaten einer IoT Central-Anwendung. Zum Ändern einer Eigenschaft das übliche Muster ist die Metadaten für IoT Central-Anwendung und Security-Metadaten abzurufen, und kombinieren Sie diese dann mit den geänderten Werten in einen neuen Text ein, um die IoT Central-Anwendung zu aktualisieren.'
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, resourceName: string, app: App, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: app
+          type:
+            - '@azure/arm-iotcentral.App'
+          description: Die Metadaten für IoT Central-Anwendung und Security-Metadaten.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsCreateOrUpdateResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Eine IoT Central-Anwendung zu löschen.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft die Metadaten einer IoT Central-Anwendung.
+    syntax:
+      content: 'function get(resourceGroupName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsGetResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<App>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, resourceName: string, options: RequestOptionsBase, callback: ServiceCallback<App>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.App>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsGetResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.get_1'
+    name: 'get(string, string, ServiceCallback<App>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, resourceName: string, callback: ServiceCallback<App>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.App>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsGetResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Erhalten Sie alle IoT Central Anwendungen in einer Ressourcengruppe ein.
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsListByResourceGroupResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListByResourceGroupResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListByResourceGroupResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Erhalten Sie alle IoT Central Anwendungen in einer Ressourcengruppe ein.
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsListByResourceGroupNextResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListByResourceGroupNextResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListByResourceGroupNextResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listBySubscription'
+    name: listBySubscription(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Alle zentralen IoT-Anwendungen in einem Abonnement abrufen.
+    syntax:
+      content: 'function listBySubscription(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsListBySubscriptionResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listBySubscription_2'
+    name: 'listBySubscription(RequestOptionsBase, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscription(options: RequestOptionsBase, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListBySubscriptionResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listBySubscription_1'
+    name: listBySubscription(ServiceCallback<AppListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscription(callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListBySubscriptionResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listBySubscriptionNext'
+    name: 'listBySubscriptionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Alle zentralen IoT-Anwendungen in einem Abonnement abrufen.
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsListBySubscriptionNextResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listBySubscriptionNext_2'
+    name: 'listBySubscriptionNext(string, RequestOptionsBase, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListBySubscriptionNextResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.listBySubscriptionNext_1'
+    name: 'listBySubscriptionNext(string, ServiceCallback<AppListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, callback: ServiceCallback<AppListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-iotcentral.AppListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AppsListBySubscriptionNextResponse>
+    package: '@azure/arm-iotcentral'
+  - uid: '@azure/arm-iotcentral.Apps.update'
+    name: 'update(string, string, AppPatch, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Die Metadaten einer IoT Central-Anwendung aktualisiert.
+    syntax:
+      content: 'function update(resourceGroupName: string, resourceName: string, appPatch: AppPatch, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die IoT Central-Anwendung enthält.'
+        - id: resourceName
+          type:
+            - string
+          description: Der ARM-Ressourcenname der IoT Central-Anwendung.
+        - id: appPatch
+          type:
+            - '@azure/arm-iotcentral.AppPatch'
+          description: Die Metadaten für IoT Central-Anwendung und Security-Metadaten.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AppsUpdateResponse>
+    package: '@azure/arm-iotcentral'
+references:
+  - uid: '@azure/arm-iotcentral.IotCentralClientContext'
+    name: IotCentralClientContext
+    spec.typeScript:
+      - name: IotCentralClientContext
+        fullName: IotCentralClientContext
+        uid: '@azure/arm-iotcentral.IotCentralClientContext'
+  - uid: '@azure/arm-iotcentral.App'
+    name: App
+    spec.typeScript:
+      - name: App
+        fullName: App
+        uid: '@azure/arm-iotcentral.App'
+  - uid: '@azure/arm-iotcentral.AppPatch'
+    name: AppPatch
+    spec.typeScript:
+      - name: AppPatch
+        fullName: AppPatch
+        uid: '@azure/arm-iotcentral.AppPatch'
+  - uid: '@azure/arm-iotcentral.OperationInputs'
+    name: OperationInputs
+    spec.typeScript:
+      - name: OperationInputs
+        fullName: OperationInputs
+        uid: '@azure/arm-iotcentral.OperationInputs'
+  - uid: ServiceCallback<@azure/arm-iotcentral.AppAvailabilityInfo>
+    name: AppAvailabilityInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AppAvailabilityInfo
+        fullName: AppAvailabilityInfo
+        uid: '@azure/arm-iotcentral.AppAvailabilityInfo'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-iotcentral.App>
+    name: App>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: App
+        fullName: App
+        uid: '@azure/arm-iotcentral.App'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-iotcentral.AppListResult>
+    name: AppListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AppListResult
+        fullName: AppListResult
+        uid: '@azure/arm-iotcentral.AppListResult'
+      - name: '>'
+        fullName: '>'
