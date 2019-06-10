@@ -1,0 +1,519 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-advisor.Suppressions'
+    name: Suppressions
+    fullName: Suppressions
+    children:
+      - '@azure/arm-advisor.Suppressions.create'
+      - '@azure/arm-advisor.Suppressions.create_2'
+      - '@azure/arm-advisor.Suppressions.create_1'
+      - '@azure/arm-advisor.Suppressions.deleteMethod'
+      - '@azure/arm-advisor.Suppressions.deleteMethod_2'
+      - '@azure/arm-advisor.Suppressions.deleteMethod_1'
+      - '@azure/arm-advisor.Suppressions.get'
+      - '@azure/arm-advisor.Suppressions.get_2'
+      - '@azure/arm-advisor.Suppressions.get_1'
+      - '@azure/arm-advisor.Suppressions.list'
+      - '@azure/arm-advisor.Suppressions.list_1'
+      - '@azure/arm-advisor.Suppressions.list_2'
+      - '@azure/arm-advisor.Suppressions.listNext'
+      - '@azure/arm-advisor.Suppressions.listNext_2'
+      - '@azure/arm-advisor.Suppressions.listNext_1'
+      - '@azure/arm-advisor.Suppressions.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="2f191-101">Klasse, die eine Unterdrückungen darstellt.</span><span class="sxs-lookup"><span data-stu-id="2f191-101">Class representing a Suppressions.</span></span>'
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.create'
+    name: 'create(string, string, string, SuppressionContract, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2f191-102">Ermöglicht das erneute Erinnerung festgelegt oder "verworfen"-Attribut des eine Empfehlung.</span><span class="sxs-lookup"><span data-stu-id="2f191-102">Enables the snoozed or dismissed attribute of a recommendation.</span></span> <span data-ttu-id="2f191-103">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut wird als eine Unterdrückung bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2f191-103">The snoozed or dismissed attribute is referred to as a suppression.</span></span> <span data-ttu-id="2f191-104">Verwenden Sie diese API zum Erstellen oder Aktualisieren des erneute Erinnerung festgelegt oder "verworfen" Status der Empfehlung.</span><span class="sxs-lookup"><span data-stu-id="2f191-104">Use this API to create or update the snoozed or dismissed status of a recommendation.</span></span>
+    syntax:
+      content: 'function create(resourceUri: string, recommendationId: string, name: string, suppressionContract: SuppressionContract, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-105">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-105">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-106">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-106">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-107">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-107">The name of the suppression.</span></span>
+        - id: suppressionContract
+          type:
+            - '@azure/arm-advisor.SuppressionContract'
+          description: '<span data-ttu-id="2f191-108">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut Beispiel: die Dauer für die erneute Erinnerung.</span><span class="sxs-lookup"><span data-stu-id="2f191-108">The snoozed or dismissed attribute; for example, the snooze duration.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SuppressionsCreateResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.create_2'
+    name: 'create(string, string, string, SuppressionContract, RequestOptionsBase, ServiceCallback<SuppressionContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceUri: string, recommendationId: string, name: string, suppressionContract: SuppressionContract, options: RequestOptionsBase, callback: ServiceCallback<SuppressionContract>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-109">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-109">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-110">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-110">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-111">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-111">The name of the suppression.</span></span>
+        - id: suppressionContract
+          type:
+            - '@azure/arm-advisor.SuppressionContract'
+          description: '<span data-ttu-id="2f191-112">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut Beispiel: die Dauer für die erneute Erinnerung.</span><span class="sxs-lookup"><span data-stu-id="2f191-112">The snoozed or dismissed attribute; for example, the snooze duration.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2f191-113">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="2f191-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContract>
+          description: |
+            <span data-ttu-id="2f191-114">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsCreateResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.create_1'
+    name: 'create(string, string, string, SuppressionContract, ServiceCallback<SuppressionContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceUri: string, recommendationId: string, name: string, suppressionContract: SuppressionContract, callback: ServiceCallback<SuppressionContract>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-115">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-115">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-116">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-116">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-117">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-117">The name of the suppression.</span></span>
+        - id: suppressionContract
+          type:
+            - '@azure/arm-advisor.SuppressionContract'
+          description: '<span data-ttu-id="2f191-118">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut Beispiel: die Dauer für die erneute Erinnerung.</span><span class="sxs-lookup"><span data-stu-id="2f191-118">The snoozed or dismissed attribute; for example, the snooze duration.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContract>
+          description: |
+            <span data-ttu-id="2f191-119">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsCreateResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2f191-120">Ermöglicht die Aktivierung einer Empfehlung erneute Erinnerung festgelegt oder "verworfen".</span><span class="sxs-lookup"><span data-stu-id="2f191-120">Enables the activation of a snoozed or dismissed recommendation.</span></span> <span data-ttu-id="2f191-121">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut des eine Empfehlung wird als eine Unterdrückung bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2f191-121">The snoozed or dismissed attribute of a recommendation is referred to as a suppression.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceUri: string, recommendationId: string, name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-122">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-122">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-123">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-123">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-124">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-124">The name of the suppression.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceUri: string, recommendationId: string, name: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-125">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-125">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-126">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-126">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-127">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-127">The name of the suppression.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2f191-128">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="2f191-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="2f191-129">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-129">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceUri: string, recommendationId: string, name: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-130">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-130">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-131">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-131">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-132">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-132">The name of the suppression.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="2f191-133">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-133">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2f191-134">Ruft die Details des eine Unterdrückung ab.</span><span class="sxs-lookup"><span data-stu-id="2f191-134">Obtains the details of a suppression.</span></span>
+    syntax:
+      content: 'function get(resourceUri: string, recommendationId: string, name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-135">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-135">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-136">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-136">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-137">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-137">The name of the suppression.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SuppressionsGetResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<SuppressionContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceUri: string, recommendationId: string, name: string, options: RequestOptionsBase, callback: ServiceCallback<SuppressionContract>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-138">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-138">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-139">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-139">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-140">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-140">The name of the suppression.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2f191-141">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="2f191-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContract>
+          description: |
+            <span data-ttu-id="2f191-142">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-142">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsGetResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.get_1'
+    name: 'get(string, string, string, ServiceCallback<SuppressionContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceUri: string, recommendationId: string, name: string, callback: ServiceCallback<SuppressionContract>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: '<span data-ttu-id="2f191-143">Der vollqualifizierte Azure Resource Manager-Bezeichner der Ressource, für die die Empfehlung gilt.</span><span class="sxs-lookup"><span data-stu-id="2f191-143">The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.</span></span>'
+        - id: recommendationId
+          type:
+            - string
+          description: <span data-ttu-id="2f191-144">Die Empfehlung-ID.</span><span class="sxs-lookup"><span data-stu-id="2f191-144">The recommendation ID.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="2f191-145">Der Name der Unterdrückung.</span><span class="sxs-lookup"><span data-stu-id="2f191-145">The name of the suppression.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContract>
+          description: |
+            <span data-ttu-id="2f191-146">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsGetResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.list'
+    name: list(Models.SuppressionsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2f191-147">Ruft die Liste der erneute Erinnerung festgelegt oder "verworfen" Unterdrückungen für ein Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="2f191-147">Retrieves the list of snoozed or dismissed suppressions for a subscription.</span></span> <span data-ttu-id="2f191-148">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut des eine Empfehlung wird als eine Unterdrückung bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2f191-148">The snoozed or dismissed attribute of a recommendation is referred to as a suppression.</span></span>
+    syntax:
+      content: 'function list(options?: Models.SuppressionsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SuppressionsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SuppressionsListResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.list_1'
+    name: list(ServiceCallback<SuppressionContractListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<SuppressionContractListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContractListResult>
+          description: |
+            <span data-ttu-id="2f191-149">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsListResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.list_2'
+    name: 'list(SuppressionsListOptionalParams, ServiceCallback<SuppressionContractListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SuppressionsListOptionalParams, callback: ServiceCallback<SuppressionContractListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-advisor.SuppressionsListOptionalParams'
+          description: <span data-ttu-id="2f191-150">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="2f191-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContractListResult>
+          description: |
+            <span data-ttu-id="2f191-151">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsListResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2f191-152">Ruft die Liste der erneute Erinnerung festgelegt oder "verworfen" Unterdrückungen für ein Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="2f191-152">Retrieves the list of snoozed or dismissed suppressions for a subscription.</span></span> <span data-ttu-id="2f191-153">Das erneute Erinnerung festgelegt oder "verworfen"-Attribut des eine Empfehlung wird als eine Unterdrückung bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2f191-153">The snoozed or dismissed attribute of a recommendation is referred to as a suppression.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2f191-154">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="2f191-154">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SuppressionsListNextResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<SuppressionContractListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SuppressionContractListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2f191-155">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="2f191-155">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2f191-156">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="2f191-156">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContractListResult>
+          description: |
+            <span data-ttu-id="2f191-157">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsListNextResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.listNext_1'
+    name: 'listNext(string, ServiceCallback<SuppressionContractListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<SuppressionContractListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2f191-158">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="2f191-158">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.SuppressionContractListResult>
+          description: |
+            <span data-ttu-id="2f191-159">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="2f191-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SuppressionsListNextResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Suppressions.constructor'
+    name: Suppressions(AdvisorManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2f191-160">Erstellen Sie eine Unterdrückungen.</span><span class="sxs-lookup"><span data-stu-id="2f191-160">Create a Suppressions.</span></span>
+    syntax:
+      content: 'new Suppressions(client: AdvisorManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-advisor.AdvisorManagementClientContext'
+          description: |
+            <span data-ttu-id="2f191-161">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="2f191-161">Reference to the service client.</span></span>
+    package: '@azure/arm-advisor'
+references:
+  - uid: '@azure/arm-advisor.AdvisorManagementClientContext'
+    name: AdvisorManagementClientContext
+    spec.typeScript:
+      - name: AdvisorManagementClientContext
+        fullName: AdvisorManagementClientContext
+        uid: '@azure/arm-advisor.AdvisorManagementClientContext'
+  - uid: '@azure/arm-advisor.SuppressionContract'
+    name: SuppressionContract
+    spec.typeScript:
+      - name: SuppressionContract
+        fullName: SuppressionContract
+        uid: '@azure/arm-advisor.SuppressionContract'
+  - uid: ServiceCallback<@azure/arm-advisor.SuppressionContract>
+    name: SuppressionContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SuppressionContract
+        fullName: SuppressionContract
+        uid: '@azure/arm-advisor.SuppressionContract'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-advisor.SuppressionContractListResult>
+    name: SuppressionContractListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SuppressionContractListResult
+        fullName: SuppressionContractListResult
+        uid: '@azure/arm-advisor.SuppressionContractListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-advisor.SuppressionsListOptionalParams'
+    name: SuppressionsListOptionalParams
+    spec.typeScript:
+      - name: SuppressionsListOptionalParams
+        fullName: SuppressionsListOptionalParams
+        uid: '@azure/arm-advisor.SuppressionsListOptionalParams'
