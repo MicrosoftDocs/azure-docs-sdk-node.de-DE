@@ -1,0 +1,467 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batchai.FileServers'
+    name: FileServers
+    fullName: FileServers
+    children:
+      - '@azure/arm-batchai.FileServers.beginCreate'
+      - '@azure/arm-batchai.FileServers.beginDeleteMethod'
+      - '@azure/arm-batchai.FileServers.create'
+      - '@azure/arm-batchai.FileServers.deleteMethod'
+      - '@azure/arm-batchai.FileServers.constructor'
+      - '@azure/arm-batchai.FileServers.get'
+      - '@azure/arm-batchai.FileServers.get_2'
+      - '@azure/arm-batchai.FileServers.get_1'
+      - '@azure/arm-batchai.FileServers.listByWorkspace_2'
+      - '@azure/arm-batchai.FileServers.listByWorkspace'
+      - '@azure/arm-batchai.FileServers.listByWorkspace_1'
+      - '@azure/arm-batchai.FileServers.listByWorkspaceNext'
+      - '@azure/arm-batchai.FileServers.listByWorkspaceNext_2'
+      - '@azure/arm-batchai.FileServers.listByWorkspaceNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="28452-101">Klasse, die einen Dateiserver darstellt.</span><span class="sxs-lookup"><span data-stu-id="28452-101">Class representing a FileServers.</span></span>'
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.beginCreate'
+    name: 'beginCreate(string, string, string, FileServerCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-102">Erstellt einen Dateiserver im angegebenen Arbeitsbereich.</span><span class="sxs-lookup"><span data-stu-id="28452-102">Creates a File Server in the given workspace.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, workspaceName: string, fileServerName: string, parameters: FileServerCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-103">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-103">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-104">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-104">The name of the workspace.</span></span> <span data-ttu-id="28452-105">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-105">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-106">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-106">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-107">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-107">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-108">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-108">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-109">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-109">The name must be from 1 through 64 characters long.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batchai.FileServerCreateParameters'
+          description: <span data-ttu-id="28452-110">Die Parameter für die Erstellung der Dateiserver bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="28452-110">The parameters to provide for File Server creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-111">Löscht einen Dateiserver an.</span><span class="sxs-lookup"><span data-stu-id="28452-111">Deletes a File Server.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, fileServerName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-112">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-112">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-113">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-113">The name of the workspace.</span></span> <span data-ttu-id="28452-114">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-114">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-115">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-115">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-116">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-116">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-117">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-117">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-118">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-118">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.create'
+    name: 'create(string, string, string, FileServerCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-119">Erstellt einen Dateiserver im angegebenen Arbeitsbereich.</span><span class="sxs-lookup"><span data-stu-id="28452-119">Creates a File Server in the given workspace.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, workspaceName: string, fileServerName: string, parameters: FileServerCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-120">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-120">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-121">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-121">The name of the workspace.</span></span> <span data-ttu-id="28452-122">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-122">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-123">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-123">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-124">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-124">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-125">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-125">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-126">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-126">The name must be from 1 through 64 characters long.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batchai.FileServerCreateParameters'
+          description: <span data-ttu-id="28452-127">Die Parameter für die Erstellung der Dateiserver bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="28452-127">The parameters to provide for File Server creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FileServersCreateResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-128">Löscht einen Dateiserver an.</span><span class="sxs-lookup"><span data-stu-id="28452-128">Deletes a File Server.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, fileServerName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-129">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-129">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-130">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-130">The name of the workspace.</span></span> <span data-ttu-id="28452-131">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-131">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-132">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-132">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-133">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-133">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-134">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-134">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-135">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-135">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.constructor'
+    name: FileServers(BatchAIManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-136">Erstellen Sie einen Dateiserver an.</span><span class="sxs-lookup"><span data-stu-id="28452-136">Create a FileServers.</span></span>
+    syntax:
+      content: 'new FileServers(client: BatchAIManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batchai.BatchAIManagementClientContext'
+          description: |
+            <span data-ttu-id="28452-137">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="28452-137">Reference to the service client.</span></span>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-138">Ruft Informationen zu einem Dateiserver ab.</span><span class="sxs-lookup"><span data-stu-id="28452-138">Gets information about a File Server.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, fileServerName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-139">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-139">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-140">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-140">The name of the workspace.</span></span> <span data-ttu-id="28452-141">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-141">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-142">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-142">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-143">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-143">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-144">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-144">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-145">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-145">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FileServersGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<FileServer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, fileServerName: string, options: RequestOptionsBase, callback: ServiceCallback<FileServer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-146">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-146">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-147">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-147">The name of the workspace.</span></span> <span data-ttu-id="28452-148">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-148">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-149">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-149">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-150">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-150">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-151">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-151">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-152">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-152">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="28452-153">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="28452-153">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileServer>
+          description: |
+            <span data-ttu-id="28452-154">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="28452-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FileServersGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.get_1'
+    name: 'get(string, string, string, ServiceCallback<FileServer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, fileServerName: string, callback: ServiceCallback<FileServer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-155">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-155">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-156">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-156">The name of the workspace.</span></span> <span data-ttu-id="28452-157">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-157">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-158">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-158">The name must be from 1 through 64 characters long.</span></span>
+        - id: fileServerName
+          type:
+            - string
+          description: <span data-ttu-id="28452-159">Der Name des Dateiservers in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="28452-159">The name of the file server within the specified resource group.</span></span> <span data-ttu-id="28452-160">Dateinamen-Server können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-160">File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-161">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-161">The name must be from 1 through 64 characters long.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileServer>
+          description: |
+            <span data-ttu-id="28452-162">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="28452-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FileServersGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.listByWorkspace_2'
+    name: 'listByWorkspace(string, string, FileServersListByWorkspaceOptionalParams, ServiceCallback<FileServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, options: FileServersListByWorkspaceOptionalParams, callback: ServiceCallback<FileServerListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-163">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-163">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-164">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-164">The name of the workspace.</span></span> <span data-ttu-id="28452-165">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-165">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-166">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-166">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batchai.FileServersListByWorkspaceOptionalParams'
+          description: <span data-ttu-id="28452-167">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="28452-167">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileServerListResult>
+          description: |
+            <span data-ttu-id="28452-168">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="28452-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FileServersListByWorkspaceResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.listByWorkspace'
+    name: 'listByWorkspace(string, string, Models.FileServersListByWorkspaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-169">Ruft eine Liste von Dateiservern mit der angegebenen Arbeitsbereich verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="28452-169">Gets a list of File Servers associated with the specified workspace.</span></span>
+    syntax:
+      content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, options?: Models.FileServersListByWorkspaceOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-170">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-170">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-171">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-171">The name of the workspace.</span></span> <span data-ttu-id="28452-172">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-172">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-173">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-173">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - Models.FileServersListByWorkspaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FileServersListByWorkspaceResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.listByWorkspace_1'
+    name: 'listByWorkspace(string, string, ServiceCallback<FileServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, callback: ServiceCallback<FileServerListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="28452-174">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="28452-174">Name of the resource group to which the resource belongs.</span></span>'
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="28452-175">Der Name des Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="28452-175">The name of the workspace.</span></span> <span data-ttu-id="28452-176">Arbeitsbereichsnamen können nur eine Kombination von alphanumerischen Zeichen sowie Bindestriche (-) und Unterstrich (_) enthalten.</span><span class="sxs-lookup"><span data-stu-id="28452-176">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="28452-177">Der Name muss zwischen 1 und 64 Zeichen lang sein.</span><span class="sxs-lookup"><span data-stu-id="28452-177">The name must be from 1 through 64 characters long.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileServerListResult>
+          description: |
+            <span data-ttu-id="28452-178">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="28452-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FileServersListByWorkspaceResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.listByWorkspaceNext'
+    name: 'listByWorkspaceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="28452-179">Ruft eine Liste von Dateiservern mit der angegebenen Arbeitsbereich verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="28452-179">Gets a list of File Servers associated with the specified workspace.</span></span>
+    syntax:
+      content: 'function listByWorkspaceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="28452-180">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="28452-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FileServersListByWorkspaceNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.listByWorkspaceNext_2'
+    name: 'listByWorkspaceNext(string, RequestOptionsBase, ServiceCallback<FileServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspaceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FileServerListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="28452-181">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="28452-181">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="28452-182">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="28452-182">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileServerListResult>
+          description: |
+            <span data-ttu-id="28452-183">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="28452-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FileServersListByWorkspaceNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.FileServers.listByWorkspaceNext_1'
+    name: 'listByWorkspaceNext(string, ServiceCallback<FileServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspaceNext(nextPageLink: string, callback: ServiceCallback<FileServerListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="28452-184">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="28452-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileServerListResult>
+          description: |
+            <span data-ttu-id="28452-185">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="28452-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FileServersListByWorkspaceNextResponse>
+    package: '@azure/arm-batchai'
+references:
+  - uid: '@azure/arm-batchai.BatchAIManagementClientContext'
+    name: BatchAIManagementClientContext
+    spec.typeScript:
+      - name: BatchAIManagementClientContext
+        fullName: BatchAIManagementClientContext
+        uid: '@azure/arm-batchai.BatchAIManagementClientContext'
+  - uid: '@azure/arm-batchai.FileServerCreateParameters'
+    name: FileServerCreateParameters
+    spec.typeScript:
+      - name: FileServerCreateParameters
+        fullName: FileServerCreateParameters
+        uid: '@azure/arm-batchai.FileServerCreateParameters'
+  - uid: ServiceCallback<@azure/arm-batchai.FileServer>
+    name: FileServer>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FileServer
+        fullName: FileServer
+        uid: '@azure/arm-batchai.FileServer'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batchai.FileServerListResult>
+    name: FileServerListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FileServerListResult
+        fullName: FileServerListResult
+        uid: '@azure/arm-batchai.FileServerListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batchai.FileServersListByWorkspaceOptionalParams'
+    name: FileServersListByWorkspaceOptionalParams
+    spec.typeScript:
+      - name: FileServersListByWorkspaceOptionalParams
+        fullName: FileServersListByWorkspaceOptionalParams
+        uid: '@azure/arm-batchai.FileServersListByWorkspaceOptionalParams'
