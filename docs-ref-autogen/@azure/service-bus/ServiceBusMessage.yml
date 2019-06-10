@@ -1,0 +1,541 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ServiceBusMessage'
+    name: ServiceBusMessage
+    fullName: ServiceBusMessage
+    children:
+      - '@azure/service-bus.ServiceBusMessage.abandon'
+      - '@azure/service-bus.ServiceBusMessage.body'
+      - '@azure/service-bus.ServiceBusMessage.clone'
+      - '@azure/service-bus.ServiceBusMessage.complete'
+      - '@azure/service-bus.ServiceBusMessage.contentType'
+      - '@azure/service-bus.ServiceBusMessage.correlationId'
+      - '@azure/service-bus.ServiceBusMessage.deadLetter'
+      - '@azure/service-bus.ServiceBusMessage.deadLetterSource'
+      - '@azure/service-bus.ServiceBusMessage.defer'
+      - '@azure/service-bus.ServiceBusMessage.delivery'
+      - '@azure/service-bus.ServiceBusMessage.deliveryCount'
+      - '@azure/service-bus.ServiceBusMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ServiceBusMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ServiceBusMessage.expiresAtUtc'
+      - '@azure/service-bus.ServiceBusMessage.isSettled'
+      - '@azure/service-bus.ServiceBusMessage.label'
+      - '@azure/service-bus.ServiceBusMessage.lockedUntilUtc'
+      - '@azure/service-bus.ServiceBusMessage.lockToken'
+      - '@azure/service-bus.ServiceBusMessage.messageId'
+      - '@azure/service-bus.ServiceBusMessage.partitionKey'
+      - '@azure/service-bus.ServiceBusMessage.replyTo'
+      - '@azure/service-bus.ServiceBusMessage.replyToSessionId'
+      - '@azure/service-bus.ServiceBusMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ServiceBusMessage.sequenceNumber'
+      - '@azure/service-bus.ServiceBusMessage.sessionId'
+      - '@azure/service-bus.ServiceBusMessage.timeToLive'
+      - '@azure/service-bus.ServiceBusMessage.to'
+      - '@azure/service-bus.ServiceBusMessage.userProperties'
+      - '@azure/service-bus.ServiceBusMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Beschreibt die Meldung, die von Service Bus empfangen.'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Die Sperre für die Nachricht den Empfänger ist die Maustaste loslassen, stellt die Nachricht erneut in Service Bus für einen anderen receive-Methode.
+      - Löst `SessionLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit aktivierten Sitzungen), wenn das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Dies kann vorkommen, entweder weil die Sperre für die Sitzung abgelaufen ist oder der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst `MessageLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit Sitzungen nicht aktiviert), wenn die Sperre für die Nachricht abgelaufen ist oder das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Letztere kann auftreten, wenn der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst einen Fehler aus, wenn die Nachricht bereits ausgeglichen wird. Um diese Überprüfung auf Fehler zu vermeiden. die `isSettled` Eigenschaft der Nachricht, wenn Sie nicht sicher sind, gibt an, ob die Nachricht ausgeglichen wird.
+      - Löst einen Fehler aus, wenn im verwendet `ReceiveAndDelete` Modus, da alle Nachrichten in diesem Modus empfangen vorab abgeglichene sind. Um diesen Fehler zu vermeiden, aktualisieren Sie Ihren Code, um eine Nachricht nicht zu ausgleichen, die in diesem Modus empfangen wird.
+      - Löst `ServiceUnavailableError` Wenn Service Bus die Anforderung und die Nachricht in Zeit nicht bestätigt. Die Nachricht möglicherweise oder wurde nicht erfolgreich ausgeglichen.
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            Die Eigenschaften der Nachricht, die während des verworfen geändert werden.
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Text der Nachricht, der gesendet werden muss oder empfangen wird.'
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.clone'
+    name: clone()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt einen Klon der aktuellen Nachricht, damit Sie erneut in die Warteschlange gesendet werden kann'
+    syntax:
+      content: function clone()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.SendableMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Entfernt die Nachricht von Service Bus.
+      - Löst `SessionLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit aktivierten Sitzungen), wenn das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Dies kann vorkommen, entweder weil die Sperre für die Sitzung abgelaufen ist oder der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst `MessageLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit Sitzungen nicht aktiviert), wenn die Sperre für die Nachricht abgelaufen ist oder das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Letztere kann auftreten, wenn der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst einen Fehler aus, wenn die Nachricht bereits ausgeglichen wird. Um diese Überprüfung auf Fehler zu vermeiden. die `isSettled` Eigenschaft der Nachricht, wenn Sie nicht sicher sind, gibt an, ob die Nachricht ausgeglichen wird.
+      - Löst einen Fehler aus, wenn im verwendet `ReceiveAndDelete` Modus, da alle Nachrichten in diesem Modus empfangen vorab abgeglichene sind. Um diesen Fehler zu vermeiden, aktualisieren Sie Ihren Code, um eine Nachricht nicht zu ausgleichen, die in diesem Modus empfangen wird.
+      - Löst `ServiceUnavailableError` Wenn Service Bus die Anforderung und die Nachricht in Zeit nicht bestätigt. Die Nachricht möglicherweise oder wurde nicht erfolgreich ausgeglichen.
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Inhaltstyp der Nachricht. Beschreibt optional die Nutzlast der Nachricht mit einem Deskriptor im Format RFC2045, Abschnitt 5, z. B. "Application/Json" ein.'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Korrelations-ID, die kann eine Anwendung an einen Kontext für die Nachricht zum Zweck der Korrelation, z. B. reflektieren die Nachrichten-ID der Nachricht, die auf die geantwortet wird.
+      Finden Sie unter [Nachrichtenrouting und-Korrelation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Wird die Nachricht in die Unterwarteschlange für unzustellbare Nachrichten verschoben. Erstellen Sie eine neue QueueClient/SubscriptionClient unter Verwendung des Pfads für die Unterwarteschlange für unzustellbare Nachrichten, für den Empfang eine Nachricht Deadletted.
+      - Löst `SessionLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit aktivierten Sitzungen), wenn das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Dies kann vorkommen, entweder weil die Sperre für die Sitzung abgelaufen ist oder der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst `MessageLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit Sitzungen nicht aktiviert), wenn die Sperre für die Nachricht abgelaufen ist oder das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Letztere kann auftreten, wenn der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst einen Fehler aus, wenn die Nachricht bereits ausgeglichen wird. Um diese Überprüfung auf Fehler zu vermeiden. die `isSettled` Eigenschaft der Nachricht, wenn Sie nicht sicher sind, gibt an, ob die Nachricht ausgeglichen wird.
+      - Löst einen Fehler aus, wenn im verwendet `ReceiveAndDelete` Modus, da alle Nachrichten in diesem Modus empfangen vorab abgeglichene sind. Um diesen Fehler zu vermeiden, aktualisieren Sie Ihren Code, um eine Nachricht nicht zu ausgleichen, die in diesem Modus empfangen wird.
+      - Löst `ServiceUnavailableError` Wenn Service Bus die Anforderung und die Nachricht in Zeit nicht bestätigt. Die Nachricht möglicherweise oder wurde nicht erfolgreich ausgeglichen.
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            Die Optionen für die Warteschlange für unzustellbare Nachrichten, die bereitgestellt werden können, während die Nachricht ablehnen.
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Name der Warteschlange oder des Abonnements, die diese Nachricht in die Warteschlange eingereiht, war, bevor es als unzustellbar gekennzeichnet wurde. Wird nur in Nachrichten festgelegt, die unzustellbar sind und anschließend automatisch aus der Warteschlange für unzustellbare Nachrichten an eine andere Entität weitergeleitet werden. Gibt die Entität an, in der die Nachricht unzustellbar war.'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Verzögert die Verarbeitung der Nachricht. Speichern Sie die `sequenceNumber` der Nachricht, um diese Meldung, die in der Zukunft mit der `receiveDeferredMessage` Methode.
+      - Löst `SessionLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit aktivierten Sitzungen), wenn das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Dies kann vorkommen, entweder weil die Sperre für die Sitzung abgelaufen ist oder der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst `MessageLockLostError` (für Nachrichten aus einer Warteschlange/Abonnement mit Sitzungen nicht aktiviert), wenn die Sperre für die Nachricht abgelaufen ist oder das AMQP-link mit dem die Nachricht wurde empfangen ist nicht mehr aktiv. Letztere kann auftreten, wenn der Empfänger vom Benutzer explizit geschlossen wurde oder der AMQP-Link von der Bibliothek aufgrund eines Netzwerkfehlers Datenverlusten oder geschlossen wurde.
+      - Löst einen Fehler aus, wenn die Nachricht bereits ausgeglichen wird. Um diese Überprüfung auf Fehler zu vermeiden. die `isSettled` Eigenschaft der Nachricht, wenn Sie nicht sicher sind, gibt an, ob die Nachricht ausgeglichen wird.
+      - Löst einen Fehler aus, wenn im verwendet `ReceiveAndDelete` Modus, da alle Nachrichten in diesem Modus empfangen vorab abgeglichene sind. Um diesen Fehler zu vermeiden, aktualisieren Sie Ihren Code, um eine Nachricht nicht zu ausgleichen, die in diesem Modus empfangen wird.
+      - Löst `ServiceUnavailableError` Wenn Service Bus die Anforderung und die Nachricht in Zeit nicht bestätigt. Die Nachricht möglicherweise oder wurde nicht erfolgreich ausgeglichen.
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            Die Eigenschaften der Nachricht zu ändern, während Sie die Nachricht verzögern
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.delivery'
+    name: delivery
+    fullName: delivery
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die zugeordneten Übermittlung der empfangenen Nachricht.
+    syntax:
+      content: 'delivery: Delivery'
+      return:
+        type:
+          - Delivery
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Anzahl der Zustellversuche dieser Nachricht. Die Anzahl wird erhöht, wenn eine nachrichtensperre abläuft oder die Nachricht abgebrochen explizit mithilfe der `abandon()` Methode für die Nachricht.'
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ursprüngliche Sequenznummer der Nachricht. Bei Nachrichten, die automatisch weitergeleitet wurden, entspricht diese Eigenschaft der Sequenznummer, die der Nachricht zum Zeitpunkt ihrer ursprünglichen Übermittlung zugewiesen wurde.'
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die UTC-Moment, an dem die Nachricht akzeptiert und in Service Bus gespeichert wurde.'
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der UTC-Moment, in dem die Nachricht zum Entfernen markiert wird und wegen Ablaufs nicht mehr von der Entität abgerufen werden kann. Diese Eigenschaft wird berechnet aus anderen Eigenschaften für die Nachricht 2: `enqueuedTimeUtc`  +  `timeToLive`.'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.isSettled'
+    name: isSettled
+    fullName: isSettled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn die Nachricht bereits ausgeglichen wurde, booleschen angibt.'
+    syntax:
+      content: 'isSettled: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die anwendungsspezifische Bezeichnung. Diese Eigenschaft ermöglicht die Anwendung, den Zweck der Nachricht an den Empfänger in einer standardisierten anzugeben. ähnlich, die Betreffzeile einer e-Mail-Adresse. Die zugeordnete AMQP-Eigenschaft ist "Subject".'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die UTC-Moment, bis zu dem die Nachricht gespeichert ist, gesperrt, in der Warteschlange/Abonnement.
+      Nach Ablauf der Sperre der `deliveryCount` wird erhöht, und die Nachricht steht wieder zum Abruf zur Verfügung.
+      - Nicht anwendbar, wenn der Empfang der Nachricht in `ReceiveMode.receiveAndDelete` Modus.
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Das Sperrtoken ist ein Verweis auf die Sperre, die vom Broker im gehalten wird `ReceiveMode.PeekLock` Modus. Sperren werden intern verwendet, Nachrichten ausgleichen, wie unter der [Produktdokumentation im Detail](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)
+      - Nicht anwendbar, wenn der Empfang der Nachricht in `ReceiveMode.receiveAndDelete` Modus.
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Nachrichtenbezeichner ist ein von der Anwendung definierter Wert, der die Nachricht und ihre Nutzlast eindeutig identifiziert. Der Bezeichner ist eine Zeichenfolge in freier Form und kann eine GUID oder einen aus dem Anwendungskontext abgeleiteten Bezeichner widerspiegeln. Wenn aktiviert, die [duplikaterkennung](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) identifiziert und entfernt die zweite und weitere Übermittlungen von Nachrichten mit der gleichen MessageId.'
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Partitionsschlüssel für das Senden einer Nachricht an eine partitionierte Entität. Maximale Länge beträgt 128 Zeichen lang sein. Für [partitionierte Entitäten](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) ermöglicht das Festlegen dieses Werts, verwandte Nachrichten derselben internen Partition zuzuweisen, sodass die Reihenfolge der Übermittlung ordnungsgemäß aufgezeichnet wird. Die Partition wird von einer Hashfunktion über diesen Wert ausgewählt und kann nicht direkt ausgewählt werden. Für Sitzungen aktivierte Entitäten die `sessionId` Eigenschaft überschreibt diesen Wert.'
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Adresse einer Entität zum Senden von Antworten an. Dieser optionale und von der Anwendung definierte Wert ist eine Standardmethode, einen Antwortpfad zum Empfänger der Nachricht auszudrücken. Wenn ein Absender eine Antwort erwartet, legt er den Wert auf den absoluten oder relativen Pfad der Warteschlange oder des Themas fest, an den bzw. das die Antwort gesendet werden soll. Finden Sie unter [Nachrichtenrouting und-Korrelation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Sitzungs-ID erweitern die `replyTo` Adresse.
+      Maximale Länge beträgt 128 Zeichen lang sein. Dieser Wert ergänzt die ReplyTo-Informationen und gibt an, welche die "SessionId" festgelegt werden soll, für die Antwort an die Antwortentität gesendet.
+      Finden Sie unter [Nachrichtenrouting und-Korrelation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Das Datum und Uhrzeit in UTC, zu dem die Nachricht in die Warteschlange eingereiht werden. Diese Eigenschaft gibt die Zeit in UTC, Wenn Sie die Eigenschaft festlegen möchten, muss der angegebene DateTime-Wert in UTC, auch sein. Dieser Wert ist für die verzögerte Nachricht gesendet wird.
+      Es wird verwendet, um Nachrichten senden zu einem bestimmten Zeitpunkt in der Zukunft zu verzögern. Zeitpunkt der Meldung beim Einreihen bedeutet nicht, dass die Nachricht zur gleichen Zeit gesendet wird. Erhalten Sie in die Warteschlange eingereiht, aber die tatsächliche senden Zeit hängt von der Warteschlange arbeitsauslastung und den Status.
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die eindeutige Nummer, die auf eine Nachricht von Service Bus zugewiesen wird.
+      Die Sequenznummer ist eine eindeutige ganze 64-Bit-Zahl, die einer Nachricht zugeordnet wird, sobald sie vom Broker akzeptiert und gespeichert wird, und fungiert als ihr tatsächlicher Bezeichner. Bei partitionierte Entitäten stellen die obersten 16 Bits den Partitionsbezeichner dar. Sequenznummern erhöhen sich monoton.
+      Sie werden auf 0 zurückgesetzt, sobald der 48-64-Bit-Bereich ausgeschöpft ist.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Sitzungs-ID für eine für Sitzungen aktivierte Entität. Maximale Länge beträgt 128 Zeichen lang sein. Bei sitzungsabhängigen Entitäten gibt dieser von der Anwendung definierte Wert die Sitzungszugehörigkeit der Nachricht an. Nachrichten mit demselben Sitzungsbezeichner unterliegen einer zusammenfassenden Sperre und ermöglichen eine Verarbeitung in exakter Reihenfolge und Demultiplexing. Bei nicht sitzungsabhängigen Entitäten wird dieser Wert ignoriert.
+      [Nachrichtensitzungen](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'TTL-Wert, der die Nachricht Zeit. Dieser Wert ist die relative Dauer, die nach dem die Nachricht abläuft, beginnend ab dem Zeitpunkt die Nachricht akzeptiert und vom Broker, gespeichert werden, da in erfasst wurde `enqueuedTimeUtc`. Wenn nicht explizit festgelegt wird, wird der angenommene Wert der DefaultTimeToLive für die jeweilige Warteschlange oder Thema. Eine auf Nachrichtenebene `timeToLive` Wert darf nicht länger als der Entität DefaultTimeToLive Einstellung sein, und es wird automatisch angepasst, wenn dies der Fall ist. Finden Sie unter [Ablauf](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Adresse "to". Diese Eigenschaft ist für die künftige Verwendung in Routingszenarien reserviert und wird derzeit vom Broker selbst ignoriert. Anwendungen können diesen Wert verwenden, in der Regel gesteuerte [automatische Weiterleitung](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) Szenarien an, dass das beabsichtigte logische Ziel der Nachricht.'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die spezifischen Eigenschaften der Anwendung.
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Partitionsschlüssel zum Senden einer Nachricht in eine Entität über eine partitionierte Übertragungswarteschlange. Maximale Länge beträgt 128 Zeichen lang sein. Wenn eine Nachricht über eine Übertragungswarteschlange im Rahmen einer Transaktion gesendet wird, wählt dieser Wert die Partition der Übertragungswarteschlange an: Dies entspricht funktional dem `partitionKey` Eigenschaft und stellt sicher, dass Nachrichten zusammen und in Reihenfolge aufbewahrt werden, wie sie übertragen werden.
+      Finden Sie unter [überträgt, und senden über](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'
