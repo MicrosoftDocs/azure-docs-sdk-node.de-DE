@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    fullName: ReceiveMode
+    children:
+      - '@azure/service-bus.ReceiveMode.peekLock'
+      - '@azure/service-bus.ReceiveMode.receiveAndDelete'
+    langs:
+      - typeScript
+    type: enum
+    summary: 'Der Modus, in dem Nachrichten empfangen werden sollen. Die 2 Modi sind `peekLock` und `receiveAndDelete`.'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceiveMode.peekLock'
+    name: peekLock
+    children: []
+    langs:
+      - typeScript
+    summary: 'Sobald eine Nachricht in diesem Modus empfangen wird, hat der Empfänger eine Sperre für die Nachricht für einen bestimmten Zeitraum an. Wird die Nachricht zu diesem Zeitpunkt nicht ausgeglichen, gelangt er auf Service Bus durch das nächste abgerufen werden receive-Methode.'
+    type: field
+    numericValue: 1
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceiveMode.receiveAndDelete'
+    name: receiveAndDelete
+    children: []
+    langs:
+      - typeScript
+    summary: In diesem Modus empfangene Nachrichten abrufen von Service Bus automatisch entfernt.
+    type: field
+    numericValue: 2
+    package: '@azure/service-bus'
