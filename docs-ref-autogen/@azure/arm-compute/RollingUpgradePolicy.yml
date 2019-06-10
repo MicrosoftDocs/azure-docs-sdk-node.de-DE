@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Der Konfigurationsparameter, die beim Ausführen eines parallelen Upgrades verwendet wird.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der maximale Prozentsatz der gesamten VM-Instanzen, die durch das parallele Upgrade in einem Batch gleichzeitig ein Upgrade durchgeführt werden. Da dies ein Maximum ist, kann fehlerhafte Instanzen im vorhergehenden oder künftigen Batches den Prozentsatz der Instanzen in einem Batch, um sicherzustellen, dass höhere Zuverlässigkeit zu verringern. Der Standardwert für diesen Parameter ist 20 %.'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der maximale Prozentsatz der gesamten VM-Instanzen in der Skalierungsgruppe, die gleichzeitig fehlerhaft ist, entweder als Ergebnis aktualisiert oder in einem fehlerhaften Zustand durch die integritätsprüfungen für den virtuellen Computer gefunden wird, bevor Sie bricht das parallele Upgrade sein können. Diese Einschränkung soll überprüft werden, vor dem Starten eines Batches. Der Standardwert für diesen Parameter ist 20 %.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der maximale Prozentsatz der aktualisierten VM-Instanzen, die sich in einem fehlerhaften Zustand befinden. Diese Überprüfung wird durchgeführt, nachdem jeder Batch aktualisiert wurde. Wenn dieser Prozentsatz ständig überschritten wird, bricht das parallele Update ab. Der Standardwert für diesen Parameter ist 20 %.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Wartezeit zwischen der Durchführung des Updates für alle virtuellen Computer in einem Batch aus, und starten den nächsten Batch. Der Zeitraum sollte im ISO 8601-Format angegeben werden. Der Standardwert ist 0 Sekunden ("PT0S").'
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

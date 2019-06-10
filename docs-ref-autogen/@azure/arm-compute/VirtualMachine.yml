@@ -1,0 +1,420 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachine'
+    name: VirtualMachine
+    fullName: VirtualMachine
+    children:
+      - '@azure/arm-compute.VirtualMachine.additionalCapabilities'
+      - '@azure/arm-compute.VirtualMachine.availabilitySet'
+      - '@azure/arm-compute.VirtualMachine.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachine.hardwareProfile'
+      - '@azure/arm-compute.VirtualMachine.id'
+      - '@azure/arm-compute.VirtualMachine.identity'
+      - '@azure/arm-compute.VirtualMachine.instanceView'
+      - '@azure/arm-compute.VirtualMachine.licenseType'
+      - '@azure/arm-compute.VirtualMachine.location'
+      - '@azure/arm-compute.VirtualMachine.name'
+      - '@azure/arm-compute.VirtualMachine.networkProfile'
+      - '@azure/arm-compute.VirtualMachine.osProfile'
+      - '@azure/arm-compute.VirtualMachine.plan'
+      - '@azure/arm-compute.VirtualMachine.provisioningState'
+      - '@azure/arm-compute.VirtualMachine.resources'
+      - '@azure/arm-compute.VirtualMachine.storageProfile'
+      - '@azure/arm-compute.VirtualMachine.tags'
+      - '@azure/arm-compute.VirtualMachine.type'
+      - '@azure/arm-compute.VirtualMachine.vmId'
+      - '@azure/arm-compute.VirtualMachine.zones'
+    langs:
+      - typeScript
+    type: interface
+    summary: Beschreibt einen virtuellen Computer an.
+    extends:
+      name: '@azure/arm-compute.Resource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.additionalCapabilities'
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gibt zusätzliche Funktionen für die virtuelle Maschine aktiviert oder deaktiviert.
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalCapabilities'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.availabilitySet'
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt Informationen zu der verfügbarkeitsgruppe, der dem virtuellen Computer zugewiesen werden soll. Virtuelle Computer in derselben verfügbarkeitsgruppe angegeben werden auf andere Knoten zur Maximierung der Verfügbarkeit zugeordnet. Weitere Informationen zu Verfügbarkeitsgruppen finden Sie unter [Verwalten der Verfügbarkeit von virtuellen Computern](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+      <br><br> Weitere Informationen zu geplanten Wartung in Azure, finden Sie unter [geplante Wartung für virtuelle Computer in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Derzeit kann ein virtuellen Computer nur verfügbarkeitsgruppe zum Zeitpunkt der Erstellung hinzugefügt werden. Ein vorhandener virtueller Computer kann nicht zu einer verfügbarkeitsgruppe hinzugefügt werden.
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.diagnosticsProfile'
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt den Status der Start-diagnoseeinstellungen. <br><br>Mindestens api-Version: 2015-06-15.'
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.DiagnosticsProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.hardwareProfile'
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Legt die Hardwareeinstellungen für den virtuellen Computer fest.
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - '@azure/arm-compute.HardwareProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ressourcen-Id **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.identity'
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Identität des virtuellen Computers, falls konfiguriert.'
+    optional: true
+    syntax:
+      content: 'identity?: VirtualMachineIdentity'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineIdentity'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.instanceView'
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Ansicht für den VM-Instanz.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineInstanceView'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineInstanceView'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt an, dass das Image oder der Datenträger, der verwendet wird lokal lizenziert wurde. Dieses Element wird nur für Images verwendet, die das Betriebssystem Windows Server enthalten. <br><br> Dabei sind folgende Werte möglich: <br><br> Windows_Client <br><br> Windows_Server <br><br> Wenn dieses Element in einer Anforderung für ein Update enthalten ist, muss der Wert den anfänglichen Wert übereinstimmen. Dieser Wert kann nicht aktualisiert werden. <br><br> Weitere Informationen finden Sie unter [Azure-Nutzung Hybridvorteil für Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Mindestens api-Version: 2015-06-15
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Speicherort von Ressourcen
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ressourcenname **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.networkProfile'
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Legt die Netzwerkschnittstellen des virtuellen Computers fest.
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - '@azure/arm-compute.NetworkProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.osProfile'
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Legt die Einstellungen des Betriebssystems für den virtuellen Computer fest.
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - '@azure/arm-compute.OSProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.plan'
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt Informationen über das Marketplace-Image verwendet, um den virtuellen Computer erstellen. Dieses Element wird nur für Marketplace-Images verwendet werden. Bevor Sie ein Marketplace-Image über eine API verwenden können, müssen Sie das Image für die programmgesteuerte Verwendung aktivieren.  Suchen Sie im Azure-Portal, das Marketplace-Image, das Sie verwenden möchten und klicken Sie dann auf **programmgesteuert bereitgestellt werden soll, erste Schritte ->**. Geben Sie alle erforderlichen Informationen ein, und klicken Sie dann auf **speichern**.'
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - '@azure/arm-compute.Plan'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Bereitstellungsstatus, die nur in der Antwort angezeigt wird.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.resources'
+    name: resources
+    fullName: resources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Ressourcen der virtuellen Computer untergeordnete-Erweiterung.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'resources?: VirtualMachineExtension[]'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineExtension[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.storageProfile'
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Legt die Speichereinstellungen für die Datenträger des virtuellen Computers fest.
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - '@azure/arm-compute.StorageProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ressourcentags
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ressourcentyp **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.vmId'
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt die eindeutige VM-ID, einen 128-Bit-Bezeichner, der codiert und in allen Azure-IaaS-VMs SMBIOS gespeichert und kann werden Lesevorgänge mithilfe von BIOS.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'vmId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachine.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die VM-Zonen.
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.AdditionalCapabilities'
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: '@azure/arm-compute.AdditionalCapabilities'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.DiagnosticsProfile'
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.HardwareProfile'
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: '@azure/arm-compute.HardwareProfile'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity'
+    name: VirtualMachineIdentity
+    spec.typeScript:
+      - name: VirtualMachineIdentity
+        fullName: VirtualMachineIdentity
+        uid: '@azure/arm-compute.VirtualMachineIdentity'
+  - uid: '@azure/arm-compute.VirtualMachineInstanceView'
+    name: VirtualMachineInstanceView
+    spec.typeScript:
+      - name: VirtualMachineInstanceView
+        fullName: VirtualMachineInstanceView
+        uid: '@azure/arm-compute.VirtualMachineInstanceView'
+  - uid: '@azure/arm-compute.NetworkProfile'
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: '@azure/arm-compute.NetworkProfile'
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: '@azure/arm-compute.OSProfile'
+  - uid: '@azure/arm-compute.Plan'
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: '@azure/arm-compute.Plan'
+  - uid: '@azure/arm-compute.VirtualMachineExtension[]'
+    name: 'VirtualMachineExtension[]'
+    spec.typeScript:
+      - name: VirtualMachineExtension
+        fullName: VirtualMachineExtension
+        uid: '@azure/arm-compute.VirtualMachineExtension'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.StorageProfile'
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: '@azure/arm-compute.StorageProfile'
