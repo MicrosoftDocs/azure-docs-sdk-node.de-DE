@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DiskUpdate'
+    name: DiskUpdate
+    fullName: DiskUpdate
+    children:
+      - '@azure/arm-compute.DiskUpdate.diskIOPSReadWrite'
+      - '@azure/arm-compute.DiskUpdate.diskMBpsReadWrite'
+      - '@azure/arm-compute.DiskUpdate.diskSizeGB'
+      - '@azure/arm-compute.DiskUpdate.encryptionSettingsCollection'
+      - '@azure/arm-compute.DiskUpdate.osType'
+      - '@azure/arm-compute.DiskUpdate.sku'
+      - '@azure/arm-compute.DiskUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: Ressource für Datenträger aktualisieren.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskIOPSReadWrite'
+    name: diskIOPSReadWrite
+    fullName: diskIOPSReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die zulässige Anzahl von IOPS-Wert für diesen Datenträger; nur festlegbare für UltraSSD Datenträger. Ein Vorgang kann zwischen 4 k und 256 KB übertragen.
+    optional: true
+    syntax:
+      content: 'diskIOPSReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskMBpsReadWrite'
+    name: diskMBpsReadWrite
+    fullName: diskMBpsReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Bandbreite, die für diesen Datenträger zulässig; nur festlegbare für UltraSSD Datenträger. Mbit/s bedeutet, dass Millionen von Bytes pro Sekunde – MB hier verwendet die ISO-Schreibweise und von Potenzen von 10.'
+    optional: true
+    syntax:
+      content: 'diskMBpsReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn creationData.createOption leer ist, wird dieses Feld ist obligatorisch, und gibt die Größe der virtuellen Festplatte zu erstellen. Wenn dieses Feld bei Updates oder die Erstellung mit anderen Optionen vorhanden ist, gibt es eine Größenänderung an. Ändert die Größe sind nur zulässig, wenn der Datenträger nicht an einen ausgeführten virtuellen Computer angefügt ist und nur die Größe der Festplatte erhöhen kann.'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Verschlüsselung einstellungsauflistung verwendet werden, Azure Disk Encryption kann mehrere verschlüsselungseinstellungen pro Datenträger oder eine Momentaufnahme enthalten.'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Typ des Betriebssystems. Mögliche Werte sind: ''Windows'', ''Linux'''
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: DiskSku'
+      return:
+        type:
+          - '@azure/arm-compute.DiskSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ressourcentags
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.DiskSku'
+    name: DiskSku
+    spec.typeScript:
+      - name: DiskSku
+        fullName: DiskSku
+        uid: '@azure/arm-compute.DiskSku'
