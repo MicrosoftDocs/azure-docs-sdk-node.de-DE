@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.loginWithVmMSI_2'
+    name: 'loginWithVmMSI(MSIVmOptions, Callback<MSIVmTokenCredentials>)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Vor der Verwendung dieser Methode installieren Sie Azure-Befehlszeilenschnittstelle über https://github.com/Azure/azure-cli/releases.
+      Wenn Sie einen virtuellen Azure-Computer mit Azure Cli bereitgestellt werden, und MSI aktiviert hat, klicken Sie dann diese Methode können Sie zum Abrufen von Authentifizierungstoken auf dem virtuellen Computer.
+      Um einen neuen virtuellen Computer zu erstellen, Aktivieren von MSI, führen Sie diesen Befehl: az Vm zu erstellen – g < Resource_group_name > - n < VM-Name >--Assign-Identity--Image < Os_image_name > Hinweis: der obige Befehl aktiviert einen Dienstendpunkt mit auf dem Host, einen 50342 der Standardport
+
+      Führen Sie zum Aktivieren von MSI auf einem bereits bereitgestellten virtuellen Computer den folgenden Befehl: az Vm – Assign-Identity - g < Resource_group_name > -n < Vm_name >: Port < Custom_port_number >
+
+      Führen Sie Sie um weitere Informationen zu diesem Befehl: az Vm – Assign-Identity - h
+
+      Authentifizierung mit der Identity-Dienst auf virtuellen Azure-Computer ausgeführt wird.
+      Diese Methode sendet eine Anforderung an den Authentifizierungsdienst, der auf dem virtuellen Computer gehostet, und erhält ein Zugriffstoken zurück.
+    syntax:
+      content: 'function loginWithVmMSI(options: MSIVmOptions, callback: Callback<MSIVmTokenCredentials>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.MSIVmOptions'
+          description: ''
+        - id: callback
+          type:
+            - '@azure/ms-rest-nodeauth.Callback<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.MSIVmOptions'
+    name: MSIVmOptions
+    spec.typeScript:
+      - name: MSIVmOptions
+        fullName: MSIVmOptions
+        uid: '@azure/ms-rest-nodeauth.MSIVmOptions'
+  - uid: '@azure/ms-rest-nodeauth.Callback<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>'
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Callback
+        fullName: Callback
+        uid: '@azure/ms-rest-nodeauth.Callback'
+      - name: <
+        fullName: <
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,561 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineImages'
+    name: VirtualMachineImages
+    fullName: VirtualMachineImages
+    children:
+      - '@azure/arm-compute.VirtualMachineImages.get'
+      - '@azure/arm-compute.VirtualMachineImages.get_2'
+      - '@azure/arm-compute.VirtualMachineImages.get_1'
+      - '@azure/arm-compute.VirtualMachineImages.list'
+      - '@azure/arm-compute.VirtualMachineImages.list_1'
+      - '@azure/arm-compute.VirtualMachineImages.list_2'
+      - '@azure/arm-compute.VirtualMachineImages.listOffers'
+      - '@azure/arm-compute.VirtualMachineImages.listOffers_2'
+      - '@azure/arm-compute.VirtualMachineImages.listOffers_1'
+      - '@azure/arm-compute.VirtualMachineImages.listPublishers'
+      - '@azure/arm-compute.VirtualMachineImages.listPublishers_2'
+      - '@azure/arm-compute.VirtualMachineImages.listPublishers_1'
+      - '@azure/arm-compute.VirtualMachineImages.listSkus'
+      - '@azure/arm-compute.VirtualMachineImages.listSkus_2'
+      - '@azure/arm-compute.VirtualMachineImages.listSkus_1'
+      - '@azure/arm-compute.VirtualMachineImages.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine VirtualMachineImages darstellt.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft ein Image eines virtuellen Computers ab.
+    syntax:
+      content: 'function get(location: string, publisherName: string, offer: string, skus: string, version: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: skus
+          type:
+            - string
+          description: Kein gültiges Image-SKU.
+        - id: version
+          type:
+            - string
+          description: Ein gültiges Image-SKU-Version.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<VirtualMachineImage>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(location: string, publisherName: string, offer: string, skus: string, version: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineImage>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: skus
+          type:
+            - string
+          description: Kein gültiges Image-SKU.
+        - id: version
+          type:
+            - string
+          description: Ein gültiges Image-SKU-Version.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineImage>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<VirtualMachineImage>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(location: string, publisherName: string, offer: string, skus: string, version: string, callback: ServiceCallback<VirtualMachineImage>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: skus
+          type:
+            - string
+          description: Kein gültiges Image-SKU.
+        - id: version
+          type:
+            - string
+          description: Ein gültiges Image-SKU-Version.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineImage>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.list'
+    name: 'list(string, string, string, string, Models.VirtualMachineImagesListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ruft eine Liste mit allen Versionen von VM-Image für den angegebenen Speicherort, Herausgeber, Angebot und SKU ab.'
+    syntax:
+      content: 'function list(location: string, publisherName: string, offer: string, skus: string, options?: Models.VirtualMachineImagesListOptionalParams)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: skus
+          type:
+            - string
+          description: Kein gültiges Image-SKU.
+        - id: options
+          type:
+            - Models.VirtualMachineImagesListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.list_1'
+    name: 'list(string, string, string, string, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(location: string, publisherName: string, offer: string, skus: string, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: skus
+          type:
+            - string
+          description: Kein gültiges Image-SKU.
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.list_2'
+    name: 'list(string, string, string, string, VirtualMachineImagesListOptionalParams, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(location: string, publisherName: string, offer: string, skus: string, options: VirtualMachineImagesListOptionalParams, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: skus
+          type:
+            - string
+          description: Kein gültiges Image-SKU.
+        - id: options
+          type:
+            - '@azure/arm-compute.VirtualMachineImagesListOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listOffers'
+    name: 'listOffers(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft bietet eine Liste der VM-Image für die angegebene Position und dem Verleger.
+    syntax:
+      content: 'function listOffers(location: string, publisherName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListOffersResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listOffers_2'
+    name: 'listOffers(string, string, RequestOptionsBase, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listOffers(location: string, publisherName: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListOffersResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listOffers_1'
+    name: 'listOffers(string, string, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listOffers(location: string, publisherName: string, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListOffersResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listPublishers'
+    name: 'listPublishers(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft eine Liste der Herausgeber von VM-Images für den angegebenen Azure-Speicherort ab.
+    syntax:
+      content: 'function listPublishers(location: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListPublishersResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listPublishers_2'
+    name: 'listPublishers(string, RequestOptionsBase, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPublishers(location: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListPublishersResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listPublishers_1'
+    name: 'listPublishers(string, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPublishers(location: string, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListPublishersResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listSkus'
+    name: 'listSkus(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ruft eine Liste der VM-Image-SKUs für den angegebenen Standort, Herausgeber und Angebot ab.'
+    syntax:
+      content: 'function listSkus(location: string, publisherName: string, offer: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListSkusResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listSkus_2'
+    name: 'listSkus(string, string, string, RequestOptionsBase, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSkus(location: string, publisherName: string, offer: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListSkusResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.listSkus_1'
+    name: 'listSkus(string, string, string, ServiceCallback<VirtualMachineImageResource[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSkus(location: string, publisherName: string, offer: string, callback: ServiceCallback<VirtualMachineImageResource[]>)'
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Der Name einer unterstützten Azure-Region.
+        - id: publisherName
+          type:
+            - string
+          description: Ein gültiges Image-Herausgeber.
+        - id: offer
+          type:
+            - string
+          description: Ein gültiges Image Publisher-Angebot.
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.VirtualMachineImagesListSkusResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImages.constructor'
+    name: VirtualMachineImages(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine VirtualMachineImages.
+    syntax:
+      content: 'new VirtualMachineImages(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineImage>
+    name: VirtualMachineImage>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineImage
+        fullName: VirtualMachineImage
+        uid: '@azure/arm-compute.VirtualMachineImage'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/arm-compute.VirtualMachineImageResource[]>'
+    name: 'VirtualMachineImageResource[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineImageResource
+        fullName: VirtualMachineImageResource
+        uid: '@azure/arm-compute.VirtualMachineImageResource'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/arm-compute.VirtualMachineImagesListOptionalParams'
+    name: VirtualMachineImagesListOptionalParams
+    spec.typeScript:
+      - name: VirtualMachineImagesListOptionalParams
+        fullName: VirtualMachineImagesListOptionalParams
+        uid: '@azure/arm-compute.VirtualMachineImagesListOptionalParams'
