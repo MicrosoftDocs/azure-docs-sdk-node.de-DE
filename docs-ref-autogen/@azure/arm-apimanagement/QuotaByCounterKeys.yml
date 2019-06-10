@@ -1,0 +1,263 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys'
+    name: QuotaByCounterKeys
+    fullName: QuotaByCounterKeys
+    children:
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine QuotaByCounterKeys darstellt.'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+    name: 'listByService(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Listet eine Auflistung der aktuellen Kontingent Leistungsindikator Zeiträume, die dem Gegenmaßnahme Schlüssel konfiguriert werden, in der Richtlinie auf der angegebenen Dienstinstanz zugeordnet. Die api unterstützt das paging noch nicht.'
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: serviceName
+          type:
+            - string
+          description: Der Name des API Management-Dienst.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es. Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+    name: 'listByService(string, string, string, RequestOptionsBase, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: RequestOptionsBase, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: serviceName
+          type:
+            - string
+          description: Der Name des API Management-Dienst.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es. Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+    name: 'listByService(string, string, string, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: serviceName
+          type:
+            - string
+          description: Der Name des API Management-Dienst.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es. Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+    name: QuotaByCounterKeys(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine QuotaByCounterKeys.
+    syntax:
+      content: 'new QuotaByCounterKeys(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Aktualisiert alle Kontingent Leistungsindikator-Werte, die mit den vorhandenen Kontingent Leistungsindikator-Schlüssel auf einen Wert in der angegebenen Dienstinstanz angegeben. Dies sollte für das Zurücksetzen der sollvorgabenwerte für den Leistungsindikator verwendet werden.'
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: serviceName
+          type:
+            - string
+          description: Der Name des API Management-Dienst.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es. Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: 'Der Wert des Leistungsindikators Kontingent an, auf alle Kontingent Leistungsindikator Perioden angewendet werden.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: serviceName
+          type:
+            - string
+          description: Der Name des API Management-Dienst.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es. Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: 'Der Wert des Leistungsindikators Kontingent an, auf alle Kontingent Leistungsindikator Perioden angewendet werden.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: serviceName
+          type:
+            - string
+          description: Der Name des API Management-Dienst.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es. Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: 'Der Wert des Leistungsindikators Kontingent an, auf alle Kontingent Leistungsindikator Perioden angewendet werden.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+    name: QuotaCounterCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: QuotaCounterCollection
+        fullName: QuotaCounterCollection
+        uid: '@azure/arm-apimanagement.QuotaCounterCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+    name: QuotaCounterValueContractProperties
+    spec.typeScript:
+      - name: QuotaCounterValueContractProperties
+        fullName: QuotaCounterValueContractProperties
+        uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
