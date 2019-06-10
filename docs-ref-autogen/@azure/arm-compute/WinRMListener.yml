@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WinRMListener'
+    name: WinRMListener
+    fullName: WinRMListener
+    children:
+      - '@azure/arm-compute.WinRMListener.certificateUrl'
+      - '@azure/arm-compute.WinRMListener.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt, Protokoll und den Fingerabdruck des Listeners, der Windows-Remoteverwaltung'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Dies ist die URL eines Zertifikats, das in den Schlüsseltresor als geheimer Schlüssel hochgeladen wurde. Hinzufügen eines Geheimnisses zu Key Vault finden Sie unter [Hinzufügen eines Schlüssels oder Geheimnisses im schlüsseltresor](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In diesem Fall werden, dass es ist die Base64-Codierung der folgenden JSON-Objekt, das Ihr Zertifikat muss in UTF-8 codiert ist: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt das Protokoll des Listeners an. <br><br> Dabei sind folgende Werte möglich: <br>**http** <br><br>
+      **https**. Mögliche Werte sind: 'Http', 'Https'
+    optional: true
+    syntax:
+      content: 'protocol?: ProtocolTypes'
+      return:
+        type:
+          - '@azure/arm-compute.ProtocolTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ProtocolTypes'
+    name: ProtocolTypes
+    spec.typeScript:
+      - name: ProtocolTypes
+        fullName: ProtocolTypes
+        uid: '@azure/arm-compute.ProtocolTypes'
