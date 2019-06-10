@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters'
+    name: ProductEntityBaseParameters
+    fullName: ProductEntityBaseParameters
+    children:
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.approvalRequired'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.description'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.state'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionRequired'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionsLimit'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.terms'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3e9b1-101">Product-Entität-Basis-Parameter</span><span class="sxs-lookup"><span data-stu-id="3e9b1-101">Product Entity Base Parameters</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.approvalRequired'
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e9b1-102">Gibt an, ob abonnementgenehmigung erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-102">whether subscription approval is required.</span></span> <span data-ttu-id="3e9b1-103">Wenn "false" werden neue Abonnements automatisch ermöglicht es Entwicklern, die APIs des Produkts nach der Abonnierung sofort aufrufen genehmigt werden.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-103">If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing.</span></span> <span data-ttu-id="3e9b1-104">Bei "true", müssen Administratoren das Abonnement manuell genehmigen, bevor der Entwickler kann eine der APIs des Produkts.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-104">If true, administrators must manually approve the subscription before the developer can any of the product’s APIs.</span></span> <span data-ttu-id="3e9b1-105">Kann vorhanden sein, nur dann, wenn SubscriptionRequired-Eigenschaft vorhanden ist und den Wert "false hat".</span><span class="sxs-lookup"><span data-stu-id="3e9b1-105">Can be present only if subscriptionRequired property is present and has a value of false.</span></span>'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3e9b1-106">Produktbeschreibung.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-106">Product description.</span></span> <span data-ttu-id="3e9b1-107">Kann HTML-Formatierungstags umfassen.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-107">May include HTML formatting tags.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e9b1-108">Gibt an, ob Produkt veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-108">whether product is published or not.</span></span> <span data-ttu-id="3e9b1-109">Veröffentlichte Produkte sind von Benutzern des Developer Portal sichtbar.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-109">Published products are discoverable by users of developer portal.</span></span> <span data-ttu-id="3e9b1-110">Nicht veröffentlichte Produkte sind nur für Administratoren sichtbar.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-110">Non published products are visible only to administrators.</span></span> <span data-ttu-id="3e9b1-111">Standardzustand des Produkts ist NotPublished.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-111">Default state of Product is notPublished.</span></span> <span data-ttu-id="3e9b1-112">Folgende Werte sind möglich: ''NotPublished","veröffentlicht"</span><span class="sxs-lookup"><span data-stu-id="3e9b1-112">Possible values include: ''notPublished'', ''published''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: ProductState'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ProductState'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionRequired'
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3e9b1-113">Ob ein produktabonnement, für erforderlich ist den Zugriff auf APIs, die in diesem Produkt enthalten.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-113">Whether a product subscription is required for accessing APIs included in this product.</span></span> <span data-ttu-id="3e9b1-114">True gibt an, das Produkt wird bezeichnet als "geschützt", und ein gültiger Abonnementschlüssel ist erforderlich, damit eine Anforderung an eine API, die im Produkt enthalten, erfolgreich ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-114">If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed.</span></span> <span data-ttu-id="3e9b1-115">False gibt an, das Produkt wird als "Offen" bezeichnet, und Anforderungen an eine API, die im Produkt enthaltenen können ohne Abonnementschlüssel erfolgen.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-115">If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key.</span></span>
+      <span data-ttu-id="3e9b1-116">Wenn die Eigenschaft weggelassen wird, wenn Sie ein neues Produkt erstellen, sein Wert wird davon ausgegangen, dass "true" sein.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-116">If property is omitted when creating a new product it's value is assumed to be true.</span></span>
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionsLimit'
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e9b1-117">Gibt an, ob die Anzahl der Abonnements eines Benutzers für dieses Produkt zur gleichen Zeit möglich.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-117">Whether the number of subscriptions a user can have to this product at the same time.</span></span> <span data-ttu-id="3e9b1-118">Festlegen auf null, oder lassen Sie die zu Abonnements pro Benutzer unbegrenzt.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-118">Set to null or omit to allow unlimited per user subscriptions.</span></span> <span data-ttu-id="3e9b1-119">Kann vorhanden sein, nur dann, wenn SubscriptionRequired-Eigenschaft vorhanden ist und den Wert "false hat".</span><span class="sxs-lookup"><span data-stu-id="3e9b1-119">Can be present only if subscriptionRequired property is present and has a value of false.</span></span>'
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.terms'
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e9b1-120">Nutzungsbedingungen für das Produkt.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-120">Product terms of use.</span></span> <span data-ttu-id="3e9b1-121">Diese Bedingungen werden Entwicklern angezeigt, die das Produkt abonnieren möchten. Sie müssen die Bedingungen akzeptieren, um den Abonnementvorgang abschließen zu können.</span><span class="sxs-lookup"><span data-stu-id="3e9b1-121">Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.</span></span>'
+    optional: true
+    syntax:
+      content: 'terms?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ProductState'
+    name: ProductState
+    spec.typeScript:
+      - name: ProductState
+        fullName: ProductState
+        uid: '@azure/arm-apimanagement.ProductState'
