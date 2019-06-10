@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Beschreibt den Client, der ermöglicht die Interaktion mit Service Bus-Thema.
+      Verwenden der `createTopicClient` hängt das ServiceBusClient-Objekt, das eine TopicClient instanziieren
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Schließt den AMQP-Link für den Absender, die von diesem Client erstellt.
+      Sobald geschlossen, können weder der Absender als auch die TopicClient für weitere Vorgänge verwendet werden.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Erstellt einen Sender zum Senden von Nachrichten, das Nachrichten senden, zu einem späteren Zeitpunkt planen und diese geplante Nachrichten abgebrochen verwendet werden soll.
+      - Löst Fehler aus, wenn es sich bei ein geöffneter Absender für diese TopicClient bereits vorhanden ist.
+      Wenn das Thema für die Sitzung aktivierte Abonnements wurde aus, und klicken Sie dann Nachrichten gesendet werden, ohne die `sessionId` Eigenschaft wird an die Dead Letter-Warteschlange des Abonnements dieser Art gesendet.
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Pfad für die Service Bus-Thema für den Client erstellt wird.
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Gibt den entsprechenden unzustellbare Thema Namen für die angegebenen Thema und Abonnement.
+      Verwenden Sie diese in die `createSubscriptionClient` Funktion der `ServiceBusClient` -Instanz, aus der Warteschlange für unzustellbare Nachrichten zu empfangen, für das angegebene Abonnement.
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: 'Name des Themas, deren Dead-Letter-Entsprechung Name abgerufen werden'
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            Der Name des Abonnements, deren Dead-Letter-Entsprechung Name abgerufen werden
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ein eindeutiger Bezeichner für diesen Client.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
