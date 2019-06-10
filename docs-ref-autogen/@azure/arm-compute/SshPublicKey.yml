@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SshPublicKey'
+    name: SshPublicKey
+    fullName: SshPublicKey
+    children:
+      - '@azure/arm-compute.SshPublicKey.keyData'
+      - '@azure/arm-compute.SshPublicKey.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Enthält Informationen zu öffentlichen Schlüssel für die SSH-Zertifikats und den Pfad auf der Linux-VM, in denen der öffentliche Schlüssel platziert wird.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.keyData'
+    name: keyData
+    fullName: keyData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'SSH Zertifikat für öffentliche Schlüssel verwendet, um mit dem virtuellen Computer über ssh authentifizieren. Der Schlüssel muss mindestens 2048-Bit- und ssh-Rsa-Format sein. <br><br> Erstellen von ssh Schlüsseln, finden Sie unter [Erstellen von SSH-Schlüsseln unter Linux und Mac für Linux-VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).'
+    optional: true
+    syntax:
+      content: 'keyData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt den vollständigen Pfad auf den erstellten virtuellen Computer, in denen ssh öffentliche Schlüssel gespeichert ist. Wenn die Datei bereits vorhanden ist, wird der angegebene Schlüssel in die Datei angefügt. Beispiel: /home/user/.ssh/authorized_keys'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
