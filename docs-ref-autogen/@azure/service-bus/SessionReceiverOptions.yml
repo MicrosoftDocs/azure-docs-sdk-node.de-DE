@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    fullName: SessionReceiverOptions
+    children:
+      - '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+      - '@azure/service-bus.SessionReceiverOptions.sessionId'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="0773e-101">Beschreibt die Optionen, die an die `createReceiver` Methode, wenn eine Warteschlange oder ein Abonnement zu verwenden, die Sitzungen aktiviert wurde.</span><span class="sxs-lookup"><span data-stu-id="0773e-101">Describes the options passed to the `createReceiver` method when using a Queue/Subscription that has sessions enabled.</span></span>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+    name: maxSessionAutoRenewLockDurationInSeconds
+    fullName: maxSessionAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0773e-102">Die maximale Dauer in Sekunden, bis die, die Sperre für die Sitzung wird durch das Sdk automatisch verlängert werden.</span><span class="sxs-lookup"><span data-stu-id="0773e-102">The maximum duration in seconds until which, the lock on the session will be renewed automatically by the sdk.</span></span>
+      - <span data-ttu-id="0773e-103">**Standard**: `300` Sekunden (5 Minuten).</span><span class="sxs-lookup"><span data-stu-id="0773e-103">**Default**: `300` seconds (5 minutes).</span></span>
+      - <span data-ttu-id="0773e-104">**Um Autolock Verlängerung deaktivieren**, legen Sie diesen `0`.</span><span class="sxs-lookup"><span data-stu-id="0773e-104">**To disable autolock renewal**, set this to `0`.</span></span>
+    optional: true
+    syntax:
+      content: 'maxSessionAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0773e-105">Die Id der Sitzung aus der Nachrichten empfangen werden müssen.</span><span class="sxs-lookup"><span data-stu-id="0773e-105">The id of the session from which messages need to be received.</span></span> <span data-ttu-id="0773e-106">Wenn null oder undefiniert sein angegeben wird, wählt Service Bus einer zufälligen Sitzungs aus verfügbaren Sitzungen.</span><span class="sxs-lookup"><span data-stu-id="0773e-106">If null or undefined is provided, Service Bus chooses a random session from available sessions.</span></span>'
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
