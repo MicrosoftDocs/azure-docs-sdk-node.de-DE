@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    fullName: ReceiveMode
+    children:
+      - '@azure/service-bus.ReceiveMode.peekLock'
+      - '@azure/service-bus.ReceiveMode.receiveAndDelete'
+    langs:
+      - typeScript
+    type: enum
+    summary: '<span data-ttu-id="b42e7-101">Der Modus, in dem Nachrichten empfangen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b42e7-101">The mode in which messages should be received.</span></span> <span data-ttu-id="b42e7-102">Die 2 Modi sind `peekLock` und `receiveAndDelete`.</span><span class="sxs-lookup"><span data-stu-id="b42e7-102">The 2 modes are `peekLock` and `receiveAndDelete`.</span></span>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceiveMode.peekLock'
+    name: peekLock
+    children: []
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b42e7-103">Sobald eine Nachricht in diesem Modus empfangen wird, hat der Empfänger eine Sperre für die Nachricht für einen bestimmten Zeitraum an.</span><span class="sxs-lookup"><span data-stu-id="b42e7-103">Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="b42e7-104">Wird die Nachricht zu diesem Zeitpunkt nicht ausgeglichen, gelangt er auf Service Bus durch das nächste abgerufen werden receive-Methode.</span><span class="sxs-lookup"><span data-stu-id="b42e7-104">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>'
+    type: field
+    numericValue: 1
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceiveMode.receiveAndDelete'
+    name: receiveAndDelete
+    children: []
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b42e7-105">In diesem Modus empfangene Nachrichten abrufen von Service Bus automatisch entfernt.</span><span class="sxs-lookup"><span data-stu-id="b42e7-105">Messages received in this mode get automatically removed from Service Bus.</span></span>
+    type: field
+    numericValue: 2
+    package: '@azure/service-bus'
