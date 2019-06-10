@@ -1,0 +1,287 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys'
+    name: QuotaByPeriodKeys
+    fullName: QuotaByPeriodKeys
+    children:
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.get'
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.get_2'
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.get_1'
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.constructor'
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.update'
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.update_2'
+      - '@azure/arm-apimanagement.QuotaByPeriodKeys.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="0bf80-101">Klasse, die eine QuotaByPeriodKeys darstellt.</span><span class="sxs-lookup"><span data-stu-id="0bf80-101">Class representing a QuotaByPeriodKeys.</span></span>'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0bf80-102">Ruft den Wert des Leistungsindikators "Kontingent" dem Gegenmaßnahme Schlüssel zugeordnete in der Richtlinie für den jeweiligen Zeitraum in der Dienstinstanz.</span><span class="sxs-lookup"><span data-stu-id="0bf80-102">Gets the value of the quota counter associated with the counter-key in the policy for the specific period in service instance.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, quotaCounterKey: string, quotaPeriodKey: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-103">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0bf80-103">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-104">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="0bf80-104">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="0bf80-105">Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es.</span><span class="sxs-lookup"><span data-stu-id="0bf80-105">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="0bf80-106">Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="0bf80-106">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: quotaPeriodKey
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-107">Kontingent Zeitraum Schlüsselbezeichner.</span><span class="sxs-lookup"><span data-stu-id="0bf80-107">Quota period key identifier.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.QuotaByPeriodKeysGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<QuotaCounterContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, quotaCounterKey: string, quotaPeriodKey: string, options: RequestOptionsBase, callback: ServiceCallback<QuotaCounterContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-108">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0bf80-108">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-109">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="0bf80-109">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="0bf80-110">Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es.</span><span class="sxs-lookup"><span data-stu-id="0bf80-110">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="0bf80-111">Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="0bf80-111">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: quotaPeriodKey
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-112">Kontingent Zeitraum Schlüsselbezeichner.</span><span class="sxs-lookup"><span data-stu-id="0bf80-112">Quota period key identifier.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0bf80-113">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0bf80-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterContract>
+          description: |
+            <span data-ttu-id="0bf80-114">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0bf80-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.QuotaByPeriodKeysGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<QuotaCounterContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, quotaCounterKey: string, quotaPeriodKey: string, callback: ServiceCallback<QuotaCounterContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-115">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0bf80-115">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-116">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="0bf80-116">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="0bf80-117">Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es.</span><span class="sxs-lookup"><span data-stu-id="0bf80-117">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="0bf80-118">Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="0bf80-118">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: quotaPeriodKey
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-119">Kontingent Zeitraum Schlüsselbezeichner.</span><span class="sxs-lookup"><span data-stu-id="0bf80-119">Quota period key identifier.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterContract>
+          description: |
+            <span data-ttu-id="0bf80-120">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0bf80-120">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.QuotaByPeriodKeysGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.constructor'
+    name: QuotaByPeriodKeys(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0bf80-121">Erstellen Sie eine QuotaByPeriodKeys.</span><span class="sxs-lookup"><span data-stu-id="0bf80-121">Create a QuotaByPeriodKeys.</span></span>
+    syntax:
+      content: 'new QuotaByPeriodKeys(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="0bf80-122">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="0bf80-122">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.update'
+    name: 'update(string, string, string, string, QuotaCounterValueContractProperties, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0bf80-123">Aktualisiert einen vorhandenen Wert des kontingentzählers in der angegebenen Dienstinstanz an.</span><span class="sxs-lookup"><span data-stu-id="0bf80-123">Updates an existing quota counter value in the specified service instance.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, quotaPeriodKey: string, parameters: QuotaCounterValueContractProperties, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-124">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0bf80-124">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-125">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="0bf80-125">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="0bf80-126">Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es.</span><span class="sxs-lookup"><span data-stu-id="0bf80-126">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="0bf80-127">Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="0bf80-127">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: quotaPeriodKey
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-128">Kontingent Zeitraum Schlüsselbezeichner.</span><span class="sxs-lookup"><span data-stu-id="0bf80-128">Quota period key identifier.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: <span data-ttu-id="0bf80-129">Der Wert des Zählers Kontingent für den angegebenen Zeitraum verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="0bf80-129">The value of the Quota counter to be applied on the specified period.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.update_2'
+    name: 'update(string, string, string, string, QuotaCounterValueContractProperties, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, quotaPeriodKey: string, parameters: QuotaCounterValueContractProperties, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-130">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0bf80-130">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-131">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="0bf80-131">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="0bf80-132">Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es.</span><span class="sxs-lookup"><span data-stu-id="0bf80-132">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="0bf80-133">Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="0bf80-133">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: quotaPeriodKey
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-134">Kontingent Zeitraum Schlüsselbezeichner.</span><span class="sxs-lookup"><span data-stu-id="0bf80-134">Quota period key identifier.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: <span data-ttu-id="0bf80-135">Der Wert des Zählers Kontingent für den angegebenen Zeitraum verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="0bf80-135">The value of the Quota counter to be applied on the specified period.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0bf80-136">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0bf80-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0bf80-137">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0bf80-137">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByPeriodKeys.update_1'
+    name: 'update(string, string, string, string, QuotaCounterValueContractProperties, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, quotaPeriodKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-138">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0bf80-138">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-139">Der Name des API Management-Dienst.</span><span class="sxs-lookup"><span data-stu-id="0bf80-139">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="0bf80-140">Kontingent Leistungsindikator Schlüsselbezeichner. Dies ist das Ergebnis des Ausdrucks in der Quota-by-Key-Richtlinie gegen den Schlüsselattribut definiert. Beispielsweise bei Angabe von Leistungsindikator-Key = "boo" in der Richtlinie mit "boo" Counter-Schlüssel zugegriffen werden kann, ist es.</span><span class="sxs-lookup"><span data-stu-id="0bf80-140">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="0bf80-141">Aber wenn es als counter-key="@("b"+"a") definiert wurde" und dann sie auf "Ba" Schlüssel zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="0bf80-141">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: quotaPeriodKey
+          type:
+            - string
+          description: <span data-ttu-id="0bf80-142">Kontingent Zeitraum Schlüsselbezeichner.</span><span class="sxs-lookup"><span data-stu-id="0bf80-142">Quota period key identifier.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: <span data-ttu-id="0bf80-143">Der Wert des Zählers Kontingent für den angegebenen Zeitraum verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="0bf80-143">The value of the Quota counter to be applied on the specified period.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0bf80-144">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0bf80-144">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.QuotaCounterContract>
+    name: QuotaCounterContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: QuotaCounterContract
+        fullName: QuotaCounterContract
+        uid: '@azure/arm-apimanagement.QuotaCounterContract'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+    name: QuotaCounterValueContractProperties
+    spec.typeScript:
+      - name: QuotaCounterValueContractProperties
+        fullName: QuotaCounterValueContractProperties
+        uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
