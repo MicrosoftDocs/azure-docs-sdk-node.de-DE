@@ -1,6 +1,6 @@
 ---
-title: Batch AI-Module für Node.js
-description: Referenz zu Batch AI-Modulen für Node.js
+title: Batch KI-Module für Node.js
+description: Referenz zu Batch KI-Modulen für Node.js
 author: garyericson
 ms.author: garye
 manager: cjgronlund
@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/30/2019
 ms.locfileid: "58675404"
 ---
-# <a name="batch-ai-modules-for-nodejs"></a>Batch AI-Module für Node.js
+# <a name="batch-ai-modules-for-nodejs"></a>Batch KI-Module für Node.js
 
 >[!NOTE]
->**Der Azure Batch AI-Dienst wurde eingestellt.** Die Funktionen von Azure Batch AI sind nun als verwaltetes Computeziel in Azure Machine Learning Service verfügbar. Weitere Informationen finden Sie unter [Was ist mit Azure Batch AI passiert?](https://aka.ms/batchai-retirement)
+>**Der Azure Batch AI-Dienst wurde eingestellt.** Die Funktionen von Azure Batch KI sind nun als verwaltetes Computeziel in Azure Machine Learning Service verfügbar. Weitere Informationen finden Sie unter [Was ist mit Azure Batch KI passiert?](https://aka.ms/batchai-retirement).
