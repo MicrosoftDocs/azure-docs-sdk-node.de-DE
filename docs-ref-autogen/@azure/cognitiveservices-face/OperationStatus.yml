@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Status-Objekt. Vorgang bezieht sich auf die asynchrone Back-End-Aufgabe, einschließlich einer Momentaufnahme und Anwenden einer Momentaufnahme.'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein kombinierter UTC-Datum und Uhrzeit Zeichenfolge, die die Zeit wird beschrieben, wenn der Vorgang (erstellen oder Anwenden einer Momentaufnahme) angefordert wird. Beispiel: 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein kombinierter UTC-Datum und Uhrzeit-Zeichenfolge, die beschreibt, den letzten Zeit, den Vorgang (erstellen oder Anwenden einer Momentaufnahme) Migrieren von Daten aktiv ist. Die LastActionTime wird erhöht beibehalten, bis der Vorgang abgeschlossen ist. Beispiel: 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Fehlermeldung angezeigt, wenn der Vorgang ein Fehler auftritt (wenn der Vorgang erfolgreich ausgeführt wurde ausgelassen).'
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn der Vorgang erfolgreich erfolgreich ist, für die Momentaufnahme, dauert der Vorgang wird die Id der Momentaufnahme in diesem Feld enthalten sein, und für die Momentaufnahme Vorgang anwenden, wird der Pfad zum Abrufen des Zielobjekts in diesem Feld zurückgegeben werden.'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Status des Vorgangs: Notstarted, ausgeführt wird, erfolgreich war, ist fehlgeschlagen. Wenn der Vorgang angefordert wird, und führen Sie darauf warten, der Status Notstarted ist. Wenn der Vorgang im Back-End-laufende ist, wird der Status ausgeführt. Status erfolgreich bedeutet, dass der Vorgang erfolgreich wurde speziell für die Durchführung Momentaufnahmevorgang abgeschlossen wurde, es veranschaulicht die Momentaufnahme auch aufgezeichnet wurde und bereit zum anwenden, und für die Momentaufnahme Vorgang anwenden, stellt es das Ziel erstellen, indem Sie das Objekt wurden die Momentaufnahme und kann jetzt verwendet werden. Status fehlerhaft wird oft durch das Quellobjekt zu bearbeiten, während die Momentaufnahme verursacht, oder bearbeiten das Zielobjekt beim Anwenden der Momentaufnahme vor dem Abschluss, finden Sie unter dem Feld "Nachricht" um die Fehlerursache zu überprüfen.
+      Folgende Werte sind möglich: "Notstarted", "wird ausgeführt", "succeeded", "failed"
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'
