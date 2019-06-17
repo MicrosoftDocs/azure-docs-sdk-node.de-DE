@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    fullName: JobScheduleExecutionInformation
+    children:
+      - '@azure/batch.JobScheduleExecutionInformation.endTime'
+      - '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+      - '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="5f2a3-101">Eine Schnittstelle, die JobScheduleExecutionInformation darstellt.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-101">An interface representing JobScheduleExecutionInformation.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5f2a3-102">Der Zeitpunkt, zu dem der Zeitplan beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-102">The time at which the schedule ended.</span></span> <span data-ttu-id="5f2a3-103">Diese Eigenschaft wird festgelegt, nur, wenn der Auftragszeitplan im abgeschlossenen Zustand ist.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-103">This property is set only if the job schedule is in the completed state.</span></span>'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+    name: nextRunTime
+    fullName: nextRunTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5f2a3-104">Das nächste Mal, an dem ein Auftrag in diesem Zeitplan erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-104">The next time at which a job will be created under this schedule.</span></span> <span data-ttu-id="5f2a3-105">Diese Eigenschaft ist nur sinnvoll, wenn der Zeitplan aktiv ist, gegebener Zeit auf.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-105">This property is meaningful only if the schedule is in the active state when the time comes around.</span></span> <span data-ttu-id="5f2a3-106">Z. B. wenn der Zeitplan deaktiviert ist, wird kein Auftrag auf NextRunTime-Objekt erstellt werden, wenn der Auftrag, bevor Sie anschließend aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-106">For example, if the schedule is disabled, no job will be created at nextRunTime unless the job is enabled before then.</span></span>'
+    optional: true
+    syntax:
+      content: 'nextRunTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    name: recentJob
+    fullName: recentJob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5f2a3-107">Informationen zu den aktuellen Auftrag unter den Auftragszeitplan.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-107">Information about the most recent job under the job schedule.</span></span> <span data-ttu-id="5f2a3-108">Diese Eigenschaft ist nur vorhanden, wenn mindestens ein Auftrag unter dem Zeitplan ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="5f2a3-108">This property is present only if the at least one job has run under the schedule.</span></span>'
+    optional: true
+    syntax:
+      content: 'recentJob?: RecentJob'
+      return:
+        type:
+          - '@azure/batch.RecentJob'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.RecentJob'
+    name: RecentJob
+    spec.typeScript:
+      - name: RecentJob
+        fullName: RecentJob
+        uid: '@azure/batch.RecentJob'
