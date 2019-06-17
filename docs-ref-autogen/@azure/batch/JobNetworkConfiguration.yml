@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die JobNetworkConfiguration darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Ressourcenbezeichner des ARM von dem Subnetz des virtuellen Netzwerks dem Knoten ausgeführten Tasks des Auftrags für die Dauer der Aufgabe hinzugefügt werden. Dies ist nur für Aufträge, die unter der VirtualMachineConfiguration-Pools unterstützt. Dies ist das Format: / Subscriptions / {Subscription} / ResourceGroups / {Gruppe} / Providers / {Provider} /virtualNetworks/ {Network} / Subnets / {Subnetz}.
+      Das virtuelle Netzwerk muss sich in derselben Region und demselben Abonnement wie der Azure Batch-Konto.
+      Das angegebene Subnetz müssen genügend freien IP-Adressen verwenden, um die Anzahl von Knoten zu aufzunehmen, die Tasks des Auftrags ausgeführt werden. Weitere Informationen finden Sie unter https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
