@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedDatabase'
+    name: ManagedDatabase
+    fullName: ManagedDatabase
+    children:
+      - '@azure/arm-sql.ManagedDatabase.catalogCollation'
+      - '@azure/arm-sql.ManagedDatabase.collation'
+      - '@azure/arm-sql.ManagedDatabase.createMode'
+      - '@azure/arm-sql.ManagedDatabase.creationDate'
+      - '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+      - '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+      - '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+      - '@azure/arm-sql.ManagedDatabase.id'
+      - '@azure/arm-sql.ManagedDatabase.location'
+      - '@azure/arm-sql.ManagedDatabase.name'
+      - '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+      - '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.status'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+      - '@azure/arm-sql.ManagedDatabase.tags'
+      - '@azure/arm-sql.ManagedDatabase.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="c80f6-101">Eine verwaltete Datenbank-Ressource.</span><span class="sxs-lookup"><span data-stu-id="c80f6-101">A managed database resource.</span></span>
+    extends:
+      name: '@azure/arm-sql.TrackedResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c80f6-102">Sortierung des Metadaten-Katalogs.</span><span class="sxs-lookup"><span data-stu-id="c80f6-102">Collation of the metadata catalog.</span></span> <span data-ttu-id="c80f6-103">Mögliche Werte sind: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span><span class="sxs-lookup"><span data-stu-id="c80f6-103">Possible values include: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span></span>'
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c80f6-104">Die Sortierung der verwalteten Datenbank.</span><span class="sxs-lookup"><span data-stu-id="c80f6-104">Collation of the managed database.</span></span>
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-105">Verwaltete Datenbank Erstellungsmodus.</span><span class="sxs-lookup"><span data-stu-id="c80f6-105">Managed database create mode.</span></span> <span data-ttu-id="c80f6-106">PointInTimeRestore: Erstellen Sie eine Datenbank, indem Sie einen Punkt in der Sicherung für eine vorhandene Datenbank wiederherstellen.</span><span class="sxs-lookup"><span data-stu-id="c80f6-106">PointInTimeRestore: Create a database by restoring a point in time backup of an existing database.</span></span> <span data-ttu-id="c80f6-107">SourceDatabaseName, SourceManagedInstanceName und PointInTime muss angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c80f6-107">SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified.</span></span> <span data-ttu-id="c80f6-108">RestoreExternalBackup: Erstellen Sie eine Datenbank, indem aus externen Sicherungsdateien wiederherstellen.</span><span class="sxs-lookup"><span data-stu-id="c80f6-108">RestoreExternalBackup: Create a database by restoring from external backup files.</span></span> <span data-ttu-id="c80f6-109">Sortierung, die StorageContainerUri und StorageContainerSasToken muss angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c80f6-109">Collation, StorageContainerUri and StorageContainerSasToken must be specified.</span></span> <span data-ttu-id="c80f6-110">Wiederherstellung: Erstellt eine Datenbank durch Wiederherstellen einer Sicherung geografisch repliziert.</span><span class="sxs-lookup"><span data-stu-id="c80f6-110">Recovery: Creates a database by restoring a geo-replicated backup.</span></span>
+      <span data-ttu-id="c80f6-111">RecoverableDatabaseId muss angegeben werden, wie die wiederherstellbare Datenbank-Ressourcen-ID zum Wiederherstellen.</span><span class="sxs-lookup"><span data-stu-id="c80f6-111">RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.</span></span>
+      <span data-ttu-id="c80f6-112">Mögliche Werte sind: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery'</span><span class="sxs-lookup"><span data-stu-id="c80f6-112">Possible values include: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery'</span></span>
+    optional: true
+    syntax:
+      content: 'createMode?: ManagedDatabaseCreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseCreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-113">Erstellungsdatum der Datenbank.</span><span class="sxs-lookup"><span data-stu-id="c80f6-113">Creation date of the database.</span></span>
+      <span data-ttu-id="c80f6-114">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-115">Geografisch gepaarten Region.</span><span class="sxs-lookup"><span data-stu-id="c80f6-115">Geo paired region.</span></span>
+      <span data-ttu-id="c80f6-116">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+    name: earliestRestorePoint
+    fullName: earliestRestorePoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-117">Frühesten Wiederherstellungspunkt rechtzeitig für zeitpunktwiederherstellung.</span><span class="sxs-lookup"><span data-stu-id="c80f6-117">Earliest restore point in time for point in time restore.</span></span>
+      <span data-ttu-id="c80f6-118">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-118">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'earliestRestorePoint?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-119">Instanz-Failovergruppe Ressourcenbezeichner, der diesem verwalteten Datenbank gehört.</span><span class="sxs-lookup"><span data-stu-id="c80f6-119">Instance Failover Group resource identifier that this managed database belongs to.</span></span>
+      <span data-ttu-id="c80f6-120">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-120">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-121">Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="c80f6-121">Resource ID.</span></span>
+      <span data-ttu-id="c80f6-122">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-122">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c80f6-123">Ressourcenspeicherort</span><span class="sxs-lookup"><span data-stu-id="c80f6-123">Resource location.</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-124">Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="c80f6-124">Resource name.</span></span>
+      <span data-ttu-id="c80f6-125">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c80f6-126">Der Ressourcenbezeichner des zugeordneten wiederherstellbare Datenbank für diese Datenbank erstellen.</span><span class="sxs-lookup"><span data-stu-id="c80f6-126">The resource identifier of the recoverable database associated with create operation of this database.</span></span>
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c80f6-127">Die wiederherstellbare gelöschte Datenbank-Ressourcen-Id her, wenn diese Datenbank zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="c80f6-127">The restorable dropped database resource id to restore when creating this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c80f6-128">Conditional.</span><span class="sxs-lookup"><span data-stu-id="c80f6-128">Conditional.</span></span> <span data-ttu-id="c80f6-129">Wenn CreateMode PointInTimeRestore ist, ist dieser Wert erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c80f6-129">If createMode is PointInTimeRestore, this value is required.</span></span> <span data-ttu-id="c80f6-130">Angibt, an dem Punkt (ISO8601-Format) von der Quelldatenbank, die zum Erstellen der neuen Datenbank wiederhergestellt werden.</span><span class="sxs-lookup"><span data-stu-id="c80f6-130">Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.</span></span>'
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c80f6-131">Der Ressourcenbezeichner der Quelldatenbank zugeordneten dieser Datenbank erstellen.</span><span class="sxs-lookup"><span data-stu-id="c80f6-131">The resource identifier of the source database associated with create operation of this database.</span></span>
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c80f6-132">Status der Datenbank.</span><span class="sxs-lookup"><span data-stu-id="c80f6-132">Status of the database.</span></span> <span data-ttu-id="c80f6-133">Mögliche Werte sind: "Online", "Offline", "Herunterfahren", "Erstellen", "nicht zugegriffen werden kann'', ''Update'' **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-133">Possible values include: ''Online'', ''Offline'', ''Shutdown'', ''Creating'', ''Inaccessible'', ''Updating'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: ManagedDatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+    name: storageContainerSasToken
+    fullName: storageContainerSasToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c80f6-134">Conditional.</span><span class="sxs-lookup"><span data-stu-id="c80f6-134">Conditional.</span></span> <span data-ttu-id="c80f6-135">Wenn CreateMode RestoreExternalBackup ist, ist dieser Wert erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c80f6-135">If createMode is RestoreExternalBackup, this value is required.</span></span> <span data-ttu-id="c80f6-136">Gibt an, die Storage-Container-Sas-Token.</span><span class="sxs-lookup"><span data-stu-id="c80f6-136">Specifies the storage container sas token.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerSasToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+    name: storageContainerUri
+    fullName: storageContainerUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c80f6-137">Conditional.</span><span class="sxs-lookup"><span data-stu-id="c80f6-137">Conditional.</span></span> <span data-ttu-id="c80f6-138">Wenn CreateMode RestoreExternalBackup ist, ist dieser Wert erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c80f6-138">If createMode is RestoreExternalBackup, this value is required.</span></span> <span data-ttu-id="c80f6-139">Gibt den Uri des Speichercontainers, wo die Sicherungen für die Wiederherstellung gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="c80f6-139">Specifies the uri of the storage container where backups for this restore are stored.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c80f6-140">Ressourcentags.</span><span class="sxs-lookup"><span data-stu-id="c80f6-140">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c80f6-141">Der Ressourcentyp.</span><span class="sxs-lookup"><span data-stu-id="c80f6-141">Resource type.</span></span>
+      <span data-ttu-id="c80f6-142">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c80f6-142">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-sql.TrackedResource'
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+    name: ManagedDatabaseCreateMode
+    spec.typeScript:
+      - name: ManagedDatabaseCreateMode
+        fullName: ManagedDatabaseCreateMode
+        uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+  - uid: '@azure/arm-sql.ManagedDatabaseStatus'
+    name: ManagedDatabaseStatus
+    spec.typeScript:
+      - name: ManagedDatabaseStatus
+        fullName: ManagedDatabaseStatus
+        uid: '@azure/arm-sql.ManagedDatabaseStatus'
