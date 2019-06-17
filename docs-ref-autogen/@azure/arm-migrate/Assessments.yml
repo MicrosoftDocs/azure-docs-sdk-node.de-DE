@@ -1,0 +1,717 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.Assessments'
+    name: Assessments
+    fullName: Assessments
+    children:
+      - '@azure/arm-migrate.Assessments.constructor'
+      - '@azure/arm-migrate.Assessments.create_2'
+      - '@azure/arm-migrate.Assessments.create'
+      - '@azure/arm-migrate.Assessments.create_1'
+      - '@azure/arm-migrate.Assessments.deleteMethod'
+      - '@azure/arm-migrate.Assessments.deleteMethod_2'
+      - '@azure/arm-migrate.Assessments.deleteMethod_1'
+      - '@azure/arm-migrate.Assessments.get'
+      - '@azure/arm-migrate.Assessments.get_2'
+      - '@azure/arm-migrate.Assessments.get_1'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl_2'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl_1'
+      - '@azure/arm-migrate.Assessments.listByGroup'
+      - '@azure/arm-migrate.Assessments.listByGroup_2'
+      - '@azure/arm-migrate.Assessments.listByGroup_1'
+      - '@azure/arm-migrate.Assessments.listByProject'
+      - '@azure/arm-migrate.Assessments.listByProject_2'
+      - '@azure/arm-migrate.Assessments.listByProject_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine Bewertungen darstellt.'
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.constructor'
+    name: Assessments(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine Bewertungen.
+    syntax:
+      content: 'new Assessments(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create_2'
+    name: 'create(string, string, string, string, AssessmentsCreateOptionalParams, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: AssessmentsCreateOptionalParams, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create'
+    name: 'create(string, string, string, string, Models.AssessmentsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Erstellen Sie eine neue Bewertung mit dem angegebenen Namen und den angegebenen Einstellungen. Da der Name des eine Bewertung in einem Projekt eine eindeutige Identiefier, ist, wenn eine Bewertung mit dem bereitgestellten Namen vorhanden ist, wird die Bewertung die vorhandene aktualisiert.
+      Alle PUT-Vorgang, was entweder erstellen oder Aktualisieren auf eine Bewertung, die bewirkt, dass der Bewertung zu Status "InProgress". Dies wird durch das Feld "ComputationState" für das Objekt für die Bewertung angegeben. Während dieser Zeit werden keine anderen PUT-Vorgang für dieses Objekt für die Bewertung darf dasselbe gilt für einen Löschvorgang an. Sobald die Berechnung für die Bewertung abgeschlossen ist, werden das Feld "ComputationState" auf "Bereit" aktualisiert, und klicken Sie dann auf der anderen PUT oder DELETE können Vorgänge in der Bewertung auftreten.
+
+      Bei der Bewertung unter Berechnung vorhanden ist, führen alle PUT zu Fehlercode 400 – Ungültige Anforderung.
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: Models.AssessmentsCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - Models.AssessmentsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create_1'
+    name: 'create(string, string, string, string, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Löschen Sie eine Bewertung aus dem Projekt ein. Die Computer bleiben in der Bewertung. Löschen eine nicht existierende Bewertung führt einen nicht-Vorgangs.
+      Wenn eine Bewertung unter Berechnung wird durch das Feld 'ComputationState' kann nicht gelöscht werden. Jeder solche Versuch gibt einen 400 – Ungültige Anforderung zurück.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erhalten Sie eine vorhandene Bewertung mit dem angegebenen Namen. Gibt ein JSON-Objekt des Typs "Bewertung" als Modelle, Abschnitt zurück.'
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl'
+    name: 'getReportDownloadUrl(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft die URL für die Bewertung in einem Berichtsformat herunterladen.
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl_2'
+    name: 'getReportDownloadUrl(string, string, string, string, RequestOptionsBase, ServiceCallback<DownloadUrl>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<DownloadUrl>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.DownloadUrl>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl_1'
+    name: 'getReportDownloadUrl(string, string, string, string, ServiceCallback<DownloadUrl>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<DownloadUrl>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: assessmentName
+          type:
+            - string
+          description: Eindeutiger Name der Bewertung innerhalb eines Projekts.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.DownloadUrl>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup'
+    name: 'listByGroup(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Rufen Sie alle Bewertungen für die angegebene Gruppe erstellt wurde.
+      Gibt ein JSON-Array von Objekten des Typs "Bewertung" als Modelle, Abschnitt zurück.
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup_2'
+    name: 'listByGroup(string, string, string, RequestOptionsBase, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup_1'
+    name: 'listByGroup(string, string, string, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject'
+    name: 'listByProject(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Rufen Sie alle Bewertungen, die im Projekt erstellt.
+      Gibt ein JSON-Array von Objekten des Typs "Bewertung" als Modelle, Abschnitt zurück.
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject_2'
+    name: 'listByProject(string, string, RequestOptionsBase, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject_1'
+    name: 'listByProject(string, string, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.Assessment>
+    name: Assessment>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Assessment
+        fullName: Assessment
+        uid: '@azure/arm-migrate.Assessment'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+    name: AssessmentsCreateOptionalParams
+    spec.typeScript:
+      - name: AssessmentsCreateOptionalParams
+        fullName: AssessmentsCreateOptionalParams
+        uid: '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-migrate.DownloadUrl>
+    name: DownloadUrl>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DownloadUrl
+        fullName: DownloadUrl
+        uid: '@azure/arm-migrate.DownloadUrl'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+    name: AssessmentResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessmentResultList
+        fullName: AssessmentResultList
+        uid: '@azure/arm-migrate.AssessmentResultList'
+      - name: '>'
+        fullName: '>'
