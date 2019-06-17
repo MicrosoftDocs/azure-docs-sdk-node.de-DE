@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 'Relativer Pfad der Überprüfung. Gültige Pfad beginnt mit "/". Prüfpunkt wird gesendet, um <Protocol>://<host>:<port><path>'
+    summary: 'Relativer Pfad der Überprüfung. Gültige Pfad beginnt mit "/". Prüfpunkt wird gesendet, um <Protocol>://<host>:<port><path>.'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Benutzerdefinierten Port, der zum Ermitteln der Back-End-Webservern verwendet wird. Der gültige Wert liegt zwischen 1 und 65535 liegen. Bei nicht festgelegt ist, über-HTTP-Port werden Einstellungen verwendet werden. Diese Eigenschaft ist nur gültig für Standard_v2 und WAF_v2.'
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol

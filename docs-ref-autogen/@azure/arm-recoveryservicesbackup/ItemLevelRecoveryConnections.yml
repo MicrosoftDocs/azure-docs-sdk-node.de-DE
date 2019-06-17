@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections'
+    name: ItemLevelRecoveryConnections
+    fullName: ItemLevelRecoveryConnections
+    children:
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.constructor'
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision'
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_2'
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_1'
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke'
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_2'
+      - '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine ItemLevelRecoveryConnections darstellt.'
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.constructor'
+    name: ItemLevelRecoveryConnections(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine ItemLevelRecoveryConnections.
+    syntax:
+      content: 'new ItemLevelRecoveryConnections(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision'
+    name: 'provision(string, string, string, string, string, string, ILRRequestResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Stellt ein Skript, das eine iSCSI-Verbindung, um den Sicherungsdaten aufruft. Dieses Skript ausführen, wird einen Datei-Explorer anzeigen, alle wiederherstellbaren Dateien und Ordner geöffnet. Dies ist ein asynchroner Vorgang. Um den Status der Bereitstellung kennen, können rufen Sie GetProtectedItemOperationResult-API auf.'
+    syntax:
+      content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, den gesicherten Elementen zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Containername den gesicherten Elementen zugeordnet.
+        - id: protectedItemName
+          type:
+            - string
+          description: 'Gesichert, Name des Elements, dessen Dateien bzw. Ordner werden wiederhergestellt werden.'
+        - id: recoveryPointId
+          type:
+            - string
+          description: Die ID des Wiederherstellungspunkts der gesicherte Daten darstellt. iSCSI-Verbindung wird für diese gesicherten Daten bereitgestellt werden.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.ILRRequestResource'
+          description: Wiederherstellung auf Elementebene ressourcenanforderung
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_2'
+    name: 'provision(string, string, string, string, string, string, ILRRequestResource, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, den gesicherten Elementen zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Containername den gesicherten Elementen zugeordnet.
+        - id: protectedItemName
+          type:
+            - string
+          description: 'Gesichert, Name des Elements, dessen Dateien bzw. Ordner werden wiederhergestellt werden.'
+        - id: recoveryPointId
+          type:
+            - string
+          description: Die ID des Wiederherstellungspunkts der gesicherte Daten darstellt. iSCSI-Verbindung wird für diese gesicherten Daten bereitgestellt werden.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.ILRRequestResource'
+          description: Wiederherstellung auf Elementebene ressourcenanforderung
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_1'
+    name: 'provision(string, string, string, string, string, string, ILRRequestResource, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, den gesicherten Elementen zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Containername den gesicherten Elementen zugeordnet.
+        - id: protectedItemName
+          type:
+            - string
+          description: 'Gesichert, Name des Elements, dessen Dateien bzw. Ordner werden wiederhergestellt werden.'
+        - id: recoveryPointId
+          type:
+            - string
+          description: Die ID des Wiederherstellungspunkts der gesicherte Daten darstellt. iSCSI-Verbindung wird für diese gesicherten Daten bereitgestellt werden.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.ILRRequestResource'
+          description: Wiederherstellung auf Elementebene ressourcenanforderung
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke'
+    name: 'revoke(string, string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Widerruft eine iSCSI-Verbindung die verwendet werden kann, um ein Skript herunterzuladen. Dieses Skript ausführen, wird einen Datei-Explorer anzeigen, alle wiederherstellbaren Dateien und Ordner geöffnet. Dies ist ein asynchroner Vorgang.'
+    syntax:
+      content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, den gesicherten Elementen zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Containername den gesicherten Elementen zugeordnet.
+        - id: protectedItemName
+          type:
+            - string
+          description: 'Gesichert, Name des Elements, dessen Dateien bzw. Ordner werden wiederhergestellt werden.'
+        - id: recoveryPointId
+          type:
+            - string
+          description: Die ID des Wiederherstellungspunkts der gesicherte Daten darstellt. iSCSI-Verbindung wird für diese gesicherten Daten widerrufen.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_2'
+    name: 'revoke(string, string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, den gesicherten Elementen zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Containername den gesicherten Elementen zugeordnet.
+        - id: protectedItemName
+          type:
+            - string
+          description: 'Gesichert, Name des Elements, dessen Dateien bzw. Ordner werden wiederhergestellt werden.'
+        - id: recoveryPointId
+          type:
+            - string
+          description: Die ID des Wiederherstellungspunkts der gesicherte Daten darstellt. iSCSI-Verbindung wird für diese gesicherten Daten widerrufen.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_1'
+    name: 'revoke(string, string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, den gesicherten Elementen zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Containername den gesicherten Elementen zugeordnet.
+        - id: protectedItemName
+          type:
+            - string
+          description: 'Gesichert, Name des Elements, dessen Dateien bzw. Ordner werden wiederhergestellt werden.'
+        - id: recoveryPointId
+          type:
+            - string
+          description: Die ID des Wiederherstellungspunkts der gesicherte Daten darstellt. iSCSI-Verbindung wird für diese gesicherten Daten widerrufen.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: '@azure/arm-recoveryservicesbackup.ILRRequestResource'
+    name: ILRRequestResource
+    spec.typeScript:
+      - name: ILRRequestResource
+        fullName: ILRRequestResource
+        uid: '@azure/arm-recoveryservicesbackup.ILRRequestResource'

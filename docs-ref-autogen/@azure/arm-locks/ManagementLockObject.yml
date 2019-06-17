@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-locks.ManagementLockObject'
+    name: ManagementLockObject
+    fullName: ManagementLockObject
+    children:
+      - '@azure/arm-locks.ManagementLockObject.id'
+      - '@azure/arm-locks.ManagementLockObject.level'
+      - '@azure/arm-locks.ManagementLockObject.name'
+      - '@azure/arm-locks.ManagementLockObject.notes'
+      - '@azure/arm-locks.ManagementLockObject.owners'
+      - '@azure/arm-locks.ManagementLockObject.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Die Sperrinformationen.
+    extends:
+      name: BaseResource
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLockObject.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Ressourcen-ID der Sperre.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLockObject.level'
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Ebene der Sperre. Dabei sind folgende Werte möglich: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete bedeutet, dass autorisierte Benutzer zu lesen und ändern die Ressourcen, aber nicht gelöscht werden können. ReadOnly bedeutet, dass autorisierte Benutzer können nur von einer Ressource lesen, aber nicht ändern oder löschen.
+      Mögliche Werte sind: 'NotSpecified', 'CanNotDelete', 'ReadOnly'
+    syntax:
+      content: 'level: LockLevel'
+      return:
+        type:
+          - '@azure/arm-locks.LockLevel'
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLockObject.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Name der Sperre.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLockObject.notes'
+    name: notes
+    fullName: notes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Anmerkungen zu dieser Informationen zu der Sperre. Maximal 512 Zeichen lang sein.
+    optional: true
+    syntax:
+      content: 'notes?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLockObject.owners'
+    name: owners
+    fullName: owners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Besitzer der Sperre.
+    optional: true
+    syntax:
+      content: 'owners?: ManagementLockOwner[]'
+      return:
+        type:
+          - '@azure/arm-locks.ManagementLockOwner[]'
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLockObject.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Ressourcentyp der Sperre - Microsoft.Authorization/locks.
+      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-locks'
+references:
+  - uid: '@azure/arm-locks.LockLevel'
+    name: LockLevel
+    spec.typeScript:
+      - name: LockLevel
+        fullName: LockLevel
+        uid: '@azure/arm-locks.LockLevel'
+  - uid: '@azure/arm-locks.ManagementLockOwner[]'
+    name: 'ManagementLockOwner[]'
+    spec.typeScript:
+      - name: ManagementLockOwner
+        fullName: ManagementLockOwner
+        uid: '@azure/arm-locks.ManagementLockOwner'
+      - name: '[]'
+        fullName: '[]'

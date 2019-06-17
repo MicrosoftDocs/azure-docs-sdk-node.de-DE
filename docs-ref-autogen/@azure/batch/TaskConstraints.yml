@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - '@azure/batch.TaskConstraints.maxTaskRetryCount'
+      - '@azure/batch.TaskConstraints.maxWallClockTime'
+      - '@azure/batch.TaskConstraints.retentionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die TaskConstraints darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, wie oft der Task maximal wiederholt werden kann. Der Batch-Dienst wiederholt einen Task, wenn sein Exitcode ungleich null ist. Beachten Sie, dass dieser Wert speziell die Anzahl der Wiederholungen für die ausführbare Datei aufgrund einen Exitcode ungleich null der Aufgabe steuert. Der Batch-Dienst wiederholt den Task einmal und kann ihn anschließend bis zu diesem Grenzwert wiederholen. Beispielsweise ist die maximale Anzahl von Wiederholungsversuchen 3, Batch versucht den Task bis zu 4 Wiederholungsversuche (ein erster Versuch und 3 Wiederholungen). Wenn die maximale Anzahl von Wiederholungsversuchen 0 ist, wird der Batch-Dienst die Aufgabe nach dem ersten Versuch nicht wiederholt. Wenn die maximale Anzahl wiederholen ist-1. das Batch-Dienst führt einen Wiederholungsversuch der Task unbegrenzt.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die maximal verstrichene Zeit, die die Aufgabe ausgeführt werden kann, gemessen ab dem Zeitpunkt, wenn die Aufgabe gestartet wird. Wenn der Task nicht innerhalb des Zeitlimits abgeschlossen wird, der Batch-Dienst beendet wird. Wenn dies nicht angegeben wird, ist es keine zeitliche Begrenzung für wie lange die Aufgabe ausgeführt werden kann.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die minimale Zeit aufgabenverzeichnisses auf den Compute-Knoten beibehalten werden sollen, in dem er, ab dem Zeitpunkt ausgeführt wurde es Ausführung abgeschlossen ist. Nach diesem Zeitpunkt kann der Batch-Dienst das Aufgabe-Verzeichnis und seinen gesamten Inhalt löschen. Der Standardwert ist 7 Tage, d. h. das Verzeichnis eines Tasks wird werden sieben Tage lang aufbewahrt, wenn die Compute-Knoten entfernt wird, oder der Auftrag wird gelöscht.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
