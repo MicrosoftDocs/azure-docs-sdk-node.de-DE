@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest'
+    name: FindSimilarRequest
+    fullName: FindSimilarRequest
+    children:
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceIds'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceListId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.largeFaceListId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.maxNumOfCandidatesReturned'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.mode'
+    langs:
+      - typeScript
+    type: interface
+    summary: Der Anforderungstext für ähnliche Suchvorgang.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceId'
+    name: faceId
+    fullName: faceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'FaceId des Gesichts Abfrage. Benutzer muss sich das Gesicht aufgerufen: zuerst erhalten eine gültige FaceId zu erkennen. Beachten Sie, dass diese FaceId nicht beibehalten wird und 24 Stunden nach dem Aufruf der Erkennung läuft'
+    syntax:
+      content: 'faceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceIds'
+    name: faceIds
+    fullName: faceIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein Array von möglichen FaceIds. Alle von ihnen entstehen durch die Gesichtserkennungs - erkennen und die FaceIds läuft 24 Stunden nach dem Aufruf der Erkennung. Die Anzahl der FaceIds ist auf 1000 beschränkt. Parameter FaceListId, LargeFaceListId und FaceIds darf nicht gleichzeitig angegeben werden.'
+    optional: true
+    syntax:
+      content: 'faceIds?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceListId'
+    name: faceListId
+    fullName: faceListId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Vorhandene Benutzer angegebenen eindeutigen Candidate Gesicht Liste erstellt, in der Liste der Gesichtserkennungs - erstellen Sie eine Gesichts-Liste. Gesichtserkennungs-Liste enthält eine Reihe von PersistedFaceIds werden beibehalten und nie abläuft.
+      Parameter FaceListId, LargeFaceListId und FaceIds darf nicht gleichzeitig angegeben werden.
+    optional: true
+    syntax:
+      content: 'faceListId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.largeFaceListId'
+    name: largeFaceListId
+    fullName: largeFaceListId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Vorhandene Benutzer angegebenen eindeutigen Candidate große Fläche Liste erstellt wird, im LargeFaceList – erstellen. Große Fläche Liste enthält eine Reihe von PersistedFaceIds werden beibehalten und nie abläuft. Parameter FaceListId, LargeFaceListId und FaceIds darf nicht gleichzeitig angegeben werden.'
+    optional: true
+    syntax:
+      content: 'largeFaceListId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.maxNumOfCandidatesReturned'
+    name: maxNumOfCandidatesReturned
+    fullName: maxNumOfCandidatesReturned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Anzahl der obersten ähnlicher Gesichter zurückgegeben. Der gültige Bereich ist [1, 1000]. Standardwert: 20.'
+    optional: true
+    syntax:
+      content: 'maxNumOfCandidatesReturned?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ähnlich wie Face Durchsuchen-Modus. Es kann "MatchPerson" oder "MatchFace" sein. Folgende Werte sind möglich: ''MatchPerson'', "MatchFace". Standardwert: "MatchPerson".'
+    optional: true
+    syntax:
+      content: 'mode?: FindSimilarMatchMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.FindSimilarMatchMode'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FindSimilarMatchMode'
+    name: FindSimilarMatchMode
+    spec.typeScript:
+      - name: FindSimilarMatchMode
+        fullName: FindSimilarMatchMode
+        uid: '@azure/cognitiveservices-face.FindSimilarMatchMode'
