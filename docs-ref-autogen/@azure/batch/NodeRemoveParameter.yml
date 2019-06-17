@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    fullName: NodeRemoveParameter
+    children:
+      - '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+      - '@azure/batch.NodeRemoveParameter.nodeList'
+      - '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="52633-101">Eine Schnittstelle, die NodeRemoveParameter darstellt.</span><span class="sxs-lookup"><span data-stu-id="52633-101">An interface representing NodeRemoveParameter.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="52633-102">Bestimmt, was Sie mit einem Knoten und dessen ausgeführten Tasks geschehen soll, wenn es für die Aufhebung der Zuordnung ausgewählt wurde.</span><span class="sxs-lookup"><span data-stu-id="52633-102">Determines what to do with a node and its running task(s) after it has been selected for deallocation.</span></span> <span data-ttu-id="52633-103">Der Standardwert ist „requeue“.</span><span class="sxs-lookup"><span data-stu-id="52633-103">The default value is requeue.</span></span> <span data-ttu-id="52633-104">Folgende Werte sind möglich: "Requeue", "terminate", "TaskCompletion", "RetainedData"</span><span class="sxs-lookup"><span data-stu-id="52633-104">Possible values include: ''requeue'', ''terminate'', ''taskCompletion'', ''retainedData''</span></span>'
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeList'
+    name: nodeList
+    fullName: nodeList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="52633-105">Eine Liste mit den IDs der den Compute-Knoten aus dem angegebenen Pool entfernt werden soll.</span><span class="sxs-lookup"><span data-stu-id="52633-105">A list containing the IDs of the compute nodes to be removed from the specified pool.</span></span>
+    syntax:
+      content: 'nodeList: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="52633-106">Das Timeout für das Entfernen von Computeknoten zum Pool.</span><span class="sxs-lookup"><span data-stu-id="52633-106">The timeout for removal of compute nodes to the pool.</span></span> <span data-ttu-id="52633-107">Der Standardwert ist 15 Minuten.</span><span class="sxs-lookup"><span data-stu-id="52633-107">The default value is 15 minutes.</span></span> <span data-ttu-id="52633-108">Der minimale Wert beträgt 5 Minuten.</span><span class="sxs-lookup"><span data-stu-id="52633-108">The minimum value is 5 minutes.</span></span> <span data-ttu-id="52633-109">Wenn Sie einen Wert kleiner als 5 Minuten angeben, gibt der Batch-Dienst einen Fehler zurück. Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="52633-109">If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'

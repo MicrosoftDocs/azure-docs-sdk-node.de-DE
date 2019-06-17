@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    fullName: JobExecutionInformation
+    children:
+      - '@azure/batch.JobExecutionInformation.endTime'
+      - '@azure/batch.JobExecutionInformation.poolId'
+      - '@azure/batch.JobExecutionInformation.schedulingError'
+      - '@azure/batch.JobExecutionInformation.startTime'
+      - '@azure/batch.JobExecutionInformation.terminateReason'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="fa19e-101">Eine Schnittstelle, die JobExecutionInformation darstellt.</span><span class="sxs-lookup"><span data-stu-id="fa19e-101">An interface representing JobExecutionInformation.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa19e-102">Die Dauer des Auftrags.</span><span class="sxs-lookup"><span data-stu-id="fa19e-102">The completion time of the job.</span></span> <span data-ttu-id="fa19e-103">Diese Eigenschaft wird festgelegt, nur dann, wenn der Auftrag den Status "abgeschlossen" befindet.</span><span class="sxs-lookup"><span data-stu-id="fa19e-103">This property is set only if the job is in the completed state.</span></span>'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="fa19e-104">Die ID des Pools, der dieser Auftrag zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="fa19e-104">The ID of the pool to which this job is assigned.</span></span> <span data-ttu-id="fa19e-105">Dieses Element enthält den eigentlichen Pool, in dem der Auftrag zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="fa19e-105">This element contains the actual pool where the job is assigned.</span></span> <span data-ttu-id="fa19e-106">Wenn Sie die Details des Auftrags vom Dienst erhalten, enthalten bereitstellungsprofile auch ein PoolInfo-Element, das die Pool-Konfigurationsdaten von enthält, wenn der Auftrag hinzugefügt oder aktualisiert wurde.</span><span class="sxs-lookup"><span data-stu-id="fa19e-106">When you get job details from the service, they also contain a poolInfo element, which contains the pool configuration data from when the job was added or updated.</span></span>
+      <span data-ttu-id="fa19e-107">Dieses Element PoolInfo kann auch ein PoolId-Element enthalten.</span><span class="sxs-lookup"><span data-stu-id="fa19e-107">That poolInfo element may also contain a poolId element.</span></span> <span data-ttu-id="fa19e-108">Wenn dies der Fall ist, sind die beiden IDs identisch.</span><span class="sxs-lookup"><span data-stu-id="fa19e-108">If it does, the two IDs are the same.</span></span>
+      <span data-ttu-id="fa19e-109">Wenn dies nicht der Fall ist, bedeutet dies der Auftrag ausgeführt wurde, auf ein automatischer Pool, und diese Eigenschaft enthält die ID der dem Pool automatisch an.</span><span class="sxs-lookup"><span data-stu-id="fa19e-109">If it does not, it means the job ran on an auto pool, and this property contains the ID of that auto pool.</span></span>
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.schedulingError'
+    name: schedulingError
+    fullName: schedulingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa19e-110">Details zu jedem Fehler fehlerhaft durch den Dienst beim Starten des Auftrags.</span><span class="sxs-lookup"><span data-stu-id="fa19e-110">Details of any error encountered by the service in starting the job.</span></span> <span data-ttu-id="fa19e-111">Diese Eigenschaft ist nicht festgelegt werden, wenn kein Fehler der Auftrag wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="fa19e-111">This property is not set if there was no error starting the job.</span></span>'
+    optional: true
+    syntax:
+      content: 'schedulingError?: JobSchedulingError'
+      return:
+        type:
+          - '@azure/batch.JobSchedulingError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa19e-112">Die Startzeit des Auftrags.</span><span class="sxs-lookup"><span data-stu-id="fa19e-112">The start time of the job.</span></span> <span data-ttu-id="fa19e-113">Dies ist die Zeit, zu der der Auftrag erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="fa19e-113">This is the time at which the job was created.</span></span>'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.terminateReason'
+    name: terminateReason
+    fullName: terminateReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="fa19e-114">Eine Zeichenfolge, die Beschreibung der Ursache für den Auftrag wurde beendet.</span><span class="sxs-lookup"><span data-stu-id="fa19e-114">A string describing the reason the job ended.</span></span> <span data-ttu-id="fa19e-115">Diese Eigenschaft wird festgelegt, nur dann, wenn der Auftrag den Status "abgeschlossen" befindet.</span><span class="sxs-lookup"><span data-stu-id="fa19e-115">This property is set only if the job is in the completed state.</span></span> <span data-ttu-id="fa19e-116">Wenn der Batch-Dienst den Auftrag beendet wird, wird den Grund wie folgt: JMComplete - die Auftrags-Manager-Aufgabe abgeschlossen und KillJobOnCompletion wurde festgelegt auf "true".</span><span class="sxs-lookup"><span data-stu-id="fa19e-116">If the Batch service terminates the job, it sets the reason as follows: JMComplete - the Job Manager task completed, and killJobOnCompletion was set to true.</span></span>
+      <span data-ttu-id="fa19e-117">MaxWallClockTimeExpiry - erreicht der Auftrag der "MaxWallClockTime"-Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="fa19e-117">MaxWallClockTimeExpiry - the job reached its maxWallClockTime constraint.</span></span> <span data-ttu-id="fa19e-118">TerminateJobSchedule</span><span class="sxs-lookup"><span data-stu-id="fa19e-118">TerminateJobSchedule</span></span>
+      - <span data-ttu-id="fa19e-119">der Auftrag ausgeführt wurde, im Rahmen eines Zeitplans und der Zeitplan wurde beendet.</span><span class="sxs-lookup"><span data-stu-id="fa19e-119">the job ran as part of a schedule, and the schedule terminated.</span></span> <span data-ttu-id="fa19e-120">AllTasksComplete - OnAllTasksComplete-Attribut des Auftrags zu Terminatejob festgelegt ist, und alle Aufgaben im Auftrag abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="fa19e-120">AllTasksComplete - the job's onAllTasksComplete attribute is set to terminatejob, and all tasks in the job are complete.</span></span>
+      <span data-ttu-id="fa19e-121">TaskFailed - ist die Auftrags OnTaskFailure-Attributsatz auf PerformExitOptionsJobAction und eine Aufgabe im Auftrag bei der eine beenden-Bedingung, die eine JobAction von Terminatejob angegeben.</span><span class="sxs-lookup"><span data-stu-id="fa19e-121">TaskFailed - the job's onTaskFailure attribute is set to performExitOptionsJobAction, and a task in the job failed with an exit condition that specified a jobAction of terminatejob.</span></span> <span data-ttu-id="fa19e-122">Eine beliebige andere Zeichenfolge ist ein benutzerdefinierter Grund, die in einem Aufruf an den Vorgang "Beenden Sie einen Auftrag" angegeben.</span><span class="sxs-lookup"><span data-stu-id="fa19e-122">Any other string is a user-defined reason specified in a call to the 'Terminate a job' operation.</span></span>
+    optional: true
+    syntax:
+      content: 'terminateReason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSchedulingError'
+    name: JobSchedulingError
+    spec.typeScript:
+      - name: JobSchedulingError
+        fullName: JobSchedulingError
+        uid: '@azure/batch.JobSchedulingError'

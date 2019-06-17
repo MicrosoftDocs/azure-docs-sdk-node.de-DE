@@ -1,0 +1,666 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations'
+    name: SnapshotOperations
+    fullName: SnapshotOperations
+    children:
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="a7942-101">Klasse, die eine SnapshotOperations darstellt.</span><span class="sxs-lookup"><span data-stu-id="a7942-101">Class representing a SnapshotOperations.</span></span>'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply'
+    name: 'apply(string, string, Models.SnapshotApplyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="a7942-102">Senden Sie einen Vorgang, um eine Momentaufnahme für aktuellen Abonnement zu übernehmen.</span><span class="sxs-lookup"><span data-stu-id="a7942-102">Submit an operation to apply a snapshot to current subscription.</span></span> <span data-ttu-id="a7942-103">Für jede Momentaufnahme, die nur enthalten, die in der ApplyScope der Momentaufnahme - Abonnements kann nehmen sie anwenden.</span><span class="sxs-lookup"><span data-stu-id="a7942-103">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span><br />
+      <span data-ttu-id="a7942-104">Die Speichermomentaufnahme-Schnittstellen sind für Benutzer Daten sichern und Wiederherstellen ihrer Fläche aus einem Gesicht-Abonnement zu einem anderen innerhalb derselben Region oder regionsübergreifend.</span><span class="sxs-lookup"><span data-stu-id="a7942-104">The snapshot interfaces are for users to backup and restore their face data from one face subscription to another, inside same region or across regions.</span></span> <span data-ttu-id="a7942-105">Der Workflow enthält zwei Phasen, ruft Benutzer zunächst, dass die Momentaufnahme - brauchen, um eine Kopie des Quellobjekts erstellen, und speichern es als eine Momentaufnahme ruft dann Snapshot - anwenden, um die Momentaufnahme in das Zielabonnement einfügen.</span><span class="sxs-lookup"><span data-stu-id="a7942-105">The workflow contains two phases, user first calls Snapshot - Take to create a copy of the source object and store it as a snapshot, then calls Snapshot - Apply to paste the snapshot to target subscription.</span></span> <span data-ttu-id="a7942-106">Die Momentaufnahmen werden an einem zentralen Ort (pro Azure-Instanz), gespeichert, sodass sie plattformübergreifende Konten und Regionen angewendet werden können.</span><span class="sxs-lookup"><span data-stu-id="a7942-106">The snapshots are stored in a centralized location (per Azure instance), so that they can be applied cross accounts and regions.</span></span><br />
+      <span data-ttu-id="a7942-107">Anwenden der Momentaufnahme ist ein asynchroner Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a7942-107">Applying snapshot is an asynchronous operation.</span></span> <span data-ttu-id="a7942-108">Eine Vorgangs-Id kann abgerufen werden, aus dem Feld "Operation-Location" Antwort-Header, in OperationStatus - Get zum Nachverfolgen des Status der Anwendung der Momentaufnahme verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-108">An operation id can be obtained from the "Operation-Location" field in response header, to be used in OperationStatus - Get for tracking the progress of applying the snapshot.</span></span> <span data-ttu-id="a7942-109">Im Feld "ResourceLocation verwendet" OperationStatus - Get-Antwort, wenn der Vorgangsstatus "erfolgreich"angezeigt wird, wird die Objekt-Id enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="a7942-109">The target object id will be included in the "resourceLocation" field in OperationStatus - Get response when the operation status is "succeeded".</span></span><br />
+      <span data-ttu-id="a7942-110">Momentaufnahme anwenden Zeit hängt von der Anzahl von Personen- und gesichtsbezogenen Angaben Einträgen in der Momentaufnahmeobjekt.</span><span class="sxs-lookup"><span data-stu-id="a7942-110">Snapshot applying time depends on the number of person and face entries in the snapshot object.</span></span>
+      <span data-ttu-id="a7942-111">Es kann in Sekunden, oder bis zu 1 Stunde, für die 1.000.000 Personen mit mehrere Gesichter.</span><span class="sxs-lookup"><span data-stu-id="a7942-111">It could be in seconds, or up to 1 hour for 1,000,000 persons with multiple faces.</span></span><br />
+      <span data-ttu-id="a7942-112">Momentaufnahmen automatisch abgelaufen ist und in 48 Stunden nach der Erstellung von Momentaufnahme gelöscht.</span><span class="sxs-lookup"><span data-stu-id="a7942-112">Snapshots will be automatically expired and cleaned in 48 hours after it is created by Snapshot</span></span>
+      - <span data-ttu-id="a7942-113">In Anspruch nehmen.</span><span class="sxs-lookup"><span data-stu-id="a7942-113">Take.</span></span> <span data-ttu-id="a7942-114">Das Zielabonnement muss also die Momentaufnahme in 48 Stunden seit seiner Erstellung anwenden.</span><span class="sxs-lookup"><span data-stu-id="a7942-114">So the target subscription is required to apply the snapshot in 48 hours since its creation.</span></span><br />
+      <span data-ttu-id="a7942-115">Anwenden einer Momentaufnahme wird nicht blockiert alle anderen Vorgänge für das Ziel Objekt, jedoch davon abgeraten, da die Richtigkeit beim Anwenden der Momentaufnahme nicht garantiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="a7942-115">Applying a snapshot will not block any other operations against the target object, however it is not recommended because the correctness cannot be guaranteed during snapshot applying.</span></span> <span data-ttu-id="a7942-116">Nach dem Anwenden der Momentaufnahme abgeschlossen ist, können alle Vorgänge für das Zielobjekt normal funktionieren.</span><span class="sxs-lookup"><span data-stu-id="a7942-116">After snapshot applying is completed, all operations towards the target object can work as normal.</span></span>
+      <span data-ttu-id="a7942-117">Momentaufnahme enthält auch die trainingsergebnissen des Quellobjekts, das Zielabonnement die Momentaufnahme angewendet wird, wird keine müssen erneut trainiert das Zielobjekt vor dem Aufrufen von identifizieren/FindSimilar bedeutet.</span><span class="sxs-lookup"><span data-stu-id="a7942-117">Snapshot also includes the training results of the source object, which means target subscription the snapshot applied to does not need re-train the target object before calling Identify/FindSimilar.</span></span><br />
+      <span data-ttu-id="a7942-118">Eine Momentaufnahme kann parallel mehrmals angewendet werden, während derzeit nur CreateNew übernehmen Modus, was, dass der Apply-Vorgang fehl unterstützt wird bedeutet, wenn die Zielabonnement bereits ein Objekt mit demselben Typ und die gleiche Objekt-ID enthält.</span><span class="sxs-lookup"><span data-stu-id="a7942-118">One snapshot can be applied multiple times in parallel, while currently only CreateNew apply mode is supported, which means the apply operation will fail if target subscription already contains an object of same type and using the same objectId.</span></span> <span data-ttu-id="a7942-119">Benutzer können die "ObjectId" im Anforderungstext, um solche Konflikte zu vermeiden angeben.</span><span class="sxs-lookup"><span data-stu-id="a7942-119">Users can specify the "objectId" in request body to avoid such conflicts.</span></span><br />
+      * <span data-ttu-id="a7942-120">Free-Tarif-Abonnement-Kontingent: Wenden Sie 100 Vorgänge pro Monat.</span><span class="sxs-lookup"><span data-stu-id="a7942-120">Free-tier subscription quota: 100 apply operations per month.</span></span>
+      * <span data-ttu-id="a7942-121">Das abonnementkontingent S0-Tarif: 100 gelten Vorgängen pro Tag.</span><span class="sxs-lookup"><span data-stu-id="a7942-121">S0-tier subscription quota: 100 apply operations per day.</span></span>
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options?: Models.SnapshotApplyOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-122">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-122">Id referencing a particular snapshot.</span></span>
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-123">Vom Benutzer angegebene Zielobjekt-Id aus der Momentaufnahme erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-123">User specified target object id to be created from the snapshot.</span></span>
+        - id: options
+          type:
+            - Models.SnapshotApplyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+    name: 'apply(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-124">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-124">Id referencing a particular snapshot.</span></span>
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-125">Vom Benutzer angegebene Zielobjekt-Id aus der Momentaufnahme erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-125">User specified target object id to be created from the snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-126">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+    name: 'apply(string, string, SnapshotApplyOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options: SnapshotApplyOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-127">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-127">Id referencing a particular snapshot.</span></span>
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-128">Vom Benutzer angegebene Zielobjekt-Id aus der Momentaufnahme erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-128">User specified target object id to be created from the snapshot.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+          description: <span data-ttu-id="a7942-129">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-129">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-130">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a7942-131">Löschen Sie eine vorhandene Momentaufnahme gemäß der SnapshotId.</span><span class="sxs-lookup"><span data-stu-id="a7942-131">Delete an existing snapshot according to the snapshotId.</span></span> <span data-ttu-id="a7942-132">Alle Objektdaten und Informationen in der Momentaufnahme werden ebenfalls gelöscht.</span><span class="sxs-lookup"><span data-stu-id="a7942-132">All object data and information in the snapshot will also be deleted.</span></span> <span data-ttu-id="a7942-133">Nur das quellabonnement, das die Momentaufnahme erfasst wurde, kann die Momentaufnahme löschen.</span><span class="sxs-lookup"><span data-stu-id="a7942-133">Only the source subscription who took the snapshot can delete the snapshot.</span></span> <span data-ttu-id="a7942-134">Wenn der Benutzer eine Momentaufnahme mit dieser API nicht gelöscht wird, wird die Momentaufnahme weiterhin automatisch in 48 Stunden nach der Erstellung gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-134">If the user does not delete a snapshot with this API, the snapshot will still be automatically deleted in 48 hours after creation.</span></span>'
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-135">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-135">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-136">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-136">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a7942-137">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-138">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-138">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-139">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-139">Id referencing a particular snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-140">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-140">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a7942-141">Abrufen von Informationen zu einer Momentaufnahme.</span><span class="sxs-lookup"><span data-stu-id="a7942-141">Retrieve information about a snapshot.</span></span> <span data-ttu-id="a7942-142">Snapshot kann nur zugegriffen werden, um das quellabonnement, das die Ausführung gedauert, und Zielabonnements, die in der ApplyScope in enthalten eine Momentaufnahme - dauern.</span><span class="sxs-lookup"><span data-stu-id="a7942-142">Snapshot is only accessible to the source subscription who took it, and target subscriptions included in the applyScope in Snapshot - Take.</span></span>'
+    syntax:
+      content: 'function get(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-143">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-143">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-144">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-144">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a7942-145">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            <span data-ttu-id="a7942-146">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+    name: 'get(string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-147">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-147">Id referencing a particular snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            <span data-ttu-id="a7942-148">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-148">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+    name: 'getOperationStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a7942-149">Rufen Sie den Status eines Momentaufnahmevorgangs Take unteilbar sein/angewendet.</span><span class="sxs-lookup"><span data-stu-id="a7942-149">Retrieve the status of a take/apply snapshot operation.</span></span>
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-150">Vorgang "snapshot" verweist auf ID einer bestimmten Take unteilbar sein/angewendet.</span><span class="sxs-lookup"><span data-stu-id="a7942-150">Id referencing a particular take/apply snapshot operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+    name: 'getOperationStatus(string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-151">Vorgang "snapshot" verweist auf ID einer bestimmten Take unteilbar sein/angewendet.</span><span class="sxs-lookup"><span data-stu-id="a7942-151">Id referencing a particular take/apply snapshot operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a7942-152">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-152">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            <span data-ttu-id="a7942-153">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+    name: 'getOperationStatus(string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-154">Vorgang "snapshot" verweist auf ID einer bestimmten Take unteilbar sein/angewendet.</span><span class="sxs-lookup"><span data-stu-id="a7942-154">Id referencing a particular take/apply snapshot operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            <span data-ttu-id="a7942-155">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list'
+    name: list(Models.SnapshotListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a7942-156">Auflisten aller zugegriffen werden Momentaufnahmen mit weiteren Informationen, einschließlich Momentaufnahmen, die vom Benutzer ausgeführt wurden oder Momentaufnahmen, die für den Benutzer angewendet werden (Abonnement-Id wurde in der ApplyScope in Momentaufnahme eingeschlossen – dauern).</span><span class="sxs-lookup"><span data-stu-id="a7942-156">List all accessible snapshots with related information, including snapshots that were taken by the user, or snapshots to be applied to the user (subscription id was included in the applyScope in Snapshot - Take).</span></span>'
+    syntax:
+      content: 'function list(options?: Models.SnapshotListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SnapshotListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+    name: 'list(ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            <span data-ttu-id="a7942-157">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+    name: 'list(SnapshotListOptionalParams, ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SnapshotListOptionalParams, callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+          description: <span data-ttu-id="a7942-158">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            <span data-ttu-id="a7942-159">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+    name: SnapshotOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a7942-160">Erstellen Sie eine SnapshotOperations.</span><span class="sxs-lookup"><span data-stu-id="a7942-160">Create a SnapshotOperations.</span></span>
+    syntax:
+      content: 'new SnapshotOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            <span data-ttu-id="a7942-161">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="a7942-161">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take'
+    name: 'take(Models.SnapshotObjectType, string, string[], Models.SnapshotTakeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="a7942-162">Senden Sie einen Vorgang zum Erstellen von einer Momentaufnahme der gesichtserkennungs-Liste, große gesichtserkennungs-Liste, Personengruppen oder große Personengruppen, mit benutzerdefinierten momentaufnahmetyp Quellobjekt-Id, Bereich und eine optionale Benutzerdaten anwenden.</span><span class="sxs-lookup"><span data-stu-id="a7942-162">Submit an operation to take a snapshot of face list, large face list, person group or large person group, with user-specified snapshot type, source object id, apply scope and an optional user data.</span></span><br />
+      <span data-ttu-id="a7942-163">Die Speichermomentaufnahme-Schnittstellen sind für Benutzer Daten sichern und Wiederherstellen ihrer Fläche aus einem Gesicht-Abonnement zu einem anderen innerhalb derselben Region oder regionsübergreifend.</span><span class="sxs-lookup"><span data-stu-id="a7942-163">The snapshot interfaces are for users to backup and restore their face data from one face subscription to another, inside same region or across regions.</span></span> <span data-ttu-id="a7942-164">Der Workflow enthält zwei Phasen, ruft Benutzer zunächst, dass die Momentaufnahme - brauchen, um eine Kopie des Quellobjekts erstellen, und speichern es als eine Momentaufnahme ruft dann Snapshot - anwenden, um die Momentaufnahme in das Zielabonnement einfügen.</span><span class="sxs-lookup"><span data-stu-id="a7942-164">The workflow contains two phases, user first calls Snapshot - Take to create a copy of the source object and store it as a snapshot, then calls Snapshot - Apply to paste the snapshot to target subscription.</span></span> <span data-ttu-id="a7942-165">Die Momentaufnahmen werden an einem zentralen Ort (pro Azure-Instanz), gespeichert, sodass sie plattformübergreifende Konten und Regionen angewendet werden können.</span><span class="sxs-lookup"><span data-stu-id="a7942-165">The snapshots are stored in a centralized location (per Azure instance), so that they can be applied cross accounts and regions.</span></span><br />
+      <span data-ttu-id="a7942-166">Erstellen der Momentaufnahme ist ein asynchroner Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a7942-166">Taking snapshot is an asynchronous operation.</span></span> <span data-ttu-id="a7942-167">Eine Vorgangs-Id kann abgerufen werden, aus dem Feld "Operation-Location" Antwort-Header, in OperationStatus - Get zum Nachverfolgen des Status der Erstellung der Momentaufnahme verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-167">An operation id can be obtained from the "Operation-Location" field in response header, to be used in OperationStatus - Get for tracking the progress of creating the snapshot.</span></span> <span data-ttu-id="a7942-168">Im Feld "ResourceLocation verwendet" OperationStatus - Get-Antwort, wenn der Vorgangsstatus "erfolgreich"angezeigt wird, wird die Id der Momentaufnahme enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="a7942-168">The snapshot id will be included in the "resourceLocation" field in OperationStatus - Get response when the operation status is "succeeded".</span></span><br />
+      <span data-ttu-id="a7942-169">Momentaufnahme dauert, hängt von der Anzahl von Personen- und gesichtsbezogenen Angaben Einträge in das Quellobjekt ab.</span><span class="sxs-lookup"><span data-stu-id="a7942-169">Snapshot taking time depends on the number of person and face entries in the source object.</span></span> <span data-ttu-id="a7942-170">Es kann innerhalb von Sekunden, oder bis zu mehrere Stunden 1.000.000 Personen mit mehrere Gesichter sein.</span><span class="sxs-lookup"><span data-stu-id="a7942-170">It could be in seconds, or up to several hours for 1,000,000 persons with multiple faces.</span></span><br />
+      <span data-ttu-id="a7942-171">Momentaufnahmen automatisch abgelaufen ist und in 48 Stunden nach der Erstellung von Momentaufnahme gelöscht.</span><span class="sxs-lookup"><span data-stu-id="a7942-171">Snapshots will be automatically expired and cleaned in 48 hours after it is created by Snapshot</span></span>
+      - <span data-ttu-id="a7942-172">In Anspruch nehmen.</span><span class="sxs-lookup"><span data-stu-id="a7942-172">Take.</span></span> <span data-ttu-id="a7942-173">Der Benutzer kann die Momentaufnahme mithilfe von Momentaufnahme - Delete selbst jederzeit vor dem Ablauf löschen.</span><span class="sxs-lookup"><span data-stu-id="a7942-173">User can delete the snapshot using Snapshot - Delete by themselves any time before expiration.</span></span><br />
+      <span data-ttu-id="a7942-174">Erstellen der Momentaufnahme für ein bestimmtes Objekt wird keine anderen Vorgänge für das Objekt nicht blockiert.</span><span class="sxs-lookup"><span data-stu-id="a7942-174">Taking snapshot for a certain object will not block any other operations against the object.</span></span> <span data-ttu-id="a7942-175">Alle Lesevorgänge (Get/auflisten und Identität/FindSimilar/Verify) können wie gewohnt durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="a7942-175">All read-only operations (Get/List and Identify/FindSimilar/Verify) can be conducted as usual.</span></span> <span data-ttu-id="a7942-176">Sie sind für alle beschreibbaren Vorgänge, einschließlich Hinzufügen/Aktualisieren/löschen das Quellobjekt oder Personen/Gesichter und Trainieren nicht blockiert jedoch nicht empfohlen, da ein beschreibbare Aktualisierungen nicht auf die Momentaufnahme während der Durchführung wiedergegeben werden können.</span><span class="sxs-lookup"><span data-stu-id="a7942-176">For all writable operations, including Add/Update/Delete the source object or its persons/faces and Train, they are not blocked but not recommended because writable updates may not be reflected on the snapshot during its taking.</span></span> <span data-ttu-id="a7942-177">Nach dem Snapshot dauert abgeschlossen ist, können alle Lese- und Schreibberechtigung für Vorgänge wie gewohnt arbeiten.</span><span class="sxs-lookup"><span data-stu-id="a7942-177">After snapshot taking is completed, all readable and writable operations can work as normal.</span></span> <span data-ttu-id="a7942-178">Momentaufnahme die trainingsergebnissen des Quellobjekts, dazu gehören auch das Zielabonnement die Momentaufnahme angewendet wird, wird keine müssen erneut trainiert das Zielobjekt vor dem Aufrufen von identifizieren/FindSimilar bedeutet.</span><span class="sxs-lookup"><span data-stu-id="a7942-178">Snapshot will also include the training results of the source object, which means target subscription the snapshot applied to does not need re-train the target object before calling Identify/FindSimilar.</span></span><br />
+      * <span data-ttu-id="a7942-179">Free-Tarif-Abonnement-Kontingent: 100 Vorgänge pro Monat in Anspruch nehmen.</span><span class="sxs-lookup"><span data-stu-id="a7942-179">Free-tier subscription quota: 100 take operations per month.</span></span>
+      * <span data-ttu-id="a7942-180">Das abonnementkontingent S0-Tarif: 100 Vorgänge pro Tag in Anspruch nehmen.</span><span class="sxs-lookup"><span data-stu-id="a7942-180">S0-tier subscription quota: 100 take operations per day.</span></span>
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options?: Models.SnapshotTakeOptionalParams)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '<span data-ttu-id="a7942-181">Benutzerdefinierter Typ für das Quellobjekt zum Aufzeichnen einer Momentaufnahme aus.</span><span class="sxs-lookup"><span data-stu-id="a7942-181">User specified type for the source object to take snapshot from.</span></span> <span data-ttu-id="a7942-182">Derzeit werden FaceList "," PersonGroup "," LargeFaceList "und" LargePersonGroup unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a7942-182">Currently FaceList, PersonGroup, LargeFaceList and LargePersonGroup are supported.</span></span> <span data-ttu-id="a7942-183">Mögliche Werte sind: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span><span class="sxs-lookup"><span data-stu-id="a7942-183">Possible values include: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span></span>'
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-184">Vom Benutzer angegebene Quellobjekt-Id zum Aufzeichnen einer Momentaufnahme aus.</span><span class="sxs-lookup"><span data-stu-id="a7942-184">User specified source object id to take snapshot from.</span></span>
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: '<span data-ttu-id="a7942-185">Vom Benutzer angegebene Array von Ziel-Face-Abonnement-Ids für die Momentaufnahme an.</span><span class="sxs-lookup"><span data-stu-id="a7942-185">User specified array of target Face subscription ids for the snapshot.</span></span> <span data-ttu-id="a7942-186">Für jede Momentaufnahme, die nur enthalten, die in der ApplyScope der Momentaufnahme - Abonnements kann nehmen sie anwenden.</span><span class="sxs-lookup"><span data-stu-id="a7942-186">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span>'
+        - id: options
+          type:
+            - Models.SnapshotTakeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+    name: 'take(Models.SnapshotObjectType, string, string[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '<span data-ttu-id="a7942-187">Benutzerdefinierter Typ für das Quellobjekt zum Aufzeichnen einer Momentaufnahme aus.</span><span class="sxs-lookup"><span data-stu-id="a7942-187">User specified type for the source object to take snapshot from.</span></span> <span data-ttu-id="a7942-188">Derzeit werden FaceList "," PersonGroup "," LargeFaceList "und" LargePersonGroup unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a7942-188">Currently FaceList, PersonGroup, LargeFaceList and LargePersonGroup are supported.</span></span> <span data-ttu-id="a7942-189">Mögliche Werte sind: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span><span class="sxs-lookup"><span data-stu-id="a7942-189">Possible values include: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span></span>'
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-190">Vom Benutzer angegebene Quellobjekt-Id zum Aufzeichnen einer Momentaufnahme aus.</span><span class="sxs-lookup"><span data-stu-id="a7942-190">User specified source object id to take snapshot from.</span></span>
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: '<span data-ttu-id="a7942-191">Vom Benutzer angegebene Array von Ziel-Face-Abonnement-Ids für die Momentaufnahme an.</span><span class="sxs-lookup"><span data-stu-id="a7942-191">User specified array of target Face subscription ids for the snapshot.</span></span> <span data-ttu-id="a7942-192">Für jede Momentaufnahme, die nur enthalten, die in der ApplyScope der Momentaufnahme - Abonnements kann nehmen sie anwenden.</span><span class="sxs-lookup"><span data-stu-id="a7942-192">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-193">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+    name: 'take(Models.SnapshotObjectType, string, string[], SnapshotTakeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options: SnapshotTakeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '<span data-ttu-id="a7942-194">Benutzerdefinierter Typ für das Quellobjekt zum Aufzeichnen einer Momentaufnahme aus.</span><span class="sxs-lookup"><span data-stu-id="a7942-194">User specified type for the source object to take snapshot from.</span></span> <span data-ttu-id="a7942-195">Derzeit werden FaceList "," PersonGroup "," LargeFaceList "und" LargePersonGroup unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a7942-195">Currently FaceList, PersonGroup, LargeFaceList and LargePersonGroup are supported.</span></span> <span data-ttu-id="a7942-196">Mögliche Werte sind: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span><span class="sxs-lookup"><span data-stu-id="a7942-196">Possible values include: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span></span>'
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-197">Vom Benutzer angegebene Quellobjekt-Id zum Aufzeichnen einer Momentaufnahme aus.</span><span class="sxs-lookup"><span data-stu-id="a7942-197">User specified source object id to take snapshot from.</span></span>
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: '<span data-ttu-id="a7942-198">Vom Benutzer angegebene Array von Ziel-Face-Abonnement-Ids für die Momentaufnahme an.</span><span class="sxs-lookup"><span data-stu-id="a7942-198">User specified array of target Face subscription ids for the snapshot.</span></span> <span data-ttu-id="a7942-199">Für jede Momentaufnahme, die nur enthalten, die in der ApplyScope der Momentaufnahme - Abonnements kann nehmen sie anwenden.</span><span class="sxs-lookup"><span data-stu-id="a7942-199">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span>'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+          description: <span data-ttu-id="a7942-200">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-200">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-201">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-201">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update'
+    name: 'update(string, Models.SnapshotUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a7942-202">Aktualisieren Sie die Informationen einer Momentaufnahme.</span><span class="sxs-lookup"><span data-stu-id="a7942-202">Update the information of a snapshot.</span></span> <span data-ttu-id="a7942-203">Nur das quellabonnement, das die Momentaufnahme erfasst wurde, kann die Momentaufnahme aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="a7942-203">Only the source subscription who took the snapshot can update the snapshot.</span></span>'
+    syntax:
+      content: 'function update(snapshotId: string, options?: Models.SnapshotUpdateOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-204">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-204">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - Models.SnapshotUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-205">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-205">Id referencing a particular snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-206">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-206">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    name: 'update(string, SnapshotUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, options: SnapshotUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="a7942-207">Die ID eine bestimmte Momentaufnahme verweisen.</span><span class="sxs-lookup"><span data-stu-id="a7942-207">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+          description: <span data-ttu-id="a7942-208">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="a7942-208">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a7942-209">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="a7942-209">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+    name: SnapshotApplyOptionalParams
+    spec.typeScript:
+      - name: SnapshotApplyOptionalParams
+        fullName: SnapshotApplyOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/cognitiveservices-face.OperationStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+    name: 'Snapshot[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+    name: SnapshotListOptionalParams
+    spec.typeScript:
+      - name: SnapshotListOptionalParams
+        fullName: SnapshotListOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+    name: SnapshotTakeOptionalParams
+    spec.typeScript:
+      - name: SnapshotTakeOptionalParams
+        fullName: SnapshotTakeOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+    name: SnapshotUpdateOptionalParams
+    spec.typeScript:
+      - name: SnapshotUpdateOptionalParams
+        fullName: SnapshotUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
