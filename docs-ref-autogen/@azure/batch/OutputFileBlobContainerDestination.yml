@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFileBlobContainerDestination'
+    name: OutputFileBlobContainerDestination
+    fullName: OutputFileBlobContainerDestination
+    children:
+      - '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+      - '@azure/batch.OutputFileBlobContainerDestination.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die OutputFileBlobContainerDestination darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die URL des Containers im Azure-Blob-Speicher auf dem die Dateien hochgeladen werden soll. Die URL muss es sich um eine Shared Access Signature (SAS) ein, Erteilung von Schreibberechtigungen für den Container enthalten.'
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Ziel-Blob oder ein virtuelles Verzeichnis innerhalb des Azure-Speichercontainers. Wenn FilePattern auf eine bestimmte Datei verweist (d. h. keine Platzhalter enthält), dann Pfad den Namen des BLOBs an, dem die Datei hochgeladen ist. Wenn FilePattern eine oder mehrere Platzhalter enthält (und daher möglicherweise mehrere Dateien übereinstimmen), ist Pfad den Namen des virtuellen Blob-Verzeichnisses (die einzelnen Blob-Name vorangestellt ist) auf dem die Dateien hochgeladen. Wenn nicht angegeben, werden Dateien mit einem blobnamen übereinstimmende deren Dateinamen in das Stammverzeichnis des Containers hochgeladen.'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
