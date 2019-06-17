@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ContainerConfiguration'
+    name: ContainerConfiguration
+    fullName: ContainerConfiguration
+    children:
+      - '@azure/batch.ContainerConfiguration.containerImageNames'
+      - '@azure/batch.ContainerConfiguration.containerRegistries'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die ContainerConfiguration darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ContainerConfiguration.containerImageNames'
+    name: containerImageNames
+    fullName: containerImageNames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Auflistung der Namen der containerimages. Dies ist die vollständige imagereferenz, wie für "Docker Pull" angegeben werden. Ein Image wird aus der Standard-Docker-Registrierung stammen, wenn das Image mit einer alternativen Registrierung vollqualifiziert ist.'
+    optional: true
+    syntax:
+      content: 'containerImageNames?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ContainerConfiguration.containerRegistries'
+    name: containerRegistries
+    fullName: containerRegistries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Zusätzliche private Registrierungen, die aus denen Container abgerufen werden können. Wenn keine Bilder aus einer privaten Registrierung heruntergeladen werden, müssen die Anmeldeinformationen erfordert, müssen diese Anmeldeinformationen hier angegeben werden.'
+    optional: true
+    syntax:
+      content: 'containerRegistries?: ContainerRegistry[]'
+      return:
+        type:
+          - '@azure/batch.ContainerRegistry[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ContainerRegistry[]'
+    name: 'ContainerRegistry[]'
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: '@azure/batch.ContainerRegistry'
+      - name: '[]'
+        fullName: '[]'

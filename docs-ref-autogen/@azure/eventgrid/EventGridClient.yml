@@ -1,0 +1,342 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/eventgrid.EventGridClient'
+    name: EventGridClient
+    fullName: EventGridClient
+    children:
+      - '@azure/eventgrid.EventGridClient.acceptLanguage'
+      - '@azure/eventgrid.EventGridClient.apiVersion'
+      - '@azure/eventgrid.EventGridClient.beginLongRunningRequest'
+      - '@azure/eventgrid.EventGridClient.credentials'
+      - '@azure/eventgrid.EventGridClient.constructor'
+      - '@azure/eventgrid.EventGridClient.longRunningOperationRetryTimeout'
+      - '@azure/eventgrid.EventGridClient.publishEvents'
+      - '@azure/eventgrid.EventGridClient.publishEvents_2'
+      - '@azure/eventgrid.EventGridClient.publishEvents_1'
+      - '@azure/eventgrid.EventGridClient.restoreLROPoller'
+      - '@azure/eventgrid.EventGridClient.sendLongRunningRequest'
+      - '@azure/eventgrid.EventGridClient.sendLRORequest'
+      - '@azure/eventgrid.EventGridClient.sendOperationRequest'
+      - '@azure/eventgrid.EventGridClient.sendRequest'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure/eventgrid.EventGridClientContext'
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.acceptLanguage'
+    name: acceptLanguage
+    fullName: acceptLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'acceptLanguage: string'
+      return:
+        type:
+          - string
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.apiVersion'
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.beginLongRunningRequest'
+    name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Senden der ursprünglichen Anforderung von einem LRO (langer Vorgang) und eine HttpLongRunningOperationResponse, die stellt Methoden zum Abrufen der LRO und überprüft, ob der LRO abgeschlossen ist.'
+    syntax:
+      content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: Das Request-Objekt
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.constructor'
+    name: 'EventGridClient(ServiceClientCredentials, msRestAzure.AzureServiceClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Initialisiert eine neue Instanz der Klasse EventGridClient an.
+    syntax:
+      content: 'new EventGridClient(credentials: ServiceClientCredentials, options?: msRestAzure.AzureServiceClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: Anmeldeinformationen für den Client zum Verbinden mit Azure.
+        - id: options
+          type:
+            - msRestAzure.AzureServiceClientOptions
+          description: ''
+          optional: true
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.longRunningOperationRetryTimeout'
+    name: longRunningOperationRetryTimeout
+    fullName: longRunningOperationRetryTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Retry-Timeout in Sekunden für zeitintensive Vorgänge werden soll. Standardwert: 30.'
+    optional: true
+    syntax:
+      content: 'longRunningOperationRetryTimeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.publishEvents'
+    name: 'publishEvents(string, EventGridEvent[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Einen Batch von Ereignissen veröffentlicht in Azure Event Grid-Thema.
+    syntax:
+      content: 'function publishEvents(topicHostname: string, events: EventGridEvent[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: topicHostname
+          type:
+            - string
+          description: 'Der Hostname des Themas, z. B. topic1.westus2 1.eventgrid.azure.net'
+        - id: events
+          type:
+            - '@azure/eventgrid.EventGridEvent[]'
+          description: Ein Array von Ereignissen in Event Grid veröffentlicht werden.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.publishEvents_2'
+    name: 'publishEvents(string, EventGridEvent[], RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function publishEvents(topicHostname: string, events: EventGridEvent[], options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: topicHostname
+          type:
+            - string
+          description: 'Der Hostname des Themas, z. B. topic1.westus2 1.eventgrid.azure.net'
+        - id: events
+          type:
+            - '@azure/eventgrid.EventGridEvent[]'
+          description: Ein Array von Ereignissen in Event Grid veröffentlicht werden.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.publishEvents_1'
+    name: 'publishEvents(string, EventGridEvent[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function publishEvents(topicHostname: string, events: EventGridEvent[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: topicHostname
+          type:
+            - string
+          description: 'Der Hostname des Themas, z. B. topic1.westus2 1.eventgrid.azure.net'
+        - id: events
+          type:
+            - '@azure/eventgrid.EventGridEvent[]'
+          description: Ein Array von Ereignissen in Event Grid veröffentlicht werden.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.restoreLROPoller'
+    name: restoreLROPoller(LROPollState)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Stellen Sie eine LROPoller aus der angegebenen LROPollState wieder her. Diese Methode kann verwendet werden, um eine LROPoller auf einem anderen Prozess oder Computer neu zu erstellen.'
+    syntax:
+      content: 'function restoreLROPoller(lroPollState: LROPollState)'
+      parameters:
+        - id: lroPollState
+          type:
+            - LROPollState
+          description: ''
+      return:
+        type:
+          - LROPoller
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.sendLongRunningRequest'
+    name: 'sendLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Stellt einen Mechanismus, um eine Anforderung aus, die abgerufen werden, und geben Sie das endgültige Ergebnis bereit.'
+    syntax:
+      content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: Das Request-Objekt
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.sendLRORequest'
+    name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Senden der ursprünglichen Anforderung von einem LRO (langer Vorgang) und eine LROPoller, die stellt Methoden zum Abrufen der LRO und überprüft, ob der LRO abgeschlossen ist.'
+    syntax:
+      content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: Die Argumente für den Vorgang.
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: Die Spezifikation für den Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 'Zusätzliche Optionen, die beim Ausführen der Anforderung gesendet werden.'
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Senden Sie eine HTTP-Anforderung, die mithilfe der bereitgestellten OperationSpec aufgefüllt wird.'
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: 'Die Argumente, denen von der HTTP-Anforderung auf Vorlagen basierende Werte aufgefüllt wird.'
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: 'Die OperationSpec, mit denen die HTTP-Anforderung aufgefüllt werden soll.'
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            Der Rückruf aufgerufen wird, wenn die Antwort empfangen wird.
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClient.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Die angegebene HTTP-Anforderung zu senden.
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/eventgrid'
+references:
+  - uid: '@azure/eventgrid.EventGridClientContext'
+    name: EventGridClientContext
+    spec.typeScript:
+      - name: EventGridClientContext
+        fullName: EventGridClientContext
+        uid: '@azure/eventgrid.EventGridClientContext'
+  - uid: '@azure/eventgrid.EventGridEvent[]'
+    name: 'EventGridEvent[]'
+    spec.typeScript:
+      - name: EventGridEvent
+        fullName: EventGridEvent
+        uid: '@azure/eventgrid.EventGridEvent'
+      - name: '[]'
+        fullName: '[]'

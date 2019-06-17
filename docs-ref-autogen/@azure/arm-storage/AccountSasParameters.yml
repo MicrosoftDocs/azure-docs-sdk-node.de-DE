@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.AccountSasParameters'
+    name: AccountSasParameters
+    fullName: AccountSasParameters
+    children:
+      - '@azure/arm-storage.AccountSasParameters.iPAddressOrRange'
+      - '@azure/arm-storage.AccountSasParameters.keyToSign'
+      - '@azure/arm-storage.AccountSasParameters.permissions'
+      - '@azure/arm-storage.AccountSasParameters.protocols'
+      - '@azure/arm-storage.AccountSasParameters.resourceTypes'
+      - '@azure/arm-storage.AccountSasParameters.services'
+      - '@azure/arm-storage.AccountSasParameters.sharedAccessExpiryTime'
+      - '@azure/arm-storage.AccountSasParameters.sharedAccessStartTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Die Parameter zum Auflisten von SAS-Anmeldeinformationen eines Speicherkontos.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.iPAddressOrRange'
+    name: iPAddressOrRange
+    fullName: iPAddressOrRange
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Eine IP-Adresse oder einen Bereich von IP-Adressen aus dem Anforderungen akzeptiert.
+    optional: true
+    syntax:
+      content: 'iPAddressOrRange?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.keyToSign'
+    name: keyToSign
+    fullName: keyToSign
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Schlüssel zum Signieren der Konto-SAS-Token mit.
+    optional: true
+    syntax:
+      content: 'keyToSign?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.permissions'
+    name: permissions
+    fullName: permissions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die mit Berechtigungen für die Konto-SAS. Mögliche Werte sind: Read (R), Write (w), Delete (d), Liste (l), (a) hinzufügen, erstellen (c), Updatesperre (u) und Vorgang (p). Folgende Werte sind möglich: d ''R'','', ''w'', ''l'', ''a'', ''C'', ''u'', ''p'''
+    syntax:
+      content: 'permissions: Permissions'
+      return:
+        type:
+          - '@azure/arm-storage.Permissions'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.protocols'
+    name: protocols
+    fullName: protocols
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Protokoll, die für eine Anforderung mit der Konto-SAS zugelassen werden. Folgende Werte sind möglich: "Https, http", "Https"'
+    optional: true
+    syntax:
+      content: 'protocols?: HttpProtocol'
+      return:
+        type:
+          - '@azure/arm-storage.HttpProtocol'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.resourceTypes'
+    name: resourceTypes
+    fullName: resourceTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die signierte Ressource-Typen, die mit der Konto-SAS zugegriffen werden kann. Dienst (s): Zugriff auf Service Level-APIs Container (c): Zugriff auf Container-Level-APIs Objekt (o): Zugriff auf Objektebene-APIs für Blobs, Warteschlangennachrichten, Tabellenentitäten und Dateien. Mögliche Werte sind: der '', ''C'', '' o'''
+    syntax:
+      content: 'resourceTypes: SignedResourceTypes'
+      return:
+        type:
+          - '@azure/arm-storage.SignedResourceTypes'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.services'
+    name: services
+    fullName: services
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die signierten Dienste, die mit der Konto-SAS zugegriffen werden. Mögliche Werte sind: BLOB (b) der Warteschlange (Q), Tabelle (t), Datei (f). Folgende Werte sind möglich: ''b'', ''f'', '' t '', ''f'''
+    syntax:
+      content: 'services: Services'
+      return:
+        type:
+          - '@azure/arm-storage.Services'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.sharedAccessExpiryTime'
+    name: sharedAccessExpiryTime
+    fullName: sharedAccessExpiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zeitpunkt, an dem die SAS ungültig wird.'
+    syntax:
+      content: 'sharedAccessExpiryTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.AccountSasParameters.sharedAccessStartTime'
+    name: sharedAccessStartTime
+    fullName: sharedAccessStartTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zeitpunkt, an dem die SAS gültig ist.'
+    optional: true
+    syntax:
+      content: 'sharedAccessStartTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.Permissions'
+    name: Permissions
+    spec.typeScript:
+      - name: Permissions
+        fullName: Permissions
+        uid: '@azure/arm-storage.Permissions'
+  - uid: '@azure/arm-storage.HttpProtocol'
+    name: HttpProtocol
+    spec.typeScript:
+      - name: HttpProtocol
+        fullName: HttpProtocol
+        uid: '@azure/arm-storage.HttpProtocol'
+  - uid: '@azure/arm-storage.SignedResourceTypes'
+    name: SignedResourceTypes
+    spec.typeScript:
+      - name: SignedResourceTypes
+        fullName: SignedResourceTypes
+        uid: '@azure/arm-storage.SignedResourceTypes'
+  - uid: '@azure/arm-storage.Services'
+    name: Services
+    spec.typeScript:
+      - name: Services
+        fullName: Services
+        uid: '@azure/arm-storage.Services'
