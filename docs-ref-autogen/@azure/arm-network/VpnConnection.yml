@@ -20,11 +20,12 @@ items:
       - '@azure/arm-network.VpnConnection.routingWeight'
       - '@azure/arm-network.VpnConnection.sharedKey'
       - '@azure/arm-network.VpnConnection.useLocalAzureIpAddress'
+      - '@azure/arm-network.VpnConnection.usePolicyBasedTrafficSelectors'
       - '@azure/arm-network.VpnConnection.vpnConnectionProtocolType'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="4e8b8-101">VpnConnection-Ressource.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-101">VpnConnection Resource.</span></span>
+    summary: <span data-ttu-id="dda62-101">VpnConnection-Ressource.</span><span class="sxs-lookup"><span data-stu-id="dda62-101">VpnConnection Resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -35,7 +36,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-102">Erwartete Bandbreite in Mbit/s zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-102">Expected bandwidth in MBPS.</span></span>
+    summary: <span data-ttu-id="dda62-102">Erwartete Bandbreite in Mbit/s zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="dda62-102">Expected bandwidth in MBPS.</span></span>
     optional: true
     syntax:
       content: 'connectionBandwidth?: undefined | number'
@@ -50,7 +51,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4e8b8-103">Der Status der Verbindung.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-103">The connection status.</span></span> <span data-ttu-id="4e8b8-104">Mögliche Werte sind: ''Unknown'', ''Connecting'', ''Connected'', ''NotConnected''</span><span class="sxs-lookup"><span data-stu-id="4e8b8-104">Possible values include: ''Unknown'', ''Connecting'', ''Connected'', ''NotConnected''</span></span>'
+    summary: '<span data-ttu-id="dda62-103">Der Status der Verbindung.</span><span class="sxs-lookup"><span data-stu-id="dda62-103">The connection status.</span></span> <span data-ttu-id="dda62-104">Mögliche Werte sind: ''Unknown'', ''Connecting'', ''Connected'', ''NotConnected''</span><span class="sxs-lookup"><span data-stu-id="dda62-104">Possible values include: ''Unknown'', ''Connecting'', ''Connected'', ''NotConnected''</span></span>'
     optional: true
     syntax:
       content: 'connectionStatus?: VpnConnectionStatus'
@@ -66,8 +67,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="4e8b8-105">Ausgehende Bytes übertragen.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-105">Egress bytes transferred.</span></span>
-      <span data-ttu-id="4e8b8-106">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="4e8b8-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="dda62-105">Ausgehende Bytes übertragen.</span><span class="sxs-lookup"><span data-stu-id="dda62-105">Egress bytes transferred.</span></span>
+      <span data-ttu-id="dda62-106">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="dda62-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'egressBytesTransferred?: undefined | number'
@@ -82,7 +83,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-107">Flag für "EnableBgp"</span><span class="sxs-lookup"><span data-stu-id="4e8b8-107">EnableBgp flag</span></span>
+    summary: <span data-ttu-id="dda62-107">Flag für "EnableBgp".</span><span class="sxs-lookup"><span data-stu-id="dda62-107">EnableBgp flag.</span></span>
     optional: true
     syntax:
       content: 'enableBgp?: undefined | false | true'
@@ -97,7 +98,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-108">Aktivieren der Sicherheit für internet</span><span class="sxs-lookup"><span data-stu-id="4e8b8-108">Enable internet security</span></span>
+    summary: <span data-ttu-id="dda62-108">Aktivieren der Internet-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="dda62-108">Enable internet security.</span></span>
     optional: true
     syntax:
       content: 'enableInternetSecurity?: undefined | false | true'
@@ -112,7 +113,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-109">Flag für "EnableBgp"</span><span class="sxs-lookup"><span data-stu-id="4e8b8-109">EnableBgp flag</span></span>
+    summary: <span data-ttu-id="dda62-109">Flag für "EnableBgp".</span><span class="sxs-lookup"><span data-stu-id="dda62-109">EnableBgp flag.</span></span>
     optional: true
     syntax:
       content: 'enableRateLimiting?: undefined | false | true'
@@ -128,8 +129,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="4e8b8-110">Ruft eine eindeutige schreibgeschützte Zeichenfolge, die sich ändern, wenn die Ressource aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-110">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="4e8b8-111">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="4e8b8-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="dda62-110">Ruft eine eindeutige schreibgeschützte Zeichenfolge, die sich ändern, wenn die Ressource aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="dda62-110">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="dda62-111">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="dda62-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -144,7 +145,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-112">Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="4e8b8-112">Resource ID.</span></span>
+    summary: <span data-ttu-id="dda62-112">Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="dda62-112">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -160,8 +161,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="4e8b8-113">Eingehende Bytes übertragen.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-113">Ingress bytes transferred.</span></span>
-      <span data-ttu-id="4e8b8-114">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="4e8b8-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="dda62-113">Eingehende Bytes übertragen.</span><span class="sxs-lookup"><span data-stu-id="dda62-113">Ingress bytes transferred.</span></span>
+      <span data-ttu-id="dda62-114">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="dda62-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'ingressBytesTransferred?: undefined | number'
@@ -176,7 +177,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-115">Die IPSec-Richtlinien von dieser Verbindung berücksichtigt werden.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-115">The IPSec Policies to be considered by this connection.</span></span>
+    summary: <span data-ttu-id="dda62-115">Die IPSec-Richtlinien von dieser Verbindung berücksichtigt werden.</span><span class="sxs-lookup"><span data-stu-id="dda62-115">The IPSec Policies to be considered by this connection.</span></span>
     optional: true
     syntax:
       content: 'ipsecPolicies?: IpsecPolicy[]'
@@ -191,7 +192,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4e8b8-116">Der Name der Ressource, die innerhalb einer Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-116">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="4e8b8-117">Dieser Name kann verwendet werden, auf die Ressource zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-117">This name can be used to access the resource.</span></span>'
+    summary: '<span data-ttu-id="dda62-116">Der Name der Ressource, die innerhalb einer Ressourcengruppe eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="dda62-116">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="dda62-117">Dieser Name kann verwendet werden, auf die Ressource zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="dda62-117">This name can be used to access the resource.</span></span>'
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -206,7 +207,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4e8b8-118">Der Bereitstellungsstatus der Ressource.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-118">The provisioning state of the resource.</span></span> <span data-ttu-id="4e8b8-119">Mögliche Werte sind: ''Succeeded'', ''Updating'', ''Deleting'', ''Failed''</span><span class="sxs-lookup"><span data-stu-id="4e8b8-119">Possible values include: ''Succeeded'', ''Updating'', ''Deleting'', ''Failed''</span></span>'
+    summary: '<span data-ttu-id="dda62-118">Der Bereitstellungsstatus der Ressource.</span><span class="sxs-lookup"><span data-stu-id="dda62-118">The provisioning state of the resource.</span></span> <span data-ttu-id="dda62-119">Mögliche Werte sind: ''Succeeded'', ''Updating'', ''Deleting'', ''Failed''</span><span class="sxs-lookup"><span data-stu-id="dda62-119">Possible values include: ''Succeeded'', ''Updating'', ''Deleting'', ''Failed''</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
@@ -221,7 +222,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-120">Die ID der verbundenen VPN-Website.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-120">Id of the connected vpn site.</span></span>
+    summary: <span data-ttu-id="dda62-120">Die ID der verbundenen VPN-Website.</span><span class="sxs-lookup"><span data-stu-id="dda62-120">Id of the connected vpn site.</span></span>
     optional: true
     syntax:
       content: 'remoteVpnSite?: SubResource'
@@ -236,7 +237,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-121">routinggewichtung für VPN-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-121">Routing weight for vpn connection.</span></span>
+    summary: <span data-ttu-id="dda62-121">routinggewichtung für VPN-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="dda62-121">Routing weight for vpn connection.</span></span>
     optional: true
     syntax:
       content: 'routingWeight?: undefined | number'
@@ -251,7 +252,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-122">SharedKey für die VPN-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-122">SharedKey for the vpn connection.</span></span>
+    summary: <span data-ttu-id="dda62-122">SharedKey für die VPN-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="dda62-122">SharedKey for the vpn connection.</span></span>
     optional: true
     syntax:
       content: 'sharedKey?: undefined | string'
@@ -266,10 +267,25 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4e8b8-123">Initiieren der Verbindung mithilfe der lokalen Azure-IP-Adresse</span><span class="sxs-lookup"><span data-stu-id="4e8b8-123">Use local azure ip to initiate connection</span></span>
+    summary: '<span data-ttu-id="dda62-123">Verwenden Sie lokalen Azure-IP-Adresse, um die Verbindung zu initiieren.</span><span class="sxs-lookup"><span data-stu-id="dda62-123">Use local azure ip to initiate connection.</span></span>'
     optional: true
     syntax:
       content: 'useLocalAzureIpAddress?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnConnection.usePolicyBasedTrafficSelectors'
+    name: usePolicyBasedTrafficSelectors
+    fullName: usePolicyBasedTrafficSelectors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dda62-124">Richtlinie der richtlinienbasierten datenverkehrsselektoren aktiviert.</span><span class="sxs-lookup"><span data-stu-id="dda62-124">Enable policy-based traffic selectors.</span></span>
+    optional: true
+    syntax:
+      content: 'usePolicyBasedTrafficSelectors?: undefined | false | true'
       return:
         type:
           - undefined | false | true
@@ -281,7 +297,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4e8b8-124">Das Verbindungsprotokoll für diese Verbindung verwendet.</span><span class="sxs-lookup"><span data-stu-id="4e8b8-124">Connection protocol used for this connection.</span></span> <span data-ttu-id="4e8b8-125">Mögliche Werte sind: ''IKEv2'', ''IKEv1''</span><span class="sxs-lookup"><span data-stu-id="4e8b8-125">Possible values include: ''IKEv2'', ''IKEv1''</span></span>'
+    summary: '<span data-ttu-id="dda62-125">Das Verbindungsprotokoll für diese Verbindung verwendet.</span><span class="sxs-lookup"><span data-stu-id="dda62-125">Connection protocol used for this connection.</span></span> <span data-ttu-id="dda62-126">Mögliche Werte sind: ''IKEv2'', ''IKEv1''</span><span class="sxs-lookup"><span data-stu-id="dda62-126">Possible values include: ''IKEv2'', ''IKEv1''</span></span>'
     optional: true
     syntax:
       content: 'vpnConnectionProtocolType?: VirtualNetworkGatewayConnectionProtocol'

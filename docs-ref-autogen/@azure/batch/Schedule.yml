@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    fullName: Schedule
+    children:
+      - '@azure/batch.Schedule.doNotRunAfter'
+      - '@azure/batch.Schedule.doNotRunUntil'
+      - '@azure/batch.Schedule.recurrenceInterval'
+      - '@azure/batch.Schedule.startWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="52aae-101">Eine Schnittstelle, der Zeitplan darstellt.</span><span class="sxs-lookup"><span data-stu-id="52aae-101">An interface representing Schedule.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunAfter'
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="52aae-102">Eine Uhrzeit, nach der unter diesem Auftragszeitplan kein Auftrag erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="52aae-102">A time after which no job will be created under this job schedule.</span></span> <span data-ttu-id="52aae-103">Der Zeitplan wird in den abgeschlossenen Zustand verschoben, sobald diese Frist überschritten ist und es kein aktiver Auftrag in diesem Auftragszeitplan ist.</span><span class="sxs-lookup"><span data-stu-id="52aae-103">The schedule will move to the completed state as soon as this deadline is past and there is no active job under this job schedule.</span></span> <span data-ttu-id="52aae-104">Wenn Sie keine Uhrzeit für DoNotRunAfter angeben und Sie einen Zeitplan für wiederkehrende Aufträge erstellen, wird der Auftragszeitplan aktiv bleiben, bis Sie ihn explizit beenden.</span><span class="sxs-lookup"><span data-stu-id="52aae-104">If you do not specify a doNotRunAfter time, and you are creating a recurring job schedule, the job schedule will remain active until you explicitly terminate it.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunUntil'
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="52aae-105">Die früheste Uhrzeit, an dem ein Auftrag in diesem Auftragszeitplan erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="52aae-105">The earliest time at which any job may be created under this job schedule.</span></span> <span data-ttu-id="52aae-106">Wenn Sie keine DoNotRunUntil-Uhrzeit angeben, wird der Zeitplan Aufträge sofort zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="52aae-106">If you do not specify a doNotRunUntil time, the schedule becomes ready to create jobs immediately.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.recurrenceInterval'
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="52aae-107">Das Zeitintervall zwischen den Startzeiten von zwei aufeinander folgenden Aufträgen unter den Auftragszeitplan.</span><span class="sxs-lookup"><span data-stu-id="52aae-107">The time interval between the start times of two successive jobs under the job schedule.</span></span> <span data-ttu-id="52aae-108">Ein Auftragszeitplan, kann zu jedem Zeitpunkt höchstens einen aktiven Auftrag unter sich haben.</span><span class="sxs-lookup"><span data-stu-id="52aae-108">A job schedule can have at most one active job under it at any given time.</span></span> <span data-ttu-id="52aae-109">Ein Auftragszeitplan zu jedem Zeitpunkt, höchstens einen aktiven Auftrag unter sich haben kann, wenn es Zeit wird, einen neuen Auftrag unter einem Auftragszeitplan erstellen, aber der vorherige Auftrag wird noch ausgeführt, wird der Batch-Dienst nicht den neuen Auftrag erstellen, bis der vorherige Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="52aae-109">Because a job schedule can have at most one active job under it at any given time, if it is time to create a new job under a job schedule, but the previous job is still running, the Batch service will not create the new job until the previous job finishes.</span></span> <span data-ttu-id="52aae-110">Wenn der vorherige Auftrag nicht innerhalb des Zeitraums "startwindow" die neue RecurrenceInterval beendet wird, wird kein neuer Auftrag für dieses Intervall geplant werden.</span><span class="sxs-lookup"><span data-stu-id="52aae-110">If the previous job does not finish within the startWindow period of the new recurrenceInterval, then no new job will be scheduled for that interval.</span></span> <span data-ttu-id="52aae-111">Für wiederkehrende Aufträge verwendet sollten Sie normalerweise eine JobManagerTask in die jobspecification wirken angeben.</span><span class="sxs-lookup"><span data-stu-id="52aae-111">For recurring jobs, you should normally specify a jobManagerTask in the jobSpecification.</span></span> <span data-ttu-id="52aae-112">Wenn Sie nicht JobManagerTask verwenden, benötigen Sie einen externen Prozess überwachen, wenn Aufträge erstellt werden, Hinzufügen von Aufgaben für die Aufträge aus, und Beenden der Aufträge für die nächste Wiederholung bereit.</span><span class="sxs-lookup"><span data-stu-id="52aae-112">If you do not use jobManagerTask, you will need an external process to monitor when jobs are created, add tasks to the jobs and terminate the jobs ready for the next recurrence.</span></span> <span data-ttu-id="52aae-113">Der Standardwert ist, dass der Zeitplan nicht wiederholt wird: ein Auftrag wird erstellt, in der "startwindow" nach der DoNotRunUntil-Uhrzeit und des Zeitplans abgeschlossen ist, sobald dieser Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="52aae-113">The default is that the schedule does not recur: one job is created, within the startWindow after the doNotRunUntil time, and the schedule is complete as soon as that job finishes.</span></span> <span data-ttu-id="52aae-114">Der Mindestwert ist 1 Minute.</span><span class="sxs-lookup"><span data-stu-id="52aae-114">The minimum value is 1 minute.</span></span> <span data-ttu-id="52aae-115">Wenn Sie einen niedrigeren Wert angeben, weist der Batch-Dienst den Zeitplan mit einem Fehler zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="52aae-115">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.startWindow'
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="52aae-116">Das Zeitintervall muss ab dem Zeitpunkt, an dem gemäß dem Zeitplan einen Auftrag, erstellt werden, in dem ein Auftrag erstellt werden muss.</span><span class="sxs-lookup"><span data-stu-id="52aae-116">The time interval, starting from the time at which the schedule indicates a job should be created, within which a job must be created.</span></span> <span data-ttu-id="52aae-117">Wenn ein Auftrag nicht innerhalb des Intervalls für "startwindow" erstellt wird, geht die "Verkaufschance" verloren. bis die nächste Wiederholung des Zeitplans wird kein Auftrag erstellt.</span><span class="sxs-lookup"><span data-stu-id="52aae-117">If a job is not created within the startWindow interval, then the ''opportunity'' is lost; no job will be created until the next recurrence of the schedule.</span></span> <span data-ttu-id="52aae-118">Wenn der Zeitplan wiederholt wird, und die "startwindow" länger als das Wiederholungsintervall ist, erfolgt dies äquivalent zu einer unendlichen "startwindow", da der Auftrag, der "" in einem RecurrenceInterval ist nicht in der nächsten Wiederholungsintervall übernommen wird.</span><span class="sxs-lookup"><span data-stu-id="52aae-118">If the schedule is recurring, and the startWindow is longer than the recurrence interval, then this is equivalent to an infinite startWindow, because the job that is ''due'' in one recurrenceInterval is not carried forward into the next recurrence interval.</span></span> <span data-ttu-id="52aae-119">Die Standardeinstellung ist unendlich.</span><span class="sxs-lookup"><span data-stu-id="52aae-119">The default is infinite.</span></span> <span data-ttu-id="52aae-120">Der Mindestwert ist 1 Minute.</span><span class="sxs-lookup"><span data-stu-id="52aae-120">The minimum value is 1 minute.</span></span> <span data-ttu-id="52aae-121">Wenn Sie einen niedrigeren Wert angeben, weist der Batch-Dienst den Zeitplan mit einem Fehler zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="52aae-121">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'startWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

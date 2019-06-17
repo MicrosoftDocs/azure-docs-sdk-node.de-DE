@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-network.RouteFilter.etag'
       - '@azure/arm-network.RouteFilter.id'
+      - '@azure/arm-network.RouteFilter.ipv6Peerings'
       - '@azure/arm-network.RouteFilter.location'
       - '@azure/arm-network.RouteFilter.name'
       - '@azure/arm-network.RouteFilter.peerings'
@@ -16,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="c4beb-101">Die Routenfilterressource.</span><span class="sxs-lookup"><span data-stu-id="c4beb-101">Route Filter Resource.</span></span>
+    summary: <span data-ttu-id="e389a-101">Die Routenfilterressource.</span><span class="sxs-lookup"><span data-stu-id="e389a-101">Route Filter Resource.</span></span>
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -28,8 +29,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c4beb-102">Ruft eine eindeutige schreibgeschützte Zeichenfolge, die sich ändern, wenn die Ressource aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="c4beb-102">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="c4beb-103">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c4beb-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e389a-102">Ruft eine eindeutige schreibgeschützte Zeichenfolge, die sich ändern, wenn die Ressource aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="e389a-102">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="e389a-103">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="e389a-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -44,13 +45,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c4beb-104">Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="c4beb-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="e389a-104">Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="e389a-104">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.RouteFilter.ipv6Peerings'
+    name: ipv6Peerings
+    fullName: ipv6Peerings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e389a-105">Eine Auflistung von Verweisen auf express Route-verbindungspeerings ipv6.</span><span class="sxs-lookup"><span data-stu-id="e389a-105">A collection of references to express route circuit ipv6 peerings.</span></span>
+    optional: true
+    syntax:
+      content: 'ipv6Peerings?: ExpressRouteCircuitPeering[]'
+      return:
+        type:
+          - '@azure/arm-network.ExpressRouteCircuitPeering[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.location'
     name: location
@@ -59,7 +75,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c4beb-105">Ressourcenspeicherort</span><span class="sxs-lookup"><span data-stu-id="c4beb-105">Resource location.</span></span>
+    summary: <span data-ttu-id="e389a-106">Ressourcenspeicherort</span><span class="sxs-lookup"><span data-stu-id="e389a-106">Resource location.</span></span>
     optional: true
     syntax:
       content: 'location?: undefined | string'
@@ -75,8 +91,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c4beb-106">Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="c4beb-106">Resource name.</span></span>
-      <span data-ttu-id="c4beb-107">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c4beb-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e389a-107">Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="e389a-107">Resource name.</span></span>
+      <span data-ttu-id="e389a-108">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="e389a-108">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -91,7 +107,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c4beb-108">Eine Auflistung von Verweisen auf express Route-verbindungspeerings.</span><span class="sxs-lookup"><span data-stu-id="c4beb-108">A collection of references to express route circuit peerings.</span></span>
+    summary: <span data-ttu-id="e389a-109">Eine Auflistung von Verweisen auf express Route-verbindungspeerings.</span><span class="sxs-lookup"><span data-stu-id="e389a-109">A collection of references to express route circuit peerings.</span></span>
     optional: true
     syntax:
       content: 'peerings?: ExpressRouteCircuitPeering[]'
@@ -107,8 +123,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c4beb-109">Der Bereitstellungsstatus der Ressource.</span><span class="sxs-lookup"><span data-stu-id="c4beb-109">The provisioning state of the resource.</span></span> <span data-ttu-id="c4beb-110">Dabei sind folgende Werte möglich: "Aktualisieren", "Löschen", "Erfolgreich" und "Failed".</span><span class="sxs-lookup"><span data-stu-id="c4beb-110">Possible values are: 'Updating', 'Deleting', 'Succeeded' and 'Failed'.</span></span>
-      <span data-ttu-id="c4beb-111">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c4beb-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e389a-110">Der Bereitstellungsstatus der Ressource.</span><span class="sxs-lookup"><span data-stu-id="e389a-110">The provisioning state of the resource.</span></span> <span data-ttu-id="e389a-111">Dabei sind folgende Werte möglich: "Aktualisieren", "Löschen", "Erfolgreich" und "Failed".</span><span class="sxs-lookup"><span data-stu-id="e389a-111">Possible values are: 'Updating', 'Deleting', 'Succeeded' and 'Failed'.</span></span>
+      <span data-ttu-id="e389a-112">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="e389a-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -123,7 +139,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c4beb-112">Die Auflistung von RouteFilterRules in einen Routenfilter enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="c4beb-112">Collection of RouteFilterRules contained within a route filter.</span></span>
+    summary: <span data-ttu-id="e389a-113">Die Auflistung von RouteFilterRules in einen Routenfilter enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="e389a-113">Collection of RouteFilterRules contained within a route filter.</span></span>
     optional: true
     syntax:
       content: 'rules?: RouteFilterRule[]'
@@ -138,7 +154,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c4beb-113">Ressourcentags.</span><span class="sxs-lookup"><span data-stu-id="c4beb-113">Resource tags.</span></span>
+    summary: <span data-ttu-id="e389a-114">Ressourcentags.</span><span class="sxs-lookup"><span data-stu-id="e389a-114">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -154,8 +170,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c4beb-114">Der Ressourcentyp.</span><span class="sxs-lookup"><span data-stu-id="c4beb-114">Resource type.</span></span>
-      <span data-ttu-id="c4beb-115">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c4beb-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e389a-115">Der Ressourcentyp.</span><span class="sxs-lookup"><span data-stu-id="e389a-115">Resource type.</span></span>
+      <span data-ttu-id="e389a-116">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="e389a-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'

@@ -1,0 +1,921 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.VirtualNetworks'
+    name: VirtualNetworks
+    fullName: VirtualNetworks
+    children:
+      - '@azure/arm-network.VirtualNetworks.beginCreateOrUpdate'
+      - '@azure/arm-network.VirtualNetworks.beginDeleteMethod'
+      - '@azure/arm-network.VirtualNetworks.beginUpdateTags'
+      - '@azure/arm-network.VirtualNetworks.checkIPAddressAvailability'
+      - '@azure/arm-network.VirtualNetworks.checkIPAddressAvailability_2'
+      - '@azure/arm-network.VirtualNetworks.checkIPAddressAvailability_1'
+      - '@azure/arm-network.VirtualNetworks.createOrUpdate'
+      - '@azure/arm-network.VirtualNetworks.deleteMethod'
+      - '@azure/arm-network.VirtualNetworks.get'
+      - '@azure/arm-network.VirtualNetworks.get_1'
+      - '@azure/arm-network.VirtualNetworks.get_2'
+      - '@azure/arm-network.VirtualNetworks.list'
+      - '@azure/arm-network.VirtualNetworks.list_2'
+      - '@azure/arm-network.VirtualNetworks.list_1'
+      - '@azure/arm-network.VirtualNetworks.listAll'
+      - '@azure/arm-network.VirtualNetworks.listAll_2'
+      - '@azure/arm-network.VirtualNetworks.listAll_1'
+      - '@azure/arm-network.VirtualNetworks.listAllNext'
+      - '@azure/arm-network.VirtualNetworks.listAllNext_2'
+      - '@azure/arm-network.VirtualNetworks.listAllNext_1'
+      - '@azure/arm-network.VirtualNetworks.listNext'
+      - '@azure/arm-network.VirtualNetworks.listNext_2'
+      - '@azure/arm-network.VirtualNetworks.listNext_1'
+      - '@azure/arm-network.VirtualNetworks.listUsage'
+      - '@azure/arm-network.VirtualNetworks.listUsage_2'
+      - '@azure/arm-network.VirtualNetworks.listUsage_1'
+      - '@azure/arm-network.VirtualNetworks.listUsageNext'
+      - '@azure/arm-network.VirtualNetworks.listUsageNext_2'
+      - '@azure/arm-network.VirtualNetworks.listUsageNext_1'
+      - '@azure/arm-network.VirtualNetworks.updateTags'
+      - '@azure/arm-network.VirtualNetworks.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="0dc8b-101">Klasse, die eine VirtualNetworks darstellt.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-101">Class representing a VirtualNetworks.</span></span>'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, VirtualNetwork, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-102">Erstellt oder aktualisiert ein virtuelles Netzwerk in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-102">Creates or updates a virtual network in the specified resource group.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, virtualNetworkName: string, parameters: VirtualNetwork, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-103">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-103">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-104">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-104">The name of the virtual network.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-network.VirtualNetwork'
+          description: <span data-ttu-id="0dc8b-105">Parameter für das virtuelle Netzwerk erstellen oder Aktualisieren zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-105">Parameters supplied to the create or update virtual network operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-106">Löscht das angegebene virtuelle Netzwerk an.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-106">Deletes the specified virtual network.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, virtualNetworkName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-107">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-107">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-108">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-108">The name of the virtual network.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.beginUpdateTags'
+    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-109">Ein virtuelles Netzwerk-Tags werden aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-109">Updates a virtual network tags.</span></span>
+    syntax:
+      content: 'function beginUpdateTags(resourceGroupName: string, virtualNetworkName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-110">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-110">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-111">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-111">The name of the virtual network.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: '<span data-ttu-id="0dc8b-112">Parameter, die zum Aktualisieren der Tags des virtuellen Netzwerks bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-112">Parameters supplied to update virtual network tags.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.checkIPAddressAvailability'
+    name: 'checkIPAddressAvailability(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="0dc8b-113">Überprüft, ob eine private IP-Adresse zur Verwendung verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-113">Checks whether a private IP address is available for use.</span></span>'
+    syntax:
+      content: 'function checkIPAddressAvailability(resourceGroupName: string, virtualNetworkName: string, ipAddress: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-114">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-114">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-115">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-115">The name of the virtual network.</span></span>
+        - id: ipAddress
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-116">Die private IP-Adresse überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-116">The private IP address to be verified.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksCheckIPAddressAvailabilityResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.checkIPAddressAvailability_2'
+    name: 'checkIPAddressAvailability(string, string, string, RequestOptionsBase, ServiceCallback<IPAddressAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkIPAddressAvailability(resourceGroupName: string, virtualNetworkName: string, ipAddress: string, options: RequestOptionsBase, callback: ServiceCallback<IPAddressAvailabilityResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-117">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-117">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-118">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-118">The name of the virtual network.</span></span>
+        - id: ipAddress
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-119">Die private IP-Adresse überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-119">The private IP address to be verified.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-120">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.IPAddressAvailabilityResult>
+          description: |
+            <span data-ttu-id="0dc8b-121">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksCheckIPAddressAvailabilityResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.checkIPAddressAvailability_1'
+    name: 'checkIPAddressAvailability(string, string, string, ServiceCallback<IPAddressAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkIPAddressAvailability(resourceGroupName: string, virtualNetworkName: string, ipAddress: string, callback: ServiceCallback<IPAddressAvailabilityResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-122">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-122">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-123">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-123">The name of the virtual network.</span></span>
+        - id: ipAddress
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-124">Die private IP-Adresse überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-124">The private IP address to be verified.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.IPAddressAvailabilityResult>
+          description: |
+            <span data-ttu-id="0dc8b-125">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksCheckIPAddressAvailabilityResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.createOrUpdate'
+    name: 'createOrUpdate(string, string, VirtualNetwork, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-126">Erstellt oder aktualisiert ein virtuelles Netzwerk in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-126">Creates or updates a virtual network in the specified resource group.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, virtualNetworkName: string, parameters: VirtualNetwork, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-127">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-127">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-128">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-128">The name of the virtual network.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-network.VirtualNetwork'
+          description: <span data-ttu-id="0dc8b-129">Parameter für das virtuelle Netzwerk erstellen oder Aktualisieren zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-129">Parameters supplied to the create or update virtual network operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksCreateOrUpdateResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-130">Löscht das angegebene virtuelle Netzwerk an.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-130">Deletes the specified virtual network.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, virtualNetworkName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-131">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-131">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-132">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-132">The name of the virtual network.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.get'
+    name: 'get(string, string, Models.VirtualNetworksGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-133">Ruft das angegebene virtuelle Netzwerk von der Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-133">Gets the specified virtual network by resource group.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, virtualNetworkName: string, options?: Models.VirtualNetworksGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-134">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-134">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-135">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-135">The name of the virtual network.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworksGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksGetResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.get_1'
+    name: 'get(string, string, ServiceCallback<VirtualNetwork>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, virtualNetworkName: string, callback: ServiceCallback<VirtualNetwork>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-136">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-136">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-137">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-137">The name of the virtual network.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetwork>
+          description: |
+            <span data-ttu-id="0dc8b-138">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksGetResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.get_2'
+    name: 'get(string, string, VirtualNetworksGetOptionalParams, ServiceCallback<VirtualNetwork>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, virtualNetworkName: string, options: VirtualNetworksGetOptionalParams, callback: ServiceCallback<VirtualNetwork>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-139">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-139">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-140">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-140">The name of the virtual network.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-network.VirtualNetworksGetOptionalParams'
+          description: <span data-ttu-id="0dc8b-141">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetwork>
+          description: |
+            <span data-ttu-id="0dc8b-142">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-142">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksGetResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.list'
+    name: 'list(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-143">Ruft alle virtuellen Netzwerke in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-143">Gets all virtual networks in a resource group.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-144">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-144">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.list_2'
+    name: 'list(string, RequestOptionsBase, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-145">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-145">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-146">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-146">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-147">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.list_1'
+    name: 'list(string, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-148">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-148">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-149">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listAll'
+    name: listAll(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-150">Alle virtuellen Netzwerke abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-150">Gets all virtual networks in a subscription.</span></span>
+    syntax:
+      content: 'function listAll(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListAllResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listAll_2'
+    name: 'listAll(RequestOptionsBase, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAll(options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-151">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-152">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListAllResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listAll_1'
+    name: listAll(ServiceCallback<VirtualNetworkListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAll(callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-153">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListAllResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listAllNext'
+    name: 'listAllNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-154">Alle virtuellen Netzwerke abruft in einem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-154">Gets all virtual networks in a subscription.</span></span>
+    syntax:
+      content: 'function listAllNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-155">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-155">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListAllNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listAllNext_2'
+    name: 'listAllNext(string, RequestOptionsBase, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-156">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-157">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-158">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListAllNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listAllNext_1'
+    name: 'listAllNext(string, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllNext(nextPageLink: string, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-159">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-160">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListAllNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-161">Ruft alle virtuellen Netzwerke in einer Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-161">Gets all virtual networks in a resource group.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-162">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-163">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-163">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-164">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-165">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listNext_1'
+    name: 'listNext(string, ServiceCallback<VirtualNetworkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<VirtualNetworkListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-166">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-166">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+          description: |
+            <span data-ttu-id="0dc8b-167">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listUsage'
+    name: 'listUsage(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-168">Listet die Verwendungsstatistiken.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-168">Lists usage stats.</span></span>
+    syntax:
+      content: 'function listUsage(resourceGroupName: string, virtualNetworkName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-169">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-169">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-170">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-170">The name of the virtual network.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListUsageResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listUsage_2'
+    name: 'listUsage(string, string, RequestOptionsBase, ServiceCallback<VirtualNetworkListUsageResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsage(resourceGroupName: string, virtualNetworkName: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkListUsageResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-171">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-171">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-172">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-172">The name of the virtual network.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-173">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListUsageResult>
+          description: |
+            <span data-ttu-id="0dc8b-174">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListUsageResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listUsage_1'
+    name: 'listUsage(string, string, ServiceCallback<VirtualNetworkListUsageResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsage(resourceGroupName: string, virtualNetworkName: string, callback: ServiceCallback<VirtualNetworkListUsageResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-175">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-175">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-176">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-176">The name of the virtual network.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListUsageResult>
+          description: |
+            <span data-ttu-id="0dc8b-177">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListUsageResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listUsageNext'
+    name: 'listUsageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-178">Listet die Verwendungsstatistiken.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-178">Lists usage stats.</span></span>
+    syntax:
+      content: 'function listUsageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-179">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListUsageNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listUsageNext_2'
+    name: 'listUsageNext(string, RequestOptionsBase, ServiceCallback<VirtualNetworkListUsageResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkListUsageResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-180">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0dc8b-181">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="0dc8b-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListUsageResult>
+          description: |
+            <span data-ttu-id="0dc8b-182">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListUsageNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.listUsageNext_1'
+    name: 'listUsageNext(string, ServiceCallback<VirtualNetworkListUsageResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageNext(nextPageLink: string, callback: ServiceCallback<VirtualNetworkListUsageResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-183">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VirtualNetworkListUsageResult>
+          description: |
+            <span data-ttu-id="0dc8b-184">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="0dc8b-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworksListUsageNextResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.updateTags'
+    name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-185">Ein virtuelles Netzwerk-Tags werden aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-185">Updates a virtual network tags.</span></span>
+    syntax:
+      content: 'function updateTags(resourceGroupName: string, virtualNetworkName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-186">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-186">The name of the resource group.</span></span>
+        - id: virtualNetworkName
+          type:
+            - string
+          description: <span data-ttu-id="0dc8b-187">Der Name des virtuellen Netzwerks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-187">The name of the virtual network.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: '<span data-ttu-id="0dc8b-188">Parameter, die zum Aktualisieren der Tags des virtuellen Netzwerks bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-188">Parameters supplied to update virtual network tags.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworksUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworks.constructor'
+    name: VirtualNetworks(NetworkManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0dc8b-189">Erstellen Sie eine VirtualNetworks.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-189">Create a VirtualNetworks.</span></span>
+    syntax:
+      content: 'new VirtualNetworks(client: NetworkManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-network.NetworkManagementClientContext'
+          description: |
+            <span data-ttu-id="0dc8b-190">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="0dc8b-190">Reference to the service client.</span></span>
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.NetworkManagementClientContext'
+    name: NetworkManagementClientContext
+    spec.typeScript:
+      - name: NetworkManagementClientContext
+        fullName: NetworkManagementClientContext
+        uid: '@azure/arm-network.NetworkManagementClientContext'
+  - uid: '@azure/arm-network.VirtualNetwork'
+    name: VirtualNetwork
+    spec.typeScript:
+      - name: VirtualNetwork
+        fullName: VirtualNetwork
+        uid: '@azure/arm-network.VirtualNetwork'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'
+  - uid: ServiceCallback<@azure/arm-network.IPAddressAvailabilityResult>
+    name: IPAddressAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: IPAddressAvailabilityResult
+        fullName: IPAddressAvailabilityResult
+        uid: '@azure/arm-network.IPAddressAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-network.VirtualNetwork>
+    name: VirtualNetwork>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualNetwork
+        fullName: VirtualNetwork
+        uid: '@azure/arm-network.VirtualNetwork'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-network.VirtualNetworksGetOptionalParams'
+    name: VirtualNetworksGetOptionalParams
+    spec.typeScript:
+      - name: VirtualNetworksGetOptionalParams
+        fullName: VirtualNetworksGetOptionalParams
+        uid: '@azure/arm-network.VirtualNetworksGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-network.VirtualNetworkListResult>
+    name: VirtualNetworkListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualNetworkListResult
+        fullName: VirtualNetworkListResult
+        uid: '@azure/arm-network.VirtualNetworkListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-network.VirtualNetworkListUsageResult>
+    name: VirtualNetworkListUsageResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualNetworkListUsageResult
+        fullName: VirtualNetworkListUsageResult
+        uid: '@azure/arm-network.VirtualNetworkListUsageResult'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,346 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-servicebus.SBTopic'
+    name: SBTopic
+    fullName: SBTopic
+    children:
+      - '@azure/arm-servicebus.SBTopic.accessedAt'
+      - '@azure/arm-servicebus.SBTopic.autoDeleteOnIdle'
+      - '@azure/arm-servicebus.SBTopic.countDetails'
+      - '@azure/arm-servicebus.SBTopic.createdAt'
+      - '@azure/arm-servicebus.SBTopic.defaultMessageTimeToLive'
+      - '@azure/arm-servicebus.SBTopic.duplicateDetectionHistoryTimeWindow'
+      - '@azure/arm-servicebus.SBTopic.enableBatchedOperations'
+      - '@azure/arm-servicebus.SBTopic.enableExpress'
+      - '@azure/arm-servicebus.SBTopic.enablePartitioning'
+      - '@azure/arm-servicebus.SBTopic.id'
+      - '@azure/arm-servicebus.SBTopic.maxSizeInMegabytes'
+      - '@azure/arm-servicebus.SBTopic.name'
+      - '@azure/arm-servicebus.SBTopic.requiresDuplicateDetection'
+      - '@azure/arm-servicebus.SBTopic.sizeInBytes'
+      - '@azure/arm-servicebus.SBTopic.status'
+      - '@azure/arm-servicebus.SBTopic.subscriptionCount'
+      - '@azure/arm-servicebus.SBTopic.supportOrdering'
+      - '@azure/arm-servicebus.SBTopic.type'
+      - '@azure/arm-servicebus.SBTopic.updatedAt'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ac49c-101">Beschreibung von themaressourcen.</span><span class="sxs-lookup"><span data-stu-id="ac49c-101">Description of topic resource.</span></span>
+    extends:
+      name: '@azure/arm-servicebus.Resource'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.accessedAt'
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac49c-102">Zeitpunkt der letzten, die die Nachricht gesendet wurde, oder eine Anforderung empfangen wurde, in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="ac49c-102">Last time the message was sent, or a request was received, for this topic.</span></span>
+      <span data-ttu-id="ac49c-103">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.autoDeleteOnIdle'
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac49c-104">ISO 8601 Zeitspanne im Leerlauf ein Intervall nach dem das Thema automatisch gelöscht wird.</span><span class="sxs-lookup"><span data-stu-id="ac49c-104">ISO 8601 timespan idle interval after which the topic is automatically deleted.</span></span> <span data-ttu-id="ac49c-105">Die Mindestdauer ist fünf Minuten.</span><span class="sxs-lookup"><span data-stu-id="ac49c-105">The minimum duration is 5 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.countDetails'
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-106">Details zur Anzahl von Nachrichten **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-106">Message count details **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - '@azure/arm-servicebus.MessageCountDetails'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.createdAt'
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac49c-107">Genaue Zeitpunkt, an die Nachricht erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="ac49c-107">Exact time the message was created.</span></span>
+      <span data-ttu-id="ac49c-108">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-108">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.defaultMessageTimeToLive'
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-109">ISO 8601-Standard Nachricht Timespan TTL-Wert.</span><span class="sxs-lookup"><span data-stu-id="ac49c-109">ISO 8601 Default message timespan to live value.</span></span> <span data-ttu-id="ac49c-110">Dies ist die Dauer, nach der die Nachricht abläuft. Sie beginnt ab dem Zeitpunkt die Nachricht an Service Bus gesendet wird, aus.</span><span class="sxs-lookup"><span data-stu-id="ac49c-110">This is the duration after which the message expires, starting from when the message is sent to Service Bus.</span></span> <span data-ttu-id="ac49c-111">Dies ist der Standardwert verwendet, wenn der TimeToLive für eine Nachricht selbst nicht festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="ac49c-111">This is the default value used when TimeToLive is not set on a message itself.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.duplicateDetectionHistoryTimeWindow'
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-112">ISO8601 Timespan-Struktur, die die Zeitspanne des duplikaterkennungsverlaufs definiert.</span><span class="sxs-lookup"><span data-stu-id="ac49c-112">ISO8601 timespan structure that defines the duration of the duplicate detection history.</span></span> <span data-ttu-id="ac49c-113">Der Standardwert ist 10 Minuten.</span><span class="sxs-lookup"><span data-stu-id="ac49c-113">The default value is 10 minutes.</span></span>'
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.enableBatchedOperations'
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-114">Wert, der angibt, ob serverseitige Batchvorgänge aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="ac49c-114">Value that indicates whether server-side batched operations are enabled.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.enableExpress'
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-115">Der Wert, der angibt, ob die Express-Entitäten aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="ac49c-115">Value that indicates whether Express Entities are enabled.</span></span> <span data-ttu-id="ac49c-116">Ein express-Thema enthält eine Nachricht im Arbeitsspeicher vorübergehend, bevor sie in den permanenten Speicher geschrieben.</span><span class="sxs-lookup"><span data-stu-id="ac49c-116">An express topic holds a message in memory temporarily before writing it to persistent storage.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableExpress?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.enablePartitioning'
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-117">Der Wert, der angibt, ob das Thema, das über mehrere nachrichtenbroker partitioniert werden aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="ac49c-117">Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.</span></span>'
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-118">Ressourcen-Id **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-118">Resource Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.maxSizeInMegabytes'
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-119">Maximale Größe des Themas in Megabyte an, die die Größe des Arbeitsspeichers für das Thema zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="ac49c-119">Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic.</span></span> <span data-ttu-id="ac49c-120">Standardwert ist 1024.</span><span class="sxs-lookup"><span data-stu-id="ac49c-120">Default is 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-121">Ressourcenname **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-121">Resource name **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.requiresDuplicateDetection'
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-122">Der Wert, der angibt, wenn in diesem Thema die Erkennung doppelten Nachrichten erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="ac49c-122">Value indicating if this topic requires duplicate detection.</span></span>'
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.sizeInBytes'
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac49c-123">Die Größe des Themas in Byte.</span><span class="sxs-lookup"><span data-stu-id="ac49c-123">Size of the topic, in bytes.</span></span>
+      <span data-ttu-id="ac49c-124">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-124">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-125">Listet die möglichen Werte für den Status einer messagingentität.</span><span class="sxs-lookup"><span data-stu-id="ac49c-125">Enumerates the possible values for the status of a messaging entity.</span></span> <span data-ttu-id="ac49c-126">Mögliche Werte sind: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="ac49c-126">Possible values include: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: EntityStatus'
+      return:
+        type:
+          - '@azure/arm-servicebus.EntityStatus'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.subscriptionCount'
+    name: subscriptionCount
+    fullName: subscriptionCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac49c-127">Anzahl der Abonnements.</span><span class="sxs-lookup"><span data-stu-id="ac49c-127">Number of subscriptions.</span></span>
+      <span data-ttu-id="ac49c-128">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-128">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'subscriptionCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.supportOrdering'
+    name: supportOrdering
+    fullName: supportOrdering
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-129">Der Wert, der angibt, ob das Thema Sortierung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ac49c-129">Value that indicates whether the topic supports ordering.</span></span>'
+    optional: true
+    syntax:
+      content: 'supportOrdering?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac49c-130">Ressourcentyp **beachten: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-130">Resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.updatedAt'
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac49c-131">Die genaue Zeit wurde die Nachricht aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="ac49c-131">The exact time the message was updated.</span></span>
+      <span data-ttu-id="ac49c-132">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="ac49c-132">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+references:
+  - uid: '@azure/arm-servicebus.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-servicebus.Resource'
+  - uid: '@azure/arm-servicebus.MessageCountDetails'
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: '@azure/arm-servicebus.MessageCountDetails'
+  - uid: '@azure/arm-servicebus.EntityStatus'
+    name: EntityStatus
+    spec.typeScript:
+      - name: EntityStatus
+        fullName: EntityStatus
+        uid: '@azure/arm-servicebus.EntityStatus'
