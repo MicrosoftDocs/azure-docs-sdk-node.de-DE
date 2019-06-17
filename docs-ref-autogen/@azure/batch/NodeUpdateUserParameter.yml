@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - '@azure/batch.NodeUpdateUserParameter.expiryTime'
+      - '@azure/batch.NodeUpdateUserParameter.password'
+      - '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="a1f12-101">Eine Schnittstelle, die NodeUpdateUserParameter darstellt.</span><span class="sxs-lookup"><span data-stu-id="a1f12-101">An interface representing NodeUpdateUserParameter.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a1f12-102">Der Zeitpunkt, an dem das Konto ablaufen soll.</span><span class="sxs-lookup"><span data-stu-id="a1f12-102">The time at which the account should expire.</span></span> <span data-ttu-id="a1f12-103">Wenn nicht angegeben, ist die Standardeinstellung 1 Tag nach der aktuellen Uhrzeit.</span><span class="sxs-lookup"><span data-stu-id="a1f12-103">If omitted, the default is 1 day from the current time.</span></span> <span data-ttu-id="a1f12-104">Für Linux-Computeknoten weist der ExpiryTime eine Genauigkeit bis zu einem Tag auf.</span><span class="sxs-lookup"><span data-stu-id="a1f12-104">For Linux compute nodes, the expiryTime has a precision up to a day.</span></span>'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a1f12-105">Das Kennwort des Kontos.</span><span class="sxs-lookup"><span data-stu-id="a1f12-105">The password of the account.</span></span> <span data-ttu-id="a1f12-106">Das Kennwort ist erforderlich für Windows-Knoten (die mit der "CloudServiceConfiguration" erstellt oder mit "VirtualMachineConfiguration" mit einem Windows-Image-Verweis erstellt).</span><span class="sxs-lookup"><span data-stu-id="a1f12-106">The password is required for Windows nodes (those created with ''cloudServiceConfiguration'', or created with ''virtualMachineConfiguration'' using a Windows image reference).</span></span> <span data-ttu-id="a1f12-107">Für Linux-Computeknoten kann das Kennwort optional zusammen mit der SshPublicKey-Eigenschaft angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="a1f12-107">For Linux compute nodes, the password can optionally be specified along with the sshPublicKey property.</span></span> <span data-ttu-id="a1f12-108">Wenn nicht angegeben, wird vorhandenes Kennwort entfernt.</span><span class="sxs-lookup"><span data-stu-id="a1f12-108">If omitted, any existing password is removed.</span></span>'
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a1f12-109">Der öffentliche SSH-Schlüssel, der für die Remoteanmeldung auf den Computeknoten verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="a1f12-109">The SSH public key that can be used for remote login to the compute node.</span></span> <span data-ttu-id="a1f12-110">Der öffentliche Schlüssel muss kompatibel mit OpenSSH-Codierung und base-64 codiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="a1f12-110">The public key should be compatible with OpenSSH encoding and should be base 64 encoded.</span></span> <span data-ttu-id="a1f12-111">Diese Eigenschaft kann nur für Linux-Knoten angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="a1f12-111">This property can be specified only for Linux nodes.</span></span> <span data-ttu-id="a1f12-112">Wenn dies für einen Windows-Knoten angegeben wird, lehnt der Batch-Dienst die Anforderung; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="a1f12-112">If this is specified for a Windows node, then the Batch service rejects the request; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="a1f12-113">Wenn nicht angegeben, wird vorhandenen öffentlichen SSH-Schlüssel entfernt.</span><span class="sxs-lookup"><span data-stu-id="a1f12-113">If omitted, any existing SSH public key is removed.</span></span>'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
