@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.Restriction'
+    name: Restriction
+    fullName: Restriction
+    children:
+      - '@azure/arm-storage.Restriction.reasonCode'
+      - '@azure/arm-storage.Restriction.type'
+      - '@azure/arm-storage.Restriction.values'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="0325d-101">Die Einschränkung, aufgrund die SKU verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="0325d-101">The restriction because of which SKU cannot be used.</span></span>'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.reasonCode'
+    name: reasonCode
+    fullName: reasonCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0325d-102">Der Grund für die Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="0325d-102">The reason for the restriction.</span></span> <span data-ttu-id="0325d-103">Derzeit kann dies "QuotaId" oder "NotAvailableForSubscription" sein.</span><span class="sxs-lookup"><span data-stu-id="0325d-103">As of now this can be "QuotaId" or "NotAvailableForSubscription".</span></span> <span data-ttu-id="0325d-104">Das Id-Kontingent wird festgelegt, wenn die SKU RequiredQuotas-Parameter verfügt, wie das Abonnement nicht zu diesem Kontingent gehört.</span><span class="sxs-lookup"><span data-stu-id="0325d-104">Quota Id is set when the SKU has requiredQuotas parameter as the subscription does not belong to that quota.</span></span> <span data-ttu-id="0325d-105">Die "NotAvailableForSubscription" bezieht sich auf Kapazität bei DC.</span><span class="sxs-lookup"><span data-stu-id="0325d-105">The "NotAvailableForSubscription" is related to capacity at DC.</span></span> <span data-ttu-id="0325d-106">Mögliche Werte sind: ''QuotaId'', ''NotAvailableForSubscription''</span><span class="sxs-lookup"><span data-stu-id="0325d-106">Possible values include: ''QuotaId'', ''NotAvailableForSubscription''</span></span>'
+    optional: true
+    syntax:
+      content: 'reasonCode?: ReasonCode'
+      return:
+        type:
+          - '@azure/arm-storage.ReasonCode'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0325d-107">Der Typ der Einschränkungen.</span><span class="sxs-lookup"><span data-stu-id="0325d-107">The type of restrictions.</span></span> <span data-ttu-id="0325d-108">Derzeit ist nur möglicher Wert für diesen Speicherort.</span><span class="sxs-lookup"><span data-stu-id="0325d-108">As of now only possible value for this is location.</span></span>
+      <span data-ttu-id="0325d-109">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="0325d-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.values'
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0325d-110">Der Wert der Einschränkungen.</span><span class="sxs-lookup"><span data-stu-id="0325d-110">The value of restrictions.</span></span> <span data-ttu-id="0325d-111">Wenn Sie den Typ der Einschränkung Speicherort festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="0325d-111">If the restriction type is set to location.</span></span> <span data-ttu-id="0325d-112">Dies wäre Speicherorte, in denen die SKU beschränkt ist.</span><span class="sxs-lookup"><span data-stu-id="0325d-112">This would be different locations where the SKU is restricted.</span></span>
+      <span data-ttu-id="0325d-113">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="0325d-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'values?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.ReasonCode'
+    name: ReasonCode
+    spec.typeScript:
+      - name: ReasonCode
+        fullName: ReasonCode
+        uid: '@azure/arm-storage.ReasonCode'
