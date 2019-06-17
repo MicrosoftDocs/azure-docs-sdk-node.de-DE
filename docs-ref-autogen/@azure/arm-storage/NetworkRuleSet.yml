@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.NetworkRuleSet'
+    name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    children:
+      - '@azure/arm-storage.NetworkRuleSet.bypass'
+      - '@azure/arm-storage.NetworkRuleSet.defaultAction'
+      - '@azure/arm-storage.NetworkRuleSet.ipRules'
+      - '@azure/arm-storage.NetworkRuleSet.virtualNetworkRules'
+    langs:
+      - typeScript
+    type: interface
+    summary: Netzwerk-Regelsatz
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.bypass'
+    name: bypass
+    fullName: bypass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob Datenverkehr für die Protokollierung/Metrics/AzureServices umgangen wird. Mögliche Werte sind eine beliebige Kombination der Protokollierung | Metriken | AzureServices (z. B. "Protokollierung, Metriken"), oder None, keines dieser Datenverkehr zu umgehen. Mögliche Werte sind: ''None'', ''Logging'', ''Metrics'', ''AzureServices''. Standardwert: ''AzureServices''.'
+    optional: true
+    syntax:
+      content: 'bypass?: Bypass'
+      return:
+        type:
+          - '@azure/arm-storage.Bypass'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.defaultAction'
+    name: defaultAction
+    fullName: defaultAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt die Standardaktion des zulassen oder verweigern, wenn keine anderen Regeln übereinstimmen. Mögliche Werte sind: ''Allow'', ''Deny''. Standardwert: "Zulassen Sie".'
+    syntax:
+      content: 'defaultAction: DefaultAction'
+      return:
+        type:
+          - '@azure/arm-storage.DefaultAction'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.ipRules'
+    name: ipRules
+    fullName: ipRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Legt die IP-ACL-Regeln
+    optional: true
+    syntax:
+      content: 'ipRules?: IPRule[]'
+      return:
+        type:
+          - '@azure/arm-storage.IPRule[]'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.virtualNetworkRules'
+    name: virtualNetworkRules
+    fullName: virtualNetworkRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Legt die Regeln für virtuelle Netzwerke
+    optional: true
+    syntax:
+      content: 'virtualNetworkRules?: VirtualNetworkRule[]'
+      return:
+        type:
+          - '@azure/arm-storage.VirtualNetworkRule[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.Bypass'
+    name: Bypass
+    spec.typeScript:
+      - name: Bypass
+        fullName: Bypass
+        uid: '@azure/arm-storage.Bypass'
+  - uid: '@azure/arm-storage.DefaultAction'
+    name: DefaultAction
+    spec.typeScript:
+      - name: DefaultAction
+        fullName: DefaultAction
+        uid: '@azure/arm-storage.DefaultAction'
+  - uid: '@azure/arm-storage.IPRule[]'
+    name: 'IPRule[]'
+    spec.typeScript:
+      - name: IPRule
+        fullName: IPRule
+        uid: '@azure/arm-storage.IPRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-storage.VirtualNetworkRule[]'
+    name: 'VirtualNetworkRule[]'
+    spec.typeScript:
+      - name: VirtualNetworkRule
+        fullName: VirtualNetworkRule
+        uid: '@azure/arm-storage.VirtualNetworkRule'
+      - name: '[]'
+        fullName: '[]'

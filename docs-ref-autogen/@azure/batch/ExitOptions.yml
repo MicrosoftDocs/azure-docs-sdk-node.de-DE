@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die ExitOptions darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Aktion, die der Batch-Dienst Tasks ausführt, die in dieser Aufgabe abhängig sind. Der Standardwert ist "erfüllen", Exitcode: 0 und "blockieren" für alle anderen beendigungsbedingungen. Wenn die Auftrags UsesTaskDependencies-Eigenschaft auf "false", gebe ich die DependencyAction-Eigenschaft einen Fehler zurück, und die Anforderung zum Hinzufügen von Task tritt ein Fehler der ungültige Eigenschaft-Wert festgelegt ist; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung). Folgende Werte sind möglich: "erfüllen", "block"'
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine auszuführende Aktion, für den Auftrag mit der Aufgabe, wenn die Aufgabe abgeschlossen, mit der angegebenen Exit-Bedingung und die Auftrags OnTaskFailed-Eigenschaft ist ist "PerformExitOptionsJobAction". Der Standardwert ist "None" für den Exitcode 0, und beenden für alle anderen beendigungsbedingungen. Wenn OnTaskFailed-Eigenschaft des Auftrags Noaction ist, gebe ich diese Eigenschaft gibt einen Fehler zurück, und die Anforderung zum Hinzufügen von Task tritt ein Fehler der ungültige Eigenschaft-Wert; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung). Folgende Werte sind möglich: ''none'', ''disable''. ''beendet'''
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'

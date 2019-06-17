@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - '@azure/batch.PoolInformation.autoPoolSpecification'
+      - '@azure/batch.PoolInformation.poolId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die PoolInformation darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.autoPoolSpecification'
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Merkmale für eine temporäre "automatischer Pool". Der Batch-Dienst wird diese automatischen Pool erstellt, wenn der Auftrag übermittelt wird. Wenn automatische poolerstellung ein Fehler auftritt, der Batch-Dienst verschiebt den Auftrag, um den Status "abgeschlossen", und der Fehler beim Erstellen des Pools in der Planung des Auftrags Error-Eigenschaft festgelegt ist.
+      Der Batch-Dienst verwaltet die Lebensdauer (sowohl die Erstellung und, es sei denn, Sie KeepAlive angegeben ist, löschen) des automatischen Pools. Alle Benutzeraktionen, die Auswirkungen auf die Lebensdauer des automatischen Pools, während der Auftrag aktiv ist, werden zu unerwartetem Verhalten führen. Sie müssen entweder die Pool-ID oder die Spezifikation des automatischen Pools, jedoch nicht beides angeben.
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - '@azure/batch.AutoPoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID eines vorhandenen Pools. Alle Aufgaben des Auftrags werden für den angegebenen Pool ausgeführt werden. Sie müssen sicherstellen, dass der Pool auf die verwiesen wird durch diese Eigenschaft vorhanden ist. Wenn der Pool nicht zum Zeitpunkt der Batch-Dienst versucht, einen Auftrag planen, vorhanden ist, werden keine Aufgaben für den Auftrag ausgeführt, bis Sie einen Pool mit dieser Id erstellen. Beachten Sie, dass der Batch-Dienst nicht auftragsanforderung abgelehnt wird. Es werden Aufgaben einfach nicht ausgeführt, bis der Pool vorhanden ist. Sie müssen entweder die Pool-ID oder die Spezifikation des automatischen Pools, jedoch nicht beides angeben.'
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: '@azure/batch.AutoPoolSpecification'
