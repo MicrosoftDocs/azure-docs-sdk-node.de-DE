@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die "jobconstraints" darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die maximale Anzahl von Wiederholungsversuchen für jede Aufgabe kann. Der Batch-Dienst wiederholt einen Task, wenn sein Exitcode ungleich null ist. Beachten Sie, dass dieser Wert die Anzahl der Wiederholungen ausdrücklich steuert. Der Batch-Dienst versucht jede Aufgabe einmal, und es kann bis zu diesem Grenzwert wiederholen. Wenn beispielsweise die maximale Anzahl von Wiederholungsversuchen 3 ist, versucht der Batch-Dienst einen Task bis zu viermal (ein erster Versuch und drei Wiederholungsversuche). Wenn die maximale Anzahl von Wiederholungsversuchen 0 ist, wiederholt der Batch-Dienst Tasks nicht. Wenn die maximale Anzahl von Wiederholungsversuchen -1 ist, wiederholt der Batch-Dienst Tasks unbegrenzt. Der Standardwert ist 0 (keine Wiederholungsversuche).'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die maximal verstrichene Zeit, die die auftragsausführung, gemessen ab dem Zeitpunkt, wenn der Auftrag erstellt wird. Wenn der Auftrag nicht innerhalb des Zeitlimits abgeschlossen wird, beendet der Batch-Dienst sie und alle Aufgaben, die noch ausgeführt werden. In diesem Fall wird der Grund für Beendigung MaxWallClockTimeExpiry sein.
+      Wenn diese Eigenschaft nicht angegeben wird, ist es keine zeitliche Begrenzung für wie lange der Auftrag ausgeführt werden kann.
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

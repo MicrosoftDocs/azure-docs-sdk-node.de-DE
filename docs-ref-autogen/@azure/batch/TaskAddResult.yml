@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskAddResult'
+    name: TaskAddResult
+    fullName: TaskAddResult
+    children:
+      - '@azure/batch.TaskAddResult.error'
+      - '@azure/batch.TaskAddResult.eTag'
+      - '@azure/batch.TaskAddResult.lastModified'
+      - '@azure/batch.TaskAddResult.location'
+      - '@azure/batch.TaskAddResult.status'
+      - '@azure/batch.TaskAddResult.taskId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die TaskAddResult darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Fehler beim Versuch, den Task hinzufügen.'
+    optional: true
+    syntax:
+      content: 'error?: BatchError'
+      return:
+        type:
+          - '@azure/batch.BatchError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das ETag der Aufgabe, wenn die Aufgabe wurde erfolgreich hinzugefügt wurde. Sie können dies verwenden, um festzustellen, ob die Aufgabe, die zwischen Anforderungen geändert wurde. Insbesondere können Sie sein übergeben das ETag mit einer Anforderung Tasks "Aktualisieren", um anzugeben, dass die Änderungen wirksam werden soll, nur dann, wenn keine andere Person auf der Auftrag in der Zwischenzeit geändert wurde.'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uhrzeit des Vorgangs wird von der letzten Änderung.
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die URL der Aufgabe, wenn die Aufgabe wurde erfolgreich hinzugefügt wurde.'
+    optional: true
+    syntax:
+      content: 'location?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Status der Anforderung zum Hinzufügen eines Tasks. Folgende Werte sind möglich: ''Success'', ''ClientError'', "ServerError"'
+    syntax:
+      content: 'status: TaskAddStatus'
+      return:
+        type:
+          - '@azure/batch.TaskAddStatus'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID der Aufgabe, die für die dies das Ergebnis ist.'
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchError'
+    name: BatchError
+    spec.typeScript:
+      - name: BatchError
+        fullName: BatchError
+        uid: '@azure/batch.BatchError'
+  - uid: '@azure/batch.TaskAddStatus'
+    name: TaskAddStatus
+    spec.typeScript:
+      - name: TaskAddStatus
+        fullName: TaskAddStatus
+        uid: '@azure/batch.TaskAddStatus'
