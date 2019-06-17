@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/batch.DataDisk.caching'
+      - '@azure/batch.DataDisk.diskSizeGB'
+      - '@azure/batch.DataDisk.lun'
+      - '@azure/batch.DataDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die DataDisk darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Typ der Zwischenspeicherung, um für die Datenträger für Daten aktiviert werden. Der Standardwert für die Zwischenspeicherung ist "ReadWrite". Weitere Informationen zu Optionen für die Zwischenspeicherung finden Sie unter: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+      Folgende Werte sind möglich: "none", "ReadOnly", "ReadWrite"
+    optional: true
+    syntax:
+      content: 'caching?: CachingType'
+      return:
+        type:
+          - '@azure/batch.CachingType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die anfängliche Festplattengröße in GB werden soll.
+    syntax:
+      content: 'diskSizeGB: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die logische Gerätenummer. Die Lun wird verwendet, um jeden Datenträger eindeutig zu identifizieren. Falls mehrere Datenträger anfügen möchten, muss jeweils eine unterschiedliche Lun verfügen.'
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Typ des Kontos für den Datenträger verwendet werden. Wenn nicht angegeben, ist die Standardeinstellung "Standard_lrs". Mögliche Werte sind: ''StandardLRS'', ''PremiumLRS'''
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountType'
+      return:
+        type:
+          - '@azure/batch.StorageAccountType'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CachingType'
+    name: CachingType
+    spec.typeScript:
+      - name: CachingType
+        fullName: CachingType
+        uid: '@azure/batch.CachingType'
+  - uid: '@azure/batch.StorageAccountType'
+    name: StorageAccountType
+    spec.typeScript:
+      - name: StorageAccountType
+        fullName: StorageAccountType
+        uid: '@azure/batch.StorageAccountType'
