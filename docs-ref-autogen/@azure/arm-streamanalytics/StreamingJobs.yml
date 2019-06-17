@@ -1,0 +1,803 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.StreamingJobs'
+    name: StreamingJobs
+    fullName: StreamingJobs
+    children:
+      - '@azure/arm-streamanalytics.StreamingJobs.beginCreateOrReplace'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginDeleteMethod'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginStart'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginStop'
+      - '@azure/arm-streamanalytics.StreamingJobs.createOrReplace'
+      - '@azure/arm-streamanalytics.StreamingJobs.deleteMethod'
+      - '@azure/arm-streamanalytics.StreamingJobs.get'
+      - '@azure/arm-streamanalytics.StreamingJobs.get_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.get_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.list'
+      - '@azure/arm-streamanalytics.StreamingJobs.list_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.list_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.start'
+      - '@azure/arm-streamanalytics.StreamingJobs.stop'
+      - '@azure/arm-streamanalytics.StreamingJobs.constructor'
+      - '@azure/arm-streamanalytics.StreamingJobs.update'
+      - '@azure/arm-streamanalytics.StreamingJobs.update_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="1f791-101">Klasse, die eine streamingaufträge ab. darstellt.</span><span class="sxs-lookup"><span data-stu-id="1f791-101">Class representing a StreamingJobs.</span></span>'
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginCreateOrReplace'
+    name: 'beginCreateOrReplace(StreamingJob, string, string, Models.StreamingJobsBeginCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-102">Ein streamingauftrag erstellt oder eine bereits vorhandene streamingauftrag ersetzt.</span><span class="sxs-lookup"><span data-stu-id="1f791-102">Creates a streaming job or replaces an already existing streaming job.</span></span>
+    syntax:
+      content: 'function beginCreateOrReplace(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsBeginCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: '<span data-ttu-id="1f791-103">Die Definition der streamingauftrag, der zum Erstellen eines neuen streaming-Auftrags oder zum Ersetzen der vorhandenen Dateigruppe verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-103">The definition of the streaming job that will be used to create a new streaming job or replace the existing one.</span></span>'
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-104">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-105">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-106">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-106">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.StreamingJobsBeginCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-107">Löscht einen streamingauftrag an.</span><span class="sxs-lookup"><span data-stu-id="1f791-107">Deletes a streaming job.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-108">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-108">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-109">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-109">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-110">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-110">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginStart'
+    name: 'beginStart(string, string, Models.StreamingJobsBeginStartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-111">Startet die streaming-Auftrag.</span><span class="sxs-lookup"><span data-stu-id="1f791-111">Starts a streaming job.</span></span> <span data-ttu-id="1f791-112">Nachdem ein Auftrag gestartet wird es beginnt mit der Verarbeitung von Eingabeereignissen und Ausgabe aus.</span><span class="sxs-lookup"><span data-stu-id="1f791-112">Once a job is started it will start processing input events and produce output.</span></span>
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsBeginStartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-113">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-113">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-114">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-114">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-115">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-115">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.StreamingJobsBeginStartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginStop'
+    name: 'beginStop(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-116">Beendet einen laufenden streamingauftrag an.</span><span class="sxs-lookup"><span data-stu-id="1f791-116">Stops a running streaming job.</span></span> <span data-ttu-id="1f791-117">Dadurch wird einen ausgeführten Stream Analytics-Auftrag Eingabeereignisse verarbeitet und die Ausgabe zu beenden.</span><span class="sxs-lookup"><span data-stu-id="1f791-117">This will cause a running streaming job to stop processing input events and producing output.</span></span>
+    syntax:
+      content: 'function beginStop(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-118">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-118">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-119">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-119">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-120">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-120">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.createOrReplace'
+    name: 'createOrReplace(StreamingJob, string, string, Models.StreamingJobsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-121">Ein streamingauftrag erstellt oder eine bereits vorhandene streamingauftrag ersetzt.</span><span class="sxs-lookup"><span data-stu-id="1f791-121">Creates a streaming job or replaces an already existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: '<span data-ttu-id="1f791-122">Die Definition der streamingauftrag, der zum Erstellen eines neuen streaming-Auftrags oder zum Ersetzen der vorhandenen Dateigruppe verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-122">The definition of the streaming job that will be used to create a new streaming job or replace the existing one.</span></span>'
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-123">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-123">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-124">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-124">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-125">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-125">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.StreamingJobsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-126">Löscht einen streamingauftrag an.</span><span class="sxs-lookup"><span data-stu-id="1f791-126">Deletes a streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-127">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-127">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-128">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-128">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-129">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-129">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get'
+    name: 'get(string, string, Models.StreamingJobsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-130">Ruft Details zu dem angegebenen streaming-Auftrag ab.</span><span class="sxs-lookup"><span data-stu-id="1f791-130">Gets details about the specified streaming job.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-131">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-131">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-132">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-132">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-133">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-133">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.StreamingJobsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get_1'
+    name: 'get(string, string, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-134">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-134">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-135">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-135">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-136">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-136">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            <span data-ttu-id="1f791-137">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get_2'
+    name: 'get(string, string, StreamingJobsGetOptionalParams, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options: StreamingJobsGetOptionalParams, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-138">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-138">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-139">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-139">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-140">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-140">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+          description: <span data-ttu-id="1f791-141">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="1f791-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            <span data-ttu-id="1f791-142">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-142">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list'
+    name: list(Models.StreamingJobsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-143">Listet alle der streaming-Aufträge im angegebenen Abonnement.</span><span class="sxs-lookup"><span data-stu-id="1f791-143">Lists all of the streaming jobs in the given subscription.</span></span>
+    syntax:
+      content: 'function list(options?: Models.StreamingJobsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.StreamingJobsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list_1'
+    name: list(ServiceCallback<StreamingJobListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-144">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list_2'
+    name: 'list(StreamingJobsListOptionalParams, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: StreamingJobsListOptionalParams, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+          description: <span data-ttu-id="1f791-145">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="1f791-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-146">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.StreamingJobsListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-147">Zeigt eine Liste aller der streaming-Aufträge in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="1f791-147">Lists all of the streaming jobs in the specified resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.StreamingJobsListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-148">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-149">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: options
+          type:
+            - Models.StreamingJobsListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-150">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-150">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-151">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-152">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, StreamingJobsListByResourceGroupOptionalParams, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: StreamingJobsListByResourceGroupOptionalParams, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-153">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-153">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-154">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-154">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+          description: <span data-ttu-id="1f791-155">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="1f791-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-156">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-157">Zeigt eine Liste aller der streaming-Aufträge in der angegebenen Ressourcengruppe aus.</span><span class="sxs-lookup"><span data-stu-id="1f791-157">Lists all of the streaming jobs in the specified resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1f791-158">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="1f791-158">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1f791-159">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="1f791-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1f791-160">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="1f791-160">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-161">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1f791-162">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="1f791-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-163">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-164">Listet alle der streaming-Aufträge im angegebenen Abonnement.</span><span class="sxs-lookup"><span data-stu-id="1f791-164">Lists all of the streaming jobs in the given subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1f791-165">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="1f791-165">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1f791-166">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="1f791-166">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1f791-167">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="1f791-167">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-168">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext_1'
+    name: 'listNext(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1f791-169">Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="1f791-169">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            <span data-ttu-id="1f791-170">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.start'
+    name: 'start(string, string, Models.StreamingJobsStartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-171">Startet die streaming-Auftrag.</span><span class="sxs-lookup"><span data-stu-id="1f791-171">Starts a streaming job.</span></span> <span data-ttu-id="1f791-172">Nachdem ein Auftrag gestartet wird es beginnt mit der Verarbeitung von Eingabeereignissen und Ausgabe aus.</span><span class="sxs-lookup"><span data-stu-id="1f791-172">Once a job is started it will start processing input events and produce output.</span></span>
+    syntax:
+      content: 'function start(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsStartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-173">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-173">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-174">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-174">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-175">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-175">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.StreamingJobsStartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.stop'
+    name: 'stop(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-176">Beendet einen laufenden streamingauftrag an.</span><span class="sxs-lookup"><span data-stu-id="1f791-176">Stops a running streaming job.</span></span> <span data-ttu-id="1f791-177">Dadurch wird einen ausgeführten Stream Analytics-Auftrag Eingabeereignisse verarbeitet und die Ausgabe zu beenden.</span><span class="sxs-lookup"><span data-stu-id="1f791-177">This will cause a running streaming job to stop processing input events and producing output.</span></span>
+    syntax:
+      content: 'function stop(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-178">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-178">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-179">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-180">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-180">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.constructor'
+    name: StreamingJobs(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1f791-181">Erstellen Sie eine streamingaufträge ab. ein.</span><span class="sxs-lookup"><span data-stu-id="1f791-181">Create a StreamingJobs.</span></span>
+    syntax:
+      content: 'new StreamingJobs(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="1f791-182">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="1f791-182">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update'
+    name: 'update(StreamingJob, string, string, Models.StreamingJobsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1f791-183">Aktualisiert ein vorhandenes streaming-Auftrags an.</span><span class="sxs-lookup"><span data-stu-id="1f791-183">Updates an existing streaming job.</span></span> <span data-ttu-id="1f791-184">Dies können Sie verwendet werden, (d. h. teilweise zu aktualisieren</span><span class="sxs-lookup"><span data-stu-id="1f791-184">This can be used to partially update (ie.</span></span> <span data-ttu-id="1f791-185">Aktualisieren Sie ein oder zwei Eigenschaften) eines streamingauftrags ohne den Rest der Auftragsdefinition.</span><span class="sxs-lookup"><span data-stu-id="1f791-185">update one or two properties) a streaming job without affecting the rest the job definition.</span></span>'
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsUpdateOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            <span data-ttu-id="1f791-186">Ein streaming Job-Objekt.</span><span class="sxs-lookup"><span data-stu-id="1f791-186">A streaming job object.</span></span> <span data-ttu-id="1f791-187">Die hier angegebenen Eigenschaften überschreibt die entsprechenden Eigenschaften in der vorhandenen streamingauftrag (d. h. Diese Eigenschaften werden aktualisiert).</span><span class="sxs-lookup"><span data-stu-id="1f791-187">The properties specified here will overwrite the corresponding properties in the existing streaming job (ie. Those properties will be updated).</span></span>
+            <span data-ttu-id="1f791-188">Alle Eigenschaften, die werden auf null festgelegt, hier bedeutet, dass die entsprechende Eigenschaft in der vorhandenen Eingabe gleich bleiben und diesen PATCH-Vorgang nicht geändert wird.</span><span class="sxs-lookup"><span data-stu-id="1f791-188">Any properties that are set to null here will mean that the corresponding property in the existing input will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-189">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-189">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-190">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-190">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-191">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-191">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.StreamingJobsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update_1'
+    name: 'update(StreamingJob, string, string, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            <span data-ttu-id="1f791-192">Ein streaming Job-Objekt.</span><span class="sxs-lookup"><span data-stu-id="1f791-192">A streaming job object.</span></span> <span data-ttu-id="1f791-193">Die hier angegebenen Eigenschaften überschreibt die entsprechenden Eigenschaften in der vorhandenen streamingauftrag (d. h. Diese Eigenschaften werden aktualisiert).</span><span class="sxs-lookup"><span data-stu-id="1f791-193">The properties specified here will overwrite the corresponding properties in the existing streaming job (ie. Those properties will be updated).</span></span>
+            <span data-ttu-id="1f791-194">Alle Eigenschaften, die werden auf null festgelegt, hier bedeutet, dass die entsprechende Eigenschaft in der vorhandenen Eingabe gleich bleiben und diesen PATCH-Vorgang nicht geändert wird.</span><span class="sxs-lookup"><span data-stu-id="1f791-194">Any properties that are set to null here will mean that the corresponding property in the existing input will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-195">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-195">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-196">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-196">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-197">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-197">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            <span data-ttu-id="1f791-198">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update_2'
+    name: 'update(StreamingJob, string, string, StreamingJobsUpdateOptionalParams, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options: StreamingJobsUpdateOptionalParams, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            <span data-ttu-id="1f791-199">Ein streaming Job-Objekt.</span><span class="sxs-lookup"><span data-stu-id="1f791-199">A streaming job object.</span></span> <span data-ttu-id="1f791-200">Die hier angegebenen Eigenschaften überschreibt die entsprechenden Eigenschaften in der vorhandenen streamingauftrag (d. h. Diese Eigenschaften werden aktualisiert).</span><span class="sxs-lookup"><span data-stu-id="1f791-200">The properties specified here will overwrite the corresponding properties in the existing streaming job (ie. Those properties will be updated).</span></span>
+            <span data-ttu-id="1f791-201">Alle Eigenschaften, die werden auf null festgelegt, hier bedeutet, dass die entsprechende Eigenschaft in der vorhandenen Eingabe gleich bleiben und diesen PATCH-Vorgang nicht geändert wird.</span><span class="sxs-lookup"><span data-stu-id="1f791-201">Any properties that are set to null here will mean that the corresponding property in the existing input will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="1f791-202">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="1f791-202">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="1f791-203">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1f791-203">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="1f791-204">Der Name des streamingauftrags.</span><span class="sxs-lookup"><span data-stu-id="1f791-204">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
+          description: <span data-ttu-id="1f791-205">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="1f791-205">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            <span data-ttu-id="1f791-206">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="1f791-206">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.StreamingJob'
+    name: StreamingJob
+    spec.typeScript:
+      - name: StreamingJob
+        fullName: StreamingJob
+        uid: '@azure/arm-streamanalytics.StreamingJob'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+    name: StreamingJob>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StreamingJob
+        fullName: StreamingJob
+        uid: '@azure/arm-streamanalytics.StreamingJob'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+    name: StreamingJobsGetOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsGetOptionalParams
+        fullName: StreamingJobsGetOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+    name: StreamingJobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StreamingJobListResult
+        fullName: StreamingJobListResult
+        uid: '@azure/arm-streamanalytics.StreamingJobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+    name: StreamingJobsListOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsListOptionalParams
+        fullName: StreamingJobsListOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+    name: StreamingJobsListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsListByResourceGroupOptionalParams
+        fullName: StreamingJobsListByResourceGroupOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
+    name: StreamingJobsUpdateOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsUpdateOptionalParams
+        fullName: StreamingJobsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
