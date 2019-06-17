@@ -1,0 +1,221 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobStatistics'
+    name: JobStatistics
+    fullName: JobStatistics
+    children:
+      - '@azure/batch.JobStatistics.kernelCPUTime'
+      - '@azure/batch.JobStatistics.lastUpdateTime'
+      - '@azure/batch.JobStatistics.numFailedTasks'
+      - '@azure/batch.JobStatistics.numSucceededTasks'
+      - '@azure/batch.JobStatistics.numTaskRetries'
+      - '@azure/batch.JobStatistics.readIOGiB'
+      - '@azure/batch.JobStatistics.readIOps'
+      - '@azure/batch.JobStatistics.startTime'
+      - '@azure/batch.JobStatistics.url'
+      - '@azure/batch.JobStatistics.userCPUTime'
+      - '@azure/batch.JobStatistics.waitTime'
+      - '@azure/batch.JobStatistics.wallClockTime'
+      - '@azure/batch.JobStatistics.writeIOGiB'
+      - '@azure/batch.JobStatistics.writeIOps'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die JobStatistics darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.kernelCPUTime'
+    name: kernelCPUTime
+    fullName: kernelCPUTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die gesamte Kernelmoduszeit CPU (zusammengefasst für alle Kerne und alle Compute-Knoten) aller Aufgaben im Auftrag.
+    syntax:
+      content: 'kernelCPUTime: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.lastUpdateTime'
+    name: lastUpdateTime
+    fullName: lastUpdateTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zeitpunkt, an dem die Statistik zuletzt aktualisiert wurden. Alle Statistiken sind auf den Bereich zwischen "StartTime" und LastUpdateTime beschränkt.'
+    syntax:
+      content: 'lastUpdateTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.numFailedTasks'
+    name: numFailedTasks
+    fullName: numFailedTasks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Gesamtanzahl der Tasks im Auftrag, die während des angegebenen Zeitraums fehlgeschlagen. Eine Aufgabe fehlschlägt, wenn sie die maximale Anzahl von Wiederholungsversuchen ausgeschöpft hat, ohne dass der Exitcode 0 zurückgegeben.'
+    syntax:
+      content: 'numFailedTasks: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.numSucceededTasks'
+    name: numSucceededTasks
+    fullName: numSucceededTasks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Gesamtanzahl der Aufgaben im Auftrag während des angegebenen Zeitraums erfolgreich abgeschlossen. Ein Task wird erfolgreich abgeschlossen, wenn sie den Exitcode 0 zurückgibt.'
+    syntax:
+      content: 'numSucceededTasks: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.numTaskRetries'
+    name: numTaskRetries
+    fullName: numTaskRetries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Gesamtanzahl der Wiederholungen für alle Aufgaben im Auftrag während des angegebenen Zeitraums.
+    syntax:
+      content: 'numTaskRetries: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.readIOGiB'
+    name: readIOGiB
+    fullName: readIOGiB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Gesamtmenge der Daten in GB, die alle Tasks im Auftrag vom Datenträger gelesen werden.'
+    syntax:
+      content: 'readIOGiB: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.readIOps'
+    name: readIOps
+    fullName: readIOps
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Gesamtanzahl der Datenträger-Lesevorgänge, die von allen Aufgaben im Auftrag.'
+    syntax:
+      content: 'readIOps: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Startzeit des Zeitraums angeben, die von den Statistiken beschrieben wird.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die URL der Statistik.
+    syntax:
+      content: 'url: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.userCPUTime'
+    name: userCPUTime
+    fullName: userCPUTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Gesamtzeit CPU-Zeit im (zusammengefasst für alle Kerne und alle Compute-Knoten) aller Aufgaben im Auftrag.
+    syntax:
+      content: 'userCPUTime: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.waitTime'
+    name: waitTime
+    fullName: waitTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Gesamtwartezeit aller Aufgaben im Auftrag. Die Wartezeit für eine Aufgabe wird als die verstrichene Zeit zwischen der Erstellung der Aufgabe und dem Beginn der Ausführung der Aufgabe definiert. (Wenn die Aufgabe aufgrund von Fehlern wiederholt wird, ist die Wartezeit die Zeit der letzten aufgabenausführung.) Dieser Wert wird nur die Statistiken der Konto-Lebensdauer gemeldet; Es ist nicht der Auftragsstatistik enthalten.'
+    syntax:
+      content: 'waitTime: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.wallClockTime'
+    name: wallClockTime
+    fullName: wallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die gesamtbetrachtungszeit aller Aufgaben im Auftrag.  Die gesamtbetrachtungszeit ist die Zeit aus, wenn die Aufgabe auf einem Computeknoten ausgeführt werden gestartet, um, wenn er abgeschlossen (oder bis zum letzten Zeitpunkt der Statistiken wurden aktualisiert, wenn der Task wurde nicht abgeschlossen hatten). Wenn eine Aufgabe wiederholt wurde, umfasst dies die gesamtbetrachtungszeit alle Wiederholungen der Aufgabe.'
+    syntax:
+      content: 'wallClockTime: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.writeIOGiB'
+    name: writeIOGiB
+    fullName: writeIOGiB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Gesamtmenge der Daten in GiB alle Tasks im Auftrag auf den Datenträger geschrieben werden soll.
+    syntax:
+      content: 'writeIOGiB: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobStatistics.writeIOps'
+    name: writeIOps
+    fullName: writeIOps
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Alle Tasks im Auftrag die Gesamtzahl der Datenträger-Schreibvorgänge.
+    syntax:
+      content: 'writeIOps: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'

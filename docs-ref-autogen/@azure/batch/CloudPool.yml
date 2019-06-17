@@ -1,0 +1,654 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudPool'
+    name: CloudPool
+    fullName: CloudPool
+    children:
+      - '@azure/batch.CloudPool.allocationState'
+      - '@azure/batch.CloudPool.allocationStateTransitionTime'
+      - '@azure/batch.CloudPool.applicationLicenses'
+      - '@azure/batch.CloudPool.applicationPackageReferences'
+      - '@azure/batch.CloudPool.autoScaleEvaluationInterval'
+      - '@azure/batch.CloudPool.autoScaleFormula'
+      - '@azure/batch.CloudPool.autoScaleRun'
+      - '@azure/batch.CloudPool.certificateReferences'
+      - '@azure/batch.CloudPool.cloudServiceConfiguration'
+      - '@azure/batch.CloudPool.creationTime'
+      - '@azure/batch.CloudPool.currentDedicatedNodes'
+      - '@azure/batch.CloudPool.currentLowPriorityNodes'
+      - '@azure/batch.CloudPool.displayName'
+      - '@azure/batch.CloudPool.enableAutoScale'
+      - '@azure/batch.CloudPool.enableInterNodeCommunication'
+      - '@azure/batch.CloudPool.eTag'
+      - '@azure/batch.CloudPool.id'
+      - '@azure/batch.CloudPool.lastModified'
+      - '@azure/batch.CloudPool.maxTasksPerNode'
+      - '@azure/batch.CloudPool.metadata'
+      - '@azure/batch.CloudPool.networkConfiguration'
+      - '@azure/batch.CloudPool.resizeErrors'
+      - '@azure/batch.CloudPool.resizeTimeout'
+      - '@azure/batch.CloudPool.startTask'
+      - '@azure/batch.CloudPool.state'
+      - '@azure/batch.CloudPool.stateTransitionTime'
+      - '@azure/batch.CloudPool.stats'
+      - '@azure/batch.CloudPool.targetDedicatedNodes'
+      - '@azure/batch.CloudPool.targetLowPriorityNodes'
+      - '@azure/batch.CloudPool.taskSchedulingPolicy'
+      - '@azure/batch.CloudPool.url'
+      - '@azure/batch.CloudPool.userAccounts'
+      - '@azure/batch.CloudPool.virtualMachineConfiguration'
+      - '@azure/batch.CloudPool.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die CloudPool darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.allocationState'
+    name: allocationState
+    fullName: allocationState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob der Pool die Größenänderung durchgeführt wird. Folgende Werte sind möglich: "konstant", "Ändern der Größe", "Anhalten"'
+    optional: true
+    syntax:
+      content: 'allocationState?: AllocationState'
+      return:
+        type:
+          - '@azure/batch.AllocationState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.allocationStateTransitionTime'
+    name: allocationStateTransitionTime
+    fullName: allocationStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Zeit, an der der Pool seinen aktuellen Zuordnungsstatus erlangt hat.'
+    optional: true
+    syntax:
+      content: 'allocationStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste der Anwendungs-Lizenzen, die Batch-Dienst auf jedem Computeknoten im Pool verfügbar gemacht werden. Die Liste der Anwendungslizenzen muss es sich um eine Teilmenge der verfügbaren Anwendungslizenzen für Batch-Dienst sein. Poolerstellung schlägt fehl, wenn eine Lizenz angefordert wird, dies wird nicht unterstützt.'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste der Anwendungspakete auf jedem Computeknoten im Pool installiert werden. Änderungen an anwendungspaketverweise Auswirkungen auf alle neuen Computeknoten, die den Pool beitritt, aber haben keine Auswirkungen auf die Compute-Knoten, die bereits im Pool sind, bis er neu gestartet oder ein reimaging durchgeführt werden. Es ist maximal 10 anwendungspaketverweise auf den einzelnen Pools.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Zeitintervall, an dem die Poolgröße gemäß der Formel für die automatische Skalierung automatisch angepasst werden soll. Diese Eigenschaft wird festgelegt, nur, wenn der Pool automatisch skaliert werden kann, d. h. "enableautoscale" "true" ist.'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Formel für die gewünschte Anzahl von Computeknoten im Pool. Diese Eigenschaft wird festgelegt, nur, wenn der Pool automatisch skaliert werden kann, d. h. "enableautoscale" "true" ist.'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.autoScaleRun'
+    name: autoScaleRun
+    fullName: autoScaleRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Ergebnisse und Fehler von der letzten Ausführung der Autoscale-Formel. Diese Eigenschaft wird festgelegt, nur, wenn der Pool automatisch skaliert werden kann, d. h. "enableautoscale" "true" ist.'
+    optional: true
+    syntax:
+      content: 'autoScaleRun?: AutoScaleRun'
+      return:
+        type:
+          - '@azure/batch.AutoScaleRun'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste der Zertifikate auf jedem Computeknoten im Pool installiert werden. Für Windows-Computeknoten installiert der Batch-Dienst die Zertifikate für den angegebenen Zertifikatspeicher und den Speicherort an. Für Linux-Computeknoten werden die Zertifikate in einem Verzeichnis in das Arbeitsverzeichnis für den Task und einer Umgebung, die Variable AZ_BATCH_CERTIFICATES_DIR, um den Task zum Abfragen von diesem Speicherort angegeben wird gespeichert. Für Zertifikate mit Sichtbarkeit "RemoteUser" wird ein "Zertifikate"-Verzeichnis im Basisverzeichnis des Benutzers erstellt (z. B. /home/ {Benutzername} / Certs) und Zertifikate werden in diesem Verzeichnis platziert.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Clouddienstkonfiguration des Pools. Diese Eigenschaft und VirtualMachineConfiguration schließen sich gegenseitig aus, und eine der Eigenschaften muss angegeben werden. Diese Eigenschaft nicht angegeben wird, wenn der Batch-Konto, dessen PoolAllocationMode-Eigenschaft auf "UserSubscription" festgelegt erstellt wurde.'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Erstellungszeit des Pools.
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.currentDedicatedNodes'
+    name: currentDedicatedNodes
+    fullName: currentDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Anzahl der dedizierten compute-Knoten, die derzeit im Pool.'
+    optional: true
+    syntax:
+      content: 'currentDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.currentLowPriorityNodes'
+    name: currentLowPriorityNodes
+    fullName: currentLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Anzahl der mit niedriger Priorität compute-Knoten, die derzeit im Pool. Serverknoten mit niedriger Priorität die vorzeitig entfernt haben, sind in dieser Anzahl enthalten.'
+    optional: true
+    syntax:
+      content: 'currentLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Anzeigename für den Pool. Der Anzeigename muss nicht eindeutig sein und kann bis zu einer maximalen Länge von 1024 beliebigen Unicode-Zeichen enthalten.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob sollte die Größe des Pools, im Laufe der Zeit automatisch angepasst. Wenn "false" muss mindestens eine der TargetDedicateNodes und TargetLowPriorityNodes angegeben werden. True gibt an, die AutoScaleFormula-Eigenschaft ist erforderlich, und der Pool automatisch angepasst wird, gemäß der Formel. Der Standardwert ist „false“.'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob der Pool eine direkten Kommunikation zwischen Knoten ermöglicht. Dies schränkt ein, auf dem Knoten dem Pool zugewiesen werden können. Die Angabe dieses Werts kann die angeforderte Anzahl von Knoten im Pool zugewiesen werden vermeiden.'
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das ETag des Pools. Dies ist eine nicht transparente Zeichenfolge. Sie können es verwenden, um festzustellen, ob der Pool zwischen Anforderungen geändert wurde. Insbesondere können Sie sein übergeben das ETag beim Aktualisieren eines Pools, um anzugeben, dass die Änderungen wirksam werden soll, nur dann, wenn keine andere Person den Pool in der Zwischenzeit geändert hat.'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Zeichenfolge, die den Pool innerhalb des Kontos eindeutig identifiziert. Die ID kann eine beliebige Kombination von alphanumerischen Zeichen einschließlich Bindestriche und Unterstriche enthalten und darf nicht mehr als 64 Zeichen enthalten. Die ID wird beibehalten und Groß-/Kleinschreibung (d. h., Sie haben keine zwei IDs innerhalb eines Kontos, die sich nur durch Fall unterscheiden).'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uhrzeit des Pools wird von der letzten Änderung. Dies ist der Zeitpunkt der letzten, die bei der die Ebene Pool-Daten, z. B. die Einstellungen TargetDedicatedNodes oder "enableautoscale" geändert wurde. Es ist nicht auf Knotenebene Änderungen wie z. B. eine Zustandsänderung Compute-Knoten zu berücksichtigen.'
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die maximale Anzahl von Tasks, die gleichzeitig auf einem einzelnen Computeknoten im Pool ausgeführt werden können.
+      Der Standardwert ist 1. Der maximale Wert ist der kleinere Wert von 4-Mal die Anzahl der Kerne auf dem VmSize des Pools und 256.
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste von Name / Wert-Paaren, die dem Pool als Metadaten zugeordnet werden soll.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Netzwerkkonfiguration des Pools.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.resizeErrors'
+    name: resizeErrors
+    fullName: resizeErrors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste der Fehler beim Ausführen der letzten Größenänderung des Pools. Diese Eigenschaft wird festgelegt, nur dann, wenn mindestens ein Fehler während der letzten Größenänderung des Pools aufgetreten ist, und nur, wenn der AllocationState des Pools stabilen ist.'
+    optional: true
+    syntax:
+      content: 'resizeErrors?: ResizeError[]'
+      return:
+        type:
+          - '@azure/batch.ResizeError[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Das Timeout für die Zuweisung von Computeknoten zum Pool. Dies ist das Timeout für den letzten Vorgang der Größenänderung. (Die anfängliche Größe bei der Poolerstellung zählt als eine Größenänderung.) Der Standardwert ist 15 Minuten.
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Aufgabe, die auf jedem Computeknoten ausgeführt werden, wie sie dem Pool Beitritt.'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der aktuelle Status des Pools. Folgende Werte sind möglich: ''active'', ''löschen'''
+    optional: true
+    syntax:
+      content: 'state?: PoolState'
+      return:
+        type:
+          - '@azure/batch.PoolState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Zeit, an der der Pool dessen aktuellen Status erlangt hat.'
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nutzung und Ressource Statistiken zum Ressourceneinsatz während der gesamten Lebensdauer des Pools. Diese Eigenschaft wird nur aufgefüllt, wenn die CloudPool, mit einer Expand-Klausel abgerufen wurde, einschließlich des Attributs "Stats"; Andernfalls ist der Wert null. Die Statistiken möglicherweise nicht sofort verfügbar. Der Batch-Dienst führt regelmäßig Rollup der Statistiken. Die typische Verzögerung ist ungefähr 30 Minuten.'
+    optional: true
+    syntax:
+      content: 'stats?: PoolStatistics'
+      return:
+        type:
+          - '@azure/batch.PoolStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die gewünschte Anzahl dedizierter Computeknoten im Pool.
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die gewünschte Anzahl von Computeknoten mit niedriger Priorität im Pool.
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wie die Tasks auf Computeknoten in einem Pool verteilt werden. Wenn nicht angegeben, wird der Standardwert verteilt.'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die URL des Pools.
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Liste der Benutzerkonten auf jedem Knoten im Pool erstellt werden.
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die VM-Konfiguration des Pools. Diese Eigenschaft und CloudServiceConfiguration schließen sich gegenseitig aus, und eine der Eigenschaften muss angegeben werden.'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Größe von virtuellen Computern im Pool. Alle virtuellen Computer in einem Pool haben die gleiche Größe.
+      Informationen zu den verfügbaren Größen virtueller Computer in Pools finden Sie unter Wählen Sie eine VM-Größe für Computeknoten in einem Azure Batch-Pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).
+    optional: true
+    syntax:
+      content: 'vmSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AllocationState'
+    name: AllocationState
+    spec.typeScript:
+      - name: AllocationState
+        fullName: AllocationState
+        uid: '@azure/batch.AllocationState'
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AutoScaleRun'
+    name: AutoScaleRun
+    spec.typeScript:
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: '@azure/batch.AutoScaleRun'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.ResizeError[]'
+    name: 'ResizeError[]'
+    spec.typeScript:
+      - name: ResizeError
+        fullName: ResizeError
+        uid: '@azure/batch.ResizeError'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.PoolState'
+    name: PoolState
+    spec.typeScript:
+      - name: PoolState
+        fullName: PoolState
+        uid: '@azure/batch.PoolState'
+  - uid: '@azure/batch.PoolStatistics'
+    name: PoolStatistics
+    spec.typeScript:
+      - name: PoolStatistics
+        fullName: PoolStatistics
+        uid: '@azure/batch.PoolStatistics'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'
