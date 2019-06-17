@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - '@azure/batch.NodeUpdateUserParameter.expiryTime'
+      - '@azure/batch.NodeUpdateUserParameter.password'
+      - '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die NodeUpdateUserParameter darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zeitpunkt, an dem das Konto ablaufen soll. Wenn nicht angegeben, ist die Standardeinstellung 1 Tag nach der aktuellen Uhrzeit. Für Linux-Computeknoten weist der ExpiryTime eine Genauigkeit bis zu einem Tag auf.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Kennwort des Kontos. Das Kennwort ist erforderlich für Windows-Knoten (die mit der "CloudServiceConfiguration" erstellt oder mit "VirtualMachineConfiguration" mit einem Windows-Image-Verweis erstellt). Für Linux-Computeknoten kann das Kennwort optional zusammen mit der SshPublicKey-Eigenschaft angegeben werden. Wenn nicht angegeben, wird vorhandenes Kennwort entfernt.'
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der öffentliche SSH-Schlüssel, der für die Remoteanmeldung auf den Computeknoten verwendet werden kann. Der öffentliche Schlüssel muss kompatibel mit OpenSSH-Codierung und base-64 codiert werden soll. Diese Eigenschaft kann nur für Linux-Knoten angegeben werden. Wenn dies für einen Windows-Knoten angegeben wird, lehnt der Batch-Dienst die Anforderung; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung). Wenn nicht angegeben, wird vorhandenen öffentlichen SSH-Schlüssel entfernt.'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

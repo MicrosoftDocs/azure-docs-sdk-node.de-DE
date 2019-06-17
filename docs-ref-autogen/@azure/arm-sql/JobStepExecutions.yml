@@ -1,0 +1,397 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.JobStepExecutions'
+    name: JobStepExecutions
+    fullName: JobStepExecutions
+    children:
+      - '@azure/arm-sql.JobStepExecutions.get'
+      - '@azure/arm-sql.JobStepExecutions.get_2'
+      - '@azure/arm-sql.JobStepExecutions.get_1'
+      - '@azure/arm-sql.JobStepExecutions.constructor'
+      - '@azure/arm-sql.JobStepExecutions.listByJobExecution_2'
+      - '@azure/arm-sql.JobStepExecutions.listByJobExecution'
+      - '@azure/arm-sql.JobStepExecutions.listByJobExecution_1'
+      - '@azure/arm-sql.JobStepExecutions.listByJobExecutionNext'
+      - '@azure/arm-sql.JobStepExecutions.listByJobExecutionNext_2'
+      - '@azure/arm-sql.JobStepExecutions.listByJobExecutionNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine JobStepExecutions darstellt.'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.get'
+    name: 'get(string, string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft eine schrittausführung einer auftragsausführung ab.
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die Ressource enthält. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.'
+        - id: serverName
+          type:
+            - string
+          description: Name des Servers
+        - id: jobAgentName
+          type:
+            - string
+          description: Der Name des Auftrags-Agents.
+        - id: jobName
+          type:
+            - string
+          description: 'Der Name des Auftrags, zu erhalten.'
+        - id: jobExecutionId
+          type:
+            - string
+          description: Die eindeutige Id der Ausführung des Auftrags
+        - id: stepName
+          type:
+            - string
+          description: Der Name des Schritts.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.get_2'
+    name: 'get(string, string, string, string, string, string, RequestOptionsBase, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die Ressource enthält. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.'
+        - id: serverName
+          type:
+            - string
+          description: Name des Servers
+        - id: jobAgentName
+          type:
+            - string
+          description: Der Name des Auftrags-Agents.
+        - id: jobName
+          type:
+            - string
+          description: 'Der Name des Auftrags, zu erhalten.'
+        - id: jobExecutionId
+          type:
+            - string
+          description: Die eindeutige Id der Ausführung des Auftrags
+        - id: stepName
+          type:
+            - string
+          description: Der Name des Schritts.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.get_1'
+    name: 'get(string, string, string, string, string, string, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die Ressource enthält. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.'
+        - id: serverName
+          type:
+            - string
+          description: Name des Servers
+        - id: jobAgentName
+          type:
+            - string
+          description: Der Name des Auftrags-Agents.
+        - id: jobName
+          type:
+            - string
+          description: 'Der Name des Auftrags, zu erhalten.'
+        - id: jobExecutionId
+          type:
+            - string
+          description: Die eindeutige Id der Ausführung des Auftrags
+        - id: stepName
+          type:
+            - string
+          description: Der Name des Schritts.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.constructor'
+    name: JobStepExecutions(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine JobStepExecutions.
+    syntax:
+      content: 'new JobStepExecutions(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.listByJobExecution_2'
+    name: 'listByJobExecution(string, string, string, string, string, JobStepExecutionsListByJobExecutionOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: JobStepExecutionsListByJobExecutionOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die Ressource enthält. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.'
+        - id: serverName
+          type:
+            - string
+          description: Name des Servers
+        - id: jobAgentName
+          type:
+            - string
+          description: Der Name des Auftrags-Agents.
+        - id: jobName
+          type:
+            - string
+          description: 'Der Name des Auftrags, zu erhalten.'
+        - id: jobExecutionId
+          type:
+            - string
+          description: Die Id der Ausführung des Auftrags
+        - id: options
+          type:
+            - '@azure/arm-sql.JobStepExecutionsListByJobExecutionOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsListByJobExecutionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.listByJobExecution'
+    name: 'listByJobExecution(string, string, string, string, string, Models.JobStepExecutionsListByJobExecutionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Listet die Ausführungen Schritt, der auftragsausführung eines an.'
+    syntax:
+      content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: Models.JobStepExecutionsListByJobExecutionOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die Ressource enthält. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.'
+        - id: serverName
+          type:
+            - string
+          description: Name des Servers
+        - id: jobAgentName
+          type:
+            - string
+          description: Der Name des Auftrags-Agents.
+        - id: jobName
+          type:
+            - string
+          description: 'Der Name des Auftrags, zu erhalten.'
+        - id: jobExecutionId
+          type:
+            - string
+          description: Die Id der Ausführung des Auftrags
+        - id: options
+          type:
+            - Models.JobStepExecutionsListByJobExecutionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsListByJobExecutionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.listByJobExecution_1'
+    name: 'listByJobExecution(string, string, string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, die die Ressource enthält. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.'
+        - id: serverName
+          type:
+            - string
+          description: Name des Servers
+        - id: jobAgentName
+          type:
+            - string
+          description: Der Name des Auftrags-Agents.
+        - id: jobName
+          type:
+            - string
+          description: 'Der Name des Auftrags, zu erhalten.'
+        - id: jobExecutionId
+          type:
+            - string
+          description: Die Id der Ausführung des Auftrags
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsListByJobExecutionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.listByJobExecutionNext'
+    name: 'listByJobExecutionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Listet die Ausführungen Schritt, der auftragsausführung eines an.'
+    syntax:
+      content: 'function listByJobExecutionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsListByJobExecutionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.listByJobExecutionNext_2'
+    name: 'listByJobExecutionNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecutionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsListByJobExecutionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobStepExecutions.listByJobExecutionNext_1'
+    name: 'listByJobExecutionNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecutionNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.JobStepExecutionsListByJobExecutionNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecution>
+    name: JobExecution>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecution
+        fullName: JobExecution
+        uid: '@azure/arm-sql.JobExecution'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+    name: JobExecutionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecutionListResult
+        fullName: JobExecutionListResult
+        uid: '@azure/arm-sql.JobExecutionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-sql.JobStepExecutionsListByJobExecutionOptionalParams'
+    name: JobStepExecutionsListByJobExecutionOptionalParams
+    spec.typeScript:
+      - name: JobStepExecutionsListByJobExecutionOptionalParams
+        fullName: JobStepExecutionsListByJobExecutionOptionalParams
+        uid: '@azure/arm-sql.JobStepExecutionsListByJobExecutionOptionalParams'

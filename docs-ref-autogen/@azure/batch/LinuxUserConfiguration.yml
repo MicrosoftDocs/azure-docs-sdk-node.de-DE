@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die LinuxUserConfiguration darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die ID für das Benutzerkonto an. Die Uid und Gid-Eigenschaft müssen zusammen oder überhaupt nicht angegeben werden. Wenn nicht angegeben ist die zugrunde liegende Betriebssystem wählt System die Gid.
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der private SSH-Schlüssel für das Benutzerkonto an. Der private Schlüssel muss nicht kennwortgeschützt sein. Der private Schlüssel wird verwendet, für die automatische Konfiguration basierend der Authentifizierung der asymmetrischen Schlüssel für SSH zwischen Knoten in einem Linux-Pool, wenn der Pool EnableInterNodeCommunication-Eigenschaft true ist (es wird ignoriert, wenn EnableInterNodeCommunication auf "false" festgelegt ist). Hierzu werden das Schlüsselpaar in das Verzeichnis des Benutzers ".SSH" zu platzieren. Wenn nicht angegeben wird, kennwortlosen SSH ist nicht konfiguriert, zwischen Knoten (keine Änderung des SSH-Verzeichnis des Benutzers erfolgt).'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Benutzer-ID des Benutzerkontos ein. Die Uid und Gid-Eigenschaft müssen zusammen oder überhaupt nicht angegeben werden. Wenn nicht angegeben ist die zugrunde liegende Betriebssystem wählt System die Uid.
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
