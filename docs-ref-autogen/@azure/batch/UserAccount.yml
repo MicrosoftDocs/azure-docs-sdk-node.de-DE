@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UserAccount'
+    name: UserAccount
+    fullName: UserAccount
+    children:
+      - '@azure/batch.UserAccount.elevationLevel'
+      - '@azure/batch.UserAccount.linuxUserConfiguration'
+      - '@azure/batch.UserAccount.name'
+      - '@azure/batch.UserAccount.password'
+      - '@azure/batch.UserAccount.windowsUserConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die UserAccount darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserAccount.elevationLevel'
+    name: elevationLevel
+    fullName: elevationLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die rechteerweiterungsebene des Benutzerkontos ein. Der Standardwert ist NonAdmin. Folgende Werte sind möglich: "NonAdmin", "Admin"'
+    optional: true
+    syntax:
+      content: 'elevationLevel?: ElevationLevel'
+      return:
+        type:
+          - '@azure/batch.ElevationLevel'
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserAccount.linuxUserConfiguration'
+    name: linuxUserConfiguration
+    fullName: linuxUserConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Linux-spezifische Benutzerkonfiguration für das Benutzerkonto an. Diese Eigenschaft wird ignoriert, wenn für einen Windows-Pool angegeben. Wenn nicht angegeben, wird der Benutzer mit den Standardoptionen erstellt.'
+    optional: true
+    syntax:
+      content: 'linuxUserConfiguration?: LinuxUserConfiguration'
+      return:
+        type:
+          - '@azure/batch.LinuxUserConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserAccount.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Benutzerkontos ein.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserAccount.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Das Kennwort für das Benutzerkonto
+    syntax:
+      content: 'password: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserAccount.windowsUserConfiguration'
+    name: windowsUserConfiguration
+    fullName: windowsUserConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Windows-spezifische Benutzerkonfiguration für das Benutzerkonto an. Diese Eigenschaft kann nur angegeben werden, wenn der Benutzer auf einem Windows-Pool ist. Wenn dies nicht der angegebene und in einem Windows-Pool, wird der Benutzer mit den Standardoptionen erstellt.'
+    optional: true
+    syntax:
+      content: 'windowsUserConfiguration?: WindowsUserConfiguration'
+      return:
+        type:
+          - '@azure/batch.WindowsUserConfiguration'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ElevationLevel'
+    name: ElevationLevel
+    spec.typeScript:
+      - name: ElevationLevel
+        fullName: ElevationLevel
+        uid: '@azure/batch.ElevationLevel'
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    spec.typeScript:
+      - name: LinuxUserConfiguration
+        fullName: LinuxUserConfiguration
+        uid: '@azure/batch.LinuxUserConfiguration'
+  - uid: '@azure/batch.WindowsUserConfiguration'
+    name: WindowsUserConfiguration
+    spec.typeScript:
+      - name: WindowsUserConfiguration
+        fullName: WindowsUserConfiguration
+        uid: '@azure/batch.WindowsUserConfiguration'
