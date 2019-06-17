@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - '@azure/batch.TaskContainerSettings.containerRunOptions'
+      - '@azure/batch.TaskContainerSettings.imageName'
+      - '@azure/batch.TaskContainerSettings.registry'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="5e272-101">Eine Schnittstelle, die TaskContainerSettings darstellt.</span><span class="sxs-lookup"><span data-stu-id="5e272-101">An interface representing TaskContainerSettings.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskContainerSettings.containerRunOptions'
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5e272-102">Zusätzliche Optionen auf den Container erstellen Befehl.</span><span class="sxs-lookup"><span data-stu-id="5e272-102">Additional options to the container create command.</span></span> <span data-ttu-id="5e272-103">Diese zusätzlichen Optionen werden als Argumente an den Befehl "Docker erstellen", zusätzlich zu den vom Batch-Dienst bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="5e272-103">These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskContainerSettings.imageName'
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5e272-104">Das Bild zu verwenden, um den Container zu erstellen, in dem die Aufgabe ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5e272-104">The image to use to create the container in which the task will run.</span></span> <span data-ttu-id="5e272-105">Dies ist die vollständige imagereferenz, wie für "Docker Pull" angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5e272-105">This is the full image reference, as would be specified to "docker pull".</span></span> <span data-ttu-id="5e272-106">Falls kein Tag, als Teil des Namens des Image, das Tag angegeben ist ": aktuelle" wird als Standardwert verwendet.</span><span class="sxs-lookup"><span data-stu-id="5e272-106">If no tag is provided as part of the image name, the tag ":latest" is used as a default.</span></span>'
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskContainerSettings.registry'
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5e272-107">Die private Registrierung, die das containerimage enthält.</span><span class="sxs-lookup"><span data-stu-id="5e272-107">The private registry which contains the container image.</span></span> <span data-ttu-id="5e272-108">Diese Einstellung kann ausgelassen werden, wenn beim Erstellen des Pools bereits bereitgestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="5e272-108">This setting can be omitted if was already provided at pool creation.</span></span>'
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - '@azure/batch.ContainerRegistry'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ContainerRegistry'
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: '@azure/batch.ContainerRegistry'
