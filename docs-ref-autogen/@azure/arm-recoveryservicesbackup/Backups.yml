@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.Backups'
+    name: Backups
+    fullName: Backups
+    children:
+      - '@azure/arm-recoveryservicesbackup.Backups.constructor'
+      - '@azure/arm-recoveryservicesbackup.Backups.trigger'
+      - '@azure/arm-recoveryservicesbackup.Backups.trigger_2'
+      - '@azure/arm-recoveryservicesbackup.Backups.trigger_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="6ba04-101">Klasse, die eine Sicherungen darstellt.</span><span class="sxs-lookup"><span data-stu-id="6ba04-101">Class representing a Backups.</span></span>'
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Backups.constructor'
+    name: Backups(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-102">Erstellen Sie eine Sicherungen.</span><span class="sxs-lookup"><span data-stu-id="6ba04-102">Create a Backups.</span></span>
+    syntax:
+      content: 'new Backups(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            <span data-ttu-id="6ba04-103">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="6ba04-103">Reference to the service client.</span></span>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Backups.trigger'
+    name: 'trigger(string, string, string, string, string, BackupRequestResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="6ba04-104">Trigger-Sicherung für das angegebene gesicherten Element.</span><span class="sxs-lookup"><span data-stu-id="6ba04-104">Triggers backup for specified backed up item.</span></span> <span data-ttu-id="6ba04-105">Dies ist ein asynchroner Vorgang.</span><span class="sxs-lookup"><span data-stu-id="6ba04-105">This is an asynchronous operation.</span></span> <span data-ttu-id="6ba04-106">Um den Status des Vorgangs zu erfahren, rufen Sie GetProtectedItemOperationResult-API.</span><span class="sxs-lookup"><span data-stu-id="6ba04-106">To know the status of the operation, call GetProtectedItemOperationResult API.</span></span>'
+    syntax:
+      content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: BackupRequestResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-107">Der Name des Recovery Services-Tresor.</span><span class="sxs-lookup"><span data-stu-id="6ba04-107">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="6ba04-108">Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.</span><span class="sxs-lookup"><span data-stu-id="6ba04-108">The name of the resource group where the recovery services vault is present.</span></span>'
+        - id: fabricName
+          type:
+            - string
+          description: '<span data-ttu-id="6ba04-109">Fabric-Namen, die das Sicherungselement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6ba04-109">Fabric name associated with the backup item.</span></span>'
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-110">Der Containername ist das Sicherungselement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6ba04-110">Container name associated with the backup item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-111">Sichern des Elements für die Sicherung ausgelöst werden muss.</span><span class="sxs-lookup"><span data-stu-id="6ba04-111">Backup item for which backup needs to be triggered.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.BackupRequestResource'
+          description: <span data-ttu-id="6ba04-112">backup ressourcenanforderung</span><span class="sxs-lookup"><span data-stu-id="6ba04-112">resource backup request</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Backups.trigger_2'
+    name: 'trigger(string, string, string, string, string, BackupRequestResource, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: BackupRequestResource, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-113">Der Name des Recovery Services-Tresor.</span><span class="sxs-lookup"><span data-stu-id="6ba04-113">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="6ba04-114">Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.</span><span class="sxs-lookup"><span data-stu-id="6ba04-114">The name of the resource group where the recovery services vault is present.</span></span>'
+        - id: fabricName
+          type:
+            - string
+          description: '<span data-ttu-id="6ba04-115">Fabric-Namen, die das Sicherungselement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6ba04-115">Fabric name associated with the backup item.</span></span>'
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-116">Der Containername ist das Sicherungselement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6ba04-116">Container name associated with the backup item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-117">Sichern des Elements für die Sicherung ausgelöst werden muss.</span><span class="sxs-lookup"><span data-stu-id="6ba04-117">Backup item for which backup needs to be triggered.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.BackupRequestResource'
+          description: <span data-ttu-id="6ba04-118">backup ressourcenanforderung</span><span class="sxs-lookup"><span data-stu-id="6ba04-118">resource backup request</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6ba04-119">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="6ba04-119">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="6ba04-120">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="6ba04-120">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Backups.trigger_1'
+    name: 'trigger(string, string, string, string, string, BackupRequestResource, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: BackupRequestResource, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-121">Der Name des Recovery Services-Tresor.</span><span class="sxs-lookup"><span data-stu-id="6ba04-121">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="6ba04-122">Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.</span><span class="sxs-lookup"><span data-stu-id="6ba04-122">The name of the resource group where the recovery services vault is present.</span></span>'
+        - id: fabricName
+          type:
+            - string
+          description: '<span data-ttu-id="6ba04-123">Fabric-Namen, die das Sicherungselement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6ba04-123">Fabric name associated with the backup item.</span></span>'
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-124">Der Containername ist das Sicherungselement zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6ba04-124">Container name associated with the backup item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-125">Sichern des Elements für die Sicherung ausgelöst werden muss.</span><span class="sxs-lookup"><span data-stu-id="6ba04-125">Backup item for which backup needs to be triggered.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.BackupRequestResource'
+          description: <span data-ttu-id="6ba04-126">backup ressourcenanforderung</span><span class="sxs-lookup"><span data-stu-id="6ba04-126">resource backup request</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="6ba04-127">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="6ba04-127">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupRequestResource'
+    name: BackupRequestResource
+    spec.typeScript:
+      - name: BackupRequestResource
+        fullName: BackupRequestResource
+        uid: '@azure/arm-recoveryservicesbackup.BackupRequestResource'
