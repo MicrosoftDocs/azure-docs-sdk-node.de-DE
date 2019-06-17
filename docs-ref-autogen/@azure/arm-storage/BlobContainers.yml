@@ -1,0 +1,1489 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.BlobContainers'
+    name: BlobContainers
+    fullName: BlobContainers
+    children:
+      - '@azure/arm-storage.BlobContainers.constructor'
+      - '@azure/arm-storage.BlobContainers.clearLegalHold'
+      - '@azure/arm-storage.BlobContainers.clearLegalHold_2'
+      - '@azure/arm-storage.BlobContainers.clearLegalHold_1'
+      - '@azure/arm-storage.BlobContainers.create_2'
+      - '@azure/arm-storage.BlobContainers.create'
+      - '@azure/arm-storage.BlobContainers.create_1'
+      - '@azure/arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2'
+      - '@azure/arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy'
+      - '@azure/arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1'
+      - '@azure/arm-storage.BlobContainers.deleteImmutabilityPolicy'
+      - '@azure/arm-storage.BlobContainers.deleteImmutabilityPolicy_2'
+      - '@azure/arm-storage.BlobContainers.deleteImmutabilityPolicy_1'
+      - '@azure/arm-storage.BlobContainers.deleteMethod'
+      - '@azure/arm-storage.BlobContainers.deleteMethod_2'
+      - '@azure/arm-storage.BlobContainers.deleteMethod_1'
+      - '@azure/arm-storage.BlobContainers.extendImmutabilityPolicy'
+      - '@azure/arm-storage.BlobContainers.extendImmutabilityPolicy_2'
+      - '@azure/arm-storage.BlobContainers.extendImmutabilityPolicy_1'
+      - '@azure/arm-storage.BlobContainers.get'
+      - '@azure/arm-storage.BlobContainers.get_2'
+      - '@azure/arm-storage.BlobContainers.get_1'
+      - '@azure/arm-storage.BlobContainers.getImmutabilityPolicy_2'
+      - '@azure/arm-storage.BlobContainers.getImmutabilityPolicy'
+      - '@azure/arm-storage.BlobContainers.getImmutabilityPolicy_1'
+      - '@azure/arm-storage.BlobContainers.lease_2'
+      - '@azure/arm-storage.BlobContainers.lease'
+      - '@azure/arm-storage.BlobContainers.lease_1'
+      - '@azure/arm-storage.BlobContainers.list'
+      - '@azure/arm-storage.BlobContainers.list_2'
+      - '@azure/arm-storage.BlobContainers.list_1'
+      - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
+      - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_2'
+      - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_1'
+      - '@azure/arm-storage.BlobContainers.setLegalHold'
+      - '@azure/arm-storage.BlobContainers.setLegalHold_2'
+      - '@azure/arm-storage.BlobContainers.setLegalHold_1'
+      - '@azure/arm-storage.BlobContainers.update_2'
+      - '@azure/arm-storage.BlobContainers.update'
+      - '@azure/arm-storage.BlobContainers.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine BlobContainers darstellt.'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.constructor'
+    name: BlobContainers(StorageManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine BlobContainers.
+    syntax:
+      content: 'new BlobContainers(client: StorageManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-storage.StorageManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.clearLegalHold'
+    name: 'clearLegalHold(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Löscht rechtliche enthalten Tags. Deaktivieren das gleiche oder eine nicht existierende Tag führt einen idempotenten Vorgang. ClearLegalHold löscht nur den angegebenen Tags in der Anforderung.
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: tags
+          type:
+            - 'string[]'
+          description: Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersClearLegalHoldResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.clearLegalHold_2'
+    name: 'clearLegalHold(string, string, string, string[], RequestOptionsBase, ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: RequestOptionsBase, callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: tags
+          type:
+            - 'string[]'
+          description: Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.LegalHold>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersClearLegalHoldResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.clearLegalHold_1'
+    name: 'clearLegalHold(string, string, string, string[], ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: tags
+          type:
+            - 'string[]'
+          description: Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.LegalHold>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersClearLegalHoldResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.create_2'
+    name: 'create(string, string, string, BlobContainersCreateOptionalParams, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: BlobContainersCreateOptionalParams, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - '@azure/arm-storage.BlobContainersCreateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.BlobContainer>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.create'
+    name: 'create(string, string, string, Models.BlobContainersCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt einen neuen Container unter dem angegebenen Konto an, wie durch den Anforderungstext beschrieben. Die containerressource enthält Metadaten und Eigenschaften für den betreffenden Container. Es enthält eine Liste der vom Container enthaltenen Blobs keine.'
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - Models.BlobContainersCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.create_1'
+    name: 'create(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.BlobContainer>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2'
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: 'Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.'
+        - id: options
+          type:
+            - '@azure/arm-storage.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy'
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt oder aktualisiert eine nicht gesperrte unveränderlichkeitsrichtlinie. ETag im If-Match wird berücksichtigt, wenn angegeben, aber nicht für diesen Vorgang erforderlich.'
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: 'Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.'
+        - id: options
+          type:
+            - Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1'
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: 'Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.deleteImmutabilityPolicy'
+    name: 'deleteImmutabilityPolicy(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Bricht eine nicht gesperrte unveränderlichkeitsrichtlinie ab. Die Reaktion des Delete hat ImmutabilityPeriodSinceCreationInDays auf 0 festgelegt. ETag im If-Match ist für diesen Vorgang erforderlich.
+      Löschen eine gesperrte unveränderlichkeitsrichtlinie ist nicht zulässig, nur so ist zum Löschen des Containers nach dem Löschen aller Blobs im Container.
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.deleteImmutabilityPolicy_2'
+    name: 'deleteImmutabilityPolicy(string, string, string, string, RequestOptionsBase, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.deleteImmutabilityPolicy_1'
+    name: 'deleteImmutabilityPolicy(string, string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Löscht den angegebenen Container ein Konto.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.extendImmutabilityPolicy'
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erweitert die ImmutabilityPeriodSinceCreationInDays von einer gesperrten ImmutabilityPolicy an. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig, wird diese Aktion werden. ETag im If-Match ist für diesen Vorgang erforderlich.'
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: 'Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.extendImmutabilityPolicy_2'
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, RequestOptionsBase, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: RequestOptionsBase, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: 'Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.extendImmutabilityPolicy_1'
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: 'Der Zeitraum, für die Blobs im Container seit der richtlinienerstellung, in Tagen Unveränderlichkeit.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft die Eigenschaften von einem angegebenen Container ab.
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersGetResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: RequestOptionsBase, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.BlobContainer>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersGetResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.get_1'
+    name: 'get(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.BlobContainer>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersGetResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.getImmutabilityPolicy_2'
+    name: 'getImmutabilityPolicy(string, string, string, BlobContainersGetImmutabilityPolicyOptionalParams, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: BlobContainersGetImmutabilityPolicyOptionalParams, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - '@azure/arm-storage.BlobContainersGetImmutabilityPolicyOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.getImmutabilityPolicy'
+    name: 'getImmutabilityPolicy(string, string, string, Models.BlobContainersGetImmutabilityPolicyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft die vorhandenen unveränderlichkeitsrichtlinie zusammen mit dem entsprechenden ETag-Antwortheader und den Text ab.
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersGetImmutabilityPolicyOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - Models.BlobContainersGetImmutabilityPolicyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.getImmutabilityPolicy_1'
+    name: 'getImmutabilityPolicy(string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.lease_2'
+    name: 'lease(string, string, string, BlobContainersLeaseOptionalParams, ServiceCallback<LeaseContainerResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options: BlobContainersLeaseOptionalParams, callback: ServiceCallback<LeaseContainerResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - '@azure/arm-storage.BlobContainersLeaseOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersLeaseResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.lease'
+    name: 'lease(string, string, string, Models.BlobContainersLeaseOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Der Vorgang Lease Container erstellt und verwaltet eine Sperre für einen Container für die Delete-Vorgänge. Die Sperrdauer kann 15 bis 60 Sekunden betragen oder unendlich sein.
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersLeaseOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - Models.BlobContainersLeaseOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersLeaseResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.lease_1'
+    name: 'lease(string, string, string, ServiceCallback<LeaseContainerResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<LeaseContainerResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersLeaseResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list'
+    name: 'list(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Listet alle Container, und ein Präfix wie die Datenebene wird nicht unterstützt. Richtlinien für Softwareeinschränkung gibt auch noch heute keine Fortsetzungstoken zurück.'
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list_2'
+    name: 'list(string, string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list_1'
+    name: 'list(string, string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
+    name: 'lockImmutabilityPolicy(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Legt die immutabilitypolicy für zu gesperrten Zustand befindet. Die einzige Aktion, die für eine Richtlinie gesperrt zulässig ist ExtendImmutabilityPolicy Aktion. ETag im If-Match ist für diesen Vorgang erforderlich.'
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_2'
+    name: 'lockImmutabilityPolicy(string, string, string, string, RequestOptionsBase, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_1'
+    name: 'lockImmutabilityPolicy(string, string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: ifMatch
+          type:
+            - string
+          description: 'Die entitätszustandsversion (ETag) die unveränderlichkeitsrichtlinie für aktualisieren. Der Wert "*" kann verwendet werden, um die Operation angewendet werden, nur dann, wenn die unveränderlichkeitsrichtlinie für bereits vorhanden ist. Wenn nicht angegeben, wird dieser Vorgang immer angewendet werden.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.setLegalHold'
+    name: 'setLegalHold(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Zulässige Mengen enthalten Tags. Die gleichen tagergebnisse festlegen in einen idempotenten Vorgang. SetLegalHold folgt eine Muster anfügen "und" out nicht klar die vorhandenen Tags, die nicht in der Anforderung angegeben werden.'
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: tags
+          type:
+            - 'string[]'
+          description: Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersSetLegalHoldResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.setLegalHold_2'
+    name: 'setLegalHold(string, string, string, string[], RequestOptionsBase, ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: RequestOptionsBase, callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: tags
+          type:
+            - 'string[]'
+          description: Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.LegalHold>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersSetLegalHoldResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.setLegalHold_1'
+    name: 'setLegalHold(string, string, string, string[], ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: tags
+          type:
+            - 'string[]'
+          description: Jedes Tag muss zwischen 3 und 23 alphanumerische Zeichen und ist in Kleinbuchstaben an Richtlinien für Softwareeinschränkung normalisiert.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.LegalHold>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersSetLegalHoldResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.update_2'
+    name: 'update(string, string, string, BlobContainersUpdateOptionalParams, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: BlobContainersUpdateOptionalParams, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - '@azure/arm-storage.BlobContainersUpdateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.BlobContainer>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.update'
+    name: 'update(string, string, string, Models.BlobContainersUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Aktualisiert die Containereigenschaften im Anforderungstext angegeben. Eigenschaften, die nicht in der Anforderung erwähnt werden nicht geändert werden. Update schlägt fehl, wenn der angegebene Container nicht bereits vorhanden ist.'
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: options
+          type:
+            - Models.BlobContainersUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.update_1'
+    name: 'update(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: containerName
+          type:
+            - string
+          description: 'Der Name des Blob-Containers in das angegebene Speicherkonto an. BLOB-Containernamen müssen zwischen 3 und 63 Zeichen lang sein und Zahlen, Kleinbuchstaben und Bindestriche (-) nur. Jedem Bindestrich (-) muss unmittelbar vorangestellt und gefolgt von einem Buchstaben oder einer Zahl.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.BlobContainer>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BlobContainersUpdateResponse>
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.StorageManagementClientContext'
+    name: StorageManagementClientContext
+    spec.typeScript:
+      - name: StorageManagementClientContext
+        fullName: StorageManagementClientContext
+        uid: '@azure/arm-storage.StorageManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-storage.LegalHold>
+    name: LegalHold>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: '@azure/arm-storage.LegalHold'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.BlobContainer>
+    name: BlobContainer>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: '@azure/arm-storage.BlobContainer'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersCreateOptionalParams'
+    name: BlobContainersCreateOptionalParams
+    spec.typeScript:
+      - name: BlobContainersCreateOptionalParams
+        fullName: BlobContainersCreateOptionalParams
+        uid: '@azure/arm-storage.BlobContainersCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
+    name: ImmutabilityPolicy>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: '@azure/arm-storage.ImmutabilityPolicy'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams'
+    name: BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams
+    spec.typeScript:
+      - name: BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams
+        fullName: BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams
+        uid: '@azure/arm-storage.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams'
+  - uid: '@azure/arm-storage.BlobContainersGetImmutabilityPolicyOptionalParams'
+    name: BlobContainersGetImmutabilityPolicyOptionalParams
+    spec.typeScript:
+      - name: BlobContainersGetImmutabilityPolicyOptionalParams
+        fullName: BlobContainersGetImmutabilityPolicyOptionalParams
+        uid: '@azure/arm-storage.BlobContainersGetImmutabilityPolicyOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
+    name: LeaseContainerResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: '@azure/arm-storage.LeaseContainerResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersLeaseOptionalParams'
+    name: BlobContainersLeaseOptionalParams
+    spec.typeScript:
+      - name: BlobContainersLeaseOptionalParams
+        fullName: BlobContainersLeaseOptionalParams
+        uid: '@azure/arm-storage.BlobContainersLeaseOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.ListContainerItems>
+    name: ListContainerItems>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: '@azure/arm-storage.ListContainerItems'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersUpdateOptionalParams'
+    name: BlobContainersUpdateOptionalParams
+    spec.typeScript:
+      - name: BlobContainersUpdateOptionalParams
+        fullName: BlobContainersUpdateOptionalParams
+        uid: '@azure/arm-storage.BlobContainersUpdateOptionalParams'

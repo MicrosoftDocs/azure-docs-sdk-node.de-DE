@@ -1,0 +1,290 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudJobSchedule'
+    name: CloudJobSchedule
+    fullName: CloudJobSchedule
+    children:
+      - '@azure/batch.CloudJobSchedule.creationTime'
+      - '@azure/batch.CloudJobSchedule.displayName'
+      - '@azure/batch.CloudJobSchedule.eTag'
+      - '@azure/batch.CloudJobSchedule.executionInfo'
+      - '@azure/batch.CloudJobSchedule.id'
+      - '@azure/batch.CloudJobSchedule.jobSpecification'
+      - '@azure/batch.CloudJobSchedule.lastModified'
+      - '@azure/batch.CloudJobSchedule.metadata'
+      - '@azure/batch.CloudJobSchedule.previousState'
+      - '@azure/batch.CloudJobSchedule.previousStateTransitionTime'
+      - '@azure/batch.CloudJobSchedule.schedule'
+      - '@azure/batch.CloudJobSchedule.state'
+      - '@azure/batch.CloudJobSchedule.stateTransitionTime'
+      - '@azure/batch.CloudJobSchedule.stats'
+      - '@azure/batch.CloudJobSchedule.url'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die CloudJobSchedule darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Zeitpunkt der Erstellung des Auftragszeitplans.
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Anzeigename für den Zeitplan.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das ETag des Auftragszeitplans. Dies ist eine nicht transparente Zeichenfolge. Sie können es verwenden, um festzustellen, ob der Auftragszeitplan zwischen Anforderungen geändert wurde. Insbesondere können Sie sein übergeben das ETag mit einer Update-Auftragszeitplan-Anforderung, um anzugeben, dass die Änderungen wirksam werden soll, nur dann, wenn keine andere Person den Zeitplan in der Zwischenzeit geändert hat.'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informationen zu Aufträgen, die wurden und wird in diesem Zeitplan ausgeführt werden.'
+    optional: true
+    syntax:
+      content: 'executionInfo?: JobScheduleExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.JobScheduleExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Zeichenfolge, die den Auftragszeitplan innerhalb des Kontos eindeutig identifiziert.'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.jobSpecification'
+    name: jobSpecification
+    fullName: jobSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Details der Aufträge für diesen Zeitplan erstellt werden.
+    optional: true
+    syntax:
+      content: 'jobSpecification?: JobSpecification'
+      return:
+        type:
+          - '@azure/batch.JobSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uhrzeit des Auftragszeitplans wird von der letzten Änderung. Dies ist der Zeitpunkt der letzten, die bei der die Ebene "Schedule"-Daten, z. B. die Auftragsinformationen Spezifikation oder Wiederholung geändert wurde. Es ist nicht auf Auftragsebene-Änderungen, wie neue Aufträge, die erstellt wird oder eine Zustandsänderung Aufträge berücksichtigen.'
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste von Name / Wert-Paaren, die den Zeitplan als Metadaten zugeordnet werden soll. Der Batch-Dienst weist keine Bedeutung nicht in Metadaten zu. Es ist ausschließlich für die Verwendung von Benutzercode.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der vorherige Status des Auftragszeitplans. Diese Eigenschaft ist nicht vorhanden, wenn der Auftragszeitplan in seinen anfänglichen aktiven Status befindet. Folgende Werte sind möglich: "aktiv", "abgeschlossen", "disabled", "Beenden", "löschen"'
+    optional: true
+    syntax:
+      content: 'previousState?: JobScheduleState'
+      return:
+        type:
+          - '@azure/batch.JobScheduleState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Zeit, zu der der Auftragszeitplan den vorherigen Zustand angenommen hat. Diese Eigenschaft ist nicht vorhanden, wenn der Auftragszeitplan in seinen anfänglichen aktiven Status befindet.'
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.schedule'
+    name: schedule
+    fullName: schedule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zeitplan, nach dem Aufträge erstellt werden.'
+    optional: true
+    syntax:
+      content: 'schedule?: Schedule'
+      return:
+        type:
+          - '@azure/batch.Schedule'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der aktuelle Status des Auftragszeitplans. Folgende Werte sind möglich: "aktiv", "abgeschlossen", "disabled", "Beenden", "löschen"'
+    optional: true
+    syntax:
+      content: 'state?: JobScheduleState'
+      return:
+        type:
+          - '@azure/batch.JobScheduleState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Zeit, zu der der Auftragszeitplan den aktuellen Status erlangt hat.'
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Lebensdauer Nutzung Statistik für den Auftragszeitplan. Die Statistiken möglicherweise nicht sofort verfügbar. Der Batch-Dienst führt regelmäßig Rollup der Statistiken. Die typische Verzögerung ist ungefähr 30 Minuten.
+    optional: true
+    syntax:
+      content: 'stats?: JobScheduleStatistics'
+      return:
+        type:
+          - '@azure/batch.JobScheduleStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJobSchedule.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die URL des Auftragszeitplans.
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    spec.typeScript:
+      - name: JobScheduleExecutionInformation
+        fullName: JobScheduleExecutionInformation
+        uid: '@azure/batch.JobScheduleExecutionInformation'
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    spec.typeScript:
+      - name: JobSpecification
+        fullName: JobSpecification
+        uid: '@azure/batch.JobSpecification'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobScheduleState'
+    name: JobScheduleState
+    spec.typeScript:
+      - name: JobScheduleState
+        fullName: JobScheduleState
+        uid: '@azure/batch.JobScheduleState'
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    spec.typeScript:
+      - name: Schedule
+        fullName: Schedule
+        uid: '@azure/batch.Schedule'
+  - uid: '@azure/batch.JobScheduleStatistics'
+    name: JobScheduleStatistics
+    spec.typeScript:
+      - name: JobScheduleStatistics
+        fullName: JobScheduleStatistics
+        uid: '@azure/batch.JobScheduleStatistics'
