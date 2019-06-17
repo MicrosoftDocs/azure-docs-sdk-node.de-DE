@@ -1,0 +1,1213 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.StorageAccounts'
+    name: StorageAccounts
+    fullName: StorageAccounts
+    children:
+      - '@azure/arm-storage.StorageAccounts.beginCreate'
+      - '@azure/arm-storage.StorageAccounts.beginFailover'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+      - '@azure/arm-storage.StorageAccounts.create'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+      - '@azure/arm-storage.StorageAccounts.failover'
+      - '@azure/arm-storage.StorageAccounts.getProperties'
+      - '@azure/arm-storage.StorageAccounts.getProperties_1'
+      - '@azure/arm-storage.StorageAccounts.getProperties_2'
+      - '@azure/arm-storage.StorageAccounts.list'
+      - '@azure/arm-storage.StorageAccounts.list_2'
+      - '@azure/arm-storage.StorageAccounts.list_1'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+      - '@azure/arm-storage.StorageAccounts.listKeys'
+      - '@azure/arm-storage.StorageAccounts.listKeys_2'
+      - '@azure/arm-storage.StorageAccounts.listKeys_1'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+      - '@azure/arm-storage.StorageAccounts.constructor'
+      - '@azure/arm-storage.StorageAccounts.update'
+      - '@azure/arm-storage.StorageAccounts.update_2'
+      - '@azure/arm-storage.StorageAccounts.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine StorageAccounts darstellt.'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginCreate'
+    name: 'beginCreate(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt asynchron ein neues Speicherkonto mit den angegebenen Parametern ein. Wenn bereits ein Konto erstellt wird, und eine nachfolgende erstellungsanforderung mit verschiedenen Eigenschaften ausgegeben wird, werden die Kontoeigenschaften aktualisiert. Wenn bereits ein Konto erstellt wird, und eine nachfolgende Anforderung von erstellungs- oder Aktualisierungsvorgang mit dem genau gleichen Satz von Eigenschaften ausgegeben wird, wird die Anforderung erfolgreich ausgeführt.'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: Die Parameter für das erstellte Konto bereitstellen.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginFailover'
+    name: 'beginFailover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Failover-Anforderung kann für ein Speicherkonto im Fall von Verfügbarkeitsproblemen ausgelöst werden. Das Failover tritt auf, das Speicherkonto des primären Clusters in sekundären Cluster für RA-GRS-Konten aus. Der sekundäre Cluster wird nach einem Failover zur primären Datenbank.'
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+    name: 'checkNameAvailability(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Überprüft, ob der Name des Speicherkontos ist gültig und nicht bereits verwendet.'
+    syntax:
+      content: 'function checkNameAvailability(name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Der Name des Speicherkontos.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, options: RequestOptionsBase, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Der Name des Speicherkontos.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Der Name des Speicherkontos.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.create'
+    name: 'create(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt asynchron ein neues Speicherkonto mit den angegebenen Parametern ein. Wenn bereits ein Konto erstellt wird, und eine nachfolgende erstellungsanforderung mit verschiedenen Eigenschaften ausgegeben wird, werden die Kontoeigenschaften aktualisiert. Wenn bereits ein Konto erstellt wird, und eine nachfolgende Anforderung von erstellungs- oder Aktualisierungsvorgang mit dem genau gleichen Satz von Eigenschaften ausgegeben wird, wird die Anforderung erfolgreich ausgeführt.'
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: Die Parameter für das erstellte Konto bereitstellen.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Löscht ein Speicherkonto in Microsoft Azure.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.failover'
+    name: 'failover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Failover-Anforderung kann für ein Speicherkonto im Fall von Verfügbarkeitsproblemen ausgelöst werden. Das Failover tritt auf, das Speicherkonto des primären Clusters in sekundären Cluster für RA-GRS-Konten aus. Der sekundäre Cluster wird nach einem Failover zur primären Datenbank.'
+    syntax:
+      content: 'function failover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties'
+    name: 'getProperties(string, string, Models.StorageAccountsGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Gibt die Eigenschaften für das angegebene Speicherkonto an, einschließlich, aber nicht beschränkt auf Name, SKU-Namen, Speicherort und Kontostatus zurück. Die ListKeys-Vorgang sollte verwendet werden, um die Speicherkonto-Zugriffsschlüssel.'
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options?: Models.StorageAccountsGetPropertiesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - Models.StorageAccountsGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_2'
+    name: 'getProperties(string, string, StorageAccountsGetPropertiesOptionalParams, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options: StorageAccountsGetPropertiesOptionalParams, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Listet alle Speicherkonten im Abonnement verfügbar sind. Beachten Sie, dass die speicherkontoschlüssel nicht zurückgegeben werden. Verwenden Sie die ListKeys-Vorgang für diesen ein.'
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_1'
+    name: list(ServiceCallback<StorageAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS'
+    name: 'listAccountSAS(string, string, AccountSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Auflisten von SAS-Anmeldeinformationen eines Speicherkontos.
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: Die Parameter zum Auflisten von SAS-Anmeldeinformationen für das Speicherkonto angeben.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+    name: 'listAccountSAS(string, string, AccountSasParameters, RequestOptionsBase, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: Die Parameter zum Auflisten von SAS-Anmeldeinformationen für das Speicherkonto angeben.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+    name: 'listAccountSAS(string, string, AccountSasParameters, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: Die Parameter zum Auflisten von SAS-Anmeldeinformationen für das Speicherkonto angeben.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Listet alle Speicherkonten zur Verfügung, unter der angegebenen Ressourcengruppe. Beachten Sie, dass die speicherkontoschlüssel nicht zurückgegeben werden. Verwenden Sie die ListKeys-Vorgang für diesen ein.'
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys'
+    name: 'listKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Listet die Zugriffsschlüssel für das angegebene Speicherkonto an.
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_2'
+    name: 'listKeys(string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_1'
+    name: 'listKeys(string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Listen Sie die Dienst-SAS-Anmeldeinformationen einer bestimmten Ressource.
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: Die Parameter zum Auflisten von Dienst-SAS-Anmeldeinformationen angeben.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, RequestOptionsBase, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: Die Parameter zum Auflisten von Dienst-SAS-Anmeldeinformationen angeben.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: Die Parameter zum Auflisten von Dienst-SAS-Anmeldeinformationen angeben.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey'
+    name: 'regenerateKey(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Generiert erneut einen der Zugriffsschlüssel für das angegebene Speicherkonto an.
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: keyName
+          type:
+            - string
+          description: 'Der Name der Speicherschlüssel, die möchten, werden erneut generiert, mögliche Werte sind key1, key2.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+    name: 'regenerateKey(string, string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: keyName
+          type:
+            - string
+          description: 'Der Name der Speicherschlüssel, die möchten, werden erneut generiert, mögliche Werte sind key1, key2.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+    name: 'regenerateKey(string, string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: keyName
+          type:
+            - string
+          description: 'Der Name der Speicherschlüssel, die möchten, werden erneut generiert, mögliche Werte sind key1, key2.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+    name: 'revokeUserDelegationKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Widerrufen Sie die Delegierung Benutzerschlüssel.
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+    name: 'revokeUserDelegationKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+    name: 'revokeUserDelegationKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.constructor'
+    name: StorageAccounts(StorageManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine StorageAccounts.
+    syntax:
+      content: 'new StorageAccounts(client: StorageManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-storage.StorageManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update'
+    name: 'update(string, string, StorageAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Der Update-Vorgang kann zum Aktualisieren der SKU, Verschlüsselung, Zugriffsebene oder Tags für ein Speicherkonto verwendet werden. Sie können auch verwendet werden, um das Konto zu einer benutzerdefinierten Domäne zuordnen. Nur eine benutzerdefinierte Domäne wird pro Speicherkonto; unterstützt. die Ersetzung/Änderung der benutzerdefinierten Domäne wird nicht unterstützt. Um einer alten benutzerdefinierten Domäne zu ersetzen, muss der alte Wert gelöscht/aufgehoben sein, bevor ein neuer Wert festgelegt werden kann. Das Update aus mehreren Eigenschaften wird unterstützt. Dieser Aufruf ändert sich nicht auf die Speicherschlüssel für das Konto aus. Wenn Sie den Schlüssel des Speicherkontos ändern möchten, verwenden Sie den Schlüssel erneut generieren-Vorgang. Der Speicherort und den Namen des Speicherkontos können nicht nach der Erstellung nicht geändert werden.'
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: Die Parameter für die aktualisierte Konto angeben.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_2'
+    name: 'update(string, string, StorageAccountUpdateParameters, RequestOptionsBase, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: Die Parameter für die aktualisierte Konto angeben.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_1'
+    name: 'update(string, string, StorageAccountUpdateParameters, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im Abonnement des Benutzers. Der Name ist Groß-/Kleinschreibung.
+        - id: accountName
+          type:
+            - string
+          description: 'Der Name des Speicherkontos, das in der angegebenen Ressourcengruppe aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten.'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: Die Parameter für die aktualisierte Konto angeben.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.StorageManagementClientContext'
+    name: StorageManagementClientContext
+    spec.typeScript:
+      - name: StorageManagementClientContext
+        fullName: StorageManagementClientContext
+        uid: '@azure/arm-storage.StorageManagementClientContext'
+  - uid: '@azure/arm-storage.StorageAccountCreateParameters'
+    name: StorageAccountCreateParameters
+    spec.typeScript:
+      - name: StorageAccountCreateParameters
+        fullName: StorageAccountCreateParameters
+        uid: '@azure/arm-storage.StorageAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+    name: CheckNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityResult
+        fullName: CheckNameAvailabilityResult
+        uid: '@azure/arm-storage.CheckNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccount>
+    name: StorageAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccount
+        fullName: StorageAccount
+        uid: '@azure/arm-storage.StorageAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+    name: StorageAccountsGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: StorageAccountsGetPropertiesOptionalParams
+        fullName: StorageAccountsGetPropertiesOptionalParams
+        uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+    name: StorageAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListResult
+        fullName: StorageAccountListResult
+        uid: '@azure/arm-storage.StorageAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.AccountSasParameters'
+    name: AccountSasParameters
+    spec.typeScript:
+      - name: AccountSasParameters
+        fullName: AccountSasParameters
+        uid: '@azure/arm-storage.AccountSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+    name: ListAccountSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListAccountSasResponse
+        fullName: ListAccountSasResponse
+        uid: '@azure/arm-storage.ListAccountSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+    name: StorageAccountListKeysResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListKeysResult
+        fullName: StorageAccountListKeysResult
+        uid: '@azure/arm-storage.StorageAccountListKeysResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.ServiceSasParameters'
+    name: ServiceSasParameters
+    spec.typeScript:
+      - name: ServiceSasParameters
+        fullName: ServiceSasParameters
+        uid: '@azure/arm-storage.ServiceSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+    name: ListServiceSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListServiceSasResponse
+        fullName: ListServiceSasResponse
+        uid: '@azure/arm-storage.ListServiceSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters'
+    name: StorageAccountUpdateParameters
+    spec.typeScript:
+      - name: StorageAccountUpdateParameters
+        fullName: StorageAccountUpdateParameters
+        uid: '@azure/arm-storage.StorageAccountUpdateParameters'
