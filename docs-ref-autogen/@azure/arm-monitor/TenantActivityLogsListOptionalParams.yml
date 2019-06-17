@@ -1,0 +1,127 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams'
+    name: TenantActivityLogsListOptionalParams
+    fullName: TenantActivityLogsListOptionalParams
+    children:
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.abortSignal'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.customHeaders'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.filter'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onDownloadProgress'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onUploadProgress'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.select'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.timeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: Optionale Parameter.
+    extends:
+      name: RequestOptionsBase
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Das Signal der Abbruch von Anforderungen verwendet werden kann.
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - AbortSignalLike
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.customHeaders'
+    name: customHeaders
+    fullName: customHeaders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Object} [CustomHeaders] Benutzerdefinierte benutzerdefinierten-Anforderungsheadern, die angewendet werden, bevor die Anforderung gesendet wird.'
+    optional: true
+    syntax:
+      content: 'customHeaders?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Verringert die Menge der gesammelten Daten. <br>Die **$filter** ist sehr begrenzt und gestattet nur die folgenden Muster.<br>-Ereignisse auflisten, die für eine Ressourcengruppe: $filter = EventTimestamp ge "<Start
+      Time>'und EventTimestamp le'<End Time>" und EventChannels Eq "Admin, Operation" und ResourceGroupName Eq '<ResourceGroupName>".<br>-Liste von Ereignissen für Ressource: $filter = EventTimestamp ge "<Start Time>'und EventTimestamp le'<End Time>" und EventChannels Eq "Admin, Operation" und ResourceUri-Eq '<ResourceURI>".<br>-Ereignisse auflisten, die für ein Abonnement: $filter = EventTimestamp ge "<Start Time>'und EventTimestamp le'<End Time>" und EventChannels Eq "Admin, Operation".<br>-Ereignisse auflisten, die für einen Ressourcenanbieter: $filter = EventTimestamp ge "<Start Time>'und EventTimestamp le'<End Time>" und EventChannels Eq "Admin, Operation" und ResourceProvider-Eq '<ResourceProviderName>".<br>-Auflisten von Ereignissen für eine Korrelations-Id: api-Version = 2014-04-01 & $filter = EventTimestamp ge "2014-07-16T04:36:37.6407898Z" und EventTimestamp le "2014-07-20T04:36:37.6407898Z" und EventChannels Eq "Admin, Operation" und CorrelationId Eq '<CorrelationID>'.<br>**HINWEIS**: Andere Syntax ist nicht zulässig.
+    optional: true
+    syntax:
+      content: 'filter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Rückruf, das auf den Fortschritt des Downloads ausgelöst wird.'
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Rückruf, das ausgelöst, auf den Fortschritt des Dateiuploads wird.'
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.select'
+    name: select
+    fullName: select
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wird verwendet, um Ereignisse mit nur den angegebenen Eigenschaften abzurufen.<br>Die **$select** Argument ist eine durch Trennzeichen getrennte Liste von Eigenschaftennamen, die zurückgegeben werden. Mögliche Werte sind: *Autorisierung*, *Ansprüche*, *CorrelationId*, *Beschreibung*, *EventDataId*, *EventName*, *EventTimestamp*, *HttpRequest*, *Ebene*, *"operationId"*, *OperationName*, *Eigenschaften*, *ResourceGroupName*, *der resourceprovidername darf*, * ResourceId*, *Status*, *SubmissionTimestamp*, *Unterstatus*, *SubscriptionId*'
+    optional: true
+    syntax:
+      content: 'select?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.timeout'
+    name: timeout
+    fullName: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Bevor Sie automatisch beendet wird, ist die Anzahl der Millisekunden, die eine Anforderung dauert.'
+    optional: true
+    syntax:
+      content: 'timeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-monitor'
