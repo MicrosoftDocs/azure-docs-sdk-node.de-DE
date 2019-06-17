@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt die Einstellungen für die bei der Analyse eines Videos verwendet werden, um alle vorhanden Gesichter erkennen.'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.FaceDetectorPreset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gibt die maximale Auflösung, an der Ihr Video analysiert wird. Das Standardverhalten ist "SourceResolution", die die Eingabe mit der ursprünglichen Auflösung Wenn analysiert video behalten wird.
+      Mithilfe von "StandardDefinition" die Größe wird eingabevideos-Standarddefinition und gleichzeitig die entsprechenden Seitenverhältnisse beizubehalten. Nur wird ändern, wenn das Video einer höheren Auflösung ist. Beispielsweise würde eine 1920 x 1080-Eingabe auf 640 x 360 vor der Verarbeitung skaliert werden. Wechsel zu "StandardDefinition" wird die Zeit zu verkürzen, hochauflösende Prozess video. Die Kosten für die Verwendung dieser Komponente kann auch verringern (finden Sie unter https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics Einzelheiten).
+      Allerdings Flächen aus, die am Ende zu klein ist, in dem Video angepasst werden möglicherweise nicht erkannt. Mögliche Werte sind: 'SourceResolution', 'StandardDefinition'
+    optional: true
+    syntax:
+      content: 'resolution?: AnalysisResolution'
+      return:
+        type:
+          - '@azure/arm-mediaservices.AnalysisResolution'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.AnalysisResolution'
+    name: AnalysisResolution
+    spec.typeScript:
+      - name: AnalysisResolution
+        fullName: AnalysisResolution
+        uid: '@azure/arm-mediaservices.AnalysisResolution'

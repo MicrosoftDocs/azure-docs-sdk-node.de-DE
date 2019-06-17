@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset'
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.audioLanguage'
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.insightsToExtract'
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.odatatype'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Ein video Analyzer Voreinstellung, die Einblicke (Extraktion umfangreicher Metadaten) von Audio und Video extrahiert und gibt eine JSON-Format-Datei.'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.audioLanguage'
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Sprache für die audio-Nutzlast in der Eingabe mit dem BCP-47-Format des "-Tag Sprache / Region" (z. B.: "de-de").  Die Liste der unterstützten Sprachen sind ("En-US" und "En-GB") Spanisch ("es-ES" und "es-MX"), Französisch ("fr-FR"), Italienisch ("It-IT''), Japanisch ("ja-JP"), Portugiesisch ("pt-BR"), Chinesisch ("Zh-CN"), Deutsch, Englisch, (''de-DE"), Arabisch ("Ar-EG" und "Ar-SY") Russisch (" ru-RU "), Hindi (''hi-IN") und Koreanisch ("Ko-KR"). Wenn Sie die Sprache Ihres Inhalts kennen, empfiehlt es sich, dass Sie es angeben. Wenn die Sprache nicht angegeben oder auf NULL festgelegt ist, wählt die automatische Spracherkennung die erste erkannte Sprache aus und führt die Verarbeitung für die ausgewählte Sprache für die Länge der Datei durch. Diese Erkennung Sprachfunktion unterstützt derzeit, Englisch, Chinesisch, Französisch, Deutsch, Italienisch, Japanisch, Spanisch, Russisch und Portugiesisch. Sie unterstützt derzeit keine dynamische Umschaltung zwischen Sprachen, nachdem die erste Sprache erkannt wurde. Die automatische Erkennung funktioniert am besten mit Audioaufnahmen mit deutlich wahrnehmbaren Spracheingabe. Wenn die automatische Erkennung nicht die Sprache finden kann, würde Aufzeichnung fallback auf "de-de"."'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.insightsToExtract'
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Typ des Insights extrahiert werden soll. Wenn nicht festgelegt wird, klicken Sie dann basierend auf den Inhalt, den der Typ wird ausgewählt.  Wenn der Inhalt audio, ist erst dann nur Audioinformationen extrahiert werden und nur video befindet. Mögliche Werte sind: ''AudioInsightsOnly'', ''VideoInsightsOnly'', ''AllInsights'''
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: InsightsType'
+      return:
+        type:
+          - '@azure/arm-mediaservices.InsightsType'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.VideoAnalyzerPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.VideoAnalyzerPreset"'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.InsightsType'
+    name: InsightsType
+    spec.typeScript:
+      - name: InsightsType
+        fullName: InsightsType
+        uid: '@azure/arm-mediaservices.InsightsType'

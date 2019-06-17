@@ -1,0 +1,903 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-privatedns.RecordSets'
+    name: RecordSets
+    fullName: RecordSets
+    children:
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate'
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate_2'
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate_1'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod_2'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod_1'
+      - '@azure/arm-privatedns.RecordSets.get'
+      - '@azure/arm-privatedns.RecordSets.get_2'
+      - '@azure/arm-privatedns.RecordSets.get_1'
+      - '@azure/arm-privatedns.RecordSets.list'
+      - '@azure/arm-privatedns.RecordSets.list_2'
+      - '@azure/arm-privatedns.RecordSets.list_1'
+      - '@azure/arm-privatedns.RecordSets.listByType'
+      - '@azure/arm-privatedns.RecordSets.listByType_2'
+      - '@azure/arm-privatedns.RecordSets.listByType_1'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext_2'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext_1'
+      - '@azure/arm-privatedns.RecordSets.listNext'
+      - '@azure/arm-privatedns.RecordSets.listNext_2'
+      - '@azure/arm-privatedns.RecordSets.listNext_1'
+      - '@azure/arm-privatedns.RecordSets.constructor'
+      - '@azure/arm-privatedns.RecordSets.update'
+      - '@azure/arm-privatedns.RecordSets.update_2'
+      - '@azure/arm-privatedns.RecordSets.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine RecordSets darstellt.'
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, Models.RecordSetsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Erstellt oder aktualisiert einen Datensatz in einer privaten DNS-Zone festgelegt.
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options?: Models.RecordSetsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Ressourceneintragssätze vom Typ SOA aktualisiert, aber nicht erstellt werden kann (sie werden erstellt, wenn die Private DNS-Zone erstellt wird). Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: Parameter für die "createorupdate" zur Verfügung gestellt.
+        - id: options
+          type:
+            - Models.RecordSetsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, RecordSetsCreateOrUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options: RecordSetsCreateOrUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Ressourceneintragssätze vom Typ SOA aktualisiert, aber nicht erstellt werden kann (sie werden erstellt, wenn die Private DNS-Zone erstellt wird). Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: Parameter für die "createorupdate" zur Verfügung gestellt.
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Ressourceneintragssätze vom Typ SOA aktualisiert, aber nicht erstellt werden kann (sie werden erstellt, wenn die Private DNS-Zone erstellt wird). Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: Parameter für die "createorupdate" zur Verfügung gestellt.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod'
+    name: 'deleteMethod(string, string, Models.RecordType, string, Models.RecordSetsDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Löscht einen Datensatz aus einer privaten DNS-Zone festgelegt. Dieser Vorgang kann nicht rückgängig gemacht werden.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options?: Models.RecordSetsDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Ressourceneintragssätze vom Typ SOA kann nicht gelöscht werden (werden gelöscht, sobald die Private DNS-Zone gelöscht wird). Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: options
+          type:
+            - Models.RecordSetsDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod_2'
+    name: 'deleteMethod(string, string, Models.RecordType, string, RecordSetsDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options: RecordSetsDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Ressourceneintragssätze vom Typ SOA kann nicht gelöscht werden (werden gelöscht, sobald die Private DNS-Zone gelöscht wird). Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod_1'
+    name: 'deleteMethod(string, string, Models.RecordType, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Ressourceneintragssätze vom Typ SOA kann nicht gelöscht werden (werden gelöscht, sobald die Private DNS-Zone gelöscht wird). Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get'
+    name: 'get(string, string, Models.RecordType, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft ein Satz von Einträgen ab.
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get_2'
+    name: 'get(string, string, Models.RecordType, string, RequestOptionsBase, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get_1'
+    name: 'get(string, string, Models.RecordType, string, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list'
+    name: 'list(string, string, Models.RecordSetsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Listet alle Ressourceneintragssätze in einer privaten DNS-Zone.
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options?: Models.RecordSetsListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: options
+          type:
+            - Models.RecordSetsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list_2'
+    name: 'list(string, string, RecordSetsListOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options: RecordSetsListOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsListOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list_1'
+    name: 'list(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType'
+    name: 'listByType(string, string, Models.RecordType, Models.RecordSetsListByTypeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Listet die Ressourceneintragssätze eines bestimmten Typs in einer privaten DNS-Zone.
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, options?: Models.RecordSetsListByTypeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ der Ressourceneintragssätze aufgelistet werden. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: options
+          type:
+            - Models.RecordSetsListByTypeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType_2'
+    name: 'listByType(string, string, Models.RecordType, RecordSetsListByTypeOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, options: RecordSetsListByTypeOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ der Ressourceneintragssätze aufgelistet werden. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType_1'
+    name: 'listByType(string, string, Models.RecordType, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ der Ressourceneintragssätze aufgelistet werden. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext'
+    name: 'listByTypeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Listet die Ressourceneintragssätze eines bestimmten Typs in einer privaten DNS-Zone.
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext_2'
+    name: 'listByTypeNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext_1'
+    name: 'listByTypeNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Listet alle Ressourceneintragssätze in einer privaten DNS-Zone.
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext_1'
+    name: 'listNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.constructor'
+    name: RecordSets(PrivateDnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine RecordSets.
+    syntax:
+      content: 'new RecordSets(client: PrivateDnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, Models.RecordSetsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aktualisiert einen Datensatz in einer privaten DNS-Zone festgelegt.
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options?: Models.RecordSetsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: Parameter für das Update zur Verfügung gestellt.
+        - id: options
+          type:
+            - Models.RecordSetsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update_2'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, RecordSetsUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options: RecordSetsUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: Parameter für das Update zur Verfügung gestellt.
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update_1'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe.
+        - id: privateZoneName
+          type:
+            - string
+          description: Der Name der privaten DNS-Zone (ohne einen abschließenden Punkt).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 'Der Typ des DNS-Eintrag in diesem Ressourceneintragssatz. Mögliche Werte sind: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT'''
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Der Name des Datensatzes festgelegt, relativ zu den Namen der Zone.'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: Parameter für das Update zur Verfügung gestellt.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+references:
+  - uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+    name: PrivateDnsManagementClientContext
+    spec.typeScript:
+      - name: PrivateDnsManagementClientContext
+        fullName: PrivateDnsManagementClientContext
+        uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+  - uid: '@azure/arm-privatedns.RecordSet'
+    name: RecordSet
+    spec.typeScript:
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-privatedns.RecordSet'
+  - uid: ServiceCallback<@azure/arm-privatedns.RecordSet>
+    name: RecordSet>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-privatedns.RecordSet'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+    name: RecordSetsCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsCreateOrUpdateOptionalParams
+        fullName: RecordSetsCreateOrUpdateOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+    name: RecordSetsDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: RecordSetsDeleteMethodOptionalParams
+        fullName: RecordSetsDeleteMethodOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+    name: RecordSetListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSetListResult
+        fullName: RecordSetListResult
+        uid: '@azure/arm-privatedns.RecordSetListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.RecordSetsListOptionalParams'
+    name: RecordSetsListOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListOptionalParams
+        fullName: RecordSetsListOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsListOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+    name: RecordSetsListByTypeOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByTypeOptionalParams
+        fullName: RecordSetsListByTypeOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
+    name: RecordSetsUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsUpdateOptionalParams
+        fullName: RecordSetsUpdateOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
