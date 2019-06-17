@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die UploadBatchServiceLogsConfiguration darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die URL des Containers im Azure-Blob-Speicher auf dem die Protokolldateien für den Batch-Dienst hochgeladen. Die URL muss es sich um eine Shared Access Signature (SAS) ein, Erteilung von Schreibberechtigungen für den Container enthalten. Die SAS-Dauer muss genügend Zeit für den Upload abgeschlossen zulassen. Die Startzeit für die SAS ist optional und empfohlen, nicht angegeben werden.'
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Ende des Zeitraums angeben, von dem Batch-Dienst-Protokolldateien hochgeladen werden soll. Protokolldatei, die mit einer protokollmeldung im Zeitbereich wird hochgeladen. Dies bedeutet, dass der Vorgang möglicherweise mehr Protokolle abrufen als angefordert wurden, da die gesamte Protokolldatei wird immer hochgeladen, aber der Vorgang sollte weniger Protokolle als angefordert wurden nicht abgerufen werden. Wenn nicht angegeben, wird standardmäßig alle Protokolle verfügbar. Klicken Sie nach "StartTime" hochladen.'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Beginn des Zeitraums angeben, von dem Batch-Dienst-Protokolldateien hochgeladen werden soll. Protokolldatei, die mit einer protokollmeldung im Zeitbereich wird hochgeladen. Dies bedeutet, dass der Vorgang möglicherweise mehr Protokolle abrufen als angefordert wurden, da die gesamte Protokolldatei wird immer hochgeladen, aber der Vorgang sollte weniger Protokolle als angefordert wurden nicht abgerufen werden.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'

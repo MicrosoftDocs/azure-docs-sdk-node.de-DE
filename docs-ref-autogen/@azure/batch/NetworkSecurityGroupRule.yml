@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die NetworkSecurityGroupRule darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Aktion, die für eine angegebene IP-Adressen, Adressbereich des Subnetzes oder Tag ausgeführt werden soll. Folgende Werte sind möglich: "zulassen", "Ablehnen"'
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Priorität für diese Regel. Prioritäten in einem Pool müssen eindeutig sein und werden in der Reihenfolge ihrer Priorität ausgewertet. Je niedriger die Nummer ist, desto höher ist die Priorität. Beispielsweise können Regeln mit den Ordnungszahlen von 150, 250 und 350 angegeben werden. Die Regel mit der die fortlaufende Nummer des 150 hat Vorrang vor der Regel mit einem Auftrag mit 250. Zulässige Prioritäten liegen auf 150 zu 3500. Wenn alle reservierten oder doppelte Werte, dass die Anforderung fehlschlägt, mit dem HTTP-Statuscode 400 bereitgestellt werden.'
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die quelladresspräfix oder-Tag entsprechend der Regel. Gültige Werte sind eine einzelne IP-Adresse (z.B. 10.10.10.10), IP-Subnetz (d. h. 192.168.1.0/24), Standard-Tag, oder * (für alle Adressen).
+      Wenn ein anderer dienen die Werte, dass die Anforderung mit HTTP-Statuscode 400 schlägt fehl.
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
