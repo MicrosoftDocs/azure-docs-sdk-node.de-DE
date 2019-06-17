@@ -1,0 +1,629 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations'
+    name: PersonGroupOperations
+    fullName: PersonGroupOperations
+    children:
+      - '@azure/cognitiveservices-face.PersonGroupOperations.create'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.create_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.create_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.get'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.get_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.get_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.list'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.list_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.list_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.constructor'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.train'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.train_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.train_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.update'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.update_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="11bbf-101">Klasse, die eine PersonGroupOperations darstellt.</span><span class="sxs-lookup"><span data-stu-id="11bbf-101">Class representing a PersonGroupOperations.</span></span>'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create'
+    name: 'create(string, Models.PersonGroupCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="11bbf-102">Erstellen Sie eine neue Personengruppe, mit der angegebenen PersonGroupId "," Name "," bereitgestellten Benutzer UserData "und" RecognitionModel.</span><span class="sxs-lookup"><span data-stu-id="11bbf-102">Create a new person group with specified personGroupId, name, user-provided userData and recognitionModel.</span></span>
+      <br /> <span data-ttu-id="11bbf-103">Eine Personengruppe ist der Container die hochgeladenen Person-Daten, einschließlich der gesichtserkennungs-Bilder und gesichtserkennung verwendet Funktionen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-103">A person group is the container of the uploaded person data, including face images and face recognition features.</span></span>
+      <br /> <span data-ttu-id="11bbf-104">Verwenden Sie nach der Erstellung des [PersonGroup Person - erstellen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) zum Hinzufügen von Personen in die Gruppe aus, und rufen dann [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) auf diese Gruppe vorzubereiten [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class="sxs-lookup"><span data-stu-id="11bbf-104">After creation, use [PersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) to add persons into the group, and then call [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>
+      <br /> <span data-ttu-id="11bbf-105">Der Person Gesicht, Bild- und UserData werden auf Server bis zum [PersonGroup Person gespeichert werden</span><span class="sxs-lookup"><span data-stu-id="11bbf-105">The person's face, image, and userData will be stored on server until [PersonGroup Person</span></span>
+      - <span data-ttu-id="11bbf-106">Delete](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523d) oder [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="11bbf-106">Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) or [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) is called.</span></span>
+      <br />
+      * <span data-ttu-id="11bbf-107">Free-Tarif-Abonnement-Kontingent: 1.000 Personengruppen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-107">Free-tier subscription quota: 1,000 person groups.</span></span> <span data-ttu-id="11bbf-108">Jede enthält bis zu 1.000 Personen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-108">Each holds up to 1,000 persons.</span></span>
+      * <span data-ttu-id="11bbf-109">Das abonnementkontingent S0-Tarif: 1.000.000 Personengruppen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-109">S0-tier subscription quota: 1,000,000 person groups.</span></span> <span data-ttu-id="11bbf-110">Jede enthält bis zu 10.000 Personen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-110">Each holds up to 10,000 persons.</span></span>
+      * <span data-ttu-id="11bbf-111">um größere Skalierung Face ID Problem behandeln möchten, verwenden Sie ggf. [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span><span class="sxs-lookup"><span data-stu-id="11bbf-111">to handle larger scale face identification problem, please consider using [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span></span>
+      <br />
+      <span data-ttu-id="11bbf-112">'RecognitionModel' muss angegeben werden, dieser Personengruppe zugeordnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="11bbf-112">'recognitionModel' should be specified to associate with this person group.</span></span> <span data-ttu-id="11bbf-113">Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter.</span><span class="sxs-lookup"><span data-stu-id="11bbf-113">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="11bbf-114">Neue Flächen, die zu einer vorhandenen Personengruppe hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="11bbf-114">New faces that are added to an existing person group will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id="11bbf-115">Vorhandenen gesichtserkennungs-Funktionen in ein Person-Gruppe können nicht auf Funktionen, die durch eine andere Version des Modells zur Erkennung extrahiert aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="11bbf-115">Existing face features in a person group can't be updated to features extracted by another version of recognition model.</span></span>
+    syntax:
+      content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-116">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-116">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - Models.PersonGroupCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create_2'
+    name: 'create(string, PersonGroupCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(personGroupId: string, options: PersonGroupCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-117">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-117">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
+          description: <span data-ttu-id="11bbf-118">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-118">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-119">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-119">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create_1'
+    name: 'create(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-120">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-120">Id referencing a particular person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-121">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-121">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="11bbf-122">Löschen Sie eine vorhandene Person aus.</span><span class="sxs-lookup"><span data-stu-id="11bbf-122">Delete an existing person group.</span></span> <span data-ttu-id="11bbf-123">Beibehalten, Gesicht, die Funktionen aller Personen in der Personengruppe ebenfalls gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="11bbf-123">Persisted face features of all people in the person group will also be deleted.</span></span>'
+    syntax:
+      content: 'function deleteMethod(personGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-124">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-124">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(personGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-125">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-125">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="11bbf-126">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-126">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-127">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-127">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-128">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-128">Id referencing a particular person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-129">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-129">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.get'
+    name: 'get(string, Models.PersonGroupGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="11bbf-130">Name der Person-Gruppe "," UserData "und" RecognitionModel abzurufen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-130">Retrieve person group name, userData and recognitionModel.</span></span> <span data-ttu-id="11bbf-131">Verwenden Sie zum Abrufen von Informationen der Person unter diesem PersonGroup [PersonGroup Person - Liste](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</span><span class="sxs-lookup"><span data-stu-id="11bbf-131">To get person information under this personGroup, use [PersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</span></span>'
+    syntax:
+      content: 'function get(personGroupId: string, options?: Models.PersonGroupGetOptionalParams)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-132">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-132">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - Models.PersonGroupGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.get_2'
+    name: 'get(string, PersonGroupGetOptionalParams, ServiceCallback<PersonGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(personGroupId: string, options: PersonGroupGetOptionalParams, callback: ServiceCallback<PersonGroup>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-133">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-133">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
+          description: <span data-ttu-id="11bbf-134">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-134">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
+          description: |
+            <span data-ttu-id="11bbf-135">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-135">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.get_1'
+    name: 'get(string, ServiceCallback<PersonGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(personGroupId: string, callback: ServiceCallback<PersonGroup>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-136">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-136">Id referencing a particular person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
+          description: |
+            <span data-ttu-id="11bbf-137">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus'
+    name: 'getTrainingStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="11bbf-138">Rufen Sie den Status der Schulung einer Person-Gruppe ("abgeschlossen" oder "laufende").</span><span class="sxs-lookup"><span data-stu-id="11bbf-138">Retrieve the training status of a person group (completed or ongoing).</span></span>
+    syntax:
+      content: 'function getTrainingStatus(personGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-139">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-139">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_2'
+    name: 'getTrainingStatus(string, RequestOptionsBase, ServiceCallback<TrainingStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrainingStatus(personGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<TrainingStatus>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-140">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-140">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="11bbf-141">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+          description: |
+            <span data-ttu-id="11bbf-142">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-142">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_1'
+    name: 'getTrainingStatus(string, ServiceCallback<TrainingStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrainingStatus(personGroupId: string, callback: ServiceCallback<TrainingStatus>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-143">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-143">Id referencing a particular person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+          description: |
+            <span data-ttu-id="11bbf-144">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.list'
+    name: list(Models.PersonGroupListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="11bbf-145">Liste Personengruppen PersonGroupId, Name, UserData und RecognitionModel.</span><span class="sxs-lookup"><span data-stu-id="11bbf-145">List person groups’ personGroupId, name, userData and recognitionModel.</span></span><br />
+      * <span data-ttu-id="11bbf-146">Personengruppen werden in alphabetischer Reihenfolge der PersonGroupId gespeichert.</span><span class="sxs-lookup"><span data-stu-id="11bbf-146">Person groups are stored in alphabetical order of personGroupId.</span></span>
+      * <span data-ttu-id="11bbf-147">"start"-Parameter (Zeichenfolge, optional) ist ein vom Benutzer bereitgestellte PersonGroupId-Wert, der zurückgegeben wird, dass Einträge größere Ids von Zeichenfolgenvergleich verfügen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-147">"start" parameter (string, optional) is a user-provided personGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="11bbf-148">"start" festgelegt, um anzugeben, die Rückgabe aus dem ersten Element leer.</span><span class="sxs-lookup"><span data-stu-id="11bbf-148">"start" set to empty to indicate return from the first item.</span></span>
+      * <span data-ttu-id="11bbf-149">"Top"-Parameter (Int, optional) gibt an, die Anzahl von Einträgen zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="11bbf-149">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="11bbf-150">Eine Maximal 1000 Einträge kann in einem einzigen Aufruf zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="11bbf-150">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="11bbf-151">Um mehr abzurufen, können Sie mit der der letzte zurückgegebene Eintrag-Id des aktuellen Aufrufs "Start" angeben.</span><span class="sxs-lookup"><span data-stu-id="11bbf-151">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
+      <br />
+      <span data-ttu-id="11bbf-152">Z. B. insgesamt 5 Personengruppen: "group1" etc. "Gruppe5".</span><span class="sxs-lookup"><span data-stu-id="11bbf-152">For example, total 5 person groups: "group1", ..., "group5".</span></span>
+      <br /> <span data-ttu-id="11bbf-153">"start = & nach oben =" wird alle 5 Gruppen zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="11bbf-153">"start=&top=" will return all 5 groups.</span></span>
+      <br /> <span data-ttu-id="11bbf-154">"start = & nach oben = 2" zurück "Gruppe1", "Testkategorie group2 angehören".</span><span class="sxs-lookup"><span data-stu-id="11bbf-154">"start=&top=2" will return "group1", "group2".</span></span>
+      <br /> <span data-ttu-id="11bbf-155">"start = group2 & Top = 3" zurück "Gruppe3", "Gruppe4", "Gruppe5".</span><span class="sxs-lookup"><span data-stu-id="11bbf-155">"start=group2&top=3" will return "group3", "group4", "group5".</span></span>
+    syntax:
+      content: 'function list(options?: Models.PersonGroupListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PersonGroupListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.list_2'
+    name: 'list(PersonGroupListOptionalParams, ServiceCallback<PersonGroup[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PersonGroupListOptionalParams, callback: ServiceCallback<PersonGroup[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
+          description: <span data-ttu-id="11bbf-156">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-156">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
+          description: |
+            <span data-ttu-id="11bbf-157">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.list_1'
+    name: 'list(ServiceCallback<PersonGroup[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<PersonGroup[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
+          description: |
+            <span data-ttu-id="11bbf-158">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.constructor'
+    name: PersonGroupOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="11bbf-159">Erstellen Sie eine PersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="11bbf-159">Create a PersonGroupOperations.</span></span>
+    syntax:
+      content: 'new PersonGroupOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            <span data-ttu-id="11bbf-160">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="11bbf-160">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train'
+    name: 'train(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="11bbf-161">Eine Person Gruppe Training-Aufgabe in die Warteschlange, die Schulung Aufgabe möglicherweise nicht sofort gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="11bbf-161">Queue a person group training task, the training task may not be started immediately.</span></span>'
+    syntax:
+      content: 'function train(personGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-162">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-162">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train_2'
+    name: 'train(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function train(personGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-163">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-163">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="11bbf-164">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-165">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-165">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train_1'
+    name: 'train(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function train(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-166">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-166">Id referencing a particular person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-167">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-167">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.update'
+    name: 'update(string, Models.PersonGroupUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="11bbf-168">Aktualisieren einer vorhandenen Person den Anzeigenamen und UserData.</span><span class="sxs-lookup"><span data-stu-id="11bbf-168">Update an existing person group''s display name and userData.</span></span> <span data-ttu-id="11bbf-169">Die Eigenschaften, die im Anforderungstext nicht angezeigt wird, werden nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="11bbf-169">The properties which does not appear in request body will not be updated.</span></span>'
+    syntax:
+      content: 'function update(personGroupId: string, options?: Models.PersonGroupUpdateOptionalParams)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-170">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-170">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - Models.PersonGroupUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.update_2'
+    name: 'update(string, PersonGroupUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(personGroupId: string, options: PersonGroupUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-171">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-171">Id referencing a particular person group.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'
+          description: <span data-ttu-id="11bbf-172">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="11bbf-172">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-173">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-173">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: <span data-ttu-id="11bbf-174">ID eine bestimmten Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="11bbf-174">Id referencing a particular person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="11bbf-175">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="11bbf-175">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
+    name: PersonGroupCreateOptionalParams
+    spec.typeScript:
+      - name: PersonGroupCreateOptionalParams
+        fullName: PersonGroupCreateOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
+    name: PersonGroup>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PersonGroup
+        fullName: PersonGroup
+        uid: '@azure/cognitiveservices-face.PersonGroup'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
+    name: PersonGroupGetOptionalParams
+    spec.typeScript:
+      - name: PersonGroupGetOptionalParams
+        fullName: PersonGroupGetOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+    name: TrainingStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TrainingStatus
+        fullName: TrainingStatus
+        uid: '@azure/cognitiveservices-face.TrainingStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
+    name: 'PersonGroup[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PersonGroup
+        fullName: PersonGroup
+        uid: '@azure/cognitiveservices-face.PersonGroup'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
+    name: PersonGroupListOptionalParams
+    spec.typeScript:
+      - name: PersonGroupListOptionalParams
+        fullName: PersonGroupListOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'
+    name: PersonGroupUpdateOptionalParams
+    spec.typeScript:
+      - name: PersonGroupUpdateOptionalParams
+        fullName: PersonGroupUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'
