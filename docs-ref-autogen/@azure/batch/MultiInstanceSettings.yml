@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="81de9-101">Tasks mit mehreren Instanzen werden häufig verwendet, um MPI-Tasks zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="81de9-101">Multi-instance tasks are commonly used to support MPI tasks.</span></span> <span data-ttu-id="81de9-102">In der MPI-Fall wenn einer der Subtasks fehlschlägt (z. B. aufgrund der mit einem NULL-Exitcode beendet wird) schlägt fehl, der gesamte Task.</span><span class="sxs-lookup"><span data-stu-id="81de9-102">In the MPI case, if any of the subtasks fail (for example due to exiting with a non-zero exit code) the entire multi-instance task fails.</span></span> <span data-ttu-id="81de9-103">Der Task mit mehreren Instanzen wird dann beendet und wiederholt, bis die Grenze für erneute Versuche erreicht ist.</span><span class="sxs-lookup"><span data-stu-id="81de9-103">The multi-instance task is then terminated and retried, up to its retry limit.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81de9-104">Eine Liste der Dateien, die der Batch-Dienst vor dem Ausführen der Befehlszeile zur Koordination heruntergeladen wird.</span><span class="sxs-lookup"><span data-stu-id="81de9-104">A list of files that the Batch service will download before running the coordination command line.</span></span> <span data-ttu-id="81de9-105">Der Unterschied zwischen gemeinsamen Ressourcendateien und Ressourcendateien Tasks ist, dass für alle Subtasks, einschließlich des primären Replikats gemeinsamen Ressourcendateien heruntergeladen werden, während nur für den primären Task Ressourcendateien heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="81de9-105">The difference between common resource files and task resource files is that common resource files are downloaded for all subtasks including the primary, whereas task resource files are downloaded only for the primary.</span></span> <span data-ttu-id="81de9-106">Beachten Sie außerdem, dass diese Ressourcendateien werden nicht in das Arbeitsverzeichnis des Tasks heruntergeladen, sondern stattdessen in das Stammverzeichnis für die Aufgabe (ein Verzeichnis über das Arbeitsverzeichnis) heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="81de9-106">Also note that these resource files are not downloaded to the task working directory, but instead are downloaded to the task root directory (one directory above the working directory).</span></span>  <span data-ttu-id="81de9-107">Es ist eine maximale Größe für die Liste der Ressourcendateien.</span><span class="sxs-lookup"><span data-stu-id="81de9-107">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="81de9-108">Wenn die maximale Größe überschritten wird, die Anforderung schlägt fehl, und der Fehlercode der Antwort werden RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="81de9-108">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="81de9-109">In diesem Fall muss die Auflistung der ResourceFiles Größe reduziert werden.</span><span class="sxs-lookup"><span data-stu-id="81de9-109">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="81de9-110">Dies kann erreicht werden, mithilfe von ZIP-Dateien, Anwendungspakete oder Docker-Container.</span><span class="sxs-lookup"><span data-stu-id="81de9-110">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81de9-111">Die auszuführende Befehlszeile auf den Computeknoten, die ihnen ermöglichen, die beim Koordinieren der primären führt die Hauptaufgabe-Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="81de9-111">The command line to run on all the compute nodes to enable them to coordinate when the primary runs the main task command.</span></span> <span data-ttu-id="81de9-112">Eine Befehlszeile zur Koordination der typischen startet einen Hintergrunddienst und stellt sicher, dass der Dienst zum Verarbeiten von Nachrichten zwischen bereit ist.</span><span class="sxs-lookup"><span data-stu-id="81de9-112">A typical coordination command line launches a background service and verifies that the service is ready to process inter-node messages.</span></span>'
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81de9-113">Die Anzahl der Computeknoten, die vom Task benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="81de9-113">The number of compute nodes required by the task.</span></span> <span data-ttu-id="81de9-114">Wenn nicht angegeben, ist der Standardwert 1.</span><span class="sxs-lookup"><span data-stu-id="81de9-114">If omitted, the default is 1.</span></span>'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
