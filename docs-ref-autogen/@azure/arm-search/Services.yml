@@ -1,0 +1,593 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-search.Services'
+    name: Services
+    fullName: Services
+    children:
+      - '@azure/arm-search.Services.beginCreateOrUpdate'
+      - '@azure/arm-search.Services.checkNameAvailability'
+      - '@azure/arm-search.Services.checkNameAvailability_1'
+      - '@azure/arm-search.Services.checkNameAvailability_2'
+      - '@azure/arm-search.Services.createOrUpdate'
+      - '@azure/arm-search.Services.deleteMethod'
+      - '@azure/arm-search.Services.deleteMethod_1'
+      - '@azure/arm-search.Services.deleteMethod_2'
+      - '@azure/arm-search.Services.get'
+      - '@azure/arm-search.Services.get_1'
+      - '@azure/arm-search.Services.get_2'
+      - '@azure/arm-search.Services.listByResourceGroup'
+      - '@azure/arm-search.Services.listByResourceGroup_1'
+      - '@azure/arm-search.Services.listByResourceGroup_2'
+      - '@azure/arm-search.Services.constructor'
+      - '@azure/arm-search.Services.update'
+      - '@azure/arm-search.Services.update_1'
+      - '@azure/arm-search.Services.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Eine Klasse, die eine Dienste darstellen.'
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, SearchService, Models.ServicesBeginCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt oder aktualisiert einen Search-Dienst in der angegebenen Ressourcengruppe. Wenn der Search-Dienst bereits vorhanden ist, werden alle Eigenschaften mit den angegebenen Werten aktualisiert werden.'
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: Models.ServicesBeginCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: 'Der Name des Azure Search-Diensts zum Erstellen oder aktualisieren. Search-Dienstnamen darf nur Kleinbuchstaben, Ziffern oder bindestrichte enthalten, können keine Bindestrich als eines der ersten beiden oder als letztes Zeichen, darf keine aufeinanderfolgenden Bindestriche enthalten und müssen zwischen 2 und 60 Zeichen lang sein. Search-Dienstnamen müssen global eindeutig sein, da sie Teil des Dienst-URIS sind (https://<name>. search.windows.net). Sie können nicht den Dienstnamen ändern, nachdem der Dienst erstellt wird.'
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: Die Definition der Search-Dienst zum Erstellen oder aktualisieren.
+        - id: options
+          type:
+            - Models.ServicesBeginCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.checkNameAvailability'
+    name: 'checkNameAvailability(string, Models.ServicesCheckNameAvailabilityOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Überprüft, ob der angegebene Dienstname verfügbar ist. Search-Dienstnamen müssen global eindeutig sein, da sie Teil des Dienst-URIS sind (https://<name>. search.windows.net).'
+    syntax:
+      content: 'function checkNameAvailability(name: string, options?: Models.ServicesCheckNameAvailabilityOptionalParams)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: 'Der suchdienstname, um zu überprüfen. Search-Dienstnamen darf nur Kleinbuchstaben, Ziffern oder bindestrichte enthalten, können keine Bindestrich als eines der ersten beiden oder als letztes Zeichen, darf keine aufeinanderfolgenden Bindestriche enthalten und müssen zwischen 2 und 60 Zeichen lang sein.'
+        - id: options
+          type:
+            - Models.ServicesCheckNameAvailabilityOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesCheckNameAvailabilityResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, ServiceCallback<CheckNameAvailabilityOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityOutput>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: 'Der suchdienstname, um zu überprüfen. Search-Dienstnamen darf nur Kleinbuchstaben, Ziffern oder bindestrichte enthalten, können keine Bindestrich als eines der ersten beiden oder als letztes Zeichen, darf keine aufeinanderfolgenden Bindestriche enthalten und müssen zwischen 2 und 60 Zeichen lang sein.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.CheckNameAvailabilityOutput>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesCheckNameAvailabilityResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, ServicesCheckNameAvailabilityOptionalParams, ServiceCallback<CheckNameAvailabilityOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, options: ServicesCheckNameAvailabilityOptionalParams, callback: ServiceCallback<CheckNameAvailabilityOutput>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: 'Der suchdienstname, um zu überprüfen. Search-Dienstnamen darf nur Kleinbuchstaben, Ziffern oder bindestrichte enthalten, können keine Bindestrich als eines der ersten beiden oder als letztes Zeichen, darf keine aufeinanderfolgenden Bindestriche enthalten und müssen zwischen 2 und 60 Zeichen lang sein.'
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesCheckNameAvailabilityOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.CheckNameAvailabilityOutput>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesCheckNameAvailabilityResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.createOrUpdate'
+    name: 'createOrUpdate(string, string, SearchService, Models.ServicesCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Erstellt oder aktualisiert einen Search-Dienst in der angegebenen Ressourcengruppe. Wenn der Search-Dienst bereits vorhanden ist, werden alle Eigenschaften mit den angegebenen Werten aktualisiert werden.'
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: Models.ServicesCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: 'Der Name des Azure Search-Diensts zum Erstellen oder aktualisieren. Search-Dienstnamen darf nur Kleinbuchstaben, Ziffern oder bindestrichte enthalten, können keine Bindestrich als eines der ersten beiden oder als letztes Zeichen, darf keine aufeinanderfolgenden Bindestriche enthalten und müssen zwischen 2 und 60 Zeichen lang sein. Search-Dienstnamen müssen global eindeutig sein, da sie Teil des Dienst-URIS sind (https://<name>. search.windows.net). Sie können nicht den Dienstnamen ändern, nachdem der Dienst erstellt wird.'
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: Die Definition der Search-Dienst zum Erstellen oder aktualisieren.
+        - id: options
+          type:
+            - Models.ServicesCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesCreateOrUpdateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.deleteMethod'
+    name: 'deleteMethod(string, string, Models.ServicesDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Löscht einen Search-Dienst in der angegebenen Ressourcengruppe, zusammen mit den zugehörigen Ressourcen.'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, options?: Models.ServicesDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts der angegebenen Ressourcengruppe zugeordnet.
+        - id: options
+          type:
+            - Models.ServicesDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts der angegebenen Ressourcengruppe zugeordnet.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.deleteMethod_2'
+    name: 'deleteMethod(string, string, ServicesDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, options: ServicesDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts der angegebenen Ressourcengruppe zugeordnet.
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesDeleteMethodOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.get'
+    name: 'get(string, string, Models.ServicesGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft die Search-Dienst mit dem angegebenen Namen in der angegebenen Ressourcengruppe ab.
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options?: Models.ServicesGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts der angegebenen Ressourcengruppe zugeordnet.
+        - id: options
+          type:
+            - Models.ServicesGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.get_1'
+    name: 'get(string, string, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts der angegebenen Ressourcengruppe zugeordnet.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.get_2'
+    name: 'get(string, string, ServicesGetOptionalParams, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options: ServicesGetOptionalParams, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts der angegebenen Ressourcengruppe zugeordnet.
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesGetOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.ServicesListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ruft eine Liste mit allen Suchdiensten in der angegebenen Ressourcengruppe ab.
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.ServicesListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: options
+          type:
+            - Models.ServicesListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesListByResourceGroupResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<SearchServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SearchServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchServiceListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesListByResourceGroupResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, ServicesListByResourceGroupOptionalParams, ServiceCallback<SearchServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: ServicesListByResourceGroupOptionalParams, callback: ServiceCallback<SearchServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesListByResourceGroupOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchServiceListResult>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesListByResourceGroupResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.constructor'
+    name: Services(SearchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie einen Services.
+    syntax:
+      content: 'new Services(client: SearchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-search.SearchManagementClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.update'
+    name: 'update(string, string, SearchService, Models.ServicesUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aktualisiert einen vorhandenen Suchdienst in der angegebenen Ressourcengruppe.
+    syntax:
+      content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: Models.ServicesUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts zu aktualisieren.
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: Die Definition der Search-Dienst aktualisieren.
+        - id: options
+          type:
+            - Models.ServicesUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesUpdateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.update_1'
+    name: 'update(string, string, SearchService, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts zu aktualisieren.
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: Die Definition der Search-Dienst aktualisieren.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesUpdateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.update_2'
+    name: 'update(string, string, SearchService, ServicesUpdateOptionalParams, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, options: ServicesUpdateOptionalParams, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Der Name der Ressourcengruppe im aktuellen Abonnement. Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.
+        - id: searchServiceName
+          type:
+            - string
+          description: Der Name des Azure Search-Diensts zu aktualisieren.
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: Die Definition der Search-Dienst aktualisieren.
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesUpdateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.ServicesUpdateResponse>
+    package: '@azure/arm-search'
+references:
+  - uid: '@azure/arm-search.SearchManagementClientContext'
+    name: SearchManagementClientContext
+    spec.typeScript:
+      - name: SearchManagementClientContext
+        fullName: SearchManagementClientContext
+        uid: '@azure/arm-search.SearchManagementClientContext'
+  - uid: '@azure/arm-search.SearchService'
+    name: SearchService
+    spec.typeScript:
+      - name: SearchService
+        fullName: SearchService
+        uid: '@azure/arm-search.SearchService'
+  - uid: ServiceCallback<@azure/arm-search.CheckNameAvailabilityOutput>
+    name: CheckNameAvailabilityOutput>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityOutput
+        fullName: CheckNameAvailabilityOutput
+        uid: '@azure/arm-search.CheckNameAvailabilityOutput'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.ServicesCheckNameAvailabilityOptionalParams'
+    name: ServicesCheckNameAvailabilityOptionalParams
+    spec.typeScript:
+      - name: ServicesCheckNameAvailabilityOptionalParams
+        fullName: ServicesCheckNameAvailabilityOptionalParams
+        uid: '@azure/arm-search.ServicesCheckNameAvailabilityOptionalParams'
+  - uid: '@azure/arm-search.ServicesDeleteMethodOptionalParams'
+    name: ServicesDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: ServicesDeleteMethodOptionalParams
+        fullName: ServicesDeleteMethodOptionalParams
+        uid: '@azure/arm-search.ServicesDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-search.SearchService>
+    name: SearchService>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchService
+        fullName: SearchService
+        uid: '@azure/arm-search.SearchService'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.ServicesGetOptionalParams'
+    name: ServicesGetOptionalParams
+    spec.typeScript:
+      - name: ServicesGetOptionalParams
+        fullName: ServicesGetOptionalParams
+        uid: '@azure/arm-search.ServicesGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-search.SearchServiceListResult>
+    name: SearchServiceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchServiceListResult
+        fullName: SearchServiceListResult
+        uid: '@azure/arm-search.SearchServiceListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.ServicesListByResourceGroupOptionalParams'
+    name: ServicesListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: ServicesListByResourceGroupOptionalParams
+        fullName: ServicesListByResourceGroupOptionalParams
+        uid: '@azure/arm-search.ServicesListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-search.ServicesUpdateOptionalParams'
+    name: ServicesUpdateOptionalParams
+    spec.typeScript:
+      - name: ServicesUpdateOptionalParams
+        fullName: ServicesUpdateOptionalParams
+        uid: '@azure/arm-search.ServicesUpdateOptionalParams'

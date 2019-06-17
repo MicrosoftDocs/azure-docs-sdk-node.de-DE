@@ -1,0 +1,136 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    fullName: VirtualMachineConfiguration
+    children:
+      - '@azure/batch.VirtualMachineConfiguration.containerConfiguration'
+      - '@azure/batch.VirtualMachineConfiguration.dataDisks'
+      - '@azure/batch.VirtualMachineConfiguration.imageReference'
+      - '@azure/batch.VirtualMachineConfiguration.licenseType'
+      - '@azure/batch.VirtualMachineConfiguration.nodeAgentSKUId'
+      - '@azure/batch.VirtualMachineConfiguration.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die VirtualMachineConfiguration darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.VirtualMachineConfiguration.containerConfiguration'
+    name: containerConfiguration
+    fullName: containerConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die containerkonfiguration für den Pool. Wenn angegeben, erfolgt die Installation auf jedem Knoten im Pool auf die Aufgaben in Containern ausgeführt werden können. Alle regulären Tasks und Auftrags-Manager-Aufgaben in diesem Pool ausgeführt, müssen die ContainerSettings-Eigenschaft angeben, und alle anderen Aufgaben können sie angeben.'
+    optional: true
+    syntax:
+      content: 'containerConfiguration?: ContainerConfiguration'
+      return:
+        type:
+          - '@azure/batch.ContainerConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.VirtualMachineConfiguration.dataDisks'
+    name: dataDisks
+    fullName: dataDisks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Konfiguration auf den Computeknoten im Pool angefügten Datenträger. Diese Eigenschaft muss angegeben werden, wenn die Computeknoten im Pool leere Datenträger angefügt werden müssen.
+      Dies kann nicht aktualisiert. Jeder Knoten Ruft eine eigene Datenträger (der Datenträger ist keiner Dateifreigabe) ab. Vorhandenen Datenträger können nicht angefügt werden, jeder angeschlossene Datenträger leer ist. Wenn der Knoten aus dem Pool entfernt wird, wird der Datenträger und alle ihm zugeordneten Daten ebenfalls gelöscht. Der Datenträger wird nicht formatiert, wenn die Verbindung hergestellt, es muss vor der Verwendung – Weitere Informationen finden Sie unter formatiert sein https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux und https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine.
+    optional: true
+    syntax:
+      content: 'dataDisks?: DataDisk[]'
+      return:
+        type:
+          - '@azure/batch.DataDisk[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.VirtualMachineConfiguration.imageReference'
+    name: imageReference
+    fullName: imageReference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ein Verweis auf das Azure Virtual Machines Marketplace-Image oder das benutzerdefinierte VM-Image verwenden.
+    syntax:
+      content: 'imageReference: ImageReference'
+      return:
+        type:
+          - '@azure/batch.ImageReference'
+    package: '@azure/batch'
+  - uid: '@azure/batch.VirtualMachineConfiguration.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Der Typ des lokalen Lizenz verwendet werden, bei der Bereitstellung des Betriebssystems. Dies gilt nur für Images, die das Windows-Betriebssystem enthalten und sollte nur verwendet werden, wenn Sie gültige lokale Lizenzen für die Knoten enthalten. diese bereitgestellt wird. Wenn nicht angegeben ist, werden keine lokale Lizenzierung Rabatt angewendet wird. Folgende Werte sind: "Windows_server" - ist der lokale-Lizenz für Windows Server.
+      Windows_Client - ist der lokale-Lizenz für Windows-Client.
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.VirtualMachineConfiguration.nodeAgentSKUId'
+    name: nodeAgentSKUId
+    fullName: nodeAgentSKUId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die SKU des Batch-Knoten-Agents auf bereitgestellt werden compute-Knoten im Pool. Der Batch-Knoten-Agent ist ein Programm, das auf jedem Knoten im Pool ausgeführt, und stellt die Befehls- und-Steuerungsschnittstelle zwischen dem Knoten und der Batch-Dienst. Es gibt verschiedene Implementierungen des Knoten-Agents (SKUs) für verschiedene Betriebssysteme. Sie müssen einen Knoten-Agent-SKU angeben, die der ausgewählten imageverweis entspricht. Die Liste der unterstützten Knoten-Agent-SKUs zusammen mit der Liste der überprüften Image-Verweise finden Sie unter den Vorgang "Liste unterstützten Knoten-Agent-SKUs".'
+    syntax:
+      content: 'nodeAgentSKUId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.VirtualMachineConfiguration.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Einstellungen für die Windows-Betriebssystem auf dem virtuellen Computer. Diese Eigenschaft muss nicht angegeben, wenn die ImageReference-Eigenschaft gibt an, ein Linux-Betriebssystem-Image.'
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/batch.WindowsConfiguration'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ContainerConfiguration'
+    name: ContainerConfiguration
+    spec.typeScript:
+      - name: ContainerConfiguration
+        fullName: ContainerConfiguration
+        uid: '@azure/batch.ContainerConfiguration'
+  - uid: '@azure/batch.DataDisk[]'
+    name: 'DataDisk[]'
+    spec.typeScript:
+      - name: DataDisk
+        fullName: DataDisk
+        uid: '@azure/batch.DataDisk'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ImageReference'
+    name: ImageReference
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: '@azure/batch.ImageReference'
+  - uid: '@azure/batch.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/batch.WindowsConfiguration'
