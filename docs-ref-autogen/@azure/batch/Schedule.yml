@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    fullName: Schedule
+    children:
+      - '@azure/batch.Schedule.doNotRunAfter'
+      - '@azure/batch.Schedule.doNotRunUntil'
+      - '@azure/batch.Schedule.recurrenceInterval'
+      - '@azure/batch.Schedule.startWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, der Zeitplan darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunAfter'
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Uhrzeit, nach der unter diesem Auftragszeitplan kein Auftrag erstellt werden. Der Zeitplan wird in den abgeschlossenen Zustand verschoben, sobald diese Frist überschritten ist und es kein aktiver Auftrag in diesem Auftragszeitplan ist. Wenn Sie keine Uhrzeit für DoNotRunAfter angeben und Sie einen Zeitplan für wiederkehrende Aufträge erstellen, wird der Auftragszeitplan aktiv bleiben, bis Sie ihn explizit beenden.'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunUntil'
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die früheste Uhrzeit, an dem ein Auftrag in diesem Auftragszeitplan erstellt werden kann. Wenn Sie keine DoNotRunUntil-Uhrzeit angeben, wird der Zeitplan Aufträge sofort zu erstellen.'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.recurrenceInterval'
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Zeitintervall zwischen den Startzeiten von zwei aufeinander folgenden Aufträgen unter den Auftragszeitplan. Ein Auftragszeitplan, kann zu jedem Zeitpunkt höchstens einen aktiven Auftrag unter sich haben. Ein Auftragszeitplan zu jedem Zeitpunkt, höchstens einen aktiven Auftrag unter sich haben kann, wenn es Zeit wird, einen neuen Auftrag unter einem Auftragszeitplan erstellen, aber der vorherige Auftrag wird noch ausgeführt, wird der Batch-Dienst nicht den neuen Auftrag erstellen, bis der vorherige Auftrag abgeschlossen ist. Wenn der vorherige Auftrag nicht innerhalb des Zeitraums "startwindow" die neue RecurrenceInterval beendet wird, wird kein neuer Auftrag für dieses Intervall geplant werden. Für wiederkehrende Aufträge verwendet sollten Sie normalerweise eine JobManagerTask in die jobspecification wirken angeben. Wenn Sie nicht JobManagerTask verwenden, benötigen Sie einen externen Prozess überwachen, wenn Aufträge erstellt werden, Hinzufügen von Aufgaben für die Aufträge aus, und Beenden der Aufträge für die nächste Wiederholung bereit. Der Standardwert ist, dass der Zeitplan nicht wiederholt wird: ein Auftrag wird erstellt, in der "startwindow" nach der DoNotRunUntil-Uhrzeit und des Zeitplans abgeschlossen ist, sobald dieser Auftrag abgeschlossen ist. Der Mindestwert ist 1 Minute. Wenn Sie einen niedrigeren Wert angeben, weist der Batch-Dienst den Zeitplan mit einem Fehler zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.startWindow'
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Zeitintervall muss ab dem Zeitpunkt, an dem gemäß dem Zeitplan einen Auftrag, erstellt werden, in dem ein Auftrag erstellt werden muss. Wenn ein Auftrag nicht innerhalb des Intervalls für "startwindow" erstellt wird, geht die "Verkaufschance" verloren. bis die nächste Wiederholung des Zeitplans wird kein Auftrag erstellt. Wenn der Zeitplan wiederholt wird, und die "startwindow" länger als das Wiederholungsintervall ist, erfolgt dies äquivalent zu einer unendlichen "startwindow", da der Auftrag, der "" in einem RecurrenceInterval ist nicht in der nächsten Wiederholungsintervall übernommen wird. Die Standardeinstellung ist unendlich. Der Mindestwert ist 1 Minute. Wenn Sie einen niedrigeren Wert angeben, weist der Batch-Dienst den Zeitplan mit einem Fehler zurück; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).'
+    optional: true
+    syntax:
+      content: 'startWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
