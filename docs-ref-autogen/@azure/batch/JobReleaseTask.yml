@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - '@azure/batch.JobReleaseTask.commandLine'
+      - '@azure/batch.JobReleaseTask.containerSettings'
+      - '@azure/batch.JobReleaseTask.environmentSettings'
+      - '@azure/batch.JobReleaseTask.id'
+      - '@azure/batch.JobReleaseTask.maxWallClockTime'
+      - '@azure/batch.JobReleaseTask.resourceFiles'
+      - '@azure/batch.JobReleaseTask.retentionTime'
+      - '@azure/batch.JobReleaseTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="fdd78-101">Der Task zur Auftragsfreigabe ausgeführt wird, wenn der Auftrag beendet wird, kann eine der folgenden: Der Benutzer ruft die Auftrags-API beendet, oder die löschen-Auftrags-API während der Auftrag noch aktiv ist, des Auftrags maximal Wand Uhr Einschränkung erreicht ist, und der Auftrag ist immer noch aktiv oder Auftrags-Manager-Aufgabe des Auftrags abgeschlossen und der Auftrag so konfiguriert wird, dass das Beenden bei der der Auftrag verwalten Er ist abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="fdd78-101">The Job Release task runs when the job ends, because of one of the following: The user calls the Terminate Job API, or the Delete Job API while the job is still active, the job's maximum wall clock time constraint is reached, and the job is still active, or the job's Job Manager task completed, and the job is configured to terminate when the Job Manager completes.</span></span> <span data-ttu-id="fdd78-102">Der Task zur Auftragsfreigabe führt auf jedem Computeknoten, in denen Aufgaben des Auftrags ausgeführt haben und diesen auftragsvorbereitungstask ausgeführt und abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="fdd78-102">The Job Release task runs on each compute node where tasks of the job have run and the Job Preparation task ran and completed.</span></span> <span data-ttu-id="fdd78-103">Wenn Sie einen Compute-Knoten nach dem er den auftragsvorbereitungstask ausgeführt wurde, und der Auftrag beendet wird, ohne zu weiteren Aufgaben des Auftrags auf dem Computeknoten ein reimaging durchführen (und daher der auftragsvorbereitungstask wird nicht erneut ausgeführt), wird der Task zur Auftragsfreigabe auf diesem Knoten nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="fdd78-103">If you reimage a compute node after it has run the Job Preparation task, and the job ends without any further tasks of the job running on that compute node (and hence the Job Preparation task does not re-run), then the Job Release task does not run on that node.</span></span>
+      <span data-ttu-id="fdd78-104">Wenn Compute-Knoten neu gestartet, während der Task zur Auftragsfreigabe noch ausgeführt wird, wird der Task zur Auftragsfreigabe erneut ausgeführt, wenn die Compute-Knoten systemressourcennutzung.</span><span class="sxs-lookup"><span data-stu-id="fdd78-104">If a compute node reboots while the Job Release task is still running, the Job Release task runs again when the compute node starts up.</span></span> <span data-ttu-id="fdd78-105">Der Auftrag ist nicht als abgeschlossen markiert, bis alle Auftragsfreigabe Tasks abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="fdd78-105">The job is not marked as complete until all Job Release tasks have completed.</span></span> <span data-ttu-id="fdd78-106">Der Task zur Auftragsfreigabe wird im Hintergrund ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="fdd78-106">The Job Release task runs in the background.</span></span> <span data-ttu-id="fdd78-107">Es ist keine zeitplanung Slot belegen; d. h. es nicht auf den für den Pool angegebene MaxTasksPerNode-Grenzwert gezählt.</span><span class="sxs-lookup"><span data-stu-id="fdd78-107">It does not occupy a scheduling slot; that is, it does not count towards the maxTasksPerNode limit specified on the pool.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fdd78-108">Die Befehlszeile des Tasks "Auftragsfreigabe".</span><span class="sxs-lookup"><span data-stu-id="fdd78-108">The command line of the Job Release task.</span></span> <span data-ttu-id="fdd78-109">Die Befehlszeile wird nicht unter einer Shell ausgeführt, und daher nicht nutzen Shellfeatures wie die Erweiterung von Umgebungsvariablen.</span><span class="sxs-lookup"><span data-stu-id="fdd78-109">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="fdd78-110">Wenn Sie solche Features nutzen möchten, Sie sollten die Shell Aufrufen in der Befehlszeile, z. B. mit "Cmd/c MyCommand" in Windows oder "/ Bin/sh - C MyCommand" unter Linux.</span><span class="sxs-lookup"><span data-stu-id="fdd78-110">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="fdd78-111">Bezieht sich die Befehlszeile auf Dateipfade, sollten sie einen relativen Pfad (relativ zum Arbeitsverzeichnis Aufgabe), oder verwenden Sie die angegebene Batch-Umgebungsvariable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="fdd78-111">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fdd78-112">Die Einstellungen für den Container, die unter dem der Task zur Auftragsfreigabe ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="fdd78-112">The settings for the container under which the Job Release task runs.</span></span> <span data-ttu-id="fdd78-113">Wenn dies angegeben ist, werden alle Verzeichnisse rekursiv unter dem AZ_BATCH_NODE_ROOT_DIR (der Stamm der Azure Batch-Verzeichnisse auf dem Knoten) in den Container zugeordnet, werden alle Variablen in den Container zugeordnet und wird von der Befehlszeile des Tasks in den Container ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="fdd78-113">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fdd78-114">Eine Liste mit umgebungsvariableneinstellungen für den Task zur Auftragsfreigabe.</span><span class="sxs-lookup"><span data-stu-id="fdd78-114">A list of environment variable settings for the Job Release task.</span></span>
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fdd78-115">Eine Zeichenfolge, die der Task zur Auftragsfreigabe innerhalb des Auftrags eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="fdd78-115">A string that uniquely identifies the Job Release task within the job.</span></span> <span data-ttu-id="fdd78-116">Die ID kann eine beliebige Kombination von alphanumerischen Zeichen einschließlich Bindestriche und Unterstriche enthalten und darf nicht mehr als 64 Zeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="fdd78-116">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id="fdd78-117">Wenn Sie diese Eigenschaft nicht angeben, weist der Batch-Dienst den Standardwert "Jobrelease".</span><span class="sxs-lookup"><span data-stu-id="fdd78-117">If you do not specify this property, the Batch service assigns a default value of ''jobrelease''.</span></span> <span data-ttu-id="fdd78-118">Keine anderen Aufgabe im Auftrag haben die gleiche ID wie der Task zur Auftragsfreigabe an.</span><span class="sxs-lookup"><span data-stu-id="fdd78-118">No other task in the job can have the same ID as the Job Release task.</span></span> <span data-ttu-id="fdd78-119">Wenn Sie versuchen, eine Aufgabe mit der gleichen Id übermitteln, lehnt Sie ab der Batch-Dienst den Fehlercode TaskIdSameAsJobReleaseTask; Wenn Sie die REST-API direkt aufrufen, ist der HTTP-Statuscode 409 (Konflikt) an.</span><span class="sxs-lookup"><span data-stu-id="fdd78-119">If you try to submit a task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobReleaseTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fdd78-120">Die maximal verstrichene Zeit, die der Task zur Auftragsfreigabe auf einem bestimmten Computeknoten, gemessen ab dem Zeitpunkt den Task ausgeführt werden wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="fdd78-120">The maximum elapsed time that the Job Release task may run on a given compute node, measured from the time the task starts.</span></span> <span data-ttu-id="fdd78-121">Wenn der Task nicht innerhalb des Zeitlimits abgeschlossen wird, der Batch-Dienst beendet wird.</span><span class="sxs-lookup"><span data-stu-id="fdd78-121">If the task does not complete within the time limit, the Batch service terminates it.</span></span> <span data-ttu-id="fdd78-122">Der Standardwert ist 15 Minuten.</span><span class="sxs-lookup"><span data-stu-id="fdd78-122">The default value is 15 minutes.</span></span> <span data-ttu-id="fdd78-123">Sie können keinen Timeout von mehr als 15 Minuten angeben.</span><span class="sxs-lookup"><span data-stu-id="fdd78-123">You may not specify a timeout longer than 15 minutes.</span></span> <span data-ttu-id="fdd78-124">Wenn Sie dies tun, von der Batch-Dienst mit einem Fehler abgelehnt; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="fdd78-124">If you do, the Batch service rejects it with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fdd78-125">Eine Liste der Dateien, die der Batch-Dienst auf den Computeknoten heruntergeladen wird, vor dem Ausführen der Befehlszeile aus.</span><span class="sxs-lookup"><span data-stu-id="fdd78-125">A list of files that the Batch service will download to the compute node before running the command line.</span></span>  <span data-ttu-id="fdd78-126">Es ist eine maximale Größe für die Liste der Ressourcendateien.</span><span class="sxs-lookup"><span data-stu-id="fdd78-126">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="fdd78-127">Wenn die maximale Größe überschritten wird, die Anforderung schlägt fehl, und der Fehlercode der Antwort werden RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="fdd78-127">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="fdd78-128">In diesem Fall muss die Auflistung der ResourceFiles Größe reduziert werden.</span><span class="sxs-lookup"><span data-stu-id="fdd78-128">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="fdd78-129">Dies kann erreicht werden, mithilfe von ZIP-Dateien, Anwendungspakete oder Docker-Container.</span><span class="sxs-lookup"><span data-stu-id="fdd78-129">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span> <span data-ttu-id="fdd78-130">Unter diesem Element aufgeführten Dateien befinden sich im Arbeitsverzeichnis des Tasks.</span><span class="sxs-lookup"><span data-stu-id="fdd78-130">Files listed under this element are located in the task''s working directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="fdd78-131">Der minimale Zeit, um das Verzeichnis eines Tasks für den Task zur Auftragsfreigabe auf dem Computeknoten beibehalten werden soll.</span><span class="sxs-lookup"><span data-stu-id="fdd78-131">The minimum time to retain the task directory for the Job Release task on the compute node.</span></span>
+      <span data-ttu-id="fdd78-132">Nach diesem Zeitpunkt kann der Batch-Dienst das Aufgabe-Verzeichnis und seinen gesamten Inhalt löschen.</span><span class="sxs-lookup"><span data-stu-id="fdd78-132">After this time, the Batch service may delete the task directory and all its contents.</span></span> <span data-ttu-id="fdd78-133">Der Standardwert ist 7 Tage, d. h. das Verzeichnis eines Tasks wird werden sieben Tage lang aufbewahrt, wenn die Compute-Knoten entfernt wird, oder der Auftrag wird gelöscht.</span><span class="sxs-lookup"><span data-stu-id="fdd78-133">The default is 7 days, i.e. the task directory will be retained for 7 days unless the compute node is removed or the job is deleted.</span></span>
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fdd78-134">Die Benutzeridentität, unter der der Task zur Auftragsfreigabe ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="fdd78-134">The user identity under which the Job Release task runs.</span></span> <span data-ttu-id="fdd78-135">Wenn nicht angegeben, wird die Aufgabe als eine eindeutige Benutzer ohne Administratorrechte an die Aufgabe ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="fdd78-135">If omitted, the task runs as a non-administrative user unique to the task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
