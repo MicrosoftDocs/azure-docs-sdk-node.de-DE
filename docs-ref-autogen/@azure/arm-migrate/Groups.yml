@@ -1,0 +1,455 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.Groups'
+    name: Groups
+    fullName: Groups
+    children:
+      - '@azure/arm-migrate.Groups.create_2'
+      - '@azure/arm-migrate.Groups.create'
+      - '@azure/arm-migrate.Groups.create_1'
+      - '@azure/arm-migrate.Groups.deleteMethod'
+      - '@azure/arm-migrate.Groups.deleteMethod_2'
+      - '@azure/arm-migrate.Groups.deleteMethod_1'
+      - '@azure/arm-migrate.Groups.get'
+      - '@azure/arm-migrate.Groups.get_2'
+      - '@azure/arm-migrate.Groups.get_1'
+      - '@azure/arm-migrate.Groups.constructor'
+      - '@azure/arm-migrate.Groups.listByProject'
+      - '@azure/arm-migrate.Groups.listByProject_2'
+      - '@azure/arm-migrate.Groups.listByProject_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Eine Klasse, eine Gruppen darstellt.'
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.create_2'
+    name: 'create(string, string, string, GroupsCreateOptionalParams, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, options: GroupsCreateOptionalParams, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - '@azure/arm-migrate.GroupsCreateOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.create'
+    name: 'create(string, string, string, Models.GroupsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Erstellen Sie eine neue Gruppe, indem ein JSON-Objekt vom Typ "Group" wie im Abschnitt für Modelle im Rahmen der Anforderungstext senden. Der Gruppenname in einem Projekt ist eindeutig. Bezeichnungen können für eine Gruppe im Rahmen der Erstellung angewendet werden.
+      Wenn eine Gruppe mit den bereits in der URL angegebenen GroupName vorhanden ist, fungiert der Aufruf als Update.
+
+      Dieser Vorgang ist Idempotent.
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, options?: Models.GroupsCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - Models.GroupsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.create_1'
+    name: 'create(string, string, string, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Löschen Sie die Gruppe aus dem Projekt ein. Die Computer bleiben im Projekt. Löschen eine nicht existierende Gruppe führt eine nicht-Vorgangs.
+      Eine Gruppe ist eine Aggregation-Mechanismus für Computer in einem Projekt. Löschen einer Gruppe werden daher nicht Computer gelöscht.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Abrufen von Informationen im Zusammenhang mit einer bestimmten Gruppe in das Projekt. Gibt ein JSON-Objekt von Typ "Group" wie im Abschnitt "Modelle" zurück.
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.get_1'
+    name: 'get(string, string, string, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: groupName
+          type:
+            - string
+          description: Eindeutiger Name einer Gruppe in einem Projekt.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.constructor'
+    name: Groups(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine Gruppen.
+    syntax:
+      content: 'new Groups(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.listByProject'
+    name: 'listByProject(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Rufen Sie aller Gruppen, die im Projekt erstellt ab. Gibt ein JSON-Array von Objekten vom Typ "Group" wie im Abschnitt "Modelle" zurück.'
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.listByProject_2'
+    name: 'listByProject(string, string, RequestOptionsBase, ServiceCallback<GroupResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options: RequestOptionsBase, callback: ServiceCallback<GroupResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.GroupResultList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.listByProject_1'
+    name: 'listByProject(string, string, ServiceCallback<GroupResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, callback: ServiceCallback<GroupResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Name des Azure-Ressourcengruppe dieses Projekt gehört.
+        - id: projectName
+          type:
+            - string
+          description: Name der Azure Migrate-Projekts.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.GroupResultList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.GroupsListByProjectResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.Group>
+    name: Group>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Group
+        fullName: Group
+        uid: '@azure/arm-migrate.Group'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-migrate.GroupsCreateOptionalParams'
+    name: GroupsCreateOptionalParams
+    spec.typeScript:
+      - name: GroupsCreateOptionalParams
+        fullName: GroupsCreateOptionalParams
+        uid: '@azure/arm-migrate.GroupsCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-migrate.GroupResultList>
+    name: GroupResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GroupResultList
+        fullName: GroupResultList
+        uid: '@azure/arm-migrate.GroupResultList'
+      - name: '>'
+        fullName: '>'
