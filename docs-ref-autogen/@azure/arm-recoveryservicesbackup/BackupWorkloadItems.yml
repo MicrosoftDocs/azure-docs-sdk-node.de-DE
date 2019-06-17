@@ -1,0 +1,239 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems'
+    name: BackupWorkloadItems
+    fullName: BackupWorkloadItems
+    children:
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.constructor'
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.list_2'
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.list'
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.list_1'
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.listNext'
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.listNext_2'
+      - '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.listNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Klasse, die eine BackupWorkloadItems darstellt.'
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.constructor'
+    name: BackupWorkloadItems(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Erstellen Sie eine BackupWorkloadItems.
+    syntax:
+      content: 'new BackupWorkloadItems(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Verweis auf den Dienstclient.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.list_2'
+    name: 'list(string, string, string, string, BackupWorkloadItemsListOptionalParams, ServiceCallback<WorkloadItemResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: BackupWorkloadItemsListOptionalParams, callback: ServiceCallback<WorkloadItemResourceList>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, die dem Container zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Name des Containers.
+        - id: options
+          type:
+            - '@azure/arm-recoveryservicesbackup.BackupWorkloadItemsListOptionalParams'
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.WorkloadItemResourceList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BackupWorkloadItemsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.list'
+    name: 'list(string, string, string, string, Models.BackupWorkloadItemsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Bietet eine navigierbare Liste der Workload-Element von einem bestimmten Container gemäß den Abfragefilter und die Paginierung-Parameter.
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Models.BackupWorkloadItemsListOptionalParams)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, die dem Container zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Name des Containers.
+        - id: options
+          type:
+            - Models.BackupWorkloadItemsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackupWorkloadItemsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.list_1'
+    name: 'list(string, string, string, string, ServiceCallback<WorkloadItemResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, callback: ServiceCallback<WorkloadItemResourceList>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Der Name des Recovery Services-Tresor.
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Der Name der Ressourcengruppe, in denen die Recovery-Tresor Services, ist vorhanden.'
+        - id: fabricName
+          type:
+            - string
+          description: 'Fabric-Namen, die dem Container zugeordnet.'
+        - id: containerName
+          type:
+            - string
+          description: Der Name des Containers.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.WorkloadItemResourceList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BackupWorkloadItemsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Bietet eine navigierbare Liste der Workload-Element von einem bestimmten Container gemäß den Abfragefilter und die Paginierung-Parameter.
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackupWorkloadItemsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<WorkloadItemResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<WorkloadItemResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Die optionalen Parameter
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.WorkloadItemResourceList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BackupWorkloadItemsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItems.listNext_1'
+    name: 'listNext(string, ServiceCallback<WorkloadItemResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<WorkloadItemResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Der NextLink aus dem vorherigen erfolgreichen Aufruf von List-Vorgang.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.WorkloadItemResourceList>
+          description: |
+            Der Rückruf
+      return:
+        type:
+          - Promise<Models.BackupWorkloadItemsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.WorkloadItemResourceList>
+    name: WorkloadItemResourceList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: WorkloadItemResourceList
+        fullName: WorkloadItemResourceList
+        uid: '@azure/arm-recoveryservicesbackup.WorkloadItemResourceList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItemsListOptionalParams'
+    name: BackupWorkloadItemsListOptionalParams
+    spec.typeScript:
+      - name: BackupWorkloadItemsListOptionalParams
+        fullName: BackupWorkloadItemsListOptionalParams
+        uid: '@azure/arm-recoveryservicesbackup.BackupWorkloadItemsListOptionalParams'
