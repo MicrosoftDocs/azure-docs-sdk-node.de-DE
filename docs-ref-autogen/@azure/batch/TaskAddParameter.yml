@@ -1,0 +1,330 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskAddParameter'
+    name: TaskAddParameter
+    fullName: TaskAddParameter
+    children:
+      - '@azure/batch.TaskAddParameter.affinityInfo'
+      - '@azure/batch.TaskAddParameter.applicationPackageReferences'
+      - '@azure/batch.TaskAddParameter.authenticationTokenSettings'
+      - '@azure/batch.TaskAddParameter.commandLine'
+      - '@azure/batch.TaskAddParameter.constraints'
+      - '@azure/batch.TaskAddParameter.containerSettings'
+      - '@azure/batch.TaskAddParameter.dependsOn'
+      - '@azure/batch.TaskAddParameter.displayName'
+      - '@azure/batch.TaskAddParameter.environmentSettings'
+      - '@azure/batch.TaskAddParameter.exitConditions'
+      - '@azure/batch.TaskAddParameter.id'
+      - '@azure/batch.TaskAddParameter.multiInstanceSettings'
+      - '@azure/batch.TaskAddParameter.outputFiles'
+      - '@azure/batch.TaskAddParameter.resourceFiles'
+      - '@azure/batch.TaskAddParameter.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Batch wiederholt Tasks aus, wenn ein Wiederherstellungsvorgang auf einem Computeknoten ausgelöst wird. Beispiele für die Recovery-Vorgänge enthalten (aber Sie sind nicht darauf beschränkt) bei einem fehlerhaften Computeknoten neu gestartet wird oder Compute-Knoten aufgrund eines hostfehlers verschwunden. Wiederholungen aufgrund von Recovery-Vorgänge werden unabhängig von, und werden nicht anhand der "maxtaskretrycount" gezählt. Auch wenn der "maxtaskretrycount" auf 0 (null) eine interne Wiederholung aufgrund eines Wiederherstellungsvorgangs auftreten ist. Aus diesem Grund sollten alle Vorgänge Idempotent sein. Dies bedeutet, dass Aufgaben tolerieren kann unterbrochen und neu gestartet, ohne dass Beschädigung oder doppelter Daten. Die am besten für lang andauernde Aufgaben besteht darin, verwenden Sie eine Form von Prüfpunkten zu üben.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.affinityInfo'
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Einen ortshinweis an, der vom Batch-Dienst verwendet werden kann, wählen Sie einen Compute-Knoten, auf dem die neue Aufgabe gestartet.'
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - '@azure/batch.AffinityInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste der Anwendungspakete, die der Batch-Dienst auf den Computeknoten bereitgestellt wird, vor dem Ausführen der Befehlszeile aus. Anwendungspakete werden heruntergeladen und auf einem freigegebenen Verzeichnis, nicht die Aufgabe, die Arbeitsverzeichnis bereitgestellt. Aus diesem Grund Wenn ein Referenziertes Paket bereits auf dem Computeknoten ist und auf dem neuesten Stand ist, wird dann sie nicht erneut heruntergeladen. Es wird die vorhandene Kopie auf dem Computeknoten verwendet. Wenn ein Paket auf die verwiesen wird, z. B. installiert werden kann, da das Paket gelöscht wurde oder da Fehler beim Herunterladen der Task fehlschlägt.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Einstellungen für ein Authentifizierungstoken, den die Aufgabe zum Ausführen von Vorgängen für Batch-Dienst verwenden können. Wenn diese Eigenschaft festgelegt ist, enthält der Batch-Dienst den Task mit dem ein Authentifizierungstoken, die verwendet werden kann, um Batch-Dienst-Vorgänge zu authentifizieren, ohne einen kontozugriffsschlüssel. Das Token wird über die Umgebungsvariable AZ_BATCH_AUTHENTICATION_TOKEN bereitgestellt. Die Vorgänge, die mit dem Token die Aufgabe ausführen kann, hängen von den Einstellungen ab. Ein Task kann z. B. Auftrags verfügen, um andere Aufgaben zum Auftrag hinzufügen oder Überprüfen Sie den Status des Auftrags oder andere Aufgaben unter dem Auftrag anfordern.'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Befehlszeile des Tasks. Für Tasks mit mehreren Instanzen wird die Befehlszeile als die primäre Aufgabe ausgeführt, nachdem der primärtask und alle Subtasks die Ausführung der Befehlszeile zur Koordination beendet haben. Die Befehlszeile wird nicht unter einer Shell ausgeführt, und daher nicht nutzen Shellfeatures wie die Erweiterung von Umgebungsvariablen. Wenn Sie solche Features nutzen möchten, Sie sollten die Shell Aufrufen in der Befehlszeile, z. B. mit "Cmd/c MyCommand" in Windows oder "/ Bin/sh - C MyCommand" unter Linux. Bezieht sich die Befehlszeile auf Dateipfade, sollten sie einen relativen Pfad (relativ zum Arbeitsverzeichnis Aufgabe), oder verwenden Sie die angegebene Batch-Umgebungsvariable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Ausführungseinschränkungen, die für diesen Task gelten. Wenn Sie keine Einschränkungen angeben, der "maxtaskretrycount" ist der "maxtaskretrycount" für den Auftrag angegeben, die MaxWallClockTime ist unendlich und die RetentionTime beträgt 7 Tage.'
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Einstellungen für den Container, die unter dem der Task ausgeführt wird. Wenn der Pool, der diese Aufgabe ausgeführt wird ContainerConfiguration festgelegt hat, muss dies ebenfalls festgelegt werden. Wenn der Pool, der diese Aufgabe ausgeführt wird ContainerConfiguration festgelegt hat, muss dies nicht festgelegt werden. Wenn dies angegeben ist, werden alle Verzeichnisse rekursiv unter dem AZ_BATCH_NODE_ROOT_DIR (der Stamm der Azure Batch-Verzeichnisse auf dem Knoten) in den Container zugeordnet, werden alle Variablen in den Container zugeordnet und wird von der Befehlszeile des Tasks in den Container ausgeführt.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.dependsOn'
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Aufgaben, denen von dieser Aufgabe abhängig ist. Diese Aufgabe wird nicht geplant werden, bis alle Aufgaben, von denen es abhängt, erfolgreich abgeschlossen wurden. Wenn diese Aufgaben fehlschlagen und deren Anzahl Wiederholungsversuche ausgeschöpft, wird dieser Task nie geplant werden. Wenn der Auftrag keinen UsesTaskDependencies auf True festgelegt, und dieses Element vorhanden ist, missling die Anforderung mit Fehlercode TaskDependenciesNotSpecifiedOnJob.'
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - '@azure/batch.TaskDependencies'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ein Anzeigename für den Task. Der Anzeigename muss nicht eindeutig sein und kann bis zu einer maximalen Länge von 1024 beliebigen Unicode-Zeichen enthalten.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Eine Liste mit umgebungsvariableneinstellungen für den Task.
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.exitConditions'
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wie der Batch-Dienst reagieren soll, wenn die Aufgabe abgeschlossen ist.'
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - '@azure/batch.ExitConditions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Zeichenfolge, die die Aufgabe im Auftrag eindeutig identifiziert. Die ID kann eine beliebige Kombination von alphanumerischen Zeichen einschließlich Bindestriche und Unterstriche enthalten und darf nicht mehr als 64 Zeichen enthalten. Die ID wird beibehalten und Groß-/Kleinschreibung (d. h., Sie haben keine zwei IDs innerhalb eines Auftrags, die sich nur durch Fall unterscheiden).'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.multiInstanceSettings'
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein Objekt, der angibt, dass der Task ein Task mit mehreren Instanzen, und Informationen zum Ausführen des Tasks mit mehreren Instanzen enthält.'
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - '@azure/batch.MultiInstanceSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste der Dateien, die der Batch-Dienst nach dem Ausführen der Befehlszeile aus den Compute-Knoten hochladen. Für Tasks mit mehreren Instanzen werden die Dateien nur aus den Compute-Knoten hochgeladen werden auf denen die Aufgabe ausgeführt wird.'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste der Dateien, die der Batch-Dienst auf den Computeknoten heruntergeladen wird, vor dem Ausführen der Befehlszeile aus. Für Tasks mit mehreren Instanzen werden die Dateien nur auf den Computeknoten heruntergeladen werden auf denen die Aufgabe ausgeführt wird. Es ist eine maximale Größe für die Liste der Ressourcendateien.  Wenn die maximale Größe überschritten wird, die Anforderung schlägt fehl, und der Fehlercode der Antwort werden RequestEntityTooLarge. In diesem Fall muss die Auflistung der ResourceFiles Größe reduziert werden. Dies kann erreicht werden, mithilfe von ZIP-Dateien, Anwendungspakete oder Docker-Container.'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddParameter.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Benutzeridentität, unter der der Task ausgeführt wird. Wenn nicht angegeben, wird die Aufgabe als eine eindeutige Benutzer ohne Administratorrechte an die Aufgabe ausgeführt.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AffinityInformation'
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: '@azure/batch.AffinityInformation'
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: '@azure/batch.TaskDependencies'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ExitConditions'
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: '@azure/batch.ExitConditions'
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: '@azure/batch.MultiInstanceSettings'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
