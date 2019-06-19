@@ -1,0 +1,569 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-visualstudio.Projects'
+    name: Projects
+    fullName: Projects
+    children:
+      - '@azure/arm-visualstudio.Projects.beginCreate'
+      - '@azure/arm-visualstudio.Projects.create'
+      - '@azure/arm-visualstudio.Projects.get'
+      - '@azure/arm-visualstudio.Projects.get_2'
+      - '@azure/arm-visualstudio.Projects.get_1'
+      - '@azure/arm-visualstudio.Projects.getJobStatus'
+      - '@azure/arm-visualstudio.Projects.getJobStatus_2'
+      - '@azure/arm-visualstudio.Projects.getJobStatus_1'
+      - '@azure/arm-visualstudio.Projects.listByResourceGroup'
+      - '@azure/arm-visualstudio.Projects.listByResourceGroup_2'
+      - '@azure/arm-visualstudio.Projects.listByResourceGroup_1'
+      - '@azure/arm-visualstudio.Projects.constructor'
+      - '@azure/arm-visualstudio.Projects.update'
+      - '@azure/arm-visualstudio.Projects.update_2'
+      - '@azure/arm-visualstudio.Projects.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="e2eb3-101">Klasse, die ein Projekt darstellt.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-101">Class representing a Projects.</span></span>'
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.beginCreate'
+    name: 'beginCreate(ProjectResource, string, string, string, Models.ProjectsBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="e2eb3-102">Erstellt ein Team Services-Projekt mit dem angegebenen Namen in der Auflistung.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-102">Creates a Team Services project in the collection with the specified name.</span></span>
+      <span data-ttu-id="e2eb3-103">'VersionControlOption' und "ProcessTemplateId" muss in den Ressourceneigenschaften angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-103">'VersionControlOption' and 'ProcessTemplateId' must be specified in the resource properties.</span></span>
+      <span data-ttu-id="e2eb3-104">Gültige Werte für VersionControlOption: Git und Tfvc.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-104">Valid values for VersionControlOption: Git, Tfvc.</span></span> <span data-ttu-id="e2eb3-105">Gültige Werte für ProcessTemplateId: 6B724908-EF14-45CF-84F8-768B5384DA45, ADCC42AB-9882-485E-A3ED-7678F01F66BC, 27450541-8E31-4150-9947-DC59F998FC01 (diese IDs entsprechen Scrum-, Agile- und CMMI-Prozessvorlagen).</span><span class="sxs-lookup"><span data-stu-id="e2eb3-105">Valid values for ProcessTemplateId: 6B724908-EF14-45CF-84F8-768B5384DA45, ADCC42AB-9882-485E-A3ED-7678F01F66BC, 27450541-8E31-4150-9947-DC59F998FC01 (these IDs correspond to Scrum, Agile, and CMMI process templates).</span></span>
+    syntax:
+      content: 'function beginCreate(body: ProjectResource, resourceGroupName: string, rootResourceName: string, resourceName: string, options?: Models.ProjectsBeginCreateOptionalParams)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="e2eb3-106">Die Anforderungsdaten.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-106">The request data.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-107">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-107">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-108">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-108">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-109">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-109">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - Models.ProjectsBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.create'
+    name: 'create(ProjectResource, string, string, string, Models.ProjectsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="e2eb3-110">Erstellt ein Team Services-Projekt mit dem angegebenen Namen in der Auflistung.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-110">Creates a Team Services project in the collection with the specified name.</span></span>
+      <span data-ttu-id="e2eb3-111">'VersionControlOption' und "ProcessTemplateId" muss in den Ressourceneigenschaften angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-111">'VersionControlOption' and 'ProcessTemplateId' must be specified in the resource properties.</span></span>
+      <span data-ttu-id="e2eb3-112">Gültige Werte für VersionControlOption: Git und Tfvc.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-112">Valid values for VersionControlOption: Git, Tfvc.</span></span> <span data-ttu-id="e2eb3-113">Gültige Werte für ProcessTemplateId: 6B724908-EF14-45CF-84F8-768B5384DA45, ADCC42AB-9882-485E-A3ED-7678F01F66BC, 27450541-8E31-4150-9947-DC59F998FC01 (diese IDs entsprechen Scrum-, Agile- und CMMI-Prozessvorlagen).</span><span class="sxs-lookup"><span data-stu-id="e2eb3-113">Valid values for ProcessTemplateId: 6B724908-EF14-45CF-84F8-768B5384DA45, ADCC42AB-9882-485E-A3ED-7678F01F66BC, 27450541-8E31-4150-9947-DC59F998FC01 (these IDs correspond to Scrum, Agile, and CMMI process templates).</span></span>
+    syntax:
+      content: 'function create(body: ProjectResource, resourceGroupName: string, rootResourceName: string, resourceName: string, options?: Models.ProjectsCreateOptionalParams)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="e2eb3-114">Die Anforderungsdaten.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-114">The request data.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-115">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-115">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-116">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-116">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-117">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-117">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - Models.ProjectsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsCreateResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e2eb3-118">Ruft die Details einer Team Services-Projekt-Ressource ab.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-118">Gets the details of a Team Services project resource.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, rootResourceName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-119">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-119">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-120">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-120">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-121">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-121">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsGetResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rootResourceName: string, resourceName: string, options: RequestOptionsBase, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-122">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-122">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-123">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-123">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-124">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-124">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e2eb3-125">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="e2eb3-125">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="e2eb3-126">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.get_1'
+    name: 'get(string, string, string, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rootResourceName: string, resourceName: string, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-127">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-127">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-128">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-128">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-129">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-129">Name of the Team Services project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="e2eb3-130">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.getJobStatus'
+    name: 'getJobStatus(string, string, string, string, string, Models.ProjectsGetJobStatusOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e2eb3-131">Ruft den Status der Auftrag zur projekterstellung Ressource ab.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-131">Gets the status of the project resource creation job.</span></span>
+    syntax:
+      content: 'function getJobStatus(resourceGroupName: string, rootResourceName: string, resourceName: string, subContainerName: string, operation: string, options?: Models.ProjectsGetJobStatusOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-132">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-132">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-133">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-133">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-134">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-134">Name of the Team Services project.</span></span>
+        - id: subContainerName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-135">Dieser Parameter sollte auf der Ressourcenname festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-135">This parameter should be set to the resourceName.</span></span>
+        - id: operation
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-136">Der Vorgangstyp.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-136">The operation type.</span></span> <span data-ttu-id="e2eb3-137">Der einzige unterstützte Wert ist "put".</span><span class="sxs-lookup"><span data-stu-id="e2eb3-137">The only supported value is 'put'.</span></span>
+        - id: options
+          type:
+            - Models.ProjectsGetJobStatusOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsGetJobStatusResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.getJobStatus_2'
+    name: 'getJobStatus(string, string, string, string, string, ProjectsGetJobStatusOptionalParams, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobStatus(resourceGroupName: string, rootResourceName: string, resourceName: string, subContainerName: string, operation: string, options: ProjectsGetJobStatusOptionalParams, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-138">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-138">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-139">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-139">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-140">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-140">Name of the Team Services project.</span></span>
+        - id: subContainerName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-141">Dieser Parameter sollte auf der Ressourcenname festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-141">This parameter should be set to the resourceName.</span></span>
+        - id: operation
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-142">Der Vorgangstyp.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-142">The operation type.</span></span> <span data-ttu-id="e2eb3-143">Der einzige unterstützte Wert ist "put".</span><span class="sxs-lookup"><span data-stu-id="e2eb3-143">The only supported value is 'put'.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-visualstudio.ProjectsGetJobStatusOptionalParams'
+          description: <span data-ttu-id="e2eb3-144">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="e2eb3-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="e2eb3-145">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetJobStatusResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.getJobStatus_1'
+    name: 'getJobStatus(string, string, string, string, string, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobStatus(resourceGroupName: string, rootResourceName: string, resourceName: string, subContainerName: string, operation: string, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-146">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-146">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-147">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-147">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-148">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-148">Name of the Team Services project.</span></span>
+        - id: subContainerName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-149">Dieser Parameter sollte auf der Ressourcenname festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-149">This parameter should be set to the resourceName.</span></span>
+        - id: operation
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-150">Der Vorgangstyp.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-150">The operation type.</span></span> <span data-ttu-id="e2eb3-151">Der einzige unterstützte Wert ist "put".</span><span class="sxs-lookup"><span data-stu-id="e2eb3-151">The only supported value is 'put'.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="e2eb3-152">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetJobStatusResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.listByResourceGroup'
+    name: 'listByResourceGroup(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e2eb3-153">Ruft alle Ressourcen des Visual Studio Team Services-Projekts in das angegebene Team Services-Konto erstellt.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-153">Gets all Visual Studio Team Services project resources created in the specified Team Services account.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, rootResourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-154">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-154">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-155">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-155">Name of the Team Services account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsListByResourceGroupResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, string, RequestOptionsBase, ServiceCallback<ProjectResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, rootResourceName: string, options: RequestOptionsBase, callback: ServiceCallback<ProjectResourceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-156">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-156">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-157">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-157">Name of the Team Services account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e2eb3-158">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="e2eb3-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResourceListResult>
+          description: |
+            <span data-ttu-id="e2eb3-159">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsListByResourceGroupResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, string, ServiceCallback<ProjectResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, rootResourceName: string, callback: ServiceCallback<ProjectResourceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-160">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-160">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-161">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-161">Name of the Team Services account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResourceListResult>
+          description: |
+            <span data-ttu-id="e2eb3-162">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsListByResourceGroupResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.constructor'
+    name: Projects(VisualStudioResourceProviderClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e2eb3-163">Erstellen eines Projekts an.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-163">Create a Projects.</span></span>
+    syntax:
+      content: 'new Projects(client: VisualStudioResourceProviderClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-visualstudio.VisualStudioResourceProviderClientContext'
+          description: |
+            <span data-ttu-id="e2eb3-164">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-164">Reference to the service client.</span></span>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.update'
+    name: 'update(string, ProjectResource, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e2eb3-165">Aktualisiert die Tags des angegebenen Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-165">Updates the tags of the specified Team Services project.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, body: ProjectResource, rootResourceName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-166">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-166">Name of the resource group within the Azure subscription.</span></span>
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="e2eb3-167">Die Anforderungsdaten.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-167">The request data.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-168">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-168">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-169">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-169">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsUpdateResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.update_2'
+    name: 'update(string, ProjectResource, string, string, RequestOptionsBase, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, body: ProjectResource, rootResourceName: string, resourceName: string, options: RequestOptionsBase, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-170">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-170">Name of the resource group within the Azure subscription.</span></span>
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="e2eb3-171">Die Anforderungsdaten.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-171">The request data.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-172">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-172">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-173">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-173">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e2eb3-174">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="e2eb3-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="e2eb3-175">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsUpdateResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.update_1'
+    name: 'update(string, ProjectResource, string, string, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, body: ProjectResource, rootResourceName: string, resourceName: string, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-176">Der Name der Ressourcengruppe im Azure-Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-176">Name of the resource group within the Azure subscription.</span></span>
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="e2eb3-177">Die Anforderungsdaten.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-177">The request data.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-178">Der Name des Team Services-Kontos.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-178">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="e2eb3-179">Der Name des Team Services-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e2eb3-179">Name of the Team Services project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="e2eb3-180">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="e2eb3-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsUpdateResponse>
+    package: '@azure/arm-visualstudio'
+references:
+  - uid: '@azure/arm-visualstudio.VisualStudioResourceProviderClientContext'
+    name: VisualStudioResourceProviderClientContext
+    spec.typeScript:
+      - name: VisualStudioResourceProviderClientContext
+        fullName: VisualStudioResourceProviderClientContext
+        uid: '@azure/arm-visualstudio.VisualStudioResourceProviderClientContext'
+  - uid: '@azure/arm-visualstudio.ProjectResource'
+    name: ProjectResource
+    spec.typeScript:
+      - name: ProjectResource
+        fullName: ProjectResource
+        uid: '@azure/arm-visualstudio.ProjectResource'
+  - uid: ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+    name: ProjectResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProjectResource
+        fullName: ProjectResource
+        uid: '@azure/arm-visualstudio.ProjectResource'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-visualstudio.ProjectsGetJobStatusOptionalParams'
+    name: ProjectsGetJobStatusOptionalParams
+    spec.typeScript:
+      - name: ProjectsGetJobStatusOptionalParams
+        fullName: ProjectsGetJobStatusOptionalParams
+        uid: '@azure/arm-visualstudio.ProjectsGetJobStatusOptionalParams'
+  - uid: ServiceCallback<@azure/arm-visualstudio.ProjectResourceListResult>
+    name: ProjectResourceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProjectResourceListResult
+        fullName: ProjectResourceListResult
+        uid: '@azure/arm-visualstudio.ProjectResourceListResult'
+      - name: '>'
+        fullName: '>'
