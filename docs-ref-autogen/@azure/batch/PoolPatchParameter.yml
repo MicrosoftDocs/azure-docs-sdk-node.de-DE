@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    fullName: PoolPatchParameter
+    children:
+      - '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+      - '@azure/batch.PoolPatchParameter.certificateReferences'
+      - '@azure/batch.PoolPatchParameter.metadata'
+      - '@azure/batch.PoolPatchParameter.startTask'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Eine Schnittstelle, die PoolPatchParameter darstellt.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Liste der Anwendungspakete auf jedem Computeknoten im Pool installiert werden. Die Liste ersetzt alle vorhandenen anwendungspaketverweise für den Pool. Änderungen an anwendungspaketverweise Auswirkungen auf alle neuen Computeknoten, die den Pool beitritt, aber haben keine Auswirkungen auf die Compute-Knoten, die bereits im Pool sind, bis er neu gestartet oder ein reimaging durchgeführt werden. Es ist maximal 10 anwendungspaketverweise auf den einzelnen Pools. Weggelassen wird, bleibt der vorhandene Anwendung Pakete, die Verweise zu bleiben.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste der Zertifikate auf jedem Computeknoten im Pool installiert werden. Wenn dieses Element vorhanden ist, ersetzt es alle vorhandenen zertifikatverweise, die für den Pool konfiguriert. Weggelassen wird, bleibt der alle vorhandenen Zertifikate, die Verweise zu bleiben. Für Windows-Computeknoten installiert der Batch-Dienst die Zertifikate für den angegebenen Zertifikatspeicher und den Speicherort an. Für Linux-Computeknoten werden die Zertifikate in einem Verzeichnis in das Arbeitsverzeichnis für den Task und einer Umgebung, die Variable AZ_BATCH_CERTIFICATES_DIR, um den Task zum Abfragen von diesem Speicherort angegeben wird gespeichert. Für Zertifikate mit Sichtbarkeit "RemoteUser" wird ein "Zertifikate"-Verzeichnis im Basisverzeichnis des Benutzers erstellt (z. B. /home/ {Benutzername} / Certs) und Zertifikate werden in diesem Verzeichnis platziert.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine Liste von Name / Wert-Paaren, die dem Pool als Metadaten zugeordnet werden soll. Wenn dieses Element vorhanden ist, ersetzt es alle vorhandenen Metadaten für den Pool konfiguriert. Wenn Sie eine leere Auflistung angeben, werden alle Metadaten aus dem Pool entfernt. Wenn nicht angegeben, alle vorhandener Metadaten bleibt unverändert.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ein Task auf jedem Computeknoten ausgeführt werden, wie sie dem Pool Beitritt. Der Task ausgeführt wird, wenn der Knoten hinzugefügt wird, an den Pool oder der Knoten neu gestartet wird. Wenn dieses Element vorhanden ist, überschreibt es alle vorhandenen Startaufgabe an. Wenn nicht angegeben, kann eine beliebige vorhandene Startaufgabe bleibt unverändert.'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
