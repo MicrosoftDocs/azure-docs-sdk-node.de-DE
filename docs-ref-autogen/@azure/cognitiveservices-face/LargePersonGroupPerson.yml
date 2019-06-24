@@ -38,7 +38,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: '<span data-ttu-id="23319-101">Klasse, die eine LargePersonGroupPerson darstellt.</span><span class="sxs-lookup"><span data-stu-id="23319-101">Class representing a LargePersonGroupPerson.</span></span>'
+    summary: '<span data-ttu-id="563f9-101">Klasse, die eine LargePersonGroupPerson darstellt.</span><span class="sxs-lookup"><span data-stu-id="563f9-101">Class representing a LargePersonGroupPerson.</span></span>'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPerson.addFaceFromStream_2'
     name: 'addFaceFromStream(string, string, msRest.HttpRequestBody, LargePersonGroupPersonAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -53,24 +53,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-102">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-102">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-102">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-102">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-103">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-103">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-103">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-103">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="23319-104">Ein Bild-Stream.</span><span class="sxs-lookup"><span data-stu-id="23319-104">An image stream.</span></span>
+          description: <span data-ttu-id="563f9-104">Ein Bild-Stream.</span><span class="sxs-lookup"><span data-stu-id="563f9-104">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="23319-105">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-105">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-105">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-105">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="23319-106">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-106">The callback</span></span>
+            <span data-ttu-id="563f9-106">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-106">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromStreamResponse>
@@ -81,22 +81,37 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="23319-107">Fügen Sie eine repräsentative Gesicht einer Person für die Identifikation hinzu.</span><span class="sxs-lookup"><span data-stu-id="23319-107">Add a representative face to a person for identification.</span></span> <span data-ttu-id="23319-108">Das Gesicht Eingabe wird als ein Bild mit einem Rechteck TargetFace angegeben.</span><span class="sxs-lookup"><span data-stu-id="23319-108">The input face is specified as an image with a targetFace rectangle.</span></span>
+    summary: |-
+      <span data-ttu-id="563f9-107">Fügen Sie einem Gesicht einer Person in einer großen Personengruppe für die gesichtserkennung oder Überprüfung hinzu.</span><span class="sxs-lookup"><span data-stu-id="563f9-107">Add a face to a person into a large person group for face identification or verification.</span></span> <span data-ttu-id="563f9-108">Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-108">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="563f9-109">Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt.</span><span class="sxs-lookup"><span data-stu-id="563f9-109">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="563f9-110">Kein Bild gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-110">No image will be stored.</span></span> <span data-ttu-id="563f9-111">Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [LargePersonGroup PersonFace - löschen](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) oder [LargePersonGroup – löschen](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="563f9-111">Only the extracted face feature will be stored on server until [LargePersonGroup PersonFace - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
+      <br /> <span data-ttu-id="563f9-112">Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="563f9-112">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="563f9-113">Höhere Gesicht Bildqualität bedeutet eine bessere Erkennung mit einfacher Genauigkeit.</span><span class="sxs-lookup"><span data-stu-id="563f9-113">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="563f9-114">Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.</span><span class="sxs-lookup"><span data-stu-id="563f9-114">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="563f9-115">Jeder Person-Eintrag kann bis zu 248 Flächen enthalten.</span><span class="sxs-lookup"><span data-stu-id="563f9-115">Each person entry can hold up to 248 faces.</span></span>
+      * <span data-ttu-id="563f9-116">JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="563f9-116">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="563f9-117">Die zulässige Dateigröße liegt zwischen 1KB und 6MB.</span><span class="sxs-lookup"><span data-stu-id="563f9-117">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="563f9-118">"TargetFace" Rechteck sollte eine Seite enthalten.</span><span class="sxs-lookup"><span data-stu-id="563f9-118">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="563f9-119">Keine oder mehrere Gesichter werden als Fehler betrachtet werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-119">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="563f9-120">Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="563f9-120">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="563f9-121">Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.</span><span class="sxs-lookup"><span data-stu-id="563f9-121">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="563f9-122">Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="563f9-122">Adding/deleting faces to/from a same person will be processed sequentially.</span></span> <span data-ttu-id="563f9-123">Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="563f9-123">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
+      * <span data-ttu-id="563f9-124">Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.</span><span class="sxs-lookup"><span data-stu-id="563f9-124">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="563f9-125">Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.</span><span class="sxs-lookup"><span data-stu-id="563f9-125">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="563f9-126">Verschiedene "DetectionModel'-Werte können angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-126">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="563f9-127">Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="563f9-127">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="563f9-128">Modell</span><span class="sxs-lookup"><span data-stu-id="563f9-128">Model</span></span> | <span data-ttu-id="563f9-129">Empfohlene Verwendung-case(s)</span><span class="sxs-lookup"><span data-stu-id="563f9-129">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="563f9-130">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="563f9-130">'detection_01':</span></span> | <span data-ttu-id="563f9-131">Das Standardmodell für die Erkennung für [LargePersonGroup Person - hinzufügen</span><span class="sxs-lookup"><span data-stu-id="563f9-131">The default detection model for [LargePersonGroup Person - Add</span></span>
+      <span data-ttu-id="563f9-132">Face](/docs/Services/563879b61984550e40cbbe8d/Operations/599adf2a3a7b9412a4d53f42).</span><span class="sxs-lookup"><span data-stu-id="563f9-132">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span></span> <span data-ttu-id="563f9-133">Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen.</span><span class="sxs-lookup"><span data-stu-id="563f9-133">Recommend for near frontal face detection.</span></span> <span data-ttu-id="563f9-134">Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt.</span><span class="sxs-lookup"><span data-stu-id="563f9-134">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="563f9-135">| | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter.</span><span class="sxs-lookup"><span data-stu-id="563f9-135">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-109">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-109">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-136">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-136">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-110">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-110">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-137">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-137">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="23319-111">Ein Bild-Stream.</span><span class="sxs-lookup"><span data-stu-id="23319-111">An image stream.</span></span>
+          description: <span data-ttu-id="563f9-138">Ein Bild-Stream.</span><span class="sxs-lookup"><span data-stu-id="563f9-138">An image stream.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams
@@ -119,20 +134,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-112">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-112">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-139">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-139">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-113">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-113">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-140">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-140">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="23319-114">Ein Bild-Stream.</span><span class="sxs-lookup"><span data-stu-id="23319-114">An image stream.</span></span>
+          description: <span data-ttu-id="563f9-141">Ein Bild-Stream.</span><span class="sxs-lookup"><span data-stu-id="563f9-141">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="23319-115">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-115">The callback</span></span>
+            <span data-ttu-id="563f9-142">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-142">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromStreamResponse>
@@ -150,24 +165,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-116">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-116">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-143">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-143">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-117">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-117">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-144">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-144">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="23319-118">Öffentlich erreichbar URL eines Bilds</span><span class="sxs-lookup"><span data-stu-id="23319-118">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="563f9-145">Öffentlich erreichbar URL eines Bilds</span><span class="sxs-lookup"><span data-stu-id="563f9-145">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="23319-119">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-119">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-146">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-146">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="23319-120">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-120">The callback</span></span>
+            <span data-ttu-id="563f9-147">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-147">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromUrlResponse>
@@ -178,22 +193,37 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="23319-121">Fügen Sie eine repräsentative Gesicht einer Person für die Identifikation hinzu.</span><span class="sxs-lookup"><span data-stu-id="23319-121">Add a representative face to a person for identification.</span></span> <span data-ttu-id="23319-122">Das Gesicht Eingabe wird als ein Bild mit einem Rechteck TargetFace angegeben.</span><span class="sxs-lookup"><span data-stu-id="23319-122">The input face is specified as an image with a targetFace rectangle.</span></span>
+    summary: |-
+      <span data-ttu-id="563f9-148">Fügen Sie einem Gesicht einer Person in einer großen Personengruppe für die gesichtserkennung oder Überprüfung hinzu.</span><span class="sxs-lookup"><span data-stu-id="563f9-148">Add a face to a person into a large person group for face identification or verification.</span></span> <span data-ttu-id="563f9-149">Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-149">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="563f9-150">Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt.</span><span class="sxs-lookup"><span data-stu-id="563f9-150">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="563f9-151">Kein Bild gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-151">No image will be stored.</span></span> <span data-ttu-id="563f9-152">Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [LargePersonGroup PersonFace - löschen](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) oder [LargePersonGroup – löschen](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="563f9-152">Only the extracted face feature will be stored on server until [LargePersonGroup PersonFace - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
+      <br /> <span data-ttu-id="563f9-153">Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="563f9-153">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="563f9-154">Höhere Gesicht Bildqualität bedeutet eine bessere Erkennung mit einfacher Genauigkeit.</span><span class="sxs-lookup"><span data-stu-id="563f9-154">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="563f9-155">Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.</span><span class="sxs-lookup"><span data-stu-id="563f9-155">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="563f9-156">Jeder Person-Eintrag kann bis zu 248 Flächen enthalten.</span><span class="sxs-lookup"><span data-stu-id="563f9-156">Each person entry can hold up to 248 faces.</span></span>
+      * <span data-ttu-id="563f9-157">JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="563f9-157">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="563f9-158">Die zulässige Dateigröße liegt zwischen 1KB und 6MB.</span><span class="sxs-lookup"><span data-stu-id="563f9-158">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="563f9-159">"TargetFace" Rechteck sollte eine Seite enthalten.</span><span class="sxs-lookup"><span data-stu-id="563f9-159">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="563f9-160">Keine oder mehrere Gesichter werden als Fehler betrachtet werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-160">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="563f9-161">Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="563f9-161">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="563f9-162">Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.</span><span class="sxs-lookup"><span data-stu-id="563f9-162">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="563f9-163">Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="563f9-163">Adding/deleting faces to/from a same person will be processed sequentially.</span></span> <span data-ttu-id="563f9-164">Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="563f9-164">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
+      * <span data-ttu-id="563f9-165">Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.</span><span class="sxs-lookup"><span data-stu-id="563f9-165">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="563f9-166">Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.</span><span class="sxs-lookup"><span data-stu-id="563f9-166">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="563f9-167">Verschiedene "DetectionModel'-Werte können angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-167">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="563f9-168">Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="563f9-168">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="563f9-169">Modell</span><span class="sxs-lookup"><span data-stu-id="563f9-169">Model</span></span> | <span data-ttu-id="563f9-170">Empfohlene Verwendung-case(s)</span><span class="sxs-lookup"><span data-stu-id="563f9-170">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="563f9-171">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="563f9-171">'detection_01':</span></span> | <span data-ttu-id="563f9-172">Das Standardmodell für die Erkennung für [LargePersonGroup Person - hinzufügen</span><span class="sxs-lookup"><span data-stu-id="563f9-172">The default detection model for [LargePersonGroup Person - Add</span></span>
+      <span data-ttu-id="563f9-173">Face](/docs/Services/563879b61984550e40cbbe8d/Operations/599adf2a3a7b9412a4d53f42).</span><span class="sxs-lookup"><span data-stu-id="563f9-173">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span></span> <span data-ttu-id="563f9-174">Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen.</span><span class="sxs-lookup"><span data-stu-id="563f9-174">Recommend for near frontal face detection.</span></span> <span data-ttu-id="563f9-175">Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt.</span><span class="sxs-lookup"><span data-stu-id="563f9-175">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="563f9-176">| | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter.</span><span class="sxs-lookup"><span data-stu-id="563f9-176">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-123">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-123">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-177">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-177">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-124">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-124">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-178">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-178">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="23319-125">Öffentlich erreichbar URL eines Bilds</span><span class="sxs-lookup"><span data-stu-id="23319-125">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="563f9-179">Öffentlich erreichbar URL eines Bilds</span><span class="sxs-lookup"><span data-stu-id="563f9-179">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams
@@ -216,20 +246,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-126">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-126">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-180">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-180">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-127">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-127">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-181">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-181">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="23319-128">Öffentlich erreichbar URL eines Bilds</span><span class="sxs-lookup"><span data-stu-id="23319-128">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="563f9-182">Öffentlich erreichbar URL eines Bilds</span><span class="sxs-lookup"><span data-stu-id="563f9-182">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="23319-129">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-129">The callback</span></span>
+            <span data-ttu-id="563f9-183">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-183">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromUrlResponse>
@@ -247,16 +277,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-130">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-130">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-184">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-184">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonCreateOptionalParams'
-          description: <span data-ttu-id="23319-131">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-131">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-185">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-185">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="23319-132">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-132">The callback</span></span>
+            <span data-ttu-id="563f9-186">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-186">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonCreateResponse>
@@ -267,14 +297,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="23319-133">Hiermit erstellen Sie eine neue Person in einer angegebenen umfangreichen Personengruppe.</span><span class="sxs-lookup"><span data-stu-id="23319-133">Create a new person in a specified large person group.</span></span>
+    summary: <span data-ttu-id="563f9-187">Hiermit erstellen Sie eine neue Person in einer angegebenen umfangreichen Personengruppe.</span><span class="sxs-lookup"><span data-stu-id="563f9-187">Create a new person in a specified large person group.</span></span>
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupPersonCreateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-134">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-134">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-188">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-188">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonCreateOptionalParams
@@ -297,12 +327,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-135">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-135">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-189">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-189">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="23319-136">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-136">The callback</span></span>
+            <span data-ttu-id="563f9-190">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-190">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonCreateResponse>
@@ -313,22 +343,25 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="23319-137">Löschen Sie eine Fläche, von einer Person.</span><span class="sxs-lookup"><span data-stu-id="23319-137">Delete a face from a person.</span></span> <span data-ttu-id="23319-138">Relative-Funktion für das persistente Gesicht werden ebenfalls gelöscht.</span><span class="sxs-lookup"><span data-stu-id="23319-138">Relative feature for the persisted face will also be deleted.</span></span>'
+    summary: |-
+      <span data-ttu-id="563f9-191">Löschen Sie ein Gesicht von einer Person in einer großen Personengruppe, indem die angegebenen LargePersonGroupId, PersonId und PersistedFaceId.</span><span class="sxs-lookup"><span data-stu-id="563f9-191">Delete a face from a person in a large person group by specified largePersonGroupId, personId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="563f9-192">Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="563f9-192">Adding/deleting faces to/from a same person will be processed sequentially.</span></span>
+      <span data-ttu-id="563f9-193">Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="563f9-193">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-139">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-139">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-194">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-194">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-140">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-140">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-195">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-195">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-141">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-141">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-196">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-196">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -351,24 +384,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-142">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-142">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-197">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-197">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-143">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-143">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-198">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-198">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-144">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-144">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-199">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-199">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="23319-145">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-145">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-200">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-200">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-146">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-146">The callback</span></span>
+            <span data-ttu-id="563f9-201">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-201">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -386,20 +419,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-147">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-147">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-202">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-202">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-148">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-148">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-203">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-203">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-149">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-149">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-204">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-204">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-150">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-150">The callback</span></span>
+            <span data-ttu-id="563f9-205">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-205">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -410,18 +443,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="23319-151">Hiermit löschen Sie eine vorhandene Person aus einer umfangreichen Personengruppe.</span><span class="sxs-lookup"><span data-stu-id="23319-151">Delete an existing person from a large person group.</span></span> <span data-ttu-id="23319-152">Alle Person-Daten gespeichert und gesichtserkennungs-Funktionen in den Person-Eintrag gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="23319-152">All stored person data, and face features in the person entry will be deleted.</span></span>'
+    summary: '<span data-ttu-id="563f9-206">Hiermit löschen Sie eine vorhandene Person aus einer umfangreichen Personengruppe.</span><span class="sxs-lookup"><span data-stu-id="563f9-206">Delete an existing person from a large person group.</span></span> <span data-ttu-id="563f9-207">Die PersistedFaceId, UserData, werden alle Person-Name und gesichtserkennungs-Funktion in der Person-Eintrag gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="563f9-207">The persistedFaceId, userData, person name and face feature in the person entry will all be deleted.</span></span>'
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-153">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-153">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-208">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-208">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-154">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-154">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-209">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-209">Id referencing a particular person.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -444,20 +477,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-155">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-155">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-210">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-210">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-156">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-156">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-211">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-211">Id referencing a particular person.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="23319-157">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-157">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-212">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-212">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-158">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-158">The callback</span></span>
+            <span data-ttu-id="563f9-213">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-213">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -475,16 +508,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-159">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-159">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-214">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-214">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-160">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-160">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-215">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-215">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-161">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-161">The callback</span></span>
+            <span data-ttu-id="563f9-216">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-216">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -495,18 +528,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="23319-162">Abrufen einer Person-Informationen, einschließlich registrierte gespeicherte Gesichter "," Name "und" UserData an.</span><span class="sxs-lookup"><span data-stu-id="23319-162">Retrieve a person''s information, including registered persisted faces, name and userData.</span></span>'
+    summary: '<span data-ttu-id="563f9-217">Rufen Sie den Namen einer Person und UserData und die persistenten FaceIds die registrierten Person gesichtserkennungs-Funktion darstellt.</span><span class="sxs-lookup"><span data-stu-id="563f9-217">Retrieve a person''s name and userData, and the persisted faceIds representing the registered person face feature.</span></span>'
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-163">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-163">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-218">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-218">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-164">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-164">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-219">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-219">Id referencing a particular person.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -529,20 +562,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-165">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-165">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-220">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-220">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-166">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-166">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-221">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-221">Id referencing a particular person.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="23319-167">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-167">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-222">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-222">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="23319-168">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-168">The callback</span></span>
+            <span data-ttu-id="563f9-223">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-223">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetResponse>
@@ -560,16 +593,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-169">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-169">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-224">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-224">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-170">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-170">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-225">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-225">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="23319-171">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-171">The callback</span></span>
+            <span data-ttu-id="563f9-226">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-226">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetResponse>
@@ -580,22 +613,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="23319-172">Abrufen von Informationen zu einer dauerhaften Fläche (angegeben durch PersistedFaceId, PersonId und seine LargePersonGroupId gehören).</span><span class="sxs-lookup"><span data-stu-id="23319-172">Retrieve information about a persisted face (specified by persistedFaceId, personId and its belonging largePersonGroupId).</span></span>'
+    summary: '<span data-ttu-id="563f9-227">Abrufen von Informationen zu einer dauerhaften Fläche (angegeben durch PersistedFaceId, PersonId und seine LargePersonGroupId gehören).</span><span class="sxs-lookup"><span data-stu-id="563f9-227">Retrieve information about a persisted face (specified by persistedFaceId, personId and its belonging largePersonGroupId).</span></span>'
     syntax:
       content: 'function getFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-173">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-173">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-228">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-228">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-174">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-174">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-229">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-229">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-175">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-175">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-230">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-230">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -618,24 +651,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-176">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-176">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-231">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-231">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-177">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-177">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-232">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-232">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-178">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-178">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-233">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="23319-179">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-179">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-234">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="23319-180">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-180">The callback</span></span>
+            <span data-ttu-id="563f9-235">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-235">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetFaceResponse>
@@ -653,20 +686,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-181">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-181">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-236">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-236">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-182">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-182">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-237">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-237">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-183">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-183">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-238">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-238">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="23319-184">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-184">The callback</span></span>
+            <span data-ttu-id="563f9-239">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-239">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetFaceResponse>
@@ -677,7 +710,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="23319-185">Erstellen Sie eine LargePersonGroupPerson.</span><span class="sxs-lookup"><span data-stu-id="23319-185">Create a LargePersonGroupPerson.</span></span>
+    summary: <span data-ttu-id="563f9-240">Erstellen Sie eine LargePersonGroupPerson.</span><span class="sxs-lookup"><span data-stu-id="563f9-240">Create a LargePersonGroupPerson.</span></span>
     syntax:
       content: 'new LargePersonGroupPerson(client: FaceClientContext)'
       parameters:
@@ -685,7 +718,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="23319-186">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="23319-186">Reference to the service client.</span></span>
+            <span data-ttu-id="563f9-241">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="563f9-241">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPerson.list_2'
     name: 'list(string, LargePersonGroupPersonListOptionalParams, ServiceCallback<Person[]>)'
@@ -700,16 +733,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-187">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-187">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-242">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-242">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonListOptionalParams'
-          description: <span data-ttu-id="23319-188">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-188">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-243">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-243">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.Person[]>'
           description: |
-            <span data-ttu-id="23319-189">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-189">The callback</span></span>
+            <span data-ttu-id="563f9-244">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-244">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonListResponse>
@@ -720,14 +753,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="23319-190">Listen Sie alle Personen in einer großen Personengruppe, und rufen Sie Person-Informationen (einschließlich PersonId "," Name "," UserData "und" PersistedFaceIds registrierten Gesichter der Person ab).</span><span class="sxs-lookup"><span data-stu-id="23319-190">List all persons in a large person group, and retrieve person information (including personId, name, userData and persistedFaceIds of registered faces of the person).</span></span>'
+    summary: '<span data-ttu-id="563f9-245">Listen Sie alle Personen in einer großen Personengruppe, und rufen Sie Person-Informationen (einschließlich PersonId "," Name "," UserData "und" PersistedFaceIds registrierten Gesichter der Person ab).</span><span class="sxs-lookup"><span data-stu-id="563f9-245">List all persons in a large person group, and retrieve person information (including personId, name, userData and persistedFaceIds of registered faces of the person).</span></span>'
     syntax:
       content: 'function list(largePersonGroupId: string, options?: Models.LargePersonGroupPersonListOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-191">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-191">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-246">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-246">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonListOptionalParams
@@ -750,12 +783,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-192">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-192">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-247">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-247">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.Person[]>'
           description: |
-            <span data-ttu-id="23319-193">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-193">The callback</span></span>
+            <span data-ttu-id="563f9-248">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-248">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonListResponse>
@@ -773,20 +806,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-194">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-194">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-249">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-249">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-195">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-195">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-250">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-250">Id referencing a particular person.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonUpdateOptionalParams'
-          description: <span data-ttu-id="23319-196">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-196">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-251">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-251">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-197">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-197">The callback</span></span>
+            <span data-ttu-id="563f9-252">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-252">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -797,18 +830,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="23319-198">Hiermit aktualisieren Sie den Namen oder die userData-Angabe einer Person.</span><span class="sxs-lookup"><span data-stu-id="23319-198">Update name or userData of a person.</span></span>
+    summary: <span data-ttu-id="563f9-253">Hiermit aktualisieren Sie den Namen oder die userData-Angabe einer Person.</span><span class="sxs-lookup"><span data-stu-id="563f9-253">Update name or userData of a person.</span></span>
     syntax:
       content: 'function update(largePersonGroupId: string, personId: string, options?: Models.LargePersonGroupPersonUpdateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-199">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-199">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-254">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-254">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-200">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-200">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-255">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-255">Id referencing a particular person.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonUpdateOptionalParams
@@ -831,16 +864,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-201">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-201">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-256">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-256">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-202">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-202">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-257">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-257">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-203">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-203">The callback</span></span>
+            <span data-ttu-id="563f9-258">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-258">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -858,24 +891,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-204">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-204">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-259">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-259">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-205">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-205">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-260">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-260">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-206">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-206">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-261">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-261">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonUpdateFaceOptionalParams'
-          description: <span data-ttu-id="23319-207">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="23319-207">The optional parameters</span></span>
+          description: <span data-ttu-id="563f9-262">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="563f9-262">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-208">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-208">The callback</span></span>
+            <span data-ttu-id="563f9-263">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-263">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -886,22 +919,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="23319-209">Hiermit aktualisieren Sie das userData-Feld des gespeicherten Gesichts einer Person.</span><span class="sxs-lookup"><span data-stu-id="23319-209">Update a person persisted face's userData field.</span></span>
+    summary: <span data-ttu-id="563f9-264">Hiermit aktualisieren Sie das userData-Feld des gespeicherten Gesichts einer Person.</span><span class="sxs-lookup"><span data-stu-id="563f9-264">Update a person persisted face's userData field.</span></span>
     syntax:
       content: 'function updateFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: Models.LargePersonGroupPersonUpdateFaceOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-210">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-210">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-265">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-265">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-211">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-211">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-266">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-266">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-212">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-212">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-267">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-267">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonUpdateFaceOptionalParams
@@ -924,20 +957,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="23319-213">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-213">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="563f9-268">ID eine bestimmten große Person-Gruppe verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-268">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="23319-214">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="23319-214">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="563f9-269">ID eine bestimmte Person verweisen.</span><span class="sxs-lookup"><span data-stu-id="563f9-269">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="23319-215">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="23319-215">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="563f9-270">Verweisen auf eine bestimmte PersistedFaceId einer vorhandenen Oberfläche ID.</span><span class="sxs-lookup"><span data-stu-id="563f9-270">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="23319-216">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="23319-216">The callback</span></span>
+            <span data-ttu-id="563f9-271">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="563f9-271">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

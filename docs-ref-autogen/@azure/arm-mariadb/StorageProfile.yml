@@ -6,11 +6,12 @@ items:
     children:
       - '@azure/arm-mariadb.StorageProfile.backupRetentionDays'
       - '@azure/arm-mariadb.StorageProfile.geoRedundantBackup'
+      - '@azure/arm-mariadb.StorageProfile.storageAutogrow'
       - '@azure/arm-mariadb.StorageProfile.storageMB'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="eaea2-101">Speicher-Profileigenschaften eines Servers</span><span class="sxs-lookup"><span data-stu-id="eaea2-101">Storage Profile properties of a server</span></span>
+    summary: <span data-ttu-id="b6f98-101">Speicher-Profileigenschaften eines Servers</span><span class="sxs-lookup"><span data-stu-id="b6f98-101">Storage Profile properties of a server</span></span>
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.StorageProfile.backupRetentionDays'
     name: backupRetentionDays
@@ -19,7 +20,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="eaea2-102">Tage der Aufbewahrung von Sicherungen für den Server.</span><span class="sxs-lookup"><span data-stu-id="eaea2-102">Backup retention days for the server.</span></span>
+    summary: <span data-ttu-id="b6f98-102">Tage der Aufbewahrung von Sicherungen für den Server.</span><span class="sxs-lookup"><span data-stu-id="b6f98-102">Backup retention days for the server.</span></span>
     optional: true
     syntax:
       content: 'backupRetentionDays?: undefined | number'
@@ -34,13 +35,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="eaea2-103">Aktivieren der georedundanten oder nicht für Server-Sicherung.</span><span class="sxs-lookup"><span data-stu-id="eaea2-103">Enable Geo-redundant or not for server backup.</span></span> <span data-ttu-id="eaea2-104">Mögliche Werte sind: ''Enabled'', ''Disabled''</span><span class="sxs-lookup"><span data-stu-id="eaea2-104">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    summary: '<span data-ttu-id="b6f98-103">Aktivieren der georedundanten oder nicht für Server-Sicherung.</span><span class="sxs-lookup"><span data-stu-id="b6f98-103">Enable Geo-redundant or not for server backup.</span></span> <span data-ttu-id="b6f98-104">Mögliche Werte sind: ''Enabled'', ''Disabled''</span><span class="sxs-lookup"><span data-stu-id="b6f98-104">Possible values include: ''Enabled'', ''Disabled''</span></span>'
     optional: true
     syntax:
       content: 'geoRedundantBackup?: GeoRedundantBackup'
       return:
         type:
           - '@azure/arm-mariadb.GeoRedundantBackup'
+    package: '@azure/arm-mariadb'
+  - uid: '@azure/arm-mariadb.StorageProfile.storageAutogrow'
+    name: storageAutogrow
+    fullName: storageAutogrow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b6f98-105">Aktivieren von Storage automatisch vergrößert.</span><span class="sxs-lookup"><span data-stu-id="b6f98-105">Enable Storage Auto Grow.</span></span> <span data-ttu-id="b6f98-106">Mögliche Werte sind: ''Enabled'', ''Disabled''</span><span class="sxs-lookup"><span data-stu-id="b6f98-106">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    optional: true
+    syntax:
+      content: 'storageAutogrow?: StorageAutogrow'
+      return:
+        type:
+          - '@azure/arm-mariadb.StorageAutogrow'
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.StorageProfile.storageMB'
     name: storageMB
@@ -49,7 +65,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="eaea2-105">Max. Speicherkapazität für einen Server zulässig.</span><span class="sxs-lookup"><span data-stu-id="eaea2-105">Max storage allowed for a server.</span></span>
+    summary: <span data-ttu-id="b6f98-107">Max. Speicherkapazität für einen Server zulässig.</span><span class="sxs-lookup"><span data-stu-id="b6f98-107">Max storage allowed for a server.</span></span>
     optional: true
     syntax:
       content: 'storageMB?: undefined | number'
@@ -64,3 +80,9 @@ references:
       - name: GeoRedundantBackup
         fullName: GeoRedundantBackup
         uid: '@azure/arm-mariadb.GeoRedundantBackup'
+  - uid: '@azure/arm-mariadb.StorageAutogrow'
+    name: StorageAutogrow
+    spec.typeScript:
+      - name: StorageAutogrow
+        fullName: StorageAutogrow
+        uid: '@azure/arm-mariadb.StorageAutogrow'

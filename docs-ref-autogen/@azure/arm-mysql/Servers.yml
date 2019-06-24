@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-mysql.Servers.beginCreate'
       - '@azure/arm-mysql.Servers.beginDeleteMethod'
+      - '@azure/arm-mysql.Servers.beginRestart'
       - '@azure/arm-mysql.Servers.beginUpdate'
       - '@azure/arm-mysql.Servers.create'
       - '@azure/arm-mysql.Servers.deleteMethod'
@@ -18,12 +19,13 @@ items:
       - '@azure/arm-mysql.Servers.listByResourceGroup'
       - '@azure/arm-mysql.Servers.listByResourceGroup_2'
       - '@azure/arm-mysql.Servers.listByResourceGroup_1'
+      - '@azure/arm-mysql.Servers.restart'
       - '@azure/arm-mysql.Servers.constructor'
       - '@azure/arm-mysql.Servers.update'
     langs:
       - typeScript
     type: class
-    summary: '<span data-ttu-id="203ee-101">Klasse, die ein Server darstellt.</span><span class="sxs-lookup"><span data-stu-id="203ee-101">Class representing a Servers.</span></span>'
+    summary: '<span data-ttu-id="025fc-101">Klasse, die ein Server darstellt.</span><span class="sxs-lookup"><span data-stu-id="025fc-101">Class representing a Servers.</span></span>'
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.Servers.beginCreate'
     name: 'beginCreate(string, string, ServerForCreate, msRest.RequestOptionsBase)'
@@ -31,22 +33,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-102">Erstellt einen neuen Server oder aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-102">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="203ee-103">Die Update-Aktion wird den vorhandenen Server überschrieben.</span><span class="sxs-lookup"><span data-stu-id="203ee-103">The update action will overwrite the existing server.</span></span>
+    summary: <span data-ttu-id="025fc-102">Erstellt einen neuen Server oder aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-102">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="025fc-103">Die Update-Aktion wird den vorhandenen Server überschrieben.</span><span class="sxs-lookup"><span data-stu-id="025fc-103">The update action will overwrite the existing server.</span></span>
     syntax:
       content: 'function beginCreate(resourceGroupName: string, serverName: string, parameters: ServerForCreate, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-104">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-105">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-104">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-105">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-106">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-106">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-106">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-106">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerForCreate'
-          description: <span data-ttu-id="203ee-107">Die erforderlichen Parameter zum Erstellen oder Aktualisieren eines Servers.</span><span class="sxs-lookup"><span data-stu-id="203ee-107">The required parameters for creating or updating a server.</span></span>
+          description: <span data-ttu-id="025fc-107">Die erforderlichen Parameter zum Erstellen oder Aktualisieren eines Servers.</span><span class="sxs-lookup"><span data-stu-id="025fc-107">The required parameters for creating or updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -62,18 +64,45 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-108">Löscht einen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-108">Deletes a server.</span></span>
+    summary: <span data-ttu-id="025fc-108">Löscht einen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-108">Deletes a server.</span></span>
     syntax:
       content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-109">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-110">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-109">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-110">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-111">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-111">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-111">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-111">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.beginRestart'
+    name: 'beginRestart(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="025fc-112">Startet einen Server neu.</span><span class="sxs-lookup"><span data-stu-id="025fc-112">Restarts a server.</span></span>
+    syntax:
+      content: 'function beginRestart(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="025fc-113">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-113">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-114">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-114">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="025fc-115">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-115">The name of the server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -89,22 +118,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-112">Aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-112">Updates an existing server.</span></span> <span data-ttu-id="203ee-113">Der Anforderungstext darf eins zu viele der Eigenschaften in der normalen-Definition vorhanden.</span><span class="sxs-lookup"><span data-stu-id="203ee-113">The request body can contain one to many of the properties present in the normal server definition.</span></span>
+    summary: <span data-ttu-id="025fc-116">Aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-116">Updates an existing server.</span></span> <span data-ttu-id="025fc-117">Der Anforderungstext darf eins zu viele der Eigenschaften in der normalen-Definition vorhanden.</span><span class="sxs-lookup"><span data-stu-id="025fc-117">The request body can contain one to many of the properties present in the normal server definition.</span></span>
     syntax:
       content: 'function beginUpdate(resourceGroupName: string, serverName: string, parameters: ServerUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-114">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-115">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-118">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-118">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-119">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-119">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-116">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-116">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-120">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-120">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerUpdateParameters'
-          description: <span data-ttu-id="203ee-117">Die erforderlichen Parameter für die Aktualisierung eines Servers.</span><span class="sxs-lookup"><span data-stu-id="203ee-117">The required parameters for updating a server.</span></span>
+          description: <span data-ttu-id="025fc-121">Die erforderlichen Parameter für die Aktualisierung eines Servers.</span><span class="sxs-lookup"><span data-stu-id="025fc-121">The required parameters for updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -120,22 +149,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-118">Erstellt einen neuen Server oder aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-118">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="203ee-119">Die Update-Aktion wird den vorhandenen Server überschrieben.</span><span class="sxs-lookup"><span data-stu-id="203ee-119">The update action will overwrite the existing server.</span></span>
+    summary: <span data-ttu-id="025fc-122">Erstellt einen neuen Server oder aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-122">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="025fc-123">Die Update-Aktion wird den vorhandenen Server überschrieben.</span><span class="sxs-lookup"><span data-stu-id="025fc-123">The update action will overwrite the existing server.</span></span>
     syntax:
       content: 'function create(resourceGroupName: string, serverName: string, parameters: ServerForCreate, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-120">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-121">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-124">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-124">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-125">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-125">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-122">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-122">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-126">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-126">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerForCreate'
-          description: <span data-ttu-id="203ee-123">Die erforderlichen Parameter zum Erstellen oder Aktualisieren eines Servers.</span><span class="sxs-lookup"><span data-stu-id="203ee-123">The required parameters for creating or updating a server.</span></span>
+          description: <span data-ttu-id="025fc-127">Die erforderlichen Parameter zum Erstellen oder Aktualisieren eines Servers.</span><span class="sxs-lookup"><span data-stu-id="025fc-127">The required parameters for creating or updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -151,18 +180,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-124">Löscht einen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-124">Deletes a server.</span></span>
+    summary: <span data-ttu-id="025fc-128">Löscht einen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-128">Deletes a server.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-125">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-125">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-126">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-126">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-129">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-130">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-127">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-127">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-131">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-131">The name of the server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -178,18 +207,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-128">Ruft Informationen zu einem Server ab.</span><span class="sxs-lookup"><span data-stu-id="203ee-128">Gets information about a server.</span></span>
+    summary: <span data-ttu-id="025fc-132">Ruft Informationen zu einem Server ab.</span><span class="sxs-lookup"><span data-stu-id="025fc-132">Gets information about a server.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-129">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-130">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-133">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-133">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-134">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-134">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-131">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-131">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-135">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-135">The name of the server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -212,20 +241,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-132">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-133">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-136">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-137">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-134">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-134">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-138">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-138">The name of the server.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="203ee-135">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="203ee-135">The optional parameters</span></span>
+          description: <span data-ttu-id="025fc-139">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="025fc-139">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.Server>
           description: |
-            <span data-ttu-id="203ee-136">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="203ee-136">The callback</span></span>
+            <span data-ttu-id="025fc-140">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="025fc-140">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersGetResponse>
@@ -243,16 +272,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-137">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-137">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-138">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-141">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-141">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-142">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-142">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-139">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-139">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-143">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-143">The name of the server.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.Server>
           description: |
-            <span data-ttu-id="203ee-140">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="203ee-140">The callback</span></span>
+            <span data-ttu-id="025fc-144">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="025fc-144">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersGetResponse>
@@ -263,7 +292,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-141">Listen Sie alle Server in einem bestimmten Abonnement.</span><span class="sxs-lookup"><span data-stu-id="203ee-141">List all the servers in a given subscription.</span></span>
+    summary: <span data-ttu-id="025fc-145">Listen Sie alle Server in einem bestimmten Abonnement.</span><span class="sxs-lookup"><span data-stu-id="025fc-145">List all the servers in a given subscription.</span></span>
     syntax:
       content: 'function list(options?: msRest.RequestOptionsBase)'
       parameters:
@@ -289,12 +318,12 @@ items:
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="203ee-142">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="203ee-142">The optional parameters</span></span>
+          description: <span data-ttu-id="025fc-146">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="025fc-146">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="203ee-143">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="203ee-143">The callback</span></span>
+            <span data-ttu-id="025fc-147">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="025fc-147">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListResponse>
@@ -313,7 +342,7 @@ items:
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="203ee-144">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="203ee-144">The callback</span></span>
+            <span data-ttu-id="025fc-148">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="025fc-148">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListResponse>
@@ -324,14 +353,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-145">Listen Sie alle Server in einer bestimmten Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="203ee-145">List all the servers in a given resource group.</span></span>
+    summary: <span data-ttu-id="025fc-149">Listen Sie alle Server in einer bestimmten Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="025fc-149">List all the servers in a given resource group.</span></span>
     syntax:
       content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-146">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-147">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-150">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-150">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-151">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -354,16 +383,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-148">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-149">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-152">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-153">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="203ee-150">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="203ee-150">The optional parameters</span></span>
+          description: <span data-ttu-id="025fc-154">Die optionalen Parameter</span><span class="sxs-lookup"><span data-stu-id="025fc-154">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="203ee-151">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="203ee-151">The callback</span></span>
+            <span data-ttu-id="025fc-155">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="025fc-155">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListByResourceGroupResponse>
@@ -381,15 +410,42 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-152">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-153">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-156">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-156">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-157">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-157">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="203ee-154">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="203ee-154">The callback</span></span>
+            <span data-ttu-id="025fc-158">Der Rückruf</span><span class="sxs-lookup"><span data-stu-id="025fc-158">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListByResourceGroupResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.restart'
+    name: 'restart(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="025fc-159">Startet einen Server neu.</span><span class="sxs-lookup"><span data-stu-id="025fc-159">Restarts a server.</span></span>
+    syntax:
+      content: 'function restart(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="025fc-160">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-160">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-161">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-161">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="025fc-162">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-162">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.Servers.constructor'
     name: Servers(MySQLManagementClientContext)
@@ -397,7 +453,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-155">Erstellen Sie einen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-155">Create a Servers.</span></span>
+    summary: <span data-ttu-id="025fc-163">Erstellen Sie einen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-163">Create a Servers.</span></span>
     syntax:
       content: 'new Servers(client: MySQLManagementClientContext)'
       parameters:
@@ -405,7 +461,7 @@ items:
           type:
             - '@azure/arm-mysql.MySQLManagementClientContext'
           description: |
-            <span data-ttu-id="203ee-156">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="203ee-156">Reference to the service client.</span></span>
+            <span data-ttu-id="025fc-164">Verweis auf den Dienstclient.</span><span class="sxs-lookup"><span data-stu-id="025fc-164">Reference to the service client.</span></span>
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.Servers.update'
     name: 'update(string, string, ServerUpdateParameters, msRest.RequestOptionsBase)'
@@ -413,22 +469,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="203ee-157">Aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="203ee-157">Updates an existing server.</span></span> <span data-ttu-id="203ee-158">Der Anforderungstext darf eins zu viele der Eigenschaften in der normalen-Definition vorhanden.</span><span class="sxs-lookup"><span data-stu-id="203ee-158">The request body can contain one to many of the properties present in the normal server definition.</span></span>
+    summary: <span data-ttu-id="025fc-165">Aktualisiert einen vorhandenen Server.</span><span class="sxs-lookup"><span data-stu-id="025fc-165">Updates an existing server.</span></span> <span data-ttu-id="025fc-166">Der Anforderungstext darf eins zu viele der Eigenschaften in der normalen-Definition vorhanden.</span><span class="sxs-lookup"><span data-stu-id="025fc-166">The request body can contain one to many of the properties present in the normal server definition.</span></span>
     syntax:
       content: 'function update(resourceGroupName: string, serverName: string, parameters: ServerUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: '<span data-ttu-id="203ee-159">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="203ee-159">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="203ee-160">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="203ee-160">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+          description: '<span data-ttu-id="025fc-167">Der Name der Ressourcengruppe, die die Ressource enthält.</span><span class="sxs-lookup"><span data-stu-id="025fc-167">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="025fc-168">Dieser Wert kann über die Azure-Ressourcen-Manager-API oder das Portal abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="025fc-168">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="203ee-161">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="203ee-161">The name of the server.</span></span>
+          description: <span data-ttu-id="025fc-169">Name des Servers</span><span class="sxs-lookup"><span data-stu-id="025fc-169">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerUpdateParameters'
-          description: <span data-ttu-id="203ee-162">Die erforderlichen Parameter für die Aktualisierung eines Servers.</span><span class="sxs-lookup"><span data-stu-id="203ee-162">The required parameters for updating a server.</span></span>
+          description: <span data-ttu-id="025fc-170">Die erforderlichen Parameter für die Aktualisierung eines Servers.</span><span class="sxs-lookup"><span data-stu-id="025fc-170">The required parameters for updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase

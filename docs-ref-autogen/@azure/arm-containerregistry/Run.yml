@@ -24,11 +24,12 @@ items:
       - '@azure/arm-containerregistry.Run.startTime'
       - '@azure/arm-containerregistry.Run.status'
       - '@azure/arm-containerregistry.Run.task'
+      - '@azure/arm-containerregistry.Run.timerTrigger'
       - '@azure/arm-containerregistry.Run.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="c34d5-101">Führen Sie die Ressourceneigenschaften</span><span class="sxs-lookup"><span data-stu-id="c34d5-101">Run resource properties</span></span>
+    summary: <span data-ttu-id="9fa72-101">Führen Sie die Ressourceneigenschaften</span><span class="sxs-lookup"><span data-stu-id="9fa72-101">Run resource properties</span></span>
     extends:
       name: '@azure/arm-containerregistry.ProxyResource'
     package: '@azure/arm-containerregistry'
@@ -39,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c34d5-102">Die Computerkonfiguration des Agents ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="c34d5-102">The machine configuration of the run agent.</span></span>
+    summary: <span data-ttu-id="9fa72-102">Die Computerkonfiguration des Agents ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="9fa72-102">The machine configuration of the run agent.</span></span>
     optional: true
     syntax:
       content: 'agentConfiguration?: AgentProperties'
@@ -54,7 +55,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-103">Die Zeit, für die Ausführung geplant wurde.</span><span class="sxs-lookup"><span data-stu-id="c34d5-103">The time the run was scheduled.</span></span>'
+    summary: '<span data-ttu-id="9fa72-103">Die Zeit, für die Ausführung geplant wurde.</span><span class="sxs-lookup"><span data-stu-id="9fa72-103">The time the run was scheduled.</span></span>'
     optional: true
     syntax:
       content: 'createTime?: Date'
@@ -69,7 +70,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-104">Die Liste der benutzerdefinierten Registrierungen, die während dieser Ausführung erfasst wurden.</span><span class="sxs-lookup"><span data-stu-id="c34d5-104">The list of custom registries that were logged in during this run.</span></span>'
+    summary: '<span data-ttu-id="9fa72-104">Die Liste der benutzerdefinierten Registrierungen, die während dieser Ausführung erfasst wurden.</span><span class="sxs-lookup"><span data-stu-id="9fa72-104">The list of custom registries that were logged in during this run.</span></span>'
     optional: true
     syntax:
       content: 'customRegistries?: string[]'
@@ -84,7 +85,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c34d5-105">Der Zeitpunkt die Ausführung beendet.</span><span class="sxs-lookup"><span data-stu-id="c34d5-105">The time the run finished.</span></span>
+    summary: <span data-ttu-id="9fa72-105">Der Zeitpunkt die Ausführung beendet.</span><span class="sxs-lookup"><span data-stu-id="9fa72-105">The time the run finished.</span></span>
     optional: true
     syntax:
       content: 'finishTime?: Date'
@@ -100,8 +101,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c34d5-106">Die Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="c34d5-106">The resource ID.</span></span>
-      <span data-ttu-id="c34d5-107">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c34d5-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="9fa72-106">Die Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="9fa72-106">The resource ID.</span></span>
+      <span data-ttu-id="9fa72-107">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="9fa72-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -116,7 +117,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-108">Der Image-Update-Trigger, der die Ausführung verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="c34d5-108">The image update trigger that caused the run.</span></span> <span data-ttu-id="c34d5-109">Dies ist anwendbar, wenn der Task weist die Basis-Image-Trigger, die konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="c34d5-109">This is applicable if the task has base image trigger configured.</span></span>'
+    summary: '<span data-ttu-id="9fa72-108">Der Image-Update-Trigger, der die Ausführung verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="9fa72-108">The image update trigger that caused the run.</span></span> <span data-ttu-id="9fa72-109">Dies ist anwendbar, wenn der Task weist die Basis-Image-Trigger, die konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="9fa72-109">This is applicable if the task has base image trigger configured.</span></span>'
     optional: true
     syntax:
       content: 'imageUpdateTrigger?: ImageUpdateTrigger'
@@ -131,7 +132,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-110">Der Wert, der angibt, ob die Archivierung aktiviert ist oder nicht.</span><span class="sxs-lookup"><span data-stu-id="c34d5-110">The value that indicates whether archiving is enabled or not.</span></span> <span data-ttu-id="c34d5-111">Standardwert: false.</span><span class="sxs-lookup"><span data-stu-id="c34d5-111">Default value: false.</span></span>'
+    summary: '<span data-ttu-id="9fa72-110">Der Wert, der angibt, ob die Archivierung aktiviert ist oder nicht.</span><span class="sxs-lookup"><span data-stu-id="9fa72-110">The value that indicates whether archiving is enabled or not.</span></span> <span data-ttu-id="9fa72-111">Standardwert: false.</span><span class="sxs-lookup"><span data-stu-id="9fa72-111">Default value: false.</span></span>'
     optional: true
     syntax:
       content: 'isArchiveEnabled?: undefined | false | true'
@@ -146,7 +147,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c34d5-112">Der letzten Aktualisierung Zeit für die Ausführung an.</span><span class="sxs-lookup"><span data-stu-id="c34d5-112">The last updated time for the run.</span></span>
+    summary: <span data-ttu-id="9fa72-112">Der letzten Aktualisierung Zeit für die Ausführung an.</span><span class="sxs-lookup"><span data-stu-id="9fa72-112">The last updated time for the run.</span></span>
     optional: true
     syntax:
       content: 'lastUpdatedTime?: Date'
@@ -162,8 +163,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c34d5-113">Der Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="c34d5-113">The name of the resource.</span></span>
-      <span data-ttu-id="c34d5-114">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c34d5-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="9fa72-113">Der Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="9fa72-113">The name of the resource.</span></span>
+      <span data-ttu-id="9fa72-114">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="9fa72-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -178,7 +179,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-115">Die Liste aller Images, die aus der Ausführung generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="c34d5-115">The list of all images that were generated from the run.</span></span> <span data-ttu-id="c34d5-116">Dies ist anwendbar, wenn die Ausführung Basisimage Abhängigkeiten generiert.</span><span class="sxs-lookup"><span data-stu-id="c34d5-116">This is applicable if the run generates base image dependencies.</span></span>'
+    summary: '<span data-ttu-id="9fa72-115">Die Liste aller Images, die aus der Ausführung generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="9fa72-115">The list of all images that were generated from the run.</span></span> <span data-ttu-id="9fa72-116">Dies ist anwendbar, wenn die Ausführung Basisimage Abhängigkeiten generiert.</span><span class="sxs-lookup"><span data-stu-id="9fa72-116">This is applicable if the run generates base image dependencies.</span></span>'
     optional: true
     syntax:
       content: 'outputImages?: ImageDescriptor[]'
@@ -193,7 +194,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c34d5-117">Die Plattformeigenschaften für die Ausführung erfolgt.</span><span class="sxs-lookup"><span data-stu-id="c34d5-117">The platform properties against which the run will happen.</span></span>
+    summary: <span data-ttu-id="9fa72-117">Die Plattformeigenschaften für die Ausführung erfolgt.</span><span class="sxs-lookup"><span data-stu-id="9fa72-117">The platform properties against which the run will happen.</span></span>
     optional: true
     syntax:
       content: 'platform?: PlatformProperties'
@@ -208,7 +209,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-118">Der Bereitstellungsstatus einer Ausführung.</span><span class="sxs-lookup"><span data-stu-id="c34d5-118">The provisioning state of a run.</span></span> <span data-ttu-id="c34d5-119">Mögliche Werte sind: ''Creating'', ''Updating'', ''Deleting'', ''Succeeded'', ''Failed'', ''Canceled''</span><span class="sxs-lookup"><span data-stu-id="c34d5-119">Possible values include: ''Creating'', ''Updating'', ''Deleting'', ''Succeeded'', ''Failed'', ''Canceled''</span></span>'
+    summary: '<span data-ttu-id="9fa72-118">Der Bereitstellungsstatus einer Ausführung.</span><span class="sxs-lookup"><span data-stu-id="9fa72-118">The provisioning state of a run.</span></span> <span data-ttu-id="9fa72-119">Mögliche Werte sind: ''Creating'', ''Updating'', ''Deleting'', ''Succeeded'', ''Failed'', ''Canceled''</span><span class="sxs-lookup"><span data-stu-id="9fa72-119">Possible values include: ''Creating'', ''Updating'', ''Deleting'', ''Succeeded'', ''Failed'', ''Canceled''</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
@@ -224,8 +225,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c34d5-120">Die Fehlermeldung, die vom Back-End-Systeme empfangen werden, nachdem die Ausführung geplant ist.</span><span class="sxs-lookup"><span data-stu-id="c34d5-120">The error message received from backend systems after the run is scheduled.</span></span>
-      <span data-ttu-id="c34d5-121">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c34d5-121">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="9fa72-120">Die Fehlermeldung, die vom Back-End-Systeme empfangen werden, nachdem die Ausführung geplant ist.</span><span class="sxs-lookup"><span data-stu-id="9fa72-120">The error message received from backend systems after the run is scheduled.</span></span>
+      <span data-ttu-id="9fa72-121">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="9fa72-121">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'runErrorMessage?: undefined | string'
@@ -240,7 +241,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c34d5-122">Der eindeutige Bezeichner für die Ausführung.</span><span class="sxs-lookup"><span data-stu-id="c34d5-122">The unique identifier for the run.</span></span>
+    summary: <span data-ttu-id="9fa72-122">Der eindeutige Bezeichner für die Ausführung.</span><span class="sxs-lookup"><span data-stu-id="9fa72-122">The unique identifier for the run.</span></span>
     optional: true
     syntax:
       content: 'runId?: undefined | string'
@@ -255,7 +256,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-123">Der Typ des ausführen.</span><span class="sxs-lookup"><span data-stu-id="c34d5-123">The type of run.</span></span> <span data-ttu-id="c34d5-124">Mögliche Werte sind: ''QuickBuild'', ''QuickRun'', ''AutoBuild'', ''AutoRun''</span><span class="sxs-lookup"><span data-stu-id="c34d5-124">Possible values include: ''QuickBuild'', ''QuickRun'', ''AutoBuild'', ''AutoRun''</span></span>'
+    summary: '<span data-ttu-id="9fa72-123">Der Typ des ausführen.</span><span class="sxs-lookup"><span data-stu-id="9fa72-123">The type of run.</span></span> <span data-ttu-id="9fa72-124">Mögliche Werte sind: ''QuickBuild'', ''QuickRun'', ''AutoBuild'', ''AutoRun''</span><span class="sxs-lookup"><span data-stu-id="9fa72-124">Possible values include: ''QuickBuild'', ''QuickRun'', ''AutoBuild'', ''AutoRun''</span></span>'
     optional: true
     syntax:
       content: 'runType?: RunType'
@@ -270,7 +271,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-125">Der Bereich der Anmeldeinformationen, die verwendet wurden, für die Anmeldung bei der quellregistrierung während dieser Ausführung.</span><span class="sxs-lookup"><span data-stu-id="c34d5-125">The scope of the credentials that were used to login to the source registry during this run.</span></span>'
+    summary: '<span data-ttu-id="9fa72-125">Der Bereich der Anmeldeinformationen, die verwendet wurden, für die Anmeldung bei der quellregistrierung während dieser Ausführung.</span><span class="sxs-lookup"><span data-stu-id="9fa72-125">The scope of the credentials that were used to login to the source registry during this run.</span></span>'
     optional: true
     syntax:
       content: 'sourceRegistryAuth?: undefined | string'
@@ -285,7 +286,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-126">Der quelltrigger, die die Ausführung verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="c34d5-126">The source trigger that caused the run.</span></span>'
+    summary: '<span data-ttu-id="9fa72-126">Der quelltrigger, die die Ausführung verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="9fa72-126">The source trigger that caused the run.</span></span>'
     optional: true
     syntax:
       content: 'sourceTrigger?: SourceTriggerDescriptor'
@@ -300,7 +301,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c34d5-127">Die Startzeit der Ausführung.</span><span class="sxs-lookup"><span data-stu-id="c34d5-127">The time the run started.</span></span>
+    summary: <span data-ttu-id="9fa72-127">Die Startzeit der Ausführung.</span><span class="sxs-lookup"><span data-stu-id="9fa72-127">The time the run started.</span></span>
     optional: true
     syntax:
       content: 'startTime?: Date'
@@ -315,7 +316,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-128">Der aktuelle Status der Ausführung.</span><span class="sxs-lookup"><span data-stu-id="c34d5-128">The current status of the run.</span></span> <span data-ttu-id="c34d5-129">Mögliche Werte sind: ''Queued'', ''Started'', ''Running'', ''Succeeded'', ''Failed'', ''Canceled'', ''Error'', ''Timeout''</span><span class="sxs-lookup"><span data-stu-id="c34d5-129">Possible values include: ''Queued'', ''Started'', ''Running'', ''Succeeded'', ''Failed'', ''Canceled'', ''Error'', ''Timeout''</span></span>'
+    summary: '<span data-ttu-id="9fa72-128">Der aktuelle Status der Ausführung.</span><span class="sxs-lookup"><span data-stu-id="9fa72-128">The current status of the run.</span></span> <span data-ttu-id="9fa72-129">Mögliche Werte sind: ''Queued'', ''Started'', ''Running'', ''Succeeded'', ''Failed'', ''Canceled'', ''Error'', ''Timeout''</span><span class="sxs-lookup"><span data-stu-id="9fa72-129">Possible values include: ''Queued'', ''Started'', ''Running'', ''Succeeded'', ''Failed'', ''Canceled'', ''Error'', ''Timeout''</span></span>'
     optional: true
     syntax:
       content: 'status?: RunStatus'
@@ -330,13 +331,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c34d5-130">Die Aufgabe, die für die Ausführung geplant wurde.</span><span class="sxs-lookup"><span data-stu-id="c34d5-130">The task against which run was scheduled.</span></span>'
+    summary: '<span data-ttu-id="9fa72-130">Die Aufgabe, die für die Ausführung geplant wurde.</span><span class="sxs-lookup"><span data-stu-id="9fa72-130">The task against which run was scheduled.</span></span>'
     optional: true
     syntax:
       content: 'task?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Run.timerTrigger'
+    name: timerTrigger
+    fullName: timerTrigger
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9fa72-131">Der Trigger mit Timer, der die Ausführung verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="9fa72-131">The timer trigger that caused the run.</span></span>'
+    optional: true
+    syntax:
+      content: 'timerTrigger?: TimerTriggerDescriptor'
+      return:
+        type:
+          - '@azure/arm-containerregistry.TimerTriggerDescriptor'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Run.type'
     name: type
@@ -346,8 +362,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="c34d5-131">Der Typ der Ressource.</span><span class="sxs-lookup"><span data-stu-id="c34d5-131">The type of the resource.</span></span>
-      <span data-ttu-id="c34d5-132">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="c34d5-132">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="9fa72-132">Der Typ der Ressource.</span><span class="sxs-lookup"><span data-stu-id="9fa72-132">The type of the resource.</span></span>
+      <span data-ttu-id="9fa72-133">**HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**</span><span class="sxs-lookup"><span data-stu-id="9fa72-133">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -412,3 +428,9 @@ references:
       - name: RunStatus
         fullName: RunStatus
         uid: '@azure/arm-containerregistry.RunStatus'
+  - uid: '@azure/arm-containerregistry.TimerTriggerDescriptor'
+    name: TimerTriggerDescriptor
+    spec.typeScript:
+      - name: TimerTriggerDescriptor
+        fullName: TimerTriggerDescriptor
+        uid: '@azure/arm-containerregistry.TimerTriggerDescriptor'

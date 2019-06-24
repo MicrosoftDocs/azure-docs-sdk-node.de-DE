@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ExitOptions
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - azure-batch.ExitOptions.dependencyAction
+      - azure-batch.ExitOptions.jobAction
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.dependencyAction
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="797a5-101">Der Standardwert ist "erfüllen", Exitcode: 0 und "blockieren" für alle anderen beendigungsbedingungen.</span><span class="sxs-lookup"><span data-stu-id="797a5-101">The default is ''satisfy'' for exit code 0, and ''block'' for all other exit conditions.</span></span> <span data-ttu-id="797a5-102">Wenn die Auftrags UsesTaskDependencies-Eigenschaft auf "false", gebe ich die DependencyAction-Eigenschaft einen Fehler zurück, und die Anforderung zum Hinzufügen von Task tritt ein Fehler der ungültige Eigenschaft-Wert festgelegt ist; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="797a5-102">If the Job''s usesTaskDependencies property is set to false, then specifying the dependencyAction property returns an error and the add Task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="797a5-103">Folgende Werte sind möglich: "erfüllen", "block"</span><span class="sxs-lookup"><span data-stu-id="797a5-103">Possible values include: ''satisfy'', ''block''</span></span>'
+    optional: true
+    syntax:
+      content: 'dependencyAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.jobAction
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="797a5-104">Der Standardwert ist "None" für den Exitcode 0, und beenden für alle anderen beendigungsbedingungen.</span><span class="sxs-lookup"><span data-stu-id="797a5-104">The default is none for exit code 0 and terminate for all other exit conditions.</span></span>
+      <span data-ttu-id="797a5-105">Wenn OnTaskFailed-Eigenschaft des Auftrags Noaction ist, gebe ich diese Eigenschaft gibt einen Fehler zurück, und die Anforderung zum Hinzufügen von Task tritt ein Fehler der ungültige Eigenschaft-Wert; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung).</span><span class="sxs-lookup"><span data-stu-id="797a5-105">If the Job's onTaskFailed property is noaction, then specifying this property returns an error and the add Task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="797a5-106">Folgende Werte sind möglich: 'none', 'disable'. 'beendet'</span><span class="sxs-lookup"><span data-stu-id="797a5-106">Possible values include: 'none', 'disable', 'terminate'</span></span>
+    optional: true
+    syntax:
+      content: 'jobAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

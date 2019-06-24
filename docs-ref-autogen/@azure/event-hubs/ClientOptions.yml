@@ -7,10 +7,12 @@ items:
       - '@azure/event-hubs.ClientOptions.dataTransformer'
       - '@azure/event-hubs.ClientOptions.tokenProvider'
       - '@azure/event-hubs.ClientOptions.userAgent'
+      - '@azure/event-hubs.ClientOptions.webSocket'
+      - '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
     langs:
       - typeScript
     type: interface
-    summary: '<span data-ttu-id="7ab44-101">Beschreibt die Optionen, die beim Erstellen der EventHub-Client bereitgestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="7ab44-101">Describes the options that can be provided while creating the EventHub Client.</span></span>'
+    summary: '<span data-ttu-id="8886f-101">Beschreibt die Optionen, die beim Erstellen der EventHub-Client bereitgestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="8886f-101">Describes the options that can be provided while creating the EventHub Client.</span></span>'
     extends:
       name: '@azure/event-hubs.ClientOptionsBase'
     package: '@azure/event-hubs'
@@ -21,7 +23,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7ab44-102">{DataTransformer} [DataTransformer] Transformer Daten, die zum Codieren und Decodieren von der gesendeten und empfangenen Nachrichten jeweils verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7ab44-102">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="7ab44-103">Wenn nicht angegeben, und klicken Sie dann wir die DefaultDataTransformer verwenden.</span><span class="sxs-lookup"><span data-stu-id="7ab44-103">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="7ab44-104">Der Standard-Transformator sollte Mehrheit der Fälle verarbeiten können.</span><span class="sxs-lookup"><span data-stu-id="7ab44-104">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="7ab44-105">Diese Option muss nur für spezielle Szenarien verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7ab44-105">This option needs to be used only for specialized scenarios.</span></span>'
+    summary: '<span data-ttu-id="8886f-102">{DataTransformer} [DataTransformer] Transformer Daten, die zum Codieren und Decodieren von der gesendeten und empfangenen Nachrichten jeweils verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8886f-102">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="8886f-103">Wenn nicht angegeben, und klicken Sie dann wir die DefaultDataTransformer verwenden.</span><span class="sxs-lookup"><span data-stu-id="8886f-103">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="8886f-104">Der Standard-Transformator sollte Mehrheit der Fälle verarbeiten können.</span><span class="sxs-lookup"><span data-stu-id="8886f-104">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="8886f-105">Diese Option muss nur für spezielle Szenarien verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8886f-105">This option needs to be used only for specialized scenarios.</span></span>'
     optional: true
     syntax:
       content: 'dataTransformer?: DataTransformer'
@@ -37,8 +39,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="7ab44-106">{TokenProvider} [TokenProvider] - der Tokenanbieter, der das Token für die Authentifizierung bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="7ab44-106">{TokenProvider} [tokenProvider] - The token provider that provides the token for authentication.</span></span>
-      <span data-ttu-id="7ab44-107">Standardwert: SasTokenProvider.</span><span class="sxs-lookup"><span data-stu-id="7ab44-107">Default value: SasTokenProvider.</span></span>
+      <span data-ttu-id="8886f-106">{TokenProvider} [TokenProvider] - der Tokenanbieter, der das Token für die Authentifizierung bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="8886f-106">{TokenProvider} [tokenProvider] - The token provider that provides the token for authentication.</span></span>
+      <span data-ttu-id="8886f-107">Standardwert: SasTokenProvider.</span><span class="sxs-lookup"><span data-stu-id="8886f-107">Default value: SasTokenProvider.</span></span>
     optional: true
     syntax:
       content: 'tokenProvider?: TokenProvider'
@@ -53,13 +55,48 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7ab44-108">{String} [UserAgent] Der Benutzer-Agent, die an der integrierten Benutzer-Agent-Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7ab44-108">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
+    summary: '<span data-ttu-id="8886f-108">{String} [UserAgent] Der Benutzer-Agent, die an der integrierten Benutzer-Agent-Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="8886f-108">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
     optional: true
     syntax:
-      content: 'userAgent?: string'
+      content: 'userAgent?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8886f-109">Der WebSocket-Konstruktor verwendet, um eine AMQP-Verbindung über einen WebSocket zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="8886f-109">The WebSocket constructor used to create an AMQP connection over a WebSocket.</span></span>
+      <span data-ttu-id="8886f-110">Diese Option muss angegeben werden, der folgenden Szenarien</span><span class="sxs-lookup"><span data-stu-id="8886f-110">This option should be provided in the below scenarios</span></span>
+      - <span data-ttu-id="8886f-111">Der TCP-Port 5671, der von der AMQP-Verbindung mit Event Hubs verwendet wird, wird in Ihrer Umgebung blockiert.</span><span class="sxs-lookup"><span data-stu-id="8886f-111">The TCP port 5671 which is what is used by the AMQP connection to Event Hubs is blocked in your environment.</span></span>
+      - <span data-ttu-id="8886f-112">Ihre Anwendung muss hinter einem Proxyserver ausgeführt werden</span><span class="sxs-lookup"><span data-stu-id="8886f-112">Your application needs to be run behind a proxy server</span></span>
+      - <span data-ttu-id="8886f-113">Ihre Anwendung im Browser ausgeführt werden soll, und Sie Websocket-Implementierung anstelle der integrierten WebSocket im Browser Ihrer Wahl bereitstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="8886f-113">Your application needs to run in the browser and you want to provide your own choice of Websocket implementation instead of the built-in WebSocket in the browser.</span></span>
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8886f-114">{WebSocketConstructorOptions} - Optionen für den WebSocket-Konstruktor übergeben werden</span><span class="sxs-lookup"><span data-stu-id="8886f-114">{webSocketConstructorOptions} - Options to be passed to the WebSocket constructor</span></span>'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
     package: '@azure/event-hubs'
 references:
   - uid: '@azure/event-hubs.ClientOptionsBase'

@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - azure-batch.TaskConstraints.maxTaskRetryCount
+      - azure-batch.TaskConstraints.maxWallClockTime
+      - azure-batch.TaskConstraints.retentionTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a6911-101">Beachten Sie, dass es sich bei diesem Wert wird speziell die Anzahl der Wiederholungen für die Aufgabe ausführbare Datei aufgrund einen Exitcode ungleich NULL gesteuert.</span><span class="sxs-lookup"><span data-stu-id="a6911-101">Note that this value specifically controls the number of retries for the Task executable due to a nonzero exit code.</span></span> <span data-ttu-id="a6911-102">Der Batch-Dienst wiederholt den Task einmal, und es kann bis zu diesem Grenzwert wiederholen.</span><span class="sxs-lookup"><span data-stu-id="a6911-102">The Batch service will try the Task once, and may then retry up to this limit.</span></span> <span data-ttu-id="a6911-103">Ist die maximale Anzahl von Wiederholungsversuchen 3, Batch, versucht der Task bis zu zehnmal 4 z. B. (ein erster Versuch und 3 Wiederholungen).</span><span class="sxs-lookup"><span data-stu-id="a6911-103">For example, if the maximum retry count is 3, Batch tries the Task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="a6911-104">Wenn die maximale Anzahl von Wiederholungsversuchen 0 ist, wird der Batch-Dienst die Aufgabe nach dem ersten Versuch nicht wiederholt.</span><span class="sxs-lookup"><span data-stu-id="a6911-104">If the maximum retry count is 0, the Batch service does not retry the Task after the first attempt.</span></span> <span data-ttu-id="a6911-105">Wenn die maximale Anzahl von Wiederholungsversuchen-1 ist, wiederholt der Batch-Dienst den Task unbegrenzt.</span><span class="sxs-lookup"><span data-stu-id="a6911-105">If the maximum retry count is -1, the Batch service retries the Task without limit.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a6911-106">Wenn dies nicht angegeben wird, ist es keine zeitliche Begrenzung für wie lange die Aufgabe ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="a6911-106">If this is not specified, there is no time limit on how long the Task may run.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a6911-107">Der Standardwert ist 7 Tage, d. h. das Verzeichnis eines Tasks wird werden sieben Tage lang aufbewahrt, wenn der Compute-Knoten entfernt wird, oder der Auftrag gelöscht wird.</span><span class="sxs-lookup"><span data-stu-id="a6911-107">The default is 7 days, i.e. the Task directory will be retained for 7 days unless the Compute Node is removed or the Job is deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
