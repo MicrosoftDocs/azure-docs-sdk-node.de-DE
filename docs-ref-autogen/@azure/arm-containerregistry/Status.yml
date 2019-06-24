@@ -3,63 +3,13 @@ items:
   - uid: '@azure/arm-containerregistry.Status'
     name: Status
     fullName: Status
-    children:
-      - '@azure/arm-containerregistry.Status.displayStatus'
-      - '@azure/arm-containerregistry.Status.message'
-      - '@azure/arm-containerregistry.Status.timestamp'
-    langs:
-      - typeScript
-    type: interface
-    summary: Der Status des Azure-Ressource zum Zeitpunkt der Vorgang aufgerufen wurde.
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.displayStatus'
-    name: displayStatus
-    fullName: displayStatus
     children: []
     langs:
       - typeScript
-    type: property
+    type: type alias
     summary: |-
-      Die kurze Bezeichnung für den Status.
-      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
-    optional: true
+      Definiert Werte für den Status an.
+      Folgende Werte sind möglich: 'enabled', 'deaktiviert'
     syntax:
-      content: 'displayStatus?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.message'
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      Die detaillierte Meldung für den Status, einschließlich Warnungen und Fehlermeldungen.
-      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
-    optional: true
-    syntax:
-      content: 'message?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.timestamp'
-    name: timestamp
-    fullName: timestamp
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      Der Zeitstempel auf den aktuellen Wert der Status geändert wurde.
-      **HINWEIS: Diese Eigenschaft wird nicht serialisiert werden. Es kann nur vom Server aufgefüllt werden.**
-    optional: true
-    syntax:
-      content: 'timestamp?: Date'
-      return:
-        type:
-          - Date
+      content: type Status = "enabled" | "disabled"
     package: '@azure/arm-containerregistry'

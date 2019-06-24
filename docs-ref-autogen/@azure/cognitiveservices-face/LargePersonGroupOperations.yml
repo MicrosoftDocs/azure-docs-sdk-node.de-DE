@@ -66,15 +66,16 @@ items:
       - typeScript
     summary: |-
       Erstellen Sie eine neue große Personengruppe mit benutzerdefinierten LargePersonGroupId, Namen, eine optionale UserData und RecognitionModel.
-      <br /> Eine Gruppe von großen Person ist der Container die hochgeladenen Person-Daten, einschließlich der gesichtserkennungs-Bilder und gesichtserkennungs-Erkennung-Funktion, und bis zu 1.000.000 Personen.
+      <br /> Einer Personengruppe große handelt es sich um den Container hochgeladen Personendaten, einschließlich der gesichtserkennungs-Erkennung-Funktion, und bis zu 1.000.000 Personen.
       <br /> Verwenden Sie nach der Erstellung des [LargePersonGroup Person - erstellen](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) zum Hinzufügen von Person zu der Gruppe, und rufen [LargePersonGroup – Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) auf diese Gruppe vorzubereiten [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Das Gesicht von Person, Bild- und UserData werden auf dem Server, bis gespeichert [LargePersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) oder [LargePersonGroup – löschen](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) aufgerufen wird.
-      <br />
+      <br /> Kein Bild gespeichert werden. Nur die Person, die gesichtserkennungs-Features extrahiert die und UserData werden auf dem Server, bis gespeichert [LargePersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) oder [LargePersonGroup – löschen](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) aufgerufen wird.
+      <br/>'RecognitionModel' muss angegeben werden, dieser Gruppe große Person zugeordnet werden soll. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Neue Flächen, die zu einer vorhandenen großen Personengruppe hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist.
+      Vorhandenen gesichtserkennungs-Funktionen in einer großen Personengruppe können nicht auf Funktionen, die durch eine andere Version des Modells zur Erkennung extrahiert aktualisiert werden.
+      * 'recognition_01': Das Standardmodell für die Erkennung für [LargePersonGroup – erstellen](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d). Alle diese große Personengruppen vor 2019 März erstellt wurden, werden mit diesem Modell zur Erkennung Haftend.
+      * 'recognition_02': Der Modell zur Erkennung im 2019 März veröffentlicht wurde. "recognition_02" wird empfohlen, da die gesamtgenauigkeit im Vergleich zu 'recognition_01' verbessert wird.
+      Kontingent für große Person-Gruppe:
       * Free-Tarif-Abonnement-Kontingent: 1.000 große Personengruppen.
       * Das abonnementkontingent S0-Tarif: 1.000.000 große Personengruppen.
-      <br />
-      'RecognitionModel' muss angegeben werden, dieser Gruppe große Person zugeordnet werden soll. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Neue Flächen, die zu einer vorhandenen großen Personengruppe hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist.
-      Vorhandenen gesichtserkennungs-Funktionen in einer großen Personengruppe können nicht auf Funktionen, die durch eine andere Version des Modells zur Erkennung extrahiert aktualisiert werden.
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupCreateOptionalParams)'
       parameters:

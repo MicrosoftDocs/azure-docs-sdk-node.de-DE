@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NodeUpdateUserParameter
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - azure-batch.NodeUpdateUserParameter.expiryTime
+      - azure-batch.NodeUpdateUserParameter.password
+      - azure-batch.NodeUpdateUserParameter.sshPublicKey
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.expiryTime
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn nicht angegeben, ist die Standardeinstellung 1 Tag nach der aktuellen Uhrzeit. Für Linux-Compute-Knoten weist die ExpiryTime eine Genauigkeit bis zu einem Tag auf.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.password
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Kennwort ist erforderlich für Windows Compute-Knoten (die mit der "CloudServiceConfiguration" erstellt oder mit "VirtualMachineConfiguration" mit einem Windows-Image-Verweis erstellt). Für Linux-Compute-Knoten kann das Kennwort optional zusammen mit der SshPublicKey-Eigenschaft angegeben werden. Wenn nicht angegeben, wird vorhandenes Kennwort entfernt.'
+    optional: true
+    syntax:
+      content: 'password?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.sshPublicKey
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der öffentliche Schlüssel muss kompatibel mit OpenSSH-Codierung und base-64 codiert werden soll. Diese Eigenschaft kann nur für Linux-Compute-Knoten angegeben werden. Wenn dies für einen Windows-Compute-Knoten angegeben wird, lehnt der Batch-Dienst die Anforderung; Wenn Sie die REST-API direkt aufrufen, wird der HTTP-Statuscode 400 (Ungültige Anforderung). Wenn nicht angegeben, wird vorhandenen öffentlichen SSH-Schlüssel entfernt.'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

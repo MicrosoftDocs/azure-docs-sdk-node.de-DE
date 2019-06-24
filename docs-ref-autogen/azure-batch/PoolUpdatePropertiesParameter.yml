@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolUpdatePropertiesParameter
+    name: PoolUpdatePropertiesParameter
+    fullName: PoolUpdatePropertiesParameter
+    children:
+      - azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+      - azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+      - azure-batch.PoolUpdatePropertiesParameter.metadata
+      - azure-batch.PoolUpdatePropertiesParameter.startTask
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Liste ersetzt alle vorhandenen Anwendungspaket Verweise für den Pool.
+      Änderungen an der Anwendung Paketverweise Auswirkungen auf alle neuen Compute-Knoten den Pool beitritt, aber haben keine Auswirkungen auf die Compute-Compute-Knoten, die bereits im Pool befinden, bis er neu gestartet oder ein reimaging durchgeführt werden. Es ist maximal 10 Anwendungspaket Verweise auf den einzelnen Pools. Wenn nicht angegeben, oder wenn Sie eine leere Auflistung angeben, werden alle vorhandenen Anwendungspakete Verweise aus dem Pool entfernt. Maximal 10 verweisen möglicherweise auf einem bestimmten Pool angegeben werden.
+    syntax:
+      content: 'applicationPackageReferences: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Diese Liste ersetzt alle vorhandenen zertifikatverweise, die für den Pool konfiguriert. Wenn Sie eine leere Auflistung angeben, werden alle vorhandenen Verweise für das Zertifikat aus dem Pool entfernt. Für Windows-Knoten installiert der Batch-Dienst die Zertifikate auf den angegebenen Zertifikatspeicher und den Speicherort an. Für Linux-Compute-Knoten werden die Zertifikate gespeichert, in einem Verzeichnis in der Aufgabe arbeiten Verzeichnis und eine Umgebungsvariable, die an die Aufgabe für diesen Standort Abfragen AZ_BATCH_CERTIFICATES_DIR angegeben ist. Für Zertifikate mit Sichtbarkeit "RemoteUser" wird ein "Zertifikate"-Verzeichnis im Basisverzeichnis des Benutzers erstellt (z. B. /home/ {Benutzername} / Certs) und Zertifikate werden in diesem Verzeichnis platziert.'
+    syntax:
+      content: 'certificateReferences: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Diese Liste ersetzt alle vorhandenen Metadaten für den Pool konfiguriert. Wenn nicht angegeben, oder wenn Sie eine leere Auflistung angeben, werden alle vorhandener Metadaten aus dem Pool entfernt.'
+    syntax:
+      content: 'metadata: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn dieses Element vorhanden ist, überschreibt es alle vorhandenen Start-Task. Wenn nicht angegeben, wird vorhandene Start Aufgabe aus dem Pool entfernt.'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask

@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Dem Auftragsfreigabeaufgabe ausgeführt wird, wenn der Auftrag beendet wird, kann eine der folgenden: Der Benutzer ruft die Auftrags-API beendet, oder die löschen-Auftrags-API während der Auftrag noch aktiv ist, des Auftrags maximal Wand Uhr Einschränkung erreicht ist, und der Auftrag weiterhin aktiv ist, oder des Auftrags. Auftrags-Manager-Aufgabe abgeschlossen, und der Auftrag so konfiguriert wird, dass das Beenden bei der der Auftrag verwalten Er ist abgeschlossen.
+      Dem Auftragsfreigabeaufgabe führt auf jedem Knoten, in denen Aufgaben des Auftrags ausgeführt haben und die Auftragsvorbereitungsaufgabe ausgeführt und abgeschlossen. Wenn Sie ein reimaging für Knoten ausführen, nachdem er die Aufgabe zur Auftragsvorbereitung ausgeführt wurde, und der Auftrag beendet wird, denen keine weiteren Aufgaben des Auftrags auf diesem Knoten ausgeführt (und daher die Auftragsvorbereitungsaufgabe wird nicht erneut ausgeführt), und klicken Sie dann dem Auftragsfreigabeaufgabe nicht auf diesem Compute-Knoten ausgeführt wird.
+      Wenn ein Knoten neu gestartet, während dem Auftragsfreigabeaufgabe noch ausgeführt wird, wird dem Auftragsfreigabeaufgabe erneut ausgeführt, wenn der Compute-Knoten wird gestartet. Der Auftrag ist nicht als abgeschlossen markiert, bis alle Auftragsfreigabetasks abgeschlossen sind. Dem Auftragsfreigabeaufgabe wird im Hintergrund ausgeführt. Es ist keine zeitplanung Slot belegen; d. h. es nicht auf den für den Pool angegebene MaxTasksPerNode-Grenzwert gezählt.
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Befehlszeile wird nicht unter einer Shell ausgeführt, und daher nicht nutzen Shellfeatures wie die Erweiterung von Umgebungsvariablen. Wenn Sie solche Features nutzen möchten, Sie sollten die Shell Aufrufen in der Befehlszeile, z. B. mit "Cmd/c MyCommand" in Windows oder "/ Bin/sh - C MyCommand" unter Linux. Bezieht sich die Befehlszeile auf Dateipfade, sollten sie einen relativen Pfad (relativ zum Arbeitsverzeichnis Aufgabe), oder verwenden Sie die angegebene Batch-Umgebungsvariable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn dies angegeben ist, werden alle Verzeichnisse rekursiv unter dem AZ_BATCH_NODE_ROOT_DIR (der Stamm der Azure Batch-Verzeichnisse auf dem Knoten) in den Container zugeordnet, werden alle Variablen in den Container zugeordnet und wird von der Befehlszeile des Tasks in den Container ausgeführt. Dateien, die im Container außerhalb AZ_BATCH_NODE_ROOT_DIR erzeugt möglicherweise nicht auf den Hostdatenträger, was bedeutet, dass die Batchdatei APIs nicht auf diese Dateien zugreifen kann wiedergegeben.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID kann eine beliebige Kombination von alphanumerischen Zeichen einschließlich Bindestriche und Unterstriche enthalten und darf nicht mehr als 64 Zeichen enthalten. Wenn Sie diese Eigenschaft nicht angeben, weist der Batch-Dienst den Standardwert "Jobrelease". Keine anderen Aufgabe im Auftrag haben die gleiche ID wie dem Auftragsfreigabeaufgabe. Wenn Sie versuchen, eine Aufgabe mit der gleichen Id übermitteln, lehnt Sie ab der Batch-Dienst den Fehlercode TaskIdSameAsJobReleaseTask; Wenn Sie die REST-API direkt aufrufen, ist der HTTP-Statuscode 409 (Konflikt) an.'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unter diesem Element aufgeführten Dateien befinden sich im Arbeitsverzeichnis des Tasks.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Standardwert ist 7 Tage, d. h. das Verzeichnis eines Tasks wird werden sieben Tage lang aufbewahrt, wenn der Compute-Knoten entfernt wird, oder der Auftrag gelöscht wird.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn nicht angegeben, wird die Aufgabe als eine eindeutige Benutzer ohne Administratorrechte an die Aufgabe ausgeführt.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

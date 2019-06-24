@@ -9,6 +9,8 @@ items:
       - '@azure/event-hubs.ConnectionContextOptions.managementSessionAudience'
       - '@azure/event-hubs.ConnectionContextOptions.tokenProvider'
       - '@azure/event-hubs.ConnectionContextOptions.userAgent'
+      - '@azure/event-hubs.ConnectionContextOptions.webSocket'
+      - '@azure/event-hubs.ConnectionContextOptions.webSocketConstructorOptions'
     langs:
       - typeScript
     type: interface
@@ -41,10 +43,10 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'managementSessionAddress?: string'
+      content: 'managementSessionAddress?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
     package: '@azure/event-hubs'
   - uid: '@azure/event-hubs.ConnectionContextOptions.managementSessionAudience'
     name: managementSessionAudience
@@ -56,10 +58,10 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'managementSessionAudience?: string'
+      content: 'managementSessionAudience?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
     package: '@azure/event-hubs'
   - uid: '@azure/event-hubs.ConnectionContextOptions.tokenProvider'
     name: tokenProvider
@@ -88,10 +90,45 @@ items:
     summary: '{String} [UserAgent] Der Benutzer-Agent, die an der integrierten Benutzer-Agent-Zeichenfolge.'
     optional: true
     syntax:
-      content: 'userAgent?: string'
+      content: 'userAgent?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ConnectionContextOptions.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der WebSocket-Konstruktor verwendet, um eine AMQP-Verbindung über einen WebSocket zu erstellen.
+      Diese Option muss angegeben werden, der folgenden Szenarien
+      - Der TCP-Port 5671, der von der AMQP-Verbindung mit Event Hubs verwendet wird, wird in Ihrer Umgebung blockiert.
+      - Ihre Anwendung muss hinter einem Proxyserver ausgeführt werden
+      - Ihre Anwendung im Browser ausgeführt werden soll, und Sie Websocket-Implementierung anstelle der integrierten WebSocket im Browser Ihrer Wahl bereitstellen möchten.
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ConnectionContextOptions.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{WebSocketConstructorOptions} - Optionen für den WebSocket-Konstruktor übergeben werden'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
     package: '@azure/event-hubs'
 references:
   - uid: '@azure/event-hubs.ClientOptions'

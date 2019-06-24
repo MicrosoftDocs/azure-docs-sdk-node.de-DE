@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: Die Netzwerkkonfiguration für einen Pool.
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Folgende Werte sind möglich: "none", "Auftrag"'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Poolendpunktkonfiguration wird nur in Pools mit der VirtualMachineConfiguration-Eigenschaft unterstützt.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das virtuelle Netzwerk muss sich in derselben Region und demselben Abonnement wie das Azure Batch-Konto. Das angegebene Subnetz müssen genügend freien IP-Adressen für die Anzahl von Serverknoten im Pool verfügt. Wenn das Subnetz nicht über genügend freien IP-Adressen verfügt, der Pool belegt teilweise Knoten und ein anpassungsfehler erfolgt. Der Dienstprinzipal "MicrosoftAzureBatch" müssen die "Mitwirkender" Role-Based Access Control (RBAC)-Rolle für das angegebene VNet. Das angegebene Subnetz muss die Kommunikation mit Azure Batch-Dienst werden sollen, Planen von Aufgaben auf den Knoten zulassen. Dies kann überprüft werden, durch die überprüft, ob das angegebene VNet zugeordneten Netzwerksicherheitsgruppen (NSG) hat. Wenn die Kommunikation mit den Knoten im angegebenen Subnetz durch eine Netzwerksicherheitsgruppe verweigert wird, wird der Batch-Dienst den Status der Compute-Knoten auf unbrauchbar festgelegt. Für Pools mit der VirtualMachineConfiguration erstellt nur ARM virtuelle Netzwerke ("Microsoft.Network/virtualNetworks'') unterstützt werden, aber für Pools mit CloudServiceConfiguration erstellt sowohl ARM als auch klassische virtuelle Netzwerke werden unterstützt. Falls dem angegebenen VNET Netzwerksicherheitsgruppen (NSGs) zugeordnet sind, müssen einige reservierte Systemports für die eingehende Kommunikation aktiviert werden. Aktivieren Sie für Pools mit der Konfiguration eines virtuellen Computers erstellt wurden die Ports 29876 und 29877 sowie port 22 für Linux und -Port 3389 für Windows. Aktivieren Sie für Pools mit einer clouddienstkonfiguration erstellt wurden die Ports 10100, 20100 und 30100. Aktivieren Sie außerdem ausgehende Verbindungen mit Azure Storage an Port 443. Weitere Informationen finden Sie unter: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

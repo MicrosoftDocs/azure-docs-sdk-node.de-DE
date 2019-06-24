@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Batch wiederholt Tasks aus, wenn ein Wiederherstellungsvorgang auf einem Knoten ausgelöst wird. Beispiele für die Recovery-Vorgänge enthalten (aber Sie sind nicht darauf beschränkt) bei ein fehlerhafter Knoten neu gestartet wird oder eine Compute-Knoten aufgrund eines hostfehlers verschwunden. Wiederholungen aufgrund von Recovery-Vorgänge werden unabhängig von, und werden nicht anhand der "maxtaskretrycount" gezählt. Auch wenn der "maxtaskretrycount" auf 0 (null) eine interne Wiederholung aufgrund eines Wiederherstellungsvorgangs auftreten ist. Aus diesem Grund sollten alle Vorgänge Idempotent sein. Dies bedeutet, dass Aufgaben tolerieren kann unterbrochen und neu gestartet, ohne dass Beschädigung oder doppelter Daten. Die am besten für lang andauernde Aufgaben besteht darin, verwenden Sie eine Form von Prüfpunkten zu üben. In einigen Fällen kann der Start Aufgabe erneut ausgeführt werden, obwohl der Compute-Knoten nicht neu gestartet wurde. Besondere Sorgfalt vermeiden starten, die Verarbeitung von Aufgaben, die breakaway erstellen oder installieren/starten der Dienste von Anfang taskarbeitsverzeichnisses, wie dieser Batch blockiert wird, kann der Start-Task erneut auszuführen.'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Befehlszeile wird nicht unter einer Shell ausgeführt, und daher nicht nutzen Shellfeatures wie die Erweiterung von Umgebungsvariablen. Wenn Sie solche Features nutzen möchten, Sie sollten die Shell Aufrufen in der Befehlszeile, z. B. mit "Cmd/c MyCommand" in Windows oder "/ Bin/sh - C MyCommand" unter Linux. Bezieht sich die Befehlszeile auf Dateipfade, sollten sie einen relativen Pfad (relativ zum Arbeitsverzeichnis Aufgabe), oder verwenden Sie die angegebene Batch-Umgebungsvariable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn dies angegeben ist, werden alle Verzeichnisse rekursiv unter dem AZ_BATCH_NODE_ROOT_DIR (der Stamm der Azure Batch-Verzeichnisse auf dem Knoten) in den Container zugeordnet, werden alle Variablen in den Container zugeordnet und wird von der Befehlszeile des Tasks in den Container ausgeführt. Dateien, die im Container außerhalb AZ_BATCH_NODE_ROOT_DIR erzeugt möglicherweise nicht auf den Hostdatenträger, was bedeutet, dass die Batchdatei APIs nicht auf diese Dateien zugreifen kann wiedergegeben.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Batch-Dienst wiederholt einen Task aus, wenn dessen Exitcode ungleich NULL ist. Beachten Sie, dass dieser Wert die Anzahl der Wiederholungen ausdrücklich steuert. Der Batch-Dienst wiederholt den Task einmal, und es kann bis zu diesem Grenzwert wiederholen. Ist die maximale Anzahl von Wiederholungsversuchen 3, Batch, versucht der Task bis zu zehnmal 4 z. B. (ein erster Versuch und 3 Wiederholungen). Wenn die maximale Anzahl von Wiederholungsversuchen 0 ist, wird den Task von Batch-Dienst nicht wiederholt. Wenn die maximale Anzahl von Wiederholungsversuchen-1 ist, wiederholt der Batch-Dienst den Task unbegrenzt.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unter diesem Element aufgeführten Dateien befinden sich im Arbeitsverzeichnis des Tasks.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn nicht angegeben, wird die Aufgabe als eine eindeutige Benutzer ohne Administratorrechte an die Aufgabe ausgeführt.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn "true", und der Aufgabe auf einem Knoten ein Fehler auftritt, wiederholt der Batch-Dienst den Start-Task bis zu die maximale Anzahl von Wiederholungsversuchen ("maxtaskretrycount"). Wenn die Aufgabe wird immer noch nicht erfolgreich abgeschlossen, nachdem alle Wiederholungen, und klicken Sie dann auf den Batch-Dienst wird der Knoten kann nicht verwendet werden, und wird nicht darauf Planen von Aufgaben. Diese Bedingung kann erkannt werden, über die Compute-Knoten-Status und die Fehler Info-Details. False gibt an, wartet der Batch-Dienst nicht für den Start-Aufgabe abgeschlossen. In diesem Fall können andere Aufgaben starten, auf den Computeknoten und dem Start, auf die, den Aufgabe noch ausgeführt wird; und selbst wenn der Start Task ein Fehler auftritt, weiterhin neue Vorgänge auf den Computeknoten geplant werden. Der Standardwert ist FALSE.'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - azure-batch.TaskContainerSettings.containerRunOptions
+      - azure-batch.TaskContainerSettings.imageName
+      - azure-batch.TaskContainerSettings.registry
+      - azure-batch.TaskContainerSettings.workingDirectory
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.containerRunOptions
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Diese zusätzlichen Optionen werden als Argumente an den Befehl "Docker erstellen", zusätzlich zu den vom Batch-Dienst bereitgestellt.'
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.imageName
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Dies ist die vollständige imagereferenz, wie für "Docker Pull" angegeben werden. Falls kein Tag, als Teil des Namens des Image, das Tag angegeben ist ": aktuelle" wird als Standardwert verwendet.'
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.registry
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Diese Einstellung kann ausgelassen werden, wenn beim Erstellen des Pools bereits bereitgestellt wurde.'
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - azure-batch.ContainerRegistry
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.workingDirectory
+    name: workingDirectory
+    fullName: workingDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Standardwert ist "TaskWorkingDirectory". Folgende Werte sind möglich: ''TaskWorkingDirectory'', "ContainerImageDefault"'
+    optional: true
+    syntax:
+      content: 'workingDirectory?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerRegistry
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: azure-batch.ContainerRegistry

@@ -46,7 +46,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Fügen Sie eine repräsentative Gesicht einer Person für die Identifikation hinzu. Das Gesicht Eingabe wird als ein Bild mit einem Rechteck TargetFace angegeben.
+    summary: |-
+      Fügen Sie einem Gesicht einer Person eine Personengruppe für die gesichtserkennung oder Überprüfung. Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden. Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt. Kein Bild gespeichert werden.
+      Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [PersonGroup PersonFace - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e), [PersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) oder [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) aufgerufen wird.
+      <br /> Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      *   Höhere Gesicht Bildqualität bedeutet eine bessere Erkennung mit einfacher Genauigkeit. Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.
+      *   Jeder Person-Eintrag kann bis zu 248 Flächen enthalten.
+      *   JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
+      *   "TargetFace" Rechteck sollte eine Seite enthalten. Keine oder mehrere Gesichter werden als Fehler betrachtet werden. Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.
+      *   Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.
+      *   Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet. Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.
+      * Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.
+      Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.
+      * Verschiedene "DetectionModel'-Werte können angegeben werden. Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Das Standardmodell für die Erkennung für [PersonGroup Person - hinzufügen
+      Face](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523b). Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen. Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt. | | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter. |
     syntax:
       content: 'function addFaceFromStream(personGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.PersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -143,7 +159,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Fügen Sie eine repräsentative Gesicht einer Person für die Identifikation hinzu. Das Gesicht Eingabe wird als ein Bild mit einem Rechteck TargetFace angegeben.
+    summary: |-
+      Fügen Sie einem Gesicht einer Person eine Personengruppe für die gesichtserkennung oder Überprüfung. Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden. Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt. Kein Bild gespeichert werden.
+      Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [PersonGroup PersonFace - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e), [PersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) oder [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) aufgerufen wird.
+      <br /> Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      *   Höhere Gesicht Bildqualität bedeutet eine bessere Erkennung mit einfacher Genauigkeit. Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.
+      *   Jeder Person-Eintrag kann bis zu 248 Flächen enthalten.
+      *   JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
+      *   "TargetFace" Rechteck sollte eine Seite enthalten. Keine oder mehrere Gesichter werden als Fehler betrachtet werden. Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.
+      *   Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.
+      *   Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet. Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.
+      * Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.
+      Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.
+      * Verschiedene "DetectionModel'-Werte können angegeben werden. Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Das Standardmodell für die Erkennung für [PersonGroup Person - hinzufügen
+      Face](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523b). Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen. Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt. | | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter. |
     syntax:
       content: 'function addFaceFromUrl(personGroupId: string, personId: string, url: string, options?: Models.PersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +345,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Löschen Sie eine Fläche, von einer Person. Relative-Funktion für das persistente Gesicht werden ebenfalls gelöscht.'
+    summary: |-
+      Löschen Sie ein Gesicht von einer Person in einer Personengruppe, indem die angegebenen PersonGroupId, PersonId und PersistedFaceId.
+      <br /> Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet.
+      Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.
     syntax:
       content: 'function deleteFace(personGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +445,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Hiermit löschen Sie eine vorhandene Person aus einer Personengruppe. Alle Person-Daten gespeichert und gesichtserkennungs-Funktionen in den Person-Eintrag gelöscht werden.
+    summary: 'Hiermit löschen Sie eine vorhandene Person aus einer Personengruppe. Die PersistedFaceId, UserData, werden alle Person-Name und gesichtserkennungs-Funktion in der Person-Eintrag gelöscht werden.'
     syntax:
       content: 'function deleteMethod(personGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -851,7 +886,16 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Hiermit aktualisieren Sie das userData-Feld des gespeicherten Gesichts einer Person.
+    summary: |-
+      Fügen Sie einem Gesicht einer Person eine Personengruppe für die gesichtserkennung oder Überprüfung. Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden. Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt. Kein Bild gespeichert werden.
+      Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [PersonGroup PersonFace - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e), [PersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) oder [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) aufgerufen wird.
+      <br /> Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Höhere Gesicht Bildqualität bedeutet eine bessere Erkennung mit einfacher Genauigkeit. Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.
+      * Jeder Person-Eintrag kann bis zu 248 Flächen enthalten.
+      * JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
+      * "TargetFace" Rechteck sollte eine Seite enthalten. Keine oder mehrere Gesichter werden als Fehler betrachtet werden. Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.
+      * Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.
+      * Hinzufügen/Löschen von Gesichtern in und aus einem dieselbe Person werden nacheinander verarbeitet. Hinzufügen/Löschen von Gesichtern in und aus verschiedenen Personen werden parallel verarbeitet.
     syntax:
       content: 'function updateFace(personGroupId: string, personId: string, persistedFaceId: string, options?: Models.PersonGroupPersonUpdateFaceOptionalParams)'
       parameters:

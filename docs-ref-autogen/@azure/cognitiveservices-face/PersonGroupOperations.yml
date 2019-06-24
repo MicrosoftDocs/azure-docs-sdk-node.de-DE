@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       Erstellen Sie eine neue Personengruppe, mit der angegebenen PersonGroupId "," Name "," bereitgestellten Benutzer UserData "und" RecognitionModel.
-      <br /> Eine Personengruppe ist der Container die hochgeladenen Person-Daten, einschließlich der gesichtserkennungs-Bilder und gesichtserkennung verwendet Funktionen.
+      <br /> Eine Personengruppe ist der Container die hochgeladenen Person-Daten, einschließlich Features des Gesichts verwendet.
       <br /> Verwenden Sie nach der Erstellung des [PersonGroup Person - erstellen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) zum Hinzufügen von Personen in die Gruppe aus, und rufen dann [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) auf diese Gruppe vorzubereiten [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Der Person Gesicht, Bild- und UserData werden auf Server bis zum [PersonGroup Person gespeichert werden
-      - Delete](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523d) oder [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) aufgerufen wird.
-      <br />
+      <br /> Kein Bild gespeichert werden. Nur die Person, die gesichtserkennungs-Features extrahiert die und UserData werden auf dem Server, bis gespeichert [PersonGroup Person - löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) oder [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) aufgerufen wird.
+      <br/>'RecognitionModel' muss angegeben werden, dieser Personengruppe zugeordnet werden soll. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Neue Flächen, die zu einer vorhandenen Personengruppe hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist. Vorhandenen gesichtserkennungs-Funktionen in ein Person-Gruppe können nicht auf Funktionen, die durch eine andere Version des Modells zur Erkennung extrahiert aktualisiert werden.
+      * 'recognition_01': Das Standardmodell für die Erkennung für [PersonGroup - erstellen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244). Alle diese Personengruppen, die vor dem 2019 März erstellt werden mit diesem Modell zur Erkennung Haftend.
+      * 'recognition_02': Der Modell zur Erkennung im 2019 März veröffentlicht wurde. "recognition_02" wird empfohlen, da die gesamtgenauigkeit im Vergleich zu 'recognition_01' verbessert wird.
+      Quote der Person-Gruppe:
       * Free-Tarif-Abonnement-Kontingent: 1.000 Personengruppen. Jede enthält bis zu 1.000 Personen.
       * Das abonnementkontingent S0-Tarif: 1.000.000 Personengruppen. Jede enthält bis zu 10.000 Personen.
       * um größere Skalierung Face ID Problem behandeln möchten, verwenden Sie ggf. [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).
-      <br />
-      'RecognitionModel' muss angegeben werden, dieser Personengruppe zugeordnet werden soll. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Neue Flächen, die zu einer vorhandenen Personengruppe hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist. Vorhandenen gesichtserkennungs-Funktionen in ein Person-Gruppe können nicht auf Funktionen, die durch eine andere Version des Modells zur Erkennung extrahiert aktualisiert werden.
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

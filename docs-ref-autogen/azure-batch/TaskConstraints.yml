@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - azure-batch.TaskConstraints.maxTaskRetryCount
+      - azure-batch.TaskConstraints.maxWallClockTime
+      - azure-batch.TaskConstraints.retentionTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beachten Sie, dass es sich bei diesem Wert wird speziell die Anzahl der Wiederholungen für die Aufgabe ausführbare Datei aufgrund einen Exitcode ungleich NULL gesteuert. Der Batch-Dienst wiederholt den Task einmal, und es kann bis zu diesem Grenzwert wiederholen. Ist die maximale Anzahl von Wiederholungsversuchen 3, Batch, versucht der Task bis zu zehnmal 4 z. B. (ein erster Versuch und 3 Wiederholungen). Wenn die maximale Anzahl von Wiederholungsversuchen 0 ist, wird der Batch-Dienst die Aufgabe nach dem ersten Versuch nicht wiederholt. Wenn die maximale Anzahl von Wiederholungsversuchen-1 ist, wiederholt der Batch-Dienst den Task unbegrenzt.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn dies nicht angegeben wird, ist es keine zeitliche Begrenzung für wie lange die Aufgabe ausgeführt werden kann.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Standardwert ist 7 Tage, d. h. das Verzeichnis eines Tasks wird werden sieben Tage lang aufbewahrt, wenn der Compute-Knoten entfernt wird, oder der Auftrag gelöscht wird.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

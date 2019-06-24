@@ -64,7 +64,28 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Erkennen Sie menschliche Gesichter in ein Image und gibt gesichtspositionen und optional mit FaceIds Orientierungspunkte und Attribute.
+    summary: |-
+      Hiermit werden menschliche Gesichter in einem Bild erkannt und Rechtecke für die Gesichter sowie optional faceIds, Sehenswürdigkeiten und Attribute zurückgegeben.<br />
+      * Kein Bild gespeichert werden. Nur das extrahierte gesichtserkennungs-Feature wird auf Server gespeichert werden. Die FaceId ist ein Bezeichner, der gesichtserkennungs-Funktion und verwendet werden, [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [konfrontiert: Überprüfen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), und [Gesichtserkennung
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) zu finden.
+      Die Funktionen aus gespeicherten Gesicht läuft und 24 Stunden nach dem Aufruf der ursprünglichen Erkennung gelöscht werden.
+      * Optionale Parameter umfassen FaceId Orientierungspunkte und Attribute. Attribute gehören Alter, Geschlecht, HeadPose, Lächeln, FacialHair, Brille, Emotionen, Haare, Zusammensetzung, verdecken, Zubehör, Weichzeichner, Offenlegung und Rauschen. Einige der Ergebnisse zurückgegeben, die auf bestimmte Attribute äußerst präzise möglicherweise nicht.
+      * JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
+      * Für ein Bild können bis zu 100 Gesichter zurückgegeben werden. Gesichter werden nach Gesicht Rechteck Größe von großen auf einen kleinen geordnet.
+      * Um optimale Ergebnisse beim Abfragen von [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [konfrontiert: Überprüfen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), und [Gesichtserkennung
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ("ReturnFaceId" ist "true") suchen, verwenden Sie Gesichter, die: Frontale, löschen, und mit einer Mindestgröße von 200 x 200 Pixel (100 Pixel zwischen Augen).
+      * Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.
+      Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.
+      * Verschiedene "DetectionModel'-Werte können angegeben werden. Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Das Standardmodell für die Erkennung für [Gesicht-
+      Detect](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395236). Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen. Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt. | | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter. |
+      * Verschiedene "RecognitionModel'-Werte werden bereitgestellt. Wenn weitere Vorgänge stellen Sie sicher, identifizieren, wie das werden Suchen von ähnlichen benötigt, geben Sie das Modell zur Erkennung mit 'RecognitionModel'-Parameter. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Nachdem Sie angegeben haben, werden die erkannten FaceIds der angegebenen anerkennungsmodell zugeordnet werden. Weitere Informationen finden Sie [ein anerkennungsmodell angeben](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | Das Standardmodell für die Erkennung für [Gesicht-
+      Detect](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395236). Alle diese FaceIds vor 2019 März erstellt wurden, werden mit diesem Modell zur Erkennung Haftend. | | 'recognition_02': | Der Modell zur Erkennung im 2019 März veröffentlicht wurde. "recognition_02" wird empfohlen, da die gesamtgenauigkeit im Vergleich zu 'recognition_01' verbessert wird. |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
@@ -139,16 +160,26 @@ items:
       - typeScript
     summary: |-
       Hiermit werden menschliche Gesichter in einem Bild erkannt und Rechtecke für die Gesichter sowie optional faceIds, Sehenswürdigkeiten und Attribute zurückgegeben.<br />
-      * Optionale Parameter wie z.B. FaceId Orientierungspunkte und Attribute. Attribute gehören Alter, Geschlecht, HeadPose, Lächeln, FacialHair, Brille, Emotionen, Haare, Zusammensetzung, verdecken, Zubehör, Weichzeichner, Offenlegung und Rauschen.
-      * Die extrahierten gesichtserkennungs-Funktion, statt das eigentliche Bild, wird auf Server gespeichert werden. Die FaceId ist ein Bezeichner, der gesichtserkennungs-Funktion und verwendet werden, [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [konfrontiert: Überprüfen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), und [Gesichtserkennung
-      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) zu finden. Es läuft 24 Stunden nach dem Aufruf der Erkennung.
-      * Höhere Gesicht Bildqualität bedeutet, dass eine bessere Erkennung und die Genauigkeit der Erkennung. Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.
+      * Kein Bild gespeichert werden. Nur das extrahierte gesichtserkennungs-Feature wird auf Server gespeichert werden. Die FaceId ist ein Bezeichner, der gesichtserkennungs-Funktion und verwendet werden, [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [konfrontiert: Überprüfen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), und [Gesichtserkennung
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) zu finden.
+      Die Funktionen aus gespeicherten Gesicht läuft und 24 Stunden nach dem Aufruf der ursprünglichen Erkennung gelöscht werden.
+      * Optionale Parameter umfassen FaceId Orientierungspunkte und Attribute. Attribute gehören Alter, Geschlecht, HeadPose, Lächeln, FacialHair, Brille, Emotionen, Haare, Zusammensetzung, verdecken, Zubehör, Weichzeichner, Offenlegung und Rauschen. Einige der Ergebnisse zurückgegeben, die auf bestimmte Attribute äußerst präzise möglicherweise nicht.
       * JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
-      * Gesichter werden erkannt, wenn seine Größe, 36 x 36 auf 4096 x 4096 Pixel ist. Wenn müssen erkennen Sie Gesichter von sehr kleinen, aber deaktivieren, versuchen Sie, das Eingabe-Bild vergrößert darzustellen.
-      * Für ein Bild können bis zu 64 Gesichter zurückgegeben werden. Gesichter werden nach Gesicht Rechteck Größe von großen auf einen kleinen geordnet.
-      * Gesichtserkennung bevorzugen frontalansichten und nahezu der frontalansicht Gesichter. Es gibt Fälle, in denen Gesichter erkannt, z. B. sehr große gesichtswinkel (kopfpose) oder okkludierte werden oder falsche bildausrichtung möglicherweise nicht.
-      * Attribute (Alter, Geschlecht, HeadPose, Lächeln, FacialHair, Brille, Emotionen, Haare, Zusammensetzung, verdecken, Zubehör, Weichzeichner, Offenlegung und Rauschen) möglicherweise nicht vollkommen exakt. Die HeadPose Tonhöhe ist ein reserviertes Feld und gibt immer 0 zurück.
+      * Für ein Bild können bis zu 100 Gesichter zurückgegeben werden. Gesichter werden nach Gesicht Rechteck Größe von großen auf einen kleinen geordnet.
+      * Um optimale Ergebnisse beim Abfragen von [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [konfrontiert: Überprüfen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), und [Gesichtserkennung
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ("ReturnFaceId" ist "true") suchen, verwenden Sie Gesichter, die: Frontale, löschen, und mit einer Mindestgröße von 200 x 200 Pixel (100 Pixel zwischen Augen).
+      * Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.
+      Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.
+      * Verschiedene "DetectionModel'-Werte können angegeben werden. Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Das Standardmodell für die Erkennung für [Gesicht-
+      Detect](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395236). Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen. Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt. | | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter. |
       * Verschiedene "RecognitionModel'-Werte werden bereitgestellt. Wenn weitere Vorgänge stellen Sie sicher, identifizieren, wie das werden Suchen von ähnlichen benötigt, geben Sie das Modell zur Erkennung mit 'RecognitionModel'-Parameter. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Nachdem Sie angegeben haben, werden die erkannten FaceIds der angegebenen anerkennungsmodell zugeordnet werden. Weitere Informationen finden Sie [ein anerkennungsmodell angeben](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | Das Standardmodell für die Erkennung für [Gesicht-
+      Detect](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395236). Alle diese FaceIds vor 2019 März erstellt wurden, werden mit diesem Modell zur Erkennung Haftend. | | 'recognition_02': | Der Modell zur Erkennung im 2019 März veröffentlicht wurde. "recognition_02" wird empfohlen, da die gesamtgenauigkeit im Vergleich zu 'recognition_01' verbessert wird. |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:

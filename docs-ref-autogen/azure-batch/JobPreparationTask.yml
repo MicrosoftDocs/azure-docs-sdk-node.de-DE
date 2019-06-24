@@ -1,0 +1,191 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    fullName: JobPreparationTask
+    children:
+      - azure-batch.JobPreparationTask.commandLine
+      - azure-batch.JobPreparationTask.constraints
+      - azure-batch.JobPreparationTask.containerSettings
+      - azure-batch.JobPreparationTask.environmentSettings
+      - azure-batch.JobPreparationTask.id
+      - azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+      - azure-batch.JobPreparationTask.resourceFiles
+      - azure-batch.JobPreparationTask.userIdentity
+      - azure-batch.JobPreparationTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Auftragsvorbereitung können Sie einen Knoten zum Ausführen von Aufgaben für den Auftrag vorbereiten. Im Allgemeinen in Auftragsvorbereitung ausgeführte Aktivitäten umfassen: Herunterladen von gemeinsamen Ressourcendateien ein, die alle Aufgaben im Auftrag. Der Task zur Auftragsvorbereitung können diese gemeinsamen Ressourcendateien in den freigegebenen Speicherort auf dem Knoten herunterladen. (AZ_BATCH_NODE_ROOT_DIR\shared), oder starten einen lokalen Dienst auf dem Knoten, damit alle Aufgaben dieses Auftrags mit ihm kommunizieren können. Wenn der Task zur Auftragsvorbereitung fehl (d. h. festgelegte der Verbindungsversuch zu zählen, bevor Sie mit Exitcode 0 beendet wird), Batch-Aufgaben des Auftrags nicht ausgeführt, auf dem Knoten. Der Compute-Knoten bleibt nicht geeignet, zum Ausführen von Aufgaben des Auftrags, bis ein reimaging durchgeführt wird. Der Compute-Knoten bleibt aktiv, und für andere Aufträge verwendet werden kann. Der Task zur Auftragsvorbereitung können mehrere Male auf demselben Knoten ausgeführt werden. Aus diesem Grund sollten Sie die Auftragsvorbereitungsaufgabe aus, um die erneute Ausführung behandeln schreiben. Wenn der Knoten neu gestartet wird, wird die Auftragsvorbereitungsaufgabe erneut ausgeführt auf dem Compute-Knoten vor dem Planen jeder andere Task des Auftrags, aus, wenn RerunOnNodeRebootAfterSuccess auf "true" festgelegt ist oder die Auftragsvorbereitungsaufgabe nicht zuvor abgeschlossen wurde. Wenn der Knoten ein reimaging ausgeführt wird, wird die Auftragsvorbereitungsaufgabe erneut vor dem Planen jeder Aufgabe des Auftrags ausgeführt. Batch wiederholt Tasks aus, wenn ein Wiederherstellungsvorgang auf einem Knoten ausgelöst wird. Beispiele für die Recovery-Vorgänge enthalten (aber Sie sind nicht darauf beschränkt) bei ein fehlerhafter Knoten neu gestartet wird oder eine Compute-Knoten aufgrund eines hostfehlers verschwunden. Wiederholungen aufgrund von Recovery-Vorgänge werden unabhängig von, und werden nicht anhand der "maxtaskretrycount" gezählt. Auch wenn der "maxtaskretrycount" auf 0 (null) eine interne Wiederholung aufgrund eines Wiederherstellungsvorgangs auftreten ist. Aus diesem Grund sollten alle Vorgänge Idempotent sein. Dies bedeutet, dass Aufgaben tolerieren kann unterbrochen und neu gestartet, ohne dass Beschädigung oder doppelter Daten. Die am besten für lang andauernde Aufgaben besteht darin, verwenden Sie eine Form von Prüfpunkten zu üben.'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Befehlszeile wird nicht unter einer Shell ausgeführt, und daher nicht nutzen Shellfeatures wie die Erweiterung von Umgebungsvariablen. Wenn Sie solche Features nutzen möchten, Sie sollten die Shell Aufrufen in der Befehlszeile, z. B. mit "Cmd/c MyCommand" in Windows oder "/ Bin/sh - C MyCommand" unter Linux. Bezieht sich die Befehlszeile auf Dateipfade, sollten sie einen relativen Pfad (relativ zum Arbeitsverzeichnis Aufgabe), oder verwenden Sie die angegebene Batch-Umgebungsvariable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn dies angegeben ist, werden alle Verzeichnisse rekursiv unter dem AZ_BATCH_NODE_ROOT_DIR (der Stamm der Azure Batch-Verzeichnisse auf dem Knoten) in den Container zugeordnet, werden alle Variablen in den Container zugeordnet und wird von der Befehlszeile des Tasks in den Container ausgeführt. Dateien, die im Container außerhalb AZ_BATCH_NODE_ROOT_DIR erzeugt möglicherweise nicht auf den Hostdatenträger, was bedeutet, dass die Batchdatei APIs nicht auf diese Dateien zugreifen kann wiedergegeben.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID kann eine beliebige Kombination von alphanumerischen Zeichen einschließlich Bindestriche und Unterstriche enthalten und darf nicht mehr als 64 Zeichen enthalten. Wenn Sie diese Eigenschaft nicht angeben, weist der Batch-Dienst den Standardwert "Jobpreparation". Keine anderen Aufgabe im Auftrag haben die gleiche ID wie die Auftragsvorbereitungsaufgabe auf. Wenn Sie versuchen, eine Aufgabe mit der gleichen Id übermitteln, lehnt Sie ab der Batch-Dienst den Fehlercode TaskIdSameAsJobPreparationTask; Wenn Sie die REST-API direkt aufrufen, ist der HTTP-Statuscode 409 (Konflikt) an.'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+    name: rerunOnNodeRebootAfterSuccess
+    fullName: rerunOnNodeRebootAfterSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Task zur Auftragsvorbereitung wird immer erneut ausgeführt, wenn ein Compute-Knoten ein reimaging ausgeführt wird, oder wenn es sich bei der Aufgabe zur Auftragsvorbereitung nicht abgeschlossen wurde (z. B. weil der Neustart aufgetreten ist, während die Aufgabe ausgeführt wurde). Aus diesem Grund sollten Sie immer einer Auftragsvorbereitungsaufgabe Idempotent sind und ordnungsgemäß verhält, wenn mehrere Male ausführen schreiben. Der Standardwert lautet „true“.'
+    optional: true
+    syntax:
+      content: 'rerunOnNodeRebootAfterSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Unter diesem Element aufgeführten Dateien befinden sich im Arbeitsverzeichnis des Tasks.
+      Es ist eine maximale Größe für die Liste der Ressourcendateien.  Wenn die maximale Größe überschritten wird, die Anforderung schlägt fehl, und der Fehlercode der Antwort werden RequestEntityTooLarge. In diesem Fall muss die Auflistung der ResourceFiles Größe reduziert werden. Dies kann erreicht werden, mithilfe von ZIP-Dateien, Anwendungspakete oder Docker-Container.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn nicht angegeben, wird die Aufgabe ausgeführt, als ein Benutzer ohne Administratorrechte für die Aufgabe auf Windows-Serverknoten eindeutig oder einen Benutzer ohne Administratorrechte für den Pool auf dem Linux-Serverknoten eindeutig.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn "true" und der Task zur Auftragsvorbereitung fehl auf einem Knoten, die Auftragsvorbereitung Aufgabe, bis der maximale Wiederholungsversuche zu, Wiederholungen der Batch-Dienst (gemäß den Einschränkungen-Element) zählen. Wenn die Aufgabe noch nicht erfolgreich nach allen Wiederholungsversuchen abgeschlossen wurde und dann der Batch-Dienst keine Aufgaben des Auftrags auf den Knoten geplant wird. Der Knoten bleibt aktiven und geeigneten zum Ausführen von Aufgaben von anderen Aufträgen. False gibt an, wartet der Batch-Dienst nicht die Auftragsvorbereitungsaufgabe abgeschlossen. In diesem Fall können andere Aufgaben des Auftrags beginnen, auf den Computeknoten ausgeführt werden, während die Auftragsvorbereitungsaufgabe ausgeführt wird; und auch wenn die Auftragsvorbereitungsaufgabe ausfällt, weiterhin neue Vorgänge auf den Computeknoten geplant werden. Der Standardwert lautet „true“.'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

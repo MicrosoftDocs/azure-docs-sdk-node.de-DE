@@ -72,8 +72,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      Ein Gesicht eine Gesichts-Liste hinzufügen. Das Gesicht Eingabe wird als ein Bild mit einem Rechteck TargetFace angegeben.
-      Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt, und PersistedFaceId läuft nicht ab.
+      Hiermit fügen Sie ein Gesicht einer angegebenen Liste mit Gesichtern hinzu. Bis zu 1.000 Gesichter können hinzugefügt werden.
+      <br /> Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden. Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt. Kein Bild gespeichert werden. Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [FaceList - Gesicht löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) oder [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) aufgerufen wird.
+      <br /> Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Höhere Gesicht Bildqualität bedeutet, dass eine bessere Erkennung und die Genauigkeit der Erkennung. Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.
+      * JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
+      * "TargetFace" Rechteck sollte eine Seite enthalten. Keine oder mehrere Gesichter werden als Fehler betrachtet werden. Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.
+      * Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.
+      * Hinzufügen/Löschen von Gesichtern in eine Liste der gleichen Gesicht werden nacheinander verarbeitet und in einen bzw. aus anderen Gesicht Listen, die parallel sind.
+      * Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.
+      Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.
+      * Verschiedene "DetectionModel'-Werte können angegeben werden. Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Das Standardmodell für die Erkennung für [FaceList - hinzufügen
+      Face](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395250). Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen. Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt. | | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter. |
     syntax:
       content: 'function addFaceFromStream(faceListId: string, image: msRest.HttpRequestBody, options?: Models.FaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -159,8 +172,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      Ein Gesicht eine Gesichts-Liste hinzufügen. Das Gesicht Eingabe wird als ein Bild mit einem Rechteck TargetFace angegeben.
-      Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt, und PersistedFaceId läuft nicht ab.
+      Hiermit fügen Sie ein Gesicht einer angegebenen Liste mit Gesichtern hinzu. Bis zu 1.000 Gesichter können hinzugefügt werden.
+      <br /> Um den Umgang mit einem Bild enthält mehrere Gesichter, Eingabe Gesicht kann als ein Bild mit einem Rechteck TargetFace angegeben werden. Es gibt eine PersistedFaceId, das das hinzugefügte Gesicht darstellt. Kein Bild gespeichert werden. Nur das extrahierte gesichtserkennungs-Feature wird auf Server erst gespeichert werden [FaceList - Gesicht löschen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) oder [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) aufgerufen wird.
+      <br /> Hinweis PersistedFaceId unterscheidet sich vom FaceId [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Höhere Gesicht Bildqualität bedeutet, dass eine bessere Erkennung und die Genauigkeit der Erkennung. Erwägen Sie die Gesichter von hoher Qualität: frontalansicht, Clear- und Gesicht beträgt 200 x 200 Pixel (100 Pixel zwischen Augen) oder größer.
+      * JPEG, PNG, GIF (der erste Frame) und BMP-Format werden unterstützt. Die zulässige Dateigröße liegt zwischen 1KB und 6MB.
+      * "TargetFace" Rechteck sollte eine Seite enthalten. Keine oder mehrere Gesichter werden als Fehler betrachtet werden. Wenn das Rechteck angegebenen "TargetFace" aus nicht zurückgegeben wird [konfrontiert: erkennen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), es gibt keine Garantie aus, um zu erkennen, und fügen das Gesicht erfolgreich.
+      * Out-of erkennbare gesichtserkennungs-Größe (36 x 36-4096 X 4096 Pixel) werden große kopfpose oder große Occlusions Fehler verursachen.
+      * Hinzufügen/Löschen von Gesichtern in eine Liste der gleichen Gesicht werden nacheinander verarbeitet und in einen bzw. aus anderen Gesicht Listen, die parallel sind.
+      * Die minimale erkennbare gesichtserkennungs-Größe ist 36 x 36 Pixel in einem Bild 1920 x 1080 Pixel nicht überschreiten.
+      Bilder mit Dimensionen, die höher ist als 1920 x 1080 Pixel benötigen proportional minimale Gesicht vergrößern.
+      * Verschiedene "DetectionModel'-Werte können angegeben werden. Zum verwenden und die von anderen erkennungsmodelle vergleichen können, finden Sie in [wie ein Modell zur Erkennung angegeben.](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modell | Empfohlene Verwendung-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Das Standardmodell für die Erkennung für [FaceList - hinzufügen
+      Face](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395250). Wird für die in der Nähe von frontal angezeigten Gesichtern Erkennung empfohlen. Für Szenarien mit außergewöhnlich große Spitze (kopfpose) Gesichtern, okkludierte Gesichter oder falsche bildausrichtung werden die Gesichter in solchen Fällen möglicherweise nicht erkannt. | | 'detection_02': | 2019 veröffentlicht Modells zur Erkennung kann mit verbesserter Genauigkeit vor allem auf klein ","-Seite "und" verschwommenen Gesichter. |
     syntax:
       content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Models.FaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -244,10 +270,13 @@ items:
     summary: |-
       Erstellen Sie eine leere Fläche Liste mit benutzerdefinierten FaceListId, Namen, eine optionale UserData und RecognitionModel. Listen dürfen bis zu 64 Gesicht in einem Abonnement verwendet wird.
       <br /> Gesichtserkennungs-Liste ist eine Liste von Gesichtern, bis zu 1.000 Gesichter, und ein, die [Gesichtserkennungs - Suchen von ähnlichen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
-      <br /> Benutzer sollten nach der Erstellung verwenden [FaceList - Gesicht hinzufügen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) die Gesichter zu importieren. Gesichter werden gespeichert, auf dem Server, bis [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) aufgerufen wird.
+      <br /> Benutzer sollten nach der Erstellung verwenden [FaceList - Gesicht hinzufügen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) die Gesichter zu importieren. Kein Bild gespeichert werden. Nur die extrahierten gesichtserkennungs-Funktionen werden gespeichert, auf dem Server, bis [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) aufgerufen wird.
       <br /> Ermitteln Sie, dass für das Szenario wie das Suchen von Prominenten-ähnliche Gesichter, ähnlich wie gesichtserkennung, filtern, ähnlich wie verwendet wird, oder als ein Licht gesichtserkennung und viel Kennung. Aber wenn die tatsächliche Verwendung ist auf die jeweilige Person zu identifizieren, verwenden Sie [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) und [auftreten – identifizieren](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Erwägen Sie [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) bei der gesichtserkennungs-Anzahl ist groß. Es kann bis zu 1.000.000 Gesichter unterstützen. 'RecognitionModel' muss angegeben werden, der gesichtserkennungs-Liste zugeordnet werden soll. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Neue Flächen, die zu einer vorhandenen gesichtserkennungs-Liste hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist. Vorhandenen gesichtserkennungs-Funktionen in eine Gesichts-Liste können nicht aktualisiert werden, auf Funktionen, die von einer anderen Version des Modells zur Erkennung extrahiert werden.
+      <br /> Erwägen Sie [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) bei der gesichtserkennungs-Anzahl ist groß. Es kann bis zu 1.000.000 Gesichter unterstützen.
+      <br />'RecognitionModel' muss angegeben werden, der gesichtserkennungs-Liste zugeordnet werden soll. Der Standardwert für 'RecognitionModel' ist "recognition_01", wenn das aktuelle Modell explizit Geben Sie benötigt werden, das Modell benötigen Sie in diesem Parameter. Neue Flächen, die zu einer vorhandenen gesichtserkennungs-Liste hinzugefügt werden, werden das Modell zur Erkennung verwendet, das bereits mit der Sammlung verknüpft ist. Vorhandenen gesichtserkennungs-Funktionen in eine Gesichts-Liste können nicht aktualisiert werden, auf Funktionen, die von einer anderen Version des Modells zur Erkennung extrahiert werden.
+      * 'recognition_01': Das Standardmodell für die Erkennung für [FaceList erstellen](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b). Alle diese erstellt, bevor 2019 März gesichtserkennungs-Listen werden mit diesem Modell zur Erkennung Haftend.
+      * 'recognition_02': Der Modell zur Erkennung im 2019 März veröffentlicht wurde. "recognition_02" wird empfohlen, da die gesamtgenauigkeit im Vergleich zu 'recognition_01' verbessert wird.
     syntax:
       content: 'function create(faceListId: string, options?: Models.FaceListCreateOptionalParams)'
       parameters:
@@ -294,8 +323,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      Löschen einer vorhandenen Gesicht aus Gesicht (angegeben durch eine PersistedFaceId und eine FaceListId).
-      Persistente Image im Zusammenhang mit der das Gesicht werden ebenfalls gelöscht.
+      Löschen Sie eine Fläche aus einer Liste Gesicht, indem angegebene FaceListId und PersistedFaceId.
+      <br /> Hinzufügen/Löschen von Gesichtern in eine Liste der gleichen Gesicht werden nacheinander verarbeitet und in einen bzw. aus anderen Gesicht Listen, die parallel sind.
     syntax:
       content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -380,7 +409,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Löschen Sie eine vorhandene Liste der Fläche nach FaceListId. Beibehalten, Gesicht, die Bilder in der gesichtserkennungs-Liste ebenfalls gelöscht werden.'
+    summary: Hiermit löschen Sie eine angegebene Liste mit Gesichtern.
     syntax:
       content: 'function deleteMethod(faceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

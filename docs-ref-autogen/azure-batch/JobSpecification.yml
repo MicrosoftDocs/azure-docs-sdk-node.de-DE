@@ -1,0 +1,273 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobSpecification
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - azure-batch.JobSpecification.commonEnvironmentSettings
+      - azure-batch.JobSpecification.constraints
+      - azure-batch.JobSpecification.displayName
+      - azure-batch.JobSpecification.jobManagerTask
+      - azure-batch.JobSpecification.jobPreparationTask
+      - azure-batch.JobSpecification.jobReleaseTask
+      - azure-batch.JobSpecification.metadata
+      - azure-batch.JobSpecification.networkConfiguration
+      - azure-batch.JobSpecification.onAllTasksComplete
+      - azure-batch.JobSpecification.onTaskFailure
+      - azure-batch.JobSpecification.poolInfo
+      - azure-batch.JobSpecification.priority
+      - azure-batch.JobSpecification.usesTaskDependencies
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.commonEnvironmentSettings
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Einzelne Tasks können eine umgebungseinstellung, die hier angegebenen, durch Angeben des gleichen einstellungsnamens mit einem anderen Wert überschreiben.'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name muss nicht eindeutig sein und kann bis zu einer maximalen Länge von 1024 beliebigen Unicode-Zeichen enthalten.
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.jobManagerTask
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn der Auftrag keinen Auftrags-Manager-Task angegeben ist, muss der Benutzer Aufgaben explizit für den Auftrag mit der Task-API hinzufügen. Wenn der Auftrag ein Auftrags-Manager-Task angegeben wird, erstellt der Batch-Dienst den Auftrags-Manager-Task aus, wenn der Auftrag wird erstellt, und es versucht wird, die Auftrags-Manager-Aufgabe zu planen, bevor andere Aufgaben im Auftrag geplant.'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - azure-batch.JobManagerTask
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.jobPreparationTask
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn ein Auftrag einen Task zur Auftragsvorbereitung verfügt, wird der Batch-Dienst die Auftragsvorbereitungsaufgabe auf einem Knoten vor dem Starten anderer Task dieses Auftrags auf diesem Compute-Knoten ausgeführt.'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - azure-batch.JobPreparationTask
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.jobReleaseTask
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der primäre Zweck von dem Auftragsfreigabeaufgabe ist, Knoten, die von der Aufgabe zur Auftragsvorbereitung vorgenommenen Änderungen rückgängig zu machen. Beispiel-Aktivitäten umfassen lokale Dateien löschen oder Beenden der Dienste, die im Rahmen der Vorbereitung der Auftrag gestartet wurden. Ein Task zur Auftragsfreigabe kann nicht angegeben werden, ohne dass auch ein Task zur Auftragsvorbereitung für den Auftrag angegeben. Der Batch-Dienst wird dem Auftragsfreigabeaufgabe ausgeführt, für die Serverknoten, die die Auftragsvorbereitungsaufgabe ausgeführt wurden.'
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - azure-batch.JobReleaseTask
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Batch-Dienst weist keine Bedeutung nicht in Metadaten zu. Es ist ausschließlich für die Verwendung von Benutzercode.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - azure-batch.JobNetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Beachten Sie, wenn ein Auftrag keine Tasks enthält, klicken Sie dann alle Aufgaben als abgeschlossen sind.
+      Diese Option ist daher am häufigsten mit eine Auftrags-Manager-Aufgabe verwendet; Wenn Sie automatische Auftrag beenden, ohne einen Auftrags-Manager verwenden möchten, sollten Sie zunächst OnAllTasksComplete Noaction festgelegt und Aktualisieren der Auftragseigenschaften zum Terminatejob OnAllTasksComplete festlegen, wenn Sie nach dem Hinzufügen von Aufgaben. Der Standardwert ist "NoAction". Folgende Werte sind möglich: "NoAction", "TerminateJob"
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.onTaskFailure
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Standardwert ist "NoAction". Folgende Werte sind möglich: "NoAction", "PerformExitOptionsJobAction"'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Prioritätswerte liegen zwischen-1000 und 1000, wobei-1000 die niedrigste Priorität und 1000 die höchste Priorität. Der Standardwert ist 0. Die Priorität wird als Standard für alle Aufträge in der der Auftragszeitplan verwendet. Sie können die Priorität eines Auftrags aktualisieren, nachdem sie mithilfe der Auftrags-API zum Aktualisieren der erstellt wurde.'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.usesTaskDependencies
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: azure-batch.JobManagerTask
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: azure-batch.JobManagerTask
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: azure-batch.JobPreparationTask
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: azure-batch.JobReleaseTask
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: azure-batch.JobNetworkConfiguration
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

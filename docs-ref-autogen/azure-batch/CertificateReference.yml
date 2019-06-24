@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.CertificateReference
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - azure-batch.CertificateReference.storeLocation
+      - azure-batch.CertificateReference.storeName
+      - azure-batch.CertificateReference.thumbprint
+      - azure-batch.CertificateReference.thumbprintAlgorithm
+      - azure-batch.CertificateReference.visibility
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.storeLocation
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Standardwert ist "CurrentUser". Diese Eigenschaft gilt nur für Pools, die mit Windows Compute-Knoten (die CloudServiceConfiguration oder mit der VirtualMachineConfiguration mit einem Verweis für die Windows-Image erstellt wird) konfigurieren. Für Linux-Compute-Knoten werden die Zertifikate gespeichert, in einem Verzeichnis in der Aufgabe arbeiten Verzeichnis und eine Umgebungsvariable, die an die Aufgabe für diesen Standort Abfragen AZ_BATCH_CERTIFICATES_DIR angegeben ist. Für Zertifikate mit Sichtbarkeit "RemoteUser" wird ein "Zertifikate"-Verzeichnis im Basisverzeichnis des Benutzers erstellt (z. B. /home/ {Benutzername} / Certs) und Zertifikate werden in diesem Verzeichnis platziert. Folgende Werte sind möglich: "CurrentUser", "LocalMachine"'
+    optional: true
+    syntax:
+      content: 'storeLocation?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.storeName
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Diese Eigenschaft gilt nur für Pools, die mit Windows Compute-Knoten (die CloudServiceConfiguration oder mit der VirtualMachineConfiguration mit einem Verweis für die Windows-Image erstellt wird) konfigurieren. Allgemeine Namen von Läden enthalten: Mein, kann die Stammzertifizierungsstelle, Vertrauensstellung, nicht erlaubt, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, aber ein beliebiger benutzerdefinierter Speichername auch verwendet werden. Der Standardwert ist meine.'
+    optional: true
+    syntax:
+      content: 'storeName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.thumbprint
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.thumbprintAlgorithm
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.visibility
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Sie können mehrere Sichtbarkeit in dieser Auflistung angeben. Der Standardwert ist alle Konten.
+    optional: true
+    syntax:
+      content: 'visibility?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

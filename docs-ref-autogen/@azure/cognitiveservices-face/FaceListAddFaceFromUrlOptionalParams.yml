@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.targetFace'
@@ -47,6 +48,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Name des Modells zur Erkennung. Modell zur Erkennung dient zum Erkennen von Gesichtern in der Abbildung übermittelt. Ein Modellname Erkennung kann bereitgestellt werden, beim Ausführen der Gesichtserkennungs - erkennen (groß) FaceList - Gesicht hinzufügen oder (groß) PersonGroup - hinzufügen mit. Der Standardwert ist "detection_01", wenn ein anderes Modell Sie explizite Spezifizierung erforderlich ist. Folgende Werte sind möglich: ''detection_01'', "detection_02". Standardwert: "detection_01".'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'
