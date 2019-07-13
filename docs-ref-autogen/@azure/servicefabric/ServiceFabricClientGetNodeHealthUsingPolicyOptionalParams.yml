@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="0e4c0-101">Optionale Parameter.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="3efb0-101">Das Signal der Abbruch von Anforderungen verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="3efb0-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="0e4c0-102">Das Signal der Abbruch von Anforderungen verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -41,7 +41,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="0e4c0-103">Beschreibt die Richtlinien zur Anwendungsintegrität verwendet, um die Integrität eines Clusters oder Knoten auszuwerten.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-103">Describes the health policies used to evaluate the health of a cluster or node.</span></span> <span data-ttu-id="0e4c0-104">Wenn nicht vorhanden ist, verwendet die integritätsevaluierung der Integritätsrichtlinie aus clustermanifest oder die standardintegritätsrichtlinie.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-104">If not present, the health evaluation uses the health policy from cluster manifest or the default health policy.</span></span>'
     optional: true
     syntax:
       content: 'clusterHealthPolicy?: ClusterHealthPolicy'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="3efb0-102">{Object} [CustomHeaders] Benutzerdefinierte benutzerdefinierten-Anforderungsheadern, die angewendet werden, bevor die Anforderung gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="3efb0-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="0e4c0-105">{Object} [CustomHeaders] Benutzerdefinierte benutzerdefinierten-Anforderungsheadern, die angewendet werden, bevor die Anforderung gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-105">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -71,7 +71,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="0e4c0-106">Ermöglicht das Filtern der Collection zurückgegebener HealthEvent-Objekte anhand des Integritätsstatus.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-106">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="0e4c0-107">Die möglichen Werte für diesen Parameter entsprechen dem jeweiligen ganzzahligen Wert von einem der folgenden Integritätsstatus.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-107">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="0e4c0-108">Es werden nur Ereignisse zurückgegeben, die dem Filter entsprechen.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-108">Only events that match the filter are returned.</span></span> <span data-ttu-id="0e4c0-109">Alle Ereignisse werden verwendet, um den aggregierten Integritätsstatus auszuwerten.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-109">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="0e4c0-110">Ist kein Filter angegeben, werden alle Einträge zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-110">If not specified, all entries are returned.</span></span> <span data-ttu-id="0e4c0-111">Ein Statuswert ist eine flagbasierte Enumeration, sodass der Wert eine Kombination der Werte sein kann, die mit dem bitweisen OR-Operator abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-111">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="0e4c0-112">Ist der angegebene Wert beispielsweise gleich „6“, werden alle Ereignisse zurückgegeben, für die „HealthState“ den Wert für OK (2) oder Warnung (4) hat.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-112">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="0e4c0-113">Default: Standardwert.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-113">Default - Default value.</span></span> <span data-ttu-id="0e4c0-114">Stimmt mit jedem Integritätsstatus (HealthState) überein.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-114">Matches any HealthState.</span></span> <span data-ttu-id="0e4c0-115">Der Wert ist gleich null.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-115">The value is zero.</span></span>
+      - <span data-ttu-id="0e4c0-116">None: Filter, der keinem Wert für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="0e4c0-117">Wird verwendet, um keine Ergebnisse für eine angegebene Statussammlung zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="0e4c0-118">Der Wert ist gleich „1“.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-118">The value is 1.</span></span>
+      - <span data-ttu-id="0e4c0-119">OK: Filter, der mit Eingaben übereinstimmt, für "healthstate" Wert Ok.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="0e4c0-120">Der Wert ist gleich „2“.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-120">The value is 2.</span></span>
+      - <span data-ttu-id="0e4c0-121">Warning: Filter, der Warnung den Wert Eingaben mit für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="0e4c0-122">Der Wert ist gleich „4“.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-122">The value is 4.</span></span>
+      - <span data-ttu-id="0e4c0-123">Fehler: Filter, der mit Eingaben eines Werts Fehler für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="0e4c0-124">Der Wert ist gleich „8“.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-124">The value is 8.</span></span>
+      - <span data-ttu-id="0e4c0-125">All: Filter, Eingaben mit einem anderen Wert für "healthstate" übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="0e4c0-126">Der Wert ist gleich „65535“.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-126">The value is 65535.</span></span> <span data-ttu-id="0e4c0-127">Standardwert: 0.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-127">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -86,7 +97,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="3efb0-103">Rückruf, das auf den Fortschritt des Downloads ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="3efb0-103">Callback which fires upon download progress.</span></span>'
+    summary: '<span data-ttu-id="0e4c0-128">Rückruf, das auf den Fortschritt des Downloads ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-128">Callback which fires upon download progress.</span></span>'
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -101,7 +112,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="3efb0-104">Rückruf, das ausgelöst, auf den Fortschritt des Dateiuploads wird.</span><span class="sxs-lookup"><span data-stu-id="3efb0-104">Callback which fires upon upload progress.</span></span>'
+    summary: '<span data-ttu-id="0e4c0-129">Rückruf, das ausgelöst, auf den Fortschritt des Dateiuploads wird.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-129">Callback which fires upon upload progress.</span></span>'
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -116,7 +127,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="3efb0-105">Bevor Sie automatisch beendet wird, ist die Anzahl der Millisekunden, die eine Anforderung dauert.</span><span class="sxs-lookup"><span data-stu-id="3efb0-105">The number of milliseconds a request can take before automatically being terminated.</span></span>'
+    summary: '<span data-ttu-id="0e4c0-130">Bevor Sie automatisch beendet wird, ist die Anzahl der Millisekunden, die eine Anforderung dauert.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-130">The number of milliseconds a request can take before automatically being terminated.</span></span>'
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -131,7 +142,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="0e4c0-131">Das Servertimeout für die Durchführung des Vorgangs in Sekunden.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-131">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="0e4c0-132">Dieses Timeout gibt den Zeitraum, der der Client bereit sind, zu warten, bis der angeforderte Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-132">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="0e4c0-133">Der Standardwert für diesen Parameter beträgt 60 Sekunden.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-133">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="0e4c0-134">Standardwert: 60.</span><span class="sxs-lookup"><span data-stu-id="0e4c0-134">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

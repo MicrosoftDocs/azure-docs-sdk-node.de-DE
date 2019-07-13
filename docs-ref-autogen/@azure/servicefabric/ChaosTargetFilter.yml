@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    fullName: ChaosTargetFilter
+    children:
+      - '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+      - '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    langs:
+      - typeScript
+    type: interface
+    summary: "<span data-ttu-id=\"69832-101\">Definiert alle Filter für die Chaos, z. B. Fehler nur bestimmte Knotentypen oder nur bestimmte Anwendungen Fehler an.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-101\">Defines all filters for targeted Chaos faults, for example, faulting only certain node types or faulting only certain applications.</span></span>\n<span data-ttu-id=\"69832-102\">Wenn „ChaosTargetFilter“ nicht verwendet wird, stört Chaos alle Clusterentitäten.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-102\">If ChaosTargetFilter is not used, Chaos faults all cluster entities.</span></span> <span data-ttu-id=\"69832-103\">Wenn „ChaosTargetFilter“ verwendet wird, stört Chaos nur die Entitäten, die der ChaosTargetFilter-Spezifikation entsprechen.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-103\">If ChaosTargetFilter is used, Chaos faults only the entities that meet the ChaosTargetFilter specification.</span></span> <span data-ttu-id=\"69832-104\">NodeTypeInclusionList und ApplicationInclusionList gestatten lediglich eine Vereinigungssemantik.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-104\">NodeTypeInclusionList and ApplicationInclusionList allow a union semantics only.</span></span>\n<span data-ttu-id=\"69832-105\">Es ist nicht möglich, eine Schnittmenge von NodeTypeInclusionList und ApplicationInclusionList anzugeben.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-105\">It is not possible to specify an intersection of NodeTypeInclusionList and ApplicationInclusionList.</span></span> <span data-ttu-id=\"69832-106\">Es ist z.\_B. nicht möglich, Folgendes anzugeben: „Diese Anwendung nur bemängeln, wenn sie sich auf diesem Knotentyp befindet“.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-106\">For example, it is not possible to specify \"fault this application only when it is on that node type.\"</span></span>\n<span data-ttu-id=\"69832-107\">Sobald eine Entität entweder in „NodeTypeInclusionList“ oder „ApplicationInclusionList“ enthalten ist, kann diese Entität nicht mit „ChaosTargetFilter“ ausgeschlossen werden.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-107\">Once an entity is included in either NodeTypeInclusionList or ApplicationInclusionList, that entity cannot be excluded using ChaosTargetFilter.</span></span> <span data-ttu-id=\"69832-108\">Selbst wenn „applicationX“ nicht in „ApplicationInclusionList“ enthalten ist, kann „applicationX“ in manchen Chaos-Iterationen fehlerhaft sein, da es sich anscheinend auf einem Knoten von „nodeTypeY“ befindet, der in „NodeTypeInclusionList“ enthalten ist.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-108\">Even if applicationX does not appear in ApplicationInclusionList, in some Chaos iteration applicationX can be faulted because it happens to be on a node of nodeTypeY that is included in NodeTypeInclusionList.</span></span> <span data-ttu-id=\"69832-109\">Wenn sowohl „NodeTypeInclusionList“ als auch „ApplicationInclusionList“ NULL oder leer sind, wird „ArgumentException“ ausgelöst.</span><span class=\"sxs-lookup\"><span data-stu-id=\"69832-109\">If both NodeTypeInclusionList and ApplicationInclusionList are null or empty, an ArgumentException is thrown.</span></span>"
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+    name: applicationInclusionList
+    fullName: applicationInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="69832-110">Eine Liste von Anwendungs-URLs, die in Chaosfehler einbezogen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="69832-110">A list of application URIs to include in Chaos faults.</span></span>
+      <span data-ttu-id="69832-111">Alle Replikate, die zu den Diensten dieser Anwendungen gehören, sind durch Chaos für Replikatfehler anfällig („Replikat neu starten“, „Replikat entfernen“, „primäres Replikat verschieben“ und „sekundäres Replikat verschieben“).</span><span class="sxs-lookup"><span data-stu-id="69832-111">All replicas belonging to services of these applications are amenable to replica faults (restart replica, remove replica, move primary, and move secondary) by Chaos.</span></span>
+      <span data-ttu-id="69832-112">Chaos startet ein Codepaket möglicherweise nur neu, wenn das Codepaket nur Replikate dieser Anwendungen hostet.</span><span class="sxs-lookup"><span data-stu-id="69832-112">Chaos may restart a code package only if the code package hosts replicas of these applications only.</span></span>
+      <span data-ttu-id="69832-113">Wenn eine Anwendung nicht in dieser Liste enthalten ist, kann sie dennoch in einer Chaos-Iteration gestört werden, wenn die Anwendung auf einem Knoten eines Knotentyps landet, der in NodeTypeInclusionList enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="69832-113">If an application does not appear in this list, it can still be faulted in some Chaos iteration if the application ends up on a node of a node type that is included in NodeTypeInclusionList.</span></span>
+      <span data-ttu-id="69832-114">Wenn "applicationx", um gebunden ist "nodetypey" befindet, über die platzierungseinschränkungen und "applicationx" ist jedoch nicht vorhanden in "applicationinclusionlist" und "nodetypey" fehlt in "nodetypeinclusionlist", klicken Sie dann "applicationx" niemals fehlerhaft sein.</span><span class="sxs-lookup"><span data-stu-id="69832-114">However, if applicationX is tied to nodeTypeY through placement constraints and applicationX is absent from ApplicationInclusionList and nodeTypeY is absent from NodeTypeInclusionList, then applicationX will never be faulted.</span></span>
+      <span data-ttu-id="69832-115">Es können maximal 1.000 Anwendungsnamen in diese Liste aufgenommen werden. Um diese Zahl zu erhöhen, ist ein Upgrade der MaxNumberOfApplicationsInChaosEntityFilter-Konfiguration erforderlich.</span><span class="sxs-lookup"><span data-stu-id="69832-115">At most 1000 application names can be included in this list, to increase this number, a config upgrade is required for MaxNumberOfApplicationsInChaosEntityFilter configuration.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    name: nodeTypeInclusionList
+    fullName: nodeTypeInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="69832-116">Eine Liste von Knotentypen, die in Chaosfehler einbezogen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="69832-116">A list of node types to include in Chaos faults.</span></span>
+      <span data-ttu-id="69832-117">Für die Knoten dieser Knotentypen sind alle Arten von Fehlern („Knoten neu starten“, „Codepaket neu starten“, „Replikat entfernen“, „Replikat neu starten“, „primäres Replikat verschieben“ und „sekundäres Replikat verschieben“) aktiviert.</span><span class="sxs-lookup"><span data-stu-id="69832-117">All types of faults (restart node, restart code package, remove replica, restart replica, move primary, and move secondary) are enabled for the nodes of these node types.</span></span>
+      <span data-ttu-id="69832-118">Wenn ein Knotentyp (z.B. NodeTypeX) nicht in "nodetypeinclusionlist" angezeigt, und klicken Sie dann Fehler auf Knotenebene (z.B. NodeRestart) niemals für die Knoten von NodeTypeX aktiviert, aber Code Codepaket- und replikatfehler können für "nodetypex" weiterhin aktiviert werden, wenn eine Anwendung in der "Applicationinclusionlist".</span><span class="sxs-lookup"><span data-stu-id="69832-118">If a node type (say NodeTypeX) does not appear in the NodeTypeInclusionList, then node level faults (like NodeRestart) will never be enabled for the nodes of NodeTypeX, but code package and replica faults can still be enabled for NodeTypeX if an application in the ApplicationInclusionList.</span></span>
+      <span data-ttu-id="69832-119">zufällig auf einem Knoten von NodeTypeX befindet.</span><span class="sxs-lookup"><span data-stu-id="69832-119">happens to reside on a node of NodeTypeX.</span></span>
+      <span data-ttu-id="69832-120">Es können maximal 100 Knotentypnamen in diese Liste aufgenommen werden. Um diese Zahl zu erhöhen, ist ein Upgrade der MaxNumberOfNodeTypesInChaosEntityFilter-Konfiguration erforderlich.</span><span class="sxs-lookup"><span data-stu-id="69832-120">At most 100 node type names can be included in this list, to increase this number, a config upgrade is required for MaxNumberOfNodeTypesInChaosEntityFilter configuration.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeTypeInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'

@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationLoadInfo'
+    name: ApplicationLoadInfo
+    fullName: ApplicationLoadInfo
+    children:
+      - '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+      - '@azure/servicefabric.ApplicationLoadInfo.id'
+      - '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3d413-101">Laden Sie die Informationen zu Service Fabric-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3d413-101">Load Information about a Service Fabric application.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+    name: applicationLoadMetricInformation
+    fullName: applicationLoadMetricInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3d413-102">Liste der Beschreibung der Anwendung Kapazität Metrik.</span><span class="sxs-lookup"><span data-stu-id="3d413-102">List of application capacity metric description.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3d413-103">Die Identität (ID) der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3d413-103">The identity of the application.</span></span> <span data-ttu-id="3d413-104">Dies ist eine codierte Darstellung der Namen der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3d413-104">This is an encoded representation of the application name.</span></span>
+      <span data-ttu-id="3d413-105">Dies wird in der REST-APIs zur Ressource für die Anwendung zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="3d413-105">This is used in the REST APIs to identify the application resource.</span></span>
+      <span data-ttu-id="3d413-106">Ab Version 6.0, hierarchische Namen als Trennzeichen das "\~" Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3d413-106">Starting in version 6.0, hierarchical names are delimited with the "\~" character.</span></span> <span data-ttu-id="3d413-107">Wenn der Anwendungsname ist z. B. "Fabric: / Myapp/app1", die Anwendungsidentität "Myapp\~app1" in 6.0 +- und "meineapp/app1", der in früheren Versionen.</span><span class="sxs-lookup"><span data-stu-id="3d413-107">For example, if the application name is "fabric:/myapp/app1", the application identity would be "myapp\~app1" in 6.0+ and "myapp/app1" in previous versions.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3d413-108">Die maximale Anzahl von Knoten, in denen diese Anwendung instanziiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="3d413-108">The maximum number of nodes where this application can be instantiated.</span></span>
+      <span data-ttu-id="3d413-109">Es ist die Anzahl der Knoten, die diese Anwendung umfassen darf.</span><span class="sxs-lookup"><span data-stu-id="3d413-109">It is the number of nodes this application is allowed to span.</span></span>
+      <span data-ttu-id="3d413-110">Für Anwendungen, die keine Anwendungskapazität definiert wird dieser Wert 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="3d413-110">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3d413-111">Die minimale Anzahl von Knoten für diese Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3d413-111">The minimum number of nodes for this application.</span></span>
+      <span data-ttu-id="3d413-112">Es ist die Anzahl der Knoten, in dem Service Fabric reserviert Kapazität im Cluster die gleich ReservedLoad \* MinimumNodes für diese Anwendungsinstanz.</span><span class="sxs-lookup"><span data-stu-id="3d413-112">It is the number of nodes where Service Fabric will reserve Capacity in the cluster which equals to ReservedLoad \* MinimumNodes for this Application instance.</span></span>
+      <span data-ttu-id="3d413-113">Für Anwendungen, die keine Anwendungskapazität definiert wird dieser Wert 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="3d413-113">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    name: nodeCount
+    fullName: nodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3d413-114">Die Anzahl der Knoten, auf denen diese Anwendung instanziiert wird.</span><span class="sxs-lookup"><span data-stu-id="3d413-114">The number of nodes on which this application is instantiated.</span></span>
+      <span data-ttu-id="3d413-115">Für Anwendungen, die keine Anwendungskapazität definiert wird dieser Wert 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="3d413-115">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'
