@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth'
+    name: StatefulServiceReplicaHealth
+    fullName: StatefulServiceReplicaHealth
+    children:
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.aggregatedHealthState'
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.healthEvents'
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.healthStatistics'
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.partitionId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.replicaId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.serviceKind'
+      - '@azure/servicefabric.StatefulServiceReplicaHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Stellt die Integrität der Replikat des zustandsbehafteten Diensts dar.
+      Enthält den Zustand des Replikats, die aggregiert, dem Health-Ereignisse und die fehlerhaften auswertungen.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die "healthstate" den aggregierten Integritätsstatus der Entität vom Integritätsdienst berechnet darstellt.
+      Die integritätsevaluierung der Entität gibt alle Ereignisse, die für die Entität und ihren untergeordneten Elementen (sofern vorhanden) gemeldet.
+      Die Aggregation erfolgt durch die gewünschte Richtlinie anwenden. Mögliche Werte sind: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Liste der für die Entität gemeldeten integritätsereignisse.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Zeigt die integritätsstatistiken gelten für alle untergeordneten Elemente Typen der abgefragten Entität.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die ID der Partition, zu der das Replikat gehört.'
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID der ein Replikat des zustandsbehafteten Diensts. ReplicaId wird von Service Fabric verwendet, um ein Replikat einer Partition eindeutig zu identifizieren. Es ist eindeutig innerhalb einer Partition und ändert sich nicht für die Lebensdauer des Replikats. Wenn ein Replikat ruft gelöscht, und ein anderes Replikat, auf dem gleichen Knoten für die gleiche Partition erstellt wird erhalten sie einen anderen Wert für die Id. Die Id der Instanz eines zustandslosen Diensts wird manchmal auch als Replikat-Id bezeichnet.'
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die fehlerauswertungen, die zeigen, warum der aktuellen aggregierte Integritätszustand vom Integritätsdienst zurückgegeben wurde.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

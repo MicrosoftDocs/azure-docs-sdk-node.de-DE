@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaEvent'
+    name: ReplicaEvent
+    fullName: ReplicaEvent
+    children:
+      - '@azure/servicefabric.ReplicaEvent.category'
+      - '@azure/servicefabric.ReplicaEvent.eventInstanceId'
+      - '@azure/servicefabric.ReplicaEvent.hasCorrelatedEvents'
+      - '@azure/servicefabric.ReplicaEvent.kind'
+      - '@azure/servicefabric.ReplicaEvent.partitionId'
+      - '@azure/servicefabric.ReplicaEvent.replicaId'
+      - '@azure/servicefabric.ReplicaEvent.timeStamp'
+    langs:
+      - typeScript
+    type: interface
+    summary: Stellt die Basis für alle Dienstereignisse für Replikate dar.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Kategorie des Ereignisses.
+    optional: true
+    syntax:
+      content: 'category?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.eventInstanceId'
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Bezeichner für die FabricEvent-Instanz.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.hasCorrelatedEvents'
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Zeigt, dass verwandte Ereignisse, die verfügbaren vorhanden ist.'
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'kind: "ReplicaEvent"'
+      return:
+        type:
+          - '"ReplicaEvent"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine interne ID, die von Service Fabric zur eindeutigen Identifizierung eine Partition verwendet wird. Dies ist eine zufällig generierte GUID, wenn der Dienst erstellt wurde. Die Partitions-ID ist eindeutig und wird nicht für die Lebensdauer des Diensts geändert. Wenn der gleiche Dienst gelöscht wurde und neu die IDs der zugehörigen Partitionen erstellt würde unterschiedlich sein.'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID der ein Replikat des zustandsbehafteten Diensts. ReplicaId wird von Service Fabric verwendet, um ein Replikat einer Partition eindeutig zu identifizieren. Es ist eindeutig innerhalb einer Partition und ändert sich nicht für die Lebensdauer des Replikats. Wenn ein Replikat ruft gelöscht, und ein anderes Replikat, auf dem gleichen Knoten für die gleiche Partition erstellt wird erhalten sie einen anderen Wert für die Id. Die Id der Instanz eines zustandslosen Diensts wird manchmal auch als Replikat-Id bezeichnet.'
+    syntax:
+      content: 'replicaId: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.timeStamp'
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Das Time-Ereignis protokolliert wurde.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

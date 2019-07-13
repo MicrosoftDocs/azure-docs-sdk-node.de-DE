@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription'
+    name: GetBackupByStorageQueryDescription
+    fullName: GetBackupByStorageQueryDescription
+    children:
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Beschreibt zusätzliche Filter angewandt werden beim Auflisten von Sicherungen und Sicherungsspeicher-Details, von wo die Sicherungen abgerufen.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+    name: backupEntity
+    fullName: backupEntity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gibt die Einheit für die Sicherungen aufgezählt.
+    syntax:
+      content: 'backupEntity: BackupEntityUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupEntityUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+    name: endDateTimeFilter
+    fullName: endDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, die End-Datum/Uhrzeit im ISO8601 bis zu dem Sicherungen auflisten. Wenn nicht angegeben, werden die Sicherungen bis zum Ende aufgelistet.'
+    optional: true
+    syntax:
+      content: 'endDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+    name: latest
+    fullName: latest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Wenn "true" angegeben wird, ruft die letzte Sicherung (innerhalb des Zeitbereichs) für jede Partition in die angegebene Sicherung Entität ab. Standardwert: false.'
+    optional: true
+    syntax:
+      content: 'latest?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+    name: startDateTimeFilter
+    fullName: startDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt den Beginn Datum/Uhrzeit im ISO8601 aus den Sicherungen aufgelistet werden sollen. Wenn nicht angegeben, werden die Sicherungen vom Anfang aufgelistet.'
+    optional: true
+    syntax:
+      content: 'startDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    name: storage
+    fullName: storage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Beschreibt die Parameter für den Sicherungsspeicher aus, wo Sie Sicherungen auflisten. Dies ist optional und standardmäßig Sicherungen aus dem backup-Speicher, in denen diese backup-Entität aktuell (wie im angegebenen Sicherungsrichtlinie) gesichert wird, aufgelistet werden. Dieser Parameter ist hilfreich, in der Lage, Sicherungen von einem anderen Cluster aufgelistet, in denen Sie möglicherweise wiederherstellen möchten.'
+    syntax:
+      content: 'storage: BackupStorageDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupStorageDescriptionUnion'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupEntityUnion'
+    name: BackupEntityUnion
+    spec.typeScript:
+      - name: BackupEntityUnion
+        fullName: BackupEntityUnion
+        uid: '@azure/servicefabric.BackupEntityUnion'
+  - uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
+    name: BackupStorageDescriptionUnion
+    spec.typeScript:
+      - name: BackupStorageDescriptionUnion
+        fullName: BackupStorageDescriptionUnion
+        uid: '@azure/servicefabric.BackupStorageDescriptionUnion'

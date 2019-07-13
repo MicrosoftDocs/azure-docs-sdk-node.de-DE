@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optionale Parameter.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Beschreibt die Cluster- und Integritätsrichtlinien, das zum Auswerten der clusterintegrität und die Filter aus, wählen Sie die clusterentitäten, die zurückgegeben werden soll.
+      Wenn die clusterintegritätsrichtlinie vorhanden ist, wird es zum Auswerten der Clusterereignisse und den Clusterknoten verwendet. Wenn nicht vorhanden sind, handelt es sich bei der Integrität Auswertung verwendet, die die clusterintegritätsrichtlinie im clustermanifest oder die standardintegritätsrichtlinie für den Cluster definiert.
+      Standardmäßig wird jede Anwendung mit der Integritätsrichtlinie anwendungsspezifische an, in das Anwendungsmanifest und die standardmäßige Integritätsrichtlinie definiert werden, wenn keine Richtlinie im Manifest definiert wird ausgewertet.
+      Wenn die Zuordnung der anwendungsintegritätsrichtlinien angegeben ist und es einen Eintrag für eine Anwendung wurde, wird die angegebene anwendungsintegritätsrichtlinie zum Auswerten der Anwendungsintegrität verwendet.
+      Benutzer können sehr flexibel Filter zum Auswählen der clusterentitäten Antwort einschließt angeben. Die Auswahl kann erfolgt basierend auf den Integritätsstatus der Entitäten und basierend auf der Hierarchie werden.
+      Die Abfrage kann mit mehreren Ebene von untergeordneten Entitäten basierend auf den angegebenen Filtern zurück. Es können z. B. eine Anwendung mit einem angegebenen Namen, und klicken Sie für diese Anwendung zurückgeben, nur Dienste, die Fehler oder Warnung aus, und alle Partitionen und Replikaten für einen dieser Dienste werden zurückgegeben.
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Das Servertimeout für die Durchführung des Vorgangs in Sekunden. Dieses Timeout gibt den Zeitraum, der der Client bereit sind, zu warten, bis der angeforderte Vorgang abgeschlossen ist. Der Standardwert für diesen Parameter beträgt 60 Sekunden. Standardwert: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

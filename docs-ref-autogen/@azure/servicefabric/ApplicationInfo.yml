@@ -1,0 +1,169 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationInfo'
+    name: ApplicationInfo
+    fullName: ApplicationInfo
+    children:
+      - '@azure/servicefabric.ApplicationInfo.applicationDefinitionKind'
+      - '@azure/servicefabric.ApplicationInfo.healthState'
+      - '@azure/servicefabric.ApplicationInfo.id'
+      - '@azure/servicefabric.ApplicationInfo.name'
+      - '@azure/servicefabric.ApplicationInfo.parameters'
+      - '@azure/servicefabric.ApplicationInfo.status'
+      - '@azure/servicefabric.ApplicationInfo.typeName'
+      - '@azure/servicefabric.ApplicationInfo.typeVersion'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informationen zu Service Fabric-Anwendung.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.applicationDefinitionKind'
+    name: applicationDefinitionKind
+    fullName: applicationDefinitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Mechanismus zum Definieren von Service Fabric-Anwendung verwendet wird. Mögliche Werte sind: ''Invalid'', ''ServiceFabricApplicationDescription'', ''Compose'''
+    optional: true
+    syntax:
+      content: 'applicationDefinitionKind?: ApplicationDefinitionKind'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationDefinitionKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Identität (ID) der Anwendung. Dies ist eine codierte Darstellung der Namen der Anwendung.
+      Dies wird in der REST-APIs zur Ressource für die Anwendung zu identifizieren.
+      Ab Version 6.0, hierarchische Namen als Trennzeichen das "\~" Zeichen. Wenn der Anwendungsname ist z. B. "Fabric: / Myapp/app1", die Anwendungsidentität "Myapp\~app1" in 6.0 +- und "meineapp/app1", der in früheren Versionen.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Name der Anwendung, einschließlich der "Fabric:" URI-Schema „fabric:“.'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.parameters'
+    name: parameters
+    fullName: parameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Liste der Parameter für Anwendungen mit überschriebenen Werte die Standardwerte, die im Anwendungsmanifest angegeben.'
+    optional: true
+    syntax:
+      content: 'parameters?: ApplicationParameter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationParameter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Status der Anwendung. Mögliche Werte sind: ''Invalid'', ''Ready'', ''Upgrading'', ''Creating'', ''Deleting'', ''Failed'''
+    optional: true
+    syntax:
+      content: 'status?: ApplicationStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Anwendungstyps im Anwendungsmanifest definiert.
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationInfo.typeVersion'
+    name: typeVersion
+    fullName: typeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Version des Anwendungstyps, wie sie im Anwendungsmanifest definiert ist.'
+    optional: true
+    syntax:
+      content: 'typeVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationDefinitionKind'
+    name: ApplicationDefinitionKind
+    spec.typeScript:
+      - name: ApplicationDefinitionKind
+        fullName: ApplicationDefinitionKind
+        uid: '@azure/servicefabric.ApplicationDefinitionKind'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ApplicationParameter[]'
+    name: 'ApplicationParameter[]'
+    spec.typeScript:
+      - name: ApplicationParameter
+        fullName: ApplicationParameter
+        uid: '@azure/servicefabric.ApplicationParameter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ApplicationStatus'
+    name: ApplicationStatus
+    spec.typeScript:
+      - name: ApplicationStatus
+        fullName: ApplicationStatus
+        uid: '@azure/servicefabric.ApplicationStatus'

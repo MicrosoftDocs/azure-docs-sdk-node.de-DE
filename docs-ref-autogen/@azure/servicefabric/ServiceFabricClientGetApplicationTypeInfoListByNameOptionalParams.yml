@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optionale Parameter.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -43,7 +43,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Die Version des Anwendungstyps.
     optional: true
     syntax:
       content: 'applicationTypeVersion?: undefined | string'
@@ -58,7 +58,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Der Parameter „continuation-token“ (Fortsetzungstoken) wird dazu verwendet, den nächsten Satz von Ergebnissen abzurufen. Ein Fortsetzungstoken mit einem nicht leeren Wert wird in die Antwort der API eingefügt, wenn die Ergebnisse aus dem System nicht in eine einzige Antwort passen. Wird dieser Wert an den nächsten API-Aufruf übergeben, gibt die API den nächsten Satz von Ergebnissen zurück. Gibt es keine weiteren Ergebnisse, enthält das Fortsetzungstoken keinen Wert. Der Wert dieses Parameters darf nicht als URL codiert sein.'
     optional: true
     syntax:
       content: 'continuationToken?: undefined | string'
@@ -88,7 +88,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Das Flag, das angibt, ob die Anwendungsparameter aus dem Ergebnis ausgeschlossen werden sollen.
+      Standardwert: false.
     optional: true
     syntax:
       content: 'excludeApplicationParameters?: undefined | false | true'
@@ -103,7 +105,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Die maximale Anzahl von Ergebnissen, die als Teil der seitenweisen Abfragen zurückgegeben werden sollen. Dieser Parameter definiert die obere Grenze für die Anzahl von zurückgegebenen Ergebnissen. Es können weniger Ergebnisse zurückgegeben werden, als dieser maximalen Anzahl entspricht. Dies ist der Fall, wenn die Ergebnisse wegen der Größenbeschränkungen, die für Meldungen in der Konfiguration definiert sind, nicht in die jeweilige Meldung passen. Ist dieser Parameter gleich null oder nicht angegeben, enthält die seitenweise Abfrage so viele Ergebnisse, wie in die Rückgabemeldung passen. Standardwert: 0.'
     optional: true
     syntax:
       content: 'maxResults?: undefined | number'
@@ -163,7 +165,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Das Servertimeout für die Durchführung des Vorgangs in Sekunden. Dieses Timeout gibt den Zeitraum, der der Client bereit sind, zu warten, bis der angeforderte Vorgang abgeschlossen ist. Der Standardwert für diesen Parameter beträgt 60 Sekunden. Standardwert: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter'
+    name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    children:
+      - '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+      - '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Definiert die Kriterien zum bestimmen, ob ein Dienst als ein untergeordnetes Element einer Anwendung in den clusterintegritätsblock einbezogen werden soll.
+      Die Dienste werden nur zurückgegeben, wenn die übergeordnete Anwendung ein Filters in der Cluster Health Block abfragebeschreibung angegeben übereinstimmt.
+      Ein Filter kann 0 (null), entspricht ein oder mehrere Dienste, basierend auf dessen Eigenschaften.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Der Filter für den Integritätsstatus der Dienste. Sie können die Dienste auswählen, wenn sie die gewünschten Integritätsstatus übereinstimmen.
+      Die möglichen Werte sind Integer-Wert, der eine der folgenden Integritätsstatus. Es werden nur Dienste zurückgegeben, die dem Filter entsprechen. Alle Dienste werden verwendet, um den Cluster, die aggregierten Integritätsstatus auszuwerten.
+      Wenn nicht angegeben, ist Standardwert keine ",", es sei denn, der Dienstname angegeben ist. Wenn der Filter hat den Standardwert und Dienstname angegeben ist, wird der entsprechende Dienst zurückgegeben.
+      Ein Statuswert ist eine kennzeichenbasierte Enumeration, sodass der Wert eine Kombination der Werte sein kann, die mit dem bitweisen ODER-Operator abgerufen werden.
+      Wenn der angegebene Wert 6 ist, entspricht es z. B. Dienste für "healthstate"-Wert für OK (2) oder Warning (4).
+      - Default: Standardwert. Stimmt mit jedem Integritätsstatus (HealthState) überein. Der Wert ist gleich null.
+      - None: Filter, der keinem Wert für "healthstate" übereinstimmt. Wird verwendet, um keine Ergebnisse für eine angegebene Statussammlung zurückzugeben. Der Wert ist gleich „1“.
+      - OK: Filter, der mit Eingaben übereinstimmt, für "healthstate" Wert Ok. Der Wert ist gleich „2“.
+      - Warning: Filter, der Warnung den Wert Eingaben mit für "healthstate" übereinstimmt. Der Wert ist gleich „4“.
+      - Fehler: Filter, der mit Eingaben eines Werts Fehler für "healthstate" übereinstimmt. Der Wert ist gleich „8“.
+      - All: Filter, Eingaben mit einem anderen Wert für "healthstate" übereinstimmt. Der Wert ist gleich „65535“. Standardwert: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+    name: partitionFilters
+    fullName: partitionFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Definiert eine Liste von Filtern, die angeben, welche Partitionen in der zurückgegebenen clusterintegrität einbezogen werden als untergeordnete Elemente des Diensts zu segmentieren. Die Partitionen werden nur zurückgegeben, wenn der übergeordnete Dienst mit einem Filter übereinstimmt.
+      Wenn die Liste leer ist, werden keine Partitionen zurückgegeben. Alle Partitionen werden zum Auswerten von des übergeordneten aggregierten Integritätsstatus, unabhängig davon, die Eingabefilter verwendet.
+      Der Dienstfilter kann mehrere Filter für Partition angeben.
+      Beispielsweise können sie einen Filter auf alle Partitionen mit Integritätsstatus Fehler zurück und einem weiteren Filter eine Partition, die die Partitions-ID identifizierte sollen angeben
+    optional: true
+    syntax:
+      content: 'partitionFilters?: PartitionHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    name: serviceNameFilter
+    fullName: serviceNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Name des Diensts, der dem Filter entspricht. Der Filter wird nur auf den angegebenen Dienst angewendet, wenn es vorhanden ist.
+      Wenn der Dienst nicht vorhanden ist, wird kein Dienst in den clusterintegritätsblock basierend auf diesen Filter zurückgegeben.
+      Wenn der Dienst vorhanden ist, ist es als untergeordnetes Element der Anwendung enthalten, wenn der Integritätsstatus der Eigenschaften von anderen Filter übereinstimmt.
+      Wenn nicht angegeben, werden alle Dienste, die den übergeordneten Filter (sofern vorhanden) in Betracht gezogen und die andere Elemente in einem Filter, wie der Health-State-Filter abgeglichen.
+    optional: true
+    syntax:
+      content: 'serviceNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter[]'
+    name: 'PartitionHealthStateFilter[]'
+    spec.typeScript:
+      - name: PartitionHealthStateFilter
+        fullName: PartitionHealthStateFilter
+        uid: '@azure/servicefabric.PartitionHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
