@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optionale Parameter.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Der Name des Reparaturexecutors, dessen beanspruchte Tasks in der Liste enthalten sein sollen.'
     optional: true
     syntax:
       content: 'executorFilter?: undefined | string'
@@ -101,7 +101,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Eine bitweise OR-Operation für die folgenden Werte, die angibt, welche Taskstatus in der Ergebnisliste enthalten sein sollen.
+      - 1 – „Created“
+      - 2: beansprucht
+      - 4: Vorbereiten
+      - 8: genehmigt
+      - 16 - Ausführung
+      - 32 - wiederherstellen
+      - 64 – „Completed“
     optional: true
     syntax:
       content: 'stateFilter?: undefined | number'
@@ -116,7 +124,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Das Reparaturtask-ID-Präfix, das abgeglichen werden soll.'
     optional: true
     syntax:
       content: 'taskIdFilter?: undefined | string'

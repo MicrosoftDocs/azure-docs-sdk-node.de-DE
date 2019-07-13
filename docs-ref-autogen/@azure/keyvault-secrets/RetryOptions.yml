@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/keyvault-secrets.RetryOptions'
+    name: RetryOptions
+    fullName: RetryOptions
+    children:
+      - '@azure/keyvault-secrets.RetryOptions.maxRetryDelayInMs'
+      - '@azure/keyvault-secrets.RetryOptions.retryCount'
+      - '@azure/keyvault-secrets.RetryOptions.retryIntervalInMS'
+    langs:
+      - typeScript
+    type: interface
+    summary: Wiederholen Sie die Optionen-Schnittstelle.
+    package: '@azure/keyvault-secrets'
+  - uid: '@azure/keyvault-secrets.RetryOptions.maxRetryDelayInMs'
+    name: maxRetryDelayInMs
+    fullName: maxRetryDelayInMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Dies ist optional. Gibt die maximale Verzögerung dürfen, bevor ein Vorgang wiederholt wird (der Standardwert ist 90s oder 90 * 1.000 ms).'
+    optional: true
+    syntax:
+      content: 'maxRetryDelayInMs?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-secrets'
+  - uid: '@azure/keyvault-secrets.RetryOptions.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Optional. Max. Wiederholen Sie die Anzahl der Versuche, Standardwert ist 3.
+      Der Wert 1 bedeutet, dass 1 Versuch und keine Wiederholungen.
+      Der Wert kleiner als 1 bedeutet standardmäßig "Wiederholen" Anzahl der Versuche.
+    optional: true
+    syntax:
+      content: 'retryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-secrets'
+  - uid: '@azure/keyvault-secrets.RetryOptions.retryIntervalInMS'
+    name: retryIntervalInMS
+    fullName: retryIntervalInMS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Optional. Gibt an, die Dauer der Verzögerung zu verwenden, bevor ein Vorgang wiederholt wird (der Standardwert ist 30 Sekunden oder 30 * 1.000 ms).
+      Die Verzögerung exponentiell mit jeder Wiederholung bis zu einem Maximum von MaxRetryDelayInMs angegeben.
+    optional: true
+    syntax:
+      content: 'retryIntervalInMS?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-secrets'

@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optionale Parameter.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -43,7 +43,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Beschreibt die Richtlinien zur Anwendungsintegrität verwendet, um die Integrität einer Anwendung oder eines seiner untergeordneten Elemente ausgewertet.
+      Wenn nicht vorhanden ist, verwendet die integritätsevaluierung der Richtlinie für Integritätsstatus-aus-Anwendungsmanifest oder die standardintegritätsrichtlinie.
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -73,7 +75,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Ermöglicht es, die im Ergebnis der bereitgestellten Anwendungsintegritätsabfrage zurückgegebenen Integritätszustandsobjekte der bereitgestellten Dienstpakete anhand des Integritätszustand zu filtern.
+      Die möglichen Werte für diesen Parameter entsprechen dem jeweiligen ganzzahligen Wert von einem der folgenden Integritätsstatus.
+      Es werden nur Dienstpakete bereitgestellt, die dem Filter entsprechen. Alle bereitgestellten Dienstpakete werden verwendet, um den aggregierten Integritätszustand der bereitgestellten Anwendung auszuwerten.
+      Ist kein Filter angegeben, werden alle Einträge zurückgegeben.
+      Die Statuswerte sind eine flagbasierte Enumeration, sodass der Wert eine Kombination der Werte sein kann, die mit dem bitweisen OR-Operator abgerufen werden.
+      Ist der angegebene Wert beispielsweise 6, wird der Integritätszustand von Dienstpaketen zurückgegeben, für die „HealthState“ den Wert „OK (2)“ oder „Warning (4)“ aufweist.
+      - Default: Standardwert. Stimmt mit jedem Integritätsstatus (HealthState) überein. Der Wert ist gleich null.
+      - None: Filter, der keinem Wert für "healthstate" übereinstimmt. Wird verwendet, um keine Ergebnisse für eine angegebene Statussammlung zurückzugeben. Der Wert ist gleich „1“.
+      - OK: Filter, der mit Eingaben übereinstimmt, für "healthstate" Wert Ok. Der Wert ist gleich „2“.
+      - Warning: Filter, der Warnung den Wert Eingaben mit für "healthstate" übereinstimmt. Der Wert ist gleich „4“.
+      - Fehler: Filter, der mit Eingaben eines Werts Fehler für "healthstate" übereinstimmt. Der Wert ist gleich „8“.
+      - All: Filter, Eingaben mit einem anderen Wert für "healthstate" übereinstimmt. Der Wert ist gleich „65535“. Standardwert: 0.
     optional: true
     syntax:
       content: 'deployedServicePackagesHealthStateFilter?: undefined | number'
@@ -88,7 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Ermöglicht das Filtern der Collection zurückgegebener HealthEvent-Objekte anhand des Integritätsstatus.
+      Die möglichen Werte für diesen Parameter entsprechen dem jeweiligen ganzzahligen Wert von einem der folgenden Integritätsstatus.
+      Es werden nur Ereignisse zurückgegeben, die dem Filter entsprechen. Alle Ereignisse werden verwendet, um den aggregierten Integritätsstatus auszuwerten.
+      Ist kein Filter angegeben, werden alle Einträge zurückgegeben. Ein Statuswert ist eine flagbasierte Enumeration, sodass der Wert eine Kombination der Werte sein kann, die mit dem bitweisen OR-Operator abgerufen werden.
+      Ist der angegebene Wert beispielsweise gleich „6“, werden alle Ereignisse zurückgegeben, für die „HealthState“ den Wert für OK (2) oder Warnung (4) hat.
+      - Default: Standardwert. Stimmt mit jedem Integritätsstatus (HealthState) überein. Der Wert ist gleich null.
+      - None: Filter, der keinem Wert für "healthstate" übereinstimmt. Wird verwendet, um keine Ergebnisse für eine angegebene Statussammlung zurückzugeben. Der Wert ist gleich „1“.
+      - OK: Filter, der mit Eingaben übereinstimmt, für "healthstate" Wert Ok. Der Wert ist gleich „2“.
+      - Warning: Filter, der Warnung den Wert Eingaben mit für "healthstate" übereinstimmt. Der Wert ist gleich „4“.
+      - Fehler: Filter, der mit Eingaben eines Werts Fehler für "healthstate" übereinstimmt. Der Wert ist gleich „8“.
+      - All: Filter, Eingaben mit einem anderen Wert für "healthstate" übereinstimmt. Der Wert ist gleich „65535“. Standardwert: 0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -103,7 +128,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Gibt an, ob die Integritätsstatistiken als Bestandteil des Abfrageergebnisses zurückgegeben werden sollen. Der Standardwert ist gleich „False“.
+      Die Statistiken zeigen die Anzahl von untergeordneten Entitäten, die einen der Integritätszustände „Ok“, „Warning“ oder „Error“ aufweisen.
+      Standardwert: false.
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -163,7 +191,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Das Servertimeout für die Durchführung des Vorgangs in Sekunden. Dieses Timeout gibt den Zeitraum, der der Client bereit sind, zu warten, bis der angeforderte Vorgang abgeschlossen ist. Der Standardwert für diesen Parameter beträgt 60 Sekunden. Standardwert: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

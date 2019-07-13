@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationInfo'
+    name: DeployedApplicationInfo
+    fullName: DeployedApplicationInfo
+    children:
+      - '@azure/servicefabric.DeployedApplicationInfo.healthState'
+      - '@azure/servicefabric.DeployedApplicationInfo.id'
+      - '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.name'
+      - '@azure/servicefabric.DeployedApplicationInfo.status'
+      - '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.typeName'
+      - '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Informationen zur Anwendung, die auf dem Knoten bereitgestellt.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Identität (ID) der Anwendung. Dies ist eine codierte Darstellung der Namen der Anwendung.
+      Dies wird in der REST-APIs zur Ressource für die Anwendung zu identifizieren.
+      Ab Version 6.0, hierarchische Namen als Trennzeichen das "\~" Zeichen. Wenn der Anwendungsname ist z. B. "Fabric: / Myapp/app1", die Anwendungsidentität "Myapp\~app1" in 6.0 +- und "meineapp/app1", der in früheren Versionen.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+    name: logDirectory
+    fullName: logDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Protokollverzeichnis der Anwendung auf dem Knoten. Das Protokollverzeichnis kann verwendet werden, um Anwendungsprotokolle zu speichern.'
+    optional: true
+    syntax:
+      content: 'logDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Name der Anwendung, einschließlich der "Fabric:" URI-Schema „fabric:“.'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Der Status der Anwendung auf dem Knoten bereitgestellt werden soll. Es folgen die möglichen Werte.
+      Mögliche Werte sind: 'Invalid', 'Downloading', 'Activating', 'Active', 'Upgrading', 'Deactivating'
+    optional: true
+    syntax:
+      content: 'status?: DeployedApplicationStatus'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+    name: tempDirectory
+    fullName: tempDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das temporäre Verzeichnis der Anwendung auf dem Knoten. Die Codepakete, die zur Anwendung gehörenden werden mit diesem Verzeichnis aus, legen Sie als ihre temporäre Verzeichnis verzweigt haben.'
+    optional: true
+    syntax:
+      content: 'tempDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Anwendungstyps im Anwendungsmanifest definiert.
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    name: workDirectory
+    fullName: workDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Das Arbeitsverzeichnis der Anwendung auf dem Knoten. Das Arbeitsverzeichnis kann verwendet werden, um Anwendungsdaten zu speichern.'
+    optional: true
+    syntax:
+      content: 'workDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.DeployedApplicationStatus'
+    name: DeployedApplicationStatus
+    spec.typeScript:
+      - name: DeployedApplicationStatus
+        fullName: DeployedApplicationStatus
+        uid: '@azure/servicefabric.DeployedApplicationStatus'

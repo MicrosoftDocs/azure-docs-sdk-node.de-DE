@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RepairTaskCancelDescription'
+    name: RepairTaskCancelDescription
+    fullName: RepairTaskCancelDescription
+    children:
+      - '@azure/servicefabric.RepairTaskCancelDescription.requestAbort'
+      - '@azure/servicefabric.RepairTaskCancelDescription.taskId'
+      - '@azure/servicefabric.RepairTaskCancelDescription.version'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Beschreibt eine Anforderung zum Abbrechen einer Aufgabe reparieren.
+      Dieser Typ unterstützt die Service Fabric-Plattform; Es ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTaskCancelDescription.requestAbort'
+    name: requestAbort
+    fullName: requestAbort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '_"True"_ , wenn die Reparatur so bald wie möglich beendet werden soll, auch wenn sie bereits begonnen wurde ausgeführt. _"False"_ , wenn die Reparatur abgebrochen werden sollte, nur dann, wenn die Ausführung noch nicht gestartet wurde.'
+    optional: true
+    syntax:
+      content: 'requestAbort?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTaskCancelDescription.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die ID des Reparaturtasks.
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTaskCancelDescription.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die aktuelle Versionsnummer des Reparaturtasks. Ist der Wert ungleich null, ist die Anforderung nur dann erfolgreich, wenn dieser Wert mit der tatsächlichen aktuellen Version des Reparaturtasks übereinstimmt. Ist der Wert gleich null, wird keine Versionsüberprüfung ausgeführt.'
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

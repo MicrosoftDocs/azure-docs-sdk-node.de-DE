@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    fullName: ChaosTargetFilter
+    children:
+      - '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+      - '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    langs:
+      - typeScript
+    type: interface
+    summary: "Definiert alle Filter für die Chaos, z. B. Fehler nur bestimmte Knotentypen oder nur bestimmte Anwendungen Fehler an.\nWenn „ChaosTargetFilter“ nicht verwendet wird, stört Chaos alle Clusterentitäten. Wenn „ChaosTargetFilter“ verwendet wird, stört Chaos nur die Entitäten, die der ChaosTargetFilter-Spezifikation entsprechen. NodeTypeInclusionList und ApplicationInclusionList gestatten lediglich eine Vereinigungssemantik.\nEs ist nicht möglich, eine Schnittmenge von NodeTypeInclusionList und ApplicationInclusionList anzugeben. Es ist z.\_B. nicht möglich, Folgendes anzugeben: „Diese Anwendung nur bemängeln, wenn sie sich auf diesem Knotentyp befindet“.\nSobald eine Entität entweder in „NodeTypeInclusionList“ oder „ApplicationInclusionList“ enthalten ist, kann diese Entität nicht mit „ChaosTargetFilter“ ausgeschlossen werden. Selbst wenn „applicationX“ nicht in „ApplicationInclusionList“ enthalten ist, kann „applicationX“ in manchen Chaos-Iterationen fehlerhaft sein, da es sich anscheinend auf einem Knoten von „nodeTypeY“ befindet, der in „NodeTypeInclusionList“ enthalten ist. Wenn sowohl „NodeTypeInclusionList“ als auch „ApplicationInclusionList“ NULL oder leer sind, wird „ArgumentException“ ausgelöst."
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+    name: applicationInclusionList
+    fullName: applicationInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Eine Liste von Anwendungs-URLs, die in Chaosfehler einbezogen werden sollen.
+      Alle Replikate, die zu den Diensten dieser Anwendungen gehören, sind durch Chaos für Replikatfehler anfällig („Replikat neu starten“, „Replikat entfernen“, „primäres Replikat verschieben“ und „sekundäres Replikat verschieben“).
+      Chaos startet ein Codepaket möglicherweise nur neu, wenn das Codepaket nur Replikate dieser Anwendungen hostet.
+      Wenn eine Anwendung nicht in dieser Liste enthalten ist, kann sie dennoch in einer Chaos-Iteration gestört werden, wenn die Anwendung auf einem Knoten eines Knotentyps landet, der in NodeTypeInclusionList enthalten ist.
+      Wenn "applicationx", um gebunden ist "nodetypey" befindet, über die platzierungseinschränkungen und "applicationx" ist jedoch nicht vorhanden in "applicationinclusionlist" und "nodetypey" fehlt in "nodetypeinclusionlist", klicken Sie dann "applicationx" niemals fehlerhaft sein.
+      Es können maximal 1.000 Anwendungsnamen in diese Liste aufgenommen werden. Um diese Zahl zu erhöhen, ist ein Upgrade der MaxNumberOfApplicationsInChaosEntityFilter-Konfiguration erforderlich.
+    optional: true
+    syntax:
+      content: 'applicationInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    name: nodeTypeInclusionList
+    fullName: nodeTypeInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Eine Liste von Knotentypen, die in Chaosfehler einbezogen werden sollen.
+      Für die Knoten dieser Knotentypen sind alle Arten von Fehlern („Knoten neu starten“, „Codepaket neu starten“, „Replikat entfernen“, „Replikat neu starten“, „primäres Replikat verschieben“ und „sekundäres Replikat verschieben“) aktiviert.
+      Wenn ein Knotentyp (z.B. NodeTypeX) nicht in "nodetypeinclusionlist" angezeigt, und klicken Sie dann Fehler auf Knotenebene (z.B. NodeRestart) niemals für die Knoten von NodeTypeX aktiviert, aber Code Codepaket- und replikatfehler können für "nodetypex" weiterhin aktiviert werden, wenn eine Anwendung in der "Applicationinclusionlist".
+      zufällig auf einem Knoten von NodeTypeX befindet.
+      Es können maximal 100 Knotentypnamen in diese Liste aufgenommen werden. Um diese Zahl zu erhöhen, ist ein Upgrade der MaxNumberOfNodeTypesInChaosEntityFilter-Konfiguration erforderlich.
+    optional: true
+    syntax:
+      content: 'nodeTypeInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
