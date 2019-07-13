@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription'
+    name: ServicePlacementRequireDomainDistributionPolicyDescription
+    fullName: ServicePlacementRequireDomainDistributionPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Beschreibt die Richtlinie, für die Platzierung von Service Fabric-Diensten verwendet werden, wo zwei Replikate aus derselben Partition nie in derselben Domäne Fehler- oder upgradedomäne platziert werden soll.
+      Dies ist zwar keine allgemeinen können sie den Dienst zu einem erhöhten Risiko gleichzeitiger Ausfälle aufgrund von ungeplanten Ausfällen oder anderen Fällen von nachfolgenden/gleichzeitigen Fehlern verfügbar machen. Als Beispiel nehmen Sie wir, wo Replikate unterschiedliche Rechenzentrum bereit, mit einem Replikat pro Standort bereitgestellt werden. Wenn einem der Rechenzentren offline geschaltet wird, normalerweise wird das Replikat, das in diesem Datencenter angeordnet wurde in einem der übrigen Rechenzentren gepackt. Wenn dies nicht erwünscht ist, sollte diese Richtlinie festgelegt werden.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Name der Domäne, die sollte für die Platzierung gemäß dieser Richtlinie verwendet werden soll.'
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'type: "RequireDomainDistribution"'
+      return:
+        type:
+          - '"RequireDomainDistribution"'
+    package: '@azure/servicefabric'

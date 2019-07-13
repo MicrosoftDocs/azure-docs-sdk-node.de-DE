@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/servicefabric.OperationStatus.operationId'
+      - '@azure/servicefabric.OperationStatus.state'
+      - '@azure/servicefabric.OperationStatus.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Enthält das Attribut "operationId" OperationState und OperationType für Benutzer veranlassten Vorgänge an.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.OperationStatus.operationId'
+    name: operationId
+    fullName: operationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Eine GUID, die einen Aufruf dieser API kennzeichnet.  Dies wird auch in die entsprechende GetProgress-API übergeben.'
+    optional: true
+    syntax:
+      content: 'operationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.OperationStatus.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Status des Vorgangs. Mögliche Werte sind: ''Invalid'', ''Running'', ''RollingBack'', ''Completed'', ''Faulted'', ''Cancelled'', ''ForceCancelled'''
+    optional: true
+    syntax:
+      content: 'state?: OperationState'
+      return:
+        type:
+          - '@azure/servicefabric.OperationState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.OperationStatus.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Typ des Vorgangs. Mögliche Werte sind: ''Invalid'', ''PartitionDataLoss'', ''PartitionQuorumLoss'', ''PartitionRestart'', ''NodeTransition'''
+    optional: true
+    syntax:
+      content: 'type?: OperationType'
+      return:
+        type:
+          - '@azure/servicefabric.OperationType'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.OperationState'
+    name: OperationState
+    spec.typeScript:
+      - name: OperationState
+        fullName: OperationState
+        uid: '@azure/servicefabric.OperationState'
+  - uid: '@azure/servicefabric.OperationType'
+    name: OperationType
+    spec.typeScript:
+      - name: OperationType
+        fullName: OperationType
+        uid: '@azure/servicefabric.OperationType'

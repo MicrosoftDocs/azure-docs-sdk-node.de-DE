@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optionale Parameter.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Schlüsseltyp für die Partition. Dieser Parameter ist erforderlich, wenn das Partitionsschema für den Dienst gleich „Int64Range“ oder „Named“ ist. Die folgenden Werte sind möglich.
+      - None (1) – gibt an, dass der Parameter "partitionkeyvalue" nicht angegeben ist. Dies ist für die Partitionen gültig, deren Partitionsschema als „Singleton“ festgelegt ist. Dies ist der Standardwert. Der Wert ist gleich „1“.
+      - Int64Range (2): Gibt an, dass der Parameter "partitionkeyvalue" ein int64-Partitionsschlüssel ist.
+      Dies ist für die Partitionen gültig, deren Partitionsschema als „Int64Range“ festgelegt ist. Der Wert ist gleich „2“.
+      - Mit dem Namen (3): Gibt an, dass der Parameter "partitionkeyvalue" ein Name der Partition ist. Dies ist für die Partitionen gültig, deren Partitionsschema als „Named“ festgelegt ist. Der Wert ist gleich „3“.
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Der Partitionsschlüssel. Dieses Argument ist erforderlich, wenn das Partitionsschema für den Dienst gleich „Int64Range“ oder „Named“ ist.
+      Dies ist nicht die Partitions-ID, sondern entweder der ganzzahlige Schlüsselwert oder der Name der Partitions-ID.
+      Wenn Ihr Dienst beispielsweise Bereichspartitionen von 0 bis 10 verwendet, dann wäre PartitionKeyValue eine ganze Zahl in diesem Bereich. Fragen Sie die Dienstbeschreibung ab, auf den Bereich oder Namen anzuzeigen.
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Der Wert im „Version“-Feld der Antwort, die zuvor empfangen wurde. Dieses Argument ist erforderlich, wenn der Benutzer weiß, dass das zuvor abgerufene Ergebnis veraltet ist.'
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Das Servertimeout für die Durchführung des Vorgangs in Sekunden. Dieses Timeout gibt den Zeitraum, der der Client bereit sind, zu warten, bis der angeforderte Vorgang abgeschlossen ist. Der Standardwert für diesen Parameter beträgt 60 Sekunden. Standardwert: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

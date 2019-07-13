@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo'
+    name: StatefulServiceReplicaInfo
+    fullName: StatefulServiceReplicaInfo
+    children:
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.address'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.healthState'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.lastInBuildDurationInSeconds'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.nodeName'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.replicaId'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.replicaRole'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.replicaStatus'
+      - '@azure/servicefabric.StatefulServiceReplicaInfo.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Stellt ein Replikat des zustandsbehafteten Diensts dar. Dies umfasst Informationen über die Identität, Rollen, Status, Integrität, Knotenname, Betriebszeit und weitere Details zu dem Replikat.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Adresse des Replikats überwacht wird.
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.lastInBuildDurationInSeconds'
+    name: lastInBuildDurationInSeconds
+    fullName: lastInBuildDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die letzte Builddauer des Replikats in Sekunden.
+    optional: true
+    syntax:
+      content: 'lastInBuildDurationInSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name eines Service Fabric-Knotens.
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID der ein Replikat des zustandsbehafteten Diensts. ReplicaId wird von Service Fabric verwendet, um ein Replikat einer Partition eindeutig zu identifizieren. Es ist eindeutig innerhalb einer Partition und ändert sich nicht für die Lebensdauer des Replikats. Wenn ein Replikat ruft gelöscht, und ein anderes Replikat, auf dem gleichen Knoten für die gleiche Partition erstellt wird erhalten sie einen anderen Wert für die Id. Die Id der Instanz eines zustandslosen Diensts wird manchmal auch als Replikat-Id bezeichnet.'
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.replicaRole'
+    name: replicaRole
+    fullName: replicaRole
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Die Rolle der ein Replikat eines zustandsbehafteten Diensts. Mögliche Werte sind: ''Unknown'', ''None'', ''Primary'', ''IdleSecondary'', ''ActiveSecondary'''
+    optional: true
+    syntax:
+      content: 'replicaRole?: ReplicaRole'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaRole'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.replicaStatus'
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Status der ein Replikat des Diensts. Mögliche Werte sind: ''Invalid'', ''InBuild'', ''Standby'', ''Ready'', ''Down'', ''Dropped'''
+    optional: true
+    syntax:
+      content: 'replicaStatus?: ReplicaStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ReplicaRole'
+    name: ReplicaRole
+    spec.typeScript:
+      - name: ReplicaRole
+        fullName: ReplicaRole
+        uid: '@azure/servicefabric.ReplicaRole'
+  - uid: '@azure/servicefabric.ReplicaStatus'
+    name: ReplicaStatus
+    spec.typeScript:
+      - name: ReplicaStatus
+        fullName: ReplicaStatus
+        uid: '@azure/servicefabric.ReplicaStatus'

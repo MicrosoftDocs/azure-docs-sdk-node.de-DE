@@ -1,0 +1,169 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceInfo'
+    name: StatefulServiceInfo
+    fullName: StatefulServiceInfo
+    children:
+      - '@azure/servicefabric.StatefulServiceInfo.hasPersistedState'
+      - '@azure/servicefabric.StatefulServiceInfo.healthState'
+      - '@azure/servicefabric.StatefulServiceInfo.id'
+      - '@azure/servicefabric.StatefulServiceInfo.isServiceGroup'
+      - '@azure/servicefabric.StatefulServiceInfo.manifestVersion'
+      - '@azure/servicefabric.StatefulServiceInfo.name'
+      - '@azure/servicefabric.StatefulServiceInfo.serviceKind'
+      - '@azure/servicefabric.StatefulServiceInfo.serviceStatus'
+      - '@azure/servicefabric.StatefulServiceInfo.typeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informationen über einen zustandsbehafteten Service Fabric-Dienst.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.hasPersistedState'
+    name: hasPersistedState
+    fullName: hasPersistedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob der Dienst einen persistenten Zustand aufweist.'
+    optional: true
+    syntax:
+      content: 'hasPersistedState?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Zustand des eine Service Fabric-Entität, z. B. Cluster, Knoten, Anwendung, Dienst, Partition, Replikat usw. Mögliche Werte sind: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Die Identität (ID) des Diensts. Diese ID ist eine codierte Darstellung des Dienstnamens. Dies wird in der REST-APIs verwendet, zum Identifizieren der Service-Ressource.
+      Ab Version 6.0, hierarchische Namen als Trennzeichen das "\~" Zeichen. Wenn der Dienstname z. B. "Fabric: / Myapp/app1/Dienst1", die Dienstidentität "" MyApp "~ app1\~Dienst1" in 6.0 und höher und den Wert "meineapp/app1/Dienst1" in früheren Versionen.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.isServiceGroup'
+    name: isServiceGroup
+    fullName: isServiceGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gibt an, ob der Dienst in einer Dienstgruppe ist.'
+    optional: true
+    syntax:
+      content: 'isServiceGroup?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.manifestVersion'
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Die Version des Dienstmanifests.
+    optional: true
+    syntax:
+      content: 'manifestVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der vollständige Name des Diensts mit "Fabric:" URI-Schema „fabric:“.'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Polymorphe Diskriminator
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.serviceStatus'
+    name: serviceStatus
+    fullName: serviceStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Der Status der Anwendung. Mögliche Werte sind: ''Unknown'', ''Active'', ''Upgrading'', ''Deleting'', ''Creating'', ''Failed'''
+    optional: true
+    syntax:
+      content: 'serviceStatus?: ServiceStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Der Name des Diensttyps im Dienstmanifest angegeben.
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceStatus'
+    name: ServiceStatus
+    spec.typeScript:
+      - name: ServiceStatus
+        fullName: ServiceStatus
+        uid: '@azure/servicefabric.ServiceStatus'
